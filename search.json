@@ -1,5 +1,72 @@
 [
   {
+    "objectID": "practica/03.html",
+    "href": "practica/03.html",
+    "title": "Unidad 3",
+    "section": "",
+    "text": "¿Por qué el siguiente bloque muestra solo un número como salida?\n\nfor i in range(3):\n    print(i)\n    break\n\n0",
+    "crumbs": [
+      "Práctica",
+      "Unidad 3"
+    ]
+  },
+  {
+    "objectID": "practica/03.html#programando",
+    "href": "practica/03.html#programando",
+    "title": "Unidad 3",
+    "section": "",
+    "text": "¿Por qué el siguiente bloque muestra solo un número como salida?\n\nfor i in range(3):\n    print(i)\n    break\n\n0",
+    "crumbs": [
+      "Práctica",
+      "Unidad 3"
+    ]
+  },
+  {
+    "objectID": "practica/02.html",
+    "href": "practica/02.html",
+    "title": "Unidad 2",
+    "section": "",
+    "text": "¿De qué color era el caballo blanco de San Martín?",
+    "crumbs": [
+      "Práctica",
+      "Unidad 2"
+    ]
+  },
+  {
+    "objectID": "practica/02.html#adivinanza",
+    "href": "practica/02.html#adivinanza",
+    "title": "Unidad 2",
+    "section": "",
+    "text": "¿De qué color era el caballo blanco de San Martín?",
+    "crumbs": [
+      "Práctica",
+      "Unidad 2"
+    ]
+  },
+  {
+    "objectID": "proyectos/grupal.html",
+    "href": "proyectos/grupal.html",
+    "title": "Proyecto grupal",
+    "section": "",
+    "text": "Si aplica, se puede incluir un proyecto grupal.",
+    "crumbs": [
+      "Proyectos",
+      "Proyecto grupal"
+    ]
+  },
+  {
+    "objectID": "recursos/tutoriales/instalacion_python.html",
+    "href": "recursos/tutoriales/instalacion_python.html",
+    "title": "Instalación de Python y Positron en Windows",
+    "section": "",
+    "text": "Este es un recurso de ejemplo donde se usa el shortcode {{&lt; video &gt;}} para incluir un video alojado en YouTube.",
+    "crumbs": [
+      "Recursos",
+      "Tutoriales",
+      "Instalación de Python y Positron en Windows"
+    ]
+  },
+  {
     "objectID": "teoria/02_unidad/01_apunte.html",
     "href": "teoria/02_unidad/01_apunte.html",
     "title": "Unidad 2 - Apunte 1",
@@ -9,6 +76,91 @@
       "Teoría",
       "Unidad 2",
       "Unidad 2 - Apunte 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programación en Python",
+    "section": "",
+    "text": "Programación en Python\n      \n\n      \n      \n        \n        \n          \n           \n          Licenciatura en Estadística\n        \n        \n        \n          \n           \n          Facultad de Ciencias Económicas y Estadística (UNR)\n        \n        \n        \n          \n           \n          1° Cuatrimestre 2026\n        \n        \n        \n          \n           \n          Miércoles - 11:00 a 15:00   |   Jueves - 8:00 a 10:00\n        \n        \n      \n      \n    \n  \n\n  \n  \n    \n  \n  \n\nNo hay resultados\n\n\n\n  \n    Docentes\n\n    \n\n    \n    \n        \n\n        Tomás Capretto\n        \n          \n          \n          \n            \n            tomas.capretto@fcecon.unr.edu.ar\n          \n          \n          \n          \n            \n            TBD\n          \n          \n        \n      \n    \n        \n\n        Dolores Sollberger\n        \n          \n          \n          \n            \n            dolores.sollberger@fcecon.unr.edu.ar\n          \n          \n          \n          \n            \n            TBD\n          \n          \n        \n      \n    \n    \n  \n\nNo hay resultados"
+  },
+  {
+    "objectID": "informacion/programa.html",
+    "href": "informacion/programa.html",
+    "title": "Programa",
+    "section": "",
+    "text": "Se describen los objetivos, competencias y contenidos generales del curso.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/calendario.html",
+    "href": "informacion/calendario.html",
+    "title": "Calendario",
+    "section": "",
+    "text": "En esta sección se puede incluir una tabla con el cronograma de las actividades del curso.\n\n\n\nSemana\nTema\nMaterial\n\n\n\n\n1\nIntroducción\nDiapositivas + notas\n\n\n2\nTema 2\nLectura recomendada\n\n\n3\nTema 3\nNotebook de ejemplo",
+    "crumbs": [
+      "Información",
+      "Calendario"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html",
+    "href": "informacion/bibliografia.html",
+    "title": "Bibliografía",
+    "section": "",
+    "text": "En esta sección se incluye la bibliografía, la cual puede dividirse en diferentes subsecciones gracias al filtro section-bibliographies.\nPara generar la bibliografía de manera automática, se utilizan divs invisibles en los que se incluyen los identificadores BibTeX que se desean citar, por ejemplo @CasellaBerger2024, @Gelman2013, etc.\nEstos identificadores deben corresponder a una entrada en el archivo .bib, el cual se especifica en el archivo de configuración _quarto.yml.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html#principal",
+    "href": "informacion/bibliografia.html#principal",
+    "title": "Bibliografía",
+    "section": "Principal",
+    "text": "Principal\n\nCasella y Berger (2024) Hastie, Tibshirani, y Friedman (2009) Gelman et al. (2013)\n\n\n\nCasella, George, y Roger L. Berger. 2024. Statistical Inference. 2.ª ed. Chapman & Hall/CRC.\n\n\nGelman, Andrew, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, y Donald B. Rubin. 2013. Bayesian Data Analysis. 3.ª ed. CRC Press.\n\n\nHastie, Trevor, Robert Tibshirani, y Jerome Friedman. 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2.ª ed. Springer.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html#complementaria",
+    "href": "informacion/bibliografia.html#complementaria",
+    "title": "Bibliografía",
+    "section": "Complementaria",
+    "text": "Complementaria\n\nJaynes (2003) Rudin (1976)\n\n\n\n\n\nJaynes, E. T. 2003. Probability Theory: The Logic of Science. Cambridge University Press.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3.ª ed. McGraw-Hill.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/aprobacion.html",
+    "href": "informacion/aprobacion.html",
+    "title": "Aprobación",
+    "section": "",
+    "text": "Se explican los criterios de aprobación, regularidad y promoción. Se pueden incluir:\n\nPorcentaje de asistencia requerido.\nEntregas obligatorias y fechas clave.\nExámenes parciales y recuperatorios.\nModalidad de evaluación final.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "teoria/02_unidad/02_apunte.html",
+    "href": "teoria/02_unidad/02_apunte.html",
+    "title": "Unidad 2 - Apunte 2",
+    "section": "",
+    "text": "Este es un segundo apunte anidado, generado a partir de un archivo .qmd.",
+    "crumbs": [
+      "Teoría",
+      "Unidad 2",
+      "Unidad 2 - Apunte 2"
     ]
   },
   {
@@ -53,139 +205,6 @@
     "crumbs": [
       "Teoría",
       "Unidad 1"
-    ]
-  },
-  {
-    "objectID": "practica/02.html",
-    "href": "practica/02.html",
-    "title": "Unidad 2",
-    "section": "",
-    "text": "¿De qué color era el caballo blanco de San Martín?",
-    "crumbs": [
-      "Práctica",
-      "Unidad 2"
-    ]
-  },
-  {
-    "objectID": "practica/02.html#adivinanza",
-    "href": "practica/02.html#adivinanza",
-    "title": "Unidad 2",
-    "section": "",
-    "text": "¿De qué color era el caballo blanco de San Martín?",
-    "crumbs": [
-      "Práctica",
-      "Unidad 2"
-    ]
-  },
-  {
-    "objectID": "practica/03.html",
-    "href": "practica/03.html",
-    "title": "Unidad 3",
-    "section": "",
-    "text": "¿Por qué el siguiente bloque muestra solo un número como salida?\n\nfor i in range(3):\n    print(i)\n    break\n\n0",
-    "crumbs": [
-      "Práctica",
-      "Unidad 3"
-    ]
-  },
-  {
-    "objectID": "practica/03.html#programando",
-    "href": "practica/03.html#programando",
-    "title": "Unidad 3",
-    "section": "",
-    "text": "¿Por qué el siguiente bloque muestra solo un número como salida?\n\nfor i in range(3):\n    print(i)\n    break\n\n0",
-    "crumbs": [
-      "Práctica",
-      "Unidad 3"
-    ]
-  },
-  {
-    "objectID": "proyectos/grupal.html",
-    "href": "proyectos/grupal.html",
-    "title": "Proyecto grupal",
-    "section": "",
-    "text": "Si aplica, se puede incluir un proyecto grupal.",
-    "crumbs": [
-      "Proyectos",
-      "Proyecto grupal"
-    ]
-  },
-  {
-    "objectID": "recursos/tutoriales/instalacion_python.html",
-    "href": "recursos/tutoriales/instalacion_python.html",
-    "title": "Instalación de Python y Positron en Windows",
-    "section": "",
-    "text": "Este es un recurso de ejemplo donde se usa el shortcode {{&lt; video &gt;}} para incluir un video alojado en YouTube.",
-    "crumbs": [
-      "Recursos",
-      "Tutoriales",
-      "Instalación de Python y Positron en Windows"
-    ]
-  },
-  {
-    "objectID": "informacion/aprobacion.html",
-    "href": "informacion/aprobacion.html",
-    "title": "Aprobación",
-    "section": "",
-    "text": "Se explican los criterios de aprobación, regularidad y promoción. Se pueden incluir:\n\nPorcentaje de asistencia requerido.\nEntregas obligatorias y fechas clave.\nExámenes parciales y recuperatorios.\nModalidad de evaluación final.",
-    "crumbs": [
-      "Información",
-      "Aprobación"
-    ]
-  },
-  {
-    "objectID": "informacion/bibliografia.html",
-    "href": "informacion/bibliografia.html",
-    "title": "Bibliografía",
-    "section": "",
-    "text": "En esta sección se incluye la bibliografía, la cual puede dividirse en diferentes subsecciones gracias al filtro section-bibliographies.\nPara generar la bibliografía de manera automática, se utilizan divs invisibles en los que se incluyen los identificadores BibTeX que se desean citar, por ejemplo @CasellaBerger2024, @Gelman2013, etc.\nEstos identificadores deben corresponder a una entrada en el archivo .bib, el cual se especifica en el archivo de configuración _quarto.yml.",
-    "crumbs": [
-      "Información",
-      "Bibliografía"
-    ]
-  },
-  {
-    "objectID": "informacion/bibliografia.html#principal",
-    "href": "informacion/bibliografia.html#principal",
-    "title": "Bibliografía",
-    "section": "Principal",
-    "text": "Principal\n\nCasella y Berger (2024) Hastie, Tibshirani, y Friedman (2009) Gelman et al. (2013)\n\n\n\nCasella, George, y Roger L. Berger. 2024. Statistical Inference. 2.ª ed. Chapman & Hall/CRC.\n\n\nGelman, Andrew, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, y Donald B. Rubin. 2013. Bayesian Data Analysis. 3.ª ed. CRC Press.\n\n\nHastie, Trevor, Robert Tibshirani, y Jerome Friedman. 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2.ª ed. Springer.",
-    "crumbs": [
-      "Información",
-      "Bibliografía"
-    ]
-  },
-  {
-    "objectID": "informacion/bibliografia.html#complementaria",
-    "href": "informacion/bibliografia.html#complementaria",
-    "title": "Bibliografía",
-    "section": "Complementaria",
-    "text": "Complementaria\n\nJaynes (2003) Rudin (1976)\n\n\n\n\n\nJaynes, E. T. 2003. Probability Theory: The Logic of Science. Cambridge University Press.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3.ª ed. McGraw-Hill.",
-    "crumbs": [
-      "Información",
-      "Bibliografía"
-    ]
-  },
-  {
-    "objectID": "informacion/calendario.html",
-    "href": "informacion/calendario.html",
-    "title": "Calendario",
-    "section": "",
-    "text": "En esta sección se puede incluir una tabla con el cronograma de las actividades del curso.\n\n\n\nSemana\nTema\nMaterial\n\n\n\n\n1\nIntroducción\nDiapositivas + notas\n\n\n2\nTema 2\nLectura recomendada\n\n\n3\nTema 3\nNotebook de ejemplo",
-    "crumbs": [
-      "Información",
-      "Calendario"
-    ]
-  },
-  {
-    "objectID": "informacion/programa.html",
-    "href": "informacion/programa.html",
-    "title": "Programa",
-    "section": "",
-    "text": "Se describen los objetivos, competencias y contenidos generales del curso.",
-    "crumbs": [
-      "Información",
-      "Programa"
     ]
   },
   {
@@ -242,25 +261,6 @@
     "crumbs": [
       "Práctica",
       "Unidad 1"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Curso",
-    "section": "",
-    "text": "Curso\n      \n\n      \n      \n        \n        \n          \n           \n          Programas / carreras\n        \n        \n        \n          \n           \n          Universidad / Facultad\n        \n        \n        \n          \n           \n          Semestre y año académico\n        \n        \n        \n          \n           \n          Horario de clases\n        \n        \n      \n      \n    \n  \n\n  \n  \n    \n  \n  \n\nNo hay resultados\n\n\n\n  \n    Docentes\n\n    \n\n    \n    \n        \n\n        Pierre-Simon Laplace\n        \n          \n          \n            \n            Titular\n          \n          \n          \n          \n            \n            laplace@university.edu\n          \n          \n          \n          \n            \n            Consultas: Martes 13 hs\n          \n          \n        \n      \n    \n        \n\n        Carl Friedrich Gauss\n        \n          \n          \n            \n            Jefe de Trabajos Prácticos\n          \n          \n          \n          \n            \n            cfg@university.edu\n          \n          \n          \n          \n            \n            Consultas: Jueves 10 hs\n          \n          \n        \n      \n    \n        \n\n        Ronald A. Fisher\n        \n          \n          \n            \n            Ayudante\n          \n          \n          \n          \n            \n            fisher@example.com\n          \n          \n          \n        \n      \n    \n    \n  \n\nNo hay resultados"
-  },
-  {
-    "objectID": "teoria/02_unidad/02_apunte.html",
-    "href": "teoria/02_unidad/02_apunte.html",
-    "title": "Unidad 2 - Apunte 2",
-    "section": "",
-    "text": "Este es un segundo apunte anidado, generado a partir de un archivo .qmd.",
-    "crumbs": [
-      "Teoría",
-      "Unidad 2",
-      "Unidad 2 - Apunte 2"
     ]
   }
 ]

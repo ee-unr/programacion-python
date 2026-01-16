@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Curso</title>
+<title>Programación en Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,14 +34,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-66cbe2cd6f02abf52110611e217871ea.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1686332a5b71af6e39ab3d1cfadb77f8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-1686332a5b71af6e39ab3d1cfadb77f8.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1686332a5b71af6e39ab3d1cfadb77f8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c37dacc892779ef227db41bf9d53cc91.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-74e7c31c6f1ce7ffeb3973ddf562ea5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-74e7c31c6f1ce7ffeb3973ddf562ea5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-74e7c31c6f1ce7ffeb3973ddf562ea5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -58,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -143,7 +148,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -169,7 +174,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Curso</span>
+    <span class="navbar-title">Programación en Python</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -227,7 +232,7 @@ window.Quarto = {
   <div class="g-col-12 g-col-sm-8 order-2 order-sm-1 text-sm-start">
     <div class="course-meta">
       
-      <h2 class="anchored">Curso</h2>
+      <h2 class="anchored">Programación en Python</h2>
       
 
       
@@ -236,25 +241,25 @@ window.Quarto = {
         <li>
           <i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i>
           &nbsp;
-          Programas / carreras
+          Licenciatura en Estadística
         </li>
         
         <li>
           <i class="fa-solid fa-university" aria-label="university"></i>
           &nbsp;
-          Universidad / Facultad
+          Facultad de Ciencias Económicas y Estadística (UNR)
         </li>
         
         <li>
           <i class="fa-solid fa-calendar-alt" aria-label="calendar-alt"></i>
           &nbsp;
-          Semestre y año académico
+          1° Cuatrimestre 2026
         </li>
         
         <li>
           <i class="fa-solid fa-clock" aria-label="clock"></i>
           &nbsp;
-          Horario de clases
+          Miércoles - 11:00 a 15:00   |   Jueves - 8:00 a 10:00
         </li>
         
       </ul>
@@ -279,72 +284,42 @@ window.Quarto = {
 
     <div class="grid">
     
-        <div class="g-col-12 g-col-md-6 g-col-lg-4">
+        <div class="g-col-12 g-col-md-6 g-col-lg-6">
 
-        <p class="instructor-name">Pierre-Simon Laplace</p>
+        <p class="instructor-name">Tomás Capretto</p>
         <ul>
-          
-          <li>
-            <i class="fa-solid fa-user"></i>
-            Titular
-          </li>
           
           
           <li>
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:laplace@university.edu">laplace@university.edu</a>
+            <a href="mailto:tomas.capretto@fcecon.unr.edu.ar">tomas.capretto@fcecon.unr.edu.ar</a>
           </li>
           
           
           <li>
             <i class="fa-solid fa-calendar"></i>
-            Consultas: Martes 13 hs
+            TBD
           </li>
           
         </ul>
       </div>
     
-        <div class="g-col-12 g-col-md-6 g-col-lg-4">
+        <div class="g-col-12 g-col-md-6 g-col-lg-6">
 
-        <p class="instructor-name">Carl Friedrich Gauss</p>
+        <p class="instructor-name">Dolores Sollberger</p>
         <ul>
-          
-          <li>
-            <i class="fa-solid fa-user"></i>
-            Jefe de Trabajos Prácticos
-          </li>
           
           
           <li>
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:cfg@university.edu">cfg@university.edu</a>
+            <a href="mailto:dolores.sollberger@fcecon.unr.edu.ar">dolores.sollberger@fcecon.unr.edu.ar</a>
           </li>
           
           
           <li>
             <i class="fa-solid fa-calendar"></i>
-            Consultas: Jueves 10 hs
+            TBD
           </li>
-          
-        </ul>
-      </div>
-    
-        <div class="g-col-12 g-col-md-6 g-col-lg-4">
-
-        <p class="instructor-name">Ronald A. Fisher</p>
-        <ul>
-          
-          <li>
-            <i class="fa-solid fa-user"></i>
-            Ayudante
-          </li>
-          
-          
-          <li>
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:fisher@example.com">fisher@example.com</a>
-          </li>
-          
           
         </ul>
       </div>
@@ -414,13 +389,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
