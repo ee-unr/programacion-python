@@ -1,0 +1,266 @@
+[
+  {
+    "objectID": "teoria/02_unidad/01_apunte.html",
+    "href": "teoria/02_unidad/01_apunte.html",
+    "title": "Unidad 2 - Apunte 1",
+    "section": "",
+    "text": "Este es un apunte generado a partir de una Jupyter Notebook.\n\nprint(\"¡Hola, mundo!\")\n\n¡Hola, mundo!",
+    "crumbs": [
+      "Teoría",
+      "Unidad 2",
+      "Unidad 2 - Apunte 1"
+    ]
+  },
+  {
+    "objectID": "teoria/01_unidad.html",
+    "href": "teoria/01_unidad.html",
+    "title": "Unidad 1",
+    "section": "",
+    "text": "Apunte de la primera unidad, generada a partir de un archivo .qmd. Se incluye toc: true los metadatos del archivo para generar la tabla de contenidos que se observa a la derecha.",
+    "crumbs": [
+      "Teoría",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "teoria/01_unidad.html#sección-1",
+    "href": "teoria/01_unidad.html#sección-1",
+    "title": "Unidad 1",
+    "section": "Sección 1",
+    "text": "Sección 1\nContenido de la primera sección.",
+    "crumbs": [
+      "Teoría",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "teoria/01_unidad.html#sección-2",
+    "href": "teoria/01_unidad.html#sección-2",
+    "title": "Unidad 1",
+    "section": "Sección 2",
+    "text": "Sección 2",
+    "crumbs": [
+      "Teoría",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "teoria/01_unidad.html#sección-2.a",
+    "href": "teoria/01_unidad.html#sección-2.a",
+    "title": "Unidad 1",
+    "section": "Sección 2.A",
+    "text": "Sección 2.A\nAlgún texto interesante.\n\nSección 2.B\nOtro texto interesante.",
+    "crumbs": [
+      "Teoría",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "practica/02.html",
+    "href": "practica/02.html",
+    "title": "Unidad 2",
+    "section": "",
+    "text": "¿De qué color era el caballo blanco de San Martín?",
+    "crumbs": [
+      "Práctica",
+      "Unidad 2"
+    ]
+  },
+  {
+    "objectID": "practica/02.html#adivinanza",
+    "href": "practica/02.html#adivinanza",
+    "title": "Unidad 2",
+    "section": "",
+    "text": "¿De qué color era el caballo blanco de San Martín?",
+    "crumbs": [
+      "Práctica",
+      "Unidad 2"
+    ]
+  },
+  {
+    "objectID": "practica/03.html",
+    "href": "practica/03.html",
+    "title": "Unidad 3",
+    "section": "",
+    "text": "¿Por qué el siguiente bloque muestra solo un número como salida?\n\nfor i in range(3):\n    print(i)\n    break\n\n0",
+    "crumbs": [
+      "Práctica",
+      "Unidad 3"
+    ]
+  },
+  {
+    "objectID": "practica/03.html#programando",
+    "href": "practica/03.html#programando",
+    "title": "Unidad 3",
+    "section": "",
+    "text": "¿Por qué el siguiente bloque muestra solo un número como salida?\n\nfor i in range(3):\n    print(i)\n    break\n\n0",
+    "crumbs": [
+      "Práctica",
+      "Unidad 3"
+    ]
+  },
+  {
+    "objectID": "proyectos/grupal.html",
+    "href": "proyectos/grupal.html",
+    "title": "Proyecto grupal",
+    "section": "",
+    "text": "Si aplica, se puede incluir un proyecto grupal.",
+    "crumbs": [
+      "Proyectos",
+      "Proyecto grupal"
+    ]
+  },
+  {
+    "objectID": "recursos/tutoriales/instalacion_python.html",
+    "href": "recursos/tutoriales/instalacion_python.html",
+    "title": "Instalación de Python y Positron en Windows",
+    "section": "",
+    "text": "Este es un recurso de ejemplo donde se usa el shortcode {{&lt; video &gt;}} para incluir un video alojado en YouTube.",
+    "crumbs": [
+      "Recursos",
+      "Tutoriales",
+      "Instalación de Python y Positron en Windows"
+    ]
+  },
+  {
+    "objectID": "informacion/aprobacion.html",
+    "href": "informacion/aprobacion.html",
+    "title": "Aprobación",
+    "section": "",
+    "text": "Se explican los criterios de aprobación, regularidad y promoción. Se pueden incluir:\n\nPorcentaje de asistencia requerido.\nEntregas obligatorias y fechas clave.\nExámenes parciales y recuperatorios.\nModalidad de evaluación final.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html",
+    "href": "informacion/bibliografia.html",
+    "title": "Bibliografía",
+    "section": "",
+    "text": "En esta sección se incluye la bibliografía, la cual puede dividirse en diferentes subsecciones gracias al filtro section-bibliographies.\nPara generar la bibliografía de manera automática, se utilizan divs invisibles en los que se incluyen los identificadores BibTeX que se desean citar, por ejemplo @CasellaBerger2024, @Gelman2013, etc.\nEstos identificadores deben corresponder a una entrada en el archivo .bib, el cual se especifica en el archivo de configuración _quarto.yml.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html#principal",
+    "href": "informacion/bibliografia.html#principal",
+    "title": "Bibliografía",
+    "section": "Principal",
+    "text": "Principal\n\nCasella y Berger (2024) Hastie, Tibshirani, y Friedman (2009) Gelman et al. (2013)\n\n\n\nCasella, George, y Roger L. Berger. 2024. Statistical Inference. 2.ª ed. Chapman & Hall/CRC.\n\n\nGelman, Andrew, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, y Donald B. Rubin. 2013. Bayesian Data Analysis. 3.ª ed. CRC Press.\n\n\nHastie, Trevor, Robert Tibshirani, y Jerome Friedman. 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2.ª ed. Springer.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html#complementaria",
+    "href": "informacion/bibliografia.html#complementaria",
+    "title": "Bibliografía",
+    "section": "Complementaria",
+    "text": "Complementaria\n\nJaynes (2003) Rudin (1976)\n\n\n\n\n\nJaynes, E. T. 2003. Probability Theory: The Logic of Science. Cambridge University Press.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3.ª ed. McGraw-Hill.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/calendario.html",
+    "href": "informacion/calendario.html",
+    "title": "Calendario",
+    "section": "",
+    "text": "En esta sección se puede incluir una tabla con el cronograma de las actividades del curso.\n\n\n\nSemana\nTema\nMaterial\n\n\n\n\n1\nIntroducción\nDiapositivas + notas\n\n\n2\nTema 2\nLectura recomendada\n\n\n3\nTema 3\nNotebook de ejemplo",
+    "crumbs": [
+      "Información",
+      "Calendario"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html",
+    "href": "informacion/programa.html",
+    "title": "Programa",
+    "section": "",
+    "text": "Se describen los objetivos, competencias y contenidos generales del curso.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "recursos/ejemplos/clases.html",
+    "href": "recursos/ejemplos/clases.html",
+    "title": "Cómo crear una clase en Python",
+    "section": "",
+    "text": "Se pueden incluir ejemplos de código.\nclass Persona:\n    def __init__(self, nombre, edad):\n        self.nombre = nombre\n        self.edad = edad\n\n    def saludar(self):\n        return f\"Hola, me llamo {self.nombre} y tengo {self.edad} años.\"\n\n    def es_mayor_de_edad(self):\n        return self.edad &gt;= 18\npersona = Persona(\"Matías\", 30)\npersona.saludar()\nHola, me llamo Matías y tengo 30 años.",
+    "crumbs": [
+      "Recursos",
+      "Ejemplos",
+      "Cómo crear una clase en Python"
+    ]
+  },
+  {
+    "objectID": "proyectos/individual.html",
+    "href": "proyectos/individual.html",
+    "title": "Proyecto individual",
+    "section": "",
+    "text": "Luego del proyecto grupal, podría realizarse un proyecto individual.",
+    "crumbs": [
+      "Proyectos",
+      "Proyecto individual"
+    ]
+  },
+  {
+    "objectID": "practica/01.html",
+    "href": "practica/01.html",
+    "title": "Unidad 1",
+    "section": "",
+    "text": "La práctica se genera automáticamente a partir de archivos .qmd y .ipynb. No es necesario enumerarlos manualmente, porque en _quarto.yml se incluye:\nque incorpora todos los archivos con extensión .qmd o .ipynb dentro de la carpeta practica.",
+    "crumbs": [
+      "Práctica",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "practica/01.html#suma",
+    "href": "practica/01.html#suma",
+    "title": "Unidad 1",
+    "section": "1 Suma",
+    "text": "1 Suma\n¿Cuánto es 2 + 2?",
+    "crumbs": [
+      "Práctica",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "practica/01.html#resta",
+    "href": "practica/01.html#resta",
+    "title": "Unidad 1",
+    "section": "2 Resta",
+    "text": "2 Resta\n¿Cuánto es 2 - 2?",
+    "crumbs": [
+      "Práctica",
+      "Unidad 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Curso",
+    "section": "",
+    "text": "Curso\n      \n\n      \n      \n        \n        \n          \n           \n          Programas / carreras\n        \n        \n        \n          \n           \n          Universidad / Facultad\n        \n        \n        \n          \n           \n          Semestre y año académico\n        \n        \n        \n          \n           \n          Horario de clases\n        \n        \n      \n      \n    \n  \n\n  \n  \n    \n  \n  \n\nNo hay resultados\n\n\n\n  \n    Docentes\n\n    \n\n    \n    \n        \n\n        Pierre-Simon Laplace\n        \n          \n          \n            \n            Titular\n          \n          \n          \n          \n            \n            laplace@university.edu\n          \n          \n          \n          \n            \n            Consultas: Martes 13 hs\n          \n          \n        \n      \n    \n        \n\n        Carl Friedrich Gauss\n        \n          \n          \n            \n            Jefe de Trabajos Prácticos\n          \n          \n          \n          \n            \n            cfg@university.edu\n          \n          \n          \n          \n            \n            Consultas: Jueves 10 hs\n          \n          \n        \n      \n    \n        \n\n        Ronald A. Fisher\n        \n          \n          \n            \n            Ayudante\n          \n          \n          \n          \n            \n            fisher@example.com\n          \n          \n          \n        \n      \n    \n    \n  \n\nNo hay resultados"
+  },
+  {
+    "objectID": "teoria/02_unidad/02_apunte.html",
+    "href": "teoria/02_unidad/02_apunte.html",
+    "title": "Unidad 2 - Apunte 2",
+    "section": "",
+    "text": "Este es un segundo apunte anidado, generado a partir de un archivo .qmd.",
+    "crumbs": [
+      "Teoría",
+      "Unidad 2",
+      "Unidad 2 - Apunte 2"
+    ]
+  }
+]
