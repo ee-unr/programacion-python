@@ -1,0 +1,7 @@
+---
+title: "Instalación de Python y Positron en Windows"
+---
+
+Este es un recurso de ejemplo donde se usa el _shortcode_ `{{{< video >}}}` para incluir un video alojado en YouTube.
+
+{{< video https://www.youtube.com/watch?v=9orVIW_8TOM >}}

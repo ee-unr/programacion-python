@@ -1,0 +1,69 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Curso"
+  description: "Una descripción breve del curso."
+  favicon: "imgs/favicon.png"
+  page-navigation: true
+  navbar:
+    title: "Curso"
+    pinned: true
+    right:
+      - text: Información
+        file: informacion/programa.qmd
+      - text: Teoría
+        file: teoria/01_unidad.qmd
+      - text: Práctica
+        file: practica/01.qmd
+      - text: Proyectos
+        file: proyectos/grupal.qmd
+      - text: Recursos
+        file: recursos/tutoriales/instalacion_python.qmd
+      - icon: github
+        href: none
+  page-footer:
+    right: "Esta página fue hecha con ❤️ y [Quarto](https://quarto.org/)."
+
+
+  sidebar:
+    - title: Información
+      contents:
+        - informacion/programa.qmd
+        - informacion/aprobacion.qmd
+        - informacion/calendario.qmd
+        - informacion/bibliografia.qmd
+    - title: Teoría
+      contents:
+        - teoria/01_unidad.qmd
+        - text: Unidad 2
+          contents:
+            - teoria/02_unidad/01_apunte.ipynb
+            - teoria/02_unidad/02_apunte.qmd
+    - title: Práctica
+      contents:
+        - auto: practica/*.qmd
+        - auto: practica/*.ipynb
+    - title: Proyectos
+      contents:
+        - proyectos/grupal.qmd
+        - proyectos/individual.qmd
+    - title: Recursos
+      contents:
+        - text: Ejemplos
+          contents:
+            - recursos/ejemplos/clases.qmd
+        - text: Tutoriales
+          contents:
+            - recursos/tutoriales/instalacion_python.qmd
+
+format:
+  html:
+    theme: styles.scss
+    toc: false
+    lang: es
+    highlight-style: arrow-light
+
+csl: citas/chicago-author-date.csl
+bibliography: citas/references.bib

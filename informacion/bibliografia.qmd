@@ -1,0 +1,34 @@
+---
+title: Bibliografía
+filters:
+    - section-bibliographies
+citeproc: false
+section-bibliographies:
+    level: 2
+    minlevel: 2
+---
+
+En esta sección se incluye la bibliografía, la cual puede dividirse en diferentes
+subsecciones gracias al filtro [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies).
+
+Para generar la bibliografía de manera automática, se utilizan *divs* invisibles en los
+que se incluyen los identificadores BibTeX que se desean citar,
+por ejemplo `@CasellaBerger2024`, `@Gelman2013`, etc.
+
+Estos identificadores deben corresponder a una entrada en el archivo `.bib`,
+el cual se especifica en el archivo de configuración `_quarto.yml`.
+
+## Principal
+
+<div style="visibility: hidden; height: 0;">
+@CasellaBerger2024
+@Hastie2009
+@Gelman2013
+</div>
+
+## Complementaria
+
+<div style="visibility: hidden; height: 0;">
+@Jaynes2003
+@Rudin1976
+</div>

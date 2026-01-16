@@ -1,0 +1,13 @@
+- header: Docentes
+  entries:
+  - name: "Pierre-Simon Laplace"
+    role: "Titular"
+    email: "laplace@university.edu"
+    office_hours: "Consultas: Martes 13 hs"
+  - name: "Carl Friedrich Gauss"
+    role: "Jefe de Trabajos Prácticos"
+    email: "cfg@university.edu"
+    office_hours: "Consultas: Jueves 10 hs"
+  - name: "Ronald A. Fisher"
+    role: "Ayudante"
+    email: "fisher@example.com"

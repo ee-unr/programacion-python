@@ -1,0 +1,73 @@
+color:
+  palette:
+    white: "#ffffff"
+    blue: "#699cc5"
+    blue-light: "#cddeec"
+    blue-dark: "#233a4c"
+    red: "#bf3830"
+    red-light: "#cc6059"
+    red-dark: "#992d26"
+    gray-100: "#dedfe0"
+    gray-200: "#bcbfc1"
+    gray-300: "#9b9ea1"
+    gray-400: "#797e82"
+    gray-500: "#585e63"
+    gray-600: "#464b4f"
+    gray-700: "#35383b"
+    gray-800: "#232628"
+    gray-900: "#121314"
+
+typography:
+  fonts:
+    - family: Source Sans Pro
+      source: google
+    - family: Roboto Slab
+      source: google
+    - family: Cascadia Code
+      source: google
+  base:
+    family: Source Sans Pro
+  headings:
+    family: Roboto Slab
+  monospace:
+    family: Cascadia Code
+
+defaults:
+  bootstrap:
+    defaults:
+      # General text color
+      body-font-color: $brand-gray-800
+
+      # General links
+      link-font-color: $brand-red
+      link-font-color-hover: $brand-red-light
+      link-font-color-active: $brand-red-dark
+
+      # Navbar styles
+      navbar-font-family: Roboto Slab
+      navbar-background-color: $brand-blue
+      navbar-font-color: $brand-white
+      navbar-font-color-hover: $brand-blue-light
+      navbar-font-color-active: $brand-blue-dark
+
+      navbar-decoration-color-hover: $brand-blue  # "Invisible"
+      navbar-decoration-color-active: $brand-blue # "Invisible"
+
+      # Footer styles
+      footer-background-color: $brand-gray-600
+      footer-font-color: $brand-gray-100
+      footer-link-color: $brand-gray-100
+      footer-link-color-hover: $brand-white
+
+      # Sidebar
+      sidebar-font-color: $brand-gray-600
+      sidebar-link-font-color: $brand-gray-600
+      sidebar-link-font-color-hover: $brand-gray-300
+      sidebar-link-font-color-active: $brand-gray-900
+      sidebar-link-text-decoration: underline
+      sidebar-link-text-decoration-thickness: 1px
+      sidebar-code-color: $brand-gray-600
+
+      # Pagination links
+      pagination-font-color: $brand-gray-800
+      pagination-font-color-hover: $brand-gray-600

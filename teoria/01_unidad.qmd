@@ -1,0 +1,23 @@
+---
+title: Unidad 1
+toc: true
+toc-dept: 2
+---
+
+Apunte de la primera unidad, generada a partir de un archivo `.qmd`.
+Se incluye `toc: true` los metadatos del archivo para generar la tabla de
+contenidos que se observa a la derecha.
+
+## Sección 1
+
+Contenido de la primera sección.
+
+## Sección 2
+
+## Sección 2.A
+
+Algún texto interesante.
+
+### Sección 2.B
+
+Otro texto interesante.

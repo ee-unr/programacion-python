@@ -1,0 +1,11 @@
+---
+title: Aprobación
+---
+
+Se explican los criterios de aprobación, regularidad y promoción.
+Se pueden incluir:
+
+- Porcentaje de asistencia requerido.
+- Entregas obligatorias y fechas clave.
+- Exámenes parciales y recuperatorios.
+- Modalidad de evaluación final.

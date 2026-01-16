@@ -1,0 +1,22 @@
+---
+page-layout: full
+sidebar: false
+listing:
+  - id: front
+    contents: templates/front.yml
+    template: templates/front.ejs
+  - id: instructors
+    contents: templates/instructors.yml
+    template: templates/instructors.ejs
+---
+
+:::: {#front}
+:::
+
+:::: {#instructors}
+:::
+
+<!-- Necesario para que se carguen las dependencias para los iconos de fontawesome -->
+::: {style="display:none"}
+{{< fa graduation-cap >}}
+:::

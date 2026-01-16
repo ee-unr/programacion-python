@@ -1,0 +1,49 @@
+```{=html}
+<%
+  const data = items[0];
+  const metaEntries = [];
+
+  if (data.program) {
+    metaEntries.push({ icon: "graduation-cap", value: data.program });
+  }
+  if (data.institution) {
+    metaEntries.push({ icon: "university", value: data.institution });
+  }
+  if (data.term) {
+    metaEntries.push({ icon: "calendar-alt", value: data.term });
+  }
+  if (data.times) {
+    metaEntries.push({ icon: "clock", value: data.times });
+  }
+
+  const hasHeroImage = Boolean(data.hero_image);
+%>
+
+<div class="grid">
+  <div class="g-col-12 g-col-sm-8 order-2 order-sm-1 text-sm-start">
+    <div class="course-meta">
+      <% if (data.name) { %>
+      <h2><%= data.name %></h2>
+      <% } %>
+
+      <% if (metaEntries.length) { %>
+      <ul>
+        <% for (const entry of metaEntries) { %>
+        <li>
+          <i class="fa-solid fa-<%= entry.icon %>" aria-label="<%= entry.icon%>"></i>
+          &nbsp;
+          <%= entry.value %>
+        </li>
+        <% } %>
+      </ul>
+      <% } %>
+    </div>
+  </div>
+
+  <% if (hasHeroImage) { %>
+  <div class="g-col-12 g-col-sm-4 order-1 order-sm-2 self-align-center hero-img-container">
+    <img src="<%= data.hero_image %>" class="front-image">
+  </div>
+  <% } %>
+</div>
+```

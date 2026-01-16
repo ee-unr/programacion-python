@@ -1,0 +1,12 @@
+---
+title: Calendario
+---
+
+En esta sección se puede incluir una tabla con el cronograma de las actividades del curso.
+
+| Semana | Tema | Material |
+|--------|------|----------|
+| 1 | Introducción | Diapositivas + notas |
+| 2 | Tema 2 | Lectura recomendada |
+| 3 | Tema 3 | Notebook de ejemplo |
+

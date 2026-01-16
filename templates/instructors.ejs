@@ -1,0 +1,50 @@
+```{=html}
+<% for (const group of items) { %>
+  <div class="instructors-details">
+    <h2 class="instructors-header"><%- group.header %></h2>
+
+    <%
+      const count = group.entries.length;
+      let lgClass = "g-col-lg-3";
+
+      if (count === 2) {
+        lgClass = "g-col-lg-6";
+      } else if (count === 3) {
+        lgClass = "g-col-lg-4";
+      }
+    %>
+
+    <div class="grid">
+    <% for (const entry of group.entries) { %>
+        <div class="g-col-12 g-col-md-6 <%= lgClass %>">
+
+        <p class="instructor-name"><%= entry.name %></p>
+        <ul>
+          <% if (entry.role) { %>
+          <li>
+            <i class="fa-solid fa-user"></i>
+            <%= entry.role %>
+          </li>
+          <% } %>
+          <% if (entry.email) { %>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:<%- entry.email %>"><%= entry.email %></a>
+          </li>
+          <% } %>
+          <% if (entry.office_hours) { %>
+          <li>
+            <i class="fa-solid fa-calendar"></i>
+            <%= entry.office_hours %>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    <% } %>
+    </div>
+  </div>
+
+<% } %>
+
+
+```

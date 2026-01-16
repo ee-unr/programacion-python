@@ -1,0 +1,28 @@
+---
+title: Cómo crear una clase en Python
+---
+
+Se pueden incluir ejemplos de código.
+
+```python
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def saludar(self):
+        return f"Hola, me llamo {self.nombre} y tengo {self.edad} años."
+
+    def es_mayor_de_edad(self):
+        return self.edad >= 18
+```
+
+
+```python
+persona = Persona("Matías", 30)
+persona.saludar()
+```
+```
+Hola, me llamo Matías y tengo 30 años.
+```
+
