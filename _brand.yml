@@ -1,9 +1,7 @@
 color:
   palette:
+    yellow: "#ffc600"
     white: "#ffffff"
-    blue: "#699cc5"
-    blue-light: "#cddeec"
-    blue-dark: "#233a4c"
     red: "#bf3830"
     red-light: "#cc6059"
     red-dark: "#992d26"
@@ -45,13 +43,13 @@ defaults:
 
       # Navbar styles
       navbar-font-family: Roboto Slab
-      navbar-background-color: $brand-blue
-      navbar-font-color: $brand-white
-      navbar-font-color-hover: $brand-blue-light
-      navbar-font-color-active: $brand-blue-dark
+      navbar-background-color: $brand-yellow
+      navbar-font-color: $brand-gray-800
+      navbar-font-color-hover: $brand-gray-800
+      navbar-font-color-active: $brand-gray-800
 
-      navbar-decoration-color-hover: $brand-blue  # "Invisible"
-      navbar-decoration-color-active: $brand-blue # "Invisible"
+      navbar-decoration-color-hover: $brand-gray-800
+      navbar-decoration-color-active: $brand-gray-800
 
       # Footer styles
       footer-background-color: $brand-gray-600

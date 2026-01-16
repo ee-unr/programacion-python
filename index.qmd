@@ -20,3 +20,4 @@ listing:
 ::: {style="display:none"}
 {{< fa graduation-cap >}}
 :::
+

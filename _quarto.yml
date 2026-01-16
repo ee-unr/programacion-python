@@ -3,12 +3,12 @@ project:
   output-dir: _site
 
 website:
-  title: "Curso"
+  title: "Programación en Python"
   description: "Una descripción breve del curso."
   favicon: "imgs/favicon.png"
   page-navigation: true
   navbar:
-    title: "Curso"
+    title: "Programación en Python"
     pinned: true
     right:
       - text: Información

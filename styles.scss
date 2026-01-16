@@ -154,6 +154,20 @@ div.sidebar-item-container {
   }
 }
 
+.sidebar nav[role=doc-toc] {
+  ul > li > a,
+  ul > li > ul > li > a {
+    &:hover {
+      color: $sidebar-link-font-color-hover !important;
+    }
+
+    &.active {
+      border-left: 1px solid $sidebar-link-font-color-active;
+      color: $sidebar-link-font-color-active !important;
+    }
+  }
+}
+
 // --------------------------------------------------------------------------------------------- //
 //                                        Custom classes                                         //
 // --------------------------------------------------------------------------------------------- //
