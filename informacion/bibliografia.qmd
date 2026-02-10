@@ -4,31 +4,69 @@ filters:
     - section-bibliographies
 citeproc: false
 section-bibliographies:
-    level: 2
+    level: 3
     minlevel: 2
 ---
 
-En esta sección se incluye la bibliografía, la cual puede dividirse en diferentes
-subsecciones gracias al filtro [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies).
-
-Para generar la bibliografía de manera automática, se utilizan *divs* invisibles en los
-que se incluyen los identificadores BibTeX que se desean citar,
-por ejemplo `@CasellaBerger2024`, `@Gelman2013`, etc.
-
-Estos identificadores deben corresponder a una entrada en el archivo `.bib`,
-el cual se especifica en el archivo de configuración `_quarto.yml`.
-
 ## Principal
 
+### Unidad 1
+
 <div style="visibility: hidden; height: 0;">
-@CasellaBerger2024
-@Hastie2009
-@Gelman2013
+@Downey2024ThinkPython
+@Matthes2022Python
+@Sweigart2025Automate
 </div>
+
+### Unidad 2
+
+<div style="visibility: hidden; height: 0;">
+@Kalb2022Object
+@Lott2021Python
+@Sweigart2020Beyond
+</div>
+
+### Unidad 3
+
+<div style="visibility: hidden; height: 0;">
+@Bhargava2024Grokking
+@Lott2022Functional
+@Mertz2015Functional
+@Sturtz2024FunctionalPython
+@Sweigart2020Beyond
+</div>
+
+### Unidad 4
+
+<div style="visibility: hidden; height: 0;">
+@Geron2025HandsOnML
+@HoltzPythonGraphGallery
+@JanssensNieuwdorp2025Polars
+@Kakegawa2024PolarsCookbook
+@PlotnineDocs
+@PolarsUserGuide
+@Rougier2021ScientificViz
+@ScikitLearnDocs
+@StatsmodelsDocs
+</div>
+
+
+### Unidad 5
+
+<div style="visibility: hidden; height: 0;">
+@AstralRuffDocs
+@AstralUvDocs
+@Moure2024GitGitHub
+@Skoulikari2021LearningGit
+@PreCommitDocs
+</div>
+
 
 ## Complementaria
 
 <div style="visibility: hidden; height: 0;">
-@Jaynes2003
-@Rudin1976
+@Ramalho2022FluentPython
+@Stephenson2019PythonWorkbook
+@Sweigart2021Big
+@Vaughan2019Impractical
 </div>
