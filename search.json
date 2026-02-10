@@ -90,7 +90,40 @@
     "href": "informacion/programa.html",
     "title": "Programa",
     "section": "",
-    "text": "Se describen los objetivos, competencias y contenidos generales del curso.",
+    "text": "Los profesionales en Estadística necesitan contar con habilidades avanzadas de programación, que les permitan abordar problemas complejos y desarrollar soluciones eficientes y robustas.\nLa asignatura Programación en Python tiene como propósito consolidar las habilidades de programación de los estudiantes a través del uso del lenguaje Python, ampliamente adoptado en la comunidad científica y en la industria por su versatilidad y su extenso ecosistema de librerías. En esta asignatura, se abordan los principales paradigmas de programación (imperativo, orientado a objetos y funcional), promoviendo un pensamiento computacional flexible y la escritura de programas estructurados, legibles y reutilizables.\nLa materia también introduce herramientas fundamentales para el análisis de datos en Python, incluyendo el uso de paquetes como NumPy, Polars, Matplotlib, Seaborn, Plotnine, statsmodels y scikit-learn, que resultan fundamentales en el desarrollo de proyectos de análisis, modelización y visualización de datos.\nAdemás, se incorporan prácticas y herramientas que promueven un trabajo colaborativo ágil, robusto y escalable. Estas incluyen el control de versiones con git y el uso de GitHub como plataforma de trabajo colaborativo, el uso de entornos virtuales para aislar dependencias y la incorporación de herramientas que robustecen y automatizan el desarrollo de soluciones basadas en la programación, como el análisis estático, el formateo automático y los flujos de integración continua.\nOfrecida como materia electiva para la Licenciatura en Estadística, esta asignatura consolida las competencias informáticas de los estudiantes y los prepara para afrontar desafíos profesionales que requieren un dominio sólido de la programación y de las herramientas modernas del análisis de datos.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html#fundamentación",
+    "href": "informacion/programa.html#fundamentación",
+    "title": "Programa",
+    "section": "",
+    "text": "Los profesionales en Estadística necesitan contar con habilidades avanzadas de programación, que les permitan abordar problemas complejos y desarrollar soluciones eficientes y robustas.\nLa asignatura Programación en Python tiene como propósito consolidar las habilidades de programación de los estudiantes a través del uso del lenguaje Python, ampliamente adoptado en la comunidad científica y en la industria por su versatilidad y su extenso ecosistema de librerías. En esta asignatura, se abordan los principales paradigmas de programación (imperativo, orientado a objetos y funcional), promoviendo un pensamiento computacional flexible y la escritura de programas estructurados, legibles y reutilizables.\nLa materia también introduce herramientas fundamentales para el análisis de datos en Python, incluyendo el uso de paquetes como NumPy, Polars, Matplotlib, Seaborn, Plotnine, statsmodels y scikit-learn, que resultan fundamentales en el desarrollo de proyectos de análisis, modelización y visualización de datos.\nAdemás, se incorporan prácticas y herramientas que promueven un trabajo colaborativo ágil, robusto y escalable. Estas incluyen el control de versiones con git y el uso de GitHub como plataforma de trabajo colaborativo, el uso de entornos virtuales para aislar dependencias y la incorporación de herramientas que robustecen y automatizan el desarrollo de soluciones basadas en la programación, como el análisis estático, el formateo automático y los flujos de integración continua.\nOfrecida como materia electiva para la Licenciatura en Estadística, esta asignatura consolida las competencias informáticas de los estudiantes y los prepara para afrontar desafíos profesionales que requieren un dominio sólido de la programación y de las herramientas modernas del análisis de datos.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html#objetivos",
+    "href": "informacion/programa.html#objetivos",
+    "title": "Programa",
+    "section": "Objetivos",
+    "text": "Objetivos\nQue los estudiantes logren:\n\nutilizar Python como lenguaje de programación general para resolver problemas y desarrollar programas eficientes, aplicando los paradigmas imperativo, orientado a objetos y funcional;\ndiseñar, implementar y documentar soluciones empleando buenas prácticas y aprovechando el ecosistema de Python para el análisis, modelización y visualización de datos;\ndesarrollar proyectos integrales de análisis de datos con flujos de trabajo eficientes, reproducibles y portables; y\ntrabajar de forma colaborativa utilizando git, GitHub y otras herramientas que promuevan la calidad, la trazabilidad y el desarrollo sostenible de soluciones basadas en código.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html#contenidos",
+    "href": "informacion/programa.html#contenidos",
+    "title": "Programa",
+    "section": "Contenidos",
+    "text": "Contenidos\n\nUnidad 1. Introducción a Python\n\nLenguaje Python y su ecosistema. Uso de la interfaz Positron. Sintaxis de Python. Expresiones. Variables y asignaciones. Tipos de datos elementales. Operadores numéricos, de comparación y lógicos. Funciones. Ejecución condicional de código. Bucles definidos y no definidos. Listas, tuplas y diccionarios. Uso de código externo. Módulos y librerías. Librería estándar de Python. Instalación y gestión de librerías. Noción de ambiente virtual. Scripting. Lectura y escritura de archivos de texto plano. Manejo de excepciones.\n\nUnidad 2. Programación orientada a objetos\n\nPrincipios fundamentales. Objetos, clases e instancias. Atributos y métodos. Encapsulamiento. Propiedades públicas y privadas. Atributos y métodos de clase. Herencia. Polimorfismo. Sobrecarga de operadores. Excepciones a medida.\n\nUnidad 3. Programación funcional\n\nPrincipios fundamentales. Funciones como ciudadanos de primera clase. Funciones puras. Funciones anónimas. Closures. Recursión. Funciones de orden superior: map, filter, reduce. Comprensiones como alternativas idiomáticas a map y filter. Aplicación parcial de funciones. Decoradores. Evaluación estricta y no estricta. Evaluación perezosa (lazy) e inmediata (eager). Generadores. Iterables e iteradores\n\nUnidad 4. Análisis de datos en Python\n\nIntroducción a las Jupyter Notebooks. Trabajo con arreglos multidimensionales en NumPy. Lectura y procesamiento de datos tabulares con Polars. El formato .parquet. Uso de LazyFrames de Polars para el cómputo eficiente con grandes conjuntos de datos. Creación de visualizaciones con Matplotlib, Seaborn y Plotnine. Modelos estadísticos y de aprendizaje automático con statsmodels y scikit-learn. Pipelines de procesamiento de datos en scikit-learn.\n\nUnidad 5. Herramientas y prácticas para el desarrollo colaborativo\n\nGit y sus comandos fundamentales: clone, fetch, merge, pull, add, push, checkout, status, branch, merge, log y rebase. GitHub. Herramientas del trabajo colaborativo en GitHub: issues, pull requests y forks. Integración y despliegue continuo con GitHub Actions. Herramientas para el análisis estático y formateo de código. Herramientas modernas para la gestión de ambientes virtuales. Pre-commit. Buenas prácticas en la gestión de datos en proyectos colaborativos. Gestión segura de claves.",
     "crumbs": [
       "Información",
       "Programa"
@@ -112,7 +145,7 @@
     "href": "informacion/bibliografia.html",
     "title": "Bibliografía",
     "section": "",
-    "text": "En esta sección se incluye la bibliografía, la cual puede dividirse en diferentes subsecciones gracias al filtro section-bibliographies.\nPara generar la bibliografía de manera automática, se utilizan divs invisibles en los que se incluyen los identificadores BibTeX que se desean citar, por ejemplo @CasellaBerger2024, @Gelman2013, etc.\nEstos identificadores deben corresponder a una entrada en el archivo .bib, el cual se especifica en el archivo de configuración _quarto.yml.",
+    "text": "Downey (2024) Matthes (2022) Sweigart (2025)\n\n\n\nDowney, Allen B. 2024. Think Python. 3.ª ed. O’Reilly Media. https://allendowney.github.io/ThinkPython/.\n\n\nMatthes, Eric. 2022. Python Crash Course. 3rd ed. No Starch Press.\n\n\nSweigart, Al. 2025. Automate the Boring Stuff with Python. 3rd ed. No Starch Press. https://automatetheboringstuff.com/3e/.\n\n\n\n\n\n\nKalb (2022) Lott y Phillips (2021) Sweigart (2020)\n\n\n\nKalb, Irv. 2022. Object-Oriented Python. No Starch Press.\n\n\nLott, Steven F., y Dusty Phillips. 2021. Python Object-Oriented Programming. 4th ed. Packt Publishing.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nBhargava (2024) Lott (2022) Mertz (2015) Sturtz (2024) Sweigart (2020)\n\n\n\nBhargava, Aditya Y. 2024. Grokking Algorithms. 2nd ed. Manning Publications.\n\n\nLott, Steven F. 2022. Functional Python Programming. 3rd ed. Packt Publishing.\n\n\nMertz, David. 2015. Functional Programming in Python. O’Reilly Media.\n\n\nSturtz, John. 2024. «Functional Programming in Python: When and How to Use It». 2024. https://realpython.com/python-functional-programming/.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nGéron (2025) Holtz (s. f.) Janssens y Nieuwdorp (2025) Kakegawa (2024) Kibirige, H. (s. f.) Polars Developers (s. f.) Rougier (2021) Scikit-learn Developers (s. f.) Statsmodels Developers (s. f.)\n\n\n\nGéron, Aurélien. 2025. Hands-On Machine Learning with Scikit-Learn and PyTorch. 4.ª ed. O’Reilly Media.\n\n\nHoltz, Yan. s. f. «Python Graph Gallery». https://python-graph-gallery.com.\n\n\nJanssens, Jeroen, y Timo Nieuwdorp. 2025. Python Polars: The Definitive Guide. O’Reilly Media.\n\n\nKakegawa, Yuki. 2024. Polars Cookbook. Packt Publishing.\n\n\nKibirige, H. s. f. «Documentación de Plotnine». https://plotnine.org/.\n\n\nPolars Developers. s. f. «Polars User Guide». https://docs.pola.rs/.\n\n\nRougier, Nicolas P. 2021. «Scientific Visualization: Python + Matplotlib». 2021. https://github.com/rougier/scientific-visualization-book.\n\n\nScikit-learn Developers. s. f. «Documentación de Scikit-learn». https://scikit-learn.org.\n\n\nStatsmodels Developers. s. f. «Documentación de Statsmodels». https://www.statsmodels.org.\n\n\n\n\n\n\nAstral (s. f.a) Astral (s. f.b) Moure (2024) Skoulikari (2021) Sottile, Anthony (s. f.)\n\n\n\nAstral. s. f.a. «Documentación de Ruff». https://docs.astral.sh/ruff/.\n\n\nAstral. s. f.b. «Documentación de uv». https://docs.astral.sh/uv.\n\n\nMoure, Brais. 2024. Git y GitHub desde cero. 2.ª ed. Leanpub.\n\n\nSkoulikari, Anna. 2021. Learning Git. O’Reilly Media.\n\n\nSottile, Anthony. s. f. «Documentación de pre-commit». https://pre-commit.com/.",
     "crumbs": [
       "Información",
       "Bibliografía"
@@ -122,8 +155,8 @@
     "objectID": "informacion/bibliografia.html#principal",
     "href": "informacion/bibliografia.html#principal",
     "title": "Bibliografía",
-    "section": "Principal",
-    "text": "Principal\n\nCasella y Berger (2024) Hastie, Tibshirani, y Friedman (2009) Gelman et al. (2013)\n\n\n\nCasella, George, y Roger L. Berger. 2024. Statistical Inference. 2.ª ed. Chapman & Hall/CRC.\n\n\nGelman, Andrew, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, y Donald B. Rubin. 2013. Bayesian Data Analysis. 3.ª ed. CRC Press.\n\n\nHastie, Trevor, Robert Tibshirani, y Jerome Friedman. 2009. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2.ª ed. Springer.",
+    "section": "",
+    "text": "Downey (2024) Matthes (2022) Sweigart (2025)\n\n\n\nDowney, Allen B. 2024. Think Python. 3.ª ed. O’Reilly Media. https://allendowney.github.io/ThinkPython/.\n\n\nMatthes, Eric. 2022. Python Crash Course. 3rd ed. No Starch Press.\n\n\nSweigart, Al. 2025. Automate the Boring Stuff with Python. 3rd ed. No Starch Press. https://automatetheboringstuff.com/3e/.\n\n\n\n\n\n\nKalb (2022) Lott y Phillips (2021) Sweigart (2020)\n\n\n\nKalb, Irv. 2022. Object-Oriented Python. No Starch Press.\n\n\nLott, Steven F., y Dusty Phillips. 2021. Python Object-Oriented Programming. 4th ed. Packt Publishing.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nBhargava (2024) Lott (2022) Mertz (2015) Sturtz (2024) Sweigart (2020)\n\n\n\nBhargava, Aditya Y. 2024. Grokking Algorithms. 2nd ed. Manning Publications.\n\n\nLott, Steven F. 2022. Functional Python Programming. 3rd ed. Packt Publishing.\n\n\nMertz, David. 2015. Functional Programming in Python. O’Reilly Media.\n\n\nSturtz, John. 2024. «Functional Programming in Python: When and How to Use It». 2024. https://realpython.com/python-functional-programming/.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nGéron (2025) Holtz (s. f.) Janssens y Nieuwdorp (2025) Kakegawa (2024) Kibirige, H. (s. f.) Polars Developers (s. f.) Rougier (2021) Scikit-learn Developers (s. f.) Statsmodels Developers (s. f.)\n\n\n\nGéron, Aurélien. 2025. Hands-On Machine Learning with Scikit-Learn and PyTorch. 4.ª ed. O’Reilly Media.\n\n\nHoltz, Yan. s. f. «Python Graph Gallery». https://python-graph-gallery.com.\n\n\nJanssens, Jeroen, y Timo Nieuwdorp. 2025. Python Polars: The Definitive Guide. O’Reilly Media.\n\n\nKakegawa, Yuki. 2024. Polars Cookbook. Packt Publishing.\n\n\nKibirige, H. s. f. «Documentación de Plotnine». https://plotnine.org/.\n\n\nPolars Developers. s. f. «Polars User Guide». https://docs.pola.rs/.\n\n\nRougier, Nicolas P. 2021. «Scientific Visualization: Python + Matplotlib». 2021. https://github.com/rougier/scientific-visualization-book.\n\n\nScikit-learn Developers. s. f. «Documentación de Scikit-learn». https://scikit-learn.org.\n\n\nStatsmodels Developers. s. f. «Documentación de Statsmodels». https://www.statsmodels.org.\n\n\n\n\n\n\nAstral (s. f.a) Astral (s. f.b) Moure (2024) Skoulikari (2021) Sottile, Anthony (s. f.)\n\n\n\nAstral. s. f.a. «Documentación de Ruff». https://docs.astral.sh/ruff/.\n\n\nAstral. s. f.b. «Documentación de uv». https://docs.astral.sh/uv.\n\n\nMoure, Brais. 2024. Git y GitHub desde cero. 2.ª ed. Leanpub.\n\n\nSkoulikari, Anna. 2021. Learning Git. O’Reilly Media.\n\n\nSottile, Anthony. s. f. «Documentación de pre-commit». https://pre-commit.com/.",
     "crumbs": [
       "Información",
       "Bibliografía"
@@ -134,7 +167,7 @@
     "href": "informacion/bibliografia.html#complementaria",
     "title": "Bibliografía",
     "section": "Complementaria",
-    "text": "Complementaria\n\nJaynes (2003) Rudin (1976)\n\n\n\n\n\nJaynes, E. T. 2003. Probability Theory: The Logic of Science. Cambridge University Press.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3.ª ed. McGraw-Hill.",
+    "text": "Complementaria\n\nRamalho (2022) Stephenson (2019) Sweigart (2021) Vaughan (2019)\n\n\n\n\n\nRamalho, Luciano. 2022. Fluent Python. 2.ª ed. O’Reilly Media.\n\n\nStephenson, Ben. 2019. The Python Workbook. 2.ª ed. Springer Cham.\n\n\nSweigart, Al. 2021. The Big Book of Small Python Projects. No Starch Press. https://inventwithpython.com/bigbookpython/.\n\n\nVaughan, Lee. 2019. Impractical Python Projects. No Starch Press.",
     "crumbs": [
       "Información",
       "Bibliografía"
@@ -145,7 +178,29 @@
     "href": "informacion/aprobacion.html",
     "title": "Aprobación",
     "section": "",
-    "text": "Se explican los criterios de aprobación, regularidad y promoción. Se pueden incluir:\n\nPorcentaje de asistencia requerido.\nEntregas obligatorias y fechas clave.\nExámenes parciales y recuperatorios.\nModalidad de evaluación final.",
+    "text": "📝 Examen parcial: individual y en computadora. Hay un recuperatorio, de similares características, que reemplaza la nota del parcial.\n🧠🤝 Trabajos prácticos (2): se realizan tanto en clase como fuera de ella, en grupos de dos o tres integrantes. Se entrega el código desarrollado, un resumen ejecutivo y se presenta oralmente en clase.\n\nTodas las instancias se califican en una escala de 0 a 10 y se aprueban con 6.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "informacion/aprobacion.html#instancias-de-evaluación",
+    "href": "informacion/aprobacion.html#instancias-de-evaluación",
+    "title": "Aprobación",
+    "section": "",
+    "text": "📝 Examen parcial: individual y en computadora. Hay un recuperatorio, de similares características, que reemplaza la nota del parcial.\n🧠🤝 Trabajos prácticos (2): se realizan tanto en clase como fuera de ella, en grupos de dos o tres integrantes. Se entrega el código desarrollado, un resumen ejecutivo y se presenta oralmente en clase.\n\nTodas las instancias se califican en una escala de 0 a 10 y se aprueban con 6.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "informacion/aprobacion.html#condiciones-de-aprobación",
+    "href": "informacion/aprobacion.html#condiciones-de-aprobación",
+    "title": "Aprobación",
+    "section": "Condiciones de aprobación",
+    "text": "Condiciones de aprobación\n\nPromoción\n\nQuienes aprueben el parcial individual (con nota \\(\\text{PI}\\)), el trabajo práctico grupal 1 (con nota \\(\\text{TP1}\\)) y el trabajo práctico grupal 2 (con nota \\(\\text{TP2}\\)), adquieren la condición de estudiante promovido y su nota final se calcula como \\(\\frac{1}{3} \\times (\\text{PI} + \\text{TP1} + \\text{TP2})\\).\n\nRegularidad\n\nQuienes aprueben el parcial individual (o su recuperatorio) y solo uno de los trabajos prácticos grupales, adquieren la condición de estudiante regular.\n\nLibres\n\nQuienes no aprueben el parcial individual (ni su recuperatorio) o ninguno de los dos trabajos prácticos grupales, adquieren la condición de estudiante libre.",
     "crumbs": [
       "Información",
       "Aprobación"
