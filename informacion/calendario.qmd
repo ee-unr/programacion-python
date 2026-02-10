@@ -1,12 +1,9 @@
 ---
 title: Calendario
+tbl-colwidths: [8, 8, 8, 50, 20]
+# page-layout: full
 ---
 
-En esta sección se puede incluir una tabla con el cronograma de las actividades del curso.
+{{< include _calendario.md >}}
 
-| Semana | Tema | Material |
-|--------|------|----------|
-| 1 | Introducción | Diapositivas + notas |
-| 2 | Tema 2 | Lectura recomendada |
-| 3 | Tema 3 | Notebook de ejemplo |
-
+: {.striped .hover}
