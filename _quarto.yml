@@ -9,6 +9,8 @@ website:
   page-navigation: true
   navbar:
     title: "Programación en Python"
+    background: light
+    foreground: dark
     pinned: true
     right:
       - text: Información
@@ -22,7 +24,7 @@ website:
       - text: Recursos
         file: recursos/tutoriales/instalacion_python.qmd
       - icon: github
-        href: none
+        href: https://github.com/ee-unr/programacion-python
   page-footer:
     right: "Esta página fue hecha con ❤️ y [Quarto](https://quarto.org/)."
 
@@ -60,10 +62,10 @@ website:
 
 format:
   html:
-    theme: styles.scss
+    theme:
+      light: styles.scss
     toc: false
     lang: es
-    highlight-style: arrow-light
 
 csl: citas/chicago-author-date.csl
 bibliography: citas/references.bib
