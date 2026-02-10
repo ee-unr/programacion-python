@@ -195,30 +195,234 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>En esta sección se puede incluir una tabla con el cronograma de las actividades del curso.</p>
-<table class="caption-top table">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 50%">
+<col style="width: 20%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Semana</th>
-<th>Tema</th>
-<th>Material</th>
+<th style="text-align: center;">Semana</th>
+<th style="text-align: center;">Fecha</th>
+<th style="text-align: center;">Unidad</th>
+<th>Temas</th>
+<th>Actividades</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>Introducción</td>
-<td>Diapositivas + notas</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">16-mar</td>
+<td style="text-align: center;">1</td>
+<td><ul>
+<li>Python y su ecosistema.</li>
+<li>Positron.</li>
+<li>Expresiones.</li>
+<li>Variables y asignaciones.</li>
+<li>Tipos de datos elementales.</li>
+<li>Operadores numéricos, de comparación y lógicos.</li>
+<li>Funciones.</li>
+<li>Ejecución condicional de código.</li>
+<li>Bucles definidos y no definidos.</li>
+</ul></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Tema 2</td>
-<td>Lectura recomendada</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">23-mar</td>
+<td style="text-align: center;">1</td>
+<td><ul>
+<li>Listas, tuplas y diccionarios.</li>
+<li>Uso de código externo.
+<ul>
+<li>Módulos y librerías.</li>
+</ul></li>
+<li>Librería estándar de Python.</li>
+</ul></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Tema 3</td>
-<td>Notebook de ejemplo</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">30-mar</td>
+<td style="text-align: center;">1</td>
+<td><ul>
+<li>Ambientes virtuales.</li>
+<li>Instalación y gestión de librerías.</li>
+<li>Lectura y escritura de archivos de texto plano.</li>
+<li><em>Scripting</em>.</li>
+<li>Excepciones.</li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">6-abr</td>
+<td style="text-align: center;">2</td>
+<td><ul>
+<li>Objetos, clases e instancias.</li>
+<li>Atributos y métodos.</li>
+<li>Encapsulamiento.</li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">13-abr</td>
+<td style="text-align: center;">2</td>
+<td><ul>
+<li>Polimorfismo.
+<ul>
+<li>Métodos mágicos.</li>
+<li>Sobrecaraga de operadores.</li>
+</ul></li>
+<li>Herencia.
+<ul>
+<li>Simple.</li>
+<li>Doble.</li>
+</ul></li>
+<li>Excepciones a medida.</li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">20-abr</td>
+<td style="text-align: center;">3</td>
+<td><ul>
+<li>Funciones como ciudadanos de primera clase.</li>
+<li>Funciones puras.</li>
+<li>Funciones anonimas.</li>
+<li>Funciones variádicas.</li>
+<li>Recursión.</li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">27-abr</td>
+<td style="text-align: center;">3</td>
+<td><ul>
+<li>Funciones de orden superior: <code>map</code>, <code>filter</code>, <code>reduce</code>.</li>
+<li>Comprensiones.</li>
+<li>Generadores.</li>
+<li>Iterables e iteradores.</li>
+<li>Decoradores.</li>
+<li><em>Closures</em>.</li>
+<li>Aplicacion parcial de funciones.</li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4-may</td>
+<td style="text-align: center;">4</td>
+<td><ul>
+<li>Uso de Jupyter Notebooks.</li>
+<li>Lectura y procesamiento de datos tabulares con Polars.</li>
+<li>El formato <code>.parquet</code>.</li>
+<li>Arreglos multidimensionales en NumPy.</li>
+<li>Uso de <code>LazyFrame</code>s de Polars.</li>
+</ul></td>
+<td>Parcial</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">11-may</td>
+<td style="text-align: center;">4</td>
+<td><ul>
+<li>Modelización estadística y aprendizaje automático.
+<ul>
+<li><code>statsmodels</code></li>
+<li><code>scikit-learn</code></li>
+</ul></li>
+<li>Creacion de visualizaciones.
+<ul>
+<li><code>matplotlib</code></li>
+<li><code>seaborn</code></li>
+<li><code>plotnine</code></li>
+</ul></li>
+<li>Pipelines de procesamiento de datos en <code>scikit-learn</code>.</li>
+</ul></td>
+<td>Publicación TP 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">18-may</td>
+<td style="text-align: center;">4</td>
+<td><ul>
+<li>Cierre de temas de Unidad 4.</li>
+<li>Trabajo en TP 1.</li>
+</ul></td>
+<td>Recuperatorio</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">25-may</td>
+<td style="text-align: center;">4</td>
+<td><ul>
+<li>Trabajo en TP 1.</li>
+</ul></td>
+<td>Presentación TP 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">1-jun</td>
+<td style="text-align: center;">5</td>
+<td><ul>
+<li>Sistemas de control de versiones.</li>
+<li>Git y sus comandos fundamentales.</li>
+<li>GitHub:
+<ul>
+<li>Autenticación.</li>
+<li>Configuración.</li>
+<li>Creacion de repositorios.</li>
+</ul></li>
+<li>Herramientas del trabajo colaborativo en GitHub:
+<ul>
+<li>issues, pull requests y forks.</li>
+</ul></li>
+<li><em>Workflow</em> de trabajo colaborativo.</li>
+</ul></td>
+<td>Publicación TP 2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">8-jun</td>
+<td style="text-align: center;">5</td>
+<td><ul>
+<li>Gestión de ambientes virtuales <code>uv</code>.</li>
+<li>Analisis estático y formateo de código con <code>ruff</code>.</li>
+<li>Uso de <code>pre-commit</code>.</li>
+<li>GitHub Actions.</li>
+<li>Buenas practicas en proyectos colaborativos:
+<ul>
+<li>Gestión de datos.</li>
+<li>Gestion de claves.</li>
+</ul></li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">15-jun</td>
+<td style="text-align: center;">5</td>
+<td><ul>
+<li>Cierre de temas de Unidad 5.</li>
+<li>Trabajo en TP 2.</li>
+</ul></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">22-jun</td>
+<td style="text-align: center;">5</td>
+<td><ul>
+<li>Trabajo en TP 2.</li>
+</ul></td>
+<td>Presentación TP 2</td>
 </tr>
 </tbody>
 </table>
