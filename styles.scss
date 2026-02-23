@@ -282,11 +282,11 @@ div.sidebar-item-container {
 
 .navbar-brand {
   display: inline-block;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 @media (max-width: 576px) {
