@@ -36,6 +36,7 @@ website:
         - informacion/aprobacion.qmd
         - informacion/calendario.qmd
         - informacion/bibliografia.qmd
+        - informacion/ia.qmd
     - title: Teoría
       contents:
         - teoria/01_unidad.qmd

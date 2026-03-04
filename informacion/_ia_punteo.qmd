@@ -1,0 +1,38 @@
+Párrafo 1
+
+Las herramientas de IA son muy poderosas, nos ayudan a resolver de manera efectiva problemas de toda índole, particularmente problemas de programación.
+La IA puede resolver practicamente todos los ejercicios que se presenten en esta materia.
+No tiene ningún sentido participar de la materia para copiar y pegar ejercicios en un chat para obtener una respuesta.
+De corto plazo, les generará una atractiva sensación de satisfacción y alivio, quién no quiere tener la práctica resuelta.
+Pero de mediano y largo plazo, contribuye a incrementar la frustración que surge cuando uno enfrente un problema que no logra comprender o resolver.
+Párrafo 2
+
+Es innegable que las herramientas de IA son muy utilizadas en el mundo profesional por el simple motivo de que efectivamente ayudan a resolver problemas que bien no podríamos resolver por nuestra cuenta o que simplemente nos llevaría más tiempo.
+En otras palabras, dominar herramientas de IA tiene un valor real y el mundo profesional así lo prueba.
+Por otro lado, cuando el sesgo de respuesta y la tendencia a la complacencia de los modelos del lenguajse se combinan con nuestro sesgo de automatización, es muy probable que el uso de estas herramientas nos conduzca a una encerrona cognitiva.
+Salir de esa encerrona cognitiva es, por ahora, parte del trabajo del humano.
+Por ello, para extraer lo mejor del uso de las herramientas de IA es importante conocer del problema que se está resolviendo.
+En otras palabras, para utilizar modelos de IA para asistirnos en la programación en Python (o cualquier otro lenguaje) es
+importante que nosotros mismos tengamos un dominio sólido del lenguaje y los fundamentos de programación.
+
+Párrafo 3
+
+- Por los motivos antes mencionados, no es que en esta materia estamos en contra de la inteligencia artificial, 
+todo lo contrario.
+- Simplemente creemos que para hacer un uso efectivo de estas herarmientas para programar
+es necesario tener un dominio sólido de la programación en un sentido general, o estar al menos familiarizados, que arrojarnos a un piletazo desconocido.
+- Para llegar a tener ese dominio básico, necesitamos atravesar el proceso de aprendizaje, 
+que la IA no puede reemplazar, porque es personal, se trata de ustedes.
+- Por ello, dejamos las siguientes recomendaciones generales para el uso de IA durante el cursado de la materia:
+
+
+- En vez de copiar y pegar el enunciado de un ejercicio en un chat de IA, describirle con nuestras palabras el ejercicio sobre el que estamos trabajando, que progreso realizamos, que parte no entendemos, compartiendo código y errores si los hay.
+Usarlo como un tutor que nos guía a encontrar la solución, más que un contratado que hace la tarea por nosotros.
+- Copiar y pegar código que parece que funciona no nos ayudará a aprender de programación.
+Cuando la IA nos devuelva código, no copiar y pegar ese código en nuestro editor de manera automática.
+Transcribirlo manualmente siendo críticos de lo que la IA nos provee. ¿Por qué hace este paso? ¿Podría escribir este bloque de código de otra manera? ¿Es necesario agregar este comentario? ¿Tiene sentido documentar tan exhaustivamente esta función auxiliar?
+- Copiar y pegar texto que da la impresión que dominamos un tema tampoco nos ayudará a aprender.
+El proceso de escritura enriquece y solidifica nuestro entendimiento sobre un tema.
+Por eso se recomienda no utilizar la IA inmediatamente a la hora de redactar respuestas o párrafos enteros.
+Una vez que elaboramos al menos un borrador de nuestra respuesta (por ejemplo, un punteo con los puntos principales en un orden presuntamente correcto) se puede utilizar la IA para buscar expresiones alternativas, mejorar la fluidez del texto,
+corregir errores gramaticales y, en genreal, obtener una revisión de nuestro texto. 
