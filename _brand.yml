@@ -27,8 +27,8 @@ typography:
     family: Source Sans Pro
   headings:
     family: Roboto Slab
-  monospace:
-    family: Cascadia Code
+  # monospace:
+  #   family: Cascadia Code
 
 defaults:
   bootstrap:
