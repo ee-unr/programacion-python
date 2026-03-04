@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6 - Uso de código externo – Programación en Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../teoria/01_programacion_en_python/07_scripting.html" rel="next">
+<link href="../../teoria/01_programacion_en_python/05_ejecucion_repetitiva.html" rel="prev">
+<link href="../../imgs/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0ec34200a460f293705ed25adc6cf721.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0ec34200a460f293705ed25adc6cf721.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0ec34200a460f293705ed25adc6cf721.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Programación en Python</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../informacion/programa.html"> 
+<span class="menu-text">Información</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../teoria/01_programacion_en_python/01_introduccion.html" aria-current="page"> 
+<span class="menu-text">Teoría</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../practica/01.html"> 
+<span class="menu-text">Práctica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../proyectos/grupal.html"> 
+<span class="menu-text">Proyectos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../recursos/tutoriales/instalacion_python.html"> 
+<span class="menu-text">Recursos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ee-unr/programacion-python"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../teoria/01_programacion_en_python/01_introduccion.html">U1 - Programación en Python</a></li><li class="breadcrumb-item"><a href="../../teoria/01_programacion_en_python/06_uso_de_codigo_externo.html">6 - Uso de código externo</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U1 - Programación en Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/01_introduccion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1 - Introducción</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/02_funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2 - Funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/03_ejecucion_condicional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3 - Ejecución condicional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/04_colecciones_de_datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4 - Colecciones de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/05_ejecucion_repetitiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5 - Ejecución repetitiva</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/06_uso_de_codigo_externo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">6 - Uso de código externo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/07_scripting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7 - <em>Scripting</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/08_io.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8 - Lectura y escritura de archivos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#módulos-y-paquetes" id="toc-módulos-y-paquetes" class="nav-link" data-scroll-target="#módulos-y-paquetes">Módulos y paquetes</a>
+  <ul class="collapse">
+  <li><a href="#por-qué-existen" id="toc-por-qué-existen" class="nav-link" data-scroll-target="#por-qué-existen">Por qué existen</a></li>
+  </ul></li>
+  <li><a href="#cómo-importar-código" id="toc-cómo-importar-código" class="nav-link" data-scroll-target="#cómo-importar-código">Cómo importar código</a>
+  <ul class="collapse">
+  <li><a href="#la-sentencia-import" id="toc-la-sentencia-import" class="nav-link" data-scroll-target="#la-sentencia-import">La sentencia <code>import</code></a></li>
+  <li><a href="#listar-nombres-disponibles" id="toc-listar-nombres-disponibles" class="nav-link" data-scroll-target="#listar-nombres-disponibles">Listar nombres disponibles</a></li>
+  <li><a href="#importar-objetos-de-un-módulo" id="toc-importar-objetos-de-un-módulo" class="nav-link" data-scroll-target="#importar-objetos-de-un-módulo">Importar objetos de un módulo</a></li>
+  <li><a href="#importar-con-alias" id="toc-importar-con-alias" class="nav-link" data-scroll-target="#importar-con-alias">Importar con alias</a></li>
+  </ul></li>
+  <li><a href="#módulos-propios" id="toc-módulos-propios" class="nav-link" data-scroll-target="#módulos-propios">Módulos propios</a></li>
+  <li><a href="#paquetes-externos" id="toc-paquetes-externos" class="nav-link" data-scroll-target="#paquetes-externos">Paquetes externos</a>
+  <ul class="collapse">
+  <li><a href="#instalación-de-paquetes-con-pip" id="toc-instalación-de-paquetes-con-pip" class="nav-link" data-scroll-target="#instalación-de-paquetes-con-pip">Instalación de paquetes con <code>pip</code></a></li>
+  <li><a href="#creación-de-ambientes-con-venv" id="toc-creación-de-ambientes-con-venv" class="nav-link" data-scroll-target="#creación-de-ambientes-con-venv">Creación de ambientes con <code>venv</code></a></li>
+  <li><a href="#ejemplo-numpy" id="toc-ejemplo-numpy" class="nav-link" data-scroll-target="#ejemplo-numpy">Ejemplo: NumPy</a></li>
+  </ul></li>
+  <li><a href="#apéndice" id="toc-apéndice" class="nav-link" data-scroll-target="#apéndice">Apéndice</a>
+  <ul class="collapse">
+  <li><a href="#algunos-comandos-de-pip" id="toc-algunos-comandos-de-pip" class="nav-link" data-scroll-target="#algunos-comandos-de-pip">Algunos comandos de <code>pip</code></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../teoria/01_programacion_en_python/01_introduccion.html">U1 - Programación en Python</a></li><li class="breadcrumb-item"><a href="../../teoria/01_programacion_en_python/06_uso_de_codigo_externo.html">6 - Uso de código externo</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">6 - Uso de código externo</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>En la mayoría de los proyectos de programación no alcanza con el código que escribimos nosotros mismos. Con frecuencia necesitamos utilizar código externo y/o de terceros, ya sea para resolver problemas comunes de manera más rápida o para aprovechar el trabajo de la comunidad.</p>
+<p>Python facilita este proceso a través de módulos y paquetes, que nos permiten organizar, compartir e integrar código de forma sencilla. Gracias a ellos podemos sumar nuevas funcionalidades sin tener que programar todo desde cero, mantener el código más ordenado y evitar errores innecesarios.</p>
+</section>
+<section id="módulos-y-paquetes" class="level2">
+<h2 class="anchored" data-anchor-id="módulos-y-paquetes">Módulos y paquetes</h2>
+<p>Un <strong>módulo</strong> es un archivo de Python (por ejemplo, <code>modulo.py</code>) que contiene código que se puede reutilizar. En general, los módulos definen funciones, clases y objetos que representan datos de distinta complejidad. Estos pueden ir desde estructuras simples, como una constante numérica, hasta otras más elaboradas, como una tabla de datos con columnas de diferentes tipos.</p>
+<p>Un <strong>paquete</strong>, por otro lado, es una <strong>colección de módulos</strong>, generalmente interdependientes. En la práctica, un paquete es una carpeta que contiene varios módulos e, incluso, subpaquetes (carpetas con módulos). Por lo general, los paquetes ofrecen un conjunto de herramientas más amplio que un módulo individual. Además, suelen distribuirse de forma que puedan ser instalados y utilizados por otros usuarios.</p>
+<section id="por-qué-existen" class="level3">
+<h3 class="anchored" data-anchor-id="por-qué-existen">Por qué existen</h3>
+<p>Así como las funciones ayudan a reutilizar un programa sin repetir el código y los bucles permiten repetir la misma acción muchas veces, los módulos y paquetes también permiten la <strong>reutilización de código</strong>.</p>
+<p>De este modo se evita, por ejemplo, tener que crear una función cada vez que la queremos usar. Simplemente la importamos o la “traemos” de un módulo o paquete. Se ahorra tiempo, se reduce la probabilidad de errores y se mejora la mantenibilidad del código.</p>
+<p>Además, los paquetes y módulos nos ayudan a mantener el código organizado y modular. Al dividir el código en “partes” más pequeñas y manejables, facilitamos su comprensión y mantenimiento.</p>
+<p>Por último pero no menos importante, los módulos paquetes nos permiten <strong>aprovechar el trabajo de otros</strong>. De esta manera, podemos hacer mucho más sin tener que programar todo desde cero.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Glosario 🎯
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La documentación de Python 3 provee <a href="https://docs.python.org/3/glossary.html">un glosario</a> con definiciones precisas para términos relevantes en el universo de Python. Entre ellas, podemos destacar las de módulo y paquete:</p>
+<ul>
+<li><strong>Módulo</strong>: Un objeto que funciona como una unidad de organización de código de Python. Los módulos tienen un <strong>espacio de nombres</strong> (<em>namespace</em>) que contiene objetos de Python arbitrarios. Los módulos se cargan en Python a través del proceso de <strong>importación</strong>.</li>
+<li><strong>Paquete</strong>: Un <strong>módulo</strong> de Python que puede contener submódulos o, de forma recursiva, subpaquetes. Técnicamente, un paquete es un módulo de Python con un atributo <code>__path__</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="cómo-importar-código" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-importar-código">Cómo importar código</h2>
+<section id="la-sentencia-import" class="level3">
+<h3 class="anchored" data-anchor-id="la-sentencia-import">La sentencia <code>import</code></h3>
+<p>Para importar un módulo usamos la sentencia <code>import</code> seguida del nombre del módulo a importar.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nombre</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>De esta manera, podemos importar el módulo <code>math</code> que pertenece a la librería estándar de Python.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Luego, podemos acceder a los objetos <strong>dentro del <em>namespace</em></strong> <code>math</code> utilizando <code>math.nombre_objeto</code>. Por ejemplo, para usar la función <code>sqrt()</code>, que calcula la raíz cuadrada de un numero <code>n</code>, escribimos <code>math.sqrt(n)</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>math.sqrt(<span class="dv">16</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Si quisiéramos importar más de una módulo, solo tenemos que agregar una nueva línea con el <code>import</code> correspondiente. Así, podemos también importar el módulo <code>random</code> que provee herramientas para generar números aleatorios.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>random.random() <span class="co"># número aleatorio entre 0 y 1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Librería estándar de Python 📚
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La librería estándar de Python es un conjunto de módulos y paquetes incluidos por defecto con cualquier instalación oficial de Python, listos para usar sin necesidad de hacer instalaciones adicionales.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Diferencias con R 🎭
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A diferencia de la carga de paquetes en R, que pone a disposición objetos del paquete en el ambiente global, el comando <code>import math</code> en Python no carga los objetos del módulo <code>math</code> directamente en el ambiente donde se ejecuta; solo carga el módulo en sí.</p>
+<p>Para acceder a las funciones de <code>math</code>, es necesario hacerlo mediante el nombre del módulo. Por este motivo, el siguiente bloque de código produce un error:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sqrt(<span class="dv">16</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-error">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">NameError</span>: name <span class="st">'sqrt'</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="listar-nombres-disponibles" class="level3">
+<h3 class="anchored" data-anchor-id="listar-nombres-disponibles">Listar nombres disponibles</h3>
+<p>Para obtener un listado con los nombres de los objetos disponibles dentro de un módulo, podemos usar la función <code>dir()</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(math)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>['__doc__',
+ '__file__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__spec__',
+ 'acos',
+ 'acosh',
+ 'asin',
+ 'asinh',
+...
+ 'tan',
+ 'tanh',
+ 'tau',
+ 'trunc',
+ 'ulp']</code></pre>
+<p>Sin embargo, en la práctica, esta función no suele usarse demasiado para explorar los nombres disponibles en un módulo.</p>
+<p>Por lo general, trabajamos en editores de código que muestran automáticamente la lista de variables disponibles en un módulo.</p>
+<p>En Positron, si escribimos <code>math</code> seguido de un punto (<code>math.</code>), el editor desplegará un listado de los objetos disponibles en dicho módulo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/import_math.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="importar-objetos-de-un-módulo" class="level3">
+<h3 class="anchored" data-anchor-id="importar-objetos-de-un-módulo">Importar objetos de un módulo</h3>
+<p>La flexibilidad en la carga de módulos en Python permite importar uno o más objetos de un módulo (o submódulo) sin necesidad de importar el módulo completo.</p>
+<p>La sintaxis para traer un <code>objeto</code> de un módulo llamado <code>cosas</code> es:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> cosas <span class="im">import</span> objeto</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>De este modo, podemos cargar la constante <code>pi</code> del módulo <code>math</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> pi</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Luego, es posible acceder a la variable <code>pi</code> sin tener que pasar por el nombre del módulo donde se define.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pi</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En nuestro caso, como anteriormente también importamos el módulo <code>math</code>, seguimos teniendo acceso a <code>pi</code> a través de <code>math</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.pi)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pi)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Para importar varios objetos a la vez, se utiliza una sintaxis similar a la anterior, separando sus nombres con comas. A modo de ejemplo, importemos las funciones <code>mean()</code> y <code>median()</code> de otro módulo estándar llamado <code>statistics</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statistics <span class="im">import</span> mean, median</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>numeros <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">30</span>, <span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">6</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"La media es:"</span>, mean(numeros))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"La mediana es:"</span>, median(numeros))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="importar-con-alias" class="level3">
+<h3 class="anchored" data-anchor-id="importar-con-alias">Importar con alias</h3>
+<p>Python no solo permite decidir que objetos importar de un módulo, si no que también hace posible asignar un alias al objeto o módulo que se importa.</p>
+<p>Para un módulo:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> modulo <span class="im">as</span> alias</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y para un objeto dentro de un módulo:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> modulo <span class="im">import</span> objeto <span class="im">as</span> alias</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Podemos importar el módulo <code>math</code> usando el alias <code>mates</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> mates</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mates.cos(mates.pi)) <span class="co"># coseno(pi)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>O importar la funcion <code>sqrt</code> con el nombre <code>raiz</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt <span class="im">as</span> raiz</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>raiz(<span class="dv">81</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>El problema de importar todo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Python permite cargar todos los objetos definidos en un módulo o paquete directamente en el ambiente actual. La sintaxis es:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nombre <span class="im">import</span> <span class="op">*</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Esta <strong>no es una práctica recomendable</strong>, ya que no sabemos cuántos elementos se importarán ni qué conflictos podrían surgir entre los nombres definidos en el módulo y los que ya tenemos en nuestro programa.</p>
+<p>El uso de <code>from nombre import *</code> produce un efecto similar al de <code>library(paquete)</code> en R, pero en Python se desaconseja.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="módulos-propios" class="level2">
+<h2 class="anchored" data-anchor-id="módulos-propios">Módulos propios</h2>
+<p>La sintaxis para importar un módulo propio, u objetos definidos en él, es la misma que la que se utiliza para importar cualquier otro módulo.</p>
+<p>Supongamos que tenemos un archivo llamado <code>funciones.py</code> con el siguiente contenido:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>funciones.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-filename="funciones.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> es_par(n):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> es_primo(n):</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n):</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>y queremos usar las funciones <code>es_par</code> y <code>es_primo</code> en nuestro programa principal.</p>
+<p>Un aspecto fundamental a tener en cuenta para poder importar el módulo <code>funciones</code> desde nuestro programa principal es su ubicación.</p>
+<p>Si el archivo <code>funciones.py</code> no se encuentra en alguno de los directorios que Python recorre al ejecutar la sentencia <code>import</code>, obtendremos un error.</p>
+<p>Uno de los directorios en los que Python busca módulos al importar es el directorio actual, es decir, aquel desde donde se ejecuta nuestro programa principal.</p>
+<p>Supongamos una carpeta (es decir, un proyecto) con la siguiente estructura de archivos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>proyecto/                  # Carpeta</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>├── funciones.py           # Módulo</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>└── programa.py            # Programa principal</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Aquí, <code>programa.py</code> es nuestro programa principal y contiene el siguiente código:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> funciones</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funciones.es_par(<span class="dv">12</span>))</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funciones.es_par(<span class="dv">15</span>))</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funciones.es_primo(<span class="dv">1</span>))</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funciones.es_primo(<span class="dv">11</span>))</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(funciones.es_primo(<span class="dv">15</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Al ejecutarlo, obtendremos la siguiente salida:</p>
+<pre><code>True
+False
+False
+True
+False</code></pre>
+<p>Un programa equivalente es el siguiente:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> funciones <span class="im">import</span> es_par, es_primo</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(es_par(<span class="dv">12</span>))</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(es_par(<span class="dv">15</span>))</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(es_primo(<span class="dv">1</span>))</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(es_primo(<span class="dv">11</span>))</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(es_primo(<span class="dv">15</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La salida de este programa será la misma que la del ejemplo anterior. La diferencia es que en este segundo programa se importan directamente las funciones <code>es_par</code> y <code>es_primo</code> desde el módulo <code>funciones</code>, en lugar de importar el módulo y luego acceder a las funciones a través de <code>funciones.es_par</code> y <code>funciones.es_primo</code>.</p>
+</section>
+<section id="paquetes-externos" class="level2">
+<h2 class="anchored" data-anchor-id="paquetes-externos">Paquetes externos</h2>
+<p>La instalación de paquetes en Python se realiza mediante un <strong>sistema de gestión de paquetes</strong> que se encarga de instalar y administrar paquetes.</p>
+<p>Estos paquetes se encuentran alojados en repositorios públicos (o privados) a los que los gestores acceden para descargar y actualizar el software.</p>
+<p>En el ecosistema de Python existe una gran variedad de sistemas de gestión de paquetes, cuya adopción depende de las necesidades de cada usuario o proyecto.</p>
+<p>En cuanto a los repositorios, también hay varias alternativas. Sin embargo, a diferencia de los gestores, el <strong><em>Python Package Index</em> (PyPI)</strong> es el más utilizado por la gran mayoría de la comunidad.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Nota 📝
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se puede considerar al <em>Python Package Index</em> (PyPI) como el equivalente del <em>Comprehensive R Archive Network</em> (CRAN) en el ecosistema de R.</p>
+</div>
+</div>
+<section id="instalación-de-paquetes-con-pip" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-de-paquetes-con-pip">Instalación de paquetes con <code>pip</code></h3>
+<p>La instalación oficial de Python incluye un administrador de paquetes estándar llamado <code>pip</code>. Esta herramienta permite instalar y gestionar paquetes que no forman parte de la biblioteca estándar de Python.</p>
+<p>Es importante resaltar que <code>pip</code> se utiliza desde la terminal, no desde el intérprete de Python.</p>
+<p>En Windows, es posible usar el comando <code>where pip</code> para localizar la ubicación del programa. Otra opción es ejecutar <code>pip --version</code>, que muestra la versión instalada de <code>pip</code> junto con la ruta de la instalación de Python a la que está vinculado.</p>
+<p>Antes de instalar paquetes con <code>pip</code>, es posible consultar qué paquetes ya se encuentran instalados mediante esta herramienta con el comando <code>list</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>pip list</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Este comando muestra un listado con los paquetes instalados y sus respectivas versiones.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>C:\Users\tutoriales<span class="kw">&gt;</span>pip list</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Package Version</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>------- -------</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>pip     25.1.1</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Como aún no hemos instalado ningún paquete adicional a los que vienen con Python, solo se muestra <code>pip</code>.</p>
+<p>La instalación de paquetes se hace con el comando <code>install</code>. Luego, para instalar el paquete NumPy hacemos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>pip install numpy</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Debajo se incluye una captura de la terminal de Windows donde se muestra la ejecución de los comandos antes mencionados y sus respectivas salidas:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/pip_terminal.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejecutar <code>pip</code> como módulo de Python
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La herramienta <code>pip</code> es simplemente un módulo de Python. Si tenemos múltiples instalaciones de Python y/o <code>pip</code>, es posible que la versión de <code>pip</code> a la que se accede en nuestra terminal no sea la que está asociada a la versión de Python que queremos utilizar. Para evitar este tipo de problemas, se puede ejecutar el programa <code>pip</code> como un módulo de Python. De este modo, la instalación de NumPy se vería de la siguiente manera:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> pip install numpy</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La opción <code>-m</code> le indica a Python que ejecute un módulo como si fuera un programa dentro del intérprete de Python.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿En qué momento seleccionamos a PyPI? 🤔
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No es necesario que manualmente selccionemos a PyPI como repositorio de código. Por defecto, <code>pip</code> ya instala los paquetes desde PyPI.</p>
+</div>
+</div>
+</section>
+<section id="creación-de-ambientes-con-venv" class="level3">
+<h3 class="anchored" data-anchor-id="creación-de-ambientes-con-venv">Creación de ambientes con <code>venv</code></h3>
+<p>Cuando instalamos paquetes con la versión de <code>pip</code> que se incluye por defecto en Python, estos se instalan de forma <strong>global</strong>. Esto no siempre representa un problema, pero suele complicarse cuando trabajamos en varios proyectos distintos.</p>
+<p>Cada proyecto puede depender de diferentes paquetes, e incluso de diferentes versiones de Python. Si todos comparten una misma instalación global, es muy probable que aparezcan conflictos: algunos programas podrían dejar de funcionar o comportarse de manera incorrecta.</p>
+<p>Una solución sería reinstalar todas las dependencias desde cero cada vez, pero esto implica una pérdida de tiempo innecesaria y, además, no garantiza el correcto funcionamiento. La solución más aceptada por la comunidad es usar <strong>ambientes virtuales</strong>.</p>
+<p>Un ambiente virtual en Python permite aislar dependencias y paquetes para evitar conflictos entre proyectos.</p>
+<p>Existen distintas herramientas para crear y administrar ambientes virtuales; la que se incluye en la instalación oficial de Python es <strong><code>venv</code></strong>.</p>
+<p>Para crear un ambiente virtual con <code>venv</code>, primero debemos ubicarnos en la carpeta de nuestro proyecto y ejecutar en la terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> venv .venv</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El nombre <strong><code>.venv</code></strong> es una convención adoptada por la comunidad, aunque puede usarse cualquier nombre válido de directorio.</p>
+<p>Este comando genera una carpeta con la siguiente estructura:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>.venv</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>├── Include</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>├── Lib</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>│   └── site<span class="at">-packages</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>│       ├── pip</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>│       └── pip<span class="at">-25</span>.1.1.dist<span class="at">-info</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>├── Scripts</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>│   ├── Activate.ps1</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>│   ├── activate</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>│   ├── activate.bat</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>│   ├── activate.fish</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>│   ├── deactivate.bat</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>│   ├── pip.exe</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>│   ├── pip3.13.exe</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>│   ├── pip3.exe</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>│   ├── python.exe</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>│   └── pythonw.exe</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>└── pyvenv.cfg</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dentro de <code>.venv/Lib/site-packages</code> se almacenan los paquetes instalados en el ambiente, y en <code>.venv/Scripts</code> se encuentra el ejecutable de Python (<code>python.exe</code>) junto con otros <em>scripts</em> de utilidad.</p>
+<p>Para usar el intérprete de Python del ambiente e instalar paquetes en él, es necesario <strong>activarlo</strong> con el comando:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\activate</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Al hacerlo, se mostrará <code>(.venv)</code> al inicio de la línea de la terminal.</p>
+<p>Finalmente, para <strong>desactivar el ambiente</strong>, basta con ejecutar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>deactivate</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="ejemplo-numpy" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-numpy">Ejemplo: NumPy</h3>
+<p><a href="https://numpy.org/">NumPy</a> es una paquete de Python especializado en el cálculo numérico y el análisis de datos.</p>
+<p>Provee un nuevo tipo de objeto llamado <code>array</code> que permite representar colecciones de datos de un mismo tipo en varias dimensiones y funciones muy eficientes para su manipulación.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/numpy_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+</figure>
+</div>
+<p>Para crear un proyecto, un ambiente con <code>venv</code> e instalar NumPy, seguimos los siguientes pasos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">mkdir</span> proyecto          # Crear directorio</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> proyecto             # Mover la terminal al directorio del proyecto</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> venv .venv    # Crear ambiente virtual llamado .venv</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\activate  # Activar ambiente</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>pip install numpy       # Instalar numpy en el ambiente del proyecto</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>python                  # Iniciar el intérprete interactivo de Python</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El siguiente video muestra los pasos realizados en la terminal de Windows:</p>
+<center>
+<video controls="" width="700" preload="metadata" style="border-radius: 8px; max-width: 100%;">
+<source src="imgs/venv_numpy.webm" type="video/webm">
+</video>
+</center>
+<p>Los paquetes de Python suelen importarse utilizando un alias. En el caso de los más populares, como NumPy, la mayoría de la comunidad usa el alias <strong><code>np</code></strong>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>array</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(array)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La propiedad <code>.ndim</code> nos devuelve el número de dimensiones del array.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>array.ndim</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y <code>.shape</code> nos devuelve la “forma” del array. Es decir, la cantidad de elementos por cada dimensión. Se puede notar que el <code>.shape</code> de un <em>array</em> es una tupla.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>array.shape</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En este caso creamos un <em>array</em> a partir de una lista, pero también es posible crear <em>arrays</em> a partir de otros objetos.</p>
+<p>Si continuamos utilizando listas, el número de dimensiones del <em>array</em> va a depender del anidamiento que tengamos en las listas que utilizamos.</p>
+<p>A modo de ejemplo, podemos crear un <em>array</em> de dos dimensiones de la siguiente manera:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>array_2d <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>array_2d</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array_2d.ndim)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array_2d.shape)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Una de las características más atractivas de NumPy es que las operaciones matemáticas con <code>array</code>s están vectorizadas, es decir, se realizan al nivel del arreglo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array <span class="op">*</span> <span class="dv">10</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array <span class="op">-</span> <span class="dv">5</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array <span class="op">/</span> <span class="dv">10</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array <span class="op">**</span> <span class="fl">2.4</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>NumPy también provee <strong>muchísimas funciones</strong> para hacer cálculos comúnmente realizados con los <em>arrays</em>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.mean(array))</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.median(array))</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.std(array))</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.exp(array))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="apéndice" class="level2">
+<h2 class="anchored" data-anchor-id="apéndice">Apéndice</h2>
+<section id="algunos-comandos-de-pip" class="level3">
+<h3 class="anchored" data-anchor-id="algunos-comandos-de-pip">Algunos comandos de <code>pip</code></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pip install pkg1 pkg2</code></td>
+<td>Instala uno o varios paquetes.</td>
+</tr>
+<tr class="even">
+<td><code>pip install pkg==1.2.3</code><br><code>pip install pkg&gt;=1.0,&lt;=2.0</code></td>
+<td>Instala una versión específica o un rango de versiones de un paquete.</td>
+</tr>
+<tr class="odd">
+<td><code>pip install pkg --upgrade</code></td>
+<td>Actualiza un paquete a la última versión disponible.</td>
+</tr>
+<tr class="even">
+<td><code>pip freeze</code></td>
+<td>Muestra todos los paquetes instalados y sus versiones en formato compatible con <code>requirements.txt</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>pip uninstall pkg</code></td>
+<td>Desinstala un paquete instalado.</td>
+</tr>
+<tr class="even">
+<td><code>pip show pkg</code></td>
+<td>Muestra información detallada sobre un paquete (versión, ubicación, dependencias).</td>
+</tr>
+<tr class="odd">
+<td><code>pip help</code></td>
+<td>Muestra la ayuda general de <code>pip</code> o de un subcomando específico.</td>
+</tr>
+<tr class="even">
+<td><code>pip install -r dependencias.txt</code></td>
+<td>Instala todas las dependencias listadas en un archivo.</td>
+</tr>
+</tbody>
+</table>
+<section id="ejemplos" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplos">Ejemplos</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>pip install requests flask        # Instala varios paquetes</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>pip install numpy==1.25.0         # Instala una versión exacta</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>pip install pandas<span class="kw">&gt;</span>=1.0,<span class="kw">&lt;</span>2.0      # Instala dentro de un rango de versiones</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>pip install requests -<span class="at">-upgrade</span>    # Actualiza un paquete</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>pip freeze                        # Lista paquetes instalados y versiones</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>pip uninstall flask               # Desinstala un paquete</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>pip show numpy                    # Muestra información de un paquete</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>pip help install                  # Muestra ayuda sobre 'install'</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>pip install <span class="at">-r</span> requirements.txt   # Instala dependencias desde un archivo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../teoria/01_programacion_en_python/05_ejecucion_repetitiva.html" class="pagination-link" aria-label="5 - Ejecución repetitiva">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5 - Ejecución repetitiva</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../teoria/01_programacion_en_python/07_scripting.html" class="pagination-link" aria-label="7 - _Scripting_">
+        <span class="nav-page-text">7 - <em>Scripting</em></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Esta página fue hecha con ❤️ y <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
