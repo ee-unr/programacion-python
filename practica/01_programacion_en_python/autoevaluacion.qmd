@@ -1,0 +1,347 @@
+---
+title: "🪞 Autoevaluación"
+number-depth: 3
+toc-depth: 3
+---
+
+## Variables
+
+1.  ¿Qué valor contiene la variable `contador` luego de ejecutar el siguiente código?
+
+    ```python
+    contador = 20
+    contador + 1
+    ```
+
+1. Complete la siguiente tabla indicando si el nombre es válido para una variable de Python.
+
+    |     Nombre        | ¿Válido? | Justificación |
+    |:-----------------:|:--------:|:-------------:|
+    | `balance`         |          |               |
+    | `balanceActual`   |          |               |
+    | `balance-actual`  |          |               |
+    | `balance actual`  |          |               |
+    | `balance_actual`  |          |               |
+    | `mis.datos`       |          |               |
+    | `0cuenta`         |          |               |
+    | `cuenta0`         |          |               |
+    | `_cuenta`         |          |               |
+    | `SPAM`            |          |               |
+    | `cantidad$`       |          |               |
+
+
+## Números
+
+1. ¿Cuál es el tipo de `10 / 2`? ¿Por qué?
+
+1. ¿Cuál es el tipo de `5 * 2`? ¿Por qué?
+
+1. ¿Por qué `5 == 5.0` es `True`?
+
+## Booleanos
+
+1. ¿Cuál es el resultado de las siguientes expresiones? ¿Por qué?
+
+    ```python
+    False or not False
+    ```
+    ```python
+    not (True and True)
+    ```
+
+    ```python
+    not True and True
+    ```
+
+    ```python
+    "True" != True
+    ```
+
+    ```python
+    10 > 5 + 3
+    ```
+
+    ```python
+    None is None
+    ```
+
+    ```python
+    False is False
+    ```
+
+1. Ejecute línea por línea los siguientes bloques y analice los resultados.
+
+    ```python
+    int(True) * 50
+    True * 50
+    ```
+
+    ```python
+    1 is True
+    bool(1) is True
+    id(True)
+    id(bool(1))
+    id(bool(1024))
+    ```
+
+1. ¿Cuáles son los 3 operadores booleanos?
+
+## Cadenas de caracteres
+
+1. ¿Por qué la siguiente comparación resulta en `True`?
+
+    ```python
+    "spam" + "spamspam" == "spam" * 3
+    ```
+
+1. ¿Por qué la siguiente expresión resulta en un error? ¿Cómo se puede arreglar?
+
+    ```python
+    "Me comí " + 6 + " panchos."
+    ```
+
+1. ¿Encuentra algo extraño en la siguiente expresión? ¿Cómo la mejoraría?
+
+    ```python
+    materia = "Programación 2"
+    print("¡Sean bienvenidos a la materia {materia}!")
+    ```
+
+1. Explique por qué es redundante utilizar `str()` en el siguiente bloque de código:
+
+    ```python
+    x, y = 10, 20
+    print(f"La suma de {str(x)} y {str(y)} es: {str(x + y)}.")
+    ```
+
+1. Considere el siguiente bloque de código:
+
+    ```python
+    mensaje = "Hola, ¿cómo estes?"
+    mensaje[-3] = "á"
+    ```
+
+    - ¿Cuál es la intención detrás del programa?
+    - ¿Por qué no funciona?
+    - ¿Cómo podría arreglarlo? Alerta: la solución no es muy elegante.
+
+1. ¿Cuál es el resultado de `list("abcdefgh")`? ¿Por qué?
+
+1. ¿Por qué `set("abcde")` es distinto de `{"abcde"}`?
+
+## Funciones
+
+1. ¿Cuál es la diferencia entre una función y una llamada a función?
+
+1. ¿Cuál es el valor que devuelve una función que no tiene `return`?
+
+1. ¿Cuándo se ejecuta el código dentro de una función: cuando la función se define o cuando se la llama? Considere la siguiente función:
+
+    ```python
+    def suma(x, y):
+        print(100 / 0)
+        return x + y
+    ```
+
+    Luego, ejecute el siguiente bloque:
+
+    ```python
+    suma(2, 4)
+    ```
+
+## Listas
+
+1. ¿Qué es `[]`? ¿Cuál es el resultado de `len([])`?
+
+1. ¿Por qué la siguiente expresión resulta en `False`? Ayuda: use la función `id()`.
+
+    ```python
+    [] is []
+    ```
+
+1. ¿Por qué se obtiene un error en el siguiente bloque de código?
+
+    ```python
+    l = []
+    l[0]
+    ```
+
+1. Si `[0][0]` devuelve `0`, ¿por qué `[1][1]` no devuelve `[1]`?
+
+1. ¿Cuál es el valor de `x` en el siguiente bloque de código? ¿Por qué?
+
+    ```python
+    l = ["hola", "hola hola", "hasta luego"]
+    x = l.remove("hola")
+    ```
+
+1. ¿Cómo le asignaría el valor `"hola"` como el tercer valor en una lista almacenada en una variable
+llamada `cosas`? Asuma que `cosas` contiene `[2, 4, 6, 8, 10]`.
+
+1. Asuma que `letras` contiene la lista `["a", "b", "c", "d"]`:
+    - ¿A qué evalúa `letras[-1]`?
+    - ¿A qué evalúa `letras[:2]`?
+    - ¿A qué evalúa `letras[int(int('3' * 2) // 11)]`? ¿Es necesario usar dos veces `int()`?
+
+1. Asuma que `bartulos` contiene la lista `[3.14, "casa", 11, "casa", True]`:
+    - ¿A qué evalúa `bartulos.index("casa")`? ¿Por qué?
+    - ¿Cómo queda la lista en `bartulos` después de ejecutar `bartulos.append(99)`?
+    - ¿Cómo queda la lista en `bartulos` después de ejecutar `bartulos.remove("casa"')` ?¿Por qué?
+
+1. ¿Cuáles son los operadores para la concatenación y la replicación de listas?
+
+1. ¿Cuál es la diferencia entre los métodos `append()` e `insert()` de las listas?
+
+1. ¿Cuáles son dos formas de eliminar valores de una lista?
+
+1. El siguiente bloque de código imprime `['a', 'b', True, 30]`. ¿Por qué?
+
+    ```python
+    cosas = ["a", "b", True]
+    bartulos = cosas
+    bartulos.append(20 + 10)
+    print(cosas)
+    ```
+
+1. Considere el siguiente bloque de código:
+
+    ```python
+    marcas = ["Milka", "Cofler", "Águila", "Cadbury", "Lindt", "Toblerone", "After Eight"]
+    marcas[2:5]
+    ```
+
+    que correctamente muestra `["Águila", "Cadbury", "Lindt"]`.
+    ¿Por qué el siguiente bloque de código no funciona?
+
+    ```python
+    marcas = ["Milka", "Cofler", "Águila", "Cadbury", "Lindt", "Toblerone", "After Eight"]
+    indices = 2:5
+    marcas[indices]
+    ```
+
+## Tuplas
+
+1. ¿Por qué la tupla no implementa un método similar al método `.extend()` de las listas?
+
+1. Las tuplas de Python son conocidas por ser inmutables. Por ejemplo, el siguiente bloque de código
+resulta en un error:
+
+    ```python
+    tupla = (1, 2, 3)
+    tupla[1] = 10
+    ```
+
+    Sin embargo, el siguiente bloque no arroja ningún error y pareciera que se logra modificar la 
+    tupla exitosamente:
+
+    ```python
+    bartulos = ["Hola", 10, None]
+    tupla = (1, bartulos, 3)
+
+    tupla[1].append("¡Sorpesa!")
+
+    print(tupla)
+    ```
+
+    ¿Qué pasó?
+
+## Diccionarios
+
+1. ¿Cómo se escribe en código un diccionario vacío?
+1. ¿Cómo se ve un diccionario que tiene la clave `"cosa"` y el valor `15`?
+1. ¿Cuál es la principal diferencia entre un diccionario y una lista?
+1. ¿Qué ocurre si se intenta acceder a `bartulos["cosa"]` cuando `bartulos` es `{"coso": 100}`?
+1. Si un diccionario está almacenado en `bartulos`, ¿cuál es la diferencia entre las siguientes
+expresiones?
+
+    ```python
+    "cosa" in bartulos
+    "cosa" in bartulos.keys()
+    ```
+
+1. Suponga el diccionario `datos = {"nombre": "Juan"}`.
+¿Por qué la siguiente expresión resulta en `False`?
+
+    ```python
+    "Juan" in datos
+    ```
+
+
+## Control de flujo
+
+### Condicionales
+
+1. Explique qué es una condición y en qué situaciones se utilizaría.
+
+1. Identifique los tres bloques de código en el siguiente ejemplo:
+
+    ```python
+    codigo = 0
+
+    if codigo == 10:
+        print("mensaje 1")
+        if codigo > 5:
+            print("mensaje 2")
+        else:
+            print("mensaje alternativo")
+        print("mensaje final")
+
+    print("Fin del programa")
+    ```
+
+    ¿Tienen sentido las comparaciones utilizadas?
+
+1. ¿Cuál es el problema con el siguiente programa? Proponga una solución.
+
+    ```python
+    numero = 10
+    if numero < 0:
+        print(f"El numero {numero} es negativo")
+    elif numero < -5:
+        print(f"El numero {numero} es menor a -5")
+    elif numero > 0:
+        print(f"El numero {numero} es positivo")
+    else:
+        print(f"El numero {numero} es 0")
+    ```
+
+### Bucles
+
+1.  Considere el siguiente programa:
+
+    ```python
+    for i in range(10):
+        print(i)
+    ```
+
+    Escriba un programa que realice la misma tarea utilizando un bucle `while`.
+
+1. ¿Cuál es la diferencia entre `range(10)`, `range(0, 10)` y `range(0, 10, 1)` en un bucle `for`?
+
+1. Suponga que `numeros` es una lista que contiene numeros enteros, ¿en qué se diferencian los
+siguientes bloques de código?
+
+    ```python
+    for i in numeros:
+        if i % 2 == 0:
+            break
+        print(i)
+    ```
+
+    ```python
+    for i in numeros:
+        if i % 2 == 0:
+            continue
+        print(i)
+    ```
+
+1. ¿Es posible re-escribir el siguiente bloque de código usando `while True`? ¿Qué modificaciones
+habría que hacer?
+
+    ```python
+    suma = 0
+    i = 0
+    while suma <= limite:
+        suma += numeros[i]
+        i += 1
+    ```

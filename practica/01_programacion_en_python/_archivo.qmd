@@ -1,0 +1,379 @@
+## Calculadora de variación porcentual
+
+Construya un programa que calcule cómo ha variado un precio de un producto o servicio a lo
+largo de una o varias semanas.
+
+El programa debe pedir al usuario:
+
+* Precio inicial
+* Precio final
+* Cantidad de semanas entre precios.
+
+E imprimir un mensaje que incluya la variación porcentual entre periodos y una variación
+porcentual anualizada.
+
+
+## Persiguiendo la meta
+
+En el Parque Independencia, la pista de atletismo del Estadio Municipal tiene una longitud de
+400 metros. Lucio, un atleta rosarino, se estuvo preparando intensamente para una competencia de
+400 los metros llanos.
+
+En su cuenta de Instagram, Lucio publicó una historia que decía:
+
+> "20 días, 100 kilómetros, 1 objetivo."
+
+### Parte 1: Análisis inicial
+
+Con base en esta información, responde las siguientes preguntas:
+
+i. ¿Cuántos metros corrió Lucio por día en promedio?
+i. ¿Cuántas vueltas completas dio por día en promedio? ¿Le sobró algún metro? ¿Cuántos?
+i. ¿Cuántas vueltas completas dio en total durante los 20 días?
+
+### Parte 2: Planificando el entrenamiento
+
+Lucio está diseñando un plan de entrenamiento para su próxima competencia.
+Quiere saber cuántas vueltas dará en promedio por día y cuántas vueltas completará en total al
+final de su entrenamiento.
+
+Escribe un programa que reciba:
+
+* Días de entrenamiento (un número entero).
+* Cantidad de metros a correr por día (un número entero).
+
+Y que devuelva:
+
+* Vueltas completas promedio por día (en una pista de 400 metros).
+* Vueltas completas totales al final del entrenamiento.
+* Metros sobrantes por día, si los hay.
+
+### Parte 3: Plan de entrenamiento avanzado
+
+Lucio quiere un programa más flexible para planificar su entrenamiento.
+Ahora, además de los días de entrenamiento, quiere poder ingresar la cantidad total de vueltas
+**o** la cantidad total de kilómetros que planea correr.
+
+Escribe un programa que reciba:
+
+* Días de entrenamiento (un número entero).
+* Cantidad total de vueltas o cantidad total de kilómetros
+(el usuario debe elegir una de las dos opciones).
+
+Y que devuelva:
+
+* Cantidad de metros y vueltas promedio por día.
+* Cantidad total de metros y vueltas.
+
+
+## Números impares
+
+Utilice el tercer argumento de la función `range()` para construir una lista con los números impares
+del 1 al 20. Luego, utilice un ciclo `for` para imprimir cada uno de ellos.
+
+## Cubos
+
+Un número elevado a la tercera potencia se llama **cubo**. Por ejemplo, el cubo de 2 se escribe como
+`2**3` en Python.
+
+Cree una lista con los primeros 10 cubos (es decir, el cubo de los números del 1 al 10).
+Luego, utilice un ciclo `for` para imprimir el valor de cada cubo.
+
+
+## Potencias
+
+Escriba una función que reciba un número entero `n` y una potencia máxima `b`.
+La función debe calcular las potencias de `n` desde $n^1$ hasta $n^b$.
+Primero, implemente la función para que devuelva todas las potencias en una lista.
+Luego, modifique la función para que devuelva cada potencia como un valor separado.
+Reflexione sobre las diferencias entre devolver una lista
+(un único objeto que contiene todos los resultados) y devolver múltiples valores separados.
+
+
+1. Escriba una función llamada triangulo que reciba una cadena de texto y un número entero, y dibuje
+una pirámide de la altura indicada, construida usando copias de la cadena. A continuación se muestra
+un ejemplo de una pirámide de 5 niveles utilizando la cadena 'L'.
+
+    ```python
+    triangulo("L", 5)
+    ```
+
+    ```
+    L
+    LL
+    LLL
+    LLLL
+    LLLLL
+    ```
+
+
+1. Escriba una función llamada rectangulo que reciba una cadena de texto y dos números enteros, y
+dibuje un rectángulo con el ancho y el alto indicados, construido usando copias de la cadena.
+A continuación se muestra un ejemplo de un rectángulo de ancho 5 y alto 4 utilizando la cadena 'H'.
+
+    ```python
+    rectangulo('H', 5, 4)
+    ```
+
+    ```
+    HHHHH
+    HHHHH
+    HHHHH
+    HHHHH
+    ```
+
+
+1.  Escriba un programa que recorra una lista de números y los vaya sumando uno por uno hasta que la
+    suma acumulada sea igual o mayor a un determinado umbral (por ejemplo, 20).
+
+    Primero, resuelva el problema utilizando un bucle `for`.
+    Luego, implemente una versión equivalente utilizando un bucle `while`.
+
+    Al finalizar, el programa debe mostrar la suma total acumulada y la cantidad de números que
+    fueron sumados.
+
+    Utilice esta lista de ejemplo:
+
+    ```python
+    numeros = [4, 7, 3, 5, 2, 11, 20]
+    ```
+
+
+1. Escribir un programa que sirva nos sirva de presentación utilizando f-strings.
+El programa tiene que mostrar nuestro nombre y a que nos dedicamos. 
+Nuestro nombre y dedicación tienen que ser variables que luego incorporamos utilizando f-strings.
+
+    Ejemplos de salida
+
+    * `Mi nombre es Joaquín y soy carnicero`
+    * `Mi nombre es Florencia y soy ingeniera`
+
+
+1. Emiliano es un transportista del sur de la provincia de Santa Fe.
+La cooperativa de su pueblo tiene que enviar a puerto 55 toneladas de poroto de soja y le van a
+encargar todo el transporte a él. Emiliano tiene un camión sin acoplado, cuyo chasis puede
+ transportar 8000 kilos de cereal. Responda las siguientes preguntas:
+
+    * ¿Cuántos viajes tiene que hacer?
+    * ¿Cuántos viajes van a llevar menos que la carga máxima?
+    * ¿Cuántos kilos va a transportar en los viajes que no vaya con la máxima carga?
+    * Si la distancia entre su pueblo y el puerto es 160 kilómetros, ¿cuánta distancia va a recorrer en total?
+
+    ```python
+    total_a_enviar = 55000
+    carga_chasis = 8000
+    total_viajes = total_a_enviar // carga_chasis + 1 # cuantos viajes tiene que hacer
+    total_viajes - total_a_enviar // carga_chasis # cuantos viajes llevan menos que la carga máxima
+    total_a_enviar % carga_chasis # cuantos kilos lleva en los viajes que va sin la carga máxima
+    160 * total_viajes * 2 # distancia total a recorrer, multiplicamos por 2 porque son viajes de ida y vuetla
+    ```
+
+
+1. La siguiente lista contiene números generados al azar:
+
+    ```python
+    numeros = [
+        436, 335, 1727, 357, 883, 752, 346, 1136, 1267, 1729, 1082,
+        1693, 922, 953, 1409, 204, 829, 845, 820, 1043, 724, 1955,
+        1931, 927, 767, 1974, 1891, 1622, 1142, 883, 1593, 97, 1465,
+        1280, 1216, 162, 323, 36, 1507, 1324, 257, 1442, 1618, 584,
+        1967, 1949, 1035, 1497, 1336,  263,  510, 1112, 1045, 1778, 334,
+        369, 62, 931, 997, 49, 450, 1448, 1721, 185, 1356, 1141,
+        1973, 1382, 143, 735, 246, 442,  925, 517, 1633, 1982, 1201,
+        1198, 1354, 1027, 1525, 1675, 1528, 321, 1206, 604, 312, 1449,
+        1207, 1088, 986, 1633, 601, 1048, 375, 1274, 1556, 42, 1256,
+        1978
+    ]
+    ```
+
+    Itere a través de la lista y asigne los números a diferentes listas según si son menores a 200,
+    mayores o iguales a 200 y menores a 1000, o mayores o iguales a 1000.
+
+    ```python
+    lista_1 = [] # Menores a 200
+    lista_2 = [] # Mayores o iguales a 200 y menores a 1000
+    lista_3 = [] # Mayores o iguales a 1000
+
+    for n in numeros:
+        if n < 200:                 # Si el numero es menor a 200
+            lista_1.append(n)
+        # NOTE: n >= 200 es redundante
+        elif n >= 200 and n < 1000: # Si el numero es mayor o igual a 200 y menor a 1000
+            lista_2.append(n)
+        else:                       # Caso contrario (es decir, si es mayor o igual a 1000)
+            lista_3.append(n)
+    ```
+
+1. Escribir un programa que dado un nombre de usuario nos imprima un mensaje con todos sus datos.
+
+    ```python
+    usuarios = {
+        "aeinstein": {
+            "nombre": "albert",
+            "apellido": "einstein",
+            "ciudad": "princenton"
+        },
+        "mcurie": {
+            "nombre": "marie",
+            "apellido": "curie",
+            "ciudad": "paris"
+        },
+        "afleming": {
+            "nombre": "alexander",
+            "apellido": "fleming",
+            "ciudad": "londres"
+        }
+    }
+    ```
+
+    ```python
+    usuario = "mcurie"
+
+    nombre = usuarios[usuario]["nombre"]
+    apellido = usuarios[usuario]["apellido"]
+    ciudad = usuarios[usuario]["ciudad"]
+
+    print(f"El usuario '{usuario}' se llama {nombre} {apellido} y es de {ciudad}.")
+    ```
+
+1. Dada la siguiente lista de palabras:
+
+
+    ```python
+    palabras = [
+        "Cóncavo", "Autopista", "Diagonal", "Equipaje", "Ardilla", "Consultorio", "Roma", "Loco",
+        "Marciano", "Karateca", "Aniversario", "Topadora", "Grabador", "Salir", "Ventoso", "Anunciar",
+        "Rótula", "Estanque", "Quedarse", "Nuevo", "Sordo", "Madurar", "Vestir", "Retoque", "Desvelo",
+        "Hora", "Cochera", "Metal", "Nudo", "Maquillaje", "Barco", "Soda", "Lagartija"
+    ]
+    ```
+
+    * ¿Cuántas palabras hay en total?
+    * ¿Cuántas empiezan con `"A"`?
+    * ¿Cuántas terminan con `"o"`?
+    * ¿Cuántas empiezan con alguna vocal?
+    * ¿Cuántas terminan con alguna consonante?
+
+    ```python
+    len(palabras)
+
+    # Empezamos un contador en 0
+    empieza_con_a = 0
+
+    # Iteramos a traves de las palabras en la lista
+    for p in palabras:
+        # Si la palabra empieza con "A" (mayuscula), sumamos 1 al contador
+        if p[0] == "A":
+            empieza_con_a = empieza_con_a + 1
+    print(empieza_con_a)
+    ```
+
+    ```python
+    termina_con_o = 0
+    for palabra in palabras:
+        if palabra[-1] == "o":
+            termina_con_o = termina_con_o + 1
+    print(termina_con_o)
+    ```
+
+    ```python
+    empieza_con_vocal = 0
+    for palabra in palabras:
+        if palabra[0] in ["A", "E", "I", "O", "U"]:
+            empieza_con_vocal = empieza_con_vocal + 1
+    print(empieza_con_vocal)
+    ```
+
+    ```python
+    termina_con_consonante = 0
+    for palabra in palabras:
+        if palabra[-1] not in ["a", "e", "i", "o", "u"]:
+            termina_con_consonante = termina_con_consonante + 1
+    print(termina_con_consonante)
+    ```
+
+
+1. Capicúa (Palíndromos). Python proporciona una función incorporada llamada `reversed` que, al recibir una
+secuencia (como una cadena o una lista), devuelve un objeto con los elementos en orden inverso.
+
+Por ejemplo:
+
+```python
+list(reversed('perro'))        # ['o', 'r', 'r', 'e', 'p']
+''.join(reversed('perro'))     # 'orrep'
+```
+
+Podemos usar esto para definir una función que invierte una palabra:
+
+```python
+def invertir_palabra(palabra):
+    return ''.join(reversed(palabra))
+```
+
+Un **palíndromo** es una palabra que se lee igual hacia adelante y hacia atrás, como "reconocer" o "anilina".
+
+Escriba una función llamada `es_palindromo` que reciba una cadena y devuelva `True` si es un palíndromo, y `False` en caso contrario.
+
+Luego, utilizando esta función y una lista de palabras (`lista_palabras`), imprima todos los palíndromos que tengan al menos 7 letras:
+
+```python
+for palabra in lista_palabras:
+    if len(palabra) >= 7 and es_palindromo(palabra):
+        print(palabra)
+```
+
+#### 💡 Ejemplo:
+
+Si `lista_palabras` contiene:
+
+```python
+lista_palabras = ['reconocer', 'anilina', 'oso', 'radar', 'neuquén', 'somos']
+```
+
+La salida esperada sería:
+
+```
+reconocer
+anilina
+```
+
+PARA RECURSION
+
+1. 
+
+El máximo común divisor (MCD) de dos números a y b es el mayor número que los divide a ambos sin dejar resto.
+
+Una forma de calcular el MCD de dos números se basa en la siguiente observación: si r es el resto de dividir a entre b, entonces mcd(a, b) = mcd(b, r). Como caso base, se puede usar que mcd(a, 0) = a.
+
+Escriba una función llamada mcd que reciba como parámetros a y b, y devuelva su máximo común divisor.
+
+
+Hashing
+
+https://allendowney.github.io/ThinkPython/chap11.html#exercise
+
+
+PARA ACTIVIDADES EN CLASE
+
+1. Entradas de cine
+
+Un cine cobra distintos precios según la edad de cada persona: la entrada es gratis para menores de
+3 años, cuesta $10 para personas de entre 3 y 12 años, y $15 para mayores de 12 años.
+
+Escriba un programa que pregunte repetidamente la edad de los usuarios e informe en cada caso
+cuánto cuesta la entrada correspondiente.
+
+Luego, modifique el programa para resolver esta nueva situación: primero debe preguntar al usuario
+cuántas entradas desea comprar, después solicitar la edad de cada persona individualmente y
+calcular el precio de cada entrada. Al finalizar, el programa debe mostrar el monto total a pagar
+por todas las entradas.
+
+1. Cree un diccionario llamado ciudades. Use los nombres de tres ciudades como claves en su
+diccionario. Cree un diccionario con información sobre cada ciudad, e incluya el país en el que se
+encuentra la ciudad, su población aproximada y un dato curioso sobre esa ciudad.
+Las claves del diccionario de cada ciudad deben ser algo como pais, poblacion y dato.
+Imprima el nombre de cada ciudad y toda la información que haya almacenado sobre ella.
+
+1. Múltiplos: Escriba un programa que primero le pida al usuario que ingrese un número y luego le
+informe si ese número es o no un múltiplo de 10. A continuación, haga una versión más general del
+programa: solicite al usuario que ingrese dos números e informe si el segundo número es múltiplo del primero.

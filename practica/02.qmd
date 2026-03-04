@@ -1,7 +1,0 @@
----
-title: Unidad 2
----
-
-## Adivinanza
-
-¿De qué color era el caballo blanco de San Martín?

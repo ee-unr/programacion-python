@@ -18,7 +18,7 @@ website:
       - text: Teoría
         file: teoria/01_programacion_en_python/01_introduccion.qmd
       - text: Práctica
-        file: practica/01.qmd
+        file: practica/01_programacion_en_python/autoevaluacion.qmd
       - text: Proyectos
         file: proyectos/grupal.qmd
       - text: Recursos
@@ -45,17 +45,20 @@ website:
             - sort-ui: false
     - title: Práctica
       contents:
-        - auto: practica/*.qmd
-        - auto: practica/*.ipynb
+        - text: U1 - Programación en Python
+          contents:
+            - practica/01_programacion_en_python/autoevaluacion.qmd
+            - practica/01_programacion_en_python/ejercicios.qmd
+            - practica/01_programacion_en_python/problemas.qmd
     - title: Proyectos
       contents:
         - proyectos/grupal.qmd
         - proyectos/individual.qmd
     - title: Recursos
       contents:
-        - text: Ejemplos
-          contents:
-            - recursos/ejemplos/clases.qmd
+        # - text: Ejemplos
+        #   contents:
+        #     - recursos/ejemplos/clases.qmd
         - text: Tutoriales
           contents:
             - recursos/tutoriales/instalacion_python.qmd
