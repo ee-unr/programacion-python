@@ -23,7 +23,7 @@ Salir de esa encerrona, por ahora, sigue siendo parte del trabajo humano.
 
 Para extraer lo mejor de estas herramientas, entonces, es clave conocer el problema que se está resolviendo.
 Si vamos a usarlas para programar en Python (o cualquier otro lenguaje),
-necesitamos sostener un dominio sólido del lenguaje y de los fundamentos de la programación.
+necesitamos contar con un dominio sólido del lenguaje y de los fundamentos de la programación.
 
 En otras palabaras, en esta materia no estamos en contra del uso de herramientas de IA.
 Todo lo contrario. Creemos que pueden ser muy valiosas en el trabajo profesional y también pueden aportar al aprendizaje.
