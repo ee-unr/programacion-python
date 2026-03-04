@@ -36,8 +36,8 @@ Con ese objetivo, dejamos estas recomendaciones generales para el uso de IA dura
     - qué avances hiciste hasta ahora
     - qué parte no entendés
     - tu código y los errores, si los hay.
-Es mejor usar la IA como un tutor que te guía a encontrar la solución,
-que como un profesor particular que realiza la tarea por vos.
+
+    Es mejor usar la IA como un tutor que te guía, que como un profesor particular que realiza la tarea por vos.
 - Del mismo modo que mirar videos de cocina no te hace buen chef,
 copiar y pegar código tampoco te convertirá en buen programador.
 Cuando la IA te devuelva código, no copies y pegues ese código en el editor de manera automática.
