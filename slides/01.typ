@@ -3,6 +3,10 @@
 #import "@preview/codly-languages:0.1.10": *
 #import "@preview/gentle-clues:1.3.1": *
 #import "@preview/pinit:0.2.2": *
+
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
+#import fletcher.shapes: diamond
+
 #import "template.typ": setup-template, new-section-slide, inverted-slide
 
 #show: codly-init.with()
@@ -582,15 +586,63 @@
 #new-section-slide[Ejecución condicional]
 
 #slide[
-  = Titulo
+
+  #place(center + horizon)[
+    #scale(90%)[
+      #diagram(
+        spacing: (16mm, 12mm),
+        node-stroke: 2pt,
+        edge-stroke: 1.1pt,
+        node-corner-radius: 3pt,
+
+        node(
+          (0,0),
+          [Inicio],
+          name: <inicio>,
+          width: 30mm,
+          fill: rgb("#c7d9c4"),
+          stroke: rgb("#7cab69")
+        ),
+
+        node(
+          (0, 2),
+          [Hay humo?],
+          name: <h1>,
+          shape: diamond,
+          width: 34mm,
+          height: 24mm,
+          fill: rgb("#efe4bf"),
+          stroke: rgb("#d0aa43")
+        ),
+
+        node((3,2), align(center)[Querés\ sufrir?], name: <sufrir>, shape: diamond,
+          width: 34mm, height: 24mm, fill: rgb("#efe4bf"), stroke: rgb("#d0aa43")),
+        node((6,2), [Esperar un rato], name: <esperar>, width: 40mm,
+          fill: rgb("#d9d0e2"), stroke: rgb("#8f73a8")),
+        node((6,5), [Hay humo?], name: <h2>, shape: diamond,
+          width: 34mm, height: 24mm, fill: rgb("#efe4bf"), stroke: rgb("#d0aa43")),
+        node((0,5), [Salir afuera], name: <salir>, width: 36mm,
+          fill: rgb("#d9d0e2"), stroke: rgb("#8f73a8")),
+        node((0,7), [Fin], name: <fin>, width: 30mm,
+          fill: rgb("#c7d9c4"), stroke: rgb("#7cab69")),
+
+        edge(<inicio.south>, <h1.north>, "-|>"),
+        edge(<h1.east>, <sufrir.west>, "-|>", [Sí]),
+        edge(<h1.south>, <salir.north>, "-|>", [No]),
+        edge(<sufrir.east>, <esperar.west>, "-|>", [No]),
+        edge(<sufrir.south>, <salir.east>, "-|>", [Sí]),
+        edge(<esperar.south>, <h2.north>, "-|>"),
+        edge(<h2.west>, <salir.east>, "-|>", [No]),
+        edge(<h2.east>, <esperar.east>, "-|>", [Sí], bend: -50deg),
+        edge(<salir.south>, <fin.north>, "-|>"),
+      )
+    ]
+  ]
+
 ]
 
 #new-section-slide[Bucles]
 
 #slide[
-
+  = Titulo
 ]
-
-
-
-
