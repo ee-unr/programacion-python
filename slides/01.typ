@@ -3,7 +3,7 @@
 #import "@preview/codly-languages:0.1.10": *
 #import "@preview/gentle-clues:1.3.1": *
 #import "@preview/pinit:0.2.2": *
-#import "template.typ": setup-template, new-section-slide
+#import "template.typ": setup-template, new-section-slide, inverted-slide
 
 #show: codly-init.with()
 #codly(
@@ -65,7 +65,7 @@
   ]
 ]
 
-#new-section-slide[A jugar con Python #emoji.laptop]
+#inverted-slide[A laburar]
 
 #new-section-slide[Tipos de datos elementales]
 
@@ -456,7 +456,7 @@
     pin11returnpin12 pin13valorpin14
   ```
 
-  #uncover(1)[
+  #uncover(2)[
     #pinit-highlight(1, 2, dy: -1.1em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -475,7 +475,7 @@
     ]
   ]
 
-  #uncover(2)[
+  #uncover(3)[
     #pinit-highlight(3, 4, dy: -1.1em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -495,7 +495,7 @@
   ]
 
 
-  #uncover(3)[
+  #uncover(4)[
     #pinit-highlight(5, 6, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -511,7 +511,7 @@
     ]
   ]
 
-  #uncover(4)[
+  #uncover(5)[
     #pinit-highlight(7, 8, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -527,7 +527,7 @@
     ]
   ]
 
-  #uncover(5)[
+  #uncover(6)[
     #pinit-highlight(9, 10, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -543,7 +543,7 @@
     ]
   ]
 
-  #uncover(6)[
+  #uncover(7)[
     #pinit-highlight(11, 12, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -555,12 +555,12 @@
       pin-dx: 0pt,
       pin-dy: 10pt
     )[
-      #annotation[Indica que se devuelve un valor \ y el fin de la ejecución \ 
+      #annotation[Indica que se devuelve un valor \ y el fin de la ejecución \
       de la función]
     ]
   ]
 
-  #uncover(7)[
+  #uncover(8)[
     #pinit-highlight(13, 14, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
 
     #pinit-point-from(
@@ -577,6 +577,7 @@
   ]
 ]
 
+#inverted-slide[A laburar]
 
 #new-section-slide[Ejecución condicional]
 

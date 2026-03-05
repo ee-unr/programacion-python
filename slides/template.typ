@@ -71,3 +71,14 @@
   #line(stroke: new-section-stroke, length: 100%)
   #toolbox.register-section(title)
 ]
+
+
+#let inverted-slide(title) = slide[
+  #let color = course-red.lighten(20%)
+  #set page(footer: none, header: none, fill: color)
+  #set align(horizon)
+  #set text(size: 2em, fill: white)
+  #set align(center)
+  #strong(title)
+  #line(stroke: 3pt + white, length: 100%)
+]
