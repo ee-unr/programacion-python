@@ -1,6 +1,6 @@
 #import "@preview/polylux:0.4.0": *
 #import "@preview/codly:1.3.0": *
-#import "@preview/codly-languages:0.1.1": *
+#import "@preview/codly-languages:0.1.10": *
 #show: codly-init.with()
 #codly(
   languages: codly-languages,
@@ -10,8 +10,7 @@
   smart-indent: false,
 )
 
-#import "template.typ": *
-#let title = "Conociendo Python"
+#import "../template.typ": setup-template, new-section-slide
 
 #show: setup-template.with(
   title: [Primera clase: \ Conociendo Python],
@@ -238,19 +237,18 @@
   ```
 ]
 
-#slide[
-  == Codly features (II)
-  #codly(
-    header: [`example.py`],
-    header-cell-args: (align: center, )
-  )
-  ```python
-  def fib(n):
-    if n <= 1:
-      return n
-    else:
-      return fib(n - 1) + fib(n - 2)
-  print(fib(25))
-  ```
-]
-
+// #slide[
+//   == Codly features (II)
+//     #codly(
+//     // header: [`example.py`],
+//     // header-cell-args: (align: center, )
+//   )
+//   ```python
+//   def fib(n):
+//     if n <= 1:
+//       return n
+//     else:
+//       return fib(n - 1) + fib(n - 2)
+//   print(fib(25))
+//   ```
+// ]

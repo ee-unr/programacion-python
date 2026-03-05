@@ -3,7 +3,7 @@
 #let course-red = rgb("#BF0F1F")
 #let page-stroke = stroke(thickness: 2pt, paint: course-red, cap: "butt")
 #let new-section-stroke = stroke(thickness: 3pt, paint: course-red, cap: "butt")
-#let margin-text-size = 0.7em
+#let margin-text-size = 0.6em
 
 #let setup-template(
   title: none,
@@ -34,8 +34,13 @@
   show link: set text(course-red)
   show raw: set text(font: "Fira Code")
   show math.equation: set text(font: "Lete Sans Math")
-  show heading: set block(below: 2em)
-  show heading: set text(size: 1em)
+  show heading: set block(below: 1.2em)
+  show heading: set text(size: 1.2em)
+
+  // Tamaño de texto del codigo cuando esta en un parrafo
+  show raw.where(block: false): set text(size: 1.1em)
+
+  // Tamaño de texto del codigo cuando esta en un bloque de código
   show raw.where(block: true): set text(size: 16pt) // Code size in blocks
   show raw.where(block: true): it => block(
     fill: rgb("#ebebeb"),
@@ -45,6 +50,8 @@
     width: 100%,
     it
   )
+  // Espacio entre elementos de un listado
+  set list(spacing: 1em)
 
   slide[
     #set page(footer: none, header: none)
