@@ -2,6 +2,7 @@
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
 #import "@preview/gentle-clues:1.3.1": *
+#import "@preview/pinit:0.2.2": *
 #import "template.typ": setup-template, new-section-slide
 
 #show: codly-init.with()
@@ -56,7 +57,7 @@
       - Enfocado en R y Python
       - Gratis
       - Código abierto
-      - Rstudio ❤️ VS Code
+      - Rstudio #emoji.heart VS Code
   ]
   ][
     #set align(center)
@@ -64,7 +65,9 @@
   ]
 ]
 
-#new-section-slide[A jugar con Python ⏳]
+#new-section-slide[A jugar con Python #emoji.laptop]
+
+#new-section-slide[Tipos de datos elementales]
 
 #slide[
   = Tipos de datos elementales
@@ -403,8 +406,177 @@
 #new-section-slide[Funciones]
 
 #slide[
-  = Titulo
+  = ¿Por qué usamos funciones?
+
+  #set text(size: 1.4em)
+  #set list(spacing: 1.4em)
+
+  #item-by-item[
+    - Reutilización de código
+    - Organización
+    - Modularidad
+  ]
+
+  #uncover("4-")[
+    #v(5em)
+    #set align(center)
+    Nada que ustedes no supieran #emoji.face.wink
+  ]
+
 ]
+
+
+#slide[
+  #let annotation(body) = {
+    box(
+      fill: rgb("#dbeafe"),
+      inset: 8pt,
+      radius: 4pt,
+      stroke: rgb("#555")
+    )[
+      #set align(center)
+      #body
+    ]
+  }
+
+  #show raw: it => {
+    show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
+    it
+  }
+
+  #v(7em)
+
+  #set align(center)
+  #show raw.where(block: true): set text(size: 26pt) // Code size
+  #show raw.where(block: true): it => block(width: 70%, it)
+
+  ```python
+  pin1defpin2 pin3funpin4(pin5x, y, zpin6)pin7:pin8
+    pin9# <cuerpo de la función>pin10
+    pin11returnpin12 pin13valorpin14
+  ```
+
+  #uncover(1)[
+    #pinit-highlight(1, 2, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      (1, 2),
+      body-dx: -120pt,
+      body-dy: -60pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dy: -25pt,
+      pin-dx: 0pt,
+    )[
+      #annotation[
+        Indica comienzo de\
+        definición de una función
+      ]
+    ]
+  ]
+
+  #uncover(2)[
+    #pinit-highlight(3, 4, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      (3, 4),
+      body-dx: -70pt,
+      body-dy: -60pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dy: -25pt,
+      pin-dx: 0pt,
+    )[
+      #annotation[
+        Nombre\
+        de la función
+      ]
+    ]
+  ]
+
+
+  #uncover(3)[
+    #pinit-highlight(5, 6, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      (5, 6),
+      body-dx: -70pt,
+      body-dy: -60pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt
+    )[
+      #annotation[Argumentos \ de la función]
+    ]
+  ]
+
+  #uncover(4)[
+    #pinit-highlight(7, 8, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      (7, 8),
+      body-dx: -90pt,
+      body-dy: -60pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt
+    )[
+      #annotation[Comienza un \ bloque de código]
+    ]
+  ]
+
+  #uncover(5)[
+    #pinit-highlight(9, 10, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      9,
+      body-dx: -120pt,
+      body-dy: 5pt,
+      offset-dx: -60pt,
+      offset-dy: 70pt,
+      pin-dx: -5pt,
+      pin-dy: -8pt
+    )[
+      #annotation[Código que se ejecuta \ cuando se llama a la función]
+    ]
+  ]
+
+  #uncover(6)[
+    #pinit-highlight(11, 12, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      (11, 12),
+      body-dx: -120pt,
+      body-dy: 5pt,
+      offset-dx: 0pt,
+      offset-dy: 70pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt
+    )[
+      #annotation[Indica que se devuelve un valor \ y el fin de la ejecución \ 
+      de la función]
+    ]
+  ]
+
+  #uncover(7)[
+    #pinit-highlight(13, 14, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+
+    #pinit-point-from(
+      (13, 14),
+      body-dx: -140pt,
+      body-dy: 5pt,
+      offset-dx: 0pt,
+      offset-dy: 70pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt
+    )[
+      #annotation[Valor que devuelve la función]
+    ]
+  ]
+]
+
 
 #new-section-slide[Ejecución condicional]
 
@@ -417,3 +589,7 @@
 #slide[
 
 ]
+
+
+
+
