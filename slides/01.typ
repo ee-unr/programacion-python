@@ -8,13 +8,16 @@
 
 #import fletcher.shapes: diamond, ellipse
 #import "template.typ": (
-  code-annotation,
   inverted-slide,
+  new-section-slide,
+  setup-template,
+)
+
+#import "utils.typ": (
+  code-annotation,
   item-by-item,
   later,
-  new-section-slide,
   reveal-code,
-  setup-template,
 )
 
 
@@ -30,10 +33,11 @@
 )
 
 #show: setup-template.with(
-  title: [Conociendo Python],
-  subtitle: [Tomás Capretto \ \ Marzo 2026],
-  course-name: "Programación en Python",
-  title-header: "Clase 1"
+  title: [Programación en Python],
+  subtitle: [Clase 1: Conociendo Python],
+  date: [18/03/2026],
+  header-label: [Clase 1],
+  footer-label: [Conociendo Python],
 )
 
 #new-section-slide[Qué es Python]
@@ -53,7 +57,7 @@
   ]
   ][
     #set align(center)
-    #image("python-logo.png", width:60%)
+    #image("imgs/python-logo.png", width:60%)
   ]
 ]
 
@@ -76,7 +80,7 @@
   ]
   ][
     #set align(center)
-    #image("positron-icon.svg", width:60%)
+    #image("imgs/positron-icon.svg", width:60%)
   ]
 ]
 
@@ -198,31 +202,40 @@
 #slide[
   = Nombres permitidos
 
-  #set text(size: 0.92em)
-
-  - Solo pueden contener *letras*, *números* y *guiones bajos*
-  - Deben comenzar con letra o guión bajo, pero no con un número.
-    - `mensaje_1` ✅
-    - `1_mensaje` ❌
-  - No pueden contener espacios
-    - `el_mensaje` vs `el mensaje`
-  - No pueden ser palabras reservadas de Python
-
-  #show: later
-
-  #info(title: "Consejos")[
-  - Usar nombres breves pero descriptivos
-    - `mensaje` mejor que `mj`
-    - `equipo_favorito`  mejor que `eq_fav`
-  - No usar tildes ni caracteres específicos del castellano (`ñ`).
+  #item-by-item[
+    - Solo pueden contener *letras*, *números* y *guiones bajos*
+    - Deben comenzar con letra o guión bajo, pero no con un número.
+      - `mensaje_1` ✅
+      - `1_mensaje` ❌
+    - No pueden contener espacios
+      - `el_mensaje` ✅
+      - `el mensaje` ❌
+    - No pueden ser palabras reservadas de Python
   ]
 
 ]
+
+#slide[
+  = Nombres permitidos
+
+  #set align(horizon)
+
+  #info(title: "Consejos")[
+    - Usar nombres breves pero descriptivos
+      - `mensaje` mejor que `mj`
+      - `equipo_favorito`  mejor que `eq_fav`
+    - No usar tildes ni caracteres específicos del castellano (`ñ`).
+  ]
+
+]
+
 
 #new-section-slide[Expresiones]
 
 #slide[
   = Expresiones
+
+  #set align(horizon)
 
   #memo(title: "¿Qué es una expresión?")[
     Una expresión es una combinación de *operadores* y *operandos* que se puede evaluar para producir un valor.
@@ -439,7 +452,7 @@
   #uncover("4-")[
     #v(5em)
     #set align(center)
-   Nada que ustedes no supieran ya #emoji.face.wink
+    Nada que ustedes no supieran ya #emoji.face.wink
   ]
 
 ]
@@ -460,8 +473,8 @@
 
 
   ```python
-  pin1defpin2 pin3funpin4(pin5x, y, zpin6)pin7:pin8
-    pin9# <cuerpo de la función>pin10
+  pin1defpin2 pin3sumapin4(pin5x, y, zpin6)pin7:pin8
+    pin9valor = x + y + zpin10
     pin11returnpin12 pin13valorpin14
   ```
 
@@ -979,6 +992,21 @@
 ]
 
 #slide[
+  = Ejecución condicional
+
+  #set text(size: 1.02em)
+
+  #item-by-item[
+    - Realizar diferentes acciones según qué se responde a cada pregunta
+    - Preguntas #sym.arrow Condiciones
+    - Posible gracias a las siguientes *estructuras de control*:
+      - `if`
+      - `if`-`else`
+      - `if`-`elif`-`else`
+  ]
+]
+
+#slide[
   = Partes de estructura `if`
 
   #show raw: it => {
@@ -1016,7 +1044,7 @@
     #pinit-highlight(3, 5, dy: -1.1em, fill: rgb(0, 0, 255, 50))
     #pinit-point-from(
       (3, 5),
-      body-dx: -145pt,
+      body-dx: -195pt,
       body-dy: -65pt,
       offset-dx: 0pt,
       offset-dy: -90pt,
@@ -1024,7 +1052,7 @@
       pin-dy: -25pt,
     )[
       #code-annotation[
-        *Condición* que a evaluar,\ debe resultar en `True` o `False`
+        Expresión, llamada condición,\ que al evaluarse resulta en `True` o `False`
       ]
     ]
   ]
@@ -1249,6 +1277,19 @@
 #new-section-slide[Bucles]
 
 #slide[
+  = Ejecución repetitiva
+
+  #item-by-item[
+    - Ejecutar la misma acción para cada valor en una secuencia.
+    - Ejecutar una acción hasta que se cumpla (o se deje de cumplir) una condición.
+    - No hace falta copiar y pegar el mismo código todo el tiempo...
+    - gracias a las siguientes *estructuras de control*:
+      - `for`
+      - `while`
+  ]
+]
+
+#slide[
   = Partes de estructura `for`
 
   #show raw: it => {
@@ -1338,7 +1379,7 @@
       pin-dx: 0pt,
       pin-dy: -25pt,
     )[
-      #code-annotation[Indican el inicio del bloque de código]
+      #code-annotation[Indica el inicio del bloque de código]
     ]
   ]
 
@@ -1421,7 +1462,7 @@
       pin-dx: 0pt,
       pin-dy: -25pt,
     )[
-      #code-annotation[Indican el inicio del bloque de código]
+      #code-annotation[Indica el inicio del bloque de código]
     ]
   ]
 

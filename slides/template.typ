@@ -11,75 +11,14 @@
 #let current-section = context current-section-state.get()
 #let register-section(title) = current-section-state.update(title)
 
-#let later(body, strand: 1, mode: hide) = {
-  if body in ([], [ ], parbreak(), linebreak()) {
-    body
-  } else {
-    [#pause #body]
-  }
-}
-
-#let reveal-code(
-  start: 1,
-  lines: (),
-  before: gray,
-  after: hide,
-  full: true,
-  body,
-) = {
-  let lines = (0,) + lines
-  let (before-action, after-action) = (before, after).map(mode => {
-    if type(mode) == color {
-      it => text(fill: mode, it.text)
-    } else if mode == hide {
-      hide
-    } else {
-      panic("Modo invalido para reveal-code: " + repr(mode))
-    }
-  })
-
-  for (idx, (from, to)) in lines.windows(2).enumerate() {
-    show raw.line: it => {
-      if it.number <= from {
-        before-action(it)
-      } else if it.number > to {
-        after-action(it)
-      } else {
-        it
-      }
-    }
-    only(start + idx, body)
-  }
-
-  if full {
-    only((beginning: start + lines.len() - 1), body)
-  }
-}
-
-#let one-by-one(start: 1, mode: hide, ..children) = {
-  for (idx, child) in children.pos().enumerate() {
-    uncover((beginning: start + idx), child)
-  }
-}
-
-#let item-by-item(start: 1, mode: hide, body) = {
-  let is-item(it) = type(it) == content and it.func() in (
-    list.item, enum.item, terms.item
-  )
-  let children = if type(body) == content and body.has("children") {
-    body.children
-  } else {
-    body
-  }
-  one-by-one(start: start, mode: mode, ..children.filter(is-item))
-}
-
-
 #let setup-template(
   title: none,
   subtitle: none,
-  course-name: none,
-  title-header: none,
+  author: none,
+  date: none,
+  header-label: none,
+  footer-label: none,
+  institution: none,
   body,
 ) = {
   show: touying-slides.with(
@@ -90,13 +29,17 @@
         #set text(size: margin-text-size)
         #set align(horizon)
 
-        #course-name #h(1fr) #slide-number
+        #footer-label #h(1fr) #slide-number
       ],
       header: box(stroke: (bottom: page-stroke), inset: (x: 0pt, y: 8pt))[
         #set text(size: margin-text-size)
         #set align(horizon)
         #h(1fr)
-        #title-header | #text(current-section, fill: course-red)
+        #if header-label != none {
+          [#header-label | #text(current-section, fill: course-red)]
+        } else {
+          [#text(current-section, fill: course-red)]
+        }
       ],
     ),
     config-common(
@@ -130,20 +73,33 @@
 
   slide(config: config-page(header: none, footer: none))[
     #set align(horizon)
-    #text(size: 2em, weight: "bold")[#title]
+    #stack(
+      text(size: 2em, weight: "bold",  title),
+      {
+        if subtitle != none {
+            v(1.2em)
+            text(size: 1.4em, subtitle)
+        }
+      }
+    )
     #line(stroke: new-section-stroke, length: 100%)
-    #subtitle
+    #author
+
+    #date
+
   ]
   body
 }
 
-#let new-section-slide(title) = slide(config: config-page(header: none, footer: none))[
-  #set align(horizon)
-  #set text(size: 2em)
-  #strong(title)
-  #line(stroke: new-section-stroke, length: 100%)
-  #register-section(title)
-]
+#let new-section-slide(title) = {
+  slide(config: config-page(header: none, footer: none))[
+    #set align(horizon)
+    #set text(size: 2em)
+    #strong(title)
+    #line(stroke: new-section-stroke, length: 100%)
+    #register-section(title)
+  ]
+}
 
 #let inverted-slide(top, bottom: none) = {
   slide(config: config-page(header: none, footer: none, fill: course-red.lighten(20%)))[
@@ -153,18 +109,5 @@
     #strong(top)
     #line(stroke: 3pt + white, length: 100%)
     #strong(bottom)
-  ]
-}
-
-// Anotación
-#let code-annotation(body) = {
-  box(
-    fill: rgb("#dbeafe"),
-    inset: 8pt,
-    radius: 4pt,
-    stroke: rgb("#555")
-  )[
-    #set align(center)
-    #body
   ]
 }
