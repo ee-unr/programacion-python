@@ -10,7 +10,7 @@
   smart-indent: false,
 )
 
-#import "../template.typ": setup-template, new-section-slide
+#import "../old/template.typ": setup-template, new-section-slide
 
 #show: setup-template.with(
   title: [Primera clase: \ Conociendo Python],

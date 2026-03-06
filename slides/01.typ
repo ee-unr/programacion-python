@@ -1,13 +1,24 @@
-#import "@preview/polylux:0.4.0": *
+#import "@preview/touying:0.6.1": *
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
 #import "@preview/gentle-clues:1.3.1": *
 #import "@preview/pinit:0.2.2": *
 
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
-#import fletcher.shapes: diamond
 
-#import "template.typ": setup-template, new-section-slide, inverted-slide
+#import fletcher.shapes: diamond, ellipse
+#import "template.typ": (
+  code-annotation,
+  inverted-slide,
+  item-by-item,
+  later,
+  new-section-slide,
+  reveal-code,
+  setup-template,
+)
+
+
+#let fletcher-diagram = touying-reducer.with(reduce: fletcher.diagram, cover: fletcher.hide)
 
 #show: codly-init.with()
 #codly(
@@ -20,7 +31,7 @@
 
 #show: setup-template.with(
   title: [Conociendo Python],
-  subtitle: [Tomás Capretto \ \ Enero 2026],
+  subtitle: [Tomás Capretto \ \ Marzo 2026],
   course-name: "Programación en Python",
   title-header: "Clase 1"
 )
@@ -29,7 +40,7 @@
 
 #slide[
   = Python en una _slide_
-  #toolbox.side-by-side(gutter: 3mm, columns: (2fr, 1fr))[
+  #components.side-by-side(gutter: 3mm, columns: (2fr, 1fr))[
       #set text(size: 1.2em)
       #item-by-item[
       - Lenguaje interpretado
@@ -51,7 +62,7 @@
 #slide[
   = Positron en una _slide_
 
-  #toolbox.side-by-side(gutter: 3mm, columns: (2fr, 1fr))[
+  #components.side-by-side(gutter: 3mm, columns: (2fr, 1fr))[
       #set text(size: 1.2em)
       #item-by-item[
       - Editor de código
@@ -322,10 +333,14 @@
 
   #show: later
 
+  #v(3em)
+
   Por ahora, conformémonos con decir que un método es una función a la que se puede acceder a
   través de un objeto.
 
   #show: later
+
+  #v(3em)
 
   Las cadenas de texto implementan una gran variedad de métodos, utiles para realizar diversas
   tareas.
@@ -424,24 +439,13 @@
   #uncover("4-")[
     #v(5em)
     #set align(center)
-    Nada que ustedes no supieran #emoji.face.wink
+   Nada que ustedes no supieran ya #emoji.face.wink
   ]
 
 ]
 
 
 #slide[
-  #let annotation(body) = {
-    box(
-      fill: rgb("#dbeafe"),
-      inset: 8pt,
-      radius: 4pt,
-      stroke: rgb("#555")
-    )[
-      #set align(center)
-      #body
-    ]
-  }
 
   #show raw: it => {
     show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
@@ -451,14 +455,16 @@
   #v(7em)
 
   #set align(center)
-  #show raw.where(block: true): set text(size: 26pt) // Code size
+  #show raw.where(block: true): set text(size: 26pt)
   #show raw.where(block: true): it => block(width: 70%, it)
+
 
   ```python
   pin1defpin2 pin3funpin4(pin5x, y, zpin6)pin7:pin8
     pin9# <cuerpo de la función>pin10
     pin11returnpin12 pin13valorpin14
   ```
+
 
   #uncover(2)[
     #pinit-highlight(1, 2, dy: -1.1em, fill: rgb(0, 0, 255, 50))
@@ -472,7 +478,7 @@
       pin-dy: -25pt,
       pin-dx: 0pt,
     )[
-      #annotation[
+      #code-annotation[
         Indica comienzo de\
         definición de una función
       ]
@@ -491,7 +497,7 @@
       pin-dy: -25pt,
       pin-dx: 0pt,
     )[
-      #annotation[
+      #code-annotation[
         Nombre\
         de la función
       ]
@@ -511,7 +517,7 @@
       pin-dx: 0pt,
       pin-dy: -25pt
     )[
-      #annotation[Argumentos \ de la función]
+      #code-annotation[Argumentos \ de la función]
     ]
   ]
 
@@ -527,7 +533,7 @@
       pin-dx: 0pt,
       pin-dy: -25pt
     )[
-      #annotation[Comienza un \ bloque de código]
+      #code-annotation[Comienza un \ bloque de código]
     ]
   ]
 
@@ -543,7 +549,7 @@
       pin-dx: -5pt,
       pin-dy: -8pt
     )[
-      #annotation[Código que se ejecuta \ cuando se llama a la función]
+      #code-annotation[Código que se ejecuta \ cuando se llama a la función]
     ]
   ]
 
@@ -559,7 +565,7 @@
       pin-dx: 0pt,
       pin-dy: 10pt
     )[
-      #annotation[Indica que se devuelve un valor \ y el fin de la ejecución \
+      #code-annotation[Indica que se devuelve un valor \ y el fin de la ejecución \
       de la función]
     ]
   ]
@@ -576,7 +582,7 @@
       pin-dx: 0pt,
       pin-dy: 10pt
     )[
-      #annotation[Valor que devuelve la función]
+      #code-annotation[Valor que devuelve la función]
     ]
   ]
 ]
@@ -585,58 +591,103 @@
 
 #new-section-slide[Ejecución condicional]
 
+
+
+
 #slide[
-
   #place(center + horizon)[
-    #scale(90%)[
-      #diagram(
-        spacing: (16mm, 12mm),
-        node-stroke: 2pt,
-        edge-stroke: 1.1pt,
-        node-corner-radius: 3pt,
+    #fletcher-diagram(
 
-        node(
-          (0,0),
-          [Inicio],
-          name: <inicio>,
-          width: 30mm,
-          fill: rgb("#c7d9c4"),
-          stroke: rgb("#7cab69")
-        ),
+      spacing: (12mm, 13mm),
+      node-stroke: 2pt,
+      edge-stroke: 1.3pt,
+      node-corner-radius: 4pt,
 
-        node(
-          (0, 2),
-          [Hay humo?],
-          name: <h1>,
-          shape: diamond,
-          width: 34mm,
-          height: 24mm,
-          fill: rgb("#efe4bf"),
-          stroke: rgb("#d0aa43")
-        ),
+      node(
+        (0, 0),
+        [¿Aprobaste\ el parcial?],
+        name: <parcial>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+        outset: 5pt,
+      ),
 
-        node((3,2), align(center)[Querés\ sufrir?], name: <sufrir>, shape: diamond,
-          width: 34mm, height: 24mm, fill: rgb("#efe4bf"), stroke: rgb("#d0aa43")),
-        node((6,2), [Esperar un rato], name: <esperar>, width: 40mm,
-          fill: rgb("#d9d0e2"), stroke: rgb("#8f73a8")),
-        node((6,5), [Hay humo?], name: <h2>, shape: diamond,
-          width: 34mm, height: 24mm, fill: rgb("#efe4bf"), stroke: rgb("#d0aa43")),
-        node((0,5), [Salir afuera], name: <salir>, width: 36mm,
-          fill: rgb("#d9d0e2"), stroke: rgb("#8f73a8")),
-        node((0,7), [Fin], name: <fin>, width: 30mm,
-          fill: rgb("#c7d9c4"), stroke: rgb("#7cab69")),
+      node(
+        (0, 2.4),
+        [¿Aprobaste el\ recuperatorio?],
+        name: <recuperatorio>,
+        width: 60mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+        outset: 5pt,
+      ),
+      node(
+        (2.8, 0),
+        [¿Aprobaste\ el TP?],
+        name: <tp>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+        outset: 5pt,
+      ),
+      node(
+        (4.5, 2),
+        [¿Promedio\ mayor a 8?],
+        name: <promedio>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+        outset: 5pt,
+      ),
+      node(
+        (0, 4),
+        [Libre],
+        name: <libre>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+        outset: 5pt,
+      ),
+      node(
+        (3.5, 4),
+        [Regular],
+        name: <regular>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+        outset: 5pt,
+      ),
+      node(
+        (5.5, 4),
+        [Promovido],
+        name: <promovido>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+        outset: 5pt,
+      ),
 
-        edge(<inicio.south>, <h1.north>, "-|>"),
-        edge(<h1.east>, <sufrir.west>, "-|>", [Sí]),
-        edge(<h1.south>, <salir.north>, "-|>", [No]),
-        edge(<sufrir.east>, <esperar.west>, "-|>", [No]),
-        edge(<sufrir.south>, <salir.east>, "-|>", [Sí]),
-        edge(<esperar.south>, <h2.north>, "-|>"),
-        edge(<h2.west>, <salir.east>, "-|>", [No]),
-        edge(<h2.east>, <esperar.east>, "-|>", [Sí], bend: -50deg),
-        edge(<salir.south>, <fin.north>, "-|>"),
-      )
-    ]
+      edge(<parcial.east>, <tp.west>, "-|>", [si]),
+      edge(<parcial.south>, <recuperatorio.north>, "-|>", [no]),
+      edge(<recuperatorio.east>, <tp.south-west>, "-|>", [si]),
+      edge(<recuperatorio.south>, <libre.north>, "-|>", [no]),
+      edge(<tp.east>, <promedio.north>, "-|>", [si], corner: right),
+      edge(<tp.south>, <libre.east>, "-|>", [no], bend: 30deg),
+      edge(<promedio.south>, <regular.north>, "-|>", [no]),
+      edge(<promedio.south>, <promovido.north>, "-|>", [si]),
+    )
   ]
 
 ]
