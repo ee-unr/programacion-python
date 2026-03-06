@@ -592,19 +592,17 @@
 #new-section-slide[Ejecución condicional]
 
 
-
-
 #slide[
   #place(center + horizon)[
     #fletcher-diagram(
-
-      spacing: (12mm, 13mm),
+      spacing: (12mm, 12mm),
       node-stroke: 2pt,
-      edge-stroke: 1.3pt,
+      edge-stroke: 1.5pt,
       node-corner-radius: 4pt,
+      node-outset: 5pt,
 
       node(
-        (0, 0),
+        (-100pt, 340pt),
         [¿Aprobaste\ el parcial?],
         name: <parcial>,
         width: 50mm,
@@ -612,11 +610,12 @@
         fill: rgb("#efe4bf"),
         stroke: rgb("#d0aa43"),
         shape: ellipse,
-        outset: 5pt,
       ),
-
+      pause,
+      edge(<parcial.south>, <recuperatorio.north>, "-|>", [No #emoji.face.sad], label-side: right),
+      pause,
       node(
-        (0, 2.4),
+        (-100pt, 180pt),
         [¿Aprobaste el\ recuperatorio?],
         name: <recuperatorio>,
         width: 60mm,
@@ -624,10 +623,104 @@
         fill: rgb("#efe4bf"),
         stroke: rgb("#d0aa43"),
         shape: ellipse,
-        outset: 5pt,
       ),
+      pause,
+      edge(<recuperatorio.south>, <libre.north>, "-|>", [No #emoji.face.cry]),
       node(
-        (2.8, 0),
+        (-100pt, 0pt),
+        [Libre],
+        name: <libre>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+      ),
+
+      fletcher.hide({
+        node(
+          (150pt, 340pt),
+          [¿Aprobaste\ el TP?],
+          name: <tp>,
+          width: 50mm,
+          height: 25mm,
+          fill: rgb("#efe4bf"),
+          stroke: rgb("#d0aa43"),
+          shape: ellipse,
+        )
+        node(
+          (300pt, 160pt),
+          [¿Promedio\ mayor a 8?],
+          name: <promedio>,
+          width: 50mm,
+          height: 25mm,
+          fill: rgb("#efe4bf"),
+          stroke: rgb("#d0aa43"),
+          shape: ellipse,
+        )
+
+        node(
+          (200pt, 0pt),
+          [Regular],
+          name: <regular>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+
+        node(
+          (400pt, 0pt),
+          [Promovido],
+          name: <promovido>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+      })
+
+    )
+  ]
+]
+
+
+#slide[
+  #place(center + horizon)[
+    #fletcher-diagram(
+      spacing: (12mm, 12mm),
+      node-stroke: 2pt,
+      edge-stroke: 1.5pt,
+      node-corner-radius: 4pt,
+      node-outset: 5pt,
+
+      node(
+        (-100pt, 340pt),
+        [¿Aprobaste\ el parcial?],
+        name: <parcial>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      edge(<parcial.south>, <recuperatorio.north>, "-|>", [No #emoji.face.sad], label-side: right),
+
+      node(
+        (-100pt, 180pt),
+        [¿Aprobaste el\ recuperatorio?],
+        name: <recuperatorio>,
+        width: 60mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      pause,
+      edge(<recuperatorio.east>, <tp.south-west>, "-|>", [Sí #emoji.face.cover]),
+      node(
+        (150pt, 340pt),
         [¿Aprobaste\ el TP?],
         name: <tp>,
         width: 50mm,
@@ -635,10 +728,101 @@
         fill: rgb("#efe4bf"),
         stroke: rgb("#d0aa43"),
         shape: ellipse,
-        outset: 5pt,
       ),
+      pause,
+      edge(<tp.south>, <libre.east>, "-|>", [No #emoji.face.fear.sweat], bend: 30deg, label-side: right),
       node(
-        (4.5, 2),
+        (-100pt, 0pt),
+        [Libre],
+        name: <libre>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+      ),
+      fletcher.hide({
+        node(
+          (-100pt, 0pt),
+          [Libre],
+          name: <libre>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+        node(
+          (300pt, 160pt),
+          [¿Promedio\ mayor a 8?],
+          name: <promedio>,
+          width: 50mm,
+          height: 25mm,
+          fill: rgb("#efe4bf"),
+          stroke: rgb("#d0aa43"),
+          shape: ellipse,
+        )
+        node(
+          (200pt, 0pt),
+          [Regular],
+          name: <regular>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+        node(
+          (400pt, 0pt),
+          [Promovido],
+          name: <promovido>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+      })
+
+
+
+    )
+  ]
+]
+
+
+#slide[
+  #place(center + horizon)[
+    #fletcher-diagram(
+      spacing: (12mm, 12mm),
+      node-stroke: 2pt,
+      edge-stroke: 1.5pt,
+      node-corner-radius: 4pt,
+      node-outset: 5pt,
+
+      node(
+        (-100pt, 340pt),
+        [¿Aprobaste\ el parcial?],
+        name: <parcial>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      edge(<parcial.east>, <tp.west>, "-|>", [Sí #emoji.face.beam]),
+      node(
+        (150pt, 340pt),
+        [¿Aprobaste\ el TP?],
+        name: <tp>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+      pause,
+
+      edge(<tp.east>, <promedio.north>, "-|>", [Sí #emoji.face.cool], corner: right),
+      node(
+        (300pt, 160pt),
         [¿Promedio\ mayor a 8?],
         name: <promedio>,
         width: 50mm,
@@ -646,54 +830,620 @@
         fill: rgb("#efe4bf"),
         stroke: rgb("#d0aa43"),
         shape: ellipse,
-        outset: 5pt,
       ),
+      pause,
       node(
-        (0, 4),
-        [Libre],
-        name: <libre>,
-        width: 38mm,
-        height: 20mm,
-        fill: rgb("#d9d0e2"),
-        stroke: rgb("#8f73a8"),
-        outset: 5pt,
-      ),
-      node(
-        (3.5, 4),
-        [Regular],
-        name: <regular>,
-        width: 38mm,
-        height: 20mm,
-        fill: rgb("#d9d0e2"),
-        stroke: rgb("#8f73a8"),
-        outset: 5pt,
-      ),
-      node(
-        (5.5, 4),
+        (400pt, 0pt),
         [Promovido],
         name: <promovido>,
         width: 38mm,
         height: 20mm,
         fill: rgb("#d9d0e2"),
         stroke: rgb("#8f73a8"),
-        outset: 5pt,
       ),
 
-      edge(<parcial.east>, <tp.west>, "-|>", [si]),
-      edge(<parcial.south>, <recuperatorio.north>, "-|>", [no]),
-      edge(<recuperatorio.east>, <tp.south-west>, "-|>", [si]),
-      edge(<recuperatorio.south>, <libre.north>, "-|>", [no]),
-      edge(<tp.east>, <promedio.north>, "-|>", [si], corner: right),
-      edge(<tp.south>, <libre.east>, "-|>", [no], bend: 30deg),
-      edge(<promedio.south>, <regular.north>, "-|>", [no]),
-      edge(<promedio.south>, <promovido.north>, "-|>", [si]),
+      edge(<promedio.south>, <promovido.north>, "-|>", [Sí #emoji.face.stars]),
+      fletcher.hide({
+        node(
+          (-100pt, 180pt),
+          [¿Aprobaste el\ recuperatorio?],
+          name: <recuperatorio>,
+          width: 60mm,
+          height: 25mm,
+          fill: rgb("#efe4bf"),
+          stroke: rgb("#d0aa43"),
+          shape: ellipse,
+        )
+        node(
+          (-100pt, 0pt),
+          [Libre],
+          name: <libre>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+        node(
+          (200pt, 0pt),
+          [Regular],
+          name: <regular>,
+          width: 38mm,
+          height: 20mm,
+          fill: rgb("#d9d0e2"),
+          stroke: rgb("#8f73a8"),
+        )
+
+      })
     )
   ]
-
 ]
+
+
+#slide[
+  #place(center + horizon)[
+    #fletcher-diagram(
+      spacing: (12mm, 12mm),
+      node-stroke: 2pt,
+      edge-stroke: 1.5pt,
+      node-corner-radius: 4pt,
+      node-outset: 5pt,
+
+      node(
+        (-100pt, 340pt),
+        [¿Aprobaste\ el parcial?],
+        name: <parcial>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      edge(<parcial.south>, <recuperatorio.north>, "-|>", [No #emoji.face.sad], label-side: right),
+      edge(<parcial.east>, <tp.west>, "-|>", [Sí #emoji.face.beam]),
+
+      node(
+        (-100pt, 180pt),
+        [¿Aprobaste el\ recuperatorio?],
+        name: <recuperatorio>,
+        width: 60mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      edge(<recuperatorio.east>, <tp.south-west>, "-|>", [Sí #emoji.face.cover]),
+
+      node(
+        (-100pt, 0pt),
+        [Libre],
+        name: <libre>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+      ),
+      edge(<recuperatorio.south>, <libre.north>, "-|>", [No #emoji.face.cry]),
+
+      node(
+        (150pt, 340pt),
+        [¿Aprobaste\ el TP?],
+        name: <tp>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      edge(<tp.east>, <promedio.north>, "-|>", [Sí #emoji.face.cool], corner: right),
+      edge(<tp.south>, <libre.east>, "-|>", [No #emoji.face.fear.sweat], bend: 30deg, label-side: right),
+
+      node(
+        (300pt, 160pt),
+        [¿Promedio\ mayor a 8?],
+        name: <promedio>,
+        width: 50mm,
+        height: 25mm,
+        fill: rgb("#efe4bf"),
+        stroke: rgb("#d0aa43"),
+        shape: ellipse,
+      ),
+
+      node(
+        (200pt, 0pt),
+        [Regular],
+        name: <regular>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+      ),
+
+      node(
+        (400pt, 0pt),
+        [Promovido],
+        name: <promovido>,
+        width: 38mm,
+        height: 20mm,
+        fill: rgb("#d9d0e2"),
+        stroke: rgb("#8f73a8"),
+      ),
+
+
+      edge(<promedio.south>, <regular.north>, "-|>", [No #emoji.face.meh]),
+      edge(<promedio.south>, <promovido.north>, "-|>", [Sí #emoji.face.stars]),
+    )
+  ]
+]
+
+#slide[
+  = Partes de estructura `if`
+
+  #show raw: it => {
+    show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
+    it
+  }
+
+  #v(6em)
+
+  #set align(center)
+  #show raw.where(block: true): set text(size: 26pt)
+  #show raw.where(block: true): it => block(width: 72%, it)
+
+  ```python
+  pin1ifpin2 pin3nota >= 6pin4pin5:pin6
+      pin7print("Aprobado")pin8
+  ```
+
+  #uncover(2)[
+    #pinit-highlight(1, 2, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (1, 2),
+      body-dx: -80pt,
+      body-dy: -40pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Palabra clave `if`]
+    ]
+  ]
+
+  #uncover(3)[
+    #pinit-highlight(3, 5, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (3, 5),
+      body-dx: -145pt,
+      body-dy: -65pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[
+        *Condición* que a evaluar,\ debe resultar en `True` o `False`
+      ]
+    ]
+  ]
+
+  #uncover(4)[
+    #pinit-highlight(5, 6, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (5, 6),
+      body-dx: -89pt,
+      body-dy: -65pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[
+        Comienza un\ bloque de código
+      ]
+    ]
+  ]
+
+  #uncover(5)[
+    #pinit-highlight(7, 8, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (7, 8),
+      body-dx: -120pt,
+      body-dy: 5pt,
+      offset-dx: 0pt,
+      offset-dy: 70pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt,
+    )[
+      #code-annotation[Bloque que se ejecuta si \ la condición es verdadera]
+    ]
+  ]
+]
+
+#slide[
+  = Partes de estructura `if`-`else`
+
+  #show raw: it => {
+    show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
+    it
+  }
+
+  #v(4.5em)
+
+  #set align(center)
+  #show raw.where(block: true): set text(size: 24pt)
+  #show raw.where(block: true): it => block(width: 78%, it)
+
+  ```python
+  pin1ifpin2 pin3nota >= 6pin4pin5:pin6
+      pin7print("Aprobado")pin8
+  pin9elsepin10pin11:pin12
+      pin13print("Desaprobado")pin14
+  ```
+
+  #uncover(2)[
+    #pinit-highlight(9, 12, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (9, 12),
+      body-dx: -170pt,
+      body-dy: -90pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[
+        Declara bloque que se ejecuta cuando la \
+        condición del `if` no es verdadera.\
+        Palabra clave es `else`.
+      ]
+    ]
+  ]
+
+  #uncover(3)[
+    #pinit-highlight(13, 14, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (13, 14),
+      body-dx: -140pt,
+      body-dy: 8pt,
+      offset-dx: 0pt,
+      offset-dy: 70pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt,
+    )[
+      #code-annotation[Bloque que se ejecuta\ *solo* cuando \ la condición del `if` es `False`]
+    ]
+  ]
+]
+
+#slide[
+  = Partes de estructura `if`-`elif`-`else`
+
+  #show raw: it => {
+    show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
+    it
+  }
+
+  #v(2.5em)
+
+  #set align(center)
+  #show raw.where(block: true): set text(size: 22pt)
+  #show raw.where(block: true): it => block(width: 80%, it)
+
+  ```python
+  pin1ifpin2 pin3nota >= 8pin4pin5:pin6
+      pin7print("Promovido")pin8
+  pin9elifpin10 pin11nota >= 6pin12pin13:pin14
+      pin15print("Regular")pin16
+  pin17elsepin18pin19:pin20
+      pin21print("Desaprobado")pin22
+  ```
+
+  #uncover(2)[
+    #pinit-highlight(1, 6, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (1, 6),
+      body-dx: -130pt,
+      body-dy: -35pt,
+      offset-dx: 0pt,
+      offset-dy: -60pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[
+        Primera condición a evaluar
+      ]
+    ]
+  ]
+
+  #uncover(3)[
+    #pinit-highlight(7, 8, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (7, 8),
+      body-dx: -130pt,
+      body-dy: -10pt,
+      offset-dx: 0pt,
+      offset-dy: 60pt,
+      pin-dx: 0pt,
+      pin-dy: 8pt,
+    )[
+      #code-annotation[Bloque que se ejecuta si `nota >= 8`]
+    ]
+  ]
+
+  #uncover(4)[
+    #pinit-highlight(9, 14, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      14,
+      body-dx: 5pt,
+      body-dy: -40pt,
+      offset-dx: 100pt,
+      offset-dy: -10pt,
+      pin-dx: 5pt,
+      pin-dy: -10pt,
+    )[
+      #code-annotation[
+        Si la nota no es mayor o igual al 8,\
+        se evalúa si es mayor o igual a 6. \
+        La palabra clave es `elif`.
+      ]
+    ]
+  ]
+
+  #uncover(5)[
+    #pinit-highlight(15, 16, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (15, 16),
+      body-dx: -110pt,
+      body-dy: 5pt,
+      offset-dx: 0pt,
+      offset-dy: 60pt,
+      pin-dx: 0pt,
+      pin-dy: 8pt,
+    )[
+      #code-annotation[Bloque que se ejecuta si `nota >= 6`]
+    ]
+  ]
+
+  #uncover(6)[
+    #pinit-highlight(17, 20, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (17, 20),
+      body-dx: -120pt,
+      body-dy: 10pt,
+      offset-dx: 0pt,
+      offset-dy: 80pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt,
+    )[
+      #code-annotation[
+        Declara bloque alternativo.\
+        Se ejecuta cuando nota no es mayor o igual a 8,\
+        ni mayor o igual a 6.
+      ]
+    ]
+  ]
+
+  #uncover(7)[
+    #pinit-highlight(21, 22, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (21, 22),
+      body-dx: -140pt,
+      body-dy: 8pt,
+      offset-dx: 0pt,
+      offset-dy: 60pt,
+      pin-dx: 0pt,
+      pin-dy: 8pt,
+    )[
+      #code-annotation[
+        Código del bloque alternativo
+      ]
+    ]
+  ]
+]
+
+#inverted-slide[A laburar]
 
 #new-section-slide[Bucles]
 
 #slide[
-  = Titulo
+  = Partes de estructura `for`
+
+  #show raw: it => {
+    show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
+    it
+  }
+
+  #v(6em)
+
+  #set align(center)
+  #show raw.where(block: true): set text(size: 24pt)
+  #show raw.where(block: true): it => block(width: 80%, it)
+
+  ```python
+  pin1forpin2 pin3ipin4 pin5inpin6 pin7range(3)pin8pin9:pin10
+      pin11print(f"El numero es {i}")pin12
+  ```
+
+  #uncover(2)[
+    #pinit-highlight(1, 2, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (1, 2),
+      body-dx: -85pt,
+      body-dy: -35pt,
+      offset-dx: 0pt,
+      offset-dy: -100pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Palabra clave `for`]
+    ]
+  ]
+
+  #uncover(3)[
+    #pinit-highlight(3, 4, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (3, 4),
+      body-dx: -100pt,
+      body-dy: -35pt,
+      offset-dx: 0pt,
+      offset-dy: -100pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Variable de iteración]
+    ]
+  ]
+
+  #uncover(4)[
+    #pinit-highlight(5, 6, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (5, 6),
+      body-dx: -80pt,
+      body-dy: -35pt,
+      offset-dx: 0pt,
+      offset-dy: -100pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Palabra clave `in`]
+    ]
+  ]
+
+  #uncover(5)[
+    #pinit-highlight(7, 8, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (7, 8),
+      body-dx: -130pt,
+      body-dy: -35pt,
+      offset-dx: 0pt,
+      offset-dy: -100pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Objeto sobre el que se itera]
+    ]
+  ]
+
+  #uncover(6)[
+    #pinit-highlight(9, 10, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (9, 10),
+      body-dx: -175pt,
+      body-dy: -35pt,
+      offset-dx: 0pt,
+      offset-dy: -100pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Indican el inicio del bloque de código]
+    ]
+  ]
+
+  #uncover(7)[
+    #pinit-highlight(11, 12, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (11, 12),
+      body-dx: -145pt,
+      body-dy: 8pt,
+      offset-dx: 0pt,
+      offset-dy: 70pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt,
+    )[
+      #code-annotation[Bloque de código que se ejecuta en cada iteración]
+    ]
+  ]
+
 ]
+
+#slide[
+  = Partes de estructura `while`
+
+  #show raw: it => {
+    show regex("pin\d+"): it => pin(eval(it.text.slice(3)))
+    it
+  }
+
+  #v(4.5em)
+
+  #set align(center)
+  #show raw.where(block: true): set text(size: 22pt)
+  #show raw.where(block: true): it => block(width: 84%, it)
+
+  ```python
+  numero = 0
+  pin3whilepin4 pin5numero < 4pin6pin7:pin8
+      pin9numero = numero + 1
+      pin11print(f"El numero es {numero}")pin12
+  ```
+
+  #uncover(2)[
+    #pinit-highlight(3, 4, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (3, 4),
+      body-dx: -95pt,
+      body-dy: -45pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Palabra clave `while`]
+    ]
+  ]
+
+  #uncover(3)[
+    #pinit-highlight(5, 6, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (5, 6),
+      body-dx: -160pt,
+      body-dy: -45pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Condición que se evalúa a `True` o `False`]
+    ]
+  ]
+
+  #uncover(4)[
+    #pinit-highlight(7, 8, dy: -1.1em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (7, 8),
+      body-dx: -175pt,
+      body-dy: -45pt,
+      offset-dx: 0pt,
+      offset-dy: -90pt,
+      pin-dx: 0pt,
+      pin-dy: -25pt,
+    )[
+      #code-annotation[Indican el inicio del bloque de código]
+    ]
+  ]
+
+  #uncover(5)[
+    #pinit-highlight(9, 12, dy: -1.2em, extended-height: 1.6em, fill: rgb(0, 0, 255, 50))
+    #pinit-point-from(
+      (11, 12),
+      body-dx: -240pt,
+      body-dy: 8pt,
+      offset-dx: 0pt,
+      offset-dy: 70pt,
+      pin-dx: 0pt,
+      pin-dy: 10pt,
+    )[
+      #code-annotation[
+        Bloque de código que se ejecuta en cada iteración \
+        mientras la condición sea verdadera
+      ]
+    ]
+  ]
+
+]
+
+
+#inverted-slide([A laburar], bottom: [Fin])

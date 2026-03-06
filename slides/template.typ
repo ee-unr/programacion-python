@@ -145,24 +145,26 @@
   #register-section(title)
 ]
 
-#let inverted-slide(title) = slide(config: config-page(header: none, footer: none, fill: course-red.lighten(20%)))[
-  #set align(horizon)
-  #set text(size: 2em, fill: white)
-  #set align(center)
-  #strong(title)
-  #line(stroke: 3pt + white, length: 100%)
-]
+#let inverted-slide(top, bottom: none) = {
+  slide(config: config-page(header: none, footer: none, fill: course-red.lighten(20%)))[
+    #set align(horizon)
+    #set text(size: 2em, fill: white)
+    #set align(center)
+    #strong(top)
+    #line(stroke: 3pt + white, length: 100%)
+    #strong(bottom)
+  ]
+}
 
-
-  // Anotación
-  #let code-annotation(body) = {
-    box(
-      fill: rgb("#dbeafe"),
-      inset: 8pt,
-      radius: 4pt,
-      stroke: rgb("#555")
-    )[
-      #set align(center)
-      #body
-    ]
-  }
+// Anotación
+#let code-annotation(body) = {
+  box(
+    fill: rgb("#dbeafe"),
+    inset: 8pt,
+    radius: 4pt,
+    stroke: rgb("#555")
+  )[
+    #set align(center)
+    #body
+  ]
+}
