@@ -62,8 +62,8 @@
   // Tamano de texto del codigo cuando esta en un bloque de codigo
   show raw.where(block: true): set text(size: 16pt)
   show raw.where(block: true): it => block(
-    fill: rgb("#ebebeb"),
-    stroke: stroke(thickness: 1pt, paint: rgb("#333333")),
+    fill: rgb("#f5f5f5"),
+    stroke: stroke(thickness: 1pt, paint: rgb("#d0d0d0")),
     inset: 8pt,
     radius: 4pt,
     width: 100%,
