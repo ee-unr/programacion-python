@@ -1,4 +1,6 @@
-# Clase 1: Conociendo Python
+---
+title: "Clase 1: Conociendo Python"
+---
 
 ```{=html}
 <div class="pdf-container">
