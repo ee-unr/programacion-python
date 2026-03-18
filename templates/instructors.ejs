@@ -35,7 +35,11 @@
           <% if (entry.office_hours) { %>
           <li>
             <i class="fa-solid fa-calendar"></i>
+            <% if (typeof entry.link === "string" && entry.link.trim()) { %>
+            <a href="<%- entry.link %>"><%= entry.office_hours %></a>
+            <% } else { %>
             <%= entry.office_hours %>
+            <% } %>
           </li>
           <% } %>
         </ul>
