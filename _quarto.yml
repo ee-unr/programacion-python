@@ -59,6 +59,9 @@ website:
         # - text: Ejemplos
         #   contents:
         #     - recursos/ejemplos/clases.qmd
+        - text: Presentaciones
+          contents:
+            - recursos/slides/01.qmd
         - text: Tutoriales
           contents:
             - recursos/tutoriales/instalacion_python.qmd
