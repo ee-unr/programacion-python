@@ -51,7 +51,7 @@
 
   set text(font: "Noto Sans", size: 20pt)
   show link: set text(course-red)
-  show raw: set text(font: "Fira Code")
+  show raw: set text(font: "Fira Mono")
   show math.equation: set text(font: "Lete Sans Math")
   show heading: set block(below: 1.2em)
   show heading: set text(size: 1.2em)
