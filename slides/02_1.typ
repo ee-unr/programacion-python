@@ -711,3 +711,146 @@
 
 
 ]
+
+#new-section-slide[Tuplas]
+
+#slide[
+  = Definición
+
+  *Esto es una tupla*
+
+  ```py
+  >>> (1, 2, 3, 4, 5)
+  (1, 2, 3, 4, 5)
+  ```
+
+  *Esto también*
+
+  ```py
+  >>> "LE", "LC", "DNI"
+  ('LE', 'LC', 'DNI')
+  ```
+
+  *Pero, ¿cómo se define?*
+
+  Una tupla es...
+
+  - Secuencia ordenada de objetos
+  - Inmutable
+
+]
+
+#slide[
+  = Creación
+
+  ```py
+  >>> tipos_identificacion = ("LE", "LC", "DNI", "CUIT", "CUIL", "Pasaporte")
+  >>> tipos_identificacion
+  ('LE', 'LC', 'DNI', 'CUIT', 'CUIL', 'Pasaporte')
+  >>> type(tipos_identificacion)
+  <class 'tuple'>
+  ```
+]
+
+#slide[
+  = Acceder a elementos
+
+  ```py
+  >>> tipos_identificacion[0]
+  'LE'
+  >>> tipos_identificacion[-1]
+  'Pasaporte'
+  >>> tipos_identificacion[2:5]
+  ('DNI', 'CUIT', 'CUIL')
+  ```
+  El indexado y el _slicing_ funcionan igual que en listas.
+  Al seleccionar una porción, se obtiene una nueva tupla.
+]
+
+#slide[
+  = Inmutabilidad
+
+  Al contrario de las listas, no podemos reasignar elementos:
+
+  ```py
+  >>> tipos_identificacion[0] = "NUEVO"
+  TypeError: 'tuple' object does not support item assignment
+  ```
+
+  Tampoco existen métodos como `.append()`, `.remove()` o `.sort()`.
+]
+
+#slide[
+  = Operaciones útiles sobre tuplas
+
+  En general, las operaciones no destructivas que funcionan con listas
+  también funcionan con tuplas.
+
+  ```py
+  >>> sorted((4, 1, 3, 2))
+  [1, 2, 3, 4]
+  >>> min((4, 1, 3, 2))
+  1
+  >>> sum((4, 1, 3, 2))
+  10
+  >>> len((4, 1, 3, 2))
+  4
+  >>> "DNI" in tipos_identificacion
+  True
+  ```
+]
+
+#slide[
+  = Concatenar crea otro objeto
+
+  ```py
+  >>> original = ("LE", "LC", "DNI")
+  >>> nueva = original + ("CUIT",)
+  >>> original is nueva
+  False
+  >>> original
+  ('LE', 'LC', 'DNI')
+  >>> nueva
+  ('LE', 'LC', 'DNI', 'CUIT')
+  ```
+]
+
+#slide[
+  = Tuplas como registros
+
+  Una tupla es útil para representar estructuras pequeñas que no deberían cambiar.
+
+  ```py
+  >>> personas = [("Juan", 29), ("Carla", 34), ("Evelina", 33)]
+  >>> personas[1]
+  ('Carla', 34)
+  >>> personas[1][0]
+  'Carla'
+  ```
+
+  Cada tupla es un registro `(nombre, edad)`.
+]
+
+#slide[
+  = Lista vs. tupla
+
+  - `[]` crea listas; `()` suele usarse para tuplas.#footnote[No siempre: en Python, la coma es lo que realmente define una tupla.]
+  - Las listas son mutables; las tuplas son inmutables.
+  - Si la colección debe cambiar, usar `list`.
+  - Si la colección no debe cambiar, usar `tuple`.
+]
+
+#slide[
+  = Detalle importante
+
+  En Python, la coma define la tupla:
+
+  ```py
+  >>> x = (3)
+  >>> type(x)
+  <class 'int'>
+  >>> y = (3,)
+  >>> type(y)
+  <class 'tuple'>
+  ```
+]
