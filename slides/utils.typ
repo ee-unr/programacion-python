@@ -42,6 +42,8 @@
       it => text(fill: mode, it.text)
     } else if mode == hide {
       hide
+    } else if mode == none or mode == "keep" {
+      it => it
     } else {
       panic("Modo invalido para reveal-code: " + repr(mode))
     }

@@ -107,7 +107,8 @@
     #set text(size: 2em, fill: white)
     #set align(center)
     #strong(top)
-    #line(stroke: 3pt + white, length: 100%)
+    // #line(stroke: 3pt + white, length: 100%)
+
     #strong(bottom)
   ]
 }
