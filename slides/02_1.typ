@@ -257,14 +257,125 @@
 #slide[
   = Diagrama de lista
 
-  - Diagrama con representación gráfica, traer de apunte y hacer con fletcher.
+  #place(center + horizon)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.2pt,
+      edge-stroke: 1.1pt,
+      // node-corner-radius: 2pt,
+      // node-outset: 4pt,
+
+      node(
+        (-100pt, 62pt),
+        [`autores`],
+        name: <autores-var>,
+        width: 90pt,
+        height: 30pt,
+        fill: rgb("#ece7f1"),
+        stroke: rgb("#8f73a8"),
+      ),
+
+      node(
+        (100pt, 100pt),
+        [0],
+        name: <idx0>,
+        width: 40pt,
+        height: 30pt,
+        fill: rgb("#d7dfe8"),
+        stroke: rgb("#8b97a4"),
+      ),
+      node(
+        (140pt, 100pt),
+        [1],
+        name: <idx1>,
+        width: 40pt,
+        height: 30pt,
+        fill: rgb("#d7dfe8"),
+        stroke: rgb("#8b97a4"),
+      ),
+      node(
+        (180pt, 100pt),
+        [2],
+        name: <idx2>,
+        width: 40pt,
+        height: 30pt,
+        fill: rgb("#d7dfe8"),
+        stroke: rgb("#8b97a4"),
+      ),
+
+      node(
+        (100pt, 62pt),
+        [],
+        name: <slot0>,
+        width: 40pt,
+        height: 45pt,
+        fill: rgb("#d7dfe8"),
+        stroke: rgb("#8b97a4"),
+      ),
+      node(
+        (140pt, 62pt),
+        [],
+        name: <slot1>,
+        width: 40pt,
+        height: 45pt,
+        fill: rgb("#d7dfe8"),
+        stroke: rgb("#8b97a4"),
+      ),
+      node(
+        (180pt, 62pt),
+        [],
+        name: <slot2>,
+        width: 40pt,
+        height: 45pt,
+        fill: rgb("#d7dfe8"),
+        stroke: rgb("#8b97a4"),
+      ),
+
+      node(
+        (20pt, -30pt),
+        [`"Agresti"`],
+        name: <agresti>,
+        width: 100pt,
+        height: 12mm,
+        fill: rgb("#e8f0e6"),
+        stroke: rgb("#8ca788"),
+      ),
+
+      node(
+        (140pt, -30pt),
+        [`"Dobson"`],
+        name: <dobson>,
+        width: 100pt,
+        height: 12mm,
+        fill: rgb("#e8f0e6"),
+        stroke: rgb("#8ca788"),
+      ),
+
+      node(
+        (260pt, -30pt),
+        [`"Gelman"`],
+        name: <gelman>,
+        width: 100pt,
+        height: 12mm,
+        fill: rgb("#e8f0e6"),
+        stroke: rgb("#8ca788"),
+      ),
+
+      edge(<autores-var.east>, <slot0.west>, "->"),
+      edge(<slot0.south>, <agresti.north>, "->"),
+      edge(<slot1.south>, <dobson.north>, "->"),
+      edge(<slot2.south>, <gelman.north>, "->"),
+    )
+  ]
 ]
 
 #slide[
   = Diagrama de lista
 
-  - Mostrar un diagrama con la lista _en memoria_
-  - La idea es aclarar por qué se usa *0-based indexing*.
+  - `autores` es una referencia al objeto lista.
+  - Cada celda de la lista contiene una referencia a un objeto `str`.
+  - Los índices (`0`, `1`, `2`) son la posición de cada referencia.
+  - Por eso el primer elemento se accede con `autores[0]`.
 
 ]
 
