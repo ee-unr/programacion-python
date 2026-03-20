@@ -1,4 +1,4 @@
-#import "@preview/touying:0.6.1": *
+#import "@preview/touying:0.6.3": *
 
 #let course-red = rgb("#BF0F1F")
 #let page-stroke = stroke(thickness: 2pt, paint: course-red, cap: "butt")
@@ -51,7 +51,7 @@
 
   set text(font: "Noto Sans", size: 20pt)
   show link: set text(course-red)
-  show raw: set text(font: "Fira Code")
+  show raw: set text(font: "Fira Mono")
   show math.equation: set text(font: "Lete Sans Math")
   show heading: set block(below: 1.2em)
   show heading: set text(size: 1.2em)
@@ -107,7 +107,8 @@
     #set text(size: 2em, fill: white)
     #set align(center)
     #strong(top)
-    #line(stroke: 3pt + white, length: 100%)
+    // #line(stroke: 3pt + white, length: 100%)
+
     #strong(bottom)
   ]
 }
