@@ -20,6 +20,8 @@
   reveal-code,
 )
 
+#import "list-diagram.typ": list-diagram
+
 
 #let fletcher-diagram = touying-reducer.with(reduce: fletcher.diagram, cover: fletcher.hide)
 
@@ -42,20 +44,28 @@
 )
 
 #slide[
-  - Los tipos de datos elementales son limitados
-  - Para resolver problemas complejos, eficientemente, necesitamos estructuras de datos más complejas.
+  = Motivación
 
-  ```python
-  nombre_1 = "Juan"
-  nombre_2 = "Carla"
-  nombre_3 = "Evelina"
-  nombre_4 = "Leandro"
+  ¿Cómo podemos organizar el siguiente conjunto de datos?
 
-  edad_1 = 29
-  edad_2 = 34
-  edad_3 = 33
-  edad_4 = 38
-  ```
+    ```python
+    nombre_1 = "Juan"
+    nombre_2 = "Carla"
+    nombre_3 = "Evelina"
+    nombre_4 = "Ana"
+
+    edad_1 = 29
+    edad_2 = 34
+    edad_3 = 33
+    edad_4 = 38
+    ```
+
+  #item-by-item(start: 2)[
+    - ¿Qué pasa si la cantidad de datos crece?
+    - Los tipos de datos elementales son limitados.
+    - Necesitamos estructuras de datos más complejas.
+  ]
+
 ]
 
 #slide[
@@ -77,17 +87,21 @@
   >>> [1, 2, 3, 4, 5]
   [1, 2, 3, 4, 5]
   ```
+
+  #pause
   *Esto también*
 
   ```python
   >>> ["a", "e", True, 256]
   ['a', 'e', True, 256]
   ```
-
+  #pause
   *¿Pero qué es?*
 
   - Secuencia ordenada de objetos
   - Mutable
+
+  #pause
 
   Objeto que contiene otros objetos en un orden determinado,
   cuyo contenido puede modificarse.
@@ -102,12 +116,16 @@
   >>> lista = ["Bayes", "Laplace", "Fisher"]
   ```
 
+  #pause
+
   Su representación es idéntica a la definición:
 
   ```python
   >>> lista
   ['Bayes', 'Laplace', 'Fisher']
   ```
+
+  #pause
 
   Y su tipo es `list`:
 
@@ -127,6 +145,8 @@
   >>> l2 = [2, 1, 3]
   ```
 
+  #pause
+
   *¿Son iguales?*
 
   ```python
@@ -145,14 +165,18 @@
   >>> l2 = [1, 2, 3]
   ```
 
+  #pause
+
   ```python
   >>> l1 == l2
   True
   ```
 
-  #show: later
+  #pause
 
   *¿Y son idénticas?*
+
+  #pause
 
   ```python
   >>> l1 is l2
@@ -165,22 +189,25 @@
 
   Mientras `==` compara valor, `is` compara identidad.
 
-  #reveal-code(
-    lines: (2, 4, 6, 8),
-    before: none,
-    after: hide,
-  )[
-  ```python
-  >>> l1 == l2
-  True
-  >>> l1 is l2
-  False
-  >>> id(l1)
-  127087380616448
-  >>> id(l2)
-  127087378339712
-  ```
-  ]
+  #pause
+
+  #touying-raw(
+    ```python
+    >>> l1 == l2
+    True
+    //pause
+    >>> l1 is l2
+    False
+    //pause
+    >>> id(l1)
+    127087380616448
+    >>> id(l2)
+    127087378339712
+    ```
+
+  )
+
+  #pause
 
   Dos objetos pueden ser *iguales* pero no *el mismo*.
 
@@ -196,18 +223,26 @@
   True
   ```
 
+  #pause
+
   ```py
   >>> "hola" is "hola"
   True
   ```
+
+  #pause
 
   ```py
   >>> True is True
   True
   ```
 
+  #pause
+
   Dado que Python almacena estos valores una única vez en memoria,
   la comparación en identidad devuelve `True`.
+
+  #pause
 
   *¿Cuál es la razón para almacenarlos una única vez?*
 
@@ -217,22 +252,31 @@
 #slide[
   = Acceder a elementos
 
-  #reveal-code(
-    lines: (1, 3),
-    before: none,
-    after: hide,
-    full: false,
-  )[
+  Se accede a un elemento pasando su índice dentro corchetes `[]`:
+
+  #pause
+
+  #touying-raw(
     ```py
     >>> autores = ["Agresti", "Dobson", "Gelman"]
+    //pause
     >>> autores[1]
+    //pause
     'Dobson'
     ```
-  ]
+  )
+
+  #pause
+  #v(2em)
+  #align(center)[*¿Por qué obtuvimos* `Dobson`*, si es el segundo elemento?*]
 ]
 
 #slide[
   = _Zero-based indexing_
+
+  Python, como muchos lenguajes, inicia sus índices en 0, no en 1.
+
+  #pause
 
   #touying-raw(
     ```py
@@ -255,141 +299,104 @@
 ]
 
 #slide[
-  = Diagrama de lista
+  = Selección de elementos
 
-  #place(center + horizon)[
+  ```py
+  >>> autores = ["Bayes", "Laplace", "Fisher", "Box"]
+  ```
+
+  #pause
+  #v(1em)
+
+  #align(center)[
     #fletcher-diagram(
       spacing: (8mm, 8mm),
-      node-stroke: 1.2pt,
-      edge-stroke: 1.1pt,
-      // node-corner-radius: 2pt,
-      // node-outset: 4pt,
-
-      node(
-        (-100pt, 62pt),
-        [`autores`],
-        name: <autores-var>,
-        width: 90pt,
-        height: 30pt,
-        fill: rgb("#ece7f1"),
-        stroke: rgb("#8f73a8"),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
       ),
-
-      node(
-        (100pt, 100pt),
-        [0],
-        name: <idx0>,
-        width: 40pt,
-        height: 30pt,
-        fill: rgb("#d7dfe8"),
-        stroke: rgb("#8b97a4"),
-      ),
-      node(
-        (140pt, 100pt),
-        [1],
-        name: <idx1>,
-        width: 40pt,
-        height: 30pt,
-        fill: rgb("#d7dfe8"),
-        stroke: rgb("#8b97a4"),
-      ),
-      node(
-        (180pt, 100pt),
-        [2],
-        name: <idx2>,
-        width: 40pt,
-        height: 30pt,
-        fill: rgb("#d7dfe8"),
-        stroke: rgb("#8b97a4"),
-      ),
-
-      node(
-        (100pt, 62pt),
-        [],
-        name: <slot0>,
-        width: 40pt,
-        height: 45pt,
-        fill: rgb("#d7dfe8"),
-        stroke: rgb("#8b97a4"),
-      ),
-      node(
-        (140pt, 62pt),
-        [],
-        name: <slot1>,
-        width: 40pt,
-        height: 45pt,
-        fill: rgb("#d7dfe8"),
-        stroke: rgb("#8b97a4"),
-      ),
-      node(
-        (180pt, 62pt),
-        [],
-        name: <slot2>,
-        width: 40pt,
-        height: 45pt,
-        fill: rgb("#d7dfe8"),
-        stroke: rgb("#8b97a4"),
-      ),
-
-      node(
-        (20pt, -30pt),
-        [`"Agresti"`],
-        name: <agresti>,
-        width: 100pt,
-        height: 12mm,
-        fill: rgb("#e8f0e6"),
-        stroke: rgb("#8ca788"),
-      ),
-
-      node(
-        (140pt, -30pt),
-        [`"Dobson"`],
-        name: <dobson>,
-        width: 100pt,
-        height: 12mm,
-        fill: rgb("#e8f0e6"),
-        stroke: rgb("#8ca788"),
-      ),
-
-      node(
-        (260pt, -30pt),
-        [`"Gelman"`],
-        name: <gelman>,
-        width: 100pt,
-        height: 12mm,
-        fill: rgb("#e8f0e6"),
-        stroke: rgb("#8ca788"),
-      ),
-
-      edge(<autores-var.east>, <slot0.west>, "->"),
-      edge(<slot0.south>, <agresti.north>, "->"),
-      edge(<slot1.south>, <dobson.north>, "->"),
-      edge(<slot2.south>, <gelman.north>, "->"),
     )
   ]
 ]
 
 #slide[
-  = Diagrama de lista
+  = Selección de elementos
 
-  - `autores` es una referencia al objeto lista.
-  - Cada celda de la lista contiene una referencia a un objeto `str`.
-  - Los índices (`0`, `1`, `2`) son la posición de cada referencia.
-  - Por eso el primer elemento se accede con `autores[0]`.
+  ```py
+  >>> autores[0]
+  ```
 
+  #pause
+  #v(1em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
+        selected-indices: (0, )
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
+  'Bayes'
+  ```
 ]
 
 #slide[
-  = Índices negativos
+  = Selección de elementos
+
+  ```py
+  >>> autores[2]
+  ```
+
+  #pause
+  #v(1em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
+        selected-indices: (2, )
+      ),
+    )
+  ]
+
+  #pause
+
+  ```py
+  'Fisher'
+  ```
+]
+
+
+#slide[
+  = Selección con índices negativos
 
   Esto también funciona
 
   #touying-raw(
     ```py
-    >>> autores = ["Agresti", "Dobson", "Gelman"]
+    >>> autores = autores = ["Bayes", "Laplace", "Fisher", "Box"]
     >>> autores[-1]
     //pause
-    'Gelman'
+    'Box'
     ```
   )
 
@@ -398,15 +405,99 @@
 
   === En general
 
-  - El índice -1 indica el último elemento.
-  - El índice -2 indica el penúltimo elemento.
+  - El índice `-1` indica el último elemento.
+  - El índice `-2` indica el penúltimo elemento.
   - Y así sucesivamente.
-
 
 ]
 
+
 #slide[
-  = Acceder a sublistas
+  = Selección con índices negativos
+
+  #place(center + horizon)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
+        negative-indices: true
+      ),
+    )
+  ]
+]
+
+#slide[
+  = Selección con índices negativos
+
+  ```py
+  >>> autores[-1]
+  ```
+
+  #pause
+  #v(1em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
+        selected-indices: (3, ),
+        negative-indices: true
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
+  'Box'
+  ```
+]
+
+#slide[
+  = Selección con índices negativos
+
+  ```py
+  >>> autores[-3]
+  ```
+
+  #pause
+  #v(1em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
+        selected-indices: (1, ),
+        negative-indices: true
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
+  'Laplace'
+  ```
+]
+
+#slide[
+  = Selección de sublistas
 
   Se usan rebanadas o _slices_ de la siguiente manera:
 
@@ -427,49 +518,176 @@
     ```
   )
 
+  #pause
+
+  - Se incluye el límite inferior
+  - Se excluye el límite superior
+  - #raw("[inicio, fin)")
+
+]
+
+
+#slide[
+  = Selección de sublistas
+
+  ```py
+  >>> ingredientes[1:3]
+  ```
+
+  #pause
+  #v(1em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "ingredientes",
+        ("Azúcar", "Flores", "Colores", "Sustancia X"),
+        selected-indices: (1, 2)
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
+  ['Flores', 'Colores']
+  ```
 ]
 
 #slide[
-  = Acceder a sublistas
-
-  Se puede pasar solo el límite superior:
+  = Rebanadas con inicio implícito
 
   ```py
   >>> lista[:fin]
   ```
 
-  #pause
-
-  Por ejemplo:
-
-  ```py
-  >>> ingredientes[:3]
-  ['Azúcar', 'Flores', 'Colores']
-  ```
 ]
 
 #slide[
-  = Acceder a sublistas
+  = Rebanadas con inicio implícito
 
-  Y también solo el límite inferior:
+  ```py
+  >>> ingredientes[:3]
+  ```
+
+  #pause
+  #v(0.5em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "ingredientes",
+        ("Azúcar", "Flores", "Colores", "Sustancia X"),
+        selected-indices: (0, 1, 2)
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
+  ['Azúcar', 'Flores', 'Colores']
+  ```
+
+  #pause
+  #v(0.5em)
+  Un inicio implícito indica que se selecciona desde el principio
+]
+
+#slide[
+  = Rebanadas con fin implícito
 
   ```py
   >>> lista[inicio:]
   ```
+]
 
-  #pause
 
-  Por ejemplo:
+#slide[
+  = Rebanadas con fin implícito
 
   ```py
   >>> ingredientes[2:]
+  ```
+
+  #pause
+  #v(1em)
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "ingredientes",
+        ("Azúcar", "Flores", "Colores", "Sustancia X"),
+        selected-indices: (2, 3)
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
   ['Colores', 'Sustancia X']
   ```
 
+  #pause
+  #v(0.5em)
+  Un fin implícito indica que se selecciona hasta el final
 ]
 
 #slide[
-  = Acceder a sublistas
+  = Rebanadas implícitas negativas #pause #emoji.face.explode
+
+  #pause
+
+  ```py
+  >>> autores[-2:]
+  ```
+
+  #pause
+  #v(1em)
+
+
+  #align(center)[
+    #fletcher-diagram(
+      spacing: (8mm, 8mm),
+      node-stroke: 1.5pt,
+      edge-stroke: 1.3pt,
+      node-outset: 5pt,
+      list-diagram(
+        "autores",
+        ("Bayes", "Laplace", "Fisher", "Box"),
+        selected-indices: (2, 3),
+        negative-indices: true
+      ),
+    )
+  ]
+
+  #pause
+  #v(1em)
+
+  ```py
+  ['Fisher', 'Box']
+  ```
+]
+
+
+#slide[
+  = Selección de sublistas
   #set align(horizon)
 
   #info(title: "¿Sabías qué?")[
@@ -751,20 +969,20 @@
   >>> numeros.remove(3)
   ```
 
+  #pause
+
   Si el valor está repetido, elimina la primera ocurrencia:
-  #reveal-code(
-    lines: (2, 4),
-    before: none,
-    after: hide,
-    full: true,
-  )[
-  ```python
-  >>> l = [1, 2, 3, 2, 2, 4]
-  >>> l.remove(2)
-  >>> l
-  [1, 3, 2, 2, 4]
-  ```
-  ]
+  #touying-raw(
+    ```python
+    >>> l = [1, 2, 3, 2, 2, 4]
+    >>> l.remove(2)
+    >>> l
+    //pause
+    [1, 3, 2, 2, 4]
+    ```
+  )
+
+  #pause
 
   Y si no existe, arroja un error.
 
@@ -776,20 +994,17 @@
   La sentencia `del`, que se usa para eliminar variables, también elimina
   elementos de una lista.
 
-  #reveal-code(
-    lines: (2, 4),
-    before: none,
-    after: hide,
-    full: true,
-  )[
-  ```python
-  >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
-  >>> del galletitas[3]
-  >>> galletitas
-  ['Melba', 'Oreo', 'Macucas']
-  ```
-  ]
+  #touying-raw(
+    ```python
+    >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
+    >>> del galletitas[3]
+    >>> galletitas
+    //pause
+    ['Melba', 'Oreo', 'Macucas']
+    ```
+  )
 
+  #pause
   Al igual que `.pop()` y `remove()`, `del` también opera _in-place_.
 
 ]
@@ -807,6 +1022,7 @@
     ```
   )
 
+  #pause
 
   #touying-raw(
     ```python
@@ -910,6 +1126,8 @@
   (1, 2, 3, 4, 5)
   ```
 
+  #pause
+
   *Esto también*
 
   ```py
@@ -917,12 +1135,16 @@
   ('LE', 'LC', 'DNI')
   ```
 
+  #pause
+
   *Pero, ¿cómo se define?*
 
   Una tupla es...
 
-  - Secuencia ordenada de objetos
-  - Inmutable
+  #item-by-item(start: 3)[
+    - Secuencia ordenada de objetos
+    - Inmutable
+  ]
 
 ]
 
@@ -1259,20 +1481,18 @@
 
   La misma sintaxis sirve para ambas operaciones:
 
-  #reveal-code(
-    lines: (1, 3, 5),
-    before: none,
-    after: hide,
-    full: true,
-  )[
-  ```py
-  >>> personas = {"Juan": 29, "Carla": 34}
-  >>> personas["Juan"] = 54
-  >>> personas["Marisa"] = 29
-  >>> personas
-  {'Juan': 54, 'Carla': 34, 'Marisa': 29}
-  ```
-  ]
+  #touying-raw(
+    ```py
+    >>> personas = {"Juan": 29, "Carla": 34}
+    //pause
+    >>> personas["Juan"] = 54   # Modifica registro
+    //pause
+    >>> personas["Marisa"] = 29 # Agrega registro
+    //pause
+    >>> personas
+    {'Juan': 54, 'Carla': 34, 'Marisa': 29}
+    ```
+  )
 ]
 
 #slide[
