@@ -2,26 +2,12 @@
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
 #import "@preview/gentle-clues:1.3.1": *
-#import "@preview/pinit:0.2.2": *
-
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
-
 #import fletcher.shapes: diamond, ellipse
-#import "template.typ": (
-  inverted-slide,
-  new-section-slide,
-  setup-template,
-)
 
-#import "utils.typ": (
-  code-annotation,
-  item-by-item,
-  later,
-  reveal-code,
-)
-
+#import "template.typ": inverted-slide, new-section-slide, setup-template
+#import "utils.typ": item-by-item, reveal-code
 #import "list-diagram.typ": list-diagram
-
 
 #let fletcher-diagram = touying-reducer.with(reduce: fletcher.diagram, cover: fletcher.hide)
 
@@ -1058,7 +1044,8 @@
 #inverted-slide[
   ¡¿Todo tiene que ser _in-place_?!
 
-  #show: later
+  #pause
+
   Por suerte, no
 ]
 
