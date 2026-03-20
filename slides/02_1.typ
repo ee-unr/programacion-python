@@ -1,4 +1,4 @@
-#import "@preview/touying:0.6.1": *
+#import "@preview/touying:0.6.3": *
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
 #import "@preview/gentle-clues:1.3.1": *
@@ -41,7 +41,6 @@
   footer-label: [Colecciones de datos],
 )
 
-
 #slide[
   - Los tipos de datos elementales son limitados
   - Para resolver problemas complejos, eficientemente, necesitamos estructuras de datos más complejas.
@@ -78,7 +77,6 @@
   >>> [1, 2, 3, 4, 5]
   [1, 2, 3, 4, 5]
   ```
-
   *Esto también*
 
   ```python
@@ -131,17 +129,10 @@
 
   *¿Son iguales?*
 
-  #reveal-code(
-    lines: (1, 2),
-    before: none,
-    after: hide,
-    full: false,
-  )[
-    ```python
-    >>> l1 == l2
-    False
-    ```
-  ]
+  ```python
+  >>> l1 == l2
+  False
+  ```
 ]
 
 #slide[
@@ -154,35 +145,19 @@
   >>> l2 = [1, 2, 3]
   ```
 
-  #reveal-code(
-    start: 1,
-    lines: (1, 2),
-    before: none,
-    after: hide,
-    full: true,
-  )[
-    ```python
-    >>> l1 == l2
-    True
-    ```
-  ]
+  ```python
+  >>> l1 == l2
+  True
+  ```
 
   #show: later
 
   *¿Y son idénticas?*
 
-  #reveal-code(
-    start: 3,
-    lines: (1, 2),
-    before: none,
-    after: hide,
-    full: false,
-  )[
-    ```python
-    >>> l1 is l2
-    False
-    ```
-  ]
+  ```python
+  >>> l1 is l2
+  False
+  ```
 ]
 
 #slide[
@@ -190,6 +165,11 @@
 
   Mientras `==` compara valor, `is` compara identidad.
 
+  #reveal-code(
+    lines: (2, 4, 6, 8),
+    before: none,
+    after: hide,
+  )[
   ```python
   >>> l1 == l2
   True
@@ -200,6 +180,7 @@
   >>> id(l2)
   127087378339712
   ```
+  ]
 
   Dos objetos pueden ser *iguales* pero no *el mismo*.
 
@@ -237,7 +218,7 @@
   = Acceder a elementos
 
   #reveal-code(
-    lines: (2, 3),
+    lines: (1, 3),
     before: none,
     after: hide,
     full: false,
@@ -253,14 +234,18 @@
 #slide[
   = _Zero-based indexing_
 
-  ```py
-  >>> autores[0]
-  'Agresti'
-  >>> autores[1]
-  'Dobson'
-  >>> autores[2]
-  'Gelman'
-  ```
+  #touying-raw(
+    ```py
+    >>> autores[0]
+    'Agresti'
+    >>> autores[1]
+    'Dobson'
+    >>> autores[2]
+    'Gelman'
+    ```
+  )
+
+  #pause
 
   #info(title: "En síntesis")[
     - El primer elemento está en la posición *0*.
@@ -288,17 +273,24 @@
 
   Esto también funciona
 
-  ```py
-  >>> autores = ["Agresti", "Dobson", "Gelman"]
-  >>> autores[-1]
-  'Gelman'
-  ```
+  #touying-raw(
+    ```py
+    >>> autores = ["Agresti", "Dobson", "Gelman"]
+    >>> autores[-1]
+    //pause
+    'Gelman'
+    ```
+  )
+
+
+  #pause
 
   === En general
 
   - El índice -1 indica el último elemento.
   - El índice -2 indica el penúltimo elemento.
   - Y así sucesivamente.
+
 
 ]
 
@@ -311,13 +303,18 @@
   >>> lista[inicio:fin]
   ```
 
+  #pause
+
   Por ejemplo:
 
-  ```py
-  >>> ingredientes = ["Azúcar", "Flores", "Colores", "Sustancia X"]
-  >>> ingredientes[1:3]
-  ['Flores', 'Colores']
-  ```
+  #touying-raw(
+    ```py
+    >>> ingredientes = ["Azúcar", "Flores", "Colores", "Sustancia X"]
+    >>> ingredientes[1:3]
+    // pause
+    ['Flores', 'Colores']
+    ```
+  )
 
 ]
 
@@ -329,6 +326,8 @@
   ```py
   >>> lista[:fin]
   ```
+
+  #pause
 
   Por ejemplo:
 
@@ -346,6 +345,8 @@
   ```py
   >>> lista[inicio:]
   ```
+
+  #pause
 
   Por ejemplo:
 
@@ -396,16 +397,22 @@
   >>> [1, 2, 3] == [1.0, 2, 3.0]
   ```
 
+  #pause
+
   ```py
   >>> cosas = ["a", "b", "c", "d", "e", "f"]
   >>> cosas[:-2]
   >>> cosas[-5:]
   ```
 
+  #pause
+
   ```python
   >>> [0][0]
   >>> [1][1]
   ```
+
+  #pause
 
   ```python
   >>> cosas = [True, False, False, None]
@@ -414,8 +421,6 @@
 
 ]
 
-#new-section-slide[Cómo modificar listas]
-
 #slide[
   = Reemplazar elementos
 
@@ -423,21 +428,29 @@
   >>> marcas = ["Puerto Blest", "Martínez", "Fuego Tostadores"]
   ```
 
+  #pause
+
   Reemplazar un único elemento:
 
-  ```py
-  >>> marcas[0] = "Bialetti"
-  >>> marcas
-  ['Bialetti', 'Martínez', 'Fuego Tostadores']
-  ```
+  #touying-raw(
+    ```py
+    >>> marcas[0] = "Bialetti"
+    >>> marcas
+    ['Bialetti', 'Martínez', 'Fuego Tostadores']
+    ```
+  )
+
+  #pause
 
   Reemplazar una sublista:
 
-  ```py
-  >>> marcas[1:3] = ["Indios Verdes", "John & Joe"]
-  >>> marcas
-  ['Bialetti', 'Indios Verdes', 'John & Joe']
-  ```
+  #touying-raw(
+      ```py
+    >>> marcas[1:3] = ["Indios Verdes", "John & Joe"]
+    >>> marcas
+    ['Bialetti', 'Indios Verdes', 'John & Joe']
+    ```
+  )
 
 ]
 
@@ -446,25 +459,36 @@
 
   ¡Valen índices negativos!
 
-  ```py
-  >>> marcas[-3] = "Cuervo"
-  >>> marcas
-  ['Cuervo', 'Indios Verdes', 'John & Joe']
-  ```
+  #touying-raw(
+    ```py
+    >>> marcas[-3] = "Cuervo"
+    >>> marcas
+    ['Cuervo', 'Indios Verdes', 'John & Joe']
+    ```
+  )
+
+
+  #pause
 
   También en rebanadas:
 
-  ```py
-  >>> marcas[-2:] = ["Martínez", "Fuego Tostadores"]
-  >>> marcas
-  ['Cuervo', 'Martínez', 'Fuego Tostadores']
-  ```
+  #touying-raw(
+    ```py
+    >>> marcas[-2:] = ["Martínez", "Fuego Tostadores"]
+    >>> marcas
+    ['Cuervo', 'Martínez', 'Fuego Tostadores']
+    ```
+  )
 
-  ```py
-  >>> marcas[-3:-1] = ["Puerto Blest", "Indigo"]
-  >>> marcas
-  ['Puerto Blest', 'Indigo', 'Fuego Tostadores']
-  ```
+  #pause
+
+  #touying-raw(
+    ```py
+    >>> marcas[-3:-1] = ["Puerto Blest", "Indigo"]
+    >>> marcas
+    ['Puerto Blest', 'Indigo', 'Fuego Tostadores']
+    ```
+  )
 
 ]
 
@@ -476,25 +500,31 @@
 
   De a uno, al final, utilizando el método `.append()`:
 
-  ```py
-  >>> vocales = ["a", "e", "i", "o"]
-  >>> vocales.append("u")
-  >>> vocales
-  ['a', 'e', 'i', 'o', 'u']
-  ```
+  #touying-raw(
+    ```py
+    >>> vocales = ["a", "e", "i", "o"]
+    >>> vocales.append("u")
+    //pause
+    >>> vocales
+    ['a', 'e', 'i', 'o', 'u']
+    ```
+  )
+
+  #pause
 
   Con otra lista #footnote[En realidad, cualquier otra secuencia.], utilizando `.extend()`:
 
-  ```py
-  >>> bartulos = [3.14, "casa", 11]
-  >>> bartulos.extend(["casa", True])
-  >>> bartulos
-  [3.14, 'casa', 11, 'casa', True]
-  ```
-
+  #touying-raw(
+    ```py
+    >>> bartulos = [3.14, "casa", 11]
+    >>> bartulos.extend(["casa", True])
+    //pause
+    >>> bartulos
+    [3.14, 'casa', 11, 'casa', True]
+    ```
+  )
 
 ]
-
 
 #slide[
   #show heading: set text(size: 0.9em)
@@ -502,17 +532,24 @@
 
   También se puede insertar un elemento en una posición arbitraria con `.insert()`:
 
-  ```py
-  >>> logicos = [True, True, False, False]
-  >>> logicos.insert(2, "surprise")
-  >>> logicos
-  [True, True, 'surprise', False, False]
-  ```
+  #touying-raw(
+    ```py
+    >>> logicos = [True, True, False, False]
+    >>> logicos.insert(2, "surprise")
+    >>> logicos
+    // pause
+    [True, True, 'surprise', False, False]
+    ```
+  )
+
+  #pause
 
   #info(title: "Importante")[
     La posición indica dónde se agrega el nuevo elemento. \
     El resto de los elementos se desplaza hacia la derecha.
   ]
+
+  #pause
 
   Tanto `.append()`, como `.extend()` e `insert()` son métodos *_in-place_*.
 
@@ -528,6 +565,7 @@
     En Python, estos métodos suelen devolver un valor: `None`.
   ]
 
+  #pause
 
   #info(title: "Pregunta")[
     ¿Cómo podríamos verificar que el objeto al que apunta nuestra variable siga siendo el mismo luego de llamar al método _in-place_?
@@ -540,21 +578,28 @@
   = Eliminar elementos
 
   El método `.pop()` elimina elementos a partir de su índice:
-  ```py
-  >>> autores = ["McElreath", "Jaynes", "Fisher"]
-  >>> autores.pop(1)
-  >>> autores
-  ['McElreath', 'Fisher']
-  ```
+
+  #touying-raw(
+    ```py
+    >>> autores = ["McElreath", "Jaynes", "Fisher"]
+    >>> autores.pop(1)
+    // pause
+    >>> autores
+    ['McElreath', 'Fisher']
+    ```
+  )
 
   El método `.remove()` lo hace a partir del valor:
 
-  ```py
-  >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
-  >>> galletitas.remove("Oreo")
-  >>> galletitas
-  ['Melba', 'Macucas', 'Rumba']
-  ```
+  #touying-raw(
+    ```py
+    >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
+    >>> galletitas.remove("Oreo")
+    // pause
+    >>> galletitas
+    ['Melba', 'Macucas', 'Rumba']
+    ```
+  )
 
 ]
 
@@ -563,19 +608,26 @@
   = Eliminar elementos: detalles
 
   El método `.pop()` *devuelve* el valor eliminado:
-  ```python
-  >>> l = [10, 100, 1000]
-  >>> e = l.pop(-1)
-  >>> e
-  1000
-  ```
+
+  #touying-raw(
+    ```python
+    >>> l = [10, 100, 1000]
+    >>> e = l.pop(-1)
+    // pause
+    >>> e
+    1000
+    ```
+  )
 
   Si no se le pasa ningún valor, extrae por defecto el último:
-  ```python
-  >>> l = ["a", "bb", "ccc"]
-  >>> l.pop()
-  'ccc'
-  ```
+  #touying-raw(
+    ```python
+    >>> l = ["a", "bb", "ccc"]
+    // pause
+    >>> l.pop()
+    'ccc'
+    ```
+  )
 
 ]
 
@@ -589,12 +641,19 @@
   ```
 
   Si el valor está repetido, elimina la primera ocurrencia:
+  #reveal-code(
+    lines: (2, 4),
+    before: none,
+    after: hide,
+    full: true,
+  )[
   ```python
   >>> l = [1, 2, 3, 2, 2, 4]
   >>> l.remove(2)
   >>> l
   [1, 3, 2, 2, 4]
   ```
+  ]
 
   Y si no existe, arroja un error.
 
@@ -606,50 +665,66 @@
   La sentencia `del`, que se usa para eliminar variables, también elimina
   elementos de una lista.
 
+  #reveal-code(
+    lines: (2, 4),
+    before: none,
+    after: hide,
+    full: true,
+  )[
   ```python
   >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
   >>> del galletitas[3]
   >>> galletitas
   ['Melba', 'Oreo', 'Macucas']
   ```
+  ]
 
   Al igual que `.pop()` y `remove()`, `del` también opera _in-place_.
 
 ]
 
-
-#new-section-slide[Operaciones útiles sobre listas]
-
 #slide[
   = Ordenar una lista
 
-  ```python
-  >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
-  >>> galletitas.sort()
-  >>> galletitas
-  ['Macucas', 'Melba', 'Oreo', 'Rumba']
-  ```
+  #touying-raw(
+    ```python
+    >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
+    >>> galletitas.sort()
+    // pause
+    >>> galletitas
+    ['Macucas', 'Melba', 'Oreo', 'Rumba']
+    ```
+  )
 
 
-  ```python
-  >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
-  >>> galletitas.sort(reverse=True)
-  >>> galletitas
-  ['Rumba', 'Oreo', 'Melba', 'Macucas']
-  ```
+  #touying-raw(
+    ```python
+    >>> galletitas = ["Melba", "Oreo", "Macucas", "Rumba"]
+    >>> galletitas.sort(reverse=True)
+    // pause
+    >>> galletitas
+    ['Rumba', 'Oreo', 'Melba', 'Macucas']
+    ```
+  )
 
 ]
-
 
 #slide[
   = Invertir una lista
 
+  #reveal-code(
+    lines: (2, 4),
+    before: none,
+    after: hide,
+    full: false,
+  )[
   ```python
   >>> numeros = [1, 2, 3, 4, 5, 6]
   >>> numeros.reverse()
   >>> numeros
   [6, 5, 4, 3, 2, 1]
   ```
+  ]
 
 ]
 
@@ -743,26 +818,40 @@
 #slide[
   = Creación
 
+  #reveal-code(
+    lines: (1, 3, 5),
+    before: none,
+    after: hide,
+    full: true,
+  )[
   ```py
-  >>> tipos_identificacion = ("LE", "LC", "DNI", "CUIT", "CUIL", "Pasaporte")
+  >>> tipos_identificacion = ("LE", "LC", "DNI", "CUIT", "CUIL")
   >>> tipos_identificacion
-  ('LE', 'LC', 'DNI', 'CUIT', 'CUIL', 'Pasaporte')
+  ('LE', 'LC', 'DNI', 'CUIT', 'CUIL')
   >>> type(tipos_identificacion)
   <class 'tuple'>
   ```
+  ]
 ]
 
 #slide[
   = Acceder a elementos
 
-  ```py
-  >>> tipos_identificacion[0]
-  'LE'
-  >>> tipos_identificacion[-1]
-  'Pasaporte'
-  >>> tipos_identificacion[2:5]
-  ('DNI', 'CUIT', 'CUIL')
-  ```
+  #touying-raw(
+    ```py
+    >>> tipos_identificacion[0]
+    'LE'
+    // pause
+    >>> tipos_identificacion[-1]
+    'CUIL'
+    // pause
+    >>> tipos_identificacion[2:4]
+    ('DNI', 'CUIT')
+    ```
+  )
+
+  #pause
+
   El indexado y el _slicing_ funcionan igual que en listas.
   Al seleccionar una porción, se obtiene una nueva tupla.
 ]
@@ -777,6 +866,8 @@
   TypeError: 'tuple' object does not support item assignment
   ```
 
+  #pause
+
   Tampoco existen métodos como `.append()`, `.remove()` o `.sort()`.
 ]
 
@@ -786,6 +877,12 @@
   En general, las operaciones no destructivas que funcionan con listas
   también funcionan con tuplas.
 
+  #reveal-code(
+    lines: (2, 4, 6, 8, 10),
+    before: none,
+    after: hide,
+    full: false,
+  )[
   ```py
   >>> sorted((4, 1, 3, 2))
   [1, 2, 3, 4]
@@ -798,11 +895,18 @@
   >>> "DNI" in tipos_identificacion
   True
   ```
+  ]
 ]
 
 #slide[
   = Concatenar crea otro objeto
 
+  #reveal-code(
+    lines: (2, 4, 6, 8),
+    before: none,
+    after: hide,
+    full: false,
+  )[
   ```py
   >>> original = ("LE", "LC", "DNI")
   >>> nueva = original + ("CUIT",)
@@ -813,6 +917,7 @@
   >>> nueva
   ('LE', 'LC', 'DNI', 'CUIT')
   ```
+  ]
 ]
 
 #slide[
@@ -820,13 +925,19 @@
 
   Una tupla es útil para representar estructuras pequeñas que no deberían cambiar.
 
-  ```py
-  >>> personas = [("Juan", 29), ("Carla", 34), ("Evelina", 33)]
-  >>> personas[1]
-  ('Carla', 34)
-  >>> personas[1][0]
-  'Carla'
-  ```
+  #touying-raw(
+    ```py
+    >>> personas = [("Juan", 29), ("Carla", 34), ("Evelina", 33)]
+    //pause
+    >>> personas[1]
+    ('Carla', 34)
+    //pause
+    >>> personas[1][0]
+    'Carla'
+    ```
+  )
+
+  #pause
 
   Cada tupla es un registro `(nombre, edad)`.
 ]
@@ -849,8 +960,303 @@
   >>> x = (3)
   >>> type(x)
   <class 'int'>
+  ```
+
+  #pause
+
+  ```py
   >>> y = (3,)
   >>> type(y)
   <class 'tuple'>
   ```
+
+]
+
+#new-section-slide[Diccionarios]
+
+#slide[
+  = Definición
+
+  Un diccionario es una estructura de datos que mapea claves con valores.
+
+  ```py
+  >>> personas = {"Juan": 29, "Carla": 34, "Evelina": 33, "Ana": 38}
+  >>> personas
+  {'Juan': 29, 'Carla': 34, 'Evelina': 33, 'Ana': 38}
+  ```
+
+  #pause
+
+  ```py
+  >>> type(personas)
+  <class 'dict'>
+  ```
+
+  #pause
+
+  En un diccionario, cada elemento es un par `clave: valor`.
+]
+
+#slide[
+  = ¿Por qué usar diccionarios?
+
+  Queremos representar esta información:
+
+  ```py
+  >>> nombres = ["Juan", "Carla", "Evelina", "Ana"]
+  >>> edades = [29, 34, 33, 38]
+  ```
+
+  #pause
+
+  Podríamos usar una lista de tuplas:
+
+  ```py
+  >>> personas = [
+  ...     ("Juan", 29), ("Carla", 34), ("Evelina", 33), ("Ana", 38)
+  ... ]
+  ```
+
+  #pause
+
+  Pero si queremos buscar la edad de una persona por nombre,
+  un diccionario suele ser más natural.
+]
+
+#slide[
+  = Creación
+
+  Se definen entre llaves `{}`:
+
+  ```py
+  >>> precios = {"café": 3200, "tostado": 5800, "medialuna": 900}
+  ```
+
+  También pueden crearse con `dict()`:
+
+  #touying-raw(
+    ```py
+    >>> descuentos = dict(lunes=0, martes=20, miercoles=10)
+    //pause
+    >>> descuentos
+    {'lunes': 0, 'martes': 20, 'miercoles': 10}
+    ```
+  )
+]
+
+#slide[
+  = Propiedades importantes
+
+  ```py
+  >>> d = {"nombre": "Juan", "edad": 29}
+  >>> len(d)
+  2
+  ```
+
+  #item-by-item[
+    - `len(d)` cuenta pares `clave: valor`.
+    - Las claves deben ser únicas.
+    - Los valores pueden repetirse.
+    - Es mutable.
+  ]
+]
+
+#slide[
+  = Claves únicas
+
+  Si repetimos una clave, sobrevive la última asignación:
+
+  #touying-raw(
+    ```py
+    >>> d = {"a": 1, "b": 2, "a": 999}
+    //pause
+    >>> d
+    {'a': 999, 'b': 2}
+    ```
+  )
+]
+
+#slide[
+  = Acceder a elementos
+
+  En diccionarios no usamos índices, usamos claves:
+
+  #reveal-code(
+    lines: (1, 3, 5),
+    before: none,
+    after: hide,
+    full: false,
+  )[
+  ```py
+  >>> personas = {"Juan": 29, "Carla": 34, "Evelina": 33, "Ana": 38}
+  >>> personas["Juan"]
+  29
+  >>> personas[0]
+  KeyError: 0
+  ```
+  ]
+]
+
+#slide[
+  = Verificar existencia
+
+  Los operadores `in` y `not in` evalúan la existencia de *claves*:
+
+  #reveal-code(
+    lines: (1, 3, 5, 7, 9),
+    before: none,
+    after: hide,
+    full: false,
+  )[
+  ```py
+  >>> d = {"color": "azul", "forma": "cuadrado"}
+  >>> "color" in d
+  True
+  >>> "area" in d
+  False
+  >>> "area" not in d
+  True
+  >>> "azul" in d
+  False
+  ```
+  ]
+]
+
+#slide[
+  = Acceder a claves y valores
+
+  #reveal-code(
+    lines: (1, 3, 5, 7),
+    before: none,
+    after: hide,
+    full: false,
+  )[
+  ```py
+  >>> d = {"color": "azul", "forma": "cuadrado"}
+  >>> d.keys()
+  dict_keys(['color', 'forma'])
+  >>> d.values()
+  dict_values(['azul', 'cuadrado'])
+  >>> d.items()
+  dict_items([('color', 'azul'), ('forma', 'cuadrado')])
+  ```
+  ]
+]
+
+#slide[
+  = Modificar y agregar elementos
+
+  La misma sintaxis sirve para ambas operaciones:
+
+  #reveal-code(
+    lines: (1, 3, 5),
+    before: none,
+    after: hide,
+    full: true,
+  )[
+  ```py
+  >>> personas = {"Juan": 29, "Carla": 34}
+  >>> personas["Juan"] = 54
+  >>> personas["Marisa"] = 29
+  >>> personas
+  {'Juan': 54, 'Carla': 34, 'Marisa': 29}
+  ```
+  ]
+]
+
+#slide[
+  = Eliminar elementos
+
+  Con `del` eliminamos una clave sin recuperar el valor:
+
+  #touying-raw(
+    ```py
+    >>> descuentos = {"lunes": 0, "martes": 20, "miercoles": 10}
+    >>> del descuentos["martes"]
+    // pause
+    >>> descuentos
+    {'lunes': 0, 'miercoles': 10}
+    ```
+  )
+
+  Con `.pop()` eliminamos y recuperamos el valor:
+
+  #touying-raw(
+    ```py
+    >>> descuento_lunes = descuentos.pop("lunes")
+    // pause
+    >>> descuento_lunes
+    0
+    // pause
+    >>> descuentos
+    {'miercoles': 10}
+    ```
+  )
+]
+
+#slide[
+  = Actualizar diccionarios
+
+  `.update()` modifica el diccionario original:
+
+  #touying-raw(
+    ```py
+    >>> datos = {"nombre": "Guille", "ciudad": "Rosario"}
+    // pause
+    >>> datos_nuevos = {"ciudad": "Roldán", "hijos": 2}
+    >>> datos.update(datos_nuevos)
+    // pause
+    >>> datos
+    {'nombre': 'Guille', 'ciudad': 'Roldán', 'hijos': 2}
+    ```
+  )
+
+  #pause
+
+  El operador `|` devuelve uno nuevo:
+
+  #touying-raw(
+    ```py
+    >>> d1 = {"a": 1, "b": 2}
+    >>> d2 = {"b": 10, "c": 25}
+    >>> d3 = d1 | d2
+    // pause
+    >>> d3
+    {'a': 1, 'b': 10, 'c': 25}
+    ```
+  )
+]
+
+#slide[
+  = Estructuras anidadas
+  #v(-0.5em)
+
+  Los valores de un diccionario pueden ser otros diccionarios o listas:
+
+  ```py
+  >>> usuarios = {
+  ...   "aeinstein": {
+  ...       "nombre": "albert",
+  ...       "apellido": "einstein",
+  ...       "ciudad": "princeton",
+  ...   },
+  ...   "mcurie": {
+  ...       "nombre": "marie",
+  ...       "apellido": "curie",
+  ...       "ciudad": "paris",
+  ...   },
+  ... }
+  >>> usuarios["aeinstein"]["ciudad"]
+  'princeton'
+  ```
+]
+
+#slide[
+  = Listas, tuplas y diccionarios
+
+  - Las listas y tuplas son secuencias: se accede por posición.
+    - Listas: se pueden modificar
+    - Tuplas: no se pueden modificar
+  - Los diccionarios no son secuencias: se accede por clave.
+  - Si el problema es clave #sym.arrow valor, usar `dict`.
 ]

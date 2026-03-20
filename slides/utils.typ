@@ -1,6 +1,6 @@
 
 
-#import "@preview/touying:0.6.1": only, pause, uncover
+#import "@preview/touying:0.6.3": only, pause, uncover
 
 #let one-by-one(start: 1, mode: hide, ..children) = {
   for (idx, child) in children.pos().enumerate() {

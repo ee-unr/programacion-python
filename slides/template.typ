@@ -1,4 +1,4 @@
-#import "@preview/touying:0.6.1": *
+#import "@preview/touying:0.6.3": *
 
 #let course-red = rgb("#BF0F1F")
 #let page-stroke = stroke(thickness: 2pt, paint: course-red, cap: "butt")
