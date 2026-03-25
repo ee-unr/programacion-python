@@ -62,6 +62,8 @@ website:
         - text: Presentaciones
           contents:
             - recursos/slides/01.qmd
+            - recursos/slides/02_1.qmd
+            - recursos/slides/02_2.qmd
         - text: Tutoriales
           contents:
             - recursos/tutoriales/instalacion_python.qmd

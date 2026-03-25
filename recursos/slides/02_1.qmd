@@ -1,0 +1,9 @@
+---
+title: "Clase 2.1: Colecciones de datos"
+---
+
+```{=html}
+<div class="pdf-container">
+  <iframe src="../../slides/02_1.pdf"></iframe>
+</div>
+```

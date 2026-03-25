@@ -1,0 +1,9 @@
+---
+title: "Clase 2.2: Uso de código externo"
+---
+
+```{=html}
+<div class="pdf-container">
+  <iframe src="../../slides/02_2.pdf"></iframe>
+</div>
+```
