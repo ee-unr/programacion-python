@@ -14,29 +14,30 @@ Las computadoras son muy buenas para muchísimas cosas. En particular:
 El primer punto se refiere a la **ejecución condicional de código** y el segundo a la **ejecución repetitiva de código**.
 
 Estos dos puntos pueden ser vistos de manera general como **control de flujo** del código.
-
+Y
 En este apunte hablamos de la **ejecución condicional de código**.
 
-![](imgs/control_de_flujo_intro_humo.png){fig-align="center" width="600px"}
+![](imgs/condicional_aprobacion.svg){fig-align="center" width="600px"}
 
 ## Bloques `if`
 
 Los bloques `if` utilizan la _keyword_ `if` para evaluar una condición y ejecutar una sección de código en base al resultado de esta evaluación.
 
-![](imgs/if.png){fig-align="center" width="350px"}
+![](imgs/if.svg){fig-align="center" width="350px"}
 
 Veamos un ejemplo.
 
 ```python
-condicion = True
-if condicion:
-    print("Se ejecuta el bloque if")
+>>> condicion = True
+>>> if condicion:
+...     print("Se ejecuta el bloque if")
+Se ejecuta el bloque if
 ```
 
 ```python
-condicion = False
-if condicion:
-    print("Se ejecuta el bloque if")
+>>> condicion = False
+>>> if condicion:
+...     print("Se ejecuta el bloque if")
 ```
 
 De manera mas general, un bloque `if` es de la siguiente forma:
@@ -53,11 +54,12 @@ Tiene los siguientes componentes:
 Veamos otro ejemplo.
 
 ```python
-condicion = True
-if condicion:
-    print("Se ejecuta el bloque if")
-
-print("Esto se imprime siempre")
+>>> condicion = True
+>>> if condicion:
+...     print("Se ejecuta el bloque if")
+Se ejecuta el bloque if
+>>> print("Esto se imprime siempre")
+Esto se imprime siempre
 ```
 
 El segundo `print()` se imprime siempre porque está por fuera del bloque de ejecución condicional.
@@ -67,9 +69,10 @@ El segundo `print()` se imprime siempre porque está por fuera del bloque de eje
 Simplemente la indentación vuelve a ser normal. El fin de la indentación indica el fin del bloque de código.
 
 ```python
-valor = 12
-if valor > 10:
-    print("Se ejecuta el bloque if")
+>>> valor = 12
+>>> if valor > 10:
+...     print("Se ejecuta el bloque if")
+Se ejecuta el bloque if
 ```
 
 ## Bloques `if` - `else`
@@ -87,29 +90,30 @@ La diferencia es que nos permite definir otro bloque de código que se ejecuta c
 ![](imgs/if_else_codigo.png){fig-align="center" width="400px"}
 
 ```python
-edad = 21
-if edad >= 16:
-    print("Tenés la edad suficiente para votar")
-else:
-    print("Lo siento, aún sos demasiado jóven para votar")
+>>> edad = 21
+>>> if edad >= 16:
+...     print("Tenés la edad suficiente para votar")
+... else:
+...     print("Lo siento, aún sos demasiado jóven para votar")
+Tenés la edad suficiente para votar
 ```
 
-![](imgs/if_else.png){fig-align="center" width="350px"}
+![](imgs/if_else.svg){fig-align="center" width="350px"}
 
 Al igual que con el bloque `if`, cualquier parte del código que se escriba luego del bloque `if`-`else` es ejecutada sin importar el valor de las condiciones.
 
 Veamos otro ejemplo donde evaluamos si un número es par o impar.
 
 ```python
-valor = 10
-print(valor)
-
-if valor % 2 == 0:
-    mensaje = "Es par"
-else:
-    mensaje = "Es impar"
-
-print(mensaje)
+>>> valor = 10
+>>> print(valor)
+10
+>>> if valor % 2 == 0:
+...     mensaje = "Es par"
+... else:
+...     mensaje = "Es impar"
+>>> print(mensaje)
+Es par
 ```
 
 En este caso, `print(mensaje)` se ejecuta siempre.
@@ -133,17 +137,17 @@ Supongamos que viene un parque de diversiones a Rosario y tiene los siguientes p
 * Personas de 18 o mas años, \$600.
 
 ```python
-edad = 3
-
-if edad < 4:
-    print("El costo de entrada para vos es de $0.")
-elif edad < 18:
-    print("El costo de entrada para vos es de $400.")
-else:
-    print("El costo de entrada para vos es de $600.")
+>>> edad = 3
+>>> if edad < 4:
+...     print("El costo de entrada para vos es de $0.")
+... elif edad < 18:
+...     print("El costo de entrada para vos es de $400.")
+... else:
+...     print("El costo de entrada para vos es de $600.")
+El costo de entrada para vos es de $0.
 ```
 
-![](imgs/if_elif_else.png){fig-align="center" width="350px"}
+![](imgs/if_elif_else.svg){fig-align="center" width="350px"}
 
 ## Múltiples bloques `elif`
 
@@ -152,18 +156,17 @@ Hasta ahora utilizamos un único bloque `elif`, pero podemos usar tantos como se
 Por ejemplo, si el parque de diversiones decide realizar un descuento para adultos mayores, dejando el precio en \$350, podriamos agregar otro bloque `elif` que represente la evaluación de esta condición.
 
 ```python
-edad = 68
-
-if edad < 4:
-    precio = 0
-elif edad < 18:
-    precio = 400
-elif edad < 65:
-    precio = 600
-else:
-    precio = 350
-
-print(f"El precio de entrada para vos es de ${precio}.")
+>>> edad = 68
+>>> if edad < 4:
+...     precio = 0
+... elif edad < 18:
+...     precio = 400
+... elif edad < 65:
+...     precio = 600
+... else:
+...     precio = 350
+>>> print(f"El precio de entrada para vos es de ${precio}.")
+El precio de entrada para vos es de $350.
 ```
 
 ## Omitir el bloque `else`
@@ -173,18 +176,17 @@ No hay ninguna regla que nos obligue a terminar un bloque de `if`-`elif` con un 
 Utilizar el bloque `else` a veces es lo correcto, pero otras veces puede ser mejor poner una condición explícita en un último `elif` que contemple solamente la condición que realmente nos interesa.
 
 ```python
-edad = 10
-
-if edad < 4:
-    precio = 0
-elif edad < 18:
-    precio = 400
-elif edad < 65:
-    precio = 600
-elif edad >= 65:
-    precio = 350
-
-print(f"El precio de entrada para vos es de ${precio}.")
+>>> edad = 10
+>>> if edad < 4:
+...     precio = 0
+... elif edad < 18:
+...     precio = 400
+... elif edad < 65:
+...     precio = 600
+... elif edad >= 65:
+...     precio = 350
+>>> print(f"El precio de entrada para vos es de ${precio}.")
+El precio de entrada para vos es de $400.
 ```
 
 El bloque `elif` que agregamos indica que el `precio` será de \$350 cuando la edad de la persona sea mayor o igual a 65 años.
@@ -194,29 +196,28 @@ Esta condición es más explícita y fácil de entender que el bloque `else` que
 Sin embargo, todavía hay un problema: el programa sigue funcionando incluso si se ingresan edades fuera de un rango razonable. A continuación se muestra una versión más completa:
 
 ```python
-edad = 125
-
-if edad < 0:
-    print("¡Error!")
-    precio = None
-elif edad < 4:
-    precio = 0
-elif edad < 18:
-    precio = 400
-elif edad < 65:
-    precio = 600
-elif edad >= 65 and edad <= 120:
-    precio = 350
-else:
-    print("¡Error!")
-    precio = None
-
-print(f"El precio de entrada para vos es ${precio}.")
+>>> edad = 125
+>>> if edad < 0:
+...     print("¡Error!")
+...     precio = None
+... elif edad < 4:
+...     precio = 0
+... elif edad < 18:
+...     precio = 400
+... elif edad < 65:
+...     precio = 600
+... elif edad >= 65 and edad <= 120:
+...     precio = 350
+... else:
+...     print("¡Error!")
+...     precio = None
+¡Error!
+>>> print(f"El precio de entrada para vos es ${precio}.")
+El precio de entrada para vos es $None.
 ```
 
 El diagrama y el código para el caso solo con `elif` se ven de la siguiente manera:
 
-![](imgs/if_elif_elif_elif.png){fig-align="center" width="350px"}
+![](imgs/if_elif_elif_elif.svg){fig-align="center" width="350px"}
 
 ![](imgs/if_elif_elif_elif_codigo.png){fig-align="center" width="400px"}
-

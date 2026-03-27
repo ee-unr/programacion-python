@@ -55,10 +55,8 @@ Pero acá vamos.
 y usamos la función `open()` para abrir el archivo.
 
 ```python
-archivo = open("pensamientos.txt")
-archivo
-```
-```cmd
+>>> archivo = open("pensamientos.txt")
+>>> archivo
 <_io.TextIOWrapper name='pensamientos.txt' mode='r' encoding='cp1252'>
 ```
 
@@ -79,7 +77,7 @@ Cada vez que necesitemos leer o escribir en el archivo, lo haremos a través de 
 Si le pasamos a la función `open()` un nombre de un archivo que no existe, ya sea porque escribimos mal la ruta o cometimos un error de tipeo, obtendremos un `FileNotFoundError`.
 
 ```python
-open("pensamiento.txt")
+>>> open("pensamiento.txt")
 ```
 
 :::{.code-error}
@@ -95,9 +93,10 @@ Una forma de leer un archivo de texto plano en Python es cargar todo su contenid
 Para ello se utiliza el método `.read()` del objeto `TextIOWrapper`.
 
 ```python
-archivo = open("pensamientos.txt", encoding="utf-8")
-contenido = archivo.read()
-contenido
+>>> archivo = open("pensamientos.txt", encoding="utf-8")
+>>> contenido = archivo.read()
+>>> contenido
+'Estoy aprendiendo a leer archivos en Python.\nNo se con qué me voy a encontrar.\nPero acá vamos.'
 ```
 
 Se puede observar que, salvo la última, cada línea termina con un carácter de nueva línea (`\n`). Si hubiéramos agregado un salto de línea al final del archivo `pensamientos.txt`, la cadena resultante también habría terminado en `"\n"`.
@@ -108,8 +107,11 @@ Una alternativa al método `.read()`, que carga todo el contenido como una únic
 Este devuelve una **lista de cadenas**, donde cada elemento corresponde a una línea del archivo.
 
 ```python
-archivo = open("pensamientos.txt", encoding="utf-8")
-archivo.readlines()
+>>> archivo = open("pensamientos.txt", encoding="utf-8")
+>>> archivo.readlines()
+['Estoy aprendiendo a leer archivos en Python.\n',
+ 'No se con qué me voy a encontrar.\n',
+ 'Pero acá vamos.']
 ```
 
 Trabajar con una lista de cadenas suele ser más cómodo que manejar un único bloque de texto, ya que te permite acceder directamente a cada línea por separado.
@@ -121,12 +123,15 @@ Para ello se utiliza el método `.readline()`, en singular. Cada vez que se invo
 Cuando ya no quedan más líneas, devuelve una cadena vacía.
 
 ```python
-archivo = open("pensamientos.txt", encoding="utf-8")
-while True:
-    linea = archivo.readline()
-    if linea == "":
-        break
-    print(linea, end="") # `end=""` para que Python no agregue salto de línea
+>>> archivo = open("pensamientos.txt", encoding="utf-8")
+>>> while True:
+...     linea = archivo.readline()
+...     if linea == "":
+...         break
+...     print(linea, end="") # `end=""` para que Python no agregue salto de línea
+Estoy aprendiendo a leer archivos en Python.
+No se con qué me voy a encontrar.
+Pero acá vamos.
 ```
 
 Este método también acepta un argumento opcional `size`, que permite especificar la cantidad de caracteres a leer en cada llamada.
@@ -146,27 +151,18 @@ Cuando se lee un archivo en Python, existe un puntero interno (a veces llamado _
 Por eso, después de una primera lectura completa, las siguientes llamadas a métodos como `.read()` o `.readlines()` no devuelven nada: el puntero ya está al final del archivo.
 
 ```python
-archivo = open("pensamientos.txt")
-archivo.read()
-```
-
-```cmd
+>>> archivo = open("pensamientos.txt")
+>>> archivo.read()
 'Estoy aprendiendo a leer archivos en Python.\nNo se con qué me voy a encontrar.\nPero acá vamos.'
 ```
 
 ```python
-archivo.read()
-```
-
-```cmd
+>>> archivo.read()
 ''
 ```
 
 ```python
-archivo.readlines()
-```
-
-```cmd
+>>> archivo.readlines()
 []
 ```
 
@@ -192,32 +188,35 @@ Si el archivo indicado en **`open()`** no existe, tanto el modo escritura como e
 Debajo, abrimos un archivo llamado `conclusiones.txt` en **modo escritura**. Como el archivo todavía no existe, Python lo crea automáticamente. Luego, llamamos a **`write()`** sobre el archivo abierto y le pasamos la cadena `"Escribir en Python no es tan grave como parece.\n"` y el texto se escribe dentro del archivo.
 
 ```python
-archivo = open("conclusiones.txt", mode="w", encoding="utf-8") # Este paso ya crea el archivo
-archivo.write("Escribir en Python no es tan grave como parece.\n")
+>>> archivo = open("conclusiones.txt", mode="w", encoding="utf-8") # Este paso ya crea el archivo
+>>> archivo.write("Escribir en Python no es tan grave como parece.\n")
+48
 ```
 
 El método `.write()` devuelve el número de caracteres escritos, incluyendo el salto de línea `\n`. Después, cerramos el archivo.
 
 ```python
-archivo.close()
+>>> archivo.close()
 ```
 
 Para **agregar texto sin reemplazar el contenido existente**, abrimos el archivo en **modo adición**.
 Escribimos la cadena `"Es solo cuestión de practica."` y lo cerramos nuevamente.
 
 ```python
-archivo = open("conclusiones.txt", mode="a", encoding="utf-8")
-archivo.write("Es solo cuestión de practica.")
-archivo.close()
+>>> archivo = open("conclusiones.txt", mode="a", encoding="utf-8")
+>>> archivo.write("Es solo cuestión de practica.")
+>>> archivo.close()
 ```
 
 Finalmente, para mostrar en pantalla el contenido de `conclusiones.txt`, abrimos el archivo en modo lectura, cargamos su contenido con `.read()`, lo guardamos en la variable `texto`, cerramos el archivo y luego imprimimos `texto`.
 
 ```python
-archivo = open("conclusiones.txt", mode="r", encoding="utf-8")
-texto = archivo.read()
-archivo.close()
-print(texto)
+>>> archivo = open("conclusiones.txt", mode="r", encoding="utf-8")
+>>> texto = archivo.read()
+>>> archivo.close()
+>>> print(texto)
+Escribir en Python no es tan grave como parece.
+Es solo cuestión de practica
 ```
 
 ::: {.callout-note}
@@ -238,20 +237,21 @@ Para evitarlo, Python ofrece la sentencia `with`, que se encarga de cerrar el ar
 Debajo, utilizamos la sentencia `with` para crear un archivo y escribir texto en él.
 
 ```python
-with open("ejemplo.txt", mode="w", encoding="utf-8") as archivo:
-    archivo.write("¡Hola, mundo!\n")
-
-print(archivo.closed) # Verificar que el archivo está cerrado
+>>> with open("ejemplo.txt", mode="w", encoding="utf-8") as archivo:
+...     archivo.write("¡Hola, mundo!\n")
+>>> print(archivo.closed) # Verificar que el archivo está cerrado
+True
 ```
 
 Luego, podemos utilizar un patrón similar, pero pasando `mode="r"`, para leer el contenido del archivo.
 
 ```python
-with open("ejemplo.txt", mode="r", encoding="utf-8") as archivo:
-    contenido = archivo.read()
-
-print(contenido)
-print(archivo.closed)
+>>> with open("ejemplo.txt", mode="r", encoding="utf-8") as archivo:
+...     contenido = archivo.read()
+>>> print(contenido)
+>>> print(archivo.closed)
+¡Hola, mundo!
+True
 ```
 
 ::: {.callout-note}
@@ -292,7 +292,7 @@ Por otro lado, **Users**, **Tomi** y **Documentos** son carpetas, también llama
 Por defecto, Python busca los archivos en el **directorio de trabajo actual** (*current working directory*). Por ejemplo:
 
 ```python
-open("archivo.txt")
+>>> open("archivo.txt")
 ```
 
 En este caso, `archivo.txt` debe estar en la misma carpeta desde donde se ejecuta el programa.
@@ -306,9 +306,9 @@ Aunque se pueden usar cadenas de texto (`str`) para definir rutas, esto puede ge
 Para evitar errores y escribir código que funcione en cualquier sistema, conviene usar `Path` del módulo `pathlib`, que maneja automáticamente las diferencias entre las formas de especificar rutas entre los distintos sistemas operativos.
 
 ```python
-from pathlib import Path
-ruta = Path("Users/Tomi/Documentos/projecto.docx")
-print(ruta)
+>>> from pathlib import Path
+>>> ruta = Path("Users/Tomi/Documentos/projecto.docx")
+>>> print(ruta)
 ```
 
 En Windows se mostrará como:
@@ -326,10 +326,8 @@ Users/Tomi/Documentos/projecto.docx
 Si en Windows convertimos al objeto `ruta` a una cadena de caracteres, nos encontraremos con el siguiente resultado:
 
 ```python
-str(ruta)
-```
-```cmd
-"Users\\Tomi\\Documentos\\projecto.docx"
+>>> str(ruta)
+'Users\\Tomi\\Documentos\\projecto.docx'
 ```
 
 Las barras invertidas aparecen como dobles barras invertidas porque en Python cada barra invertida debe **escaparse** con otra barra invertida.
@@ -340,10 +338,9 @@ El operador `/`, que normalmente usamos para dividir números, también sirve en
 Esto permite construir rutas de forma clara y sin preocuparse por los separadores que cambian según el sistema operativo. Por ejemplo:
 
 ```python
-from pathlib import Path
-
-ruta = Path("datos") / "usuarios" / "reporte.txt"
-print(ruta)
+>>> from pathlib import Path
+>>> ruta = Path("datos") / "usuarios" / "reporte.txt"
+>>> print(ruta)
 ```
 
 El resultado será distinto según el sistema:
@@ -403,15 +400,15 @@ El **directorio de trabajo actual** es la carpeta desde la cual Python busca los
 En Python se puede obtener como una cadena de texto usando el método `.cwd()` (del inglés, _current working directory_) de `Path`:
 
 ```python
-from pathlib import Path
-print(Path.cwd())
+>>> from pathlib import Path
+>>> print(Path.cwd())
 ```
 
 Si necesitamos cambiar el directorio de trabajo actual, se puede usar `chdir` del módulo `os`:
 
 ```python
-import os
-os.chdir("nueva_ruta")
+>>> import os
+>>> os.chdir("nueva_ruta")
 ```
 
 ::: {.callout-warning}
@@ -430,8 +427,8 @@ en Windows suele estar en `C:\Users\<usuario>`, en macOS en `/Users/<usuario>` y
 En Python se puede acceder a este directorio con el método `Path.home()`:
 
 ```python
-from pathlib import Path
-print(Path.home())
+>>> from pathlib import Path
+>>> print(Path.home())
 ```
 
 Normalmente, los programas tienen permisos de lectura y escritura dentro de este directorio, por lo que es un lugar seguro y conveniente para guardar archivos y configuraciones creadas por tus _scripts_.
@@ -444,13 +441,10 @@ El método `.resolve()` de `Path` convierte una ruta relativa en absoluta y, cua
 En el siguiente ejemplo, el directorio de trabajo actual es `C:\Users\Tomi\Desktop\proyecto`:
 
 ```python
-from pathlib import Path
-
-ruta = Path("../datos.txt")
-print(ruta.resolve()) # ruta absoluta y normalizada
-```
-
-```cmd
+>>> from pathlib import Path
+>>>
+>>> ruta = Path("../datos.txt")
+>>> print(ruta.resolve()) # ruta absoluta y normalizada
 C:\Users\Tomi\Desktop\datos.txt
 ```
 
@@ -459,9 +453,9 @@ C:\Users\Tomi\Desktop\datos.txt
 El método `.mkdir()` de los objetos `Path` permite crear un directorio a partir de una ruta.
 
 ```python
-from pathlib import Path
-
-Path("nueva_carpeta").mkdir(exist_ok=True)
+>>> from pathlib import Path
+>>>
+>>> Path("nueva_carpeta").mkdir(exist_ok=True)
 ```
 
 Con `exist_ok=True` evitamos errores si la carpeta ya existe.
@@ -469,7 +463,7 @@ Con `exist_ok=True` evitamos errores si la carpeta ya existe.
 Para crear todos los directorios en una ruta de múltiples directorios en una sola llamada, se puede añadir `parents=True`:
 
 ```python
-Path("datos/limpios/2025").mkdir(parents=True, exist_ok=True)
+>>> Path("datos/limpios/2025").mkdir(parents=True, exist_ok=True)
 ```
 
 #### Verificación de validez y tipo de rutas
@@ -477,13 +471,13 @@ Path("datos/limpios/2025").mkdir(parents=True, exist_ok=True)
 Los objetos `Path` permiten comprobar si una ruta existe y qué tipo de recurso representa:
 
 ```python
-from pathlib import Path
-
-ruta = Path("C:/Users/Tomi/Documentos/projecto.docx")
-
-print(ruta.exists())   # True si existe
-print(ruta.is_file())  # True si existe y es archivo
-print(ruta.is_dir())   # True si existe y es directorio
+>>> from pathlib import Path
+>>>
+>>> ruta = Path("C:/Users/Tomi/Documentos/projecto.docx")
+>>>
+>>> print(ruta.exists())   # True si existe
+>>> print(ruta.is_file())  # True si existe y es archivo
+>>> print(ruta.is_dir())   # True si existe y es directorio
 ```
 
 ## Apéndice
@@ -521,4 +515,3 @@ print(ruta.is_dir())   # True si existe y es directorio
 | `wb+` | `open("datos.bin", "wb+")`   | Abre `datos.bin` para leer y escribir en binario, truncando si existe.      |
 
 : {tbl-colwidths="[5, 35, 60]"}
-
