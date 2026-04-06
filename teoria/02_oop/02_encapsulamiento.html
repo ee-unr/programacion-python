@@ -395,12 +395,12 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="funciones">Funciones</h3>
 <p>Las funciones ofrecen un ejemplo clarísimo de encapsulación: para usarlas, no hace falta conocer como funcionan internamente. De hecho, una función bien diseñada se caracteriza por cumplir una única tarea y tener un nombre que la describa con claridad. De esta manera, con solo leer su nombre podemos anticipar qué hace, sin preocuparnos por los detalles de su implementación.</p>
 <p>Por ejemplo, consideremos la siguiente función que devuelve el número <span class="math inline">\(n\)</span>-ésimo en la secuencia de Fibonacci:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> fibonacci(n):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>...     <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> n</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>...     <span class="cf">return</span> fibonacci(n <span class="op">-</span> <span class="dv">1</span>) <span class="op">+</span> fibonacci(n <span class="op">-</span> <span class="dv">2</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(fibonacci(<span class="dv">10</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(fibonacci(<span class="dv">21</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci(n):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fibonacci(n <span class="op">-</span> <span class="dv">1</span>) <span class="op">+</span> fibonacci(n <span class="op">-</span> <span class="dv">2</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fibonacci(<span class="dv">10</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fibonacci(<span class="dv">21</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>55
 10946</code></pre>
 <p>Si está clara la interfaz de la función (cantidad y tipos de entradas y salidas), no es necesario conocer detalles de la implementación, ni si el código es largo o complejo. Incluso si se encuentra un mejor algoritmo para resolver el mismo problema, la función puede reescribirse sin cambiar su uso externo, siempre que la interfaz no cambie.</p>
@@ -428,71 +428,71 @@ window.Quarto = {
 <p>Una primera opción sería leer directamente su implementación, pero eso es precisamente lo que queremos evitar.</p>
 <p>Una alternativa mucho mejor es consultar la documentación. Para ello, la clase y sus métodos deben contar con <em>docstrings</em> adecuados que describan su uso.</p>
 <p>Veamos el siguiente ejemplo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> CuentaBancaria:</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>...     <span class="st">"""Cuenta bancaria simple con operaciones básicas.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="st">...</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="st">...     Esta clase implementa un modelo básico de cuenta bancaria que permite</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">...     depositar y retirar dinero, así como consultar el saldo actual.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="st">...     """</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, titular, saldo_inicial<span class="op">=</span><span class="fl">0.0</span>):</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>...         <span class="st">"""Inicializa una nueva cuenta bancaria.</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="st">...</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="st">...         Parameters</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="st">...         ----------</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="st">...         titular : str</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="st">...             Nombre del titular de la cuenta.</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="st">...         saldo_inicial : float, optional</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="st">...             Saldo inicial de la cuenta. Por defecto es 0.0.</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="st">...         """</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.titular <span class="op">=</span> titular</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">=</span> saldo_inicial</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> depositar(<span class="va">self</span>, monto):</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>...         <span class="st">"""Depositar dinero en la cuenta.</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="st">...</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="st">...         Parameters</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="st">...         ----------</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="st">...         monto : float</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="st">...             Monto a depositar. Debe ser un número positivo.</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="st">...         """</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> monto <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="st">"Error: El monto a depositar debe ser positivo."</span>)</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>...             <span class="cf">return</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">+=</span> monto</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> retirar(<span class="va">self</span>, monto):</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>...         <span class="st">"""Extrae dinero de la cuenta si hay fondos suficientes.</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="st">...</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="st">...         Parameters</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="st">...         ----------</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="st">...         monto : float</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="st">...             Monto a retirar.</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="st">...         """</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> monto <span class="op">&gt;</span> <span class="va">self</span>.saldo:</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="st">"Error: Fondos insuficientes."</span>)</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>...             <span class="cf">return</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">-=</span> monto</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> consultar_saldo(<span class="va">self</span>):</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>...         <span class="st">"""Devuelve el saldo actual.</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="st">...</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="st">...         Returns</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="st">...         -------</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="st">...         float</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="st">...             Saldo disponible en la cuenta.</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="st">...         """</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>.saldo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta <span class="op">=</span> CuentaBancaria(titular<span class="op">=</span><span class="st">"José Paso"</span>, saldo_inicial<span class="op">=</span><span class="dv">12000</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CuentaBancaria:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Cuenta bancaria simple con operaciones básicas.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Esta clase implementa un modelo básico de cuenta bancaria que permite</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">    depositar y retirar dinero, así como consultar el saldo actual.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, titular, saldo_inicial<span class="op">=</span><span class="fl">0.0</span>):</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Inicializa una nueva cuenta bancaria.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">        ----------</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">        titular : str</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">            Nombre del titular de la cuenta.</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">        saldo_inicial : float, optional</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">            Saldo inicial de la cuenta. Por defecto es 0.0.</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.titular <span class="op">=</span> titular</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">=</span> saldo_inicial</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> depositar(<span class="va">self</span>, monto):</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Depositar dinero en la cuenta.</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">        ----------</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">        monto : float</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">            Monto a depositar. Debe ser un número positivo.</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> monto <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Error: El monto a depositar debe ser positivo."</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">+=</span> monto</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> retirar(<span class="va">self</span>, monto):</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Extrae dinero de la cuenta si hay fondos suficientes.</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">        Parameters</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co">        ----------</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co">        monto : float</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co">            Monto a retirar.</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> monto <span class="op">&gt;</span> <span class="va">self</span>.saldo:</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Error: Fondos insuficientes."</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">-=</span> monto</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> consultar_saldo(<span class="va">self</span>):</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Devuelve el saldo actual.</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="co">        -------</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co">        float</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="co">            Saldo disponible en la cuenta.</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.saldo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>cuenta <span class="op">=</span> CuentaBancaria(titular<span class="op">=</span><span class="st">"José Paso"</span>, saldo_inicial<span class="op">=</span><span class="dv">12000</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>12000</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.retirar(<span class="dv">3800</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cuenta.retirar(<span class="dv">3800</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>8200</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.depositar(<span class="dv">1500</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.retirar(<span class="dv">50000</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>cuenta.depositar(<span class="dv">1500</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>cuenta.retirar(<span class="dv">50000</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Error: Fondos insuficientes.
 
 9700</code></pre>
@@ -550,24 +550,24 @@ window.Quarto = {
 <p>Si bien Python es un lenguaje de <strong>tipado dinámico e implícito</strong> —es decir, no es necesario especificar el tipo de las variables y este puede cambiar durante la ejecución—, es posible utilizar <strong>anotaciones de tipo</strong> (del inglés <em>type annotations</em>) para indicar qué tipo de dato se espera. Estas anotaciones son opcionales, pero ayudan a que el código sea más claro, fácil de entender y detectar errores antes de ejecutar el programa.</p>
 <p>Para los parámetros de una función o método, las anotaciones de tipo se escriben con el formato <code>&lt;nombre_variable&gt;: &lt;tipo&gt;</code>. En el caso la salida, el tipo se indica después de una flecha (<code>-&gt; &lt;tipo&gt;</code>) al final de la definición.</p>
 <p>Por ejemplo, en la siguiente función se especifica que el parámetro <code>nombre</code> debe ser de tipo <code>str</code> y que la función devuelve también un objeto de tipo <code>str</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> saludar(nombre: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>...     <span class="cf">return</span> <span class="ss">f"¡Hola, </span><span class="sc">{</span>nombre<span class="sc">}</span><span class="ss">!"</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> saludar(<span class="st">"Guido"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> saludar(nombre: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"¡Hola, </span><span class="sc">{</span>nombre<span class="sc">}</span><span class="ss">!"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>saludar(<span class="st">"Guido"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'¡Hola, Guido!'</code></pre>
 <p>En nuestra clase <code>CuentaBancaria</code>, la anotación de tipos se ve de la siguiente manera:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-18"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-18-1"><a href="#annotated-cell-18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> CuentaBancaria:</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-18-2" class="code-annotation-target"><a href="#annotated-cell-18-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, titular: <span class="bu">str</span>, saldo_inicial: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>):</span>
-<span id="annotated-cell-18-3"><a href="#annotated-cell-18-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.titular <span class="op">=</span> titular</span>
-<span id="annotated-cell-18-4"><a href="#annotated-cell-18-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">=</span> saldo_inicial</span>
-<span id="annotated-cell-18-5"><a href="#annotated-cell-18-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-18-6" class="code-annotation-target"><a href="#annotated-cell-18-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> depositar(<span class="va">self</span>, monto: <span class="bu">float</span>):</span>
-<span id="annotated-cell-18-7"><a href="#annotated-cell-18-7" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">+=</span> monto</span>
-<span id="annotated-cell-18-8"><a href="#annotated-cell-18-8" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-18-9" class="code-annotation-target"><a href="#annotated-cell-18-9" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> retirar(<span class="va">self</span>, monto: <span class="bu">float</span>):</span>
-<span id="annotated-cell-18-10"><a href="#annotated-cell-18-10" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">-=</span> monto</span>
-<span id="annotated-cell-18-11"><a href="#annotated-cell-18-11" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-18-12" class="code-annotation-target"><a href="#annotated-cell-18-12" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> consultar_saldo(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="annotated-cell-18-13"><a href="#annotated-cell-18-13" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>.saldo</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-18"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-18-1"><a href="#annotated-cell-18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CuentaBancaria:</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-18-2" class="code-annotation-target"><a href="#annotated-cell-18-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, titular: <span class="bu">str</span>, saldo_inicial: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>):</span>
+<span id="annotated-cell-18-3"><a href="#annotated-cell-18-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.titular <span class="op">=</span> titular</span>
+<span id="annotated-cell-18-4"><a href="#annotated-cell-18-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">=</span> saldo_inicial</span>
+<span id="annotated-cell-18-5"><a href="#annotated-cell-18-5" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-18-6" class="code-annotation-target"><a href="#annotated-cell-18-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> depositar(<span class="va">self</span>, monto: <span class="bu">float</span>):</span>
+<span id="annotated-cell-18-7"><a href="#annotated-cell-18-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">+=</span> monto</span>
+<span id="annotated-cell-18-8"><a href="#annotated-cell-18-8" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-18-9" class="code-annotation-target"><a href="#annotated-cell-18-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> retirar(<span class="va">self</span>, monto: <span class="bu">float</span>):</span>
+<span id="annotated-cell-18-10"><a href="#annotated-cell-18-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">-=</span> monto</span>
+<span id="annotated-cell-18-11"><a href="#annotated-cell-18-11" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-18" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-18-12" class="code-annotation-target"><a href="#annotated-cell-18-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> consultar_saldo(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="annotated-cell-18-13"><a href="#annotated-cell-18-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.saldo</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-18" data-target-annotation="1">1</dt>
 <dd>
@@ -588,14 +588,14 @@ window.Quarto = {
 </dl>
 <p>Si se eligen nombres representativos para los métodos y se utilizan anotaciones de tipo en sus parámetros, es muy probable que no sea necesario escribir un <em>docstring</em> para que el usuario comprenda cómo funciona la clase.</p>
 <p>Sin embargo, ni la documentación mediante <em>docstrings</em> ni el uso de anotaciones de tipo garantizan que una función o método se utilice con los tipos de datos adecuados. Por ejemplo, podríamos pasarle un número a nuestra función <code>saludar</code> sin que Python lo impida:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> saludar(<span class="dv">128</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>saludar(<span class="dv">128</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'¡Hola, 128!'</code></pre>
 <p>O incluso podríamos inicializar el <code>saldo_inicial</code> de la cuenta bancaria con una lista y luego intentar “depositar” otra lista.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta <span class="op">=</span> CuentaBancaria(<span class="dv">25</span>, saldo_inicial<span class="op">=</span>[<span class="st">"Cosas"</span>])</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>cuenta <span class="op">=</span> CuentaBancaria(<span class="dv">25</span>, saldo_inicial<span class="op">=</span>[<span class="st">"Cosas"</span>])</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>['Cosas']</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.depositar([<span class="st">"Otras cosas"</span>, <span class="st">"Aún más cosas"</span>])</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>cuenta.depositar([<span class="st">"Otras cosas"</span>, <span class="st">"Aún más cosas"</span>])</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>cuenta.consultar_saldo()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>['Cosas', 'Otras cosas', 'Aún más cosas']</code></pre>
 <p>En resumen, si bien Python nos permite especificar la interfaz de funciones y métodos mediante <em>docstrings</em> y anotaciones de tipo, al ser un lenguaje de <strong>tipado dinámico</strong> nada impide que se utilicen con tipos de datos para los que no fueron diseñados. En algunos casos esto puede resultar en comportamientos inesperados y, en otros, simplemente generar un error en tiempo de ejecución.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -622,32 +622,32 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="estado-interno">Estado interno</h2>
 <p>Ahora que sabemos qué estrategias podemos usar para que la interfaz de una clase sea clara, veamos cómo las clases definen y protegen su estado interno.</p>
 <p>Consideremos a la siguiente clase que sirve para representar a estudiantes de la Facultad de Ciencias Económicas y Estadística de la UNR.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Estudiante:</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, ingreso, carrera):</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.ingreso <span class="op">=</span> ingreso</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.carrera <span class="op">=</span> carrera</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, ingreso=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>ingreso<span class="sc">}</span><span class="ss">, carrera=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>carrera<span class="sc">}</span><span class="ss">)"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Estudiante:</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, ingreso, carrera):</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.ingreso <span class="op">=</span> ingreso</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.carrera <span class="op">=</span> carrera</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, ingreso=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>ingreso<span class="sc">}</span><span class="ss">, carrera=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>carrera<span class="sc">}</span><span class="ss">)"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cada objeto mantiene sus propias variables de instancia, como <code>nombre</code>, <code>ingreso</code> y <code>carrera</code>, con valores independientes de los de otros objetos de la misma clase. Esto implica que modificar los datos de una instancia no afecta en absoluto a las demás: cada objeto gestiona y conserva su propio estado interno, es decir, los objetos son dueños de sus variables.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1 <span class="op">=</span> Estudiante(<span class="st">"Mariano González"</span>, <span class="dv">2022</span>, <span class="st">"Contador Público"</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e2 <span class="op">=</span> Estudiante(<span class="st">"Leticia Gallardo"</span>, <span class="dv">2023</span>, <span class="st">"Licenciatura en Estadística"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>e1 <span class="op">=</span> Estudiante(<span class="st">"Mariano González"</span>, <span class="dv">2022</span>, <span class="st">"Contador Público"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>e2 <span class="op">=</span> Estudiante(<span class="st">"Leticia Gallardo"</span>, <span class="dv">2023</span>, <span class="st">"Licenciatura en Estadística"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Gracias al método <code>resumen</code>, podemos obtener una representación clara e intuitiva de cada objeto.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Mariano González, ingreso=2022, carrera=Contador Público)'</code></pre>
 <p>Aunque también es posible interactuar con los atributos de cada instancia de manera individual.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(e1.nombre, e1.carrera, sep<span class="op">=</span><span class="st">": "</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(e2.nombre, e2.carrera, sep<span class="op">=</span><span class="st">": "</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(e1.nombre, e1.carrera, sep<span class="op">=</span><span class="st">": "</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(e2.nombre, e2.carrera, sep<span class="op">=</span><span class="st">": "</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Mariano González: Contador Público
 Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <p>Esta interacción no solo implica que podemos acceder a los valores individuales de los atributos, sino también que tenemos la posibilidad de modificarlos.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1.ingreso <span class="op">=</span> <span class="dv">2019</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>e1.ingreso <span class="op">=</span> <span class="dv">2019</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Mariano González, ingreso=2019, carrera=Contador Público)'</code></pre>
 <p>Tenemos tanta flexibilidad al modificar los atributos de una instancia que incluso podemos asignarles valores que no tienen sentido dentro del contexto de la clase.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1.ingreso <span class="op">=</span> <span class="st">"Cualquier cosa"</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>e1.ingreso <span class="op">=</span> <span class="st">"Cualquier cosa"</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Mariano González, ingreso=Cualquier cosa, carrera=Contador Público)'</code></pre>
 <section id="setters-y-getters" class="level3">
 <h3 class="anchored" data-anchor-id="setters-y-getters"><em>Setters</em> y <em>getters</em></h3>
@@ -658,21 +658,21 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <li><em>setter</em>: método que asigna o actualiza el valor de un atributo de un objeto.</li>
 </ul>
 <p>Nuestra clase <code>Estudiante</code>, incorporando ahora estos métodos para acceder y modificar sus atributos, se vería de la siguiente manera:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-35"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-35-1"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Estudiante:</span>
-<span id="annotated-cell-35-2"><a href="#annotated-cell-35-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-35-3" class="code-annotation-target"><a href="#annotated-cell-35-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.setNombre(nombre)</span>
-<span id="annotated-cell-35-4"><a href="#annotated-cell-35-4" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-35-5" class="code-annotation-target"><a href="#annotated-cell-35-5" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> setNombre(<span class="va">self</span>, nombre):</span>
-<span id="annotated-cell-35-6"><a href="#annotated-cell-35-6" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> <span class="bu">isinstance</span>(nombre, <span class="bu">str</span>):</span>
-<span id="annotated-cell-35-7"><a href="#annotated-cell-35-7" aria-hidden="true" tabindex="-1"></a>...             <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="annotated-cell-35-8"><a href="#annotated-cell-35-8" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">else</span>:</span>
-<span id="annotated-cell-35-9"><a href="#annotated-cell-35-9" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
-<span id="annotated-cell-35-10"><a href="#annotated-cell-35-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-35-11" class="code-annotation-target"><a href="#annotated-cell-35-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> getNombre(<span class="va">self</span>):</span>
-<span id="annotated-cell-35-12"><a href="#annotated-cell-35-12" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>.nombre</span>
-<span id="annotated-cell-35-13"><a href="#annotated-cell-35-13" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-35-14"><a href="#annotated-cell-35-14" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="annotated-cell-35-15"><a href="#annotated-cell-35-15" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>getNombre()<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-35"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-35-1"><a href="#annotated-cell-35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Estudiante:</span>
+<span id="annotated-cell-35-2"><a href="#annotated-cell-35-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-35-3" class="code-annotation-target"><a href="#annotated-cell-35-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.setNombre(nombre)</span>
+<span id="annotated-cell-35-4"><a href="#annotated-cell-35-4" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-35-5" class="code-annotation-target"><a href="#annotated-cell-35-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> setNombre(<span class="va">self</span>, nombre):</span>
+<span id="annotated-cell-35-6"><a href="#annotated-cell-35-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(nombre, <span class="bu">str</span>):</span>
+<span id="annotated-cell-35-7"><a href="#annotated-cell-35-7" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="annotated-cell-35-8"><a href="#annotated-cell-35-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="annotated-cell-35-9"><a href="#annotated-cell-35-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
+<span id="annotated-cell-35-10"><a href="#annotated-cell-35-10" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-35" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-35-11" class="code-annotation-target"><a href="#annotated-cell-35-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> getNombre(<span class="va">self</span>):</span>
+<span id="annotated-cell-35-12"><a href="#annotated-cell-35-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.nombre</span>
+<span id="annotated-cell-35-13"><a href="#annotated-cell-35-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-35-14"><a href="#annotated-cell-35-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="annotated-cell-35-15"><a href="#annotated-cell-35-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>getNombre()<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-35" data-target-annotation="1">1</dt>
 <dd>
@@ -688,20 +688,20 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 </dd>
 </dl>
 <p>Creemos un nuevo objeto de tipo <code>Estudiante</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> Estudiante(<span class="st">"Macarena Gianetti"</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Estudiante(<span class="st">"Macarena Gianetti"</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Macarena Gianetti)'</code></pre>
 <p>Luego, obtenemos el nombre de la estudiante mediante su <em>getter</em>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.getNombre()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>e.getNombre()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Macarena Gianetti'</code></pre>
 <p>Si queremos modificarlo, no asignamos el valor directamente a una variable del objeto, sino que llamamos a su método <em>setter</em>. Este método se encarga de validar el dato y evitar que se asignen valores de tipos no permitidos.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.setNombre(<span class="dv">189</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>e.setNombre(<span class="dv">189</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>El nombre debe ser de tipo 'str'</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Macarena Gianetti)'</code></pre>
 <p>Sin embargo, Python no impide que, como usuarios, accedamos y modifiquemos directamente los atributos del objeto. Por ejemplo, podemos asignar un valor de cualquier tipo directamente a la variable <code>nombre</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.nombre <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>e.nombre <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=2)'</code></pre>
 <p>En ese caso, las ventajas de usar <em>setter</em> y <em>getter</em> dejan de tener efecto si el usuario decide “romper” el objeto ignorando su interfaz.</p>
 </section>
@@ -710,21 +710,21 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <p>En muchos lenguajes de programación existe una distinción clara entre atributos <strong>públicos</strong> y <strong>privados</strong>. Los públicos pueden ser accedidos tanto desde dentro como desde fuera de la clase, mientras que los privados solo pueden usarse internamente. Es decir, un método de la clase puede acceder a un atributo o método privado, pero el código externo que usa la clase no.</p>
 <p>En <strong>Python</strong> no existe una separación estricta entre atributos públicos y privados: <strong>todos son técnicamente públicos</strong>. Sin embargo, por <strong>convención</strong>, si el nombre de un atributo o método comienza con un guion bajo (<code>_</code>), esto indica que no debería ser accedido ni modificado desde el exterior de la clase, ya que está protegido.</p>
 <p>Siguiendo esta convención, en nuestro ejemplo con la clase <code>Estudiante</code> podemos usar un atributo llamado <code>_nombre</code> para almacenar el nombre del estudiante.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-46"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-46-1"><a href="#annotated-cell-46-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Estudiante:</span>
-<span id="annotated-cell-46-2"><a href="#annotated-cell-46-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
-<span id="annotated-cell-46-3"><a href="#annotated-cell-46-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.setNombre(nombre)</span>
-<span id="annotated-cell-46-4"><a href="#annotated-cell-46-4" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-46-5"><a href="#annotated-cell-46-5" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> setNombre(<span class="va">self</span>, nombre):</span>
-<span id="annotated-cell-46-6"><a href="#annotated-cell-46-6" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> <span class="bu">isinstance</span>(nombre, <span class="bu">str</span>):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-46-7" class="code-annotation-target"><a href="#annotated-cell-46-7" aria-hidden="true" tabindex="-1"></a>...             <span class="va">self</span>._nombre <span class="op">=</span> nombre</span>
-<span id="annotated-cell-46-8"><a href="#annotated-cell-46-8" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">else</span>:</span>
-<span id="annotated-cell-46-9"><a href="#annotated-cell-46-9" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
-<span id="annotated-cell-46-10"><a href="#annotated-cell-46-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-46-11"><a href="#annotated-cell-46-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> getNombre(<span class="va">self</span>):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-46-12" class="code-annotation-target"><a href="#annotated-cell-46-12" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>._nombre</span>
-<span id="annotated-cell-46-13"><a href="#annotated-cell-46-13" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-46-14"><a href="#annotated-cell-46-14" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="annotated-cell-46-15"><a href="#annotated-cell-46-15" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>getNombre()<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-46"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-46-1"><a href="#annotated-cell-46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Estudiante:</span>
+<span id="annotated-cell-46-2"><a href="#annotated-cell-46-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="annotated-cell-46-3"><a href="#annotated-cell-46-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.setNombre(nombre)</span>
+<span id="annotated-cell-46-4"><a href="#annotated-cell-46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-46-5"><a href="#annotated-cell-46-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> setNombre(<span class="va">self</span>, nombre):</span>
+<span id="annotated-cell-46-6"><a href="#annotated-cell-46-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(nombre, <span class="bu">str</span>):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-46-7" class="code-annotation-target"><a href="#annotated-cell-46-7" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>._nombre <span class="op">=</span> nombre</span>
+<span id="annotated-cell-46-8"><a href="#annotated-cell-46-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="annotated-cell-46-9"><a href="#annotated-cell-46-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
+<span id="annotated-cell-46-10"><a href="#annotated-cell-46-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-46-11"><a href="#annotated-cell-46-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> getNombre(<span class="va">self</span>):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-46" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-46-12" class="code-annotation-target"><a href="#annotated-cell-46-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>._nombre</span>
+<span id="annotated-cell-46-13"><a href="#annotated-cell-46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-46-14"><a href="#annotated-cell-46-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="annotated-cell-46-15"><a href="#annotated-cell-46-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>getNombre()<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-46" data-target-annotation="1">1</dt>
 <dd>
@@ -735,38 +735,38 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <span data-code-cell="annotated-cell-46" data-code-lines="12" data-code-annotation="2">Se devuelve el nombre usando la variable “privada” <code>_nombre</code>.</span>
 </dd>
 </dl>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> Estudiante(<span class="st">"Macarena Gianetti"</span>)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Estudiante(<span class="st">"Macarena Gianetti"</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Macarena Gianetti)'</code></pre>
 <p>Si asignamos un nuevo valor a la variable <code>nombre</code> de la instancia, no ocurre ningún efecto indeseado. El objeto crea y almacena esa nueva variable, pero el método <em>getter</em> no la utiliza, ya que sigue accediendo al atributo <code>_nombre</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.nombre <span class="op">=</span> <span class="st">"Algo nuevo"</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>e.nombre <span class="op">=</span> <span class="st">"Algo nuevo"</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Macarena Gianetti)'</code></pre>
 <p>Sin embargo, Python no evita que reemplacemos el valor de la variable <code>_nombre</code>, nuevamente rompiendo el encapsulamiento del objeto:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e._nombre <span class="op">=</span> <span class="st">"¡Ahora sí!"</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>e._nombre <span class="op">=</span> <span class="st">"¡Ahora sí!"</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=¡Ahora sí!)'</code></pre>
 </section>
 <section id="atributos-privados" class="level3">
 <h3 class="anchored" data-anchor-id="atributos-privados">Atributos privados</h3>
 <p>Si bien los objetos en Python no cuentan con atributos verdaderamente privados, es posible emular ese comportamiento. Para ello, se emplean nombres de variables que comienzan con dos guiones bajos (<code>__</code>). En nuestro ejemplo, podemos usar <code>__nombre</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Estudiante:</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.setNombre(nombre)</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> setNombre(<span class="va">self</span>, nombre):</span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> <span class="bu">isinstance</span>(nombre, <span class="bu">str</span>):</span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>...             <span class="va">self</span>.__nombre <span class="op">=</span> nombre</span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">else</span>:</span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
-<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> getNombre(<span class="va">self</span>):</span>
-<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>.__nombre</span>
-<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>getNombre()<span class="sc">}</span><span class="ss">)"</span></span>
-<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> Estudiante(<span class="st">"Macarena Gianetti"</span>)</span>
-<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Estudiante:</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.setNombre(nombre)</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> setNombre(<span class="va">self</span>, nombre):</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(nombre, <span class="bu">str</span>):</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.__nombre <span class="op">=</span> nombre</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> getNombre(<span class="va">self</span>):</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.__nombre</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>getNombre()<span class="sc">}</span><span class="ss">)"</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Estudiante(<span class="st">"Macarena Gianetti"</span>)</span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Macarena Gianetti)'</code></pre>
 <p>Si queremos acceder a la variable, obtendremos un error:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>e.__nombre</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -774,10 +774,10 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="pp">AttributeError</span>: <span class="st">'Estudiante'</span> <span class="bu">object</span> has no attribute <span class="st">'__nombre'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Por el contrario, si intentamos asignar un valor a esa variable, Python no mostrará ningún error y el método <em>getter</em> continuará devolviendo el valor esperado:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.__nombre <span class="op">=</span> <span class="st">"¿Y ahora?"</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.getNombre()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>e.__nombre <span class="op">=</span> <span class="st">"¿Y ahora?"</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>e.getNombre()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Macarena Gianetti'</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e._Estudiante__nombre</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>e._Estudiante__nombre</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Macarena Gianetti'</code></pre>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -791,7 +791,7 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <div class="callout-body-container callout-body">
 <p>Nunca debemos olvidar que Python no soporta atributos privados. Por lo tanto, en algún lado tiene que estar disponible el valor de la variable <code>__nombre</code> que se usa dentro de la clase.</p>
 <p>En particular, cuando el nombre de una variable comienza con dos guiones bajos, Python utiliza una técnica llamada <em>name mangling</em> o “estropeo de nombre”. Para ello, en realidad opera internamente con otra variable, cuyo nombre es el resultado de concatenar un guión bajo, el nombre de la clase y el nombre del atributo “privado”. Por ejemplo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e._Estudiante__nombre</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>e._Estudiante__nombre</span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co">'Macarena Gianetti'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
@@ -805,23 +805,23 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <li>El <em>setter</em> se declara con <code>@&lt;nombre&gt;.setter</code> y permite asignar valores a esa misma propiedad.</li>
 </ul>
 <p>Veamos un ejemplo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-60"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-60-1"><a href="#annotated-cell-60-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Estudiante:</span>
-<span id="annotated-cell-60-2"><a href="#annotated-cell-60-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-60-3" class="code-annotation-target"><a href="#annotated-cell-60-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="annotated-cell-60-4"><a href="#annotated-cell-60-4" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-60-5" class="code-annotation-target"><a href="#annotated-cell-60-5" aria-hidden="true" tabindex="-1"></a>...     <span class="op">@</span>property</span>
-<span id="annotated-cell-60-6"><a href="#annotated-cell-60-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> nombre(<span class="va">self</span>):</span>
-<span id="annotated-cell-60-7"><a href="#annotated-cell-60-7" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>._nombre</span>
-<span id="annotated-cell-60-8"><a href="#annotated-cell-60-8" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-60-9" class="code-annotation-target"><a href="#annotated-cell-60-9" aria-hidden="true" tabindex="-1"></a>...     <span class="op">@</span>nombre.setter</span>
-<span id="annotated-cell-60-10"><a href="#annotated-cell-60-10" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> nombre(<span class="va">self</span>, valor):</span>
-<span id="annotated-cell-60-11"><a href="#annotated-cell-60-11" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> <span class="bu">isinstance</span>(valor, <span class="bu">str</span>):</span>
-<span id="annotated-cell-60-12"><a href="#annotated-cell-60-12" aria-hidden="true" tabindex="-1"></a>...             <span class="va">self</span>._nombre <span class="op">=</span> valor</span>
-<span id="annotated-cell-60-13"><a href="#annotated-cell-60-13" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">else</span>:</span>
-<span id="annotated-cell-60-14"><a href="#annotated-cell-60-14" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
-<span id="annotated-cell-60-15"><a href="#annotated-cell-60-15" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-60-16"><a href="#annotated-cell-60-16" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-60-17" class="code-annotation-target"><a href="#annotated-cell-60-17" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-60"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-60-1"><a href="#annotated-cell-60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Estudiante:</span>
+<span id="annotated-cell-60-2"><a href="#annotated-cell-60-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-60-3" class="code-annotation-target"><a href="#annotated-cell-60-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="annotated-cell-60-4"><a href="#annotated-cell-60-4" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-60-5" class="code-annotation-target"><a href="#annotated-cell-60-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@property</span></span>
+<span id="annotated-cell-60-6"><a href="#annotated-cell-60-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> nombre(<span class="va">self</span>):</span>
+<span id="annotated-cell-60-7"><a href="#annotated-cell-60-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>._nombre</span>
+<span id="annotated-cell-60-8"><a href="#annotated-cell-60-8" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-60-9" class="code-annotation-target"><a href="#annotated-cell-60-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">@nombre.setter</span></span>
+<span id="annotated-cell-60-10"><a href="#annotated-cell-60-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> nombre(<span class="va">self</span>, valor):</span>
+<span id="annotated-cell-60-11"><a href="#annotated-cell-60-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(valor, <span class="bu">str</span>):</span>
+<span id="annotated-cell-60-12"><a href="#annotated-cell-60-12" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>._nombre <span class="op">=</span> valor</span>
+<span id="annotated-cell-60-13"><a href="#annotated-cell-60-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="annotated-cell-60-14"><a href="#annotated-cell-60-14" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"El nombre debe ser de tipo 'str'"</span>)</span>
+<span id="annotated-cell-60-15"><a href="#annotated-cell-60-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-60-16"><a href="#annotated-cell-60-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-60" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-60-17" class="code-annotation-target"><a href="#annotated-cell-60-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-60" data-target-annotation="1">1</dt>
 <dd>
@@ -840,20 +840,20 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <span data-code-cell="annotated-cell-60" data-code-lines="17" data-code-annotation="4">Ídem al punto anterior.</span>
 </dd>
 </dl>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> Estudiante(<span class="st">"Fernanda Cattalini"</span>)</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Estudiante(<span class="st">"Fernanda Cattalini"</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=Fernanda Cattalini)'</code></pre>
 <p>Es posible acceder al “atributo” <code>nombre</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.nombre</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>e.nombre</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Fernanda Cattalini'</code></pre>
 <p>También modificarlo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.nombre <span class="op">=</span> <span class="st">"María Fernanda Cattalini"</span></span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>e.nombre <span class="op">=</span> <span class="st">"María Fernanda Cattalini"</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=María Fernanda Cattalini)'</code></pre>
 <p>Y si se intenta asignarle un valor del tipo incorrecto, no se realiza la operación:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.nombre <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>e.nombre <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>El nombre debe ser de tipo 'str'</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>e.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=María Fernanda Cattalini)'</code></pre>
 </section>
 <section id="resumen" class="level3">
@@ -871,15 +871,15 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 <h3 class="anchored" data-anchor-id="atributos">Atributos</h3>
 <p>Es posible asignar un atributo de clase en el código que implementa a la clase misma. Simplemente hay que asignar una variable en el bloque de definción de la clase.</p>
 <p>En el ejemplo a continuación, creamos una clase <code>Gato</code> que representa animales de la especie <em>Felis catus</em>. Como todos los gatos son de la misma especie, tiene sentido utilizar un atributo de clase en vez de un atributo de instancia.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-71"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-71-1"><a href="#annotated-cell-71-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Gato:</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-71" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-71-2" class="code-annotation-target"><a href="#annotated-cell-71-2" aria-hidden="true" tabindex="-1"></a>...     especie <span class="op">=</span> <span class="st">"Felis catus"</span></span>
-<span id="annotated-cell-71-3"><a href="#annotated-cell-71-3" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-71-4"><a href="#annotated-cell-71-4" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, raza<span class="op">=</span><span class="va">None</span>):</span>
-<span id="annotated-cell-71-5"><a href="#annotated-cell-71-5" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="annotated-cell-71-6"><a href="#annotated-cell-71-6" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.raza <span class="op">=</span> raza</span>
-<span id="annotated-cell-71-7"><a href="#annotated-cell-71-7" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-71-8"><a href="#annotated-cell-71-8" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="annotated-cell-71-9"><a href="#annotated-cell-71-9" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Gato(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, raza=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>raza<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-71"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-71-1"><a href="#annotated-cell-71-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Gato:</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-71" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-71-2" class="code-annotation-target"><a href="#annotated-cell-71-2" aria-hidden="true" tabindex="-1"></a>    especie <span class="op">=</span> <span class="st">"Felis catus"</span></span>
+<span id="annotated-cell-71-3"><a href="#annotated-cell-71-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-71-4"><a href="#annotated-cell-71-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, raza<span class="op">=</span><span class="va">None</span>):</span>
+<span id="annotated-cell-71-5"><a href="#annotated-cell-71-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="annotated-cell-71-6"><a href="#annotated-cell-71-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.raza <span class="op">=</span> raza</span>
+<span id="annotated-cell-71-7"><a href="#annotated-cell-71-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-71-8"><a href="#annotated-cell-71-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="annotated-cell-71-9"><a href="#annotated-cell-71-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Gato(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, raza=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>raza<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-71" data-target-annotation="1">1</dt>
 <dd>
@@ -887,37 +887,37 @@ Leticia Gallardo: Licenciatura en Estadística</code></pre>
 </dd>
 </dl>
 <p>Luego de instanciar dos objetos, podemos ver que ambos tienen asociados el mismo valor de <code>especie</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> g1 <span class="op">=</span> Gato(<span class="st">"Chispitas"</span>)</span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> g2 <span class="op">=</span> Gato(<span class="st">"Bigotes"</span>, <span class="st">"Siamés"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(g1.especie)</span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(g2.especie)</span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(g1.especie <span class="op">==</span> g2.especie)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="op">=</span> Gato(<span class="st">"Chispitas"</span>)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>g2 <span class="op">=</span> Gato(<span class="st">"Bigotes"</span>, <span class="st">"Siamés"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g1.especie)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g2.especie)</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g1.especie <span class="op">==</span> g2.especie)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Felis catus
 Felis catus
 True</code></pre>
 <p>Podríamos utilizar un atributo de clase análogo para otra especie de animales: <em>Canis lupus familiaris</em>, popularmente conocidos como perro.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Perro:</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>...     especie <span class="op">=</span> <span class="st">"Canis lupus familiaris"</span></span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, raza<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.raza <span class="op">=</span> raza</span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Perro(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, raza=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>raza<span class="sc">}</span><span class="ss">)"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> perro <span class="op">=</span> Perro(<span class="st">"Bruno"</span>)</span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(perro.resumen())</span>
-<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(perro.especie)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Perro:</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>    especie <span class="op">=</span> <span class="st">"Canis lupus familiaris"</span></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, raza<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.raza <span class="op">=</span> raza</span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Perro(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, raza=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>raza<span class="sc">}</span><span class="ss">)"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>perro <span class="op">=</span> Perro(<span class="st">"Bruno"</span>)</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(perro.resumen())</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(perro.especie)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Perro(nombre=Bruno, raza=None)
 Canis lupus familiaris</code></pre>
 <p>Otro escenario donde tiene sentido práctico utilizar un atributo de clase es cuando se necesita mantener un estado global.</p>
 <p>La clase <code>Usuario</code> define usuarios de una cierta aplicación. En ella, se tiene la variable <code>total_usuarios</code> que es un contador de los usuarios que se han creado a partir de la clase.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-78"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-78-1"><a href="#annotated-cell-78-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Usuario:</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-78" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-78-2" class="code-annotation-target"><a href="#annotated-cell-78-2" aria-hidden="true" tabindex="-1"></a>...     total_usuarios <span class="op">=</span> <span class="dv">0</span></span>
-<span id="annotated-cell-78-3"><a href="#annotated-cell-78-3" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-78-4"><a href="#annotated-cell-78-4" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
-<span id="annotated-cell-78-5"><a href="#annotated-cell-78-5" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-78" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-78-6" class="code-annotation-target"><a href="#annotated-cell-78-6" aria-hidden="true" tabindex="-1"></a>...         Usuario.total_usuarios <span class="op">+=</span> <span class="dv">1</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-78"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-78-1"><a href="#annotated-cell-78-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Usuario:</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-78" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-78-2" class="code-annotation-target"><a href="#annotated-cell-78-2" aria-hidden="true" tabindex="-1"></a>    total_usuarios <span class="op">=</span> <span class="dv">0</span></span>
+<span id="annotated-cell-78-3"><a href="#annotated-cell-78-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-78-4"><a href="#annotated-cell-78-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="annotated-cell-78-5"><a href="#annotated-cell-78-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-78" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-78-6" class="code-annotation-target"><a href="#annotated-cell-78-6" aria-hidden="true" tabindex="-1"></a>        Usuario.total_usuarios <span class="op">+=</span> <span class="dv">1</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-78" data-target-annotation="1">1</dt>
 <dd>
@@ -928,31 +928,31 @@ Canis lupus familiaris</code></pre>
 <span data-code-cell="annotated-cell-78" data-code-lines="6" data-code-annotation="2">Cada vez que se crea un nuevo usuario, se incrementa el valor del atributo de la clase <code>total_usuarios</code> en 1.</span>
 </dd>
 </dl>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> u1 <span class="op">=</span> Usuario(<span class="st">"Ana"</span>)</span>
-<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> u2 <span class="op">=</span> Usuario(<span class="st">"Luis"</span>)</span>
-<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(Usuario.total_usuarios)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>u1 <span class="op">=</span> Usuario(<span class="st">"Ana"</span>)</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>u2 <span class="op">=</span> Usuario(<span class="st">"Luis"</span>)</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Usuario.total_usuarios)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>2</code></pre>
 <p>Dado que las instancias también pueden acceder a los atributos de clase, se tiene:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(u1.total_usuarios)</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(u2.total_usuarios)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(u1.total_usuarios)</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(u2.total_usuarios)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>2
 2</code></pre>
 </section>
 <section id="métodos" class="level3">
 <h3 class="anchored" data-anchor-id="métodos">Métodos</h3>
 <p>Para definir un método de clase se usa el decorador <code>@classmethod</code>, incluido en Python. Al aplicarlo, el método recibe como primer argumento a la clase en lugar de a una instancia, por lo que la convención es nombrar ese parámetro como <code>cls</code> en vez de <code>self</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-83"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-83-1"><a href="#annotated-cell-83-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Estudiante:</span>
-<span id="annotated-cell-83-2"><a href="#annotated-cell-83-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, ingreso):</span>
-<span id="annotated-cell-83-3"><a href="#annotated-cell-83-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
-<span id="annotated-cell-83-4"><a href="#annotated-cell-83-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.ingreso <span class="op">=</span> ingreso</span>
-<span id="annotated-cell-83-5"><a href="#annotated-cell-83-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-83" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-83-6" class="code-annotation-target"><a href="#annotated-cell-83-6" aria-hidden="true" tabindex="-1"></a>...     <span class="op">@</span>classmethod</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-83" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-83-7" class="code-annotation-target"><a href="#annotated-cell-83-7" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> desde_texto(cls, texto):</span>
-<span id="annotated-cell-83-8"><a href="#annotated-cell-83-8" aria-hidden="true" tabindex="-1"></a>...         nombre, ingreso <span class="op">=</span> texto.split(<span class="st">","</span>)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-83" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-83-9" class="code-annotation-target"><a href="#annotated-cell-83-9" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> cls(nombre, <span class="bu">int</span>(ingreso))</span>
-<span id="annotated-cell-83-10"><a href="#annotated-cell-83-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-83-11"><a href="#annotated-cell-83-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="annotated-cell-83-12"><a href="#annotated-cell-83-12" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, ingreso=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>ingreso<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-83"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-83-1"><a href="#annotated-cell-83-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Estudiante:</span>
+<span id="annotated-cell-83-2"><a href="#annotated-cell-83-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, ingreso):</span>
+<span id="annotated-cell-83-3"><a href="#annotated-cell-83-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="annotated-cell-83-4"><a href="#annotated-cell-83-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.ingreso <span class="op">=</span> ingreso</span>
+<span id="annotated-cell-83-5"><a href="#annotated-cell-83-5" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-83" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-83-6" class="code-annotation-target"><a href="#annotated-cell-83-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">@classmethod</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-83" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-83-7" class="code-annotation-target"><a href="#annotated-cell-83-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> desde_texto(cls, texto):</span>
+<span id="annotated-cell-83-8"><a href="#annotated-cell-83-8" aria-hidden="true" tabindex="-1"></a>        nombre, ingreso <span class="op">=</span> texto.split(<span class="st">","</span>)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-83" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-83-9" class="code-annotation-target"><a href="#annotated-cell-83-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> cls(nombre, <span class="bu">int</span>(ingreso))</span>
+<span id="annotated-cell-83-10"><a href="#annotated-cell-83-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-83-11"><a href="#annotated-cell-83-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="annotated-cell-83-12"><a href="#annotated-cell-83-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Estudiante(nombre=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss">, ingreso=</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>ingreso<span class="sc">}</span><span class="ss">)"</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-83" data-target-annotation="1">1</dt>
 <dd>
@@ -968,38 +968,38 @@ Canis lupus familiaris</code></pre>
 </dd>
 </dl>
 <p>Aunque exista exista un método de clase para crear objetos, se puede seguir creando objetos de la manera usual:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1 <span class="op">=</span> Estudiante(<span class="st">"El Nombre"</span>, <span class="dv">2023</span>)</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>e1 <span class="op">=</span> Estudiante(<span class="st">"El Nombre"</span>, <span class="dv">2023</span>)</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>e1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=El Nombre, ingreso=2023)'</code></pre>
 <p>La diferencia es que ahora podemos usar el método <code>desde_texto</code> para crear un objeto <code>Estudiante</code> a partir de una cadena de texto con un formato específico.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e2 <span class="op">=</span> Estudiante.desde_texto(<span class="st">"El Estudiante, 2024"</span>)</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e2.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>e2 <span class="op">=</span> Estudiante.desde_texto(<span class="st">"El Estudiante, 2024"</span>)</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>e2.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Estudiante(nombre=El Estudiante, ingreso=2024)'</code></pre>
 <p>Los atributos del objeto muestran los valores que esperamos en este caso.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> e2.nombre, e2.ingreso</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>e2.nombre, e2.ingreso</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>('El Estudiante', 2024)</code></pre>
 <p>Otro escenario en el que resulta útil usar métodos de clase es cuando queremos crear objetos “preconfigurados”.</p>
 <p>Por ejemplo, si tenemos una clase que representa sándwiches con una cantidad arbitraria de ingredientes, podemos definir métodos de clase que construyan instancias con combinaciones de ingredientes <strong>preestablecidas</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Sandwich:</span>
-<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="op">*</span>ingredientes):</span>
-<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.ingredientes <span class="op">=</span> ingredientes</span>
-<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>...     <span class="op">@</span>classmethod</span>
-<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> jyq(cls):</span>
-<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> cls(<span class="st">"jamón"</span>, <span class="st">"queso"</span>)</span>
-<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a>...     <span class="op">@</span>classmethod</span>
-<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> mediterraneo(cls):</span>
-<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> cls(<span class="st">"tomate"</span>, <span class="st">"mozzarella"</span>, <span class="st">"rúcula"</span>, <span class="st">"aceitunas"</span>)</span>
-<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="ss">f"Sandwich de: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(<span class="va">self</span>.ingredientes)<span class="sc">}</span><span class="ss">"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> s1 <span class="op">=</span> Sandwich(<span class="st">"tomate"</span>, <span class="st">"lechuga"</span>, <span class="st">"queso"</span>)</span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> s1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Sandwich:</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="op">*</span>ingredientes):</span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.ingredientes <span class="op">=</span> ingredientes</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@classmethod</span></span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> jyq(cls):</span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> cls(<span class="st">"jamón"</span>, <span class="st">"queso"</span>)</span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">@classmethod</span></span>
+<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mediterraneo(cls):</span>
+<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> cls(<span class="st">"tomate"</span>, <span class="st">"mozzarella"</span>, <span class="st">"rúcula"</span>, <span class="st">"aceitunas"</span>)</span>
+<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Sandwich de: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(<span class="va">self</span>.ingredientes)<span class="sc">}</span><span class="ss">"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> Sandwich(<span class="st">"tomate"</span>, <span class="st">"lechuga"</span>, <span class="st">"queso"</span>)</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>s1.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Sandwich de: tomate, lechuga, queso'</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Sandwich.jyq().resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>Sandwich.jyq().resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Sandwich de: jamón, queso'</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Sandwich.mediterraneo().resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>Sandwich.mediterraneo().resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'Sandwich de: tomate, mozzarella, rúcula, aceitunas'</code></pre>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">

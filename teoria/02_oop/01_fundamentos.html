@@ -337,27 +337,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introducción" class="level2">
 <h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
-<p>Para hablar de programación orientada a objetos (OOP, por sus siglas en inglés), podemos empezar preguntándonos qué es un objeto. Aunque no solemos pensar en ello de forma consciente, porque todos podemos distinguir un objeto de lo que no lo es, vale la pena definirlo como algo tangible, que se puede percibir, tocar y manipular. ¡Nos pasamos toda la vida interactuando con objetos!</p>
-<p>En el mundo real, los objetos tienen atributos o propiedades que los describen. Por ejemplo, un televisor tiene forma, tamaño, color, peso, entre otros. Además, los objetos también pueden realizar acciones. Siguiendo con el ejemplo del televisor, puede encenderse, apagarse, cambiar de canal, modificar la fuente de entrada para ver una serie en Netflix o simplemente reproducir música.</p>
+<p>Para hablar de programación orientada a objetos (OOP, por sus siglas en inglés), podemos empezar preguntándonos qué es un objeto. Aunque no solemos pensar en ello de forma consciente, porque todos podemos distinguir un objeto de lo que no lo es, vale la pena definirlo como algo tangible que se puede percibir, tocar y manipular. ¡Nos pasamos toda la vida interactuando con objetos!</p>
+<p>En el mundo real, los objetos tienen atributos o propiedades que los describen. Por ejemplo, un televisor tiene forma, tamaño, color, peso, entre otros. Además, los objetos también pueden realizar acciones. Siguiendo con el ejemplo del televisor, puede encenderse, apagarse, modificar el brillo, la fuente de entrada para ver una serie en Netflix o simplemente reproducir música.</p>
 <p>En programación, la definición de objeto no difiere mucho de la anterior. Aunque los objetos no sean elementos físicos, representan entidades que poseen atributos y pueden ejecutar acciones.</p>
 <p>La programación orientada a objetos es un paradigma que organiza el código en torno a estos objetos, que combinan datos (atributos) y comportamientos o acciones (métodos) dentro de una misma entidad. Este enfoque permite no solo crear e interactuar con objetos, sino también definir nuestros propios tipos de objetos, adaptados a las necesidades del programa.</p>
 </section>
 <section id="objetos-familiares" class="level2">
 <h2 class="anchored" data-anchor-id="objetos-familiares">Objetos familiares</h2>
 <p>Así como interactuamos con objetos en la vida real desde nuestros primeros días, también lo hemos estado haciendo en Python desde el comienzo. Por ejemplo, cada vez que creamos una cadena de texto, en realidad estamos creando un objeto de la clase <code>str</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">"Hola, soy un objeto de tipo 'str'."</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="st">"¿Y yo? ¡Yo también soy un objeto de tipo 'str'!"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="ss">f"x = </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="ss">f"y = </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">"Hola, soy un objeto de tipo 'str'."</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="st">"¿Y yo? ¡Yo también soy un objeto de tipo 'str'!"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"x = </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"y = </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>x = Hola, soy un objeto de tipo 'str'.
 y = ¿Y yo? ¡Yo también soy un objeto de tipo 'str'!</code></pre>
 <p>Tanto <code>x</code> como <code>y</code> son objetos del mismo tipo: cadenas de caracteres, que en Python corresponden al tipo <code>str</code>. Sin embargo, <code>x</code> e <code>y</code> no son el mismo objeto, sino dos objetos distintos. Esto puede comprobarse no solo por su contenido (uno de sus atributos), sino también comparando sus identificadores únicos (ID), que son diferentes.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="bu">id</span>(x))</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="bu">id</span>(y))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(x))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">id</span>(y))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>140223504929120
 140223504962192</code></pre>
 <p>A su vez, los objetos de tipo <code>str</code> pueden realizar ciertas acciones. Por ejemplo, si queremos convertir todas las letras de una cadena a mayúsculas, podemos hacer lo siguiente:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x.upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x.upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>"HOLA, SOY UN OBJETO DE TIPO 'STR'."</code></pre>
 <p>Las cadenas de caracteres son uno de los muchos tipos de objetos con los que ya hemos interactuado. Todas las estructuras de datos que hemos utilizado —desde las más simples, como los enteros, flotantes y booleanos, hasta las más complejas, como listas, tuplas y diccionarios— no son más que distintos tipos de objetos.</p>
 <p>En Python, cada tipo de dato está implementado como una clase, y trabajar con estas clases no solo nos permite crear nuestros propios tipos de datos según nuestras necesidades, sino también interactuar con los objetos que generamos a partir de ellas.</p>
@@ -365,9 +365,9 @@ y = ¿Y yo? ¡Yo también soy un objeto de tipo 'str'!</code></pre>
 <section id="clases-y-objetos" class="level2">
 <h2 class="anchored" data-anchor-id="clases-y-objetos">Clases y objetos</h2>
 <p>En el contexto de la programación orientada a objetos, se utilizan <strong>clases</strong> para definir nuevas clases o tipos de objetos, especificando qué atributos deben tener y qué acciones pueden realizar. De forma informal, una clase puede pensarse como una plantilla que determina cómo se ve y se comporta un objeto.</p>
-<p>Por ejemplo, imaginemos un molde para hacer budines. Este molde permite producir budines, pero no es un budin en sí. De hecho, se parece más a una fábrica de budines.</p>
-<p>El molde define aspectos estructurales como la forma y el tamaño de los budines, pero no determina por completo cómo serán. Podemos llenarlo según diferentes recetas, bases, colores, aromas, coberturas, etc. y así obtener resultados variados a partir del mismo molde.</p>
-<p>En programación orientada a objetos, una clase cumple un rol similar: define la estructura y el comportamiento general de los objetos que se crearán a partir de ella. Los objetos, en cambio, son las instancias concretas generadas a partir de esa clase, cada una con sus propias características particulares, como cada budin que sale del molde.</p>
+<p>Por ejemplo, imaginemos un molde para hacer budines. Este molde permite producir budines, pero no es un budín en sí. De hecho, se parece más a una fábrica de budines que a un budín.</p>
+<p>El molde define aspectos estructurales como la forma y el tamaño de los budines, pero no determina por completo cómo serán. Podemos usarlo para hacer budines según diferentes recetas, bases, colores, aromas, coberturas, etc. y así obtener resultados variados a partir del mismo molde.</p>
+<p>En programación orientada a objetos, una clase cumple un rol similar: define la estructura y el comportamiento general de los objetos que se crearán a partir de ella. Los objetos, en cambio, son las instancias concretas generadas a partir de esa clase, cada una con sus propias características particulares, como cada budín que sale del molde.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -392,14 +392,14 @@ y = ¿Y yo? ¡Yo también soy un objeto de tipo 'str'!</code></pre>
 <h3 class="anchored" data-anchor-id="ejemplo-la-clase-dict">Ejemplo: la clase <code>dict</code></h3>
 <p>Los diccionarios de Python son instancias de la clase <code>dict</code>. Es esta clase la que define, entre otras cosas, que los diccionarios tienen claves y valores.</p>
 <p>En el ejemplo debajo, tanto <code>d1</code> como <code>d2</code> son instancias u objetos de la clase <code>dict</code> (es decir, son objetos creados con el mismo molde). Sin embargo, <code>d1</code> y <code>d2</code> son objetos distintos, que además tienen diferentes valores para sus atributos (claves y valores).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d1 <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">100</span>, <span class="st">"b"</span>: <span class="dv">250</span>}</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d2 <span class="op">=</span> {<span class="st">"m"</span>: <span class="dv">20</span>, <span class="st">"n"</span>: <span class="va">False</span>}</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="bu">type</span>(d1))</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="bu">type</span>(d2))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>d1 <span class="op">=</span> {<span class="st">"a"</span>: <span class="dv">100</span>, <span class="st">"b"</span>: <span class="dv">250</span>}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>d2 <span class="op">=</span> {<span class="st">"m"</span>: <span class="dv">20</span>, <span class="st">"n"</span>: <span class="va">False</span>}</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(d1))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(d2))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>&lt;class 'dict'&gt;
 &lt;class 'dict'&gt;</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(d1 <span class="kw">is</span> d2)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(d1 <span class="op">==</span> d2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d1 <span class="kw">is</span> d2)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d1 <span class="op">==</span> d2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>False
 False</code></pre>
 <p>Si consultamos la ayuda de <code>dict</code> mediante <code>help(dict)</code>, podemos ver que Python dice que esto se refiere a una clase:</p>
@@ -428,9 +428,9 @@ False</code></pre>
 <h2 class="anchored" data-anchor-id="creando-nuestras-propias-clases">Creando nuestras propias clases</h2>
 <p>La definición de una clase, que crea un nuevo tipo de dato, define los atributos de un objeto (datos que representan estado) y las cosas que este objeto puede hacer (funciones que representan comportamiento).</p>
 <p>Para definir una nueva clase en Python se usa la sentencia <code>class</code> seguida del nombre de la clase. Veamos el siguiente ejemplo comentado línea a línea.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-12"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-12-1" class="code-annotation-target"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-12-2" class="code-annotation-target"><a href="#annotated-cell-12-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-12-3" class="code-annotation-target"><a href="#annotated-cell-12-3" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Creando nuevo budin"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-12"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-12-1" class="code-annotation-target"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-12-2" class="code-annotation-target"><a href="#annotated-cell-12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-12-3" class="code-annotation-target"><a href="#annotated-cell-12-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Creando nuevo budin"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-12" data-target-annotation="1">1</dt>
 <dd>
@@ -445,25 +445,25 @@ False</code></pre>
 <span data-code-cell="annotated-cell-12" data-code-lines="3" data-code-annotation="3">Esta línea se ejecuta cada vez que se crea un nuevo objeto de la clase. En este caso, imprime un mensaje en pantalla como parte del proceso de inicialización.</span>
 </dd>
 </dl>
-<p>Definir una clase no crea ningún objeto por sí misma; simplemente construye el molde o plantilla a partir del cual se podrán crear objetos más adelante.</p>
+<p>La definición de una clase no crea ningún objeto por sí misma; simplemente construye el molde o plantilla a partir del cual se podrán crear objetos más adelante.</p>
 <p>Para crear un objeto a partir de una clase, es necesario “llamar” a la clase, lo que genera una nueva instancia de esa clase.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1 <span class="op">=</span> Budin()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<pre class="text"><code>Creando nuevo budin</code></pre>
-<p>La variable <code>budin1</code> representa un objeto de la clase <code>Budin</code>. En otras palabras, hemos creado, al menos en código, un budin.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>budin1 <span class="op">=</span> Budin()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<pre class="text"><code>Creando nuevo budín</code></pre>
+<p>La variable <code>budin1</code> representa un objeto de la clase <code>Budin</code>. En otras palabras, hemos creado, al menos en código, un budín.</p>
 <p>Como las clases son reutilizables, podemos crear tantos budines como queramos, simplemente creando nuevas instancias de la clase.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2 <span class="op">=</span> Budin()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<pre class="text"><code>Creando nuevo budin</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>budin2 <span class="op">=</span> Budin()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<pre class="text"><code>Creando nuevo budín</code></pre>
 <p>Al imprimir estos objetos, obtenemos una representación generada automáticamente por Python. En ella podemos ver que ambos son instancias de la clase <code>Budin</code>, aunque también queda claro que ocupan ubicaciones distintas en memoria. Esto confirma que se trata de objetos distintos, aunque provengan de la misma clase.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin1)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin1)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>&lt;__main__.Budin object at 0x7f8854339220&gt;
 &lt;__main__.Budin object at 0x7f8854338530&gt;</code></pre>
 <section id="parámetros-de-inicialización" class="level3">
 <h3 class="anchored" data-anchor-id="parámetros-de-inicialización">Parámetros de inicialización</h3>
 <p>También es posible pasar argumentos al momento de inicializar un objeto. Previamente, tenemos que agregar los parámetros necesarios en el método de inicialización.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-19"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-19-1"><a href="#annotated-cell-19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-19-2" class="code-annotation-target"><a href="#annotated-cell-19-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-19-3" class="code-annotation-target"><a href="#annotated-cell-19-3" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f"Creando nuevo budin de </span><span class="sc">{</span>base<span class="sc">}</span><span class="ss">"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-19"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-19-1"><a href="#annotated-cell-19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-19-2" class="code-annotation-target"><a href="#annotated-cell-19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-19" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-19-3" class="code-annotation-target"><a href="#annotated-cell-19-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Creando nuevo budín de </span><span class="sc">{</span>base<span class="sc">}</span><span class="ss">"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-19" data-target-annotation="1">1</dt>
 <dd>
@@ -471,14 +471,14 @@ False</code></pre>
 </dd>
 <dt data-target-cell="annotated-cell-19" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-19" data-code-lines="3" data-code-annotation="2">El valor de <code>base</code> se utiliza para mostrar un mensaje de inicialización personalizado, indicando la base del budin.</span>
+<span data-code-cell="annotated-cell-19" data-code-lines="3" data-code-annotation="2">El valor de <code>base</code> se utiliza para mostrar un mensaje de inicialización personalizado, indicando la base del budín.</span>
 </dd>
 </dl>
 <p>Gracias a esto, ahora podemos crear budines con distintas bases, como vainilla o chocolate, entre otras.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1 <span class="op">=</span> Budin(<span class="st">"vainilla"</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2 <span class="op">=</span> Budin(<span class="st">"chocolate"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<pre class="text"><code>Creando nuevo budin de vainilla
-Creando nuevo budin de chocolate</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>budin1 <span class="op">=</span> Budin(<span class="st">"vainilla"</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>budin2 <span class="op">=</span> Budin(<span class="st">"chocolate"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<pre class="text"><code>Creando nuevo budín de vainilla
+Creando nuevo budín de chocolate</code></pre>
 <p>Sin embargo, podemos observar que ninguna de estas dos instancias recuerda algo relacionado con la base con la que fue inicializado.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>budin1.base</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="code-error">
@@ -511,9 +511,9 @@ Creando nuevo budin de chocolate</code></pre>
 <p>Los atributos son variables asociadas a un objeto que representan su estado.</p>
 <p>En Python, los atributos no requieren ninguna sintaxis especial para ser declarados. Simplemente se crean dentro de un método (generalmente en <code>__init__</code>) usando la notación <code>self.&lt;atributo&gt;</code>.</p>
 <p>En nuestro ejemplo de la clase <code>Budin</code>, podemos hacer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-24"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="annotated-cell-24-2"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base):</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-24-3" class="code-annotation-target"><a href="#annotated-cell-24-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-24"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="annotated-cell-24-2"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-24-3" class="code-annotation-target"><a href="#annotated-cell-24-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-24" data-target-annotation="1">1</dt>
 <dd>
@@ -521,25 +521,25 @@ Creando nuevo budin de chocolate</code></pre>
 </dd>
 </dl>
 <p>Aunque la representación automática del objeto no cambia, ahora el objeto tiene <strong>estado</strong>: puede “recordar” la base con la que fue inicializado.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1 <span class="op">=</span> Budin(<span class="st">"vainilla"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>budin1 <span class="op">=</span> Budin(<span class="st">"vainilla"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>budin1</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>&lt;__main__.Budin at 0x7f8854339c70&gt;</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1.base</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>budin1.base</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'vainilla'</code></pre>
 <p>En este caso, la variable <code>base</code> es una <strong>variable de instancia</strong> o <strong>atributo de instancia</strong>. Estas variables existen solo dentro del objeto que las contiene, y no afectan a otras instancias de la misma clase. Así, distintos objetos de una misma clase pueden tener valores diferentes en sus atributos.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2 <span class="op">=</span> Budin(<span class="st">"chocolate"</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin2.base)</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin1.base)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>budin2 <span class="op">=</span> Budin(<span class="st">"chocolate"</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin2.base)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin1.base)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>chocolate
 vainilla</code></pre>
 <p>Los atributos también pueden definirse o modificarse fuera de los métodos de la clase.</p>
 <p>Por ejemplo, es posible cambiar el valor de un atributo simplemente asignándole un nuevo valor utilizando la instancia:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1.base <span class="op">=</span> <span class="st">"marmolado"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1.base</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>budin1.base <span class="op">=</span> <span class="st">"marmolado"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>budin1.base</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'marmolado'</code></pre>
 <p>Y también se puede asignarle un valor a un nuevo atributo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1.cobertura <span class="op">=</span> <span class="st">"chocolate"</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin1.base, budin1.cobertura, sep<span class="op">=</span><span class="st">", "</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>budin1.cobertura <span class="op">=</span> <span class="st">"chocolate"</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin1.base, budin1.cobertura, sep<span class="op">=</span><span class="st">", "</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>marmolado, chocolate</code></pre>
 <p>Este nuevo atributo existe únicamente en la instancia a la que fue asignado (<code>budin1</code>). Es decir, <code>budin2</code> no tiene un atributo llamado <code>cobertura</code>, ya que no fue definido durante su inicialización ni se le asignó más adelante.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>budin2.cobertura</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -549,20 +549,21 @@ vainilla</code></pre>
 <p>En Python, los atributos de instancia son independientes entre objetos: si un atributo no se define explícitamente en una instancia, simplemente no existe en ella.</p>
 <section id="atributos-opcionales" class="level3">
 <h3 class="anchored" data-anchor-id="atributos-opcionales">Atributos opcionales</h3>
-<p>Aunque Python permite crear nuevos atributos fuera del proceso de inicialización de un objeto, eso no significa que sea una práctica recomendable en todos los casos.</p>
+<p>Aunque Python permite crear nuevos atributos fuera del proceso de inicialización de un objeto, esto no significa que sea una práctica recomendable en todos los casos.</p>
 <p>Asignar un atributo directamente a una instancia específica puede generar inconsistencias: terminamos con objetos de la misma clase que no comparten la misma estructura de atributos. Esto puede dificultar la lectura del código y producir errores si intentamos acceder a un atributo que no existe en todas las instancias.</p>
 <p>Una alternativa más clara y segura es definir atributos opcionales dentro del método <code>__init__</code>, asignándoles un valor por defecto como <code>None</code>. De esta forma, todas las instancias tendrán los mismos atributos, aunque algunos puedan no tener un valor definido inicialmente.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin1 <span class="op">=</span> Budin(<span class="st">"vainilla"</span>, <span class="st">"chocolate"</span>)</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2 <span class="op">=</span> Budin(<span class="st">"chocolate"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin1.base, budin1.cobertura, sep<span class="op">=</span><span class="st">", "</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin2.base, budin2.cobertura, sep<span class="op">=</span><span class="st">", "</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>budin1 <span class="op">=</span> Budin(<span class="st">"vainilla"</span>, <span class="st">"chocolate"</span>)</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>budin2 <span class="op">=</span> Budin(<span class="st">"chocolate"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin1.base, budin1.cobertura, sep<span class="op">=</span><span class="st">", "</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin2.base, budin2.cobertura, sep<span class="op">=</span><span class="st">", "</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>vainilla, chocolate
 chocolate, None</code></pre>
-<p>Con este enfoque, ambos objetos tienen los mismos atributos (<code>base</code> y <code>cobertura</code>), lo que mantiene la consistencia entre instancias de la clase. En el caso de <code>budin2</code>, como no se especificó ninguna cobertura al crear el objeto, el valor de <code>cobertura</code> es <code>None</code>, lo cual indica que ese budin no tiene ninguna cobertura.</p>
+<p>Con este enfoque, ambos objetos tienen los mismos atributos (<code>base</code> y <code>cobertura</code>), lo que mantiene la consistencia entre instancias de la clase. En el caso de <code>budin2</code>, como no se especificó ninguna cobertura al crear el objeto, el valor de <code>cobertura</code> es <code>None</code>, lo cual indica que ese budín no tiene ninguna cobertura.</p>
 </section>
 </section>
 <section id="métodos" class="level2">
@@ -571,7 +572,7 @@ chocolate, None</code></pre>
 <p>Para llevar a cabo acciones, los objetos utilizan <strong>métodos</strong>.</p>
 <p>Los métodos son <strong>funciones asociadas a una clase determinada</strong>, y permiten que los objetos de la clase realicen operaciones o modifiquen su propio estado.</p>
 <p>Por ejemplo, el método <code>upper</code> es un método propio de los objetos de tipo <code>str</code> (cadenas de caracteres) y podemos invocarlo de la siguiente manera:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"Rosario"</span>.upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Rosario"</span>.upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>'ROSARIO'</code></pre>
 <p>Pero no podemos llamarlo sobre una lista:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">"Rosario"</span>, <span class="st">"Santa Fe"</span>].upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -581,25 +582,25 @@ chocolate, None</code></pre>
 <p>En el caso de las clases creadas por nosotros, los métodos no son más que funciones definidas dentro de la clase.</p>
 <p>A diferencia de las funciones normales, todos los métodos deben tener al menos un parámetro especial, llamado <code>self</code> por convención, que representa a la instancia sobre la que se está llamando el método.</p>
 <p>Gracias a <code>self</code>, los métodos pueden acceder y modificar los atributos del objeto:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
-<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
-<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin <span class="op">=</span> Budin(base<span class="op">=</span><span class="st">"Vainilla"</span>, cobertura<span class="op">=</span><span class="st">"Chocolate"</span>)</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>budin <span class="op">=</span> Budin(base<span class="op">=</span><span class="st">"Vainilla"</span>, cobertura<span class="op">=</span><span class="st">"Chocolate"</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>budin</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>&lt;__main__.Budin at 0x7f885433b440&gt;</code></pre>
 <p>Para ejecutar el método, se lo llama de la misma forma que a cualquier otro método.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>budín.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Budin
  - Base: Vainilla
  - Cobertura: Chocolate</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2 <span class="op">=</span> Budin(base<span class="op">=</span><span class="st">"Limon"</span>, cobertura<span class="op">=</span><span class="st">"Chocolate blanco"</span>)</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>budin2 <span class="op">=</span> Budin(base<span class="op">=</span><span class="st">"Limon"</span>, cobertura<span class="op">=</span><span class="st">"Chocolate blanco"</span>)</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>budin2.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Budin
  - Base: Limon
  - Cobertura: Chocolate blanco</code></pre>
@@ -607,24 +608,25 @@ chocolate, None</code></pre>
 <h3 class="anchored" data-anchor-id="métodos-que-modifican-estado">Métodos que modifican estado</h3>
 <p>El método <code>mostrar_info</code> no altera el estado del objeto: simplemente muestra un resumen de su estado actual.</p>
 <p>Sin embargo, como los métodos acceden al objeto mediante <code>self</code>, también pueden <strong>modificar su estado</strong>.</p>
-<p>En el siguiente ejemplo, el método <code>quitar_cobertura</code> elimina cualquier cobertura que pueda tener nuestro budin.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
-<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> quitar_cobertura(<span class="va">self</span>):</span>
-<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin <span class="op">=</span> Budin(<span class="st">"Chocolate"</span>, <span class="st">"Chocolate"</span>)</span>
-<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.mostrar_info()</span>
-<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">""</span>)</span>
-<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.quitar_cobertura()</span>
-<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En el siguiente ejemplo, el método <code>quitar_cobertura</code> elimina cualquier cobertura que pueda tener nuestro budín.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> quitar_cobertura(<span class="va">self</span>):</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>budin <span class="op">=</span> Budin(<span class="st">"Chocolate"</span>, <span class="st">"Chocolate"</span>)</span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a>budin.mostrar_info()</span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>budin.quitar_cobertura()</span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>budin.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Budin
  - Base: Chocolate
  - Cobertura: Chocolate
@@ -638,23 +640,24 @@ Budin
 <p>Los métodos <code>mostrar_info</code> y <code>quitar_cobertura</code> no reciben argumentos, a lo sumo usan los datos ya almacenados en el objeto.</p>
 <p>También es posible definir métodos que acepten argumentos, lo que permite realizar distintas operaciones y, por ejemplo, modificar el estado interno del objeto.</p>
 <p>A continuación, incorporamos a la clase un nuevo método que permite actualizar la cobertura del budin.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
-<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> cambiar_cobertura(<span class="va">self</span>, cobertura):</span>
-<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin <span class="op">=</span> Budin(<span class="st">"Chocolate"</span>, <span class="st">"Chocolate"</span>)</span>
-<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.mostrar_info()</span>
-<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">""</span>)</span>
-<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.cambiar_cobertura(<span class="st">"Chocolate blanco"</span>)</span>
-<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> cambiar_cobertura(<span class="va">self</span>, cobertura):</span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a>budin <span class="op">=</span> Budin(<span class="st">"Chocolate"</span>, <span class="st">"Chocolate"</span>)</span>
+<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a>budin.mostrar_info()</span>
+<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a>budin.cambiar_cobertura(<span class="st">"Chocolate blanco"</span>)</span>
+<span id="cb58-18"><a href="#cb58-18" aria-hidden="true" tabindex="-1"></a>budin.mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Budin
  - Base: Chocolate
  - Cobertura: Chocolate
@@ -666,26 +669,27 @@ Budin
 <section id="métodos-que-devuelven-resultados" class="level3">
 <h3 class="anchored" data-anchor-id="métodos-que-devuelven-resultados">Métodos que devuelven resultados</h3>
 <p>Como los métodos son funciones de Python, también pueden devolver un resultado.</p>
-<p>Por ejemplo, el método <code>tiene_cobertura</code> retorna <code>True</code> cuando el budin tiene asignada alguna cobertura, sin importar cuál sea.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
-<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
-<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> cambiar_cobertura(<span class="va">self</span>, cobertura):</span>
-<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> tiene_cobertura(<span class="va">self</span>):</span>
-<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span>.cobertura <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span></span>
-<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin <span class="op">=</span> Budin(<span class="st">"Vainilla"</span>, <span class="st">"Chocolate blanco"</span>)</span>
-<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> budin2 <span class="op">=</span> Budin(<span class="st">"Vainilla"</span>)</span>
-<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin.tiene_cobertura())</span>
-<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(budin2.tiene_cobertura())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Por ejemplo, el método <code>tiene_cobertura</code> retorna <code>True</code> cuando el budín tiene asignada alguna cobertura, sin importar cuál sea.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> cambiar_cobertura(<span class="va">self</span>, cobertura):</span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> tiene_cobertura(<span class="va">self</span>):</span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.cobertura <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span></span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a>budin <span class="op">=</span> Budin(<span class="st">"Vainilla"</span>, <span class="st">"Chocolate blanco"</span>)</span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a>budin2 <span class="op">=</span> Budin(<span class="st">"Vainilla"</span>)</span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin.tiene_cobertura())</span>
+<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(budin2.tiene_cobertura())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>True
 False</code></pre>
 </section>
@@ -693,22 +697,23 @@ False</code></pre>
 <h3 class="anchored" data-anchor-id="métodos-que-devuelven-al-objeto">Métodos que devuelven al objeto</h3>
 <p>Finalmente, como un método puede devolver cualquier tipo de objeto, también puede retornar la propia instancia sobre la que fue llamado (es decir, la que recibe en <code>self</code>).</p>
 <p>Este patrón se utiliza con frecuencia cuando se desea permitir el <strong>encadenamiento de métodos</strong>, ya que cada método devuelve el mismo objeto y permite seguir llamando otros métodos sobre él en una sola línea.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-56"><pre class="sourceCode python code-annotation-code code-with-copy"><code class="sourceCode python"><span id="annotated-cell-56-1"><a href="#annotated-cell-56-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> Budin:</span>
-<span id="annotated-cell-56-2"><a href="#annotated-cell-56-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
-<span id="annotated-cell-56-3"><a href="#annotated-cell-56-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.base <span class="op">=</span> base</span>
-<span id="annotated-cell-56-4"><a href="#annotated-cell-56-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="annotated-cell-56-5"><a href="#annotated-cell-56-5" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-56-6"><a href="#annotated-cell-56-6" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
-<span id="annotated-cell-56-7"><a href="#annotated-cell-56-7" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
-<span id="annotated-cell-56-8"><a href="#annotated-cell-56-8" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="annotated-cell-56-9"><a href="#annotated-cell-56-9" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="annotated-cell-56-10"><a href="#annotated-cell-56-10" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="annotated-cell-56-11"><a href="#annotated-cell-56-11" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> cambiar_cobertura(<span class="va">self</span>, cobertura):</span>
-<span id="annotated-cell-56-12"><a href="#annotated-cell-56-12" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
-<span id="annotated-cell-56-13"><a href="#annotated-cell-56-13" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">self</span></span>
-<span id="annotated-cell-56-14"><a href="#annotated-cell-56-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Budin(<span class="st">"Frutilla"</span>).cambiar_cobertura(<span class="st">"Chocolate"</span>).mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-56"><pre class="sourceCode python code-annotation-code code-with-copy"><code class="sourceCode python"><span id="annotated-cell-56-1"><a href="#annotated-cell-56-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Budin:</span>
+<span id="annotated-cell-56-2"><a href="#annotated-cell-56-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, cobertura<span class="op">=</span><span class="va">None</span>):</span>
+<span id="annotated-cell-56-3"><a href="#annotated-cell-56-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="annotated-cell-56-4"><a href="#annotated-cell-56-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="annotated-cell-56-5"><a href="#annotated-cell-56-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-56-6"><a href="#annotated-cell-56-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
+<span id="annotated-cell-56-7"><a href="#annotated-cell-56-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Budin"</span>)</span>
+<span id="annotated-cell-56-8"><a href="#annotated-cell-56-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Base: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>base<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="annotated-cell-56-9"><a href="#annotated-cell-56-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Cobertura: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>cobertura<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="annotated-cell-56-10"><a href="#annotated-cell-56-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-56-11"><a href="#annotated-cell-56-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> cambiar_cobertura(<span class="va">self</span>, cobertura):</span>
+<span id="annotated-cell-56-12"><a href="#annotated-cell-56-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cobertura <span class="op">=</span> cobertura</span>
+<span id="annotated-cell-56-13"><a href="#annotated-cell-56-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span></span>
+<span id="annotated-cell-56-14"><a href="#annotated-cell-56-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-56-15"><a href="#annotated-cell-56-15" aria-hidden="true" tabindex="-1"></a>Budin(<span class="st">"Marmolado"</span>).cambiar_cobertura(<span class="st">"Chocolate"</span>).mostrar_info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Budin
- - Base: Frutilla
+ - Base: Marmolado
  - Cobertura: Chocolate</code></pre>
 <ol type="1">
 <li>Luego de actualizar la cobertura, se devuelve a la instancia con la que se llamó al método.</li>
@@ -732,43 +737,43 @@ False</code></pre>
 <li><code>transferir</code>: mueve dinero de una cuenta a otra</li>
 <li><code>resumen</code>: muestra el estado actual de la cuenta de forma clara y legible</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> CuentaBancaria:</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, titular, saldo<span class="op">=</span><span class="dv">0</span>, moneda<span class="op">=</span><span class="st">"ARS"</span>):</span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.titular <span class="op">=</span> titular</span>
-<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">=</span> saldo</span>
-<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.moneda <span class="op">=</span> moneda</span>
-<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> depositar(<span class="va">self</span>, monto):</span>
-<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>...         <span class="va">self</span>.saldo <span class="op">=</span> <span class="va">self</span>.saldo <span class="op">+</span> monto</span>
-<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> retirar(<span class="va">self</span>, monto):</span>
-<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> monto <span class="op">&lt;=</span> <span class="va">self</span>.saldo:</span>
-<span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a>...             <span class="va">self</span>.saldo <span class="op">=</span> <span class="va">self</span>.saldo <span class="op">-</span> monto</span>
-<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a>...             <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f"El saldo es insuficiente (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>saldo<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>moneda<span class="sc">}</span><span class="ss">)"</span>)</span>
-<span id="cb63-16"><a href="#cb63-16" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb63-17"><a href="#cb63-17" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-18"><a href="#cb63-18" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> transferir(<span class="va">self</span>, other, monto): <span class="co"># 'other' es tambien una 'CuentaBancaria'</span></span>
-<span id="cb63-19"><a href="#cb63-19" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> <span class="va">self</span>.moneda <span class="op">!=</span> other.moneda:</span>
-<span id="cb63-20"><a href="#cb63-20" aria-hidden="true" tabindex="-1"></a>...             <span class="bu">print</span>(<span class="ss">f"Las cuentas usan monedas distintas (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>moneda<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>other<span class="sc">.</span>moneda<span class="sc">}</span><span class="ss">)"</span>)</span>
-<span id="cb63-21"><a href="#cb63-21" aria-hidden="true" tabindex="-1"></a>...             <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb63-22"><a href="#cb63-22" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">if</span> <span class="va">self</span>.retirar(monto):</span>
-<span id="cb63-24"><a href="#cb63-24" aria-hidden="true" tabindex="-1"></a>...             other.depositar(monto)</span>
-<span id="cb63-25"><a href="#cb63-25" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-26"><a href="#cb63-26" aria-hidden="true" tabindex="-1"></a>...         <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb63-27"><a href="#cb63-27" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb63-28"><a href="#cb63-28" aria-hidden="true" tabindex="-1"></a>...     <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
-<span id="cb63-29"><a href="#cb63-29" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="st">"Cuenta bancaria"</span>)</span>
-<span id="cb63-30"><a href="#cb63-30" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Titular: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>titular<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb63-31"><a href="#cb63-31" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Saldo: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>saldo<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a>...         <span class="bu">print</span>(<span class="ss">f" - Moneda: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>moneda<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_A <span class="op">=</span> CuentaBancaria(<span class="st">"Guido Van Rossum"</span>, saldo<span class="op">=</span><span class="dv">20000</span>, moneda<span class="op">=</span><span class="st">"ARS"</span>)</span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_B <span class="op">=</span> CuentaBancaria(<span class="st">"Ross Ihaka"</span>, saldo<span class="op">=</span><span class="dv">8000</span>, moneda<span class="op">=</span><span class="st">"ARS"</span>)</span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_A.resumen()</span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">""</span>)</span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_B.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CuentaBancaria:</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, titular, saldo<span class="op">=</span><span class="dv">0</span>, moneda<span class="op">=</span><span class="st">"ARS"</span>):</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.titular <span class="op">=</span> titular</span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">=</span> saldo</span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.moneda <span class="op">=</span> moneda</span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> depositar(<span class="va">self</span>, monto):</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.saldo <span class="op">=</span> <span class="va">self</span>.saldo <span class="op">+</span> monto</span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> retirar(<span class="va">self</span>, monto):</span>
+<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> monto <span class="op">&lt;=</span> <span class="va">self</span>.saldo:</span>
+<span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.saldo <span class="op">=</span> <span class="va">self</span>.saldo <span class="op">-</span> monto</span>
+<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"El saldo es insuficiente (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>saldo<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>moneda<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb63-16"><a href="#cb63-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb63-17"><a href="#cb63-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-18"><a href="#cb63-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> transferir(<span class="va">self</span>, other, monto): <span class="co"># 'other' es tambien una 'CuentaBancaria'</span></span>
+<span id="cb63-19"><a href="#cb63-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.moneda <span class="op">!=</span> other.moneda:</span>
+<span id="cb63-20"><a href="#cb63-20" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Las cuentas usan monedas distintas (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>moneda<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>other<span class="sc">.</span>moneda<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb63-21"><a href="#cb63-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb63-22"><a href="#cb63-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.retirar(monto):</span>
+<span id="cb63-24"><a href="#cb63-24" aria-hidden="true" tabindex="-1"></a>            other.depositar(monto)</span>
+<span id="cb63-25"><a href="#cb63-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-26"><a href="#cb63-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb63-27"><a href="#cb63-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-28"><a href="#cb63-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> resumen(<span class="va">self</span>):</span>
+<span id="cb63-29"><a href="#cb63-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Cuenta bancaria"</span>)</span>
+<span id="cb63-30"><a href="#cb63-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Titular: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>titular<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb63-31"><a href="#cb63-31" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Saldo: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>saldo<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" - Moneda: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>moneda<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>cuenta_A <span class="op">=</span> CuentaBancaria(<span class="st">"Guido Van Rossum"</span>, saldo<span class="op">=</span><span class="dv">20000</span>, moneda<span class="op">=</span><span class="st">"ARS"</span>)</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>cuenta_B <span class="op">=</span> CuentaBancaria(<span class="st">"Ross Ihaka"</span>, saldo<span class="op">=</span><span class="dv">8000</span>, moneda<span class="op">=</span><span class="st">"ARS"</span>)</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>cuenta_A.resumen()</span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>cuenta_B.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Cuenta bancaria
  - Titular: Guido Van Rossum
  - Saldo: 20000
@@ -778,27 +783,27 @@ Cuenta bancaria
  - Titular: Ross Ihaka
  - Saldo: 8000
  - Moneda: ARS</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_A.retirar(<span class="dv">2500</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>cuenta_A.retirar(<span class="dv">2500</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>True</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_A.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>cuenta_A.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Cuenta bancaria
  - Titular: Guido Van Rossum
  - Saldo: 17500
  - Moneda: ARS</code></pre>
 <p>En el caso de las transferencias, no solo se modifica el estado de la cuenta desde la que se realiza la operación (<code>cuenta_A</code>), sino también el estado de la cuenta que recibe el dinero (<code>cuenta_B</code>).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_A.transferir(cuenta_B, <span class="dv">10000</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>cuenta_A.transferir(cuenta_B, <span class="dv">10000</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>True</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_A.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>cuenta_A.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Cuenta bancaria
  - Titular: Guido Van Rossum
  - Saldo: 7500
  - Moneda: ARS</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_B.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>cuenta_B.resumen()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>Cuenta bancaria
  - Titular: Ross Ihaka
  - Saldo: 18000
  - Moneda: ARS</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cuenta_B.retirar(<span class="dv">20000</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>cuenta_B.retirar(<span class="dv">20000</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre class="text"><code>El saldo es insuficiente (18000 ARS)
 
 False</code></pre>
