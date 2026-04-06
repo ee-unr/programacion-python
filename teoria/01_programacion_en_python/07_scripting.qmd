@@ -69,8 +69,8 @@ Esto ocurre porque, al importar un módulo (o cualquier objeto definido en él),
 Para evitar este comportamiento no deseado, y permitir que un mismo archivo pueda funcionar tanto como **módulo reutilizable** como **_script_ ejecutable**, se encapsula la parte que debe ejecutarse solo al correr el archivo directamente dentro del siguiente bloque:
 
 ```python
->>> if __name__ == "__main__":
-...     # código ejecutable
+if __name__ == "__main__":
+    # código ejecutable
 ```
 
 Con esta estructura, el código dentro de ese bloque se ejecutará únicamente cuando el archivo se ejecute directamente como programa, y no cuando se lo importe desde otro módulo.
@@ -127,16 +127,16 @@ Con este módulo se pueden definir qué argumentos y opciones acepta nuestra pro
 El siguiente programa recibe el nombre de una persona como argumento obligatorio y, de manera opcional, la cantidad de veces que se la debe saludar.
 
 ```python
->>> import argparse
->>>
->>> parser = argparse.ArgumentParser(description="Saluda a una persona")
->>> parser.add_argument("nombre", help="El nombre de la persona") # Argumento posicional
->>> parser.add_argument("--veces", type=int, default=1, help="Cuántas veces saludar") # Argumento nombrado
->>>
->>> args = parser.parse_args()
->>>
->>> for _ in range(args.veces):
-...     print(f"¡Hola, {args.nombre}!")
+import argparse
+
+parser = argparse.ArgumentParser(description="Saluda a una persona")
+parser.add_argument("nombre", help="El nombre de la persona") # Argumento posicional
+parser.add_argument("--veces", type=int, default=1, help="Cuántas veces saludar") # Argumento nombrado
+
+args = parser.parse_args()
+
+for _ in range(args.veces):
+    print(f"¡Hola, {args.nombre}!")
 ```
 
 Luego, en la terminal:

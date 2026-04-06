@@ -55,19 +55,19 @@ Técnicamente, un paquete es un módulo de Python con un atributo `__path__`.
 Para importar un módulo usamos la sentencia `import` seguida del nombre del módulo a importar.
 
 ```python
->>> import nombre
+import nombre
 ```
 
 De esta manera, podemos importar el módulo `math` que pertenece a la librería estándar de Python.
 
 ```python
->>> import math
+import math
 ```
 
 Luego, podemos acceder a los objetos **dentro del _namespace_** `math` utilizando `math.nombre_objeto`. Por ejemplo, para usar la función `sqrt()`, que calcula la raíz cuadrada de un numero `n`, escribimos `math.sqrt(n)`.
 
 ```python
->>> math.sqrt(16)
+math.sqrt(16)
 ```
 
 ```text
@@ -77,12 +77,12 @@ Luego, podemos acceder a los objetos **dentro del _namespace_** `math` utilizand
 Si quisiéramos importar más de una módulo, solo tenemos que agregar una nueva línea con el `import` correspondiente. Así, podemos también importar el módulo `random` que provee herramientas para generar números aleatorios.
 
 ```python
->>> import math
->>> import random
+import math
+import random
 ```
 
 ```python
->>> random.random() # número aleatorio entre 0 y 1
+random.random() # número aleatorio entre 0 y 1
 ```
 
 ```text
@@ -105,8 +105,8 @@ Para acceder a las funciones de `math`, es necesario hacerlo mediante el nombre 
 Por este motivo, el siguiente bloque de código produce un error:
 
 ```python
->>> import math
->>> sqrt(16)
+import math
+sqrt(16)
 ```
 
 :::{.code-error}
@@ -122,7 +122,7 @@ NameError: name 'sqrt' is not defined
 Para obtener un listado con los nombres de los objetos disponibles dentro de un módulo, podemos usar la función `dir()`.
 
 ```python
->>> dir(math)
+dir(math)
 ```
 
 ```text
@@ -139,7 +139,7 @@ Para obtener un listado con los nombres de los objetos disponibles dentro de un 
 ```
 
 ```python
-...
+
 ```
 
 ```text
@@ -165,19 +165,19 @@ La flexibilidad en la carga de módulos en Python permite importar uno o más ob
 La sintaxis para traer un `objeto` de un módulo llamado `cosas` es:
 
 ```python
->>> from cosas import objeto
+from cosas import objeto
 ```
 
 De este modo, podemos cargar la constante `pi` del módulo `math`.
 
 ```python
->>> from math import pi
+from math import pi
 ```
 
 Luego, es posible acceder a la variable `pi` sin tener que pasar por el nombre del módulo donde se define.
 
 ```python
->>> pi
+pi
 ```
 
 ```text
@@ -187,8 +187,8 @@ Luego, es posible acceder a la variable `pi` sin tener que pasar por el nombre d
 En nuestro caso, como anteriormente también importamos el módulo `math`, seguimos teniendo acceso a `pi` a través de `math`.
 
 ```python
->>> print(math.pi)
->>> print(pi)
+print(math.pi)
+print(pi)
 ```
 
 ```text
@@ -199,11 +199,11 @@ En nuestro caso, como anteriormente también importamos el módulo `math`, segui
 Para importar varios objetos a la vez, se utiliza una sintaxis similar a la anterior, separando sus nombres con comas. A modo de ejemplo, importemos las funciones `mean()` y `median()` de otro módulo estándar llamado `statistics`.
 
 ```python
->>> from statistics import mean, median
+from statistics import mean, median
 ```
 
 ```python
->>> numeros = [4, 5, 9, 30, 3, 8, 6]
+numeros = [4, 5, 9, 30, 3, 8, 6]
 ```
 
 ```text
@@ -211,8 +211,8 @@ Para importar varios objetos a la vez, se utiliza una sintaxis similar a la ante
 ```
 
 ```python
->>> print("La media es:", mean(numeros))
->>> print("La mediana es:", median(numeros))
+print("La media es:", mean(numeros))
+print("La mediana es:", median(numeros))
 ```
 
 ```text
@@ -227,19 +227,19 @@ Python no solo permite decidir que objetos importar de un módulo, si no que tam
 Para un módulo:
 
 ```python
->>> import modulo as alias
+import modulo as alias
 ```
 
 Y para un objeto dentro de un módulo:
 
 ```python
->>> from modulo import objeto as alias
+from modulo import objeto as alias
 ```
 
 Podemos importar el módulo `math` usando el alias `mates`:
 
 ```python
->>> import math as mates
+import math as mates
 ```
 
 ```text
@@ -247,7 +247,7 @@ Podemos importar el módulo `math` usando el alias `mates`:
 ```
 
 ```python
->>> print(mates.cos(mates.pi)) # coseno(pi)
+print(mates.cos(mates.pi)) # coseno(pi)
 ```
 
 ```text
@@ -257,7 +257,7 @@ Podemos importar el módulo `math` usando el alias `mates`:
 O importar la funcion `sqrt` con el nombre `raiz`:
 
 ```python
->>> from math import sqrt as raiz
+from math import sqrt as raiz
 ```
 
 ```text
@@ -265,7 +265,7 @@ O importar la funcion `sqrt` con el nombre `raiz`:
 ```
 
 ```python
->>> raiz(81)
+raiz(81)
 ```
 
 ```text
@@ -279,7 +279,7 @@ O importar la funcion `sqrt` con el nombre `raiz`:
 Python permite cargar todos los objetos definidos en un módulo o paquete directamente en el ambiente actual. La sintaxis es:
 
 ```python
->>> from nombre import *
+from nombre import *
 ```
 
 Esta **no es una práctica recomendable**, ya que no sabemos cuántos elementos se importarán ni qué conflictos podrían surgir entre los nombres definidos en el módulo y los que ya tenemos en nuestro programa.
@@ -331,7 +331,7 @@ proyecto/                  # Carpeta
 Aquí, `programa.py` es nuestro programa principal y contiene el siguiente código:
 
 ```python
->>> import funciones
+import funciones
 ```
 
 ```text
@@ -339,8 +339,8 @@ Aquí, `programa.py` es nuestro programa principal y contiene el siguiente códi
 ```
 
 ```python
->>> print(funciones.es_par(12))
->>> print(funciones.es_par(15))
+print(funciones.es_par(12))
+print(funciones.es_par(15))
 ```
 
 ```text
@@ -348,9 +348,9 @@ Aquí, `programa.py` es nuestro programa principal y contiene el siguiente códi
 ```
 
 ```python
->>> print(funciones.es_primo(1))
->>> print(funciones.es_primo(11))
->>> print(funciones.es_primo(15))
+print(funciones.es_primo(1))
+print(funciones.es_primo(11))
+print(funciones.es_primo(15))
 ```
 
 ```text
@@ -366,7 +366,7 @@ Al ejecutarlo, se obtiene la salida que se muestra en el mismo bloque.
 Un programa equivalente es el siguiente:
 
 ```python
->>> from funciones import es_par, es_primo
+from funciones import es_par, es_primo
 ```
 
 ```text
@@ -374,8 +374,8 @@ Un programa equivalente es el siguiente:
 ```
 
 ```python
->>> print(es_par(12))
->>> print(es_par(15))
+print(es_par(12))
+print(es_par(15))
 ```
 
 ```text
@@ -383,9 +383,9 @@ Un programa equivalente es el siguiente:
 ```
 
 ```python
->>> print(es_primo(1))
->>> print(es_primo(11))
->>> print(es_primo(15))
+print(es_primo(1))
+print(es_primo(11))
+print(es_primo(15))
 ```
 
 ```text
@@ -567,7 +567,7 @@ El siguiente video muestra los pasos realizados en la terminal de Windows:
 Los paquetes de Python suelen importarse utilizando un alias. En el caso de los más populares, como NumPy, la mayoría de la comunidad usa el alias **`np`**.
 
 ```python
->>> import numpy as np
+import numpy as np
 ```
 
 ```text
@@ -575,8 +575,8 @@ Los paquetes de Python suelen importarse utilizando un alias. En el caso de los 
 ```
 
 ```python
->>> array = np.array([1, 2, 3, 4])
->>> array
+array = np.array([1, 2, 3, 4])
+array
 ```
 
 ```text
@@ -584,7 +584,7 @@ array([1, 2, 3, 4])
 ```
 
 ```python
->>> type(array)
+type(array)
 ```
 
 ```text
@@ -594,7 +594,7 @@ array([1, 2, 3, 4])
 La propiedad `.ndim` nos devuelve el número de dimensiones del array.
 
 ```python
->>> array.ndim
+array.ndim
 ```
 
 ```text
@@ -604,7 +604,7 @@ La propiedad `.ndim` nos devuelve el número de dimensiones del array.
 Y `.shape` nos devuelve la "forma" del array. Es decir, la cantidad de elementos por cada dimensión. Se puede notar que el `.shape` de un _array_ es una tupla.
 
 ```python
->>> array.shape
+array.shape
 ```
 
 ```text
@@ -618,8 +618,8 @@ Si continuamos utilizando listas, el número de dimensiones del _array_ va a dep
 A modo de ejemplo, podemos crear un _array_ de dos dimensiones de la siguiente manera:
 
 ```python
->>> array_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
->>> array_2d
+array_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+array_2d
 ```
 
 ```text
@@ -628,8 +628,8 @@ array([[1, 2, 3, 4],
 ```
 
 ```python
->>> print(array_2d.ndim)
->>> print(array_2d.shape)
+print(array_2d.ndim)
+print(array_2d.shape)
 ```
 
 ```text
@@ -640,10 +640,10 @@ array([[1, 2, 3, 4],
 Una de las características más atractivas de NumPy es que las operaciones matemáticas con `array`s están vectorizadas, es decir, se realizan al nivel del arreglo.
 
 ```python
->>> print(array * 10)
->>> print(array - 5)
->>> print(array / 10)
->>> print(array ** 2.4)
+print(array * 10)
+print(array - 5)
+print(array / 10)
+print(array ** 2.4)
 ```
 
 ```text
@@ -656,10 +656,10 @@ Una de las características más atractivas de NumPy es que las operaciones mate
 NumPy también provee **muchísimas funciones** para hacer cálculos comúnmente realizados con los _arrays_.
 
 ```python
->>> print(np.mean(array))
->>> print(np.median(array))
->>> print(np.std(array))
->>> print(np.exp(array))
+print(np.mean(array))
+print(np.median(array))
+print(np.std(array))
+print(np.exp(array))
 ```
 
 ```text

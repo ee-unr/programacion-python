@@ -20,10 +20,10 @@ Supongamos que contamos con el nombre y la edad de 4 personas y queremos utiliza
 Si solamente tenemos acceso a los tipos de datos elementales de Python, una alternativa para almacenar esta información consiste en crear 4 variables para las edades y 4 variables para los nombres:
 
 ```python
->>> nombre_1 = "Juan"
->>> nombre_2 = "Carla"
->>> nombre_3 = "Evelina"
->>> nombre_4 = "Leandro"
+nombre_1 = "Juan"
+nombre_2 = "Carla"
+nombre_3 = "Evelina"
+nombre_4 = "Leandro"
 ```
 
 ```text
@@ -31,10 +31,10 @@ Si solamente tenemos acceso a los tipos de datos elementales de Python, una alte
 ```
 
 ```python
->>> edad_1 = 29
->>> edad_2 = 34
->>> edad_3 = 33
->>> edad_4 = 38
+edad_1 = 29
+edad_2 = 34
+edad_3 = 33
+edad_4 = 38
 ```
 
 En este caso, el código es legible e incluso permite intuir la relación entre los nombres y las edades.
@@ -50,7 +50,7 @@ Por eso, el lenguaje ofrece estructuras de datos que facilitan el manejo de gran
 El siguiente bloque de código genera una lista con los números 1, 2, 3, 4 y 5.
 
 ```python
->>> [1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
 ```
 
 ```text
@@ -70,8 +70,8 @@ Las listas en Python se crean escribiendo los elementos entre corchetes (`[]`), 
 Creemos una lista que contenga los nombres de nuestras cafeterias de especialidad preferidas: Orlan, Infinita, Arto, Cristóbal, Ruffo y Heroica.
 
 ```python
->>> cafeterias = ["Orlan", "Infinita", "Arto", "Cristóbal", "Ruffo", "Heroica"]
->>> print(cafeterias)
+cafeterias = ["Orlan", "Infinita", "Arto", "Cristóbal", "Ruffo", "Heroica"]
+print(cafeterias)
 ```
 
 ```text
@@ -83,7 +83,7 @@ Cuando imprimimos una lista, Python muestra una representación muy parecida a l
 Si consultamos el tipo de una lista, no hay sorpresas: es del tipo `list`.
 
 ```python
->>> type(cafeterias)
+type(cafeterias)
 ```
 
 ```text
@@ -99,8 +99,8 @@ Con los tipos de datos que vimos hasta ahora, podríamos tener listas con númer
 Por ejemplo, la siguiente lista contiene elementos de cuatro tipos distintos:
 
 ```python
->>> popurri = [1, "dos", True, None, "dos"]
->>> popurri
+popurri = [1, "dos", True, None, "dos"]
+popurri
 ```
 
 ```text
@@ -114,7 +114,7 @@ Si bien las listas pueden mezclar objetos de distinto tipo, y algunas veces hace
 Consideremos las listas `[1, 2, 3]` y `[2, 1, 3]`. Vale preguntarse si ambas listas son iguales o no. Veamos que dice Python:
 
 ```python
->>> [1, 2, 3] == [2, 1, 3]
+[1, 2, 3] == [2, 1, 3]
 ```
 
 ```text
@@ -124,7 +124,7 @@ False
 Dado que una lista es una secuencia en la que el orden de los elementos es relevante, dos listas son iguales solo si contienen los mismos elementos y en el mismo orden. A continuación se muestra un ejemplo en el que ambas condiciones se cumplen.
 
 ```python
->>> [1, 2, 3] == [1, 2, 3]
+[1, 2, 3] == [1, 2, 3]
 ```
 
 ```text
@@ -134,8 +134,8 @@ True
 También vale la pena preguntarse si dos listas iguales son, en memoria, el mismo objeto. Debajo definimos dos listas `x` e `y` con los mismos elementos, en el mismo orden. Como es de esperarse, ambas listas **son iguales en valor**.
 
 ```python
->>> x = ["a", "b", "c"]
->>> y = ["a", "b", "c"]
+x = ["a", "b", "c"]
+y = ["a", "b", "c"]
 ```
 
 ```text
@@ -143,8 +143,8 @@ También vale la pena preguntarse si dos listas iguales son, en memoria, el mism
 ```
 
 ```python
->>> print(x == y)
->>> print(x is y)
+print(x == y)
+print(x is y)
 ```
 
 ```text
@@ -155,8 +155,8 @@ False
 Sin embargo, estas listas **no son iguales en memoria**, es decir, no son el mismo objeto.
 
 ```python
->>> print("id(x):", id(x))
->>> print("id(y):", id(y))
+print("id(x):", id(x))
+print("id(y):", id(y))
 ```
 
 ```text
@@ -176,7 +176,7 @@ Dos listas son iguales (en valor) si en cada posición contienen elementos que t
 ¿Cuál es el resultado de la siguiente comparación?
 
 ```python
->>> [1, 2, 3] == [1.0, 2, 3.0]
+[1, 2, 3] == [1.0, 2, 3.0]
 ```
 
 :::
@@ -190,8 +190,8 @@ Para acceder a un elemento de una lista, escribimos el nombre de la lista seguid
 Veamos un ejemplo utilizando la lista `cafeterias` que creamos anteriormente.
 
 ```python
->>> cafeterias = ["Orlan", "Infinita", "Arto", "Cristóbal", "Ruffo", "Heroica"]
->>> cafeterias
+cafeterias = ["Orlan", "Infinita", "Arto", "Cristóbal", "Ruffo", "Heroica"]
+cafeterias
 ```
 
 ```text
@@ -201,7 +201,7 @@ Veamos un ejemplo utilizando la lista `cafeterias` que creamos anteriormente.
 Intentemos seleccionar el primer objeto de la lista:
 
 ```python
->>> cafeterias[1]
+cafeterias[1]
 ```
 
 ```text
@@ -213,7 +213,7 @@ Cuando accedemos a un elemento individual de una lista, el resultado no es, en p
 Por lo tanto, si el elemento obtenido es una cadena de caracteres, podemos aplicar directamente los métodos que corresponden a ese tipo de dato. Por ejemplo, podemos encadenar la selección del elemento en la posición `1` con una llamada al método `.upper()`, sabiendo que es válido porque ese elemento es de tipo `str`.
 
 ```python
->>> cafeterias[1].upper()
+cafeterias[1].upper()
 ```
 
 ```text
@@ -223,7 +223,7 @@ Por lo tanto, si el elemento obtenido es una cadena de caracteres, podemos aplic
 Como es de esperarse, también podemos incluir una operación de indexación dentro de una f-_string_.
 
 ```python
->>> f"¡Qué rico que es el café de {cafeterias[1]}!"
+f"¡Qué rico que es el café de {cafeterias[1]}!"
 ```
 
 ```text
@@ -248,7 +248,7 @@ Esto significa que, si una lista contiene 6 elementos, sus posiciones van desde 
 En Python, los corchetes no siempre significan lo mismo. Sus dos funciones principales son la creación de listas y la indexación de secuencias. Un ejemplo curioso que combina ambos usos es el siguiente:
 
 ```python
->>> [0][0]
+[0][0]
 ```
 
 ```text
@@ -270,7 +270,7 @@ Python también permite utilizar valores negativos como índices para selecciona
 * Y así sucesivamente.
 
 ```python
->>> cafeterias[-1]
+cafeterias[-1]
 ```
 
 ```text
@@ -278,7 +278,7 @@ Python también permite utilizar valores negativos como índices para selecciona
 ```
 
 ```python
->>> cafeterias[-2]
+cafeterias[-2]
 ```
 
 ```text
@@ -295,7 +295,7 @@ Si en cambio queremos obtener varios elementos a la vez, necesitamos usar una he
 La sintaxis para usar _slices_ es la siguiente:
 
 ```python
->>> lista[inicio:fin]
+lista[inicio:fin]
 ```
 
 Esto crea una nueva lista con los elementos que van desde la posición `inicio` hasta la posición `fin`, **sin incluir esta última**.
@@ -303,7 +303,7 @@ Esto crea una nueva lista con los elementos que van desde la posición `inicio` 
 Por ejemplo:
 
 ```python
->>> cafeterias[1:4]
+cafeterias[1:4]
 ```
 
 ```text
@@ -315,7 +315,7 @@ Por ejemplo:
 Como los _slices_ incluyen el índice de inicio pero excluyen el de fin, el siguiente código funciona correctamente:
 
 ```python
->>> cafeterias[4:6]
+cafeterias[4:6]
 ```
 
 ```text
@@ -332,7 +332,7 @@ En Python, la sintaxis de los _slices_ permite omitir de forma implícita los va
 Estas formas abreviadas hacen el código más conciso sin perder claridad. Por ejemplo:
 
 ```python
->>> cafeterias[:3]
+cafeterias[:3]
 ```
 
 ```text
@@ -342,7 +342,7 @@ Estas formas abreviadas hacen el código más conciso sin perder claridad. Por e
 ![Selección de sublista de `cafeterias` hasta el índice `3` usando el _slice_ de inicio implícito `:3`.](imgs/lista_slicing_1.png){fig-align="center" width="700px"}
 
 ```python
->>> cafeterias[3:]
+cafeterias[3:]
 ```
 
 ```text
@@ -366,8 +366,8 @@ Escribimos el nombre de la lista seguido del índice del objeto que queremos mod
 Supongamos que tenemos una lista con diferentes marcas de café: Puerto Blest, Martínez y Fuego Tostadores. 
 
 ```python
->>> marcas = ["Puerto Blest", "Martínez", "Fuego Tostadores"]
->>> marcas
+marcas = ["Puerto Blest", "Martínez", "Fuego Tostadores"]
+marcas
 ```
 
 ```text
@@ -377,8 +377,8 @@ Supongamos que tenemos una lista con diferentes marcas de café: Puerto Blest, M
 ¿Cómo hacemos para cambiar el valor del primer elemento? 
 
 ```python
->>> marcas[0] = "Cabrales"
->>> marcas
+marcas[0] = "Cabrales"
+marcas
 ```
 
 ```text
@@ -391,8 +391,8 @@ Supongamos que tenemos una lista con diferentes marcas de café: Puerto Blest, M
 En esta sección, cuando hablamos de **modificar un elemento**, nos referimos a **reemplazar el objeto que se encuentra en una posición determinada** de la lista. Observemos el siguiente ejemplo:
 
 ```python
->>> ingredientes = ["azucar", "flores", "colores"]
->>> id_original = id(ingredientes[0])
+ingredientes = ["azucar", "flores", "colores"]
+id_original = id(ingredientes[0])
 ```
 
 ```text
@@ -400,9 +400,9 @@ En esta sección, cuando hablamos de **modificar un elemento**, nos referimos a 
 ```
 
 ```python
->>> # "Modifico" el primer elemento
->>> ingredientes[0] = "pimienta"
->>> id_nuevo = id(ingredientes[0])
+# "Modifico" el primer elemento
+ingredientes[0] = "pimienta"
+id_nuevo = id(ingredientes[0])
 ```
 
 ```text
@@ -410,8 +410,8 @@ En esta sección, cuando hablamos de **modificar un elemento**, nos referimos a 
 ```
 
 ```python
->>> print("ID original:", id_original)
->>> print("ID nuevo:", id_nuevo)
+print("ID original:", id_original)
+print("ID nuevo:", id_nuevo)
 ```
 
 ```text
@@ -445,8 +445,8 @@ Primero vamos a armar una lista que contenga los vecinos de Rosario, considerand
 Supongamos que empezamos con una lista que contiene únicamente a la localidad de Funes. A partir de ahí, iremos agregando otras localidades vecinas utilizando distintos métodos que ofrece Python.
 
 ```python
->>> vecinos_de_rosario = ["Funes"]
->>> vecinos_de_rosario
+vecinos_de_rosario = ["Funes"]
+vecinos_de_rosario
 ```
 
 ```text
@@ -460,13 +460,13 @@ La manera más sencilla de agregar un nuevo elemento a una lista es utilizando e
 Este método recibe un **único elemento** como argumento y lo agrega al final de la lista.
 
 ```python
->>> vecinos_de_rosario.append("Soldini")
+vecinos_de_rosario.append("Soldini")
 ```
 
 La llamada a este método parece no devolver ningún resultado. Observemos la lista nuevamente:
 
 ```python
->>> vecinos_de_rosario
+vecinos_de_rosario
 ```
 
 ```text
@@ -478,9 +478,9 @@ El método `.append()` agregó `"Soldini"` al final de la lista sin retornar nin
 Veamos el siguiente ejemplo:
 
 ```python
->>> vecinos_de_rosario = []
->>> print("ID:", id(vecinos_de_rosario))
->>> print(vecinos_de_rosario, "\n")
+vecinos_de_rosario = []
+print("ID:", id(vecinos_de_rosario))
+print(vecinos_de_rosario, "\n")
 ```
 
 ```text
@@ -488,9 +488,9 @@ Veamos el siguiente ejemplo:
 ```
 
 ```python
->>> vecinos_de_rosario.append("Funes")
->>> print("ID:", id(vecinos_de_rosario))
->>> print(vecinos_de_rosario, "\n")
+vecinos_de_rosario.append("Funes")
+print("ID:", id(vecinos_de_rosario))
+print(vecinos_de_rosario, "\n")
 ```
 
 ```text
@@ -498,9 +498,9 @@ Veamos el siguiente ejemplo:
 ```
 
 ```python
->>> vecinos_de_rosario.append("Soldini")
->>> print("ID:", id(vecinos_de_rosario))
->>> print(vecinos_de_rosario)
+vecinos_de_rosario.append("Soldini")
+print("ID:", id(vecinos_de_rosario))
+print(vecinos_de_rosario)
 ```
 
 ```text
@@ -528,8 +528,8 @@ Para insertar elementos en una lista también podemos utilizar el método `.inse
 Por ejemplo, si queremos insertar `"Villa Gobernador Gálvez"` al **principio** de la lista, podemos hacerlo con `.insert(0, "Villa Gobernador Gálvez")`.
 
 ```python
->>> vecinos_de_rosario.insert(0, "Villa Gobernador Gálvez")
->>> vecinos_de_rosario
+vecinos_de_rosario.insert(0, "Villa Gobernador Gálvez")
+vecinos_de_rosario
 ```
 
 ```text
@@ -541,8 +541,8 @@ El método `.insert()` agregó a `"Villa Gobernador Gálvez"` en el inicio de la
 Y si ahora queremos agregar a `"Pérez"` en la tercera posición de la lista, simplemente:
 
 ```python
->>> vecinos_de_rosario.insert(2, "Pérez")
->>> vecinos_de_rosario
+vecinos_de_rosario.insert(2, "Pérez")
+vecinos_de_rosario
 ```
 
 ```text
@@ -566,7 +566,7 @@ En la sección anterior vimos cómo insertar elementos individuales en una lista
 Supongamos que ya tenemos una lista llamada `vecinos_de_rosario`, y otra llamada `vecinos_al_norte`. Queremos unir ambas listas para tener toda la información en una sola. Para lograrlo, una opción es usar el método `.extend()`, que nos permite agregar todos los elementos de una lista al final de otra, modificando directamente la lista original.
 
 ```python
->>> print(vecinos_de_rosario)
+print(vecinos_de_rosario)
 ```
 
 ```text
@@ -574,7 +574,7 @@ Supongamos que ya tenemos una lista llamada `vecinos_de_rosario`, y otra llamada
 ```
 
 ```python
->>> vecinos_al_norte = ["Granadero Baigorria", "Ibarlucea"]
+vecinos_al_norte = ["Granadero Baigorria", "Ibarlucea"]
 ```
 
 ```text
@@ -582,8 +582,8 @@ Supongamos que ya tenemos una lista llamada `vecinos_de_rosario`, y otra llamada
 ```
 
 ```python
->>> vecinos_de_rosario.extend(vecinos_al_norte)
->>> vecinos_de_rosario
+vecinos_de_rosario.extend(vecinos_al_norte)
+vecinos_de_rosario
 ```
 
 ```text
@@ -597,25 +597,25 @@ Otra forma de combinar listas es utilizando el operador de suma `+`, que realiza
 Para ver cómo funciona, primero vamos a construir una lista llamada `otras_localidades`, que contiene localidades del Gran Rosario que no están pegadas a Rosario. Luego, vamos a concatenar esa lista a la que ya tenemos.
 
 ```python
->>> otras_localidades = [
-...     "Puerto San Martín",
-...     "San Lorenzo",
-...     "Fray Luis Beltrán",
-...     "Capitán Bermudez",
-...     "Ricardone",
-...     "Roldán",
-...     "Alvear",
-...     "Pueblo Esther",
-...     "General Lagos",
-...     "Arroyo Seco"
-... ]
+otras_localidades = [
+    "Puerto San Martín",
+    "San Lorenzo",
+    "Fray Luis Beltrán",
+    "Capitán Bermudez",
+    "Ricardone",
+    "Roldán",
+    "Alvear",
+    "Pueblo Esther",
+    "General Lagos",
+    "Arroyo Seco"
+]
 ```
 
 Primero, observemos los IDs de las listas que vamos a combinar:
 
 ```python
->>> print(id(vecinos_de_rosario))
->>> print(id(otras_localidades))
+print(id(vecinos_de_rosario))
+print(id(otras_localidades))
 ```
 
 ```text
@@ -626,7 +626,7 @@ Primero, observemos los IDs de las listas que vamos a combinar:
 Y concatenemos ambas listas utilizando el operador de suma:
 
 ```python
->>> vecinos_de_rosario + otras_localidades
+vecinos_de_rosario + otras_localidades
 ```
 
 ```text
@@ -636,8 +636,8 @@ Y concatenemos ambas listas utilizando el operador de suma:
 Podemos notar que la operación sí retorna una lista como resultado, la cual podríamos guardar en una nueva variable.
 
 ```python
->>> gran_rosario = vecinos_de_rosario + otras_localidades
->>> gran_rosario
+gran_rosario = vecinos_de_rosario + otras_localidades
+gran_rosario
 ```
 
 ```text
@@ -647,8 +647,8 @@ Podemos notar que la operación sí retorna una lista como resultado, la cual po
 Y finalmente, se puede ver que las listas originales no se han modificado y que `gran_rosario` referencia una lista nueva.
 
 ```python
->>> print(id(vecinos_de_rosario))
->>> print(vecinos_de_rosario, "\n")
+print(id(vecinos_de_rosario))
+print(vecinos_de_rosario, "\n")
 ```
 
 ```text
@@ -656,8 +656,8 @@ Y finalmente, se puede ver que las listas originales no se han modificado y que 
 ```
 
 ```python
->>> print(id(otras_localidades))
->>> print(otras_localidades, "\n")
+print(id(otras_localidades))
+print(otras_localidades, "\n")
 ```
 
 ```text
@@ -665,8 +665,8 @@ Y finalmente, se puede ver que las listas originales no se han modificado y que 
 ```
 
 ```python
->>> print(id(gran_rosario))
->>> print(gran_rosario, "\n")
+print(id(gran_rosario))
+print(gran_rosario, "\n")
 ```
 
 ```text
@@ -689,8 +689,8 @@ Por ejemplo, si en una página web guardamos los nombres de los usuarios en una 
 Para ilustrarlo, vamos a crear una lista de usuarios ficticios:
 
 ```python
->>> usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
->>> usuarios
+usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
+usuarios
 ```
 
 ```text
@@ -706,7 +706,7 @@ Para hacerlo, necesitamos conocer la posición del elemento que queremos elimina
 Por ejemplo, si queremos eliminar a `"neo_404"`, que está en la segunda posición, podemos hacerlo con:
 
 ```python
->>> print(usuarios)
+print(usuarios)
 ```
 
 ```text
@@ -714,7 +714,7 @@ Por ejemplo, si queremos eliminar a `"neo_404"`, que está en la segunda posici�
 ```
 
 ```python
->>> del usuarios[1]
+del usuarios[1]
 ```
 
 ```text
@@ -722,7 +722,7 @@ Por ejemplo, si queremos eliminar a `"neo_404"`, que está en la segunda posici�
 ```
 
 ```python
->>> print(usuarios)
+print(usuarios)
 ```
 
 ```text
@@ -740,8 +740,8 @@ Por ejemplo, si tenemos una lista de usuarios, tal vez nos interesa guardar el n
 Para eso podemos usar el método `.pop()`, que elimina un elemento de la lista y, al mismo tiempo, lo devuelve.
 
 ```python
->>> usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
->>> usuario_eliminado = usuarios.pop(2)
+usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
+usuario_eliminado = usuarios.pop(2)
 ```
 
 ```text
@@ -749,8 +749,8 @@ Para eso podemos usar el método `.pop()`, que elimina un elemento de la lista y
 ```
 
 ```python
->>> print(usuarios) # "pixelbyte" es 'extraido'
->>> print(usuario_eliminado)
+print(usuarios) # "pixelbyte" es 'extraido'
+print(usuario_eliminado)
 ```
 
 ```text
@@ -763,8 +763,8 @@ En resumen, `usuarios.pop(2)` busca el valor en la tercera posición, lo extrae 
 También es posible usar `.pop()` sin indicar una posición. En ese caso, extrae el último elemento de la lista por defecto.
 
 ```python
->>> usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
->>> print(usuarios, "\n")
+usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
+print(usuarios, "\n")
 ```
 
 ```text
@@ -772,9 +772,9 @@ También es posible usar `.pop()` sin indicar una posición. En ese caso, extrae
 ```
 
 ```python
->>> usuario_eliminado = usuarios.pop()
->>> print(usuario_eliminado)
->>> print(usuarios, "\n")
+usuario_eliminado = usuarios.pop()
+print(usuario_eliminado)
+print(usuarios, "\n")
 ```
 
 ```text
@@ -782,9 +782,9 @@ También es posible usar `.pop()` sin indicar una posición. En ese caso, extrae
 ```
 
 ```python
->>> usuario_eliminado = usuarios.pop()
->>> print(usuario_eliminado)
->>> print(usuarios)
+usuario_eliminado = usuarios.pop()
+print(usuario_eliminado)
+print(usuarios)
 ```
 
 ```text
@@ -804,8 +804,8 @@ Y podríamos continuar así hasta vaciar la lista.
 El método `.remove()` es útil para cuando queremos eliminar elementos de una lista a partir de su valor, en lugar de su posición. Por ejemplo:
 
 ```python
->>> usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
->>> print(usuarios)
+usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
+print(usuarios)
 ```
 
 ```text
@@ -813,8 +813,8 @@ El método `.remove()` es útil para cuando queremos eliminar elementos de una l
 ```
 
 ```python
->>> usuarios.remove("cyberwolf")
->>> print(usuarios)
+usuarios.remove("cyberwolf")
+print(usuarios)
 ```
 
 ```text
@@ -851,9 +851,9 @@ Para ordenar una lista de manera sencilla, podemos usar el método `.sort()`.
 Veamos un par de ejemplos para entender cómo funciona.
 
 ```python
->>> productos = ["Fanta", "Coca Cola", "Sprite"]
->>> productos.sort()
->>> print(productos)
+productos = ["Fanta", "Coca Cola", "Sprite"]
+productos.sort()
+print(productos)
 ```
 
 ```text
@@ -861,9 +861,9 @@ Veamos un par de ejemplos para entender cómo funciona.
 ```
 
 ```python
->>> precios = [100, 110, 80.0, 70]
->>> precios.sort()
->>> print(precios)
+precios = [100, 110, 80.0, 70]
+precios.sort()
+print(precios)
 ```
 
 ```text
@@ -880,9 +880,9 @@ Por defecto, el ordenamiento se hace de menor a mayor: en el caso de cadenas de 
 El método `.sort()` tiene un argumento llamado `reverse`. Si este valor es igual a `True`, se ordenan los elementos de mayor a menor.
 
 ```python
->>> productos = ["Fanta", "Coca Cola", "Sprite"]
->>> productos.sort(reverse=True)
->>> print(productos)
+productos = ["Fanta", "Coca Cola", "Sprite"]
+productos.sort(reverse=True)
+print(productos)
 ```
 
 ```text
@@ -890,9 +890,9 @@ El método `.sort()` tiene un argumento llamado `reverse`. Si este valor es igua
 ```
 
 ```python
->>> precios = [100, 110, 80, 70]
->>> precios.sort(reverse=True)
->>> print(precios)
+precios = [100, 110, 80, 70]
+precios.sort(reverse=True)
+print(precios)
 ```
 
 ```text
@@ -907,8 +907,8 @@ Esto resulta útil cuando queremos conservar tanto el orden original como una ve
 Veamos algunos ejemplos breves:
 
 ```python
->>> juegos = ["Counter Strike", "The Sims", "Age of Empires II", "League of Legends", "Among Us"]
->>> juegos_ordenados = sorted(juegos)
+juegos = ["Counter Strike", "The Sims", "Age of Empires II", "League of Legends", "Among Us"]
+juegos_ordenados = sorted(juegos)
 ```
 
 ```text
@@ -916,8 +916,8 @@ Veamos algunos ejemplos breves:
 ```
 
 ```python
->>> print("Esta es la lista original:")
->>> print(juegos, "\n")
+print("Esta es la lista original:")
+print(juegos, "\n")
 ```
 
 ```text
@@ -925,8 +925,8 @@ Veamos algunos ejemplos breves:
 ```
 
 ```python
->>> print("Esta es la lista ordenada:")
->>> print(juegos_ordenados)
+print("Esta es la lista ordenada:")
+print(juegos_ordenados)
 ```
 
 ```text
@@ -938,8 +938,8 @@ Esta es la lista ordenada:
 ```
 
 ```python
->>> print("id(juegos):".ljust(22), id(juegos))
->>> print("id(juegos_ordenados):".ljust(22), id(juegos_ordenados))
+print("id(juegos):".ljust(22), id(juegos))
+print("id(juegos_ordenados):".ljust(22), id(juegos_ordenados))
 ```
 
 ```text
@@ -950,7 +950,7 @@ id(juegos_ordenados):  139758141196416
 Al igual que `.sort()`, `sorted()` también tiene un argumento que determina el orden:
 
 ```python
->>> sorted(juegos, reverse=True)
+sorted(juegos, reverse=True)
 ```
 
 ```text
@@ -966,9 +966,9 @@ Otra operación común es invertir el orden de los elementos, y para eso podemos
 Al igual que `.sort()`, esta operación modifica la lista original de forma permanente.
 
 ```python
->>> productos = ["Fanta", "Coca Cola", "Sprite"]
->>> productos.reverse()
->>> print(productos)
+productos = ["Fanta", "Coca Cola", "Sprite"]
+productos.reverse()
+print(productos)
 ```
 
 ```text
@@ -978,8 +978,8 @@ Al igual que `.sort()`, esta operación modifica la lista original de forma perm
 Si nos arrepentimos de haber invertido el orden, podemos usar `.reverse()` nuevamente y recuperamos el orden original.
 
 ```python
->>> productos.reverse()
->>> print(productos)
+productos.reverse()
+print(productos)
 ```
 
 ```text
@@ -1004,9 +1004,9 @@ Para saber cuantos elementos hay en una lista utilizamos la función `len()`.
 Por ejemplo, para obtener la cantidad de usuarios de manera programática:
 
 ```python
->>> usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
->>> print(usuarios)
->>> len(usuarios)
+usuarios = ["cyberwolf", "neo_404", "pixelbyte", "alphaX", "quantum.dev"]
+print(usuarios)
+len(usuarios)
 ```
 
 ```text
@@ -1017,8 +1017,8 @@ Por ejemplo, para obtener la cantidad de usuarios de manera programática:
 Y para obtener la cantidad de ciudades del Gran Rosario (aunque falte una 😉):
 
 ```python
->>> print(gran_rosario)
->>> len(gran_rosario)
+print(gran_rosario)
+len(gran_rosario)
 ```
 
 ```text
@@ -1031,8 +1031,8 @@ Y para obtener la cantidad de ciudades del Gran Rosario (aunque falte una 😉):
 Para evaluar si un determinado elemento se encuentra en una lista utilizamos el operador `in`.
 
 ```python
->>> nuevo_usuario = "pepito"
->>> nuevo_usuario in usuarios
+nuevo_usuario = "pepito"
+nuevo_usuario in usuarios
 ```
 
 ```text
@@ -1042,7 +1042,7 @@ False
 Que correctamente indica que `"pepito"` no está en nuestra base de usuarios. Por otro lado,
 
 ```python
->>> "cyberwolf" in usuarios
+"cyberwolf" in usuarios
 ```
 
 ```text
@@ -1052,7 +1052,7 @@ True
 ¿Y cómo preguntar si algún elemento **no está** dentro de la lista? Para eso, utilizamos el operador `not in`.
 
 ```python
->>> "Colón" not in gran_rosario
+"Colón" not in gran_rosario
 ```
 
 ```text
@@ -1068,8 +1068,8 @@ Este es uno de los tantos ejemplos donde Python se parece mucho mas al lenguaje 
 Si queremos conocer la posición de un elemento en la lista podemos utilizar el método `.index()`. Por ejemplo:
 
 ```python
->>> vocales = ["a", "e", "i", "o", "u"]
->>> vocales
+vocales = ["a", "e", "i", "o", "u"]
+vocales
 ```
 
 ```text
@@ -1077,7 +1077,7 @@ Si queremos conocer la posición de un elemento en la lista podemos utilizar el 
 ```
 
 ```python
->>> vocales.index("i")
+vocales.index("i")
 ```
 
 ```text
@@ -1087,7 +1087,7 @@ Si queremos conocer la posición de un elemento en la lista podemos utilizar el 
 Al igual que `.remove()`, el método `.index()` actúa sobre el primer elemento de la lista que coincide con el valor indicado. Es decir, si hay múltiples apariciones del mismo valor, solo se considera la primera.
 
 ```python
->>> ["a", "a", "a"].index("a")
+["a", "a", "a"].index("a")
 ```
 
 ```text
@@ -1102,7 +1102,7 @@ Si queremos saber cuántas veces aparece un elemento en una lista, podemos usar 
 Este método devuelve la cantidad de ocurrencias del valor indicado dentro de la lista.
 
 ```python
->>> ["a", "a", "a"].count("a")
+["a", "a", "a"].count("a")
 ```
 
 ```text
@@ -1110,7 +1110,7 @@ Este método devuelve la cantidad de ocurrencias del valor indicado dentro de la
 ```
 
 ```python
->>> ["a", "a", "a"].count("b")
+["a", "a", "a"].count("b")
 ```
 
 ```text
@@ -1130,8 +1130,8 @@ Se destacan:
 Veamos algunos ejemplos:
 
 ```python
->>> numeros = [3, 7.5, 12, 1.2, 9, 4.8, 6, 15.3, 2.1, 8]
->>> numeros
+numeros = [3, 7.5, 12, 1.2, 9, 4.8, 6, 15.3, 2.1, 8]
+numeros
 ```
 
 ```text
@@ -1139,9 +1139,9 @@ Veamos algunos ejemplos:
 ```
 
 ```python
->>> print("Valor mínimo:", min(numeros))
->>> print("Valor máximo:", max(numeros))
->>> print("Suma de valores:", sum(numeros))
+print("Valor mínimo:", min(numeros))
+print("Valor máximo:", max(numeros))
+print("Suma de valores:", sum(numeros))
 ```
 
 ```text
@@ -1171,7 +1171,7 @@ Suma de valores: 68.9
 El siguiente bloque de código genera una tupla con los números 1, 2, 3, 4 y 5.
 
 ```python
->>> (1, 2, 3, 4, 5)
+(1, 2, 3, 4, 5)
 ```
 
 ```text
@@ -1195,8 +1195,8 @@ Supongamos que trabajamos en un aeropuerto internacional y estamos implementando
 Como esperamos que estos tipos no vayan a cambiar con el tiempo (¡al menos mientras corre nuestro programa!), tiene sentido utilizar una tupla (inmutable) en vez de una lista (mutable).
 
 ```python
->>> tipos_identificacion = ("LE", "LC", "DNI", "CUIT", "CUIL", "Pasaporte")
->>> tipos_identificacion
+tipos_identificacion = ("LE", "LC", "DNI", "CUIT", "CUIL", "Pasaporte")
+tipos_identificacion
 ```
 
 ```text
@@ -1204,7 +1204,7 @@ Como esperamos que estos tipos no vayan a cambiar con el tiempo (¡al menos mien
 ```
 
 ```python
->>> type(tipos_identificacion)
+type(tipos_identificacion)
 ```
 
 ```text
@@ -1214,8 +1214,8 @@ Como esperamos que estos tipos no vayan a cambiar con el tiempo (¡al menos mien
 Al igual que con las listas, podemos utilizar los índices para acceder a los elementos de la tupla:
 
 ```python
->>> print(tipos_identificacion[0])
->>> print(tipos_identificacion[-1])
+print(tipos_identificacion[0])
+print(tipos_identificacion[-1])
 ```
 
 ```text
@@ -1226,7 +1226,7 @@ Pasaporte
 Al contrario de lo que sucede con las listas, no es posible modificar ninguno de sus elementos existentes:
 
 ```python
->>> tipos_identificacion[0] = "NUEVO_TIPO"
+tipos_identificacion[0] = "NUEVO_TIPO"
 ```
 :::{.code-error}
 ```python
@@ -1239,8 +1239,8 @@ TypeError: 'tuple' object does not support item assignment
 Sin embargo, si necesitamos combinar una o más tuplas en otra tupla, sigue siendo posible utilizar el operador de suma (`+`) para concatenar tuplas y así crear una nueva, con sus elementos concatenados.
 
 ```python
->>> tupla_nueva = tipos_identificacion + ("NT1", "NT2")
->>> tupla_nueva
+tupla_nueva = tipos_identificacion + ("NT1", "NT2")
+tupla_nueva
 ```
 
 ```text
@@ -1248,8 +1248,8 @@ Sin embargo, si necesitamos combinar una o más tuplas en otra tupla, sigue sien
 ```
 
 ```python
->>> print("id(tipos_identificacion):", id(tipos_identificacion))
->>> print("id(tupla_nueva):".ljust(25), id(tupla_nueva))
+print("id(tipos_identificacion):", id(tipos_identificacion))
+print("id(tupla_nueva):".ljust(25), id(tupla_nueva))
 ```
 
 ```text
@@ -1270,22 +1270,22 @@ Cada tupla tiene dos elementos: el **palo** y el **valor**.
 Es decir, cada carta se representa así:
 
 ```python
->>> (palo, valor)
+(palo, valor)
 ```
 
 Por ejemplo: `("espadas", 7)` representa el **7 de espadas**.
 
 ```python
->>> baraja = [
-...     ("oros", 1), ("oros", 2), ("oros", 3), ("oros", 4), ("oros", 5),
-...     ("oros", 6),  ("oros", 7), ("oros", 10), ("oros", 11), ("oros", 12),
-...     ("copas", 1), ("copas", 2), ("copas", 3), ("copas", 4), ("copas", 5),
-...     ("copas", 6), ("copas", 7), ("copas", 10), ("copas", 11), ("copas", 12),
-...     ("espadas", 1), ("espadas", 2), ("espadas", 3), ("espadas", 4), ("espadas", 5),
-...     ("espadas", 6), ("espadas", 7), ("espadas", 10), ("espadas", 11), ("espadas", 12),
-...     ("bastos", 1), ("bastos", 2), ("bastos", 3), ("bastos", 4), ("bastos", 5),
-...     ("bastos", 6), ("bastos", 7), ("bastos", 10), ("bastos", 11), ("bastos", 12)
-... ]
+baraja = [
+    ("oros", 1), ("oros", 2), ("oros", 3), ("oros", 4), ("oros", 5),
+    ("oros", 6),  ("oros", 7), ("oros", 10), ("oros", 11), ("oros", 12),
+    ("copas", 1), ("copas", 2), ("copas", 3), ("copas", 4), ("copas", 5),
+    ("copas", 6), ("copas", 7), ("copas", 10), ("copas", 11), ("copas", 12),
+    ("espadas", 1), ("espadas", 2), ("espadas", 3), ("espadas", 4), ("espadas", 5),
+    ("espadas", 6), ("espadas", 7), ("espadas", 10), ("espadas", 11), ("espadas", 12),
+    ("bastos", 1), ("bastos", 2), ("bastos", 3), ("bastos", 4), ("bastos", 5),
+    ("bastos", 6), ("bastos", 7), ("bastos", 10), ("bastos", 11), ("bastos", 12)
+]
 ```
 
 De este modo, cada tupla representa una carta y resalta su característica de inmutable.
@@ -1336,9 +1336,9 @@ Hasta ahora dijimos que las tuplas se crean utilizando paréntesis y separando l
 En realidad, **los paréntesis no son necesarios** para definir una tupla. Lo que define a una tupla en Python es la **coma**, no los paréntesis. Por ejemplo:
 
 ```python
->>> t = 10, 25.0, 50
->>> print(t)
->>> print(type(t))
+t = 10, 25.0, 50
+print(t)
+print(type(t))
 ```
 
 ```text
@@ -1357,10 +1357,10 @@ Dicho esto, el uso de paréntesis es una convención ampliamente aceptada a la h
 En el ejemplo al inicio de este apunte presentamos el siguiente bloque de código:
 
 ```python
->>> nombre_1 = "Juan"
->>> nombre_2 = "Carla"
->>> nombre_3 = "Evelina"
->>> nombre_4 = "Leandro"
+nombre_1 = "Juan"
+nombre_2 = "Carla"
+nombre_3 = "Evelina"
+nombre_4 = "Leandro"
 ```
 
 ```text
@@ -1368,10 +1368,10 @@ En el ejemplo al inicio de este apunte presentamos el siguiente bloque de códig
 ```
 
 ```python
->>> edad_1 = 29
->>> edad_2 = 34
->>> edad_3 = 33
->>> edad_4 = 38
+edad_1 = 29
+edad_2 = 34
+edad_3 = 33
+edad_4 = 38
 ```
 
 A simple vista, se pudo concluir que existía una relación entre los nombres y las edades. Por ejemplo, pudimos deducir que la edad de Juan es de 29 años.
@@ -1379,8 +1379,8 @@ A simple vista, se pudo concluir que existía una relación entre los nombres y 
 Con las herramientas adquiridas en este apunte podríamos representar esta información de las siguientes dos maneras:
 
 ```python
->>> nombres = ["Juan", "Carla", "Evelina", "Leandro"]
->>> edades = [29, 34, 33, 38]
+nombres = ["Juan", "Carla", "Evelina", "Leandro"]
+edades = [29, 34, 33, 38]
 ```
 
 Así, el elemento ubicado en la posición i-ésima de la lista `nombres` se corresponde con el elemento de la misma posición en la lista `edades`.
@@ -1390,7 +1390,7 @@ En principio, este enfoque resuelve el problema de tener que crear una variable 
 Otra alternativa es la siguiente:
 
 ```python
->>> personas = [("Juan", 29), ("Carla", 34), ("Evelina", 33), ("Leandro", 38)]
+personas = [("Juan", 29), ("Carla", 34), ("Evelina", 33), ("Leandro", 38)]
 ```
 
 Ahora, contamos con un único objeto de Python que reúne toda la información de las personas. En esta lista de tuplas, cada tupla representa a una persona: el primer elemento es su nombre y el segundo, su edad. Una de las ventajas de este enfoque es que permite agregar o quitar registros sin preocuparse por mantener la sincronización entre distintas colecciones.
@@ -1402,8 +1402,8 @@ Los diccionarios son estructuras que establecen un **mapeo** (del inglés, _mapp
 En Python, los diccionarios se definen entre llaves (`{}`). Dentro de ellas, cada elemento se escribe como un par **clave: valor**, separado por comas para distinguirlo de los demás.
 
 ```python
->>> personas = {"Juan": 29, "Carla": 34, "Evelina": 33, "Leandro": 38}
->>> personas
+personas = {"Juan": 29, "Carla": 34, "Evelina": 33, "Leandro": 38}
+personas
 ```
 
 ```text
@@ -1411,7 +1411,7 @@ En Python, los diccionarios se definen entre llaves (`{}`). Dentro de ellas, cad
 ```
 
 ```python
->>> type(personas)
+type(personas)
 ```
 
 ```text
@@ -1419,7 +1419,7 @@ En Python, los diccionarios se definen entre llaves (`{}`). Dentro de ellas, cad
 ```
 
 ```python
->>> len(personas)
+len(personas)
 ```
 
 ```text
@@ -1436,8 +1436,8 @@ Podemos usar este ejemplo para destacar algunos puntos clave sobre los diccionar
 Por último, veremos con un ejemplo que, aunque desde Python 3.7 los diccionarios mantienen un orden, este no es relevante al compararlos.
 
 ```python
->>> d1 = {"nombre": "Juan", "apellido": "Pérez"}
->>> d2 = {"apellido": "Pérez", "nombre": "Juan"}
+d1 = {"nombre": "Juan", "apellido": "Pérez"}
+d2 = {"apellido": "Pérez", "nombre": "Juan"}
 ```
 
 ```text
@@ -1445,9 +1445,9 @@ Por último, veremos con un ejemplo que, aunque desde Python 3.7 los diccionario
 ```
 
 ```python
->>> print(d1)
->>> print(d2)
->>> print(d1 == d2)
+print(d1)
+print(d2)
+print(d1 == d2)
 ```
 
 ```text
@@ -1470,7 +1470,7 @@ El nombre proviene de la idea de que en un diccionario real, uno busca la defini
 A diferencia de las listas y las tuplas, que son objetos donde el orden importa y se puede acceder a sus elementos por posición, los diccionarios no utilizan posiciones: en ellos, el acceso a los elementos se realiza mediante sus claves. Por ejemplo, si queremos acceder a la edad de Juan utilizando el índice `0`, vamos a obtener un error:
 
 ```python
->>> personas[0]
+personas[0]
 ```
 :::{.code-error}
 ```python
@@ -1483,7 +1483,7 @@ KeyError: 0
 En cambio, si usamos la clave `"Juan"`, que es lo que corresponde:
 
 ```python
->>> personas["Juan"]
+personas["Juan"]
 ```
 
 ```text
@@ -1495,7 +1495,7 @@ En cambio, si usamos la clave `"Juan"`, que es lo que corresponde:
 Los operadores `in` y `not in` permiten determinar si un diccionario contiene a un elemento con una determinada clave.
 
 ```python
->>> d = {"color": "azul", "forma": "cuadrado"}
+d = {"color": "azul", "forma": "cuadrado"}
 ```
 
 ```text
@@ -1503,7 +1503,7 @@ Los operadores `in` y `not in` permiten determinar si un diccionario contiene a 
 ```
 
 ```python
->>> "color" in d
+"color" in d
 ```
 
 ```text
@@ -1511,7 +1511,7 @@ True
 ```
 
 ```python
->>> "area" in d
+"area" in d
 ```
 
 ```text
@@ -1519,7 +1519,7 @@ False
 ```
 
 ```python
->>> "area" not in d
+"area" not in d
 ```
 
 ```text
@@ -1527,7 +1527,7 @@ True
 ```
 
 ```python
->>> "azul" in d
+"azul" in d
 ```
 
 ```text
@@ -1541,8 +1541,8 @@ Aunque `"azul"` aparece como valor de uno de los elementos del diccionario `d`, 
 Es posible acceder solo a las claves:
 
 ```python
->>> d = {"color": "azul", "forma": "cuadrado"}
->>> d.keys()
+d = {"color": "azul", "forma": "cuadrado"}
+d.keys()
 ```
 
 ```text
@@ -1552,7 +1552,7 @@ dict_keys(['color', 'forma'])
 O a los valores:
 
 ```python
->>> d.values()
+d.values()
 ```
 
 ```text
@@ -1562,7 +1562,7 @@ dict_values(['azul', 'cuadrado'])
 O a las claves y los valores:
 
 ```python
->>> d.items()
+d.items()
 ```
 
 ```text
@@ -1581,7 +1581,7 @@ Su funcionamiento es muy similar al de las listas. La diferencia más notable es
 Al igual que en una lista, podemos modificar un elemento seleccionándolo y asignándole un nuevo valor.
 
 ```python
->>> personas
+personas
 ```
 
 ```text
@@ -1589,11 +1589,11 @@ Al igual que en una lista, podemos modificar un elemento seleccionándolo y asig
 ```
 
 ```python
->>> personas["Juan"] = 54
+personas["Juan"] = 54
 ```
 
 ```python
->>> personas
+personas
 ```
 
 ```text
@@ -1605,7 +1605,7 @@ Al igual que en una lista, podemos modificar un elemento seleccionándolo y asig
 Para agregar un elemento, se utiliza la misma sintaxis que para modificar uno: se asigna un valor a una **nueva clave** en el diccionario.
 
 ```python
->>> personas["Marisa"] = 29
+personas["Marisa"] = 29
 ```
 
 En resumen, al asignar un valor a una clave, Python primero verifica si existe: si la encuentra, reemplaza su valor; si no, agrega un nuevo par clave-valor.
@@ -1622,16 +1622,16 @@ La sentencia `del` elimina un elemento asociado a una clave sin devolver su valo
 Por ejemplo:
 
 ```python
->>> descuentos = {
-...     "Lunes": 0,
-...     "Martes": 20,
-...     "Miercoles": 10,
-...     "Jueves": 20,
-...     "Viernes": 30,
-...     "Sábado": 30,
-...     "Domingo": 0
-... }
->>> descuentos
+descuentos = {
+    "Lunes": 0,
+    "Martes": 20,
+    "Miercoles": 10,
+    "Jueves": 20,
+    "Viernes": 30,
+    "Sábado": 30,
+    "Domingo": 0
+}
+descuentos
 ```
 
 ```text
@@ -1639,8 +1639,8 @@ Por ejemplo:
 ```
 
 ```python
->>> del descuentos["Domingo"]
->>> descuentos
+del descuentos["Domingo"]
+descuentos
 ```
 
 ```text
@@ -1652,9 +1652,9 @@ Es como si el elemento `"Domingo": 0` se hubiera esfumado.
 En cambio, el método `.pop()` extrae el valor del diccionario y lo devuelve, lo que permite almacenarlo o utilizarlo más adelante en el programa.
 
 ```python
->>> descuento_lunes = descuentos.pop("Lunes")
->>> print(descuento_lunes)
->>> print(descuentos)
+descuento_lunes = descuentos.pop("Lunes")
+print(descuento_lunes)
+print(descuentos)
 ```
 
 ```text
@@ -1668,15 +1668,15 @@ Los diccionarios tienen acceso a un método `.update()` que permiten actualizar 
 Supongamos que tenemos un diccionario con información relacionada a una persona y otro diccionario con información actualizada de esa persona.
 
 ```python
->>> datos = {"nombre": "Guillermina", "ciudad": "Rosario", "estado civil": "soltera"}
->>> datos_nuevos = {"ciudad": "Roldán", "estado civil": "casada", "hijos": 2}
+datos = {"nombre": "Guillermina", "ciudad": "Rosario", "estado civil": "soltera"}
+datos_nuevos = {"ciudad": "Roldán", "estado civil": "casada", "hijos": 2}
 ```
 
 Se puede **actualizar** el contenido del diccionario `datos` con el contenido del diccionario `datos_nuevos` de la sigiuente manera:
 
 ```python
->>> datos.update(datos_nuevos)
->>> datos
+datos.update(datos_nuevos)
+datos
 ```
 
 ```text
@@ -1688,9 +1688,9 @@ Este método modifica el diccionario `datos` _in-place_.
 Si se quiere realizar la operación sin alterar el diccionario original, se puede usar el operador _pipe_ (`|`), que devuelve un nuevo diccionario.
 
 ```python
->>> d1 = {"a": 1, "b": 2}
->>> d2 = {"b": 10, "c": 25}
->>> d3 = d1 | d2
+d1 = {"a": 1, "b": 2}
+d2 = {"b": 10, "c": 25}
+d3 = d1 | d2
 ```
 
 ```text
@@ -1698,9 +1698,9 @@ Si se quiere realizar la operación sin alterar el diccionario original, se pued
 ```
 
 ```python
->>> print(d1)
->>> print(d2)
->>> print(d3)
+print(d1)
+print(d2)
+print(d3)
 ```
 
 ```text
@@ -1718,11 +1718,11 @@ Anteriormente mencionamos que los diccionarios pueden contener cualquier tipo de
 Veamos un ejemplo donde esta idea resulta útil. Supongamos que queremos representar la información de una persona llamada Julia, que tiene 33 años y realizó tres cursos de Python: Introducción a Python, Análisis de datos con Python y Python avanzado. El tipo de dato para el nombre y la edad es evidente: `str` e `int`, respectivamente. En cambio, para los cursos necesitamos una colección de valores, ya que no se trata de un único elemento. Así, podemos crear el siguiente diccionario:
 
 ```python
->>> persona = {
-...     "nombre": "Julia",
-...     "edad": 33,
-...     "cursos": ["Introducción a Python", "Análisis de datos con Python", "Python avanzado"]
-... }
+persona = {
+    "nombre": "Julia",
+    "edad": 33,
+    "cursos": ["Introducción a Python", "Análisis de datos con Python", "Python avanzado"]
+}
 ```
 
 ```text
@@ -1730,7 +1730,7 @@ Veamos un ejemplo donde esta idea resulta útil. Supongamos que queremos represe
 ```
 
 ```python
->>> print(persona)
+print(persona)
 ```
 
 ```text
@@ -1738,9 +1738,9 @@ Veamos un ejemplo donde esta idea resulta útil. Supongamos que queremos represe
 ```
 
 ```python
->>> print(f"Nombre: {persona['nombre']}")
->>> print(f"Edad: {persona['edad']}")
->>> print(f"Cursos: {persona['cursos']}")
+print(f"Nombre: {persona['nombre']}")
+print(f"Edad: {persona['edad']}")
+print(f"Cursos: {persona['cursos']}")
 ```
 
 ```text
@@ -1752,30 +1752,30 @@ Cursos: ['Introducción a Python', 'Análisis de datos con Python', 'Python avan
 También es posible representar estructuras de datos más complejas, como registros. En el siguiente ejemplo, el diccionario `usuarios` tiene como valores otros diccionarios. Las claves de `usuarios` corresponden a nombres de usuario (por ejemplo, `"aeinstein"`), mientras que los valores son diccionarios que almacenan atributos de ese usuario, como su nombre, apellido y ciudad de residencia.
 
 ```python
->>> usuarios = {
-...     "aeinstein": {
-...         "nombre": "albert",
-...         "apellido": "einstein",
-...         "ciudad": "princenton"
-...     },
-...     "mcurie": {
-...         "nombre": "marie",
-...         "apellido": "curie",
-...         "ciudad": "paris"
-...     },
-...     "afleming": {
-...         "nombre": "alexander",
-...         "apellido": "fleming",
-...         "ciudad": "londres"
-...     }
-... }
+usuarios = {
+    "aeinstein": {
+        "nombre": "albert",
+        "apellido": "einstein",
+        "ciudad": "princenton"
+    },
+    "mcurie": {
+        "nombre": "marie",
+        "apellido": "curie",
+        "ciudad": "paris"
+    },
+    "afleming": {
+        "nombre": "alexander",
+        "apellido": "fleming",
+        "ciudad": "londres"
+    }
+}
 ```
 
 Para acceder a un elemento dentro de un diccionario anidado, se encadenan los accesos usando `[]` tantas veces como sea necesario: primero para obtener el diccionario interno y luego para acceder a la clave deseada dentro de él.
 
 ```python
->>> print(usuarios["aeinstein"])
->>> print(usuarios["aeinstein"]["ciudad"])
+print(usuarios["aeinstein"])
+print(usuarios["aeinstein"]["ciudad"])
 ```
 
 ```text
@@ -1784,9 +1784,9 @@ princenton
 ```
 
 ```python
->>> usuario = "aeinstein"
->>> datos = usuarios[usuario]
->>> f"El usuario '{usuario}' se llama {datos['nombre'].capitalize()} {datos['apellido'].capitalize()}."
+usuario = "aeinstein"
+datos = usuarios[usuario]
+f"El usuario '{usuario}' se llama {datos['nombre'].capitalize()} {datos['apellido'].capitalize()}."
 ```
 
 ```text
@@ -1830,9 +1830,9 @@ Vale la pena destacar a las secuencias, ya que todos los tipos de datos que abar
 Por ejemplo:
 
 ```python
->>> texto = "Esto es un texto cualquiera"
->>> otro = "y esto es otro texto"
->>> print("texto[0]:", texto[0])
+texto = "Esto es un texto cualquiera"
+otro = "y esto es otro texto"
+print("texto[0]:", texto[0])
 ```
 
 ```text
@@ -1840,7 +1840,7 @@ texto[0]: E
 ```
 
 ```python
->>> print("texto[-1]:", texto[-1])
+print("texto[-1]:", texto[-1])
 ```
 
 ```text
@@ -1848,7 +1848,7 @@ texto[-1]: a
 ```
 
 ```python
->>> print("texto[0:3]:", texto[0:3])
+print("texto[0:3]:", texto[0:3])
 ```
 
 ```text
@@ -1856,7 +1856,7 @@ texto[0:3]: Est
 ```
 
 ```python
->>> print("texto[0:10:2]:", texto[0:20:2])
+print("texto[0:10:2]:", texto[0:20:2])
 ```
 
 ```text
@@ -1864,7 +1864,7 @@ texto[0:10:2]: Et su et u
 ```
 
 ```python
->>> print("texto + otro:", texto + otro)
+print("texto + otro:", texto + otro)
 ```
 
 ```text
@@ -1872,7 +1872,7 @@ texto + otro: Esto es un texto cualquieray esto es otro texto
 ```
 
 ```python
->>> print("texto * 2:", texto * 2)
+print("texto * 2:", texto * 2)
 ```
 
 ```text
@@ -1880,7 +1880,7 @@ texto * 2: Esto es un texto cualquieraEsto es un texto cualquiera
 ```
 
 ```python
->>> print("len(texto):", len(texto))
+print("len(texto):", len(texto))
 ```
 
 ```text
@@ -1888,7 +1888,7 @@ len(texto): 27
 ```
 
 ```python
->>> print("sorted(texto):", sorted(texto))
+print("sorted(texto):", sorted(texto))
 ```
 
 ```text
@@ -1898,7 +1898,7 @@ sorted(texto): [' ', ' ', ' ', ' ', 'E', 'a', 'a', 'c', 'e', 'e', 'e', 'i', 'l',
 Además, es posible crear una secuencia (o colección) a partir de otra secuencia (o colección) utilizando el tipo de dato como constructor. Por ejemplo:
 
 ```python
->>> list("texto")
+list("texto")
 ```
 
 ```text
@@ -1906,7 +1906,7 @@ Además, es posible crear una secuencia (o colección) a partir de otra secuenci
 ```
 
 ```python
->>> tuple("texto")
+tuple("texto")
 ```
 
 ```text
@@ -1914,7 +1914,7 @@ Además, es posible crear una secuencia (o colección) a partir de otra secuenci
 ```
 
 ```python
->>> list((1, 2, 3, 4))
+list((1, 2, 3, 4))
 ```
 
 ```text
@@ -1924,7 +1924,7 @@ Además, es posible crear una secuencia (o colección) a partir de otra secuenci
 Sin embargo, el resultado puede no ser de lo más intuitivo incialmente:
 
 ```python
->>> str(["1", "2", "3"]) # ¡Notar que no concatena los elementos!
+str(["1", "2", "3"]) # ¡Notar que no concatena los elementos!
 ```
 
 ```text
@@ -1932,7 +1932,7 @@ Sin embargo, el resultado puede no ser de lo más intuitivo incialmente:
 ```
 
 ```python
->>> list({"a": 1, "b": 2}) # Crea una lista a partir de las claves
+list({"a": 1, "b": 2}) # Crea una lista a partir de las claves
 ```
 
 ```text
@@ -1940,7 +1940,7 @@ Sin embargo, el resultado puede no ser de lo más intuitivo incialmente:
 ```
 
 ```python
->>> list({"a": 1, "b": 2}.values()) # Es posible crear una lista a partir de los valores
+list({"a": 1, "b": 2}.values()) # Es posible crear una lista a partir de los valores
 ```
 
 ```text
@@ -1951,7 +1951,7 @@ Si intentamos crear un diccionario a partir de una lista (o tupla) "plana", obte
 ya que no hay una forma clara de identificar las claves y los valores.
 
 ```python
->>> dict([1, 2, 3])
+dict([1, 2, 3])
 ```
 :::{.code-error}
 ```python
@@ -1964,7 +1964,7 @@ TypeError: cannot convert dictionary update sequence element #0 to a sequence
 En cambio, si usamos una lista (o tupla) compuesta por listas (o tuplas) de longitud 2, la conversión es posible:
 
 ```python
->>> dict([["x", 1], ["y", 2]])
+dict([["x", 1], ["y", 2]])
 ```
 
 ```text
@@ -1972,7 +1972,7 @@ En cambio, si usamos una lista (o tupla) compuesta por listas (o tuplas) de long
 ```
 
 ```python
->>> dict([("A", "aaa"), ("B", "bbb")])
+dict([("A", "aaa"), ("B", "bbb")])
 ```
 
 ```text

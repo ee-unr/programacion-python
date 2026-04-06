@@ -28,9 +28,9 @@ Los bloques `if` utilizan la _keyword_ `if` para evaluar una condición y ejecut
 Veamos un ejemplo.
 
 ```python
->>> condicion = True
->>> if condicion:
-...     print("Se ejecuta el bloque if")
+condicion = True
+if condicion:
+    print("Se ejecuta el bloque if")
 ```
 
 ```text
@@ -38,9 +38,9 @@ Se ejecuta el bloque if
 ```
 
 ```python
->>> condicion = False
->>> if condicion:
-...     print("Se ejecuta el bloque if")
+condicion = False
+if condicion:
+    print("Se ejecuta el bloque if")
 ```
 
 De manera mas general, un bloque `if` es de la siguiente forma:
@@ -57,9 +57,9 @@ Tiene los siguientes componentes:
 Veamos otro ejemplo.
 
 ```python
->>> condicion = True
->>> if condicion:
-...     print("Se ejecuta el bloque if")
+condicion = True
+if condicion:
+    print("Se ejecuta el bloque if")
 ```
 
 ```text
@@ -67,7 +67,7 @@ Se ejecuta el bloque if
 ```
 
 ```python
->>> print("Esto se imprime siempre")
+print("Esto se imprime siempre")
 ```
 
 ```text
@@ -81,9 +81,9 @@ El segundo `print()` se imprime siempre porque está por fuera del bloque de eje
 Simplemente la indentación vuelve a ser normal. El fin de la indentación indica el fin del bloque de código.
 
 ```python
->>> valor = 12
->>> if valor > 10:
-...     print("Se ejecuta el bloque if")
+valor = 12
+if valor > 10:
+    print("Se ejecuta el bloque if")
 ```
 
 ```text
@@ -105,11 +105,11 @@ La diferencia es que nos permite definir otro bloque de código que se ejecuta c
 ![](imgs/if_else_codigo.png){fig-align="center" width="400px"}
 
 ```python
->>> edad = 21
->>> if edad >= 16:
-...     print("Tenés la edad suficiente para votar")
-... else:
-...     print("Lo siento, aún sos demasiado jóven para votar")
+edad = 21
+if edad >= 16:
+    print("Tenés la edad suficiente para votar")
+else:
+    print("Lo siento, aún sos demasiado jóven para votar")
 ```
 
 ```text
@@ -123,8 +123,8 @@ Al igual que con el bloque `if`, cualquier parte del código que se escriba lueg
 Veamos otro ejemplo donde evaluamos si un número es par o impar.
 
 ```python
->>> valor = 10
->>> print(valor)
+valor = 10
+print(valor)
 ```
 
 ```text
@@ -132,11 +132,11 @@ Veamos otro ejemplo donde evaluamos si un número es par o impar.
 ```
 
 ```python
->>> if valor % 2 == 0:
-...     mensaje = "Es par"
-... else:
-...     mensaje = "Es impar"
->>> print(mensaje)
+if valor % 2 == 0:
+    mensaje = "Es par"
+else:
+    mensaje = "Es impar"
+print(mensaje)
 ```
 
 ```text
@@ -164,13 +164,13 @@ Supongamos que viene un parque de diversiones a Rosario y tiene los siguientes p
 * Personas de 18 o mas años, \$600.
 
 ```python
->>> edad = 3
->>> if edad < 4:
-...     print("El costo de entrada para vos es de $0.")
-... elif edad < 18:
-...     print("El costo de entrada para vos es de $400.")
-... else:
-...     print("El costo de entrada para vos es de $600.")
+edad = 3
+if edad < 4:
+    print("El costo de entrada para vos es de $0.")
+elif edad < 18:
+    print("El costo de entrada para vos es de $400.")
+else:
+    print("El costo de entrada para vos es de $600.")
 ```
 
 ```text
@@ -186,16 +186,16 @@ Hasta ahora utilizamos un único bloque `elif`, pero podemos usar tantos como se
 Por ejemplo, si el parque de diversiones decide realizar un descuento para adultos mayores, dejando el precio en \$350, podriamos agregar otro bloque `elif` que represente la evaluación de esta condición.
 
 ```python
->>> edad = 68
->>> if edad < 4:
-...     precio = 0
-... elif edad < 18:
-...     precio = 400
-... elif edad < 65:
-...     precio = 600
-... else:
-...     precio = 350
->>> print(f"El precio de entrada para vos es de ${precio}.")
+edad = 68
+if edad < 4:
+    precio = 0
+elif edad < 18:
+    precio = 400
+elif edad < 65:
+    precio = 600
+else:
+    precio = 350
+print(f"El precio de entrada para vos es de ${precio}.")
 ```
 
 ```text
@@ -209,16 +209,16 @@ No hay ninguna regla que nos obligue a terminar un bloque de `if`-`elif` con un 
 Utilizar el bloque `else` a veces es lo correcto, pero otras veces puede ser mejor poner una condición explícita en un último `elif` que contemple solamente la condición que realmente nos interesa.
 
 ```python
->>> edad = 10
->>> if edad < 4:
-...     precio = 0
-... elif edad < 18:
-...     precio = 400
-... elif edad < 65:
-...     precio = 600
-... elif edad >= 65:
-...     precio = 350
->>> print(f"El precio de entrada para vos es de ${precio}.")
+edad = 10
+if edad < 4:
+    precio = 0
+elif edad < 18:
+    precio = 400
+elif edad < 65:
+    precio = 600
+elif edad >= 65:
+    precio = 350
+print(f"El precio de entrada para vos es de ${precio}.")
 ```
 
 ```text
@@ -232,21 +232,21 @@ Esta condición es más explícita y fácil de entender que el bloque `else` que
 Sin embargo, todavía hay un problema: el programa sigue funcionando incluso si se ingresan edades fuera de un rango razonable. A continuación se muestra una versión más completa:
 
 ```python
->>> edad = 125
->>> if edad < 0:
-...     print("¡Error!")
-...     precio = None
-... elif edad < 4:
-...     precio = 0
-... elif edad < 18:
-...     precio = 400
-... elif edad < 65:
-...     precio = 600
-... elif edad >= 65 and edad <= 120:
-...     precio = 350
-... else:
-...     print("¡Error!")
-...     precio = None
+edad = 125
+if edad < 0:
+    print("¡Error!")
+    precio = None
+elif edad < 4:
+    precio = 0
+elif edad < 18:
+    precio = 400
+elif edad < 65:
+    precio = 600
+elif edad >= 65 and edad <= 120:
+    precio = 350
+else:
+    print("¡Error!")
+    precio = None
 ```
 
 ```text
@@ -254,7 +254,7 @@ Sin embargo, todavía hay un problema: el programa sigue funcionando incluso si 
 ```
 
 ```python
->>> print(f"El precio de entrada para vos es ${precio}.")
+print(f"El precio de entrada para vos es ${precio}.")
 ```
 
 ```text

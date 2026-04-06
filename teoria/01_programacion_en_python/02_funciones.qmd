@@ -18,11 +18,11 @@ El uso de funciones tiene varias ventajas:
 Consideremos el siguiente caso donde se busca calcuar el precio final de un producto, considerando impuestos y descuentos. 
 
 ```python
->>> precio_base = 800   # Precio del producto ($800)
->>> impuesto = 0.21     # Impuesto (21%)
->>> descuento = 0.10    # Descuento (10%)
->>> precio_final = precio_base * (1 + impuesto) * (1 - descuento)
->>> precio_final
+precio_base = 800   # Precio del producto ($800)
+impuesto = 0.21     # Impuesto (21%)
+descuento = 0.10    # Descuento (10%)
+precio_final = precio_base * (1 + impuesto) * (1 - descuento)
+precio_final
 ```
 
 ```text
@@ -34,11 +34,11 @@ Consideremos el siguiente caso donde se busca calcuar el precio final de un prod
 Una opción es repetir el código tantas veces como sea necesario...
 
 ```python
->>> precio_base = 500   # Precio del producto ($500)
->>> impuesto = 0.105    # Impuesto (10.5%)
->>> descuento = 0.0     # Descuento (0%)
->>> precio_final = precio_base * (1 + impuesto) * (1 - descuento)
->>> precio_final
+precio_base = 500   # Precio del producto ($500)
+impuesto = 0.105    # Impuesto (10.5%)
+descuento = 0.0     # Descuento (0%)
+precio_final = precio_base * (1 + impuesto) * (1 - descuento)
+precio_final
 ```
 
 ```text
@@ -46,11 +46,11 @@ Una opción es repetir el código tantas veces como sea necesario...
 ```
 
 ```python
->>> precio_base = 2000  # Precio del producto ($2000)
->>> impuesto = 0.21     # Impuesto (21%)
->>> descuento = 0.20    # Descuento (20%)
->>> precio_final = precio_base * (1 + impuesto) * (1 - descuento)
->>> precio_final
+precio_base = 2000  # Precio del producto ($2000)
+impuesto = 0.21     # Impuesto (21%)
+descuento = 0.20    # Descuento (20%)
+precio_final = precio_base * (1 + impuesto) * (1 - descuento)
+precio_final
 ```
 
 ```text
@@ -60,15 +60,15 @@ Una opción es repetir el código tantas veces como sea necesario...
 Otra opción, mucho mas conveniente, es utilizar funciones.
 
 ```python
->>> def calcular_precio(precio_base, impuesto, descuento):
-...     resultado = precio_base * (1 + impuesto) * (1 - descuento)
-...     return resultado
+def calcular_precio(precio_base, impuesto, descuento):
+    resultado = precio_base * (1 + impuesto) * (1 - descuento)
+    return resultado
 ```
 
 Luego, para utilizar la función simplemente la **llamamos** (o **invocamos**).
 
 ```python
->>> calcular_precio(800, 0.21, 0.10)
+calcular_precio(800, 0.21, 0.10)
 ```
 
 ```text
@@ -78,7 +78,7 @@ Luego, para utilizar la función simplemente la **llamamos** (o **invocamos**).
 También es posible indicar los valores de los argumentos utilizando sus nombres.
 
 ```python
->>> calcular_precio(precio_base=2000, impuesto=0.21, descuento=0.20)
+calcular_precio(precio_base=2000, impuesto=0.21, descuento=0.20)
 ```
 
 ```text
@@ -127,12 +127,12 @@ En cambio, en Python, la sentencia `def` _define_ la función y le _asigna un no
 Comencemos con una función super sencilla. La misma se llama `sumar`, recibe dos argumentos `x` e `y`, y devuelve la suma de ambos.
 
 ```python
->>> def sumar(x, y):
-...     return x + y
+def sumar(x, y):
+    return x + y
 ```
 
 ```python
->>> sumar(15, 21.9)
+sumar(15, 21.9)
 ```
 
 ```text
@@ -140,7 +140,7 @@ Comencemos con una función super sencilla. La misma se llama `sumar`, recibe do
 ```
 
 ```python
->>> type(sumar(15, 21.9))
+type(sumar(15, 21.9))
 ```
 
 ```text
@@ -150,8 +150,8 @@ Comencemos con una función super sencilla. La misma se llama `sumar`, recibe do
 El valor que devuelve puede ser tratado como cualquier valor en Python. Por ejemplo, se lo puede asignar a una variable.
 
 ```python
->>> resultado = sumar(10, 11)
->>> resultado
+resultado = sumar(10, 11)
+resultado
 ```
 
 ```text
@@ -161,7 +161,7 @@ El valor que devuelve puede ser tratado como cualquier valor en Python. Por ejem
 Y el valor de esa variable puede ser luego pasado a una nueva llamada a `sumar()` (o a cualquier otra función).
 
 ```python
->>> sumar(resultado, 2.55)
+sumar(resultado, 2.55)
 ```
 
 ```text
@@ -171,7 +171,7 @@ Y el valor de esa variable puede ser luego pasado a una nueva llamada a `sumar()
 Incluso es posible pasar expresiones y llamadas a funciones a la hora de pasar un argumento:
 
 ```python
->>> sumar(sumar(1, 2), 3)
+sumar(sumar(1, 2), 3)
 ```
 
 ```text
@@ -192,12 +192,12 @@ Finalmente, ese valor se muestra en pantalla.
 Otro ejemplo sencillo consiste en una función que recibe un nombre e imprime un saludo en pantalla.
 
 ```python
->>> def saludar(nombre):
-...     print("Hola", nombre)
+def saludar(nombre):
+    print("Hola", nombre)
 ```
 
 ```python
->>> saludar("Pablo")
+saludar("Pablo")
 ```
 
 ```text
@@ -207,7 +207,7 @@ Hola Pablo
 Esta función no devuelve un resultado, sino que utiliza el argumento recibido para mostrar un mensaje en pantalla.
 
 ```python
->>> saludar("Juan" + " Manuel")
+saludar("Juan" + " Manuel")
 ```
 
 ```text
@@ -219,12 +219,12 @@ Hola Juan Manuel
 Y podemos tener funciones que no utilicen ningún argumento.
 
 ```python
->>> def decir_hola():
-...     print("¡Hola!")
+def decir_hola():
+    print("¡Hola!")
 ```
 
 ```python
->>> decir_hola()
+decir_hola()
 ```
 
 ```text
@@ -232,7 +232,7 @@ Y podemos tener funciones que no utilicen ningún argumento.
 ```
 
 ```python
->>> decir_hola()
+decir_hola()
 ```
 
 ```text
@@ -240,7 +240,7 @@ Y podemos tener funciones que no utilicen ningún argumento.
 ```
 
 ```python
->>> decir_hola()
+decir_hola()
 ```
 
 ```text
@@ -252,11 +252,11 @@ Y podemos tener funciones que no utilicen ningún argumento.
 En Python, las funciones pueden devolver múltiples valores separándolos por comas en la sentencia `return`. Por ejemplo:
 
 ```python
->>> def potencias(x):
-...     cuadrado = x ** 2
-...     cubo = x ** 3
-...     return cuadrado, cubo
->>> potencias(2)
+def potencias(x):
+    cuadrado = x ** 2
+    cubo = x ** 3
+    return cuadrado, cubo
+potencias(2)
 ```
 
 ```text
@@ -267,8 +267,8 @@ El resultado de este tipo de funciones puede ser asignado a múltiples variables
 De esta forma, podemos obtener el `cuadrado` y el `cubo` de un número con una sola llamada a una función.
 
 ```python
->>> cuadrado, cubo = potencias(8)
->>> print(cuadrado)
+cuadrado, cubo = potencias(8)
+print(cuadrado)
 ```
 
 ```text
@@ -276,7 +276,7 @@ De esta forma, podemos obtener el `cuadrado` y el `cubo` de un número con una s
 ```
 
 ```python
->>> print(cubo)
+print(cubo)
 ```
 
 ```text
@@ -311,10 +311,10 @@ Una función en Python puede realizar múltiples tareas, como devolver un valor 
 Por ejemplo:
 
 ```python
->>> def producto(x, y):
-...     resultado = x * y
-...     print("El producto es", resultado)
-...     return resultado
+def producto(x, y):
+    resultado = x * y
+    print("El producto es", resultado)
+    return resultado
 ```
 
 La función `producto()` no solo calcula y devuelve el resultado de multiplicar `x` por `y`,
@@ -334,7 +334,7 @@ Al llamar a la función, podemos pasar los valores de dos formas: **por posició
 Por ejemplo, las siguientes llamadas a la función `sumar()` son equivalentes:
 
 ```python
->>> sumar(x = 10, y = 15)
+sumar(x = 10, y = 15)
 ```
 
 ```text
@@ -342,7 +342,7 @@ Por ejemplo, las siguientes llamadas a la función `sumar()` son equivalentes:
 ```
 
 ```python
->>> sumar(10, 15)
+sumar(10, 15)
 ```
 
 ```text
@@ -352,7 +352,7 @@ Por ejemplo, las siguientes llamadas a la función `sumar()` son equivalentes:
 Si utilizamos los nombres para pasar los argumentos **no hace falta que estén en el mismo orden que en la definición** de la función.
 
 ```python
->>> sumar(y = 15, x = 10)
+sumar(y = 15, x = 10)
 ```
 
 ```text
@@ -366,7 +366,7 @@ Si utilizamos los nombres para pasar los argumentos **no hace falta que estén e
 La función `sumar()` termina con la siguiente línea:
 
 ```python
-...     return x + y
+    return x + y
 ```
 
 Es decir, utiliza la sentencia `return` para devolver un valor.
@@ -374,12 +374,12 @@ Es decir, utiliza la sentencia `return` para devolver un valor.
 Por otro lado, la función `saludar()` termina con un `print()` y no tiene ningún `return`.
 
 ```python
-...     print("Hola", nombre)
+    print("Hola", nombre)
 ```
 
 ```python
->>> resultado = sumar(1, 2)
->>> resultado
+resultado = sumar(1, 2)
+resultado
 ```
 
 ```text
@@ -387,7 +387,7 @@ Por otro lado, la función `saludar()` termina con un `print()` y no tiene ning�
 ```
 
 ```python
->>> saludo = saludar("Juan")
+saludo = saludar("Juan")
 ```
 
 ```text
@@ -399,7 +399,7 @@ Hola Juan
 * ¿Tiene sentido?
 
 ```python
->>> print(saludo)
+print(saludo)
 ```
 
 ```text
@@ -424,10 +424,10 @@ Esta práctica es útil para simplificar las llamadas que realizamos a una funci
 Supongamos la siguiente función `describir_mascota()` que tiene los parámetros `nombre` y `tipo`
 
 ```python
->>> def describir_mascota(nombre, tipo):
-...     print("Tengo un", tipo)
-...     print("Y su nombre es", nombre)
->>> describir_mascota("Bruno", "perro")
+def describir_mascota(nombre, tipo):
+    print("Tengo un", tipo)
+    print("Y su nombre es", nombre)
+describir_mascota("Bruno", "perro")
 ```
 
 ```text
@@ -438,15 +438,15 @@ Y su nombre es Bruno
 Ahora, hacemos que el parámetro `tipo` sea por defecto igual a `"perro"`.
 
 ```python
->>> def describir_mascota(nombre, tipo="perro"):
-...     print("Tengo un", tipo)
-...     print("Y su nombre es", nombre)
+def describir_mascota(nombre, tipo="perro"):
+    print("Tengo un", tipo)
+    print("Y su nombre es", nombre)
 ```
 
 De este modo, es posible llamar a la función solamente pasando valores para aquellos parámetros sin valor por defecto:
 
 ```python
->>> describir_mascota("Bruno")
+describir_mascota("Bruno")
 ```
 
 ```text
@@ -457,7 +457,7 @@ Y su nombre es Bruno
 Como es de esperar, también es posible pasar valores distintos a los establecidos por defecto:
 
 ```python
->>> describir_mascota("Nemo", "pez")
+describir_mascota("Nemo", "pez")
 ```
 
 ```text

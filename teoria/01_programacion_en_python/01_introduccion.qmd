@@ -41,7 +41,7 @@ Las instrucciones para instalar Python y Positron pueden ser encontradas en [Ins
 Empecemos utilizando a Python como si fuese una calculadora.
 
 ```python
->>> 2 * 3
+2 * 3
 ```
 
 ```text
@@ -49,11 +49,11 @@ Empecemos utilizando a Python como si fuese una calculadora.
 ```
 
 ```python
->>> 100 / 3.5
+100 / 3.5
 ```
 
 ```python
->>> 20 + 5
+20 + 5
 ```
 
 ```text
@@ -61,7 +61,7 @@ Empecemos utilizando a Python como si fuese una calculadora.
 ```
 
 ```python
->>> 13 - 3
+13 - 3
 ```
 
 ```text
@@ -69,7 +69,7 @@ Empecemos utilizando a Python como si fuese una calculadora.
 ```
 
 ```python
->>> 10 * 5.5
+10 * 5.5
 ```
 
 ```text
@@ -94,7 +94,7 @@ Sin notarlo, utilizamos dos tipos de números distintos: los números de tipo en
 Lo siguiente es un número entero:
 
 ```python
->>> 50
+50
 ```
 
 ```text
@@ -104,7 +104,7 @@ Lo siguiente es un número entero:
 Y el siguiente es un ejemplo de un número flotante:
 
 ```python
->>> 36.8
+36.8
 ```
 
 ```text
@@ -114,7 +114,7 @@ Y el siguiente es un ejemplo de un número flotante:
 Utilizando la función `type()` Python nos devuelve el tipo del objeto.
 
 ```python
->>> type(10)
+type(10)
 ```
 
 ```text
@@ -122,7 +122,7 @@ Utilizando la función `type()` Python nos devuelve el tipo del objeto.
 ```
 
 ```python
->>> type(10.5)
+type(10.5)
 ```
 
 ```text
@@ -130,7 +130,7 @@ Utilizando la función `type()` Python nos devuelve el tipo del objeto.
 ```
 
 ```python
->>> type(10.0)
+type(10.0)
 ```
 
 ```text
@@ -138,7 +138,7 @@ Utilizando la función `type()` Python nos devuelve el tipo del objeto.
 ```
 
 ```python
->>> type(10.)
+type(10.)
 ```
 
 ```text
@@ -162,7 +162,7 @@ Un ejemplo de esto es el texto, que se representa con un objeto llamado **cadena
 Como en la mayoría de los lenguajes de programación, las comillas se ponen al principio y al final del texto e indican el principio y el final de la cadena; estas pueden pueden ser dobles `"` o simples `'`.
 
 ```python
->>> "Programando en Python"
+"Programando en Python"
 ```
 
 ```text
@@ -170,7 +170,7 @@ Como en la mayoría de los lenguajes de programación, las comillas se ponen al 
 ```
 
 ```python
->>> 'Con comillas simples, también.'
+'Con comillas simples, también.'
 ```
 
 ```text
@@ -182,7 +182,7 @@ En Python no hay diferencia entre usar comillas simples `'` o dobles `"`, pero e
 Cuando imprimimos una cadena, las comillas no se muestran en la salida. Para imprimir cualquier objeto de Python utilizamos la función `print()`.
 
 ```python
->>> print('Con comillas simples, ¡también!')
+print('Con comillas simples, ¡también!')
 ```
 
 ```text
@@ -192,9 +192,9 @@ Con comillas simples, ¡también!
 Una forma un poco más exótica, pero muy útil, de crear cadenas es utilizando **comillas triples**. Con esta sintaxis, se repiten tres comillas seguidas, lo que permite definir cadenas de texto que ocupan varias líneas.
 
 ```python
->>> print("""Se puede escribir texto
-... en varias lineas.
-... ¡Está muy bueno!""")
+print("""Se puede escribir texto
+en varias lineas.
+¡Está muy bueno!""")
 ```
 
 ```text
@@ -206,7 +206,7 @@ en varias lineas.
 Otra manera de escribir texto que abarca múltiples líneas es usando el carácter especial `\n`, que representa un salto de línea.
 
 ```python
->>> print("Primera línea\nsegunda línea\ntercera línea.")
+print("Primera línea\nsegunda línea\ntercera línea.")
 ```
 
 ```text
@@ -218,7 +218,7 @@ tercera línea.
 En cambio, si mostramos una representación del texto (sin usar `print()`), los `\n` sí se visualizan.
 
 ```python
->>> "Primera línea\nsegunda línea\ntercera línea."
+"Primera línea\nsegunda línea\ntercera línea."
 ```
 
 ```text
@@ -239,9 +239,9 @@ Otra situación en la que usar `print()` genera una diferencia es cuando se quie
 objetos al ejecutar un bloque de código. Por ejemplo, comparemos el resultado de los siguientes bloques:
 
 ```python
->>> "mensaje 1"
->>> 10
->>> "mensaje 2"
+"mensaje 1"
+10
+"mensaje 2"
 ```
 
 ```text
@@ -249,9 +249,9 @@ objetos al ejecutar un bloque de código. Por ejemplo, comparemos el resultado d
 ```
 
 ```python
->>> print("mensaje 1")
->>> print(10)
->>> print("mensaje 2")
+print("mensaje 1")
+print(10)
+print("mensaje 2")
 ```
 
 ```text
@@ -269,7 +269,7 @@ Para representar esta situación utilizamos un tipo especial de dato conocido co
 Si la condición se cumple, el resultado será `True`; de lo contrario, será `False`.
 
 ```python
->>> True
+True
 ```
 
 ```text
@@ -277,7 +277,7 @@ True
 ```
 
 ```python
->>> False
+False
 ```
 
 ```text
@@ -285,7 +285,7 @@ False
 ```
 
 ```python
->>> type(True)
+type(True)
 ```
 
 ```text
@@ -293,7 +293,7 @@ False
 ```
 
 ```python
->>> type(False)
+type(False)
 ```
 
 ```text
@@ -310,13 +310,13 @@ Este tipo de datos se llama Booleano en honor al matemático [George Boole](http
 El valor nulo, llamado `None` en Python, representa la ausencia de valor o el vacío. Se utiliza habitualmente para indicar que algo no tiene un valor asignado. Si intentamos mostrar el valor de `None`, veremos que no aparece nada.
 
 ```python
->>> None
+None
 ```
 
 En cambio, si imprimimos el objeto `None`, vemos el mensaje `None`.
 
 ```python
->>> print(None)
+print(None)
 ```
 
 ```text
@@ -326,7 +326,7 @@ None
 ¿Y cuál es su tipo?
 
 ```python
->>> type(None)
+type(None)
 ```
 
 ```text
@@ -376,7 +376,7 @@ Para convertir un objeto a otro tipo utilizamos funciones con el nombre del tipo
 Veamos algunos ejemplos:
 
 ```python
->>> str(256)
+str(256)
 ```
 
 ```text
@@ -384,7 +384,7 @@ Veamos algunos ejemplos:
 ```
 
 ```python
->>> str(None)
+str(None)
 ```
 
 ```text
@@ -392,7 +392,7 @@ Veamos algunos ejemplos:
 ```
 
 ```python
->>> int(165.5)
+int(165.5)
 ```
 
 ```text
@@ -400,7 +400,7 @@ Veamos algunos ejemplos:
 ```
 
 ```python
->>> int(165.8)
+int(165.8)
 ```
 
 ```text
@@ -408,7 +408,7 @@ Veamos algunos ejemplos:
 ```
 
 ```python
->>> int("165")
+int("165")
 ```
 
 ```text
@@ -416,7 +416,7 @@ Veamos algunos ejemplos:
 ```
 
 ```python
->>> float("165.0")
+float("165.0")
 ```
 
 ```text
@@ -453,8 +453,8 @@ Podemos pensar las variables como etiquetas o nombres que asignamos a los objeto
 Una vez creada una variable con cierto valor, podemos usar directamente su nombre en lugar de volver a escribir el valor completo.
 
 ```python
->>> mensaje = "¡Hola, curso!"
->>> print(mensaje)
+mensaje = "¡Hola, curso!"
+print(mensaje)
 ```
 
 ```text
@@ -462,7 +462,7 @@ Una vez creada una variable con cierto valor, podemos usar directamente su nombr
 ```
 
 ```python
->>> print("¡Hola, curso!")
+print("¡Hola, curso!")
 ```
 
 ```text
@@ -482,9 +482,9 @@ Luego, cuando accedemos a la variable `mensaje` dentro de la función `print()`,
 Veamos otros ejemplos...
 
 ```python
->>> pi = 3.14159
->>> fruta_favorita = "manzana"
->>> python_bueno = True
+pi = 3.14159
+fruta_favorita = "manzana"
+python_bueno = True
 ```
 
 En el siguiente diagrama se muestra cómo las variables que creamos funcionan simplemente como etiquetas para los valores asignados.
@@ -494,7 +494,7 @@ Cada vez que utilizamos una de estas etiquetas, accedemos directamente al valor 
 ![](imgs/variables.png){fig-align="center" width="600px"}
 
 ```python
->>> print(pi * 10)
+print(pi * 10)
 ```
 
 ```text
@@ -502,7 +502,7 @@ Cada vez que utilizamos una de estas etiquetas, accedemos directamente al valor 
 ```
 
 ```python
->>> fruta_favorita
+fruta_favorita
 ```
 
 ```text
@@ -510,7 +510,7 @@ Cada vez que utilizamos una de estas etiquetas, accedemos directamente al valor 
 ```
 
 ```python
->>> python_bueno
+python_bueno
 ```
 
 ```text
@@ -527,7 +527,7 @@ Las variables no solo evitan que escribamos repetidamente los mismos valores en 
 Por ejemplo, los siguientes bloques de código producen el mismo resultado, pero el segundo es mucho más informativo:
 
 ```python
->>> 1500 * 8
+1500 * 8
 ```
 
 ```text
@@ -535,9 +535,9 @@ Por ejemplo, los siguientes bloques de código producen el mismo resultado, pero
 ```
 
 ```python
->>> precio = 1500
->>> cantidad = 8
->>> precio * cantidad
+precio = 1500
+cantidad = 8
+precio * cantidad
 ```
 
 ```text
@@ -572,7 +572,7 @@ Es posible que, después de crear nuestras variables y realizar las operaciones 
 Para borrar una variable, Python ofrece la sentencia `del` (del inglés _delete_, que significa eliminar o borrar).
 
 ```python
->>> del fruta_favorita
+del fruta_favorita
 ```
 
 ### Asignación múltiple
@@ -582,10 +582,10 @@ Ya vimos que para asignar (o crear) una variable necesitamos hacer `variable = <
 Si queremos crear varias variables, podemos hacerlo en líneas separadas:
 
 ```python
->>> pi = 3.1416
->>> e = 2.7182
->>> print(pi)
->>> print(e)
+pi = 3.1416
+e = 2.7182
+print(pi)
+print(e)
 ```
 
 ```text
@@ -596,9 +596,9 @@ Si queremos crear varias variables, podemos hacerlo en líneas separadas:
 Una característica conveniente de Python es que permite asignar múltiples variables en una misma línea:
 
 ```python
->>> pi, e = 3.1416, 2.7182
->>> print(pi)
->>> print(e)
+pi, e = 3.1416, 2.7182
+print(pi)
+print(e)
 ```
 
 ```text
@@ -609,7 +609,7 @@ Una característica conveniente de Python es que permite asignar múltiples vari
 Otra ventaja es que las variables no tienen que ser del mismo tipo:
 
 ```python
->>> a, b, c = 100 + 20, "un mensaje cualquiera", None
+a, b, c = 100 + 20, "un mensaje cualquiera", None
 ```
 
 ```text
@@ -617,9 +617,9 @@ Otra ventaja es que las variables no tienen que ser del mismo tipo:
 ```
 
 ```python
->>> print(a)
->>> print(b)
->>> print(c)
+print(a)
+print(b)
+print(c)
 ```
 
 ```text
@@ -668,7 +668,7 @@ Algunos operadores son los siguientes:
 #### Suma (`+`)
 
 ```python
->>> 10 + 25
+10 + 25
 ```
 
 ```text
@@ -676,7 +676,7 @@ Algunos operadores son los siguientes:
 ```
 
 ```python
->>> 10.0 + 25.0
+10.0 + 25.0
 ```
 
 ```text
@@ -684,7 +684,7 @@ Algunos operadores son los siguientes:
 ```
 
 ```python
->>> -8 + 12.1
+-8 + 12.1
 ```
 
 ```text
@@ -694,7 +694,7 @@ Algunos operadores son los siguientes:
 El operador suma también puede ser usado con un solo argumento:
 
 ```python
->>> + 8
++ 8
 ```
 
 ```text
@@ -708,7 +708,7 @@ En este caso no modifica en nada al valor `8`.
 #### Resta (`-`)
 
 ```python
->>> 11 - 8
+11 - 8
 ```
 
 ```text
@@ -716,7 +716,7 @@ En este caso no modifica en nada al valor `8`.
 ```
 
 ```python
->>> 100 - 100.0
+100 - 100.0
 ```
 
 ```text
@@ -724,7 +724,7 @@ En este caso no modifica en nada al valor `8`.
 ```
 
 ```python
->>> -35 - 28
+-35 - 28
 ```
 
 ```text
@@ -734,7 +734,7 @@ En este caso no modifica en nada al valor `8`.
 El operador resta también puede ser usado con un solo argumento:
 
 ```python
->>> - 7
+- 7
 ```
 
 ```text
@@ -744,7 +744,7 @@ El operador resta también puede ser usado con un solo argumento:
 #### Multiplicación (`*`) y potencia (`**`)
 
 ```python
->>> 21 * 5
+21 * 5
 ```
 
 ```text
@@ -752,7 +752,7 @@ El operador resta también puede ser usado con un solo argumento:
 ```
 
 ```python
->>> 21 * 5.0
+21 * 5.0
 ```
 
 ```text
@@ -760,7 +760,7 @@ El operador resta también puede ser usado con un solo argumento:
 ```
 
 ```python
->>> 21.0 * 5.0
+21.0 * 5.0
 ```
 
 ```text
@@ -768,7 +768,7 @@ El operador resta también puede ser usado con un solo argumento:
 ```
 
 ```python
->>> 2 ** 3
+2 ** 3
 ```
 
 ```text
@@ -776,7 +776,7 @@ El operador resta también puede ser usado con un solo argumento:
 ```
 
 ```python
->>> 2 ** 3.0
+2 ** 3.0
 ```
 
 ```text
@@ -803,7 +803,7 @@ Python provee dos operadores distintos para calcular el cociente entre dos núme
 El operador `/` es el que más se utiliza y **siempre devuelve un número de tipo flotante**.
 
 ```python
->>> 10 / 5
+10 / 5
 ```
 
 ```text
@@ -811,7 +811,7 @@ El operador `/` es el que más se utiliza y **siempre devuelve un número de tip
 ```
 
 ```python
->>> 10 / 5.5
+10 / 5.5
 ```
 
 ```text
@@ -821,7 +821,7 @@ El operador `/` es el que más se utiliza y **siempre devuelve un número de tip
 La división entera se suele utilizar cuando uno quiere el resultado entero de la división, sin importar si el resto es 0 o no.
 
 ```python
->>> 10 // 5
+10 // 5
 ```
 
 ```text
@@ -829,7 +829,7 @@ La división entera se suele utilizar cuando uno quiere el resultado entero de l
 ```
 
 ```python
->>> 10 // 5.5
+10 // 5.5
 ```
 
 ```text
@@ -839,7 +839,7 @@ La división entera se suele utilizar cuando uno quiere el resultado entero de l
 Veamos los siguientes ejemplos donde comparamos la división flotante con la división entera, utilizando los mismos argumentos.
 
 ```python
->>> 15 / 4
+15 / 4
 ```
 
 ```text
@@ -847,7 +847,7 @@ Veamos los siguientes ejemplos donde comparamos la división flotante con la div
 ```
 
 ```python
->>> 15.0 // 4.0
+15.0 // 4.0
 ```
 
 ```text
@@ -863,7 +863,7 @@ Otro operador relacionado a la división entera es el operador **módulo** o **r
 Esta operación nos devuelve el resto que se obtiene al realizar la división entera entre dos números.
 
 ```python
->>> 17 % 3
+17 % 3
 ```
 
 ```text
@@ -897,7 +897,7 @@ Un punto importante a tener en cuenta es que, al igual que cuando hacemos cuenta
 En el siguiente ejemplo, ¿por qué se obtienen resultados distintos?
 
 ```python
->>> 10 - 2 * 4
+10 - 2 * 4
 ```
 
 ```text
@@ -905,7 +905,7 @@ En el siguiente ejemplo, ¿por qué se obtienen resultados distintos?
 ```
 
 ```python
->>> (10 - 2) * 4
+(10 - 2) * 4
 ```
 
 ```text
@@ -921,7 +921,7 @@ Si queremos forzar a Python a realizar una operación antes que otra, sin import
 Otro ejemplo es el siguiente...
 
 ```python
->>> 7 + 8 / 2
+7 + 8 / 2
 ```
 
 ```text
@@ -929,7 +929,7 @@ Otro ejemplo es el siguiente...
 ```
 
 ```python
->>> (7 + 8) / 2
+(7 + 8) / 2
 ```
 
 ```text
@@ -962,7 +962,7 @@ Los operadores lógicos en Python son tres: `not`, `and` y `or`. Se llaman así 
 Devuelve el opuesto del valor que le pasamos.
 
 ```python
->>> not False
+not False
 ```
 
 ```text
@@ -970,7 +970,7 @@ True
 ```
 
 ```python
->>> not True
+not True
 ```
 
 ```text
@@ -982,7 +982,7 @@ False
 Esta operación devuelve `True` solamente cuando los dos operadores que le pasamos son `True`.
 
 ```python
->>> True and True
+True and True
 ```
 
 ```text
@@ -990,7 +990,7 @@ True
 ```
 
 ```python
->>> False and True
+False and True
 ```
 
 ```text
@@ -1002,7 +1002,7 @@ False
 Esta operación devuelve `True` cuando cualquiera de sus argumentos es `True`.
 
 ```python
->>> True or False
+True or False
 ```
 
 ```text
@@ -1012,7 +1012,7 @@ True
 Solo devuelve `False` cuando sus dos argumentos son `False`.
 
 ```python
->>> False or False
+False or False
 ```
 
 ```text
@@ -1029,7 +1029,7 @@ Python ofrece dos operadores para verificar si dos objetos son o no el mismo **e
 - `is not`: devuelve `True` si los operandos **no son el mismo objeto**.
 
 ```python
->>> False is False
+False is False
 ```
 
 ```text
@@ -1037,7 +1037,7 @@ True
 ```
 
 ```python
->>> False is True
+False is True
 ```
 
 ```text
@@ -1045,7 +1045,7 @@ False
 ```
 
 ```python
->>> None is None
+None is None
 ```
 
 ```text
@@ -1056,7 +1056,7 @@ Este tipo de comparación es posible porque cada objeto en Python existe en la m
 Para conocer el ID de un objeto, se puede usar la función `id()`.
 
 ```python
->>> id(False)
+id(False)
 ```
 
 ```text
@@ -1064,7 +1064,7 @@ Para conocer el ID de un objeto, se puede usar la función `id()`.
 ```
 
 ```python
->>> id(False)
+id(False)
 ```
 
 ```text
@@ -1072,7 +1072,7 @@ Para conocer el ID de un objeto, se puede usar la función `id()`.
 ```
 
 ```python
->>> id(None)
+id(None)
 ```
 
 ```text
@@ -1099,7 +1099,7 @@ Los operadores que vemos a continuación son los mismos que aprendimos en la sec
 Algunos ejemplos...
 
 ```python
->>> 10 > 5
+10 > 5
 ```
 
 ```text
@@ -1107,7 +1107,7 @@ True
 ```
 
 ```python
->>> 10 > 5 + 3
+10 > 5 + 3
 ```
 
 ```text
@@ -1115,7 +1115,7 @@ True
 ```
 
 ```python
->>> 0 < 0
+0 < 0
 ```
 
 ```text
@@ -1123,7 +1123,7 @@ False
 ```
 
 ```python
->>> 1 >= 1
+1 >= 1
 ```
 
 ```text
@@ -1131,7 +1131,7 @@ True
 ```
 
 ```python
->>> 10.0 != 10
+10.0 != 10
 ```
 
 ```text
@@ -1139,7 +1139,7 @@ False
 ```
 
 ```python
->>> 10.0 == 10
+10.0 == 10
 ```
 
 ```text
@@ -1153,7 +1153,7 @@ No siempre que comparemos objetos de distinto tipo va a suceder algo así.
 La comparación de cadenas de texto distingue mayúsculas de minúsculas
 
 ```python
->>> "UNR" == "unr"
+"UNR" == "unr"
 ```
 
 ```text
@@ -1165,7 +1165,7 @@ Es posible comparar objetos de distinto tipo, como lo vimos en el ejemplo anteri
 Salvo casos particulares, como son los valores numéricos, estos objetos son considerados siempre distintos.
 
 ```python
->>> "10" == 10
+"10" == 10
 ```
 
 ```text
@@ -1173,7 +1173,7 @@ False
 ```
 
 ```python
->>> "False" == False
+"False" == False
 ```
 
 ```text
@@ -1183,7 +1183,7 @@ False
 Es posible combinar mas de una comparación en la misma línea.
 
 ```python
->>> 1 < 2 and 2 < 3
+1 < 2 and 2 < 3
 ```
 
 ```text
@@ -1193,7 +1193,7 @@ True
 Incluso es posible omitir el operador `and` y tener una expresión más clara
 
 ```python
->>> 1 < 2 < 3
+1 < 2 < 3
 ```
 
 ```text
@@ -1201,7 +1201,7 @@ True
 ```
 
 ```python
->>> -5 < -4 < -3
+-5 < -4 < -3
 ```
 
 ```text
@@ -1211,7 +1211,7 @@ True
 También podemos mezclar `not`, `and` y `or` a gusto.
 
 ```python
->>> False or not False
+False or not False
 ```
 
 ```text
@@ -1221,7 +1221,7 @@ True
 Y es válido utilizar paréntesis para agrupar operaciones.
 
 ```python
->>> (False or True) and (True or False)
+(False or True) and (True or False)
 ```
 
 ```text
@@ -1250,7 +1250,7 @@ En otras palabras, si pegaramos ambas tablas, ésta última quedaría por debajo
 Analicemos nuevamente uno de los ejemplos que ya vimos.
 
 ```python
->>> not True and not True
+not True and not True
 ```
 
 ```text
@@ -1262,7 +1262,7 @@ El operador `not` tiene mayor prioridad que el operador `and` porque aparece pri
 En consecuencia, en el código anterior primero se resuelven los `not True` y luego el `and`. Esto es lo mismo que hacer
 
 ```python
->>> False and False
+False and False
 ```
 
 ```text
@@ -1292,7 +1292,7 @@ Sin embargo, vale la pena resaltar el uso del operador de suma (`+`) y producto 
 Veamos que pasa si "sumamos" dos cadenas de caracteres:
 
 ```python
->>> "¿Funciona" + "bien?"
+"¿Funciona" + "bien?"
 ```
 
 ```text
@@ -1300,7 +1300,7 @@ Veamos que pasa si "sumamos" dos cadenas de caracteres:
 ```
 
 ```python
->>> "¿esto" + " también " + "funciona?"
+"¿esto" + " también " + "funciona?"
 ```
 
 ```text
@@ -1312,7 +1312,7 @@ Como se puede observar, el operador de suma (`+`) aplicado a cadenas de texto in
 Si la suma tiene sentido para cadenas, entonces el producto también debería tenerlo (al menos con números enteros). Veamos un ejemplo:
 
 ```python
->>> "ja" * 2
+"ja" * 2
 ```
 
 ```text
@@ -1320,7 +1320,7 @@ Si la suma tiene sentido para cadenas, entonces el producto también debería te
 ```
 
 ```python
->>> "ja" * 4
+"ja" * 4
 ```
 
 ```text
@@ -1338,7 +1338,7 @@ En Python se las conoce como **f-strings** (abreviación de _formatted-strings_)
 El resultado de una f-_string_ no se diferencia de una cadena de texto común y corriente.
 
 ```python
->>> f"Un texto cualquiera"
+f"Un texto cualquiera"
 ```
 
 ```text
@@ -1352,8 +1352,8 @@ Sin embargo, las f-strings nos permiten **interpolar cadenas de texto**.
 Veamos algunos ejemplos.
 
 ```python
->>> lenguaje = "Python"
->>> print("Programando en " + lenguaje)
+lenguaje = "Python"
+print("Programando en " + lenguaje)
 ```
 
 ```text
@@ -1361,9 +1361,9 @@ Programando en Python
 ```
 
 ```python
->>> que = "bayer"
->>> como = "bueno"
->>> print("Si es " + que + " es " + como + ".")
+que = "bayer"
+como = "bueno"
+print("Si es " + que + " es " + como + ".")
 ```
 
 ```text
@@ -1377,8 +1377,8 @@ Las _f-strings_ vienen a facilitar este proceso y hacerlo menos tedioso.
 Lo que tenemos que hacer es pasar el nombre de la variable entre llaves (`{}`) en el contenido de la f-string.
 
 ```python
->>> print(f"Programando en {lenguaje}")
->>> print(f"Si es {que} es {como}.")
+print(f"Programando en {lenguaje}")
+print(f"Si es {que} es {como}.")
 ```
 
 ```text
@@ -1389,9 +1389,9 @@ Si es bayer es bueno.
 Veamos un ejemplo menos trivial, donde utilizar f-strings reduce la cantidad de código y lo hace más claro. 
 
 ```python
->>> nombre = "Tomás"
->>> edad = 30
->>> ciudad = "Rosario"
+nombre = "Tomás"
+edad = 30
+ciudad = "Rosario"
 ```
 
 ```text
@@ -1399,7 +1399,7 @@ Veamos un ejemplo menos trivial, donde utilizar f-strings reduce la cantidad de 
 ```
 
 ```python
->>> print("Hola, soy " + nombre + ", tengo " + str(edad) + " años y vivo en " + ciudad + ".")
+print("Hola, soy " + nombre + ", tengo " + str(edad) + " años y vivo en " + ciudad + ".")
 ```
 
 ```text
@@ -1409,7 +1409,7 @@ Hola, soy Tomás, tengo 30 años y vivo en Rosario.
 Utilizando **f-strings**...
 
 ```python
->>> print(f"Hola, soy {nombre}, tengo {edad} años y vivo en {ciudad}.")
+print(f"Hola, soy {nombre}, tengo {edad} años y vivo en {ciudad}.")
 ```
 
 ```text
@@ -1421,8 +1421,8 @@ Además, no es necesario convertir la variable `edad` a al tipo `str` manualment
 No solo podemos utilizar variables dentro de las f-strings, también podemos incluir expresiones de Python.
 
 ```python
->>> minutos_por_hora = 60
->>> horas = 2.7
+minutos_por_hora = 60
+horas = 2.7
 ```
 
 ```text
@@ -1430,7 +1430,7 @@ No solo podemos utilizar variables dentro de las f-strings, también podemos inc
 ```
 
 ```python
->>> print(f"En {horas} horas hay {horas * minutos_por_hora} minutos.")
+print(f"En {horas} horas hay {horas * minutos_por_hora} minutos.")
 ```
 
 ```text
@@ -1440,7 +1440,7 @@ En 2.7 horas hay 162.0 minutos.
 ### Cadenas de texto y sus metódos
 
 ```python
->>> nombre = "Lionel Messi"
+nombre = "Lionel Messi"
 ```
 
 Las cadenas de texto, es decir, los objetos de tipo `str`, vienen con varias funciones (llamados "métodos") que nos facilitan muchísimas tareas en la práctica.
@@ -1448,7 +1448,7 @@ Las cadenas de texto, es decir, los objetos de tipo `str`, vienen con varias fun
 Por ejemplo, tenemos los métodos `.upper()` y `.lower()`, que ponen el texto en mayúscula y en minúscula, respectivamente.
 
 ```python
->>> print(nombre.upper())
+print(nombre.upper())
 ```
 
 ```text
@@ -1456,7 +1456,7 @@ LIONEL MESSI
 ```
 
 ```python
->>> print(nombre.lower())
+print(nombre.lower())
 ```
 
 ```text
@@ -1469,10 +1469,10 @@ Estos métodos se pueden combinar dentro de una _f-string_,
 sin necesidad de modificar los valores de `nombre` o `apellido`.
 
 ```python
->>> nombre = "lionel"
->>> apellido = "messi"
->>> nombre_completo = f"{nombre.capitalize()} {apellido.capitalize()}"
->>> print(nombre_completo)
+nombre = "lionel"
+apellido = "messi"
+nombre_completo = f"{nombre.capitalize()} {apellido.capitalize()}"
+print(nombre_completo)
 ```
 
 ```text
@@ -1483,9 +1483,9 @@ En este caso, otra opción es usar `.title()`.
 Este método pone la primera letra de cada palabra en mayúsculas y al resto en minúsculas.
 
 ```python
->>> mensaje = "mensaje de prueba"
->>> print(mensaje.capitalize())
->>> print(mensaje.title())
+mensaje = "mensaje de prueba"
+print(mensaje.capitalize())
+print(mensaje.title())
 ```
 
 ```text
@@ -1502,8 +1502,8 @@ El espacio puede estar tanto al principio como al final de una cadena de texto.
 Afortunadamente, Python también provee algunos métodos que nos permiten eliminar estos espacios con muy poco trabajo.
 
 ```python
->>> lenguaje_favorito = "  python  "
->>> lenguaje_favorito
+lenguaje_favorito = "  python  "
+lenguaje_favorito
 ```
 
 ```text
@@ -1513,7 +1513,7 @@ Afortunadamente, Python también provee algunos métodos que nos permiten elimin
 `.rstrip()` elimina los espacios en blanco a la derecha del texto. 
 
 ```python
->>> lenguaje_favorito.rstrip()
+lenguaje_favorito.rstrip()
 ```
 
 ```text
@@ -1523,7 +1523,7 @@ Afortunadamente, Python también provee algunos métodos que nos permiten elimin
 `.lstrip()` elimina los espacios en blanco a la izquierda del texto. 
 
 ```python
->>> lenguaje_favorito.lstrip()
+lenguaje_favorito.lstrip()
 ```
 
 ```text
@@ -1533,7 +1533,7 @@ Afortunadamente, Python también provee algunos métodos que nos permiten elimin
 y `.strip()` elimina los espacios en blanco a la izquierda y a la derecha del texto.
 
 ```python
->>> lenguaje_favorito.strip()
+lenguaje_favorito.strip()
 ```
 
 ```text
@@ -1553,8 +1553,8 @@ El primer valor que le pasamos es el texto que queremos reemplazar y el segundo 
 Podemos reemplazar caracteres, palabras, o frases enteras.
 
 ```python
->>> animal = "pato"
->>> animal.replace("p", "g")
+animal = "pato"
+animal.replace("p", "g")
 ```
 
 ```text
@@ -1562,8 +1562,8 @@ Podemos reemplazar caracteres, palabras, o frases enteras.
 ```
 
 ```python
->>> saludo = "Hola Mundo"
->>> saludo.replace("Mundo", "Curso")
+saludo = "Hola Mundo"
+saludo.replace("Mundo", "Curso")
 ```
 
 ```text
@@ -1575,7 +1575,7 @@ Cuando utilizamos el método `.replace()` se nos devuelve una nueva cadena de te
 Esto nos permite "pegar" o "encadenar" mas de un `.replace()` a la vez, ya que cada nuevo `.replace()` se aplica sobre el resultado de la operación anterior.
 
 ```python
->>> saludo.replace("Mundo", "Curso").replace("Hola", "Chau")
+saludo.replace("Mundo", "Curso").replace("Hola", "Chau")
 ```
 
 ```text
@@ -1598,32 +1598,32 @@ Por otro lado, si intentamos utilizar el nombre de una función (o clase) predef
 
 
 ```python
->>> False      await      else       import     pass
->>> None       break      except     in         raise
->>> True       class      finally    is         return
->>> and        continue   for        lambda     try
->>> as         def        from       nonlocal   while
->>> assert     del        global     not        with
->>> async      elif       if         or         yield
+False      await      else       import     pass
+None       break      except     in         raise
+True       class      finally    is         return
+and        continue   for        lambda     try
+as         def        from       nonlocal   while
+assert     del        global     not        with
+async      elif       if         or         yield
 ```
 
 #### Funciones y clases pre-definidas
 
 ```python
->>> abs()          copyright()    getattr()      list()         range()        vars()
->>> all()          credits()      globals()      locals()       repr()         zip()
->>> any()          delattr()      hasattr()      map()          reversed()
->>> ascii()        dict()         hash()         max()          round()
->>> bin()          dir()          help()         memoryview()   set()
->>> bool()         display()      hex()          min()          setattr()
->>> breakpoint()   divmod()       id()           next()         slice()
->>> bytearray()    enumerate()    input()        object()       sorted()
->>> bytes()        eval()         int()          oct()          staticmethod()
->>> callable()     exec()         isinstance()   open()         str()
->>> chr()          filter()       issubclass()   ord()          sum()
->>> classmethod()  float()        iter()         pow()          super()
->>> compile()      format()       len()          print()        tuple()
->>> complex()      frozenset()    license()      property()     type()
+abs()          copyright()    getattr()      list()         range()        vars()
+all()          credits()      globals()      locals()       repr()         zip()
+any()          delattr()      hasattr()      map()          reversed()
+ascii()        dict()         hash()         max()          round()
+bin()          dir()          help()         memoryview()   set()
+bool()         display()      hex()          min()          setattr()
+breakpoint()   divmod()       id()           next()         slice()
+bytearray()    enumerate()    input()        object()       sorted()
+bytes()        eval()         int()          oct()          staticmethod()
+callable()     exec()         isinstance()   open()         str()
+chr()          filter()       issubclass()   ord()          sum()
+classmethod()  float()        iter()         pow()          super()
+compile()      format()       len()          print()        tuple()
+complex()      frozenset()    license()      property()     type()
 ```
 
 
