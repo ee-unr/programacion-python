@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Uso de Inteligencia Artificial – Programación en Python</title>
+<title>5 - Excepciones – Programación en Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +23,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../informacion/bibliografia.html" rel="prev">
-<link href="../imgs/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f98c7a3a6c5d9ec8d6d087b7b1b30b36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-f98c7a3a6c5d9ec8d6d087b7b1b30b36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-f98c7a3a6c5d9ec8d6d087b7b1b30b36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../teoria/02_oop/04_polimorfismo.html" rel="prev">
+<link href="../../imgs/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f98c7a3a6c5d9ec8d6d087b7b1b30b36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-f98c7a3a6c5d9ec8d6d087b7b1b30b36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f98c7a3a6c5d9ec8d6d087b7b1b30b36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,14 +77,14 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Programación en Python</span>
     </a>
   </div>
@@ -95,23 +95,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../informacion/programa.html" aria-current="page"> 
+    <a class="nav-link" href="../../informacion/programa.html"> 
 <span class="menu-text">Información</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../teoria/01_programacion_en_python/01_introduccion.html"> 
+    <a class="nav-link active" href="../../teoria/01_programacion_en_python/01_introduccion.html" aria-current="page"> 
 <span class="menu-text">Teoría</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../practica/01_programacion_en_python/autoevaluacion.html"> 
+    <a class="nav-link" href="../../practica/01_programacion_en_python/autoevaluacion.html"> 
 <span class="menu-text">Práctica</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../proyectos/grupal.html"> 
+    <a class="nav-link" href="../../proyectos/grupal.html"> 
 <span class="menu-text">Proyectos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../recursos/tutoriales/instalacion_python.html"> 
+    <a class="nav-link" href="../../recursos/tutoriales/instalacion_python.html"> 
 <span class="menu-text">Recursos</span></a>
   </li>  
   <li class="nav-item compact">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../informacion/ia.html">Uso de Inteligencia Artificial</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../teoria/02_oop/01_fundamentos.html">U2 - Programación Orientada a Objetos</a></li><li class="breadcrumb-item"><a href="../../teoria/02_oop/05_excepciones.html">5 - Excepciones</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -142,48 +142,126 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U1 - Programación en Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../informacion/programa.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programa</span></a>
+  <a href="../../teoria/01_programacion_en_python/01_introduccion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1 - Introducción</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../informacion/aprobacion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aprobación</span></a>
+  <a href="../../teoria/01_programacion_en_python/02_funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2 - Funciones</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../informacion/calendario.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Calendario</span></a>
+  <a href="../../teoria/01_programacion_en_python/03_ejecucion_condicional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3 - Ejecución condicional</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../informacion/bibliografia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bibliografía</span></a>
+  <a href="../../teoria/01_programacion_en_python/04_colecciones_de_datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4 - Colecciones de datos</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../informacion/ia.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Uso de Inteligencia Artificial</span></a>
+  <a href="../../teoria/01_programacion_en_python/05_ejecucion_repetitiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5 - Ejecución repetitiva</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/06_uso_de_codigo_externo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6 - Uso de código externo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/07_scripting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7 - <em>Scripting</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/01_programacion_en_python/08_io.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8 - Lectura y escritura de archivos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U2 - Programación Orientada a Objetos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/02_oop/01_fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1 - Fundamentos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/02_oop/02_encapsulamiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2 - Encapsulamiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/02_oop/03_herencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3 - Herencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/02_oop/04_polimorfismo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4 - Polimorfismo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teoria/02_oop/05_excepciones.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">5 - Excepciones</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#errores" id="toc-errores" class="nav-link active" data-scroll-target="#errores">Errores</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../teoria/02_oop/01_fundamentos.html">U2 - Programación Orientada a Objetos</a></li><li class="breadcrumb-item"><a href="../../teoria/02_oop/05_excepciones.html">5 - Excepciones</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Uso de Inteligencia Artificial</h1>
+<h1 class="title">5 - Excepciones</h1>
 </div>
 
 
@@ -200,32 +278,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Las herramientas de Inteligencia Artificial (IA) son muy poderosas y pueden ayudarte a resolver de manera efectiva problemas de todo tipo, especialmente problemas de programación. De hecho, seguramente la IA pueda resolver todos los ejercicios que se presenten en esta materia por vos. El punto es que no tiene sentido cursar la materia si te vas a limitar a copiar y pegar enunciados en un chat. A corto plazo, te puede dar una sensación atractiva de satisfacción y alivio (¿a quién no le gusta tener la práctica resuelta?), pero a mediano y largo plazo puede contribuir a aumentar tu frustración cuando aparezca un problema que la IA o bien no resuelve, o no lo hace de la mejor manera, y vos no logras comprender ni resolver por cuenta propia.</p>
-<p>Ahora bien, es innegable que en el mundo profesional las herramientas de IA se usan muchísimo. Ayudan de verdad a resolver problemas que quizá no podríamos abordar por nuestra cuenta, o que podríamos resolver, pero a un costo de tiempo mucho mayor. Por eso, aprender a usarlas sí que tiene un valor real.</p>
-<p>Por otro lado, cuando la tendencia a siempre responder, y de manera complaciente, de los modelos de IA se combinan con nuestro sesgo de automatización, es fácil caer en una encerrona cognitiva. En esa situación, podemos aceptar sin suficiente juicio lo que la herramienta propone y perder de vista si realmente entendemos lo que está pasando y, sobre todo, si la solución que se obtiene es satisfactoria. Salir de esa encerrona, por ahora, sigue siendo parte del trabajo humano.</p>
-<p>Para extraer lo mejor de estas herramientas, entonces, es clave conocer el problema que se está resolviendo. Si vamos a usarlas para programar en Python (o cualquier otro lenguaje), necesitamos contar con un dominio sólido del lenguaje y de los fundamentos de la programación.</p>
-<p>En otras palabaras, en esta materia no estamos en contra del uso de herramientas de IA. Todo lo contrario. Creemos que pueden ser muy valiosas en el trabajo profesional y también pueden aportar al aprendizaje. Sin embargo, la base propia de conocimientos necesaria para usar la IA de manera efectiva solo se construye atravesando el proceso de aprendizaje. La IA no puede reemplazar ese proceso porque es personal. Con ese objetivo, dejamos estas recomendaciones generales para el uso de IA durante la materia:</p>
+<section id="errores" class="level2">
+<h2 class="anchored" data-anchor-id="errores">Errores</h2>
 <ul>
-<li>En vez de copiar y pegar el enunciado de un ejercicio en un chat, describile con tus palabras:
-<ul>
-<li>de qué se trata el ejercicio que estás trabajando</li>
-<li>qué avances hiciste hasta ahora</li>
-<li>qué parte no entendés</li>
-<li>tu código y los errores, si los hay.</li>
+<li>Elevacion de errores</li>
+<li>Implementacion de errores</li>
 </ul>
-Es mejor usar la IA como un tutor que te guía, que como un particular que realiza la tarea por vos.</li>
-<li>Del mismo modo que mirar videos de cocina no te hace buen chef, copiar y pegar código tampoco te convertirá en buen programador. Cuando la IA te devuelva código, no copies y pegues ese código en el editor de manera automática. Transcribilo manualmente, aunque pese, siendo crítico de lo que la IA te provee:
-<ul>
-<li>¿por qué hace este paso?</li>
-<li>¿podría escribir esta parte del programa de otra manera?</li>
-<li>¿es necesario agregar este comentario?</li>
-<li>¿tiene sentido documentar tan exhaustivamente esta función auxiliar?</li>
-</ul></li>
-<li>Copiar y pegar texto para dar la impresión que dominas un tema tampoco te ayuda a aprender. El proceso de escritura enriquece y solidifica el entendimiento sobre un tema. Por eso se recomienda no utilizar la IA inmediatamente a la hora de redactar respuestas o párrafos enteros. Una vez que elaboraste al menos un borrador de tu respuesta (por ejemplo, un punteo con los puntos principales en un orden presuntamente correcto) se puede utilizar la IA para buscar expresiones alternativas, corregir errores gramaticales, adaptar estilo y/o tono y, en general, obtener una segunda opinión y revisión general del texto elaborado.</li>
-</ul>
-<p>La distinción clave es si la IA contribuye a tu aprendizaje o si está realizando el trabajo intelectual que se espera que vos realices. En caso de duda, una regla orientadora es preguntarse: ¿puedo explicar y defender con palabras propias todo lo que estoy entregando?</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,8 +691,8 @@ Es mejor usar la IA como un tutor que te guía, que como un particular que reali
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../informacion/bibliografia.html" class="pagination-link" aria-label="Bibliografía">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bibliografía</span>
+      <a href="../../teoria/02_oop/04_polimorfismo.html" class="pagination-link" aria-label="4 - Polimorfismo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4 - Polimorfismo</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
