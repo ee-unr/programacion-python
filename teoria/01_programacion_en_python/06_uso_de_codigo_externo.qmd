@@ -68,6 +68,9 @@ Luego, podemos acceder a los objetos **dentro del _namespace_** `math` utilizand
 
 ```python
 >>> math.sqrt(16)
+```
+
+```text
 4.0
 ```
 
@@ -80,6 +83,9 @@ Si quisiéramos importar más de una módulo, solo tenemos que agregar una nueva
 
 ```python
 >>> random.random() # número aleatorio entre 0 y 1
+```
+
+```text
 0.7934917548608393
 ```
 
@@ -117,6 +123,9 @@ Para obtener un listado con los nombres de los objetos disponibles dentro de un 
 
 ```python
 >>> dir(math)
+```
+
+```text
 ['__doc__',
  '__file__',
  '__loader__',
@@ -127,7 +136,13 @@ Para obtener un listado con los nombres de los objetos disponibles dentro de un 
  'acosh',
  'asin',
  'asinh',
+```
+
+```python
 ...
+```
+
+```text
  'tan',
  'tanh',
  'tau',
@@ -163,6 +178,9 @@ Luego, es posible acceder a la variable `pi` sin tener que pasar por el nombre d
 
 ```python
 >>> pi
+```
+
+```text
 3.141592653589793
 ```
 
@@ -171,6 +189,9 @@ En nuestro caso, como anteriormente también importamos el módulo `math`, segui
 ```python
 >>> print(math.pi)
 >>> print(pi)
+```
+
+```text
 3.141592653589793
 3.141592653589793
 ```
@@ -183,9 +204,18 @@ Para importar varios objetos a la vez, se utiliza una sintaxis similar a la ante
 
 ```python
 >>> numeros = [4, 5, 9, 30, 3, 8, 6]
+```
 
+```text
+
+```
+
+```python
 >>> print("La media es:", mean(numeros))
 >>> print("La mediana es:", median(numeros))
+```
+
+```text
 La media es: 9.285714285714286
 La mediana es: 6
 ```
@@ -210,8 +240,17 @@ Podemos importar el módulo `math` usando el alias `mates`:
 
 ```python
 >>> import math as mates
+```
 
+```text
+
+```
+
+```python
 >>> print(mates.cos(mates.pi)) # coseno(pi)
+```
+
+```text
 -1.0
 ```
 
@@ -219,8 +258,17 @@ O importar la funcion `sqrt` con el nombre `raiz`:
 
 ```python
 >>> from math import sqrt as raiz
+```
 
+```text
+
+```
+
+```python
 >>> raiz(81)
+```
+
+```text
 9.0
 ```
 
@@ -284,13 +332,28 @@ Aquí, `programa.py` es nuestro programa principal y contiene el siguiente códi
 
 ```python
 >>> import funciones
+```
 
+```text
+
+```
+
+```python
 >>> print(funciones.es_par(12))
 >>> print(funciones.es_par(15))
+```
 
+```text
+
+```
+
+```python
 >>> print(funciones.es_primo(1))
 >>> print(funciones.es_primo(11))
 >>> print(funciones.es_primo(15))
+```
+
+```text
 True
 False
 False
@@ -304,13 +367,28 @@ Un programa equivalente es el siguiente:
 
 ```python
 >>> from funciones import es_par, es_primo
+```
 
+```text
+
+```
+
+```python
 >>> print(es_par(12))
 >>> print(es_par(15))
+```
 
+```text
+
+```
+
+```python
 >>> print(es_primo(1))
 >>> print(es_primo(11))
 >>> print(es_primo(15))
+```
+
+```text
 True
 False
 False
@@ -490,14 +568,26 @@ Los paquetes de Python suelen importarse utilizando un alias. En el caso de los 
 
 ```python
 >>> import numpy as np
+```
 
+```text
+
+```
+
+```python
 >>> array = np.array([1, 2, 3, 4])
 >>> array
+```
+
+```text
 array([1, 2, 3, 4])
 ```
 
 ```python
 >>> type(array)
+```
+
+```text
 <class 'numpy.ndarray'>
 ```
 
@@ -505,6 +595,9 @@ La propiedad `.ndim` nos devuelve el número de dimensiones del array.
 
 ```python
 >>> array.ndim
+```
+
+```text
 1
 ```
 
@@ -512,6 +605,9 @@ Y `.shape` nos devuelve la "forma" del array. Es decir, la cantidad de elementos
 
 ```python
 >>> array.shape
+```
+
+```text
 (4,)
 ```
 
@@ -524,6 +620,9 @@ A modo de ejemplo, podemos crear un _array_ de dos dimensiones de la siguiente m
 ```python
 >>> array_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 >>> array_2d
+```
+
+```text
 array([[1, 2, 3, 4],
        [5, 6, 7, 8]])
 ```
@@ -531,6 +630,9 @@ array([[1, 2, 3, 4],
 ```python
 >>> print(array_2d.ndim)
 >>> print(array_2d.shape)
+```
+
+```text
 2
 (2, 4)
 ```
@@ -542,6 +644,9 @@ Una de las características más atractivas de NumPy es que las operaciones mate
 >>> print(array - 5)
 >>> print(array / 10)
 >>> print(array ** 2.4)
+```
+
+```text
 [10 20 30 40]
 [-4 -3 -2 -1]
 [0.1 0.2 0.3 0.4]
@@ -555,6 +660,9 @@ NumPy también provee **muchísimas funciones** para hacer cálculos comúnmente
 >>> print(np.median(array))
 >>> print(np.std(array))
 >>> print(np.exp(array))
+```
+
+```text
 2.5
 2.5
 1.118033988749895

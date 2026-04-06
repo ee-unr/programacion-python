@@ -16,15 +16,30 @@ Por ejemplo, supongamos que tenemos un listado con nombres de nuestros amigos y 
 >>> nombres = ["julieta", "facundo", "emiliano", "lorenzo", "victoria"]
 >>> print("Nombres originales:")
 >>> print(nombres)
+```
 
+```text
+
+```
+
+```python
 >>> nombres[0] = nombres[0].upper()
 >>> nombres[1] = nombres[1].upper()
 >>> nombres[2] = nombres[2].upper()
 >>> nombres[3] = nombres[3].upper()
 >>> nombres[4] = nombres[4].upper()
+```
 
+```text
+
+```
+
+```python
 >>> print("\nNombres modificados:")
 >>> print(nombres)
+```
+
+```text
 Nombres originales:
 ['julieta', 'facundo', 'emiliano', 'lorenzo', 'victoria']
 
@@ -58,16 +73,37 @@ Veamos el ejemplo anterior pero utilizando un bucle `for`. En este caso, generam
 ```python
 >>> nombres = ["julieta", "facundo", "emiliano", "mariana", "victoria"]
 >>> nombres_modificados = []
+```
 
+```text
+
+```
+
+```python
 >>> # Bucle for
 >>> for nombre in nombres:
 ...     nombres_modificados.append(nombre.upper())
+```
 
+```text
+
+```
+
+```python
 >>> print("Nombres originales:")
 >>> print(nombres)
+```
 
+```text
+
+```
+
+```python
 >>> print("\nNombres modificados:")
 >>> print(nombres_modificados)
+```
+
+```text
 Nombres originales:
 ['julieta', 'facundo', 'emiliano', 'mariana', 'victoria']
 
@@ -104,6 +140,9 @@ Dado que a iterar se aprende iterando, veamos algunos ejemplos:
 ```python
 >>> for i in [3, 1, 2]:
 ...     print(f"El número es {i}.")
+```
+
+```text
 El número es 3.
 El número es 1.
 El número es 2.
@@ -114,6 +153,9 @@ También podemos ordenar los valores de la lista sobre la que iteramos:
 ```python
 >>> for i in sorted([3, 1, 2]):
 ...     print(f"El número es {i}.")
+```
+
+```text
 El número es 1.
 El número es 2.
 El número es 3.
@@ -124,6 +166,9 @@ Pero no es necesario iterar sobre listas. De hecho, podemos iterar sobre cualqui
 ```python
 >>> for i in (3, 1, 2):
 ...     print(f"El número es {i}.")
+```
+
+```text
 El número es 3.
 El número es 1.
 El número es 2.
@@ -132,6 +177,9 @@ El número es 2.
 ```python
 >>> for i in sorted((3, 1, 2)):
 ...     print(f"El número es {i}.")
+```
+
+```text
 El número es 1.
 El número es 2.
 El número es 3.
@@ -142,6 +190,9 @@ E incluso una cadena de caracteres:
 ```python
 >>> for c in "Hola Curso":
 ...     print(c)
+```
+
+```text
 H
 o
 l
@@ -164,6 +215,9 @@ El nombre de la variable que se usa para iterar es **arbitrario**. Sin embargo, 
 >>> for i in [1, 2, 3]:
 ...     print(i)
 >>> print(i)
+```
+
+```text
 1
 2
 3
@@ -190,7 +244,13 @@ Mediante un `for`, crearemos tres listas: una con los números, otra con el text
 >>> numeros = []
 >>> texto = []
 >>> otros = []
+```
 
+```text
+
+```
+
+```python
 >>> # Iterar a traves de los valores de la lista original
 >>> for valor in lista_original:
 ...     # Si es numérico, lo agregamos en la lista 'numeros'
@@ -203,11 +263,20 @@ Mediante un `for`, crearemos tres listas: una con los números, otra con el text
 ...     else:
 ...         print(f"La cadena '{valor}' no es ni numérica ni alfabética.")
 ...         otros.append(valor)
+```
 
+```text
+
+```
+
+```python
 >>> print(lista_original)
 >>> print(numeros)
 >>> print(texto)
 >>> print(otros)
+```
+
+```text
 La cadena '@' no es ni numérica ni alfabética.
 La cadena '?' no es ni numérica ni alfabética.
 La cadena '!' no es ni numérica ni alfabética.
@@ -224,6 +293,9 @@ Python provee una función llamada `range()` que hace que sea muy fácil generar
 ```python
 >>> for i in range(1, 5):
 ...     print(i)
+```
+
+```text
 1
 2
 3
@@ -235,6 +307,9 @@ Python provee una función llamada `range()` que hace que sea muy fácil generar
 ```python
 >>> for i in range(5):
 ...     print(i)
+```
+
+```text
 0
 1
 2
@@ -248,6 +323,9 @@ Una forma útil de entender `range(n)` es verlo como la creación de una secuenc
 >>> x = range(5)
 >>> print(x)
 >>> print(type(x))
+```
+
+```text
 range(0, 5)
 <class 'range'>
 ```
@@ -256,6 +334,9 @@ Podemos obtener una lista a partir de un `range` usando la función `list()`.
 
 ```python
 >>> list(x)
+```
+
+```text
 [0, 1, 2, 3, 4]
 ```
 
@@ -263,6 +344,9 @@ Y, por qué no, una tupla también.
 
 ```python
 >>> tuple(x)
+```
+
+```text
 (0, 1, 2, 3, 4)
 ```
 
@@ -272,6 +356,9 @@ Lista de números entre 0 y 10 (no inclusivo), avanzando de a 2 en cada paso.
 
 ```python
 >>> list(range(0, 10, 2))
+```
+
+```text
 [0, 2, 4, 6, 8]
 ```
 
@@ -279,6 +366,9 @@ Intento de lista de números entre 10 y 0 (no inclusivo).
 
 ```python
 >>> list(range(10, 0))
+```
+
+```text
 []
 ```
 
@@ -287,6 +377,9 @@ Si cambiamos el paso a `-1`, funciona correctamente:
 
 ```python
 >>> list(range(10, 0, -1))
+```
+
+```text
 [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 ```
 
@@ -307,6 +400,9 @@ De manera similar a las secuencias, el término iterable describe una categoría
 ```python
 >>> for i in {"a": 1, "b": 2}:
 ...     print(i)
+```
+
+```text
 a
 b
 ```
@@ -328,6 +424,9 @@ En un bucle `while` encontramos los siguientes componentes.
 >>> while numero < 5:
 ...     numero += 1 # Abreviación de x = x + 1
 ...     print(f"El numero es {numero}")
+```
+
+```text
 El numero es 1
 El numero es 2
 El numero es 3
@@ -377,6 +476,9 @@ Veamos algunos ejemplos de uso.
 >>> while True:
 ...     print("¡Hola!")
 ...     break
+```
+
+```text
 ¡Hola!
 ```
 
@@ -391,6 +493,9 @@ De forma similar, podemos reescribir el primer `while` utilizando esta estructur
 ...         break
 ...     numero += 1
 ...     print(f"El numero es {numero}")
+```
+
+```text
 El numero es 1
 El numero es 2
 El numero es 3
@@ -405,6 +510,9 @@ El numero es 5
 ...     print(f"El numero es {numero}")
 ...     if numero >= 5:
 ...         break
+```
+
+```text
 El numero es 1
 El numero es 2
 El numero es 3
@@ -420,12 +528,21 @@ Si partimos de una lista de números cualquiera, no sabemos de antemano cuántos
 >>> suma = 0
 >>> umbral = 20
 >>> valores = [3, 5, 4, 4, 5, 5, 3, 5, 2, 7]
+```
 
+```text
+
+```
+
+```python
 >>> while valores:
 ...     suma += valores.pop(0)
 ...     print(suma)
 ...     if suma >= umbral:
 ...         break
+```
+
+```text
 3
 8
 12
@@ -435,6 +552,9 @@ Si partimos de una lista de números cualquiera, no sabemos de antemano cuántos
 
 ```python
 >>> valores # valores que no se sumaron
+```
+
+```text
 [5, 3, 5, 2, 7]
 ```
 
@@ -453,6 +573,9 @@ Un ejemplo más conciso es el siguiente:
 ...     print("Bloque 'if'")
 ... else:
 ...     print("Bloque 'else'")
+```
+
+```text
 Bloque 'if'
 ```
 
@@ -461,6 +584,9 @@ Bloque 'if'
 ...     print("Bloque 'if'")
 ... else:
 ...     print("Bloque 'else'")
+```
+
+```text
 Bloque 'else'
 ```
 
@@ -473,29 +599,68 @@ Estamos interesados en la cantidad de extracciones que se necesitaron hasta que 
 ...     5, 7, 6, 4, 2, 2, 5, 3, 6, 4, 4, 6, 3, 6, 1,
 ...     3, 3, 1, 9, 5, 5, 6, 5, 1, 7, 3, 3, 1, 3, 4
 ... ]
+```
 
+```text
+
+```
+
+```python
 >>> umbral = 30
+```
 
+```text
+
+```
+
+```python
 >>> # Inicializamos suma y cantidad de iteraciones en 0
 >>> suma = 0
 >>> iteraciones = 0
+```
 
+```text
+
+```
+
+```python
 >>> # Mientras la lista no esté vacía
 >>> while numeros_aleatorios:
 ...     # Agregamos 1 al conteo de iteraciones realizadas
 ...     iteraciones += 1
+```
 
+```text
+
+```
+
+```python
 ...     # Extraemos el primer número de la lista y lo sumamos a la suma
 ...     suma += numeros_aleatorios.pop(0)
+```
 
+```text
+
+```
+
+```python
 ...     # Si la suma es mayor o igual al umbral, dejamos de iterar
 ...     if suma >= umbral:
 ...         break
+```
 
+```text
+
+```
+
+```python
 >>> if suma >= umbral:
 ...     print(f"Se superó el umbral de {umbral} en la iteración {iteraciones}, sumando {suma}.")
 ... else:
 ...     print(f"La suma de los elementos de la lista no llega a superar {umbral}")
+```
+
+```text
 Se superó el umbral de 30 en la iteración 7, sumando 31.
 ```
 
@@ -537,7 +702,13 @@ En el siguiente ejemplo tenemos una lista con números del 1 al 10 y queremos su
 >>> # Crear lista del 1 al 10
 >>> numeros = list(range(1, 11))
 >>> print(numeros)
+```
 
+```text
+
+```
+
+```python
 >>> suma = 0
 >>> while numeros:
 ...     numero = numeros.pop(0)
@@ -545,8 +716,17 @@ En el siguiente ejemplo tenemos una lista con números del 1 al 10 y queremos su
 ...         continue
 ...     suma += numero
 ...     print("Sumando el numero", numero)
+```
 
+```text
+
+```
+
+```python
 >>> print("La suma es", suma)
+```
+
+```text
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Sumando el numero 2
 Sumando el numero 4
@@ -569,6 +749,9 @@ Este problema se puede resolver también utilizando un bucle `for` en vez de un 
 ...     suma += numero
 ...     print("Sumando el numero", numero)
 >>> print("La suma es", suma)
+```
+
+```text
 Sumando el numero 2
 Sumando el numero 4
 Sumando el numero 6

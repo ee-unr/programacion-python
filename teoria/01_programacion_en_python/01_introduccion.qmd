@@ -42,6 +42,9 @@ Empecemos utilizando a Python como si fuese una calculadora.
 
 ```python
 >>> 2 * 3
+```
+
+```text
 6
 ```
 
@@ -51,16 +54,25 @@ Empecemos utilizando a Python como si fuese una calculadora.
 
 ```python
 >>> 20 + 5
+```
+
+```text
 25
 ```
 
 ```python
 >>> 13 - 3
+```
+
+```text
 10
 ```
 
 ```python
 >>> 10 * 5.5
+```
+
+```text
 55.0
 ```
 
@@ -83,6 +95,9 @@ Lo siguiente es un número entero:
 
 ```python
 >>> 50
+```
+
+```text
 50
 ```
 
@@ -90,6 +105,9 @@ Y el siguiente es un ejemplo de un número flotante:
 
 ```python
 >>> 36.8
+```
+
+```text
 36.8
 ```
 
@@ -97,21 +115,33 @@ Utilizando la función `type()` Python nos devuelve el tipo del objeto.
 
 ```python
 >>> type(10)
+```
+
+```text
 <class 'int'>
 ```
 
 ```python
 >>> type(10.5)
+```
+
+```text
 <class 'float'>
 ```
 
 ```python
 >>> type(10.0)
+```
+
+```text
 <class 'float'>
 ```
 
 ```python
 >>> type(10.)
+```
+
+```text
 <class 'float'>
 ```
 
@@ -133,11 +163,17 @@ Como en la mayoría de los lenguajes de programación, las comillas se ponen al 
 
 ```python
 >>> "Programando en Python"
+```
+
+```text
 'Programando en Python'
 ```
 
 ```python
 >>> 'Con comillas simples, también.'
+```
+
+```text
 'Con comillas simples, también.'
 ```
 
@@ -147,6 +183,9 @@ Cuando imprimimos una cadena, las comillas no se muestran en la salida. Para imp
 
 ```python
 >>> print('Con comillas simples, ¡también!')
+```
+
+```text
 Con comillas simples, ¡también!
 ```
 
@@ -156,6 +195,9 @@ Una forma un poco más exótica, pero muy útil, de crear cadenas es utilizando 
 >>> print("""Se puede escribir texto
 ... en varias lineas.
 ... ¡Está muy bueno!""")
+```
+
+```text
 Se puede escribir texto
 en varias lineas.
 ¡Está muy bueno!
@@ -165,6 +207,9 @@ Otra manera de escribir texto que abarca múltiples líneas es usando el caráct
 
 ```python
 >>> print("Primera línea\nsegunda línea\ntercera línea.")
+```
+
+```text
 Primera línea
 segunda línea
 tercera línea.
@@ -174,6 +219,9 @@ En cambio, si mostramos una representación del texto (sin usar `print()`), los 
 
 ```python
 >>> "Primera línea\nsegunda línea\ntercera línea."
+```
+
+```text
 'Primera línea\nsegunda línea\ntercera línea.'
 ```
 
@@ -194,6 +242,9 @@ objetos al ejecutar un bloque de código. Por ejemplo, comparemos el resultado d
 >>> "mensaje 1"
 >>> 10
 >>> "mensaje 2"
+```
+
+```text
 'mensaje 2'
 ```
 
@@ -201,6 +252,9 @@ objetos al ejecutar un bloque de código. Por ejemplo, comparemos el resultado d
 >>> print("mensaje 1")
 >>> print(10)
 >>> print("mensaje 2")
+```
+
+```text
 mensaje 1
 10
 mensaje 2
@@ -216,21 +270,33 @@ Si la condición se cumple, el resultado será `True`; de lo contrario, será `F
 
 ```python
 >>> True
+```
+
+```text
 True
 ```
 
 ```python
 >>> False
+```
+
+```text
 False
 ```
 
 ```python
 >>> type(True)
+```
+
+```text
 <class 'bool'>
 ```
 
 ```python
 >>> type(False)
+```
+
+```text
 <class 'bool'>
 ```
 
@@ -251,6 +317,9 @@ En cambio, si imprimimos el objeto `None`, vemos el mensaje `None`.
 
 ```python
 >>> print(None)
+```
+
+```text
 None
 ```
 
@@ -258,6 +327,9 @@ None
 
 ```python
 >>> type(None)
+```
+
+```text
 <class 'NoneType'>
 ```
 
@@ -305,31 +377,49 @@ Veamos algunos ejemplos:
 
 ```python
 >>> str(256)
+```
+
+```text
 '256'
 ```
 
 ```python
 >>> str(None)
+```
+
+```text
 'None'
 ```
 
 ```python
 >>> int(165.5)
+```
+
+```text
 165
 ```
 
 ```python
 >>> int(165.8)
+```
+
+```text
 165
 ```
 
 ```python
 >>> int("165")
+```
+
+```text
 165
 ```
 
 ```python
 >>> float("165.0")
+```
+
+```text
 165.0
 ```
 
@@ -365,11 +455,17 @@ Una vez creada una variable con cierto valor, podemos usar directamente su nombr
 ```python
 >>> mensaje = "¡Hola, curso!"
 >>> print(mensaje)
+```
+
+```text
 ¡Hola, curso!
 ```
 
 ```python
 >>> print("¡Hola, curso!")
+```
+
+```text
 ¡Hola, curso!
 ```
 
@@ -399,16 +495,25 @@ Cada vez que utilizamos una de estas etiquetas, accedemos directamente al valor 
 
 ```python
 >>> print(pi * 10)
+```
+
+```text
 31.4159
 ```
 
 ```python
 >>> fruta_favorita
+```
+
+```text
 'manzana'
 ```
 
 ```python
 >>> python_bueno
+```
+
+```text
 True
 ```
 
@@ -423,6 +528,9 @@ Por ejemplo, los siguientes bloques de código producen el mismo resultado, pero
 
 ```python
 >>> 1500 * 8
+```
+
+```text
 12000
 ```
 
@@ -430,6 +538,9 @@ Por ejemplo, los siguientes bloques de código producen el mismo resultado, pero
 >>> precio = 1500
 >>> cantidad = 8
 >>> precio * cantidad
+```
+
+```text
 12000
 ```
 
@@ -475,6 +586,9 @@ Si queremos crear varias variables, podemos hacerlo en líneas separadas:
 >>> e = 2.7182
 >>> print(pi)
 >>> print(e)
+```
+
+```text
 3.1416
 2.7182
 ```
@@ -485,6 +599,9 @@ Una característica conveniente de Python es que permite asignar múltiples vari
 >>> pi, e = 3.1416, 2.7182
 >>> print(pi)
 >>> print(e)
+```
+
+```text
 3.1416
 2.7182
 ```
@@ -493,10 +610,19 @@ Otra ventaja es que las variables no tienen que ser del mismo tipo:
 
 ```python
 >>> a, b, c = 100 + 20, "un mensaje cualquiera", None
+```
 
+```text
+
+```
+
+```python
 >>> print(a)
 >>> print(b)
 >>> print(c)
+```
+
+```text
 120
 un mensaje cualquiera
 None
@@ -543,16 +669,25 @@ Algunos operadores son los siguientes:
 
 ```python
 >>> 10 + 25
+```
+
+```text
 35
 ```
 
 ```python
 >>> 10.0 + 25.0
+```
+
+```text
 35.0
 ```
 
 ```python
 >>> -8 + 12.1
+```
+
+```text
 4.1
 ```
 
@@ -560,6 +695,9 @@ El operador suma también puede ser usado con un solo argumento:
 
 ```python
 >>> + 8
+```
+
+```text
 8
 ```
 
@@ -571,16 +709,25 @@ En este caso no modifica en nada al valor `8`.
 
 ```python
 >>> 11 - 8
+```
+
+```text
 3
 ```
 
 ```python
 >>> 100 - 100.0
+```
+
+```text
 0.0
 ```
 
 ```python
 >>> -35 - 28
+```
+
+```text
 -63
 ```
 
@@ -588,6 +735,9 @@ El operador resta también puede ser usado con un solo argumento:
 
 ```python
 >>> - 7
+```
+
+```text
 -7
 ```
 
@@ -595,26 +745,41 @@ El operador resta también puede ser usado con un solo argumento:
 
 ```python
 >>> 21 * 5
+```
+
+```text
 105
 ```
 
 ```python
 >>> 21 * 5.0
+```
+
+```text
 105.0
 ```
 
 ```python
 >>> 21.0 * 5.0
+```
+
+```text
 105.0
 ```
 
 ```python
 >>> 2 ** 3
+```
+
+```text
 8
 ```
 
 ```python
 >>> 2 ** 3.0
+```
+
+```text
 8.0
 ```
 
@@ -639,11 +804,17 @@ El operador `/` es el que más se utiliza y **siempre devuelve un número de tip
 
 ```python
 >>> 10 / 5
+```
+
+```text
 2.0
 ```
 
 ```python
 >>> 10 / 5.5
+```
+
+```text
 1.8181818181818181
 ```
 
@@ -651,11 +822,17 @@ La división entera se suele utilizar cuando uno quiere el resultado entero de l
 
 ```python
 >>> 10 // 5
+```
+
+```text
 2
 ```
 
 ```python
 >>> 10 // 5.5
+```
+
+```text
 1.0
 ```
 
@@ -663,11 +840,17 @@ Veamos los siguientes ejemplos donde comparamos la división flotante con la div
 
 ```python
 >>> 15 / 4
+```
+
+```text
 3.75
 ```
 
 ```python
 >>> 15.0 // 4.0
+```
+
+```text
 3.0
 ```
 
@@ -681,6 +864,9 @@ Esta operación nos devuelve el resto que se obtiene al realizar la división en
 
 ```python
 >>> 17 % 3
+```
+
+```text
 2
 ```
 
@@ -712,11 +898,17 @@ En el siguiente ejemplo, ¿por qué se obtienen resultados distintos?
 
 ```python
 >>> 10 - 2 * 4
+```
+
+```text
 2
 ```
 
 ```python
 >>> (10 - 2) * 4
+```
+
+```text
 32
 ```
 
@@ -730,11 +922,17 @@ Otro ejemplo es el siguiente...
 
 ```python
 >>> 7 + 8 / 2
+```
+
+```text
 11.0
 ```
 
 ```python
 >>> (7 + 8) / 2
+```
+
+```text
 7.5
 ```
 
@@ -765,11 +963,17 @@ Devuelve el opuesto del valor que le pasamos.
 
 ```python
 >>> not False
+```
+
+```text
 True
 ```
 
 ```python
 >>> not True
+```
+
+```text
 False
 ```
 
@@ -779,11 +983,17 @@ Esta operación devuelve `True` solamente cuando los dos operadores que le pasam
 
 ```python
 >>> True and True
+```
+
+```text
 True
 ```
 
 ```python
 >>> False and True
+```
+
+```text
 False
 ```
 
@@ -793,6 +1003,9 @@ Esta operación devuelve `True` cuando cualquiera de sus argumentos es `True`.
 
 ```python
 >>> True or False
+```
+
+```text
 True
 ```
 
@@ -800,6 +1013,9 @@ Solo devuelve `False` cuando sus dos argumentos son `False`.
 
 ```python
 >>> False or False
+```
+
+```text
 False
 ```
 
@@ -814,16 +1030,25 @@ Python ofrece dos operadores para verificar si dos objetos son o no el mismo **e
 
 ```python
 >>> False is False
+```
+
+```text
 True
 ```
 
 ```python
 >>> False is True
+```
+
+```text
 False
 ```
 
 ```python
 >>> None is None
+```
+
+```text
 True
 ```
 
@@ -832,16 +1057,25 @@ Para conocer el ID de un objeto, se puede usar la función `id()`.
 
 ```python
 >>> id(False)
+```
+
+```text
 140475923103936
 ```
 
 ```python
 >>> id(False)
+```
+
+```text
 140475923103936
 ```
 
 ```python
 >>> id(None)
+```
+
+```text
 140475923195040
 ```
 
@@ -866,31 +1100,49 @@ Algunos ejemplos...
 
 ```python
 >>> 10 > 5
+```
+
+```text
 True
 ```
 
 ```python
 >>> 10 > 5 + 3
+```
+
+```text
 True
 ```
 
 ```python
 >>> 0 < 0
+```
+
+```text
 False
 ```
 
 ```python
 >>> 1 >= 1
+```
+
+```text
 True
 ```
 
 ```python
 >>> 10.0 != 10
+```
+
+```text
 False
 ```
 
 ```python
 >>> 10.0 == 10
+```
+
+```text
 True
 ```
 
@@ -902,6 +1154,9 @@ La comparación de cadenas de texto distingue mayúsculas de minúsculas
 
 ```python
 >>> "UNR" == "unr"
+```
+
+```text
 False
 ```
 
@@ -911,11 +1166,17 @@ Salvo casos particulares, como son los valores numéricos, estos objetos son con
 
 ```python
 >>> "10" == 10
+```
+
+```text
 False
 ```
 
 ```python
 >>> "False" == False
+```
+
+```text
 False
 ```
 
@@ -923,6 +1184,9 @@ Es posible combinar mas de una comparación en la misma línea.
 
 ```python
 >>> 1 < 2 and 2 < 3
+```
+
+```text
 True
 ```
 
@@ -930,11 +1194,17 @@ Incluso es posible omitir el operador `and` y tener una expresión más clara
 
 ```python
 >>> 1 < 2 < 3
+```
+
+```text
 True
 ```
 
 ```python
 >>> -5 < -4 < -3
+```
+
+```text
 True
 ```
 
@@ -942,6 +1212,9 @@ También podemos mezclar `not`, `and` y `or` a gusto.
 
 ```python
 >>> False or not False
+```
+
+```text
 True
 ```
 
@@ -949,6 +1222,9 @@ Y es válido utilizar paréntesis para agrupar operaciones.
 
 ```python
 >>> (False or True) and (True or False)
+```
+
+```text
 True
 ```
 
@@ -975,6 +1251,9 @@ Analicemos nuevamente uno de los ejemplos que ya vimos.
 
 ```python
 >>> not True and not True
+```
+
+```text
 False
 ```
 
@@ -984,6 +1263,9 @@ En consecuencia, en el código anterior primero se resuelven los `not True` y lu
 
 ```python
 >>> False and False
+```
+
+```text
 False
 ```
 
@@ -1011,11 +1293,17 @@ Veamos que pasa si "sumamos" dos cadenas de caracteres:
 
 ```python
 >>> "¿Funciona" + "bien?"
+```
+
+```text
 '¿Funcionabien?'
 ```
 
 ```python
 >>> "¿esto" + " también " + "funciona?"
+```
+
+```text
 '¿esto también funciona?'
 ```
 
@@ -1025,11 +1313,17 @@ Si la suma tiene sentido para cadenas, entonces el producto también debería te
 
 ```python
 >>> "ja" * 2
+```
+
+```text
 'jaja'
 ```
 
 ```python
 >>> "ja" * 4
+```
+
+```text
 'jajajaja'
 ```
 
@@ -1045,6 +1339,9 @@ El resultado de una f-_string_ no se diferencia de una cadena de texto común y 
 
 ```python
 >>> f"Un texto cualquiera"
+```
+
+```text
 'Un texto cualquiera'
 ```
 
@@ -1057,6 +1354,9 @@ Veamos algunos ejemplos.
 ```python
 >>> lenguaje = "Python"
 >>> print("Programando en " + lenguaje)
+```
+
+```text
 Programando en Python
 ```
 
@@ -1064,6 +1364,9 @@ Programando en Python
 >>> que = "bayer"
 >>> como = "bueno"
 >>> print("Si es " + que + " es " + como + ".")
+```
+
+```text
 Si es bayer es bueno.
 ```
 
@@ -1076,6 +1379,9 @@ Lo que tenemos que hacer es pasar el nombre de la variable entre llaves (`{}`) e
 ```python
 >>> print(f"Programando en {lenguaje}")
 >>> print(f"Si es {que} es {como}.")
+```
+
+```text
 Programando en Python
 Si es bayer es bueno.
 ```
@@ -1086,8 +1392,17 @@ Veamos un ejemplo menos trivial, donde utilizar f-strings reduce la cantidad de 
 >>> nombre = "Tomás"
 >>> edad = 30
 >>> ciudad = "Rosario"
+```
 
+```text
+
+```
+
+```python
 >>> print("Hola, soy " + nombre + ", tengo " + str(edad) + " años y vivo en " + ciudad + ".")
+```
+
+```text
 Hola, soy Tomás, tengo 30 años y vivo en Rosario.
 ```
 
@@ -1095,6 +1410,9 @@ Utilizando **f-strings**...
 
 ```python
 >>> print(f"Hola, soy {nombre}, tengo {edad} años y vivo en {ciudad}.")
+```
+
+```text
 Hola, soy Tomás, tengo 30 años y vivo en Rosario.
 ```
 
@@ -1105,8 +1423,17 @@ No solo podemos utilizar variables dentro de las f-strings, también podemos inc
 ```python
 >>> minutos_por_hora = 60
 >>> horas = 2.7
+```
 
+```text
+
+```
+
+```python
 >>> print(f"En {horas} horas hay {horas * minutos_por_hora} minutos.")
+```
+
+```text
 En 2.7 horas hay 162.0 minutos.
 ```
 
@@ -1122,11 +1449,17 @@ Por ejemplo, tenemos los métodos `.upper()` y `.lower()`, que ponen el texto en
 
 ```python
 >>> print(nombre.upper())
+```
+
+```text
 LIONEL MESSI
 ```
 
 ```python
 >>> print(nombre.lower())
+```
+
+```text
 lionel messi
 ```
 
@@ -1140,6 +1473,9 @@ sin necesidad de modificar los valores de `nombre` o `apellido`.
 >>> apellido = "messi"
 >>> nombre_completo = f"{nombre.capitalize()} {apellido.capitalize()}"
 >>> print(nombre_completo)
+```
+
+```text
 Lionel Messi
 ```
 
@@ -1150,6 +1486,9 @@ Este método pone la primera letra de cada palabra en mayúsculas y al resto en 
 >>> mensaje = "mensaje de prueba"
 >>> print(mensaje.capitalize())
 >>> print(mensaje.title())
+```
+
+```text
 Mensaje de prueba
 Mensaje De Prueba
 ```
@@ -1165,6 +1504,9 @@ Afortunadamente, Python también provee algunos métodos que nos permiten elimin
 ```python
 >>> lenguaje_favorito = "  python  "
 >>> lenguaje_favorito
+```
+
+```text
 '  python  '
 ```
 
@@ -1172,6 +1514,9 @@ Afortunadamente, Python también provee algunos métodos que nos permiten elimin
 
 ```python
 >>> lenguaje_favorito.rstrip()
+```
+
+```text
 '  python'
 ```
 
@@ -1179,6 +1524,9 @@ Afortunadamente, Python también provee algunos métodos que nos permiten elimin
 
 ```python
 >>> lenguaje_favorito.lstrip()
+```
+
+```text
 'python  '
 ```
 
@@ -1186,6 +1534,9 @@ y `.strip()` elimina los espacios en blanco a la izquierda y a la derecha del te
 
 ```python
 >>> lenguaje_favorito.strip()
+```
+
+```text
 'python'
 ```
 
@@ -1204,12 +1555,18 @@ Podemos reemplazar caracteres, palabras, o frases enteras.
 ```python
 >>> animal = "pato"
 >>> animal.replace("p", "g")
+```
+
+```text
 'gato'
 ```
 
 ```python
 >>> saludo = "Hola Mundo"
 >>> saludo.replace("Mundo", "Curso")
+```
+
+```text
 'Hola Curso'
 ```
 
@@ -1219,6 +1576,9 @@ Esto nos permite "pegar" o "encadenar" mas de un `.replace()` a la vez, ya que c
 
 ```python
 >>> saludo.replace("Mundo", "Curso").replace("Hola", "Chau")
+```
+
+```text
 'Chau Curso'
 ```
 

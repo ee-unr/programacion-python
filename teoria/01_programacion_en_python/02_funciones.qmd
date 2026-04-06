@@ -23,6 +23,9 @@ Consideremos el siguiente caso donde se busca calcuar el precio final de un prod
 >>> descuento = 0.10    # Descuento (10%)
 >>> precio_final = precio_base * (1 + impuesto) * (1 - descuento)
 >>> precio_final
+```
+
+```text
 871.2
 ```
 
@@ -36,6 +39,9 @@ Una opción es repetir el código tantas veces como sea necesario...
 >>> descuento = 0.0     # Descuento (0%)
 >>> precio_final = precio_base * (1 + impuesto) * (1 - descuento)
 >>> precio_final
+```
+
+```text
 552.5
 ```
 
@@ -45,6 +51,9 @@ Una opción es repetir el código tantas veces como sea necesario...
 >>> descuento = 0.20    # Descuento (20%)
 >>> precio_final = precio_base * (1 + impuesto) * (1 - descuento)
 >>> precio_final
+```
+
+```text
 1936.0
 ```
 
@@ -60,6 +69,9 @@ Luego, para utilizar la función simplemente la **llamamos** (o **invocamos**).
 
 ```python
 >>> calcular_precio(800, 0.21, 0.10)
+```
+
+```text
 871.2
 ```
 
@@ -67,6 +79,9 @@ También es posible indicar los valores de los argumentos utilizando sus nombres
 
 ```python
 >>> calcular_precio(precio_base=2000, impuesto=0.21, descuento=0.20)
+```
+
+```text
 1936.0
 ```
 
@@ -118,11 +133,17 @@ Comencemos con una función super sencilla. La misma se llama `sumar`, recibe do
 
 ```python
 >>> sumar(15, 21.9)
+```
+
+```text
 36.9
 ```
 
 ```python
 >>> type(sumar(15, 21.9))
+```
+
+```text
 <class 'float'>
 ```
 
@@ -131,6 +152,9 @@ El valor que devuelve puede ser tratado como cualquier valor en Python. Por ejem
 ```python
 >>> resultado = sumar(10, 11)
 >>> resultado
+```
+
+```text
 21
 ```
 
@@ -138,6 +162,9 @@ Y el valor de esa variable puede ser luego pasado a una nueva llamada a `sumar()
 
 ```python
 >>> sumar(resultado, 2.55)
+```
+
+```text
 23.55
 ```
 
@@ -145,6 +172,9 @@ Incluso es posible pasar expresiones y llamadas a funciones a la hora de pasar u
 
 ```python
 >>> sumar(sumar(1, 2), 3)
+```
+
+```text
 6
 ```
 
@@ -168,6 +198,9 @@ Otro ejemplo sencillo consiste en una función que recibe un nombre e imprime un
 
 ```python
 >>> saludar("Pablo")
+```
+
+```text
 Hola Pablo
 ```
 
@@ -175,6 +208,9 @@ Esta función no devuelve un resultado, sino que utiliza el argumento recibido p
 
 ```python
 >>> saludar("Juan" + " Manuel")
+```
+
+```text
 Hola Juan Manuel
 ```
 
@@ -189,10 +225,25 @@ Y podemos tener funciones que no utilicen ningún argumento.
 
 ```python
 >>> decir_hola()
+```
+
+```text
 ¡Hola!
+```
+
+```python
 >>> decir_hola()
+```
+
+```text
 ¡Hola!
+```
+
+```python
 >>> decir_hola()
+```
+
+```text
 ¡Hola!
 ```
 
@@ -206,6 +257,9 @@ En Python, las funciones pueden devolver múltiples valores separándolos por co
 ...     cubo = x ** 3
 ...     return cuadrado, cubo
 >>> potencias(2)
+```
+
+```text
 (4, 8)
 ```
 
@@ -215,8 +269,17 @@ De esta forma, podemos obtener el `cuadrado` y el `cubo` de un número con una s
 ```python
 >>> cuadrado, cubo = potencias(8)
 >>> print(cuadrado)
+```
+
+```text
 64
+```
+
+```python
 >>> print(cubo)
+```
+
+```text
 512
 ```
 
@@ -272,11 +335,17 @@ Por ejemplo, las siguientes llamadas a la función `sumar()` son equivalentes:
 
 ```python
 >>> sumar(x = 10, y = 15)
+```
+
+```text
 25
 ```
 
 ```python
 >>> sumar(10, 15)
+```
+
+```text
 25
 ```
 
@@ -284,6 +353,9 @@ Si utilizamos los nombres para pasar los argumentos **no hace falta que estén e
 
 ```python
 >>> sumar(y = 15, x = 10)
+```
+
+```text
 25
 ```
 
@@ -308,11 +380,17 @@ Por otro lado, la función `saludar()` termina con un `print()` y no tiene ning�
 ```python
 >>> resultado = sumar(1, 2)
 >>> resultado
+```
+
+```text
 3
 ```
 
 ```python
 >>> saludo = saludar("Juan")
+```
+
+```text
 Hola Juan
 ```
 
@@ -322,6 +400,9 @@ Hola Juan
 
 ```python
 >>> print(saludo)
+```
+
+```text
 None
 ```
 
@@ -347,6 +428,9 @@ Supongamos la siguiente función `describir_mascota()` que tiene los parámetros
 ...     print("Tengo un", tipo)
 ...     print("Y su nombre es", nombre)
 >>> describir_mascota("Bruno", "perro")
+```
+
+```text
 Tengo un perro
 Y su nombre es Bruno
 ```
@@ -363,6 +447,9 @@ De este modo, es posible llamar a la función solamente pasando valores para aqu
 
 ```python
 >>> describir_mascota("Bruno")
+```
+
+```text
 Tengo un perro
 Y su nombre es Bruno
 ```
@@ -371,6 +458,9 @@ Como es de esperar, también es posible pasar valores distintos a los establecid
 
 ```python
 >>> describir_mascota("Nemo", "pez")
+```
+
+```text
 Tengo un pez
 Y su nombre es Nemo
 ```

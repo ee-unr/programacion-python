@@ -31,6 +31,9 @@ Veamos un ejemplo.
 >>> condicion = True
 >>> if condicion:
 ...     print("Se ejecuta el bloque if")
+```
+
+```text
 Se ejecuta el bloque if
 ```
 
@@ -57,8 +60,17 @@ Veamos otro ejemplo.
 >>> condicion = True
 >>> if condicion:
 ...     print("Se ejecuta el bloque if")
+```
+
+```text
 Se ejecuta el bloque if
+```
+
+```python
 >>> print("Esto se imprime siempre")
+```
+
+```text
 Esto se imprime siempre
 ```
 
@@ -72,6 +84,9 @@ Simplemente la indentación vuelve a ser normal. El fin de la indentación indic
 >>> valor = 12
 >>> if valor > 10:
 ...     print("Se ejecuta el bloque if")
+```
+
+```text
 Se ejecuta el bloque if
 ```
 
@@ -95,6 +110,9 @@ La diferencia es que nos permite definir otro bloque de código que se ejecuta c
 ...     print("Tenés la edad suficiente para votar")
 ... else:
 ...     print("Lo siento, aún sos demasiado jóven para votar")
+```
+
+```text
 Tenés la edad suficiente para votar
 ```
 
@@ -107,12 +125,21 @@ Veamos otro ejemplo donde evaluamos si un número es par o impar.
 ```python
 >>> valor = 10
 >>> print(valor)
+```
+
+```text
 10
+```
+
+```python
 >>> if valor % 2 == 0:
 ...     mensaje = "Es par"
 ... else:
 ...     mensaje = "Es impar"
 >>> print(mensaje)
+```
+
+```text
 Es par
 ```
 
@@ -144,6 +171,9 @@ Supongamos que viene un parque de diversiones a Rosario y tiene los siguientes p
 ...     print("El costo de entrada para vos es de $400.")
 ... else:
 ...     print("El costo de entrada para vos es de $600.")
+```
+
+```text
 El costo de entrada para vos es de $0.
 ```
 
@@ -166,6 +196,9 @@ Por ejemplo, si el parque de diversiones decide realizar un descuento para adult
 ... else:
 ...     precio = 350
 >>> print(f"El precio de entrada para vos es de ${precio}.")
+```
+
+```text
 El precio de entrada para vos es de $350.
 ```
 
@@ -186,6 +219,9 @@ Utilizar el bloque `else` a veces es lo correcto, pero otras veces puede ser mej
 ... elif edad >= 65:
 ...     precio = 350
 >>> print(f"El precio de entrada para vos es de ${precio}.")
+```
+
+```text
 El precio de entrada para vos es de $400.
 ```
 
@@ -211,8 +247,17 @@ Sin embargo, todavía hay un problema: el programa sigue funcionando incluso si 
 ... else:
 ...     print("¡Error!")
 ...     precio = None
+```
+
+```text
 ¡Error!
+```
+
+```python
 >>> print(f"El precio de entrada para vos es ${precio}.")
+```
+
+```text
 El precio de entrada para vos es $None.
 ```
 

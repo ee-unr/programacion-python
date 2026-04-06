@@ -318,7 +318,7 @@ div.sidebar-item-container {
   border-left-width: 5px;
 }
 
-.code-help > div:first-child {
+.code-help > .code-copy-outer-scaffold > .sourceCode {
   background-color: rgba(242, 247, 255, 1);
   border-radius: 4.25px;
   border: 1px solid #3498db;

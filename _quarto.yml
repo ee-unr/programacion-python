@@ -43,6 +43,10 @@ website:
           contents:
             - auto: teoria/01_programacion_en_python/*.qmd
             - sort-ui: false
+        - text: U2 - Programación Orientada a Objetos
+          contents:
+            - auto: teoria/02_oop/*.qmd
+            - sort-ui: false
     - title: Práctica
       contents:
         - text: U1 - Programación en Python

@@ -57,6 +57,9 @@ y usamos la función `open()` para abrir el archivo.
 ```python
 >>> archivo = open("pensamientos.txt")
 >>> archivo
+```
+
+```text
 <_io.TextIOWrapper name='pensamientos.txt' mode='r' encoding='cp1252'>
 ```
 
@@ -96,6 +99,9 @@ Para ello se utiliza el método `.read()` del objeto `TextIOWrapper`.
 >>> archivo = open("pensamientos.txt", encoding="utf-8")
 >>> contenido = archivo.read()
 >>> contenido
+```
+
+```text
 'Estoy aprendiendo a leer archivos en Python.\nNo se con qué me voy a encontrar.\nPero acá vamos.'
 ```
 
@@ -109,6 +115,9 @@ Este devuelve una **lista de cadenas**, donde cada elemento corresponde a una l�
 ```python
 >>> archivo = open("pensamientos.txt", encoding="utf-8")
 >>> archivo.readlines()
+```
+
+```text
 ['Estoy aprendiendo a leer archivos en Python.\n',
  'No se con qué me voy a encontrar.\n',
  'Pero acá vamos.']
@@ -129,6 +138,9 @@ Cuando ya no quedan más líneas, devuelve una cadena vacía.
 ...     if linea == "":
 ...         break
 ...     print(linea, end="") # `end=""` para que Python no agregue salto de línea
+```
+
+```text
 Estoy aprendiendo a leer archivos en Python.
 No se con qué me voy a encontrar.
 Pero acá vamos.
@@ -153,16 +165,25 @@ Por eso, después de una primera lectura completa, las siguientes llamadas a mé
 ```python
 >>> archivo = open("pensamientos.txt")
 >>> archivo.read()
+```
+
+```text
 'Estoy aprendiendo a leer archivos en Python.\nNo se con qué me voy a encontrar.\nPero acá vamos.'
 ```
 
 ```python
 >>> archivo.read()
+```
+
+```text
 ''
 ```
 
 ```python
 >>> archivo.readlines()
+```
+
+```text
 []
 ```
 
@@ -190,6 +211,9 @@ Debajo, abrimos un archivo llamado `conclusiones.txt` en **modo escritura**. Com
 ```python
 >>> archivo = open("conclusiones.txt", mode="w", encoding="utf-8") # Este paso ya crea el archivo
 >>> archivo.write("Escribir en Python no es tan grave como parece.\n")
+```
+
+```text
 48
 ```
 
@@ -215,6 +239,9 @@ Finalmente, para mostrar en pantalla el contenido de `conclusiones.txt`, abrimos
 >>> texto = archivo.read()
 >>> archivo.close()
 >>> print(texto)
+```
+
+```text
 Escribir en Python no es tan grave como parece.
 Es solo cuestión de practica
 ```
@@ -240,6 +267,9 @@ Debajo, utilizamos la sentencia `with` para crear un archivo y escribir texto en
 >>> with open("ejemplo.txt", mode="w", encoding="utf-8") as archivo:
 ...     archivo.write("¡Hola, mundo!\n")
 >>> print(archivo.closed) # Verificar que el archivo está cerrado
+```
+
+```text
 True
 ```
 
@@ -250,6 +280,9 @@ Luego, podemos utilizar un patrón similar, pero pasando `mode="r"`, para leer e
 ...     contenido = archivo.read()
 >>> print(contenido)
 >>> print(archivo.closed)
+```
+
+```text
 ¡Hola, mundo!
 True
 ```
@@ -327,6 +360,9 @@ Si en Windows convertimos al objeto `ruta` a una cadena de caracteres, nos encon
 
 ```python
 >>> str(ruta)
+```
+
+```text
 'Users\\Tomi\\Documentos\\projecto.docx'
 ```
 
@@ -445,6 +481,9 @@ En el siguiente ejemplo, el directorio de trabajo actual es `C:\Users\Tomi\Deskt
 >>>
 >>> ruta = Path("../datos.txt")
 >>> print(ruta.resolve()) # ruta absoluta y normalizada
+```
+
+```text
 C:\Users\Tomi\Desktop\datos.txt
 ```
 
