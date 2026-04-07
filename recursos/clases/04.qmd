@@ -1,0 +1,14 @@
+---
+title: "Clase 4: Programación Orientada a Objetos"
+# embed-resources: true
+---
+
+{{< downloadthis ../../notebooks/clase_04.ipynb dname=clase_04 label="Descargar Jupyter Notebook" icon=journal-code type=default class=data-button id=clase_04 >}}
+
+<!-- <iframe
+  src="https://jupyterlite.github.io/demo/notebooks/?path=python.ipynb"
+  width="100%"
+  height="800"
+  style="border: 1px solid #ddd;">
+</iframe> -->
+
