@@ -35,25 +35,24 @@ el polimorfismo se refiere a la capacidad que tiene el programa de **invocar un 
 objetos distintos**,
 y que cada objeto responda de la forma que le corresponde según su propia implementación.
 
-Por ejemplo,
-imaginemos que tenemos una colección de perros,
-gatos y pájaros,
-y que cada uno entiende algunos comandos básicos.
-Si les pedimos a estas mascotas que hablen (es decir,
-si les enviamos el mensaje "habla"),
-los perros van a ladrar,
-los gatos van a maullar y los pájaros van a piar.
+Por ejemplo, imaginemos que tenemos una colección de perros,
+gatos y pájaros, y que cada uno entiende algunos comandos básicos.
+Si les pedimos a estas mascotas que hablen (es decir, si les enviamos el mensaje "habla"),
+los perros van a ladrar, los gatos van a maullar y los pájaros van a piar.
 
 ```python
 class Animal:
     def __init__(self, nombre):
         self.nombre = nombre
+
 class Perro(Animal):
     def hablar(self): # <1>
         print(self.nombre, "dice ¡guau!") # <1>
+
 class Gato(Animal):
     def hablar(self): # <2>
         print(self.nombre, "dice ¡miau!") # <2>
+
 class Pajaro(Animal):
     def hablar(self): # <3>
         print(self.nombre, "dice ¡pio pio!") # <3>
@@ -75,6 +74,7 @@ mascotas = [
     Perro("Justo"),
     Pajaro("Pedrito")
 ]
+
 for mascota in mascotas:
     mascota.hablar()
 ```
@@ -88,7 +88,7 @@ Pedrito dice ¡pio pio!
 
 ::: {.callout-note}
 
-##### ¿Enviar un mensaje?
+##### ¿Enviar un mensaje? 🤔
 
 En el contexto de la programación orientada a objetos se suele usar la expresión "enviar un
 mensaje" cuando hablamos de que un programa (también llamado cliente) llama a un método de un
@@ -101,8 +101,7 @@ obj + obj2      # Se envía el mensaje de suma (__add__)
 ```
 
 Lo que el objeto haga al recibir ese mensaje depende exclusivamente de él.
-Con el polimorfismo,
-podemos enviar el mismo mensaje a varios objetos,
+Con el polimorfismo, podemos enviar el mismo mensaje a varios objetos,
 y cada uno va a reaccionar de manera diferente según cómo fue diseñado y según los datos que
 tenga disponibles.
 
@@ -126,6 +125,7 @@ class Rectangulo:
 
     def resumen(self):
         return f"Rectangulo(base={self.base}, altura={self.altura})"
+
 class Circulo:
     def __init__(self, radio):
         self.radio = radio
@@ -149,8 +149,10 @@ formas = [
     Rectangulo(4, 3),
     Rectangulo(6, 4),
 ]
+
 # Ordenar
 formas_ordenadas = sorted(formas, key=lambda f: f.area())
+
 # Imprimir formas en orden
 for forma in formas_ordenadas:
     print(forma.resumen(), forma.area(), sep=": ")
@@ -177,20 +179,14 @@ De eso se trata el polimorfismo.
 ## Métodos mágicos
 
 El polimorfismo no solo se da con métodos regulares como `hablar` o `area`.
-Realmente,
-la magia del polimorfismo aparece cuando incorporamos los **métodos mágicos** de Python en
-nuestras clases.
+Realmente, la magia del polimorfismo aparece cuando incorporamos los **métodos mágicos** de Python en nuestras clases.
 
 Los métodos mágicos —también llamados _dunder methods_ (por "double underscore")— son métodos
 especiales que permiten que nuestros objetos participen en operaciones estándar del lenguaje,
-como comparaciones,
-sumas,
-conversiones a cadenas o iteraciones.
+como comparaciones, sumas, conversiones a cadenas o iteraciones.
 
-Por ejemplo,
-si intentamos comparar dos rectángulos creados con nuestra clase `Rectangulo`,
-incluso si tienen las mismas dimensiones,
-la comparación devolverá `False`.
+Por ejemplo, si intentamos comparar dos rectángulos creados con nuestra clase `Rectangulo`,
+incluso si tienen las mismas dimensiones, la comparación devolverá `False`.
 
 ```python
 r1 = Rectangulo(3, 2)
@@ -204,8 +200,7 @@ False
 
 Conceptualmente,
 tiene sentido esperar que la comparación en valor de dos rectángulos de iguales dimensiones sea
-`True`.
-Pero obtenemos `False`.
+`True`. Pero obtenemos `False`.
 
 Esto no ocurre porque `r1` y `r2` representen objetos distintos,
 sino porque todavía no hemos implementado el método mágico que define como se deben comparar
@@ -234,12 +229,10 @@ class Rectangulo:
 ```
 
 1. El método `__eq__` recibe siempre **dos objetos** a comparar,
-  llamados por convención `self` y `other`.
-2. Si las bases y las alturas de los objetos son iguales,
-  devuelve `True`,
-  ya que consideramos que los rectángulos son iguales.
+llamados por convención `self` y `other`.
+2. Si las bases y las alturas de los objetos son iguales, devuelve `True`, 
+ya que consideramos que los rectángulos son iguales.
 3. En caso contrario, devuelve `False`, indicando que los rectángulos no son iguales.
-
 
 Si probamos nuestro método de comparación recién implementado, vemos que funciona correctamente:
 
@@ -390,10 +383,9 @@ False
 
 Además de los operadores de comparación,
 muchas funciones _built-in_ de Python utilizan métodos mágicos internamente.
-Una de las más comunes es `repr()`,
-que se encarga de devolver una **representación** de un objeto cuando se lo muestra en pantalla.
-Para personalizar esa representación en nuestras clases,
-debemos implementar el método mágico `__repr__`.
+Una de las más comunes es `repr()`, que se encarga de devolver una **representación**
+de un objeto cuando se lo muestra en pantalla.
+Para personalizar esa representación en nuestras clases, debemos implementar el método mágico `__repr__`.
 
 ```python
 class Rectangulo:
@@ -457,10 +449,8 @@ tienen propósitos distintos:
 
 * `__repr__` busca ofrecer una representación **precisa y detallada**, útil para desarrolladores.
 Idealmente, debería ser lo más cercana posible al código necesario para reconstruir el objeto.
-* `__str__`,
-  en cambio,
-  devuelve una representación más **legible y amigable**,
-  pensada para usuarios finales o para mostrar el objeto en interfaces y mensajes.
+* `__str__`, en cambio, devuelve una representación más **legible y amigable**,
+pensada para usuarios finales o para mostrar el objeto en interfaces y mensajes.
 
 Por ejemplo:
 
@@ -482,17 +472,13 @@ str: 2025-10-07 17:30:00
 
 ### Aritmética
 
-Finalmente,
-retomamos el ejemplo de la introducción del apunte,
-que tanto hemos mencionado a lo largo del curso:
-la suma de objetos.
+Finalmente, retomamos el ejemplo de la introducción del apunte,
+que tanto hemos mencionado a lo largo del curso: la suma de objetos.
 
 Resulta que el operador de suma `+` utiliza internamente el método especial `__add__`.
-Gracias a esto,
-también podemos definir cómo deben sumarse dos objetos de una clase que nosotros creamos.
+Gracias a esto, también podemos definir cómo deben sumarse dos objetos de una clase que nosotros creamos.
 
-Por ejemplo,
-supongamos una clase que representa vectores en dos dimensiones,
+Por ejemplo, supongamos una clase que representa vectores en dos dimensiones,
 inicializada con valores para `x` e `y`.
 
 La suma de dos vectores está definida componente a componente:
@@ -617,7 +603,7 @@ Vector(-1, -1.5)
 ```
 
 ```python
-v - u 
+v - u
 ```
 
 ```text
@@ -640,8 +626,7 @@ v / 4
 Vector(0.5, 0.25)
 ```
 
-Para finalizar,
-podemos usar la función `graficar_vectores`,
+Para finalizar, podemos usar la función `graficar_vectores`,
 que recibe una lista de vectores y los representa gráficamente en el plano,
 mostrando de forma visual el resultado de las operaciones realizadas.
 
@@ -697,9 +682,7 @@ graficar_vectores(
 )
 ```
 
-```text
-<Figure size 600x500 with 1 Axes>
-```
+![](vectores_1.svg){fig-align="center"}
 
 El vector $\vec{v}$ y su opuesto $-\vec{v}$:
 
@@ -708,9 +691,7 @@ v = Vector(2.5, 3)
 graficar_vectores([v, v * (-1)])
 ```
 
-```text
-<Figure size 600x500 with 1 Axes>
-```
+![](vectores_2.svg){fig-align="center"}
 
 El vector $\vec{v}$ y $1.5 \times \vec{v}$:
 
@@ -718,9 +699,8 @@ El vector $\vec{v}$ y $1.5 \times \vec{v}$:
 graficar_vectores([v, v * 1.5])
 ```
 
-```text
-<Figure size 600x500 with 1 Axes>
-```
+![](vectores_3.svg){fig-align="center"}
+
 
 El vector $\vec{v}$ y $0.5 \times \vec{v}$:
 
@@ -728,9 +708,7 @@ El vector $\vec{v}$ y $0.5 \times \vec{v}$:
 graficar_vectores([v, v * 0.5])
 ```
 
-```text
-<Figure size 600x500 with 1 Axes>
-```
+![](vectores_4.svg){fig-align="center"}
 
 Los vectores $\vec{u}$, $\vec{v}$ y su suma:
 
@@ -740,9 +718,7 @@ v = Vector(0.2, 0.7)
 graficar_vectores([u, v, u + v])
 ```
 
-```text
-<Figure size 600x500 with 1 Axes>
-```
+![](vectores_5.svg){fig-align="center"}
 
 Y ahora su resta:
 
@@ -750,22 +726,16 @@ Y ahora su resta:
 graficar_vectores([u, v, u - v])
 ```
 
-```text
-<Figure size 600x500 with 1 Axes>
-```
+![](vectores_6.svg){fig-align="center"}
 
 ::: {.callout-note}
 
 ##### Sobrecarga de operadores
 
-A la capacidad de redefinir el comportamiento de los operadores estándar (como `+`,
-`-`,
-`==`,
-etc.) se la conoce como sobrecarga de operadores.
+A la capacidad de redefinir el comportamiento de los operadores estándar
+(como `+`, `-`, `==`, etc.) se la conoce como sobrecarga de operadores.
 
-Gracias a ella,
-podemos escribir programas más expresivos,
-legibles e intuitivos,
+Gracias a ella, podemos escribir programas más expresivos, legibles e intuitivos,
 haciendo que nuestras clases se comporten como tipos nativos de Python.
 :::
 

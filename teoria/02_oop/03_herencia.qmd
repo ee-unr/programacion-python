@@ -937,7 +937,7 @@ Finalmente, nuestro objeto también nos permite visualizar la distribución.
 normal.graficar()
 ```
 
-![](normal_3_1.svg){fig-align="center" width="70%"}
+![](normal_3_1.svg){fig-align="center" width="80%"}
 
 ### Distribución Poisson
 
@@ -1020,20 +1020,20 @@ poisson.pmf(3)
 poisson.graficar()
 ```
 
-![](poisson_3.svg){fig-align="center" width="70%"}
+![](poisson_3.svg){fig-align="center" width="80%"}
 
 ```python
 Poisson(5).graficar()
 ```
 
-![](poisson_5.svg){fig-align="center" width="70%"}
+![](poisson_5.svg){fig-align="center" width="80%"}
 
 
 ```python
 Poisson(10).graficar()
 ```
 
-![](poisson_10.svg){fig-align="center" width="70%"}
+![](poisson_10.svg){fig-align="center" width="80%"}
 
 ### Herencia múltiple en acción
 
@@ -1148,7 +1148,7 @@ normal.muestras(5)
 normal.graficar()
 ```
 
-![](normal_2_1.svg){fig-align="center" width="70%"}
+![](normal_2_1.svg){fig-align="center" width="80%"}
 
 Cuando llamamos al método `muestras`,
 estamos haciendo uso del método concreto implementado en `Distribucion`,
@@ -1193,7 +1193,7 @@ class Poisson(Distribucion, Discreta):
 Poisson(4).graficar()
 ```
 
-![](poisson_4.svg){fig-align="center" width="70%"}
+![](poisson_4.svg){fig-align="center" width="80%"}
 
 ::: {.callout-note}
 
