@@ -53,6 +53,10 @@ website:
           contents:
             - auto: teoria/02_oop/*.qmd
             - sort-ui: false
+        - text: U3 - Programación Funcional
+          contents:
+            - auto: teoria/03_funcional/*.qmd
+            - sort-ui: false
     - title: Práctica
       contents:
         - text: U1 - Programación en Python
@@ -65,6 +69,11 @@ website:
             - practica/02_oop/autoevaluacion.qmd
             - practica/02_oop/ejercicios.qmd
             - practica/02_oop/problemas.qmd
+        - text: U3 - Programación Funcional
+          contents:
+            - practica/03_funcional/autoevaluacion.qmd
+            - practica/03_funcional/ejercicios.qmd
+            - practica/03_funcional/problemas.qmd
     - title: Proyectos
       contents:
         - proyectos/grupal.qmd
