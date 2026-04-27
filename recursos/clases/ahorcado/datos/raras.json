@@ -1,0 +1,972 @@
+[
+  {
+    "palabra": "abisal",
+    "dificultad": "dificil",
+    "significado": "Abismal (perteneciente al abismo)."
+  },
+  {
+    "palabra": "abulico",
+    "dificultad": "dificil",
+    "significado": "Falta de voluntad o energía."
+  },
+  {
+    "palabra": "aberrante",
+    "dificultad": "dificil",
+    "significado": "Dicho de una cosa: Que se desvía o aparta de lo normal o usual."
+  },
+  {
+    "palabra": "abrego",
+    "dificultad": "dificil",
+    "significado": "Viento templado y húmedo del sudoeste, que trae lluvias."
+  },
+  {
+    "palabra": "acerbo",
+    "dificultad": "dificil",
+    "significado": "Áspero al gusto."
+  },
+  {
+    "palabra": "acerrimo",
+    "dificultad": "dificil",
+    "significado": "Muy fuerte, vigoroso o tenaz."
+  },
+  {
+    "palabra": "acrobata",
+    "dificultad": "dificil",
+    "significado": "Persona que ejecuta ejercicios gimnásticos."
+  },
+  {
+    "palabra": "adusto",
+    "dificultad": "dificil",
+    "significado": "Quemado, tostado, ardiente."
+  },
+  {
+    "palabra": "aedo",
+    "dificultad": "dificil",
+    "significado": "Cantor épico de la antigua Grecia."
+  },
+  {
+    "palabra": "aleatorio",
+    "dificultad": "dificil",
+    "significado": "Que depende del azar."
+  },
+  {
+    "palabra": "altruista",
+    "dificultad": "dificil",
+    "significado": "Que profesa el altruismo"
+  },
+  {
+    "palabra": "anacronico",
+    "dificultad": "dificil",
+    "significado": "Que no es propio de la época de la que se trata."
+  },
+  {
+    "palabra": "anhidrido",
+    "dificultad": "dificil",
+    "significado": "Compuesto formado por oxígeno y un elemento no metal, que, al reaccionar con el agua, da un ácido."
+  },
+  {
+    "palabra": "anodino",
+    "dificultad": "dificil",
+    "significado": "Insignificante, ineficaz, insustancial."
+  },
+  {
+    "palabra": "anomalo",
+    "dificultad": "dificil",
+    "significado": "Irregular, extraño."
+  },
+  {
+    "palabra": "antidoto",
+    "dificultad": "dificil",
+    "significado": "Medicamento contra un veneno."
+  },
+  {
+    "palabra": "apocrifo",
+    "dificultad": "dificil",
+    "significado": "Falso o fingido."
+  },
+  {
+    "palabra": "arquetipo",
+    "dificultad": "dificil",
+    "significado": "Modelo original y primario en un arte u otra cosa."
+  },
+  {
+    "palabra": "aseptico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo a la asepsia."
+  },
+  {
+    "palabra": "atavico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo al atavismo."
+  },
+  {
+    "palabra": "aterciopelado",
+    "dificultad": "dificil",
+    "significado": "Semejante al terciopelo."
+  },
+  {
+    "palabra": "azabache",
+    "dificultad": "dificil",
+    "significado": "Carbón fósil de color negro brillante."
+  },
+  {
+    "palabra": "baculo",
+    "dificultad": "dificil",
+    "significado": "Palo o cayado que se usa para sostenerse."
+  },
+  {
+    "palabra": "balsamo",
+    "dificultad": "dificil",
+    "significado": "Sustancia aromática que se obtiene de algunos árboles."
+  },
+  {
+    "palabra": "baratro",
+    "dificultad": "dificil",
+    "significado": "Abismo o lugar muy profundo."
+  },
+  {
+    "palabra": "bartulos",
+    "dificultad": "dificil",
+    "significado": "Conjunto de utensilios o enseres."
+  },
+  {
+    "palabra": "bisono",
+    "dificultad": "dificil",
+    "significado": "Dicho de la tropa o de un soldado: nuevo."
+  },
+  {
+    "palabra": "boveda",
+    "dificultad": "dificil",
+    "significado": "Construcción en forma de arco que cubre un espacio."
+  },
+  {
+    "palabra": "bucaro",
+    "dificultad": "dificil",
+    "significado": "Jarrón de barro cocido."
+  },
+  {
+    "palabra": "bucolico",
+    "dificultad": "dificil",
+    "significado": "Que evoca de modo idealizado el campo o la vida en el campo. | Relativo a la vida del campo, pastoril, sencillo y natural."
+  },
+  {
+    "palabra": "cacofonia",
+    "dificultad": "dificil",
+    "significado": "Combinación de sonidos que resulta desagradable al oído."
+  },
+  {
+    "palabra": "caduco",
+    "dificultad": "dificil",
+    "significado": "Decrépito (disminuido en sus facultades físicas) | Perecedero (poco durable)."
+  },
+  {
+    "palabra": "caliginoso",
+    "dificultad": "dificil",
+    "significado": "Denso, oscuro, nebuloso."
+  },
+  {
+    "palabra": "calido",
+    "dificultad": "dificil",
+    "significado": "Que tiene o transmite calor."
+  },
+  {
+    "palabra": "cambrico",
+    "dificultad": "dificil",
+    "significado": "Dicho de un período geológico: Primero de los seis en que se divide la era paleozoica, que abarca desde hace 570 millones de años hasta hace 500 millones, y se caracteriza por el predominio de los trilobites y la aparición de muchos filos de invertebrados."
+  },
+  {
+    "palabra": "canicula",
+    "dificultad": "dificil",
+    "significado": "Período del año en que es más fuerte el calor."
+  },
+  {
+    "palabra": "candido",
+    "dificultad": "dificil",
+    "significado": "Persona ingenua, sin malicia."
+  },
+  {
+    "palabra": "cauterio",
+    "dificultad": "dificil",
+    "significado": "Método terapéutico que utiliza el calor para cauterizar."
+  },
+  {
+    "palabra": "celeridad",
+    "dificultad": "dificil",
+    "significado": "Prontitud, rapidez, velocidad."
+  },
+  {
+    "palabra": "cefiro",
+    "dificultad": "dificil",
+    "significado": "Viento suave y agradable."
+  },
+  {
+    "palabra": "conclave",
+    "dificultad": "dificil",
+    "significado": "Junta de los cardenales de la Iglesia católica, reunida para elegir papa."
+  },
+  {
+    "palabra": "conciso",
+    "dificultad": "dificil",
+    "significado": "Que tiene concisión."
+  },
+  {
+    "palabra": "contumaz",
+    "dificultad": "dificil",
+    "significado": "Rebelde, porfiado y tenaz en mantener un error."
+  },
+  {
+    "palabra": "copioso",
+    "dificultad": "dificil",
+    "significado": "Abundante, numeroso, cuantioso."
+  },
+  {
+    "palabra": "criptico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo a la criptografía. | Oscuro, enigmático."
+  },
+  {
+    "palabra": "dedalo",
+    "dificultad": "dificil",
+    "significado": "Laberinto (lugar confuso, cosa confusa y enredada)."
+  },
+  {
+    "palabra": "demerito",
+    "dificultad": "dificil",
+    "significado": "Falta de mérito."
+  },
+  {
+    "palabra": "desden",
+    "dificultad": "dificil",
+    "significado": "Indiferencia y despego que denotan menosprecio."
+  },
+  {
+    "palabra": "delfico",
+    "dificultad": "dificil",
+    "significado": "Relativo o perteneciente al oráculo de Delfos."
+  },
+  {
+    "palabra": "diafano",
+    "dificultad": "dificil",
+    "significado": "Dicho de un cuerpo: Que deja pasar a su través la luz casi en su totalidad."
+  },
+  {
+    "palabra": "discolo",
+    "dificultad": "dificil",
+    "significado": "Desobediente, que no se comporta con docilidad."
+  },
+  {
+    "palabra": "divergente",
+    "dificultad": "dificil",
+    "significado": "Que tiende a separarse de algo común."
+  },
+  {
+    "palabra": "docil",
+    "dificultad": "dificil",
+    "significado": "Fácil de enseñar o de tratar."
+  },
+  {
+    "palabra": "drastico",
+    "dificultad": "dificil",
+    "significado": "Severo, enérgico."
+  },
+  {
+    "palabra": "ebano",
+    "dificultad": "dificil",
+    "significado": "Madera negra y compacta."
+  },
+  {
+    "palabra": "eclectico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo al eclecticismo."
+  },
+  {
+    "palabra": "eclosion",
+    "dificultad": "dificil",
+    "significado": "Acción de abrirse o desarrollarse algo, como una flor."
+  },
+  {
+    "palabra": "efimero",
+    "dificultad": "dificil",
+    "significado": "Que dura por poco tiempo."
+  },
+  {
+    "palabra": "egida",
+    "dificultad": "dificil",
+    "significado": "Protección, apoyo."
+  },
+  {
+    "palabra": "empireo",
+    "dificultad": "dificil",
+    "significado": "Relativo al cielo o a lo celestial."
+  },
+  {
+    "palabra": "entelequia",
+    "dificultad": "dificil",
+    "significado": "Cosa irreal."
+  },
+  {
+    "palabra": "esdrujulo",
+    "dificultad": "dificil",
+    "significado": "Dicho de una palabra: Que lleva el acento prosódico en la antepenúltima sílaba."
+  },
+  {
+    "palabra": "esoterico",
+    "dificultad": "dificil",
+    "significado": "Oculto, reservado."
+  },
+  {
+    "palabra": "exanime",
+    "dificultad": "dificil",
+    "significado": "Sin señal de vida o sin vida."
+  },
+  {
+    "palabra": "exegesis",
+    "dificultad": "dificil",
+    "significado": "Explicación, interpretación."
+  },
+  {
+    "palabra": "facsimil",
+    "dificultad": "dificil",
+    "significado": "Copia exacta de un documento."
+  },
+  {
+    "palabra": "farrago",
+    "dificultad": "dificil",
+    "significado": "Mezcla confusa y desordenada de cosas."
+  },
+  {
+    "palabra": "fatuo",
+    "dificultad": "dificil",
+    "significado": "Lleno de presunción o vanidad infundada y ridícula."
+  },
+  {
+    "palabra": "filantropo",
+    "dificultad": "dificil",
+    "significado": "Persona que se distingue por el amor a sus semejantes y por sus obras en bien de la comunidad."
+  },
+  {
+    "palabra": "flegmatico",
+    "dificultad": "dificil",
+    "significado": "flemático, perteneciente o relativo a la flema."
+  },
+  {
+    "palabra": "frugal",
+    "dificultad": "dificil",
+    "significado": "Parco en comer y beber."
+  },
+  {
+    "palabra": "fulgido",
+    "dificultad": "dificil",
+    "significado": "Brillante, resplandeciente."
+  },
+  {
+    "palabra": "funebre",
+    "dificultad": "dificil",
+    "significado": "Relativo a los funerales."
+  },
+  {
+    "palabra": "gaceta",
+    "dificultad": "dificil",
+    "significado": "Periódico o publicación periódica."
+  },
+  {
+    "palabra": "garrulo",
+    "dificultad": "dificil",
+    "significado": "Persona que habla mucho o de manera inoportuna."
+  },
+  {
+    "palabra": "gelido",
+    "dificultad": "dificil",
+    "significado": "Muy frío, helado."
+  },
+  {
+    "palabra": "globulo",
+    "dificultad": "dificil",
+    "significado": "Célula redonda presente en la sangre."
+  },
+  {
+    "palabra": "halito",
+    "dificultad": "dificil",
+    "significado": "Aliento."
+  },
+  {
+    "palabra": "hapax",
+    "dificultad": "dificil",
+    "significado": "Palabra que aparece una sola vez en un texto."
+  },
+  {
+    "palabra": "hedonista",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo al hedonismo (Teoría que establece el placer como fin y fundamento de la vida)."
+  },
+  {
+    "palabra": "helice",
+    "dificultad": "dificil",
+    "significado": "Elemento giratorio para propulsar barcos o aviones."
+  },
+  {
+    "palabra": "hermetico",
+    "dificultad": "dificil",
+    "significado": "Que se cierra de tal modo que no deja pasar el aire u otros fluidos."
+  },
+  {
+    "palabra": "heterodoxo",
+    "dificultad": "dificil",
+    "significado": "Que se aparta de la doctrina o creencia establecida."
+  },
+  {
+    "palabra": "hostil",
+    "dificultad": "dificil",
+    "significado": "Que manifiesta oposición o enemistad."
+  },
+  {
+    "palabra": "hurano",
+    "dificultad": "dificil",
+    "significado": "Que huye y se esconde de la gente."
+  },
+  {
+    "palabra": "icterico",
+    "dificultad": "dificil",
+    "significado": "Relativo a la ictericia, color amarillo de la piel por acumulación de bilirrubina."
+  },
+  {
+    "palabra": "idilico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo al idilio (Relación sentimental muy feliz)."
+  },
+  {
+    "palabra": "inefable",
+    "dificultad": "dificil",
+    "significado": "Que no se puede explicar con palabras."
+  },
+  {
+    "palabra": "igneo",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo al fuego."
+  },
+  {
+    "palabra": "ilicito",
+    "dificultad": "dificil",
+    "significado": "No permitido legal o moralmente."
+  },
+  {
+    "palabra": "impeto",
+    "dificultad": "dificil",
+    "significado": "Fuerza con la que se hace algo impetuosamente."
+  },
+  {
+    "palabra": "impavido",
+    "dificultad": "dificil",
+    "significado": "Libre de pavor, sereno ante el peligro, impertérrito."
+  },
+  {
+    "palabra": "implacable",
+    "dificultad": "dificil",
+    "significado": "Que no se puede aplacar."
+  },
+  {
+    "palabra": "inane",
+    "dificultad": "dificil",
+    "significado": "Vano, fútil, inútil."
+  },
+  {
+    "palabra": "incolume",
+    "dificultad": "dificil",
+    "significado": "Sano, sin lesión ni menoscabo."
+  },
+  {
+    "palabra": "indomito",
+    "dificultad": "dificil",
+    "significado": "No domado."
+  },
+  {
+    "palabra": "indigo",
+    "dificultad": "dificil",
+    "significado": "Color azul intenso."
+  },
+  {
+    "palabra": "indole",
+    "dificultad": "dificil",
+    "significado": "Naturaleza o condición propia de algo."
+  },
+  {
+    "palabra": "inexorable",
+    "dificultad": "dificil",
+    "significado": "Que no se puede evitar."
+  },
+  {
+    "palabra": "insolito",
+    "dificultad": "dificil",
+    "significado": "Raro, extraño, desacostumbrado."
+  },
+  {
+    "palabra": "interino",
+    "dificultad": "dificil",
+    "significado": "Que sirve por algún tiempo supliendo la falta de otra persona o cosa."
+  },
+  {
+    "palabra": "inusitado",
+    "dificultad": "dificil",
+    "significado": "No usado, desacostumbrado."
+  },
+  {
+    "palabra": "irrefutable",
+    "dificultad": "dificil",
+    "significado": "Que no se puede refutar."
+  },
+  {
+    "palabra": "jacena",
+    "dificultad": "dificil",
+    "significado": "Viga horizontal que sostiene el muro."
+  },
+  {
+    "palabra": "jactancia",
+    "dificultad": "dificil",
+    "significado": "Alabanza propia, desordenada y presuntuosa."
+  },
+  {
+    "palabra": "jergon",
+    "dificultad": "dificil",
+    "significado": "Colchón rústico relleno de paja u otro material."
+  },
+  {
+    "palabra": "jovial",
+    "dificultad": "dificil",
+    "significado": "Alegre, divertido."
+  },
+  {
+    "palabra": "jubilo",
+    "dificultad": "dificil",
+    "significado": "Alegría intensa."
+  },
+  {
+    "palabra": "kaiser",
+    "dificultad": "dificil",
+    "significado": "Emperador en alemán."
+  },
+  {
+    "palabra": "kermes",
+    "dificultad": "dificil",
+    "significado": "Fiesta popular."
+  },
+  {
+    "palabra": "kilovatio",
+    "dificultad": "dificil",
+    "significado": "Unidad de potencia equivalente a mil vatios."
+  },
+  {
+    "palabra": "kinder",
+    "dificultad": "dificil",
+    "significado": "Jardín de infancia."
+  },
+  {
+    "palabra": "labil",
+    "dificultad": "dificil",
+    "significado": "Que cambia fácilmente."
+  },
+  {
+    "palabra": "languido",
+    "dificultad": "dificil",
+    "significado": "Flaco, débil, fatigado."
+  },
+  {
+    "palabra": "limpido",
+    "dificultad": "dificil",
+    "significado": "Claro, transparente."
+  },
+  {
+    "palabra": "lobrego",
+    "dificultad": "dificil",
+    "significado": "Oscuro, tenebroso."
+  },
+  {
+    "palabra": "lucido",
+    "dificultad": "dificil",
+    "significado": "Claro en el razonamiento, en las expresiones, en el estilo, etc."
+  },
+  {
+    "palabra": "lugubre",
+    "dificultad": "dificil",
+    "significado": "Triste, fúnebre, luctuoso."
+  },
+  {
+    "palabra": "magnanimidad",
+    "dificultad": "dificil",
+    "significado": "Benevolencia, clemencia."
+  },
+  {
+    "palabra": "macula",
+    "dificultad": "dificil",
+    "significado": "Mancha, especialmente en el sentido figurado."
+  },
+  {
+    "palabra": "maleable",
+    "dificultad": "dificil",
+    "significado": "Dicho de un metal: Que puede batirse y extenderse en planchas o láminas."
+  },
+  {
+    "palabra": "magico",
+    "dificultad": "dificil",
+    "significado": "Que tiene propiedades sobrenaturales."
+  },
+  {
+    "palabra": "marmol",
+    "dificultad": "dificil",
+    "significado": "Roca metamórfica utilizada en escultura y construcción."
+  },
+  {
+    "palabra": "mnemonico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo a la memoria (capacidad de recordar)"
+  },
+  {
+    "palabra": "modulo",
+    "dificultad": "dificil",
+    "significado": "Dimensión que convencionalmente se toma como unidad de medida, y, más en general, todo lo que sirve de norma o regla."
+  },
+  {
+    "palabra": "nectar",
+    "dificultad": "dificil",
+    "significado": "Bebida de los dioses en la mitología griega."
+  },
+  {
+    "palabra": "nefasto",
+    "dificultad": "dificil",
+    "significado": "Dicho de un día o de cualquier otra división del tiempo: Triste, funesto, ominoso."
+  },
+  {
+    "palabra": "nemesis",
+    "dificultad": "dificil",
+    "significado": "Castigo divino que cae sobre alguien por su orgullo."
+  },
+  {
+    "palabra": "nitido",
+    "dificultad": "dificil",
+    "significado": "Limpio, claro."
+  },
+  {
+    "palabra": "nomada",
+    "dificultad": "dificil",
+    "significado": "Dicho de un individuo, de una tribu, de un pueblo: Carente de un lugar estable para vivir y dedicado especialmente a la caza y al pastoreo."
+  },
+  {
+    "palabra": "nublado",
+    "dificultad": "dificil",
+    "significado": "Cubierto de nubes."
+  },
+  {
+    "palabra": "obsoleto",
+    "dificultad": "dificil",
+    "significado": "Anticuado o inadecuado a las circunstancias, modas o necesidades actuales."
+  },
+  {
+    "palabra": "odisea",
+    "dificultad": "dificil",
+    "significado": "Viaje largo, en el que abundan las aventuras adversas y favorables al viajero."
+  },
+  {
+    "palabra": "oleo",
+    "dificultad": "dificil",
+    "significado": "Pintura realizada con aceites."
+  },
+  {
+    "palabra": "oneroso",
+    "dificultad": "dificil",
+    "significado": "Pesado, molesto o gravoso."
+  },
+  {
+    "palabra": "onirico",
+    "dificultad": "dificil",
+    "significado": "Perteneciente o relativo a los sueños."
+  },
+  {
+    "palabra": "onice",
+    "dificultad": "dificil",
+    "significado": "Tipo de piedra semipreciosa."
+  },
+  {
+    "palabra": "osculo",
+    "dificultad": "dificil",
+    "significado": "Beso de respeto o afecto.."
+  },
+  {
+    "palabra": "ostentoso",
+    "dificultad": "dificil",
+    "significado": "Llamativo por su apariencia lujosa o aparatosa."
+  },
+  {
+    "palabra": "palido",
+    "dificultad": "dificil",
+    "significado": "Que tiene un color más claro de lo normal."
+  },
+  {
+    "palabra": "paramo",
+    "dificultad": "dificil",
+    "significado": "Extensión de tierra desierta y fría."
+  },
+  {
+    "palabra": "perenne",
+    "dificultad": "dificil",
+    "significado": "Continuo, incesante, que no tiene intermisión."
+  },
+  {
+    "palabra": "perspicaz",
+    "dificultad": "dificil",
+    "significado": "Dicho de la vista, de la mirada, etc.: Muy agudas y que alcanzan mucho."
+  },
+  {
+    "palabra": "petulante",
+    "dificultad": "dificil",
+    "significado": "Que tiene petulancia."
+  },
+  {
+    "palabra": "picaro",
+    "dificultad": "dificil",
+    "significado": "Listo, espabilado."
+  },
+  {
+    "palabra": "pergola",
+    "dificultad": "dificil",
+    "significado": "Construcción con columnas cubierta de enredaderas."
+  },
+  {
+    "palabra": "ponderar",
+    "dificultad": "dificil",
+    "significado": "Determinar el peso de algo."
+  },
+  {
+    "palabra": "prolifico",
+    "dificultad": "dificil",
+    "significado": "Que se reproduce o es capaz de reproducirse en abundancia."
+  },
+  {
+    "palabra": "pudico",
+    "dificultad": "dificil",
+    "significado": "Que tiene pudor, recato."
+  },
+  {
+    "palabra": "pusilanime",
+    "dificultad": "dificil",
+    "significado": "Dicho de una persona: Falta de ánimo y valor para tomar decisiones o afrontar situaciones comprometidas."
+  },
+  {
+    "palabra": "querencia",
+    "dificultad": "dificil",
+    "significado": "Lugar o cosa a la que se tiene inclinación."
+  },
+  {
+    "palabra": "querubin",
+    "dificultad": "dificil",
+    "significado": "En la tradición católica, cada uno de los espíritus celestes que forman su segundo coro y, junto con los serafines y los tronos, la primera jerarquía, la cual contempla directamente a Dios y canta su gloria."
+  },
+  {
+    "palabra": "quiebro",
+    "dificultad": "dificil",
+    "significado": "Maniobra evasiva o cambio brusco de dirección."
+  },
+  {
+    "palabra": "quimera",
+    "dificultad": "dificil",
+    "significado": "Idea o proyecto irrealizable."
+  },
+  {
+    "palabra": "quorum",
+    "dificultad": "dificil",
+    "significado": "Número de individuos necesario para que un cuerpo deliberante tome ciertos acuerdos."
+  },
+  {
+    "palabra": "rafaga",
+    "dificultad": "dificil",
+    "significado": "Viento fuerte y de corta duración."
+  },
+  {
+    "palabra": "ralo",
+    "dificultad": "dificil",
+    "significado": "Dicho de una cosa: Que tiene los componentes, partes o elementos más separados de lo regular en su clase."
+  },
+  {
+    "palabra": "resiliente",
+    "dificultad": "dificil",
+    "significado": "Que se recupera fácilmente de las adversidades."
+  },
+  {
+    "palabra": "rimbombante",
+    "dificultad": "dificil",
+    "significado": "Que rimbomba. | Ostentoso, llamativo."
+  },
+  {
+    "palabra": "ronoso",
+    "dificultad": "dificil",
+    "significado": "Sucio, desaseado."
+  },
+  {
+    "palabra": "satiro",
+    "dificultad": "dificil",
+    "significado": "Ser mitológico, mitad hombre, mitad cabra."
+  },
+  {
+    "palabra": "sempiterno",
+    "dificultad": "dificil",
+    "significado": "Que durará siempre; que, habiendo tenido principio, no tendrá fin."
+  },
+  {
+    "palabra": "siniestro",
+    "dificultad": "dificil",
+    "significado": "Dicho de una parte o de un sitio: Que está a la mano izquierda. | Avieso y malintencionado."
+  },
+  {
+    "palabra": "sobrio",
+    "dificultad": "dificil",
+    "significado": "Templado, moderado."
+  },
+  {
+    "palabra": "subdito",
+    "dificultad": "dificil",
+    "significado": "Persona sujeta a la autoridad de un soberano."
+  },
+  {
+    "palabra": "sutil",
+    "dificultad": "dificil",
+    "significado": "Delicado, tenue."
+  },
+  {
+    "palabra": "taciturno",
+    "dificultad": "dificil",
+    "significado": "Callado, silencioso, que le molesta hablar."
+  },
+  {
+    "palabra": "tacito",
+    "dificultad": "dificil",
+    "significado": "No expresado verbalmente pero implícito."
+  },
+  {
+    "palabra": "tecnico",
+    "dificultad": "dificil",
+    "significado": "Relativo a una técnica o disciplina específica."
+  },
+  {
+    "palabra": "tenaz",
+    "dificultad": "dificil",
+    "significado": "Que se pega, ase o prende a una cosa, y es dificultoso de separar."
+  },
+  {
+    "palabra": "tetrico",
+    "dificultad": "dificil",
+    "significado": "Que causa horror o tristeza."
+  },
+  {
+    "palabra": "tremulo",
+    "dificultad": "dificil",
+    "significado": "Que tiembla."
+  },
+  {
+    "palabra": "ultima",
+    "dificultad": "dificil",
+    "significado": "Que está en la posición más avanzada en una serie."
+  },
+  {
+    "palabra": "uberrimo",
+    "dificultad": "dificil",
+    "significado": "Muy abundante y fértil."
+  },
+  {
+    "palabra": "util",
+    "dificultad": "dificil",
+    "significado": "Que es capaz de ser utilizado."
+  },
+  {
+    "palabra": "usurpar",
+    "dificultad": "dificil",
+    "significado": "Apoderarse de una propiedad o de un derecho que legítimamente pertenece a otro, por lo general con violencia."
+  },
+  {
+    "palabra": "vastago",
+    "dificultad": "dificil",
+    "significado": "Descendiente o hijo."
+  },
+  {
+    "palabra": "venerable",
+    "dificultad": "dificil",
+    "significado": "Digno de veneración, de respeto."
+  },
+  {
+    "palabra": "verborragia",
+    "dificultad": "dificil",
+    "significado": "Verbosidad excesiva."
+  },
+  {
+    "palabra": "vertebra",
+    "dificultad": "dificil",
+    "significado": "Hueso que forma la columna vertebral."
+  },
+  {
+    "palabra": "voluble",
+    "dificultad": "dificil",
+    "significado": "De carácter inconstante."
+  },
+  {
+    "palabra": "vortice",
+    "dificultad": "dificil",
+    "significado": "Remolino de agua o aire."
+  },
+  {
+    "palabra": "welter",
+    "dificultad": "dificil",
+    "significado": "Desorden o confusión."
+  },
+  {
+    "palabra": "western",
+    "dificultad": "dificil",
+    "significado": "Película del oeste."
+  },
+  {
+    "palabra": "xerografia",
+    "dificultad": "dificil",
+    "significado": "Método de reproducción de documentos por medio de fotografía."
+  },
+  {
+    "palabra": "xerofilo",
+    "dificultad": "dificil",
+    "significado": "Planta adaptada a la sequedad."
+  },
+  {
+    "palabra": "xilofono",
+    "dificultad": "dificil",
+    "significado": "Instrumento musical de percusión."
+  },
+  {
+    "palabra": "yacer",
+    "dificultad": "dificil",
+    "significado": "Estar tendido o acostado."
+  },
+  {
+    "palabra": "yambico",
+    "dificultad": "dificil",
+    "significado": "Verso poético compuesto por dos sílabas, una breve y otra larga."
+  },
+  {
+    "palabra": "yuxtaposicion",
+    "dificultad": "dificil",
+    "significado": "Colocación de dos o más cosas juntas para compararlas."
+  },
+  {
+    "palabra": "zafio",
+    "dificultad": "dificil",
+    "significado": "Dicho de una persona: Grosera o tosca en sus modales, o carente de tacto en su comportamiento."
+  },
+  {
+    "palabra": "zangano",
+    "dificultad": "dificil",
+    "significado": "Abeja macho que no produce miel. | Persona floja, desmañada y torpe."
+  },
+  {
+    "palabra": "zenit",
+    "dificultad": "dificil",
+    "significado": "Punto en el cielo que está vertical sobre el observador."
+  },
+  {
+    "palabra": "zozobra",
+    "dificultad": "dificil",
+    "significado": "Inquietud, desasosiego."
+  }
+]

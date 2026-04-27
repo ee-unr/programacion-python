@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Clase 2.2: Uso de código externo – Programación en Python</title>
+<title>Clase 6: Ahorcado en Python – Programación en Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../recursos/clases/04.html" rel="next">
-<link href="../../recursos/clases/02_1.html" rel="prev">
+<link href="../../recursos/tutoriales/instalacion_python.html" rel="next">
+<link href="../../recursos/clases/05.html" rel="prev">
 <link href="../../imgs/favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../recursos/clases/01.html">Material de clase</a></li><li class="breadcrumb-item"><a href="../../recursos/clases/02_2.html">Clase 2.2: Uso de código externo</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../recursos/clases/01.html">Material de clase</a></li><li class="breadcrumb-item"><a href="../../recursos/clases/06.html">Clase 6: Ahorcado en Python</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -166,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../recursos/clases/02_2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../recursos/clases/02_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Clase 2.2: Uso de código externo</span></a>
   </div>
 </li>
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../recursos/clases/06.html" class="sidebar-item-text sidebar-link">
+  <a href="../../recursos/clases/06.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Clase 6: Ahorcado en Python</span></a>
   </div>
 </li>
@@ -216,9 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../recursos/clases/01.html">Material de clase</a></li><li class="breadcrumb-item"><a href="../../recursos/clases/02_2.html">Clase 2.2: Uso de código externo</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../recursos/clases/01.html">Material de clase</a></li><li class="breadcrumb-item"><a href="../../recursos/clases/06.html">Clase 6: Ahorcado en Python</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Clase 2.2: Uso de código externo</h1>
+<h1 class="title">Clase 6: Ahorcado en Python</h1>
 </div>
 
 
@@ -235,9 +235,176 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="pdf-container">
-  <iframe src="../../slides/02_2.pdf"></iframe>
+<p><a href="ahorcado.zip">Descargar carpeta del proyecto</a></p>
+<style>
+.cm-file-browser {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: 650px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cm-sidebar {
+  padding: 0.75rem;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.cm-file {
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.cm-file:hover {
+  background: #eaeaea;
+}
+
+.cm-file.active {
+  background: #dbeafe;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.cm-editor-wrap {
+  min-width: 0;
+}
+
+#cm-filename {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #ddd;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+#cm-editor {
+  height: 610px;
+}
+
+.cm-editor {
+  height: 100%;
+}
+</style>
+
+<div class="cm-file-browser">
+  <div class="cm-sidebar" id="cm-file-list"></div>
+  <div class="cm-editor-wrap">
+    <h3 id="cm-filename" class="anchored">Seleccionar archivo</h3>
+    <div id="cm-editor"></div>
+  </div>
 </div>
+
+<script type="module">
+import { EditorView, basicSetup } from "https://esm.sh/codemirror";
+import { EditorState } from "https://esm.sh/@codemirror/state";
+import { python } from "https://esm.sh/@codemirror/lang-python";
+import { json } from "https://esm.sh/@codemirror/lang-json";
+import { markdown } from "https://esm.sh/@codemirror/lang-markdown";
+import { oneDark } from "https://esm.sh/@codemirror/theme-one-dark";
+
+const fileList = document.getElementById("cm-file-list");
+const filename = document.getElementById("cm-filename");
+
+const tree = {
+    "datos": {
+        "estadistica.json": "ahorcado/datos/estadistica.json",
+        "lenguaje.json": "ahorcado/datos/lenguaje.json",
+        "programacion.json": "ahorcado/datos/programacion.json",
+        "raras.json": "ahorcado/datos/raras.json"
+    },
+    "sonidos": {
+        "block.wav": "404.txt",
+        "fail.wav": "404.txt",
+        "win.wav": "404.txt",
+        "wrong.wav": "404.txt"
+    },
+    "ahorcado.py": "ahorcado/ahorcado.py",
+    "README.md": "ahorcado/README.md"
+};
+
+function languageFor(path) {
+  if (path.endsWith(".py")) return python();
+  if (path.endsWith(".json")) return json();
+  if (path.endsWith(".md")) return markdown();
+  return [];
+}
+
+let editor = new EditorView({
+  state: EditorState.create({
+    doc: "Selecciona un archivo desde el panel lateral.",
+    extensions: [
+      basicSetup,
+      oneDark,
+      EditorView.editable.of(false),
+      EditorState.readOnly.of(true)
+    ]
+  }),
+  parent: document.getElementById("cm-editor")
+});
+
+async function openFile(path, element) {
+  filename.textContent = path;
+
+  document.querySelectorAll(".cm-file").forEach(el => {
+    el.classList.remove("active");
+  });
+  element.classList.add("active");
+
+  const response = await fetch(path);
+  const text = response.ok
+    ? await response.text()
+    : `Could not load ${path}`;
+
+  editor.setState(EditorState.create({
+    doc: text,
+    extensions: [
+      basicSetup,
+      oneDark,
+      languageFor(path),
+      EditorView.editable.of(false),
+      EditorState.readOnly.of(true)
+    ]
+  }));
+}
+
+function renderTree(node, parent) {
+  Object.entries(node).forEach(([name, value]) => {
+    if (typeof value === "string") {
+      const item = document.createElement("div");
+      item.className = "cm-file";
+      item.textContent = name;
+      item.onclick = () => openFile(value, item);
+      parent.appendChild(item);
+    } else {
+      const folder = document.createElement("details");
+      folder.open = true;
+
+      const summary = document.createElement("summary");
+      summary.textContent = name;
+      folder.appendChild(summary);
+
+      const children = document.createElement("div");
+      children.style.paddingLeft = "1rem";
+      folder.appendChild(children);
+
+      renderTree(value, children);
+      parent.appendChild(folder);
+    }
+  });
+}
+
+renderTree(tree, fileList);
+</script>
 
 
 
@@ -644,13 +811,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../recursos/clases/02_1.html" class="pagination-link" aria-label="Clase 2.1: Colecciones de datos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Clase 2.1: Colecciones de datos</span>
+      <a href="../../recursos/clases/05.html" class="pagination-link" aria-label="Clase 5: Programación Orientada a Objetos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Clase 5: Programación Orientada a Objetos</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../recursos/clases/04.html" class="pagination-link" aria-label="Clase 4: Programación Orientada a Objetos">
-        <span class="nav-page-text">Clase 4: Programación Orientada a Objetos</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../recursos/tutoriales/instalacion_python.html" class="pagination-link" aria-label="Instalación de Python y Positron en Windows">
+        <span class="nav-page-text">Instalación de Python y Positron en Windows</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

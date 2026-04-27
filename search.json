@@ -684,26 +684,789 @@
     ]
   },
   {
-    "objectID": "recursos/clases/05.html",
-    "href": "recursos/clases/05.html",
-    "title": "Clase 5: Programación Orientada a Objetos",
+    "objectID": "recursos/clases/06.html",
+    "href": "recursos/clases/06.html",
+    "title": "Clase 6: Ahorcado en Python",
+    "section": "",
+    "text": "Descargar carpeta del proyecto\n\n\n\n  \n  \n    Seleccionar archivo",
+    "crumbs": [
+      "Recursos",
+      "Material de clase",
+      "Clase 6: Ahorcado en Python"
+    ]
+  },
+  {
+    "objectID": "recursos/clases/04.html",
+    "href": "recursos/clases/04.html",
+    "title": "Clase 4: Programación Orientada a Objetos",
     "section": "",
     "text": "Descargar Notebook",
     "crumbs": [
       "Recursos",
       "Material de clase",
-      "Clase 5: Programación Orientada a Objetos"
+      "Clase 4: Programación Orientada a Objetos"
     ]
   },
   {
-    "objectID": "proyectos/grupal.html",
-    "href": "proyectos/grupal.html",
-    "title": "Proyecto grupal",
+    "objectID": "proyectos/individual.html",
+    "href": "proyectos/individual.html",
+    "title": "Proyecto individual",
     "section": "",
-    "text": "Si aplica, se puede incluir un proyecto grupal.",
+    "text": "Luego del proyecto grupal, podría realizarse un proyecto individual.",
     "crumbs": [
       "Proyectos",
-      "Proyecto grupal"
+      "Proyecto individual"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/problemas.html",
+    "href": "practica/03_funcional/problemas.html",
+    "title": "🧩 Problemas",
+    "section": "",
+    "text": "En programación, el logging es el proceso de registrar eventos durante la ejecución de un programa. Estos registros, llamados logs, permiten mantener un historial de lo que ocurrió, incluyendo estados del sistema, acciones realizadas y posibles errores o advertencias.\nEn este problema se propone implementar un decorador llamado log que registre, en un archivo, los valores de entrada y salida de cada llamada a las funciones decoradas. El decorador debe recibir como argumento la ruta del archivo donde se guardarán los mensajes.\nPor ejemplo, el siguiente código:\nimport time\n\n@log(\"registro.log\")\ndef f(x, y):\n    return x + y\n\n@log(\"registro.log\")\ndef g(a, b):\n    return a + b ** 2\n\nf(3, 9)\ntime.sleep(1)\nf(256, 256)\ntime.sleep(3)\ng(3, 2)\nf(7, 8)\nDebería generar un archivo registro.log con un contenido similar al siguiente:\n\n\nregistro.log\n\n2025-09-02 18:04:07 - | f(x=3, y=9) -&gt; 12\n2025-09-02 18:04:08 - | f(x=256, y=256) -&gt; 512\n2025-09-02 18:04:11 - | g(a=3, b=2) -&gt; 7\n2025-09-02 18:04:11 - | f(x=7, y=8) -&gt; 15\n\n\n\n\nSi el archivo no existe, debe crearse automáticamente.\nSi el archivo ya existe, los nuevos registros deben agregarse al final, sin sobrescribir los anteriores.\n\n\n\n\n\nPara obtener el momento exacto de la llamada, puede usar datetime.now() del módulo datetime.\nPara formatear ese valor como texto, utilice el método .strftime.\n\nPor ejemplo:\ndatetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n2025-09-02 18:30:39",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/problemas.html#registro-de-llamadas",
+    "href": "practica/03_funcional/problemas.html#registro-de-llamadas",
+    "title": "🧩 Problemas",
+    "section": "",
+    "text": "En programación, el logging es el proceso de registrar eventos durante la ejecución de un programa. Estos registros, llamados logs, permiten mantener un historial de lo que ocurrió, incluyendo estados del sistema, acciones realizadas y posibles errores o advertencias.\nEn este problema se propone implementar un decorador llamado log que registre, en un archivo, los valores de entrada y salida de cada llamada a las funciones decoradas. El decorador debe recibir como argumento la ruta del archivo donde se guardarán los mensajes.\nPor ejemplo, el siguiente código:\nimport time\n\n@log(\"registro.log\")\ndef f(x, y):\n    return x + y\n\n@log(\"registro.log\")\ndef g(a, b):\n    return a + b ** 2\n\nf(3, 9)\ntime.sleep(1)\nf(256, 256)\ntime.sleep(3)\ng(3, 2)\nf(7, 8)\nDebería generar un archivo registro.log con un contenido similar al siguiente:\n\n\nregistro.log\n\n2025-09-02 18:04:07 - | f(x=3, y=9) -&gt; 12\n2025-09-02 18:04:08 - | f(x=256, y=256) -&gt; 512\n2025-09-02 18:04:11 - | g(a=3, b=2) -&gt; 7\n2025-09-02 18:04:11 - | f(x=7, y=8) -&gt; 15\n\n\n\n\nSi el archivo no existe, debe crearse automáticamente.\nSi el archivo ya existe, los nuevos registros deben agregarse al final, sin sobrescribir los anteriores.\n\n\n\n\n\nPara obtener el momento exacto de la llamada, puede usar datetime.now() del módulo datetime.\nPara formatear ese valor como texto, utilice el método .strftime.\n\nPor ejemplo:\ndatetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n2025-09-02 18:30:39",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/problemas.html#fibonacci-el-memorioso",
+    "href": "practica/03_funcional/problemas.html#fibonacci-el-memorioso",
+    "title": "🧩 Problemas",
+    "section": "2 Fibonacci el memorioso",
+    "text": "2 Fibonacci el memorioso\nLa implementación recursiva más directa de la secuencia de Fibonacci es tan concisa como ineficiente.\ndef fibonacci(n):\n    if n &lt;= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\nAl invocar fibonacci(7), se realizan llamadas a fibonacci(6) y fibonacci(5). Luego, fibonacci(6) vuelve a llamar a fibonacci(5) y fibonacci(4), y así sucesivamente. Muchas de estas llamadas se repiten: por ejemplo, fibonacci(5) se calcula más de una vez.\nEste comportamiento muestra que los subproblemas se superponen: los mismos valores se recalculan de manera redundante.\nEl objetivo de este ejercicio es diseñar una función capaz de recordar resultados ya obtenidos, evitando recomputarlos cada vez que aparecen. Para lograrlo, podemos construir una función recursiva que memorice sus valores anteriores y, así, avance en la secuencia sin rehacer todos los cálculos previos.\n\nAyuda\nConsidere una function factory que devuelva la función recursiva. Dentro del ámbito de la function factory puede existir una estructura de datos mutable que almacene los resultados ya calculados.",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/autoevaluacion.html",
+    "href": "practica/03_funcional/autoevaluacion.html",
+    "title": "🪞 Autoevaluación",
+    "section": "",
+    "text": "¿Por qué decimos que fun es una función con efectos secundarios?\ndef fun():\n    global x\n    x = 10\n    return x\n¿Cuál es el problema con la siguiente función? Explore el resultado de las llamadas que se incluyen luego de la definición.\ndef agregar_usuario(usuario, listado=[]):\n    listado.append(usuario)\n    return listado\n\nbase1 = agregar_usuario(\"Adrián\")\nbase2 = agregar_usuario(\"Daniela\")\nExplore el contenido y la identidad de base1 y base2. Si es necesario, utilice algún agente de IA para explorar en qué parte de la definición de la función se esconde una trampa.\n\n\n\n\n\n¿Por qué la siguiente definición devuelve un error?\nlambda x: return x + 1\n¿Qué hacen los siguientes bloques de código?\n(lambda x, y: x + y)(1, 5)\n(lambda f, x: f(x + 10))(lambda y: y * 5, 2)\n¿Qué devuelve la siguiente llamada? ¿Por qué?\n(lambda x: print(x))(1)\nAyuda: asigne el resultado a una variable y explore el valor de esa variable.\n\n\n\n\n\n¿Cuál es el valor de args en la siguiente llamada? ¿Por qué?\n def fun(x, *args):\n     return x + 10\n\n fun(128)\n¿Y el valor de kwargs debajo?\ndef fun(x, **kwargs):\n    return x + 11\n\nfun(128)\nLos siguientes intentos por definir una función arrojan un error. Investigue por qué y reflexione sobre el sentido de los errores.\ndef fun(**kwargs, x, y):\n    return x + y\ndef fun(**kwargs, *args):\n    return sum(args)\nCualquier llamada a la siguiente función que solo pase argumentos posicionales va a resultar en un error. ¿Por qué? ¿Cómo habría que llamarla para que no resulte en un error?\ndef fun(*args, x, y):\n    return sum(args), x + y\n\n\n\n\n\nEjecute el siguiente bloque de código e inspeccione el objeto que devuelven las sucesivas llamadas realizadas. Analice por qué ocurre este comportamiento y piense qué tipo de funcionalidades podrían aprovechar un mecanismo similar.\ndef fabrica():\n    cosas = []\n    def fun(elemento):\n        cosas.append(elemento)\n        return cosas\n    return fun\n\nf = fabrica()\nf(128)\nf(256)\nf(1024)\nAyuda: Compare el ID de los objetos devueltos en cada llamada. ¿Podría observar el mismo comportamiento si en vez de usar una lista para cosas se usara una tupla?",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/autoevaluacion.html#funciones",
+    "href": "practica/03_funcional/autoevaluacion.html#funciones",
+    "title": "🪞 Autoevaluación",
+    "section": "",
+    "text": "¿Por qué decimos que fun es una función con efectos secundarios?\ndef fun():\n    global x\n    x = 10\n    return x\n¿Cuál es el problema con la siguiente función? Explore el resultado de las llamadas que se incluyen luego de la definición.\ndef agregar_usuario(usuario, listado=[]):\n    listado.append(usuario)\n    return listado\n\nbase1 = agregar_usuario(\"Adrián\")\nbase2 = agregar_usuario(\"Daniela\")\nExplore el contenido y la identidad de base1 y base2. Si es necesario, utilice algún agente de IA para explorar en qué parte de la definición de la función se esconde una trampa.\n\n\n\n\n\n¿Por qué la siguiente definición devuelve un error?\nlambda x: return x + 1\n¿Qué hacen los siguientes bloques de código?\n(lambda x, y: x + y)(1, 5)\n(lambda f, x: f(x + 10))(lambda y: y * 5, 2)\n¿Qué devuelve la siguiente llamada? ¿Por qué?\n(lambda x: print(x))(1)\nAyuda: asigne el resultado a una variable y explore el valor de esa variable.\n\n\n\n\n\n¿Cuál es el valor de args en la siguiente llamada? ¿Por qué?\n def fun(x, *args):\n     return x + 10\n\n fun(128)\n¿Y el valor de kwargs debajo?\ndef fun(x, **kwargs):\n    return x + 11\n\nfun(128)\nLos siguientes intentos por definir una función arrojan un error. Investigue por qué y reflexione sobre el sentido de los errores.\ndef fun(**kwargs, x, y):\n    return x + y\ndef fun(**kwargs, *args):\n    return sum(args)\nCualquier llamada a la siguiente función que solo pase argumentos posicionales va a resultar en un error. ¿Por qué? ¿Cómo habría que llamarla para que no resulte en un error?\ndef fun(*args, x, y):\n    return sum(args), x + y\n\n\n\n\n\nEjecute el siguiente bloque de código e inspeccione el objeto que devuelven las sucesivas llamadas realizadas. Analice por qué ocurre este comportamiento y piense qué tipo de funcionalidades podrían aprovechar un mecanismo similar.\ndef fabrica():\n    cosas = []\n    def fun(elemento):\n        cosas.append(elemento)\n        return cosas\n    return fun\n\nf = fabrica()\nf(128)\nf(256)\nf(1024)\nAyuda: Compare el ID de los objetos devueltos en cada llamada. ¿Podría observar el mismo comportamiento si en vez de usar una lista para cosas se usara una tupla?",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/autoevaluacion.html#recursión",
+    "href": "practica/03_funcional/autoevaluacion.html#recursión",
+    "title": "🪞 Autoevaluación",
+    "section": "2 Recursión",
+    "text": "2 Recursión\n\n¿Cuál de las siguientes funciones es recursiva?\ndef f(x):\n    return x + 1\n\ndef g(x):\n    return f(x)\n\ndef h(x):\n    return h(x - 1)\n¿Qué son el caso base y el caso recursivo?\n¿Por qué toda recursión necesita un caso base?\n¿Qué pasa si una función recursiva nunca llega al caso base?\nReflexione sobre ventajas y desventajas de la recursión.",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/autoevaluacion.html#funciones-de-orden-superior",
+    "href": "practica/03_funcional/autoevaluacion.html#funciones-de-orden-superior",
+    "title": "🪞 Autoevaluación",
+    "section": "3 Funciones de orden superior",
+    "text": "3 Funciones de orden superior\n\nExplique por qué el primer print muestra 10 y el segundo falla:\nfrom functools import partial\n\ndef suma(x, y):\n    return x + y\n\nsuma2 = partial(suma, 10, 0)\nprint(suma2())\nprint(suma2(10))\n¿Cuál de las siguientes funciones es de orden superior?\ndef f(x):\n    return x + 1\n\ndef g(fn, x):\n    return fn(x)\n\ndef h():\n    return f\n¿Cuál de las siguientes funciones de Python es de orden superior?\n\nsum\nmax\nmin\nsorted\nprint\nfunctools.partial\n\n¿Qué hace la función fun? ¿Qué condicion debe cumplir f respecto de sus valores de entrada y salida?\ndef fun(f, x):\n    return f(f(x))\n¿Para qué sirve la función definida debajo?\ndef fun(f, g):\n    return lambda x: f(g(x))\n¿Qué tipo de función se necesita pasar a filter?\n¿Cuál es el resultado de la última línea de código? ¿Por qué?\nfilter_obj = filter(lambda x: x &gt; 2, range(5))\nlist(filter_obj) # Primera conversión a lista\nlist(filter_obj) # Segunda conversión a lista\nAyuda: Para comprender lo que sucede en este ejercicio es necesario estar familiarizados con los generadores.\n¿Cuál implementación es más eficiente desde el punto de vista del consumo de memoria? ¿Por qué?\nimpares = list(filter(lambda x: x % 2, range(1_000)))\nimpares_al_cubo = list(map(lambda x: x ** 3, impares))\nimpares_al_cubo = list(map(lambda x: x ** 3, filter(lambda x: x % 2, range(1_000))))\nAyuda: Nuevamente, es necesario estar familiarizados con los generadores para responder a esta pregunta.\n¿Cuál es el resultado de la reducción debajo? ¿Por qué?\nfrom functools import reduce\nreduce(lambda x, y: x + [y], range(3), [])\nAyuda: reduce ejecuta la función que se le pasa solamente 3 veces. Podría resultar de ayuda enumerar cada una de las llamadas manualmente.",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/autoevaluacion.html#comprehensions",
+    "href": "practica/03_funcional/autoevaluacion.html#comprehensions",
+    "title": "🪞 Autoevaluación",
+    "section": "4 Comprehensions",
+    "text": "4 Comprehensions\n\n¿Qué diferencia hay entre las siguientes dos líneas de código? Asuma que f es una función y xs es una secuencia.\nmap(f, xs)\n[f(x) for x in xs]\n¿Cuál es el resultado de esta expresión?\n[x for x in \"hola\" if x != \"o\"]\nEscriba una list comprehension para obtener una lista con la primera letra de cada palabra.\npalabras = [\"hola\", \"mundo\", \"python\"]\nEscriba una list comprehension que reemplace los None por un -1.\ndatos = [1, None, 3, None, 5]\nConvierta este bucle en una list comprehension.\nresultado = []\nfor x in range(5):\n    if x % 2 != 0:\n        resultado.append(x)\n¿Es posible que una list comprehension devuelva una lista vacía? ¿Cuándo?\nConstruya una única list comprehension que realice lo mismo que el siguiente bloque:\ndef f(x):\n    return 10 / x\n\ndef g(x):\n    return x != 0\n\nnumeros = [1, 0, -1, 0, 2, 0, -2, 0, 3, 0, -3]\nlist(map(f, filter(g, numeros)))",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/03_funcional/autoevaluacion.html#generadores",
+    "href": "practica/03_funcional/autoevaluacion.html#generadores",
+    "title": "🪞 Autoevaluación",
+    "section": "5 Generadores",
+    "text": "5 Generadores\n\n¿Qué diferencia a una función regular de una función generadora?\n¿En qué momento se ejecuta el cuerpo de una función generadora? ¿Siempre se ejecuta todo?\n¿Cómo se puede obtener una lista a partir de un generador? ¿Cuántas veces se puede realizar esa operación sobre el mismo generador?\n¿Qué ventaja tiene un generador frente a una lista?\n¿Qué significa que un generador sea perezoso?\n¿Qué pasa si se llama a next sobre un generador más veces que la cantidad de yield en él?\n¿Qué se obtiene en el siguiente bloque de código?\ndef f():\n    yield 1\n    yield 2\n\ngen = f()\nprint(list(gen))\n¿Qué pasa si se corre next(gen) a continuación?\n¿Qué se imprime en pantalla?\nprint((x * 2 for x in [1, 2, 3]))\n¿Por qué es posible implementar un bucle infinito dentro de un generador?\n¿Cuántas veces es posible llamar a next sobre el generador g?\ndef fun():\n    yield 1\n    return 2\n    yield 3\n\ng = fun()",
+    "crumbs": [
+      "Práctica",
+      "U3 - Programación Funcional",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html",
+    "href": "practica/02_oop/ejercicios.html",
+    "title": "🛠️ Ejercicios",
+    "section": "",
+    "text": "Defina una clase Contador que represente un contador numérico. Por defecto, las instancias comienzan con el valor 0, aunque debe permitirse inicializarlas con un valor distinto.\nImplemente los siguientes métodos:\n\nincrementar: aumenta el valor del contador en una cantidad arbitraria (por defecto, 1).\ndecrementar: disminuye el valor del contador en una cantidad arbitraria (por defecto, 1).\nreiniciar: restablece el contador a su valor inicial (¡que puede ser distinto de 0!).\nvalor: devuelve el valor actual del contador.\n\nEjemplo de uso\ncontador = Contador()\ncontador.incrementar(5)    # El valor interno es 5\ncontador.decrementar(2)    # El valor interno es 3\nprint(contador.valor())    # Imprime 3\ncontador.reiniciar()\nprint(contador.valor())    # Imprime 0",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#contador",
+    "href": "practica/02_oop/ejercicios.html#contador",
+    "title": "🛠️ Ejercicios",
+    "section": "",
+    "text": "Defina una clase Contador que represente un contador numérico. Por defecto, las instancias comienzan con el valor 0, aunque debe permitirse inicializarlas con un valor distinto.\nImplemente los siguientes métodos:\n\nincrementar: aumenta el valor del contador en una cantidad arbitraria (por defecto, 1).\ndecrementar: disminuye el valor del contador en una cantidad arbitraria (por defecto, 1).\nreiniciar: restablece el contador a su valor inicial (¡que puede ser distinto de 0!).\nvalor: devuelve el valor actual del contador.\n\nEjemplo de uso\ncontador = Contador()\ncontador.incrementar(5)    # El valor interno es 5\ncontador.decrementar(2)    # El valor interno es 3\nprint(contador.valor())    # Imprime 3\ncontador.reiniciar()\nprint(contador.valor())    # Imprime 0",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#magia-para-programadores",
+    "href": "practica/02_oop/ejercicios.html#magia-para-programadores",
+    "title": "🛠️ Ejercicios",
+    "section": "2 Magia para programadores",
+    "text": "2 Magia para programadores\nEsta es tu primera clase de Pociones en Hogwarts y el profesor te dio como tarea descubrir de qué color se volverá una poción si se mezcla con otra. Todas las pociones tienen un color definido en formato RGB, desde [0, 0, 0] hasta [255, 255, 255].\nPara complicar un poco más la tarea, el profesor realizará varias mezclas seguidas y luego te preguntará por el color final. Además del color, también deberás calcular qué volumen tendrá la poción después de la mezcla final.\nGracias a tu experiencia en programación descubriste que al mezclar dos pociones, los colores se combinan como si se mezclaran dos colores en formato RGB. Por ejemplo, si mezclas una poción con color [255, 255, 0] y volumen 10 con otra de color [0, 254, 0] y volumen 5, obtendrás una nueva poción con:\n\ncolor [170, 255, 0]\nvolumen 15\n\nPor lo tanto, decidís crear una clase Pocion que tenga:\n\ndos propiedades:\n\ncolor (una lista o tupla con 3 enteros)\nvolumen (un número)\n\nun método mezclar que acepte otra Pocion y devuelva una nueva Pocion ya mezclada.\n\nEjemplo:\nfelix_felicis = Pocion([255, 255, 255],  7)\npocion_multijugos = Pocion([51, 102, 51], 12)\nnueva_pocion = felix_felicis.mezclar(pocion_multijugos)\n\nnueva_pocion.color # Devuelve [127, 159, 127]\nnueva_pocion.volumen # Devuelve 19\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nLos colores de las pociones deben representarse como tríos de números enteros en formato RGB. Al realizar una mezcla de colores, se debe redondear hacia arriba utilizando math.ceil.",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#mensaje-secreto",
+    "href": "practica/02_oop/ejercicios.html#mensaje-secreto",
+    "title": "🛠️ Ejercicios",
+    "section": "3 Mensaje secreto",
+    "text": "3 Mensaje secreto\nUn cifrado por sustitución simple reemplaza cada carácter de un alfabeto con un carácter de un alfabeto alternativo. Cada posición en el alfabeto original se mapea a la posición correspondiente en el alfabeto alternativo, y esto sirve tanto para codificar como para decodificar.\nEl objetivo es crear una clase que, al inicializarse, reciba dos alfabetos (original y alternativo). La clase debe tener un método para encriptar mensajes y otro para revertir la encriptación.\nEjemplo:\nalfabeto = \"abcdefghijklmnopqrstuvwxyz\"\nalfabeto_mezclado = \"etaoinshrdlucmfwypvbgkjqxz\"\n\nmi_cifrado = Cifrado(alfabeto, alfabeto_mezclado)\n\nmi_cifrado.codificar(\"abc\")    # =&gt; \"eta\"\nmi_cifrado.codificar(\"xyz\")    # =&gt; \"qxz\"\nmi_cifrado.codificar(\"aeiou\")  # =&gt; \"eirfg\"\n\nmi_cifrado.decodificar(\"eta\")    # =&gt; \"abc\"\nmi_cifrado.decodificar(\"qxz\")    # =&gt; \"xyz\"\nmi_cifrado.decodificar(\"eirfg\")  # =&gt; \"aeiou\"\n\nPunto extra\nVerifique en el método __init__ que la longitud de los alfabetos sea la misma. Caso contrario, levante una excepción ValueError indicando cuál es el problema.",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#real-envido",
+    "href": "practica/02_oop/ejercicios.html#real-envido",
+    "title": "🛠️ Ejercicios",
+    "section": "4 Real envido",
+    "text": "4 Real envido\nConstruir una clase ManoDeTruco que, al inicializarse, reciba una lista o tupla de hasta tres números enteros, correspondientes a los valores de las cartas en una mano de truco.\nLa clase debe incluir un método llamado comparar_con que recibe otra mano de truco y determine cuál de las dos suma más puntos para el envido. En caso de empate, se considera ganadora la mano que invocó el método.\nEjemplo de uso\nmano1 = ManoDeTruco([7, 5, 6])\nmano2 = ManoDeTruco([4, 11, 2])\n\nganadora = mano1.comparar_con(mano2)\n\n\n\n\n\n\nTipConsideraciones\n\n\n\n\n\n\nAsuma que todas las cartas cargadas en la mano son del mismo palo.\nPara calcular los puntos del envido, solo se consideran dos de las tres cartas, no la suma de las tres.",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#la-muestra-infinita",
+    "href": "practica/02_oop/ejercicios.html#la-muestra-infinita",
+    "title": "🛠️ Ejercicios",
+    "section": "5 La muestra infinita",
+    "text": "5 La muestra infinita\nDefina una clase Muestra que represente un conjunto de datos numéricos. La clase debe inicializarse a partir de un iterable de números e implementar los siguientes métodos:\n\nagregar(x): agrega un número a la muestra.\nn(): devuelve la cantidad de elementos.\nsuma(): devuelve la suma de los valores.\nmedia(): devuelve el promedio de los valores.\nvarianza(muestral=False): calcula la varianza.\n\nSi muestral=False, se usa el denominador n (varianza poblacional).\nSi muestral=True, se usa el denominador n-1 (varianza muestral).\n\n\nEjemplo de uso\nmuestra = Muestra([10, 12, 13, 15])\nmuestra.agregar(20)\nmuestra.n()                     # 5\nmuestra.suma()                  # 70\nmuestra.media()                 # 14.0\nmuestra.varianza()              # varianza poblacional\nmuestra.varianza(muestral=True) # varianza muestral\n\nPunto extra\nModifique la clase para que:\n\nGuarde los datos en un atributo “privado” llamado _datos.\nProvea una propiedad de solo lectura valores, que devuelva una copia inmutable de los datos (por ejemplo, una tupla).",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#orden-en-el-laboratorio",
+    "href": "practica/02_oop/ejercicios.html#orden-en-el-laboratorio",
+    "title": "🛠️ Ejercicios",
+    "section": "6 ¡Orden en el laboratorio!",
+    "text": "6 ¡Orden en el laboratorio!\nEn un laboratorio se necesita llevar un registro ordenado de los experimentos realizados. Cada experimento debe contar con un número identificador único, un nombre y, de manera opcional, el nombre de la persona responsable.\nEl objetivo de este ejercicio es construir una clase que facilite dicha organización.\nPara ello, implemente una clase llamada Experimento que se inicializa con el nombre del experimento y, opcionalmente, con el nombre del responsable. La clase debe asignar automáticamente un número identificador único a cada instancia. Para lograrlo, utilice un atributo de clase llamado total_creados, que comience en 0.\nCada instancia debe contar con:\n\nUn identificador numérico único (asignado automáticamente de forma incremental por la clase).\nUn nombre.\nUn responsable, si se proporciona.\n\nEjemplo de uso\ne1 = Experimento(\"Piloto A\", responsable=\"Dolores\")\ne2 = Experimento(\"Piloto Z\")\nExperimento.total_creados  # Devuelve 2\n\nPuntos extra\nModifique la clase para que también:\n\nSe puedan crear objetos utilizando un método de clase llamado desde_dict que reciba un diccionario de la forma {\"nombre\": ..., \"responsable\": ...} y devuelva una instancia de Experimento.\nImplemente el método mágico __repr__ que devuelva una cadena de texto con el siguiente formato: python     Experimento(id=1, nombre=\"A/B\", responsable=\"Sosa\")\n\nEjemplo de uso\ne = Experimento.desde_dict({\"nombre\": \"Piloto B\", \"responsable\": \"Ana\"})\nrepr(e)\n# Experimento(id=3, nombre=\"Piloto B\", responsable=\"Ana\")",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#sensores-descalibrados",
+    "href": "practica/02_oop/ejercicios.html#sensores-descalibrados",
+    "title": "🛠️ Ejercicios",
+    "section": "7 Sensores descalibrados",
+    "text": "7 Sensores descalibrados\nEste ejercicio requiere diseñar una pequeña jerarquía de clases para simular sensores utilizados en un laboratorio.\nEn la práctica, los sensores no siempre son completamente precisos: pueden registrar valores ligeramente superiores o inferiores al valor real. Para corregir ese desvío, se aplica una calibración, que consiste en ajustar las lecturas mediante un valor adicional o corrector llamado offset.\n\nJerarquía de clases\nClase base: Sensor\nLa clase Sensor debe incluir:\n\nUn atributo nombre para identificar al sensor.\nUn método leer que levante una excepción NotImplementedError, indicando que debe ser implementado por las subclases.\nUn método calibrar(offset) que permita almacenar un valor de ajuste (offset) que se aplicará a las lecturas.\n\nSubclases\nSe deben definir dos subclases: SensorTemperatura y SensorHumedad, ambas con su propia implementación del método leer:\n\nSensorTemperatura: simula una medición utilizando random.uniform(18, 28).\nSensorHumedad: simula una medición utilizando random.uniform(30, 70).\n\nEn ambos casos, la medición debe ser ajustada por el offset correspondiente (si fue calibrado).\n\n\nFunción auxiliar\nAdemás, implemente una función llamada promedio_lecturas que reciba dos argumentos: una secuencia de sensores y un número entero n, que indica cuántas lecturas realizar con cada sensor.\nLa función debe realizar n lecturas para cada sensor utilizando su método leer, calcular el promedio de esas lecturas y devolver un diccionario que asocie el nombre de cada sensor con su promedio correspondiente.\nEjemplo de uso\nst = SensorTemperatura(\"T1\")\nsh = SensorHumedad(\"H1\")\nst.calibrar(0.5)\n\npromedios = promedio_lecturas([st, sh], n=3)\n# {'T1': ..., 'H1': ...}",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#python-para-matemáticos",
+    "href": "practica/02_oop/ejercicios.html#python-para-matemáticos",
+    "title": "🛠️ Ejercicios",
+    "section": "8 Python para matemáticos",
+    "text": "8 Python para matemáticos\nConstruya una clase Fraccion que acepte dos argumentos: numerador y denominador. Se desea que esta clase:\n\nSea representable como cadena de texto.\nImplemente la suma entre fracciones.\nDevuelva siempre el resultado en la mínima representación posible (fracción irreducible).\n\nEjemplo:\nfraccion1 = Fraccion(4, 5)\nprint(fraccion1 + Fraccion(1, 8))\n#&gt; \"37/40\"\n\nPunto extra\nExtender la funcionalidad de la clase incluyendo las operaciones de resta, multiplicación y división.",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/02_oop/ejercicios.html#tiempo-al-tiempo",
+    "href": "practica/02_oop/ejercicios.html#tiempo-al-tiempo",
+    "title": "🛠️ Ejercicios",
+    "section": "9 Tiempo al tiempo ⏳",
+    "text": "9 Tiempo al tiempo ⏳\nEl módulo estándar datetime de Python incluye, entre otras cosas, la clase date para trabajar con fechas. El objetivo de este ejercicio es implementar, desde cero, una nueva clase Date que permita representar fechas y operar con ellas.\n\nPrimera implementación\n\nConstruya la clase Date. El método __init__ debe tomar 3 parámetros: year, month y day, y asignarlos como atributos de la instancia. Cree un objeto que represente el 6 de noviembre de 1995 y verifique que los atributos contengan los valores esperados.\nImplemente el método __str__, que debe devolver una cadena con el formato YYYY-MM-DD, donde YYYY representa el año, MM el mes y DD el día. Ayuda: Puede utilizar el método .rjust de las cadenas de texto para agregar ceros a la izquierda cuando sea necesario. Por ejemplo, para el 6 de noviembre de 1995, str(fecha) debe devolver \"1995-11-06\".\nImplemente el método __repr__, que debe devolver una representación similar a la utilizada para crear la instancia. Para la fecha 6 de noviembre de 1995, debe devolver la cadena \"Date(year=1995, month=11, day=6)\".\nImplemente un método de clase que permita crear una Date a partir de una cadena en formato YYYY-MM-DD. Por ejemplo, Date.from_str(\"2025-03-08\") debe devolver un objeto Date que representa al 8 de marzo de 2025. Ayuda: Puede utilizar el método .lstrip(\"0\") para eliminar ceros a la izquierda en una cadena.\nImplemente los métodos de comparación entre objetos Date.\n\n__eq__: igualdad (==)\n__ne__: desigualdad (!=)\n__lt__: menor que (&lt;)\n__gt__: mayor que (&gt;)\n__le__: menor o igual que (&lt;=)\n__ge__: mayor o igual que (&gt;=)\n\nAyuda: Dos fechas se consideran iguales si sus atributos year, month, y day coinciden. Para las comparaciones, considere primero el año, luego el mes y finalmente el día.\n\n\n\nA prueba de balas\nA esta altura, se cuenta con una implementación razonablemente completa y funcional para representar objetos de tipo fecha. Sin embargo, la clase Date no garantiza la validez ni la robustez de las instancias que se crean. Es posible construir objetos Date que representen fechas inválidas, como el 31 de abril o el 55.8 del mes 25.3, y operar con ellos sin que el programa emita ningún tipo de advertencia.\n\nModifique la implementación de los atributos year, month y day de modo que sean privados y que su asignación incluya una verificación de validez. Para ello, se propone lo siguiente:\n\nUtilice atributos privados llamados _year, _month y _day.\nDefina métodos year, month y day, decorados con @property, que expongan dichos atributos para su lectura. Estos métodos deben devolver el valor del atributo correspondiente.\nPara permitir la asignación controlada, implemente un setter para cada atributo Para ello, decore el mismo método con @&lt;nombre&gt;.setter (por ejemplo, @year.setter) y defina allí la lógica de verificación. Por el momento, verifique únicamente que el valor asignado sea un número entero y positivo. Eleve un ValueError en caso de que el valor por asignar no pase la verificación.\n\n\nUtilice los siguientes ejemplos de verificación\nd = Date(2022, 7, 1)\nrepr(d) # Date(year=2022, month=7, day=1)\nstr(d)  # \"2022-07-01\"\n(d.year, d.month, d.day) # (2022, 7, 1)\nDate(2022, 0, 1)       # Falla: el mes no es positivo\nDate(2022, 3, 5.5)     # Falla: el día no es un entero\nDate(\"11\", 3, 1)       # Falla: el año es una cadena de texto\nd = Date(2022, 7, 1)\nd.day = 11             # Funciona: pasa la verificación\nstr(d)                 # \"2022-07-11\"\n\nd.month = -1           # Falla\nd.year = -1            # Falla\n\nMejore ahora las verificaciones de los valores asignados para que sean más robustas:\n\nEl año debe ser entero y mayor o igual a 0.\nEl mes debe ser un número entero entre 1 y 12 inclusive.\nEl día debe ser un número entero mayor o igual a 1 y menor o igual a la cantidad de días del mes correspondiente.\n\n\nLa cantidad de días depende del mes. Para todos los meses excepto febrero, utilice el diccionario provisto en la ayuda debajo. Para el caso de febrero, implemente un método estático que reciba un año como argumento y devuelva un booleano indicando si ese año es bisiesto.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nDiccionario de días por mes:\nDOM = {\n    1: 31,  # Enero\n    2: 28,  # Febrero (29 en año bisiesto)\n    3: 31,  # Marzo\n    4: 30,  # Abril\n    5: 31,  # Mayo\n    6: 30,  # Junio\n    7: 31,  # Julio\n    8: 31,  # Agosto\n    9: 30,  # Septiembre\n    10: 31, # Octubre\n    11: 30, # Noviembre\n    12: 31, # Diciembre\n}\n\nDOM[5] # Devuelve 31, porque es mayo\nPor otro lado, un año es bisiesto si:\n\nEs divisible por 4,\nexcepto que sea divisible por 100,\nsalvo que tambien sea divisibles por 400\n\nEn Python\n(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\n\n\n\nFinalmente, verifique que su clase Date funciona correctamente con los siguientes ejemplos:\n# Definición de fechas\nd1 = Date(1990, 5, 20)\nd2 = Date(1998, 9, 21)\nd3 = Date(1998, 9, 20)\nd4 = Date(2022, 12, 18)\n\nd1 &lt; d2\nd1 &gt; d2\nd1 != d3\nd4 &gt;= d3\n\nDate(2000, 2, 29) # Funciona, es bisiesto\nDate(2001, 2, 29) # Falla, no es bisiesto\n\n\nl = [d1, d2, d3, d4]\nsorted(l) # Funciona, ¿por qué?",
+    "crumbs": [
+      "Práctica",
+      "U2 - Programación Orientada a Objetos",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/problemas.html",
+    "href": "practica/01_programacion_en_python/problemas.html",
+    "title": "🧩 Problemas",
+    "section": "",
+    "text": "En criptografía, el cifrado César es una de las técnicas de cifrado más simples y más usadas.\nEs un tipo de cifrado en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.\nPor ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc.\n\n\n\n\n\nEscriba una función, y luego un script, que permita cifrar y descifrar cadenas usando el cifrado César con un número arbitrario de posiciones.\nDos funciones incluidas con Python que pueden ser útiles para esta tarea son ord(), que convierte caracteres numéricos a números, y chr(), que realiza la operación inversa.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara el cifrado de un único caracter:\n\nDefinir un desplazamiento, por ejemplo 3.\nConvertir el caracter a número usando ord().\nSumarle desplazamiento.\nFinalmente, convertirlo a caracter nuevamente utilizando chr().\n\nY para el descifrado:\n\nConvertir el caracter a número.\nRestarle desplazamiento.\nConvertirlo a caracter nuevamente utilizando chr().\n\nAsí, se debería recuperar el caracter definido al principio.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/problemas.html#cifrado-césar",
+    "href": "practica/01_programacion_en_python/problemas.html#cifrado-césar",
+    "title": "🧩 Problemas",
+    "section": "",
+    "text": "En criptografía, el cifrado César es una de las técnicas de cifrado más simples y más usadas.\nEs un tipo de cifrado en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.\nPor ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc.\n\n\n\n\n\nEscriba una función, y luego un script, que permita cifrar y descifrar cadenas usando el cifrado César con un número arbitrario de posiciones.\nDos funciones incluidas con Python que pueden ser útiles para esta tarea son ord(), que convierte caracteres numéricos a números, y chr(), que realiza la operación inversa.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara el cifrado de un único caracter:\n\nDefinir un desplazamiento, por ejemplo 3.\nConvertir el caracter a número usando ord().\nSumarle desplazamiento.\nFinalmente, convertirlo a caracter nuevamente utilizando chr().\n\nY para el descifrado:\n\nConvertir el caracter a número.\nRestarle desplazamiento.\nConvertirlo a caracter nuevamente utilizando chr().\n\nAsí, se debería recuperar el caracter definido al principio.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/problemas.html#números-aleatorios",
+    "href": "practica/01_programacion_en_python/problemas.html#números-aleatorios",
+    "title": "🧩 Problemas",
+    "section": "2 Números aleatorios",
+    "text": "2 Números aleatorios\nConstruya un programa en Python que genere una cantidad determinada de números aleatorios uniformes dentro de un rango definido por el usuario. El programa debe:\n\nSolicitar al usuario la cantidad de números a generar y los valores mínimo y máximo del rango.\nGenerar los números aleatorios\nGuardar los números en un archivo de texto, uno por línea.\nOfrecer la opción de mostrar un resumen estadístico con mínimo, máximo, media y desvío estándar, solo si el usuario lo solicita.\n\nPara resolver este problema utilice el módulo random y las funciones desarrolladas en el ejercicio Resúmenes estadísticos guardadas en un módulo llamado estadistica.py.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/problemas.html#mensaje-al-descubierto",
+    "href": "practica/01_programacion_en_python/problemas.html#mensaje-al-descubierto",
+    "title": "🧩 Problemas",
+    "section": "3 Mensaje al descubierto",
+    "text": "3 Mensaje al descubierto\nResulta que Franco, un amigo que estudia Ciencias de la Computación en la FCEIA, te envía por WhatsApp un archivo de texto plano con mensajes “encriptados” usando caracteres sobrantes y símbolos extraños:\n    !!!,.,  aY??/u/DAM**e,, se =m!!e\n&&M&&e v!o!?LV...I.O /L/*oC/*o\n        __?e_?l//+ T++**e/*Cl!?aD==*O**\nTiene sentido pensar que está experimentando con nuevos algoritmos de cifrado y, de paso, te lanza el reto de descifrarlo.\nTu misión es escribir un programa que:\n\nLea un archivo de texto plano cualquiera.\nMuestre en pantalla su contenido original (tal cual llega).\nAplique un proceso de limpieza basado en las siguientes reglas:\n\nEliminar todos los caracteres +, *, -, /, =, !, ?, & y _.\nReemplazar cualquier secuencia de espacios múltiples por un solo espacio.\nHomogeinizar la capitalización de los caracteres.\nConservar los saltos de línea tal cual aparecen en el archivo original.\n\nMuestre en pantalla la versión desencriptada del texto.\nGuarde la versión limpia en un nuevo archivo de texto.\n\nEl usuario debe poder especificar el nombre del archivo de salida.\nSi no lo hace, se generará uno con el sufijo _limpio antes de la extensión original (por ejemplo, secreto.txt → secreto_limpio.txt).",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/problemas.html#código-morse",
+    "href": "practica/01_programacion_en_python/problemas.html#código-morse",
+    "title": "🧩 Problemas",
+    "section": "4 Código Morse",
+    "text": "4 Código Morse\nEl código Morse es un sistema utilizado para representar letras mediante combinaciones específicas de señales cortas y largas, denominadas puntos (.) y rayas (-). A continuación se muestra un diccionario con el mapeo de caracteres alfabéticos, dígitos del 0 al 9 y algunos símbolos de puntuación comunes:\nmapeo_morse = {\n    \"A\": \".-\",\n    \"B\": \"-...\",\n    \"C\": \"-.-.\",\n    \"D\": \"-..\",\n    \"E\": \".\",\n    \"F\": \"..-.\",\n    \"G\": \"--.\",\n    \"H\": \"....\",\n    \"I\": \"..\",\n    \"J\": \".---\",\n    \"K\": \"-.-\",\n    \"L\": \".-..\",\n    \"M\": \"--\",\n    \"N\": \"-.\",\n    \"O\": \"---\",\n    \"P\": \".--.\",\n    \"Q\": \"--.-\",\n    \"R\": \".-.\",\n    \"S\": \"...\",\n    \"T\": \"-\",\n    \"U\": \"..-\",\n    \"V\": \"...-\",\n    \"W\": \".--\",\n    \"X\": \"-..-\",\n    \"Y\": \"-.--\",\n    \"Z\": \"--..\",\n    \"1\": \".----\",\n    \"2\": \"..---\",\n    \"3\": \"...--\",\n    \"4\": \"....-\",\n    \"5\": \".....\",\n    \"6\": \"-....\",\n    \"7\": \"--...\",\n    \"8\": \"---..\",\n    \"9\": \"----.\",\n    \"0\": \"-----\",\n    \", \": \"--..--\",\n    \".\": \".-.-.-\",\n}\nEscriba una función en Python que permita convertir cualquier palabra a código Morse utilizando este diccionario. Luego, escriba otra función que haga exactamente lo contrario: dada una secuencia en código Morse, debe recuperar la palabra original. Finalmente, incorpore ambas funciones en un script principal que combine ambas funciones y permita encriptar o desencriptar texto desde un archivo de texto plano. El programa debe recibir:\n\nEl nombre del archivo de entrada.\nEl nombre del archivo de salida.\nLa operación a realizar (encriptar o desencriptar).\n\nAyuda: Para indicar espacios en código Morse utilice /.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🧩 Problemas"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html",
+    "title": "🪞 Autoevaluación",
+    "section": "",
+    "text": "¿Qué valor contiene la variable contador luego de ejecutar el siguiente código?\ncontador = 20\ncontador + 1\nComplete la siguiente tabla indicando si el nombre es válido para una variable de Python.\n\n\n\nNombre\n¿Válido?\nJustificación\n\n\n\n\nbalance\n\n\n\n\nbalanceActual\n\n\n\n\nbalance-actual\n\n\n\n\nbalance actual\n\n\n\n\nbalance_actual\n\n\n\n\nmis.datos\n\n\n\n\n0cuenta\n\n\n\n\ncuenta0\n\n\n\n\n_cuenta\n\n\n\n\nSPAM\n\n\n\n\ncantidad$",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#variables",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#variables",
+    "title": "🪞 Autoevaluación",
+    "section": "",
+    "text": "¿Qué valor contiene la variable contador luego de ejecutar el siguiente código?\ncontador = 20\ncontador + 1\nComplete la siguiente tabla indicando si el nombre es válido para una variable de Python.\n\n\n\nNombre\n¿Válido?\nJustificación\n\n\n\n\nbalance\n\n\n\n\nbalanceActual\n\n\n\n\nbalance-actual\n\n\n\n\nbalance actual\n\n\n\n\nbalance_actual\n\n\n\n\nmis.datos\n\n\n\n\n0cuenta\n\n\n\n\ncuenta0\n\n\n\n\n_cuenta\n\n\n\n\nSPAM\n\n\n\n\ncantidad$",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#números",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#números",
+    "title": "🪞 Autoevaluación",
+    "section": "2 Números",
+    "text": "2 Números\n\n¿Cuál es el tipo de 10 / 2? ¿Por qué?\n¿Cuál es el tipo de 5 * 2? ¿Por qué?\n¿Por qué 5 == 5.0 es True?",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#booleanos",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#booleanos",
+    "title": "🪞 Autoevaluación",
+    "section": "3 Booleanos",
+    "text": "3 Booleanos\n\n¿Cuál es el resultado de las siguientes expresiones? ¿Por qué?\nFalse or not False\nnot (True and True)\nnot True and True\n\"True\" != True\n10 &gt; 5 + 3\nNone is None\nFalse is False\nEjecute línea por línea los siguientes bloques y analice los resultados.\nint(True) * 50\nTrue * 50\n1 is True\nbool(1) is True\nid(True)\nid(bool(1))\nid(bool(1024))\n¿Cuáles son los 3 operadores booleanos?",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#cadenas-de-caracteres",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#cadenas-de-caracteres",
+    "title": "🪞 Autoevaluación",
+    "section": "4 Cadenas de caracteres",
+    "text": "4 Cadenas de caracteres\n\n¿Por qué la siguiente comparación resulta en True?\n\"spam\" + \"spamspam\" == \"spam\" * 3\n¿Por qué la siguiente expresión resulta en un error? ¿Cómo se puede arreglar?\n\"Me comí \" + 6 + \" panchos.\"\n¿Encuentra algo extraño en la siguiente expresión? ¿Cómo la mejoraría?\nmateria = \"Programación 2\"\nprint(\"¡Sean bienvenidos a la materia {materia}!\")\nExplique por qué es redundante utilizar str() en el siguiente bloque de código:\nx, y = 10, 20\nprint(f\"La suma de {str(x)} y {str(y)} es: {str(x + y)}.\")\nConsidere el siguiente bloque de código:\nmensaje = \"Hola, ¿cómo estes?\"\nmensaje[-3] = \"á\"\n\n¿Cuál es la intención detrás del programa?\n¿Por qué no funciona?\n¿Cómo podría arreglarlo? Alerta: la solución no es muy elegante.\n\n¿Cuál es el resultado de list(\"abcdefgh\")? ¿Por qué?\n¿Por qué set(\"abcde\") es distinto de {\"abcde\"}?",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#funciones",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#funciones",
+    "title": "🪞 Autoevaluación",
+    "section": "5 Funciones",
+    "text": "5 Funciones\n\n¿Cuál es la diferencia entre una función y una llamada a función?\n¿Cuál es el valor que devuelve una función que no tiene return?\n¿Cuándo se ejecuta el código dentro de una función: cuando la función se define o cuando se la llama? Considere la siguiente función:\ndef suma(x, y):\n    print(100 / 0)\n    return x + y\nLuego, ejecute el siguiente bloque:\nsuma(2, 4)",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#listas",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#listas",
+    "title": "🪞 Autoevaluación",
+    "section": "6 Listas",
+    "text": "6 Listas\n\n¿Qué es []? ¿Cuál es el resultado de len([])?\n¿Por qué la siguiente expresión resulta en False? Ayuda: use la función id().\n[] is []\n¿Por qué se obtiene un error en el siguiente bloque de código?\nl = []\nl[0]\nSi [0][0] devuelve 0, ¿por qué [1][1] no devuelve [1]?\n¿Cuál es el valor de x en el siguiente bloque de código? ¿Por qué?\nl = [\"hola\", \"hola hola\", \"hasta luego\"]\nx = l.remove(\"hola\")\n¿Cómo le asignaría el valor \"hola\" como el tercer valor en una lista almacenada en una variable llamada cosas? Asuma que cosas contiene [2, 4, 6, 8, 10].\nAsuma que letras contiene la lista [\"a\", \"b\", \"c\", \"d\"]:\n\n¿A qué evalúa letras[-1]?\n¿A qué evalúa letras[:2]?\n¿A qué evalúa letras[int(int('3' * 2) // 11)]? ¿Es necesario usar dos veces int()?\n\nAsuma que bartulos contiene la lista [3.14, \"casa\", 11, \"casa\", True]:\n\n¿A qué evalúa bartulos.index(\"casa\")? ¿Por qué?\n¿Cómo queda la lista en bartulos después de ejecutar bartulos.append(99)?\n¿Cómo queda la lista en bartulos después de ejecutar bartulos.remove(\"casa\"') ?¿Por qué?\n\n¿Cuáles son los operadores para la concatenación y la replicación de listas?\n¿Cuál es la diferencia entre los métodos append() e insert() de las listas?\n¿Cuáles son dos formas de eliminar valores de una lista?\nEl siguiente bloque de código imprime ['a', 'b', True, 30]. ¿Por qué?\ncosas = [\"a\", \"b\", True]\nbartulos = cosas\nbartulos.append(20 + 10)\nprint(cosas)\nConsidere el siguiente bloque de código:\nmarcas = [\"Milka\", \"Cofler\", \"Águila\", \"Cadbury\", \"Lindt\", \"Toblerone\", \"After Eight\"]\nmarcas[2:5]\nque correctamente muestra [\"Águila\", \"Cadbury\", \"Lindt\"]. ¿Por qué el siguiente bloque de código no funciona?\nmarcas = [\"Milka\", \"Cofler\", \"Águila\", \"Cadbury\", \"Lindt\", \"Toblerone\", \"After Eight\"]\nindices = 2:5\nmarcas[indices]",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#tuplas",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#tuplas",
+    "title": "🪞 Autoevaluación",
+    "section": "7 Tuplas",
+    "text": "7 Tuplas\n\n¿Por qué la tupla no implementa un método similar al método .extend() de las listas?\nLas tuplas de Python son conocidas por ser inmutables. Por ejemplo, el siguiente bloque de código resulta en un error:\ntupla = (1, 2, 3)\ntupla[1] = 10\nSin embargo, el siguiente bloque no arroja ningún error y pareciera que se logra modificar la tupla exitosamente:\nbartulos = [\"Hola\", 10, None]\ntupla = (1, bartulos, 3)\n\ntupla[1].append(\"¡Sorpesa!\")\n\nprint(tupla)\n¿Qué pasó?",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#diccionarios",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#diccionarios",
+    "title": "🪞 Autoevaluación",
+    "section": "8 Diccionarios",
+    "text": "8 Diccionarios\n\n¿Cómo se escribe en código un diccionario vacío?\n¿Cómo se ve un diccionario que tiene la clave \"cosa\" y el valor 15?\n¿Cuál es la principal diferencia entre un diccionario y una lista?\n¿Qué ocurre si se intenta acceder a bartulos[\"cosa\"] cuando bartulos es {\"coso\": 100}?\nSi un diccionario está almacenado en bartulos, ¿cuál es la diferencia entre las siguientes expresiones?\n\"cosa\" in bartulos\n\"cosa\" in bartulos.keys()\nSuponga el diccionario datos = {\"nombre\": \"Juan\"}. ¿Por qué la siguiente expresión resulta en False?\n\"Juan\" in datos",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#control-de-flujo",
+    "href": "practica/01_programacion_en_python/autoevaluacion.html#control-de-flujo",
+    "title": "🪞 Autoevaluación",
+    "section": "9 Control de flujo",
+    "text": "9 Control de flujo\n\n9.1 Condicionales\n\nExplique qué es una condición y en qué situaciones se utilizaría.\nIdentifique los tres bloques de código en el siguiente ejemplo:\ncodigo = 0\n\nif codigo == 10:\n    print(\"mensaje 1\")\n    if codigo &gt; 5:\n        print(\"mensaje 2\")\n    else:\n        print(\"mensaje alternativo\")\n    print(\"mensaje final\")\n\nprint(\"Fin del programa\")\n¿Tienen sentido las comparaciones utilizadas?\n¿Cuál es el problema con el siguiente programa? Proponga una solución.\nnumero = 10\nif numero &lt; 0:\n    print(f\"El numero {numero} es negativo\")\nelif numero &lt; -5:\n    print(f\"El numero {numero} es menor a -5\")\nelif numero &gt; 0:\n    print(f\"El numero {numero} es positivo\")\nelse:\n    print(f\"El numero {numero} es 0\")\n\n\n\n9.2 Bucles\n\nConsidere el siguiente programa:\nfor i in range(10):\n    print(i)\nEscriba un programa que realice la misma tarea utilizando un bucle while.\n¿Cuál es la diferencia entre range(10), range(0, 10) y range(0, 10, 1) en un bucle for?\nSuponga que numeros es una lista que contiene numeros enteros, ¿en qué se diferencian los siguientes bloques de código?\nfor i in numeros:\n    if i % 2 == 0:\n        break\n    print(i)\nfor i in numeros:\n    if i % 2 == 0:\n        continue\n    print(i)\n¿Es posible re-escribir el siguiente bloque de código usando while True? ¿Qué modificaciones habría que hacer?\nsuma = 0\ni = 0\nwhile suma &lt;= limite:\n    suma += numeros[i]\n    i += 1",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🪞 Autoevaluación"
+    ]
+  },
+  {
+    "objectID": "informacion/ia.html",
+    "href": "informacion/ia.html",
+    "title": "Uso de Inteligencia Artificial",
+    "section": "",
+    "text": "Las herramientas de Inteligencia Artificial (IA) son muy poderosas y pueden ayudarte a resolver de manera efectiva problemas de todo tipo, especialmente problemas de programación. De hecho, seguramente la IA pueda resolver todos los ejercicios que se presenten en esta materia por vos. El punto es que no tiene sentido cursar la materia si te vas a limitar a copiar y pegar enunciados en un chat. A corto plazo, te puede dar una sensación atractiva de satisfacción y alivio (¿a quién no le gusta tener la práctica resuelta?), pero a mediano y largo plazo puede contribuir a aumentar tu frustración cuando aparezca un problema que la IA o bien no resuelve, o no lo hace de la mejor manera, y vos no logras comprender ni resolver por cuenta propia.\nAhora bien, es innegable que en el mundo profesional las herramientas de IA se usan muchísimo. Ayudan de verdad a resolver problemas que quizá no podríamos abordar por nuestra cuenta, o que podríamos resolver, pero a un costo de tiempo mucho mayor. Por eso, aprender a usarlas sí que tiene un valor real.\nPor otro lado, cuando la tendencia a siempre responder, y de manera complaciente, de los modelos de IA se combinan con nuestro sesgo de automatización, es fácil caer en una encerrona cognitiva. En esa situación, podemos aceptar sin suficiente juicio lo que la herramienta propone y perder de vista si realmente entendemos lo que está pasando y, sobre todo, si la solución que se obtiene es satisfactoria. Salir de esa encerrona, por ahora, sigue siendo parte del trabajo humano.\nPara extraer lo mejor de estas herramientas, entonces, es clave conocer el problema que se está resolviendo. Si vamos a usarlas para programar en Python (o cualquier otro lenguaje), necesitamos contar con un dominio sólido del lenguaje y de los fundamentos de la programación.\nEn otras palabaras, en esta materia no estamos en contra del uso de herramientas de IA. Todo lo contrario. Creemos que pueden ser muy valiosas en el trabajo profesional y también pueden aportar al aprendizaje. Sin embargo, la base propia de conocimientos necesaria para usar la IA de manera efectiva solo se construye atravesando el proceso de aprendizaje. La IA no puede reemplazar ese proceso porque es personal. Con ese objetivo, dejamos estas recomendaciones generales para el uso de IA durante la materia:\n\nEn vez de copiar y pegar el enunciado de un ejercicio en un chat, describile con tus palabras:\n\nde qué se trata el ejercicio que estás trabajando\nqué avances hiciste hasta ahora\nqué parte no entendés\ntu código y los errores, si los hay.\n\nEs mejor usar la IA como un tutor que te guía, que como un particular que realiza la tarea por vos.\nDel mismo modo que mirar videos de cocina no te hace buen chef, copiar y pegar código tampoco te convertirá en buen programador. Cuando la IA te devuelva código, no copies y pegues ese código en el editor de manera automática. Transcribilo manualmente, aunque pese, siendo crítico de lo que la IA te provee:\n\n¿por qué hace este paso?\n¿podría escribir esta parte del programa de otra manera?\n¿es necesario agregar este comentario?\n¿tiene sentido documentar tan exhaustivamente esta función auxiliar?\n\nCopiar y pegar texto para dar la impresión que dominas un tema tampoco te ayuda a aprender. El proceso de escritura enriquece y solidifica el entendimiento sobre un tema. Por eso se recomienda no utilizar la IA inmediatamente a la hora de redactar respuestas o párrafos enteros. Una vez que elaboraste al menos un borrador de tu respuesta (por ejemplo, un punteo con los puntos principales en un orden presuntamente correcto) se puede utilizar la IA para buscar expresiones alternativas, corregir errores gramaticales, adaptar estilo y/o tono y, en general, obtener una segunda opinión y revisión general del texto elaborado.\n\nLa distinción clave es si la IA contribuye a tu aprendizaje o si está realizando el trabajo intelectual que se espera que vos realices. En caso de duda, una regla orientadora es preguntarse: ¿puedo explicar y defender con palabras propias todo lo que estoy entregando?",
+    "crumbs": [
+      "Información",
+      "Uso de Inteligencia Artificial"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html",
+    "href": "informacion/bibliografia.html",
+    "title": "Bibliografía",
+    "section": "",
+    "text": "Downey (2024) Matthes (2022) Sweigart (2025)\n\n\n\nDowney, Allen B. 2024. Think Python. 3.ª ed. O’Reilly Media. https://allendowney.github.io/ThinkPython/.\n\n\nMatthes, Eric. 2022. Python Crash Course. 3rd ed. No Starch Press.\n\n\nSweigart, Al. 2025. Automate the Boring Stuff with Python. 3rd ed. No Starch Press. https://automatetheboringstuff.com/3e/.\n\n\n\n\n\n\nKalb (2022) Lott y Phillips (2021) Sweigart (2020)\n\n\n\nKalb, Irv. 2022. Object-Oriented Python. No Starch Press.\n\n\nLott, Steven F., y Dusty Phillips. 2021. Python Object-Oriented Programming. 4th ed. Packt Publishing.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nBhargava (2024) Lott (2022) Mertz (2015) Sturtz (2024) Sweigart (2020)\n\n\n\nBhargava, Aditya Y. 2024. Grokking Algorithms. 2nd ed. Manning Publications.\n\n\nLott, Steven F. 2022. Functional Python Programming. 3rd ed. Packt Publishing.\n\n\nMertz, David. 2015. Functional Programming in Python. O’Reilly Media.\n\n\nSturtz, John. 2024. «Functional Programming in Python: When and How to Use It». 2024. https://realpython.com/python-functional-programming/.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nGéron (2025) Holtz (s. f.) Janssens y Nieuwdorp (2025) Kakegawa (2024) Kibirige, H. (s. f.) Polars Developers (s. f.) Rougier (2021) Scikit-learn Developers (s. f.) Statsmodels Developers (s. f.)\n\n\n\nGéron, Aurélien. 2025. Hands-On Machine Learning with Scikit-Learn and PyTorch. 4.ª ed. O’Reilly Media.\n\n\nHoltz, Yan. s. f. «Python Graph Gallery». https://python-graph-gallery.com.\n\n\nJanssens, Jeroen, y Timo Nieuwdorp. 2025. Python Polars: The Definitive Guide. O’Reilly Media.\n\n\nKakegawa, Yuki. 2024. Polars Cookbook. Packt Publishing.\n\n\nKibirige, H. s. f. «Documentación de Plotnine». https://plotnine.org/.\n\n\nPolars Developers. s. f. «Polars User Guide». https://docs.pola.rs/.\n\n\nRougier, Nicolas P. 2021. «Scientific Visualization: Python + Matplotlib». 2021. https://github.com/rougier/scientific-visualization-book.\n\n\nScikit-learn Developers. s. f. «Documentación de Scikit-learn». https://scikit-learn.org.\n\n\nStatsmodels Developers. s. f. «Documentación de Statsmodels». https://www.statsmodels.org.\n\n\n\n\n\n\nAstral (s. f.a) Astral (s. f.b) Moure (2024) Skoulikari (2021) Sottile, Anthony (s. f.)\n\n\n\nAstral. s. f.a. «Documentación de Ruff». https://docs.astral.sh/ruff/.\n\n\nAstral. s. f.b. «Documentación de uv». https://docs.astral.sh/uv.\n\n\nMoure, Brais. 2024. Git y GitHub desde cero. 2.ª ed. Leanpub.\n\n\nSkoulikari, Anna. 2021. Learning Git. O’Reilly Media.\n\n\nSottile, Anthony. s. f. «Documentación de pre-commit». https://pre-commit.com/.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html#principal",
+    "href": "informacion/bibliografia.html#principal",
+    "title": "Bibliografía",
+    "section": "",
+    "text": "Downey (2024) Matthes (2022) Sweigart (2025)\n\n\n\nDowney, Allen B. 2024. Think Python. 3.ª ed. O’Reilly Media. https://allendowney.github.io/ThinkPython/.\n\n\nMatthes, Eric. 2022. Python Crash Course. 3rd ed. No Starch Press.\n\n\nSweigart, Al. 2025. Automate the Boring Stuff with Python. 3rd ed. No Starch Press. https://automatetheboringstuff.com/3e/.\n\n\n\n\n\n\nKalb (2022) Lott y Phillips (2021) Sweigart (2020)\n\n\n\nKalb, Irv. 2022. Object-Oriented Python. No Starch Press.\n\n\nLott, Steven F., y Dusty Phillips. 2021. Python Object-Oriented Programming. 4th ed. Packt Publishing.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nBhargava (2024) Lott (2022) Mertz (2015) Sturtz (2024) Sweigart (2020)\n\n\n\nBhargava, Aditya Y. 2024. Grokking Algorithms. 2nd ed. Manning Publications.\n\n\nLott, Steven F. 2022. Functional Python Programming. 3rd ed. Packt Publishing.\n\n\nMertz, David. 2015. Functional Programming in Python. O’Reilly Media.\n\n\nSturtz, John. 2024. «Functional Programming in Python: When and How to Use It». 2024. https://realpython.com/python-functional-programming/.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nGéron (2025) Holtz (s. f.) Janssens y Nieuwdorp (2025) Kakegawa (2024) Kibirige, H. (s. f.) Polars Developers (s. f.) Rougier (2021) Scikit-learn Developers (s. f.) Statsmodels Developers (s. f.)\n\n\n\nGéron, Aurélien. 2025. Hands-On Machine Learning with Scikit-Learn and PyTorch. 4.ª ed. O’Reilly Media.\n\n\nHoltz, Yan. s. f. «Python Graph Gallery». https://python-graph-gallery.com.\n\n\nJanssens, Jeroen, y Timo Nieuwdorp. 2025. Python Polars: The Definitive Guide. O’Reilly Media.\n\n\nKakegawa, Yuki. 2024. Polars Cookbook. Packt Publishing.\n\n\nKibirige, H. s. f. «Documentación de Plotnine». https://plotnine.org/.\n\n\nPolars Developers. s. f. «Polars User Guide». https://docs.pola.rs/.\n\n\nRougier, Nicolas P. 2021. «Scientific Visualization: Python + Matplotlib». 2021. https://github.com/rougier/scientific-visualization-book.\n\n\nScikit-learn Developers. s. f. «Documentación de Scikit-learn». https://scikit-learn.org.\n\n\nStatsmodels Developers. s. f. «Documentación de Statsmodels». https://www.statsmodels.org.\n\n\n\n\n\n\nAstral (s. f.a) Astral (s. f.b) Moure (2024) Skoulikari (2021) Sottile, Anthony (s. f.)\n\n\n\nAstral. s. f.a. «Documentación de Ruff». https://docs.astral.sh/ruff/.\n\n\nAstral. s. f.b. «Documentación de uv». https://docs.astral.sh/uv.\n\n\nMoure, Brais. 2024. Git y GitHub desde cero. 2.ª ed. Leanpub.\n\n\nSkoulikari, Anna. 2021. Learning Git. O’Reilly Media.\n\n\nSottile, Anthony. s. f. «Documentación de pre-commit». https://pre-commit.com/.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "informacion/bibliografia.html#complementaria",
+    "href": "informacion/bibliografia.html#complementaria",
+    "title": "Bibliografía",
+    "section": "Complementaria",
+    "text": "Complementaria\n\nRamalho (2022) Stephenson (2019) Sweigart (2021) Vaughan (2019)\n\n\n\n\n\nRamalho, Luciano. 2022. Fluent Python. 2.ª ed. O’Reilly Media.\n\n\nStephenson, Ben. 2019. The Python Workbook. 2.ª ed. Springer Cham.\n\n\nSweigart, Al. 2021. The Big Book of Small Python Projects. No Starch Press. https://inventwithpython.com/bigbookpython/.\n\n\nVaughan, Lee. 2019. Impractical Python Projects. No Starch Press.",
+    "crumbs": [
+      "Información",
+      "Bibliografía"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programación en Python",
+    "section": "",
+    "text": "Programación en Python\n      \n\n      \n      \n        \n        \n          \n           \n          Licenciatura en Estadística\n        \n        \n        \n          \n           \n          Facultad de Ciencias Económicas y Estadística (UNR)\n        \n        \n        \n          \n           \n          1° Cuatrimestre 2026\n        \n        \n        \n          \n           \n          Miércoles - 11:00 a 14:00   |   Jueves - 8:00 a 10:00\n        \n        \n      \n      \n    \n  \n\n  \n  \n    \n  \n  \n\nNo hay resultados\n\n\n\n  \n    Docentes\n\n    \n\n    \n    \n        \n\n        Tomás Capretto\n        \n          \n          \n          \n            \n            tomas.capretto@fcecon.unr.edu.ar\n          \n          \n          \n          \n            \n            \n            Consultas: Viernes 17:00hs\n            \n          \n          \n        \n      \n    \n        \n\n        Dolores Sollberger\n        \n          \n          \n          \n            \n            dolores.sollberger@fcecon.unr.edu.ar\n          \n          \n          \n          \n            \n            \n            Consultas: Martes 17:00hs\n            \n          \n          \n        \n      \n    \n    \n  \n\nNo hay resultados"
+  },
+  {
+    "objectID": "informacion/aprobacion.html",
+    "href": "informacion/aprobacion.html",
+    "title": "Aprobación",
+    "section": "",
+    "text": "📝 Examen parcial: individual y en computadora. Hay un recuperatorio, de similares características, que reemplaza la nota del parcial.\n🧠🤝 Trabajos prácticos (2): se realizan tanto en clase como fuera de ella, en grupos de dos o tres integrantes. Se entrega el código desarrollado, un resumen ejecutivo y se presenta oralmente en clase.\n\nTodas las instancias se califican en una escala de 0 a 10 y se aprueban con 6.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "informacion/aprobacion.html#instancias-de-evaluación",
+    "href": "informacion/aprobacion.html#instancias-de-evaluación",
+    "title": "Aprobación",
+    "section": "",
+    "text": "📝 Examen parcial: individual y en computadora. Hay un recuperatorio, de similares características, que reemplaza la nota del parcial.\n🧠🤝 Trabajos prácticos (2): se realizan tanto en clase como fuera de ella, en grupos de dos o tres integrantes. Se entrega el código desarrollado, un resumen ejecutivo y se presenta oralmente en clase.\n\nTodas las instancias se califican en una escala de 0 a 10 y se aprueban con 6.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "informacion/aprobacion.html#condiciones-de-aprobación",
+    "href": "informacion/aprobacion.html#condiciones-de-aprobación",
+    "title": "Aprobación",
+    "section": "Condiciones de aprobación",
+    "text": "Condiciones de aprobación\n\nPromoción\n\nQuienes aprueben el parcial individual (con nota \\(\\text{PI}\\)), el trabajo práctico grupal 1 (con nota \\(\\text{TP1}\\)) y el trabajo práctico grupal 2 (con nota \\(\\text{TP2}\\)), adquieren la condición de estudiante promovido y su nota final se calcula como \\(\\frac{1}{3} \\times (\\text{PI} + \\text{TP1} + \\text{TP2})\\).\n\nRegularidad\n\nQuienes aprueben el parcial individual (o su recuperatorio) y solo uno de los trabajos prácticos grupales, adquieren la condición de estudiante regular.\n\nLibres\n\nQuienes no aprueben el parcial individual (ni su recuperatorio) o ninguno de los dos trabajos prácticos grupales, adquieren la condición de estudiante libre.",
+    "crumbs": [
+      "Información",
+      "Aprobación"
+    ]
+  },
+  {
+    "objectID": "informacion/calendario.html",
+    "href": "informacion/calendario.html",
+    "title": "Calendario",
+    "section": "",
+    "text": "Semana\nFecha\nUnidad\nTemas\nActividades\n\n\n\n\n1\n16-mar\n1\n\nPython y su ecosistema.\nPositron.\nExpresiones.\nVariables y asignaciones.\nTipos de datos elementales.\nOperadores numéricos, de comparación y lógicos.\nFunciones.\nEjecución condicional de código.\nBucles definidos y no definidos.\n\n\n\n\n2\n23-mar\n1\n\nListas, tuplas y diccionarios.\nUso de código externo.\n\nMódulos y librerías.\n\nLibrería estándar de Python.\n\n\n\n\n3\n30-mar\n1\n\nAmbientes virtuales.\nInstalación y gestión de librerías.\nLectura y escritura de archivos de texto plano.\nScripting.\nExcepciones.\n\n\n\n\n4\n6-abr\n2\n\nObjetos, clases e instancias.\nAtributos y métodos.\nEncapsulamiento.\n\n\n\n\n5\n13-abr\n2\n\nPolimorfismo.\n\nMétodos mágicos.\nSobrecaraga de operadores.\n\nHerencia.\n\nSimple.\nDoble.\n\nExcepciones a medida.\n\n\n\n\n6\n20-abr\n3\n\nFunciones como ciudadanos de primera clase.\nFunciones puras.\nFunciones anonimas.\nFunciones variádicas.\nRecursión.\n\n\n\n\n7\n27-abr\n3\n\nFunciones de orden superior: map, filter, reduce.\nComprensiones.\nGeneradores.\nIterables e iteradores.\nDecoradores.\nClosures.\nAplicacion parcial de funciones.\n\n\n\n\n8\n4-may\n4\n\nUso de Jupyter Notebooks.\nLectura y procesamiento de datos tabulares con Polars.\nEl formato .parquet.\nArreglos multidimensionales en NumPy.\nUso de LazyFrames de Polars.\n\nParcial\n\n\n9\n11-may\n4\n\nModelización estadística y aprendizaje automático.\n\nstatsmodels\nscikit-learn\n\nCreacion de visualizaciones.\n\nmatplotlib\nseaborn\nplotnine\n\nPipelines de procesamiento de datos en scikit-learn.\n\nPublicación TP 1\n\n\n10\n18-may\n4\n\nCierre de temas de Unidad 4.\nTrabajo en TP 1.\n\nRecuperatorio\n\n\n11\n25-may\n4\n\nTrabajo en TP 1.\n\nPresentación TP 1\n\n\n12\n1-jun\n5\n\nSistemas de control de versiones.\nGit y sus comandos fundamentales.\nGitHub:\n\nAutenticación.\nConfiguración.\nCreacion de repositorios.\n\nHerramientas del trabajo colaborativo en GitHub:\n\nissues, pull requests y forks.\n\nWorkflow de trabajo colaborativo.\n\nPublicación TP 2\n\n\n13\n8-jun\n5\n\nGestión de ambientes virtuales uv.\nAnalisis estático y formateo de código con ruff.\nUso de pre-commit.\nGitHub Actions.\nBuenas practicas en proyectos colaborativos:\n\nGestión de datos.\nGestion de claves.\n\n\n\n\n\n14\n15-jun\n5\n\nCierre de temas de Unidad 5.\nTrabajo en TP 2.\n\n\n\n\n15\n22-jun\n5\n\nTrabajo en TP 2.\n\nPresentación TP 2",
+    "crumbs": [
+      "Información",
+      "Calendario"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html",
+    "href": "informacion/programa.html",
+    "title": "Programa",
+    "section": "",
+    "text": "Los profesionales en Estadística necesitan contar con habilidades avanzadas de programación, que les permitan abordar problemas complejos y desarrollar soluciones eficientes y robustas.\nLa asignatura Programación en Python tiene como propósito consolidar las habilidades de programación de los estudiantes a través del uso del lenguaje Python, ampliamente adoptado en la comunidad científica y en la industria por su versatilidad y su extenso ecosistema de librerías. En esta asignatura, se abordan los principales paradigmas de programación (imperativo, orientado a objetos y funcional), promoviendo un pensamiento computacional flexible y la escritura de programas estructurados, legibles y reutilizables.\nLa materia también introduce herramientas fundamentales para el análisis de datos en Python, incluyendo el uso de paquetes como NumPy, Polars, Matplotlib, Seaborn, Plotnine, statsmodels y scikit-learn, que resultan fundamentales en el desarrollo de proyectos de análisis, modelización y visualización de datos.\nAdemás, se incorporan prácticas y herramientas que promueven un trabajo colaborativo ágil, robusto y escalable. Estas incluyen el control de versiones con git y el uso de GitHub como plataforma de trabajo colaborativo, el uso de entornos virtuales para aislar dependencias y la incorporación de herramientas que robustecen y automatizan el desarrollo de soluciones basadas en la programación, como el análisis estático, el formateo automático y los flujos de integración continua.\nOfrecida como materia electiva para la Licenciatura en Estadística, esta asignatura consolida las competencias informáticas de los estudiantes y los prepara para afrontar desafíos profesionales que requieren un dominio sólido de la programación y de las herramientas modernas del análisis de datos.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html#fundamentación",
+    "href": "informacion/programa.html#fundamentación",
+    "title": "Programa",
+    "section": "",
+    "text": "Los profesionales en Estadística necesitan contar con habilidades avanzadas de programación, que les permitan abordar problemas complejos y desarrollar soluciones eficientes y robustas.\nLa asignatura Programación en Python tiene como propósito consolidar las habilidades de programación de los estudiantes a través del uso del lenguaje Python, ampliamente adoptado en la comunidad científica y en la industria por su versatilidad y su extenso ecosistema de librerías. En esta asignatura, se abordan los principales paradigmas de programación (imperativo, orientado a objetos y funcional), promoviendo un pensamiento computacional flexible y la escritura de programas estructurados, legibles y reutilizables.\nLa materia también introduce herramientas fundamentales para el análisis de datos en Python, incluyendo el uso de paquetes como NumPy, Polars, Matplotlib, Seaborn, Plotnine, statsmodels y scikit-learn, que resultan fundamentales en el desarrollo de proyectos de análisis, modelización y visualización de datos.\nAdemás, se incorporan prácticas y herramientas que promueven un trabajo colaborativo ágil, robusto y escalable. Estas incluyen el control de versiones con git y el uso de GitHub como plataforma de trabajo colaborativo, el uso de entornos virtuales para aislar dependencias y la incorporación de herramientas que robustecen y automatizan el desarrollo de soluciones basadas en la programación, como el análisis estático, el formateo automático y los flujos de integración continua.\nOfrecida como materia electiva para la Licenciatura en Estadística, esta asignatura consolida las competencias informáticas de los estudiantes y los prepara para afrontar desafíos profesionales que requieren un dominio sólido de la programación y de las herramientas modernas del análisis de datos.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html#objetivos",
+    "href": "informacion/programa.html#objetivos",
+    "title": "Programa",
+    "section": "Objetivos",
+    "text": "Objetivos\nQue los estudiantes logren:\n\nutilizar Python como lenguaje de programación general para resolver problemas y desarrollar programas eficientes, aplicando los paradigmas imperativo, orientado a objetos y funcional;\ndiseñar, implementar y documentar soluciones empleando buenas prácticas y aprovechando el ecosistema de Python para el análisis, modelización y visualización de datos;\ndesarrollar proyectos integrales de análisis de datos con flujos de trabajo eficientes, reproducibles y portables; y\ntrabajar de forma colaborativa utilizando git, GitHub y otras herramientas que promuevan la calidad, la trazabilidad y el desarrollo sostenible de soluciones basadas en código.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "informacion/programa.html#contenidos",
+    "href": "informacion/programa.html#contenidos",
+    "title": "Programa",
+    "section": "Contenidos",
+    "text": "Contenidos\n\nUnidad 1. Introducción a Python\n\nLenguaje Python y su ecosistema. Uso de la interfaz Positron. Sintaxis de Python. Expresiones. Variables y asignaciones. Tipos de datos elementales. Operadores numéricos, de comparación y lógicos. Funciones. Ejecución condicional de código. Bucles definidos y no definidos. Listas, tuplas y diccionarios. Uso de código externo. Módulos y librerías. Librería estándar de Python. Instalación y gestión de librerías. Noción de ambiente virtual. Scripting. Lectura y escritura de archivos de texto plano. Manejo de excepciones.\n\nUnidad 2. Programación orientada a objetos\n\nPrincipios fundamentales. Objetos, clases e instancias. Atributos y métodos. Encapsulamiento. Propiedades públicas y privadas. Atributos y métodos de clase. Herencia. Polimorfismo. Sobrecarga de operadores. Excepciones a medida.\n\nUnidad 3. Programación funcional\n\nPrincipios fundamentales. Funciones como ciudadanos de primera clase. Funciones puras. Funciones anónimas. Closures. Recursión. Funciones de orden superior: map, filter, reduce. Comprensiones como alternativas idiomáticas a map y filter. Aplicación parcial de funciones. Decoradores. Evaluación estricta y no estricta. Evaluación perezosa (lazy) e inmediata (eager). Generadores. Iterables e iteradores\n\nUnidad 4. Análisis de datos en Python\n\nIntroducción a las Jupyter Notebooks. Trabajo con arreglos multidimensionales en NumPy. Lectura y procesamiento de datos tabulares con Polars. El formato .parquet. Uso de LazyFrames de Polars para el cómputo eficiente con grandes conjuntos de datos. Creación de visualizaciones con Matplotlib, Seaborn y Plotnine. Modelos estadísticos y de aprendizaje automático con statsmodels y scikit-learn. Pipelines de procesamiento de datos en scikit-learn.\n\nUnidad 5. Herramientas y prácticas para el desarrollo colaborativo\n\nGit y sus comandos fundamentales: clone, fetch, merge, pull, add, push, checkout, status, branch, merge, log y rebase. GitHub. Herramientas del trabajo colaborativo en GitHub: issues, pull requests y forks. Integración y despliegue continuo con GitHub Actions. Herramientas para el análisis estático y formateo de código. Herramientas modernas para la gestión de ambientes virtuales. Pre-commit. Buenas prácticas en la gestión de datos en proyectos colaborativos. Gestión segura de claves.",
+    "crumbs": [
+      "Información",
+      "Programa"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html",
+    "href": "practica/01_programacion_en_python/ejercicios.html",
+    "title": "🛠️ Ejercicios",
+    "section": "",
+    "text": "Escriba una función en Python que reciba el radio de un círculo y devuelva su área. Luego, escriba otra función que también reciba el radio de un círculo, pero devuelva su perímetro. Finalmente, escriba una tercera función que reciba el radio de un círculo y devuelva tanto el área como el perímetro.\nUna vez que haya implementado todas las funciones, analice la diferencia entre:\narea, perimetro = calcular_area_y_perimetro(radio=5)\ny\nresultados = calcular_area_y_perimetro(radio=5)\nConsidere el tipo de las variables area, perimetro y resultados.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\n\\[\n\\begin{aligned}\nA &= \\pi \\cdot r^2 \\\\\nP &= 2 \\cdot \\pi \\cdot r\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#área-y-perímetro-de-un-círculo",
+    "href": "practica/01_programacion_en_python/ejercicios.html#área-y-perímetro-de-un-círculo",
+    "title": "🛠️ Ejercicios",
+    "section": "",
+    "text": "Escriba una función en Python que reciba el radio de un círculo y devuelva su área. Luego, escriba otra función que también reciba el radio de un círculo, pero devuelva su perímetro. Finalmente, escriba una tercera función que reciba el radio de un círculo y devuelva tanto el área como el perímetro.\nUna vez que haya implementado todas las funciones, analice la diferencia entre:\narea, perimetro = calcular_area_y_perimetro(radio=5)\ny\nresultados = calcular_area_y_perimetro(radio=5)\nConsidere el tipo de las variables area, perimetro y resultados.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\n\\[\n\\begin{aligned}\nA &= \\pi \\cdot r^2 \\\\\nP &= 2 \\cdot \\pi \\cdot r\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#promociones",
+    "href": "practica/01_programacion_en_python/ejercicios.html#promociones",
+    "title": "🛠️ Ejercicios",
+    "section": "2 Promociones",
+    "text": "2 Promociones\nEscriba una función llamada calcular_precio que reciba dos argumentos: el monto total de una compra y el medio de pago utilizado.\nEl medio de pago puede ser \"efectivo\", \"débito\" o \"crédito\", y según el caso se aplicará una modificación sobre el monto:\n\nSi el medio de pago es \"efectivo\", el monto no se modifica.\nSi es \"débito\", se aplica un descuento del 10% sobre el monto.\nSi es \"crédito\", se aplica un recargo del 5% sobre el monto.\n\nLa función debe retornar el monto final a pagar, con el descuento o recargo aplicado según corresponda.\n\nPunto extra\nModifique la función de modo tal que no sea necesario especificar el medio de pago. En tal caso, el medio de pago se asume \"efectivo\". Ayuda: asigne un valor por defecto al argumento medio. Considere una implementación donde este sea \"efectivo\" y otra donde sea None.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#etapas-de-la-vida",
+    "href": "practica/01_programacion_en_python/ejercicios.html#etapas-de-la-vida",
+    "title": "🛠️ Ejercicios",
+    "section": "3 Etapas de la vida",
+    "text": "3 Etapas de la vida\nImplemente una función que reciba una edad y devuelva un mensaje que indique la etapa de la vida correspondiente.\nUtilice una cadena de condicionales if-elif-else para clasificar la edad en alguno de los siguientes grupos:\n\nMenor a 2 años: bebé.\nEntre 2 (inclusive) y 4 años: infante.\nEntre 4 (inclusive) y 13 años: niño/a.\nEntre 13 (inclusive) y 20 años: adolescente.\nEntre 20 (inclusive) y 65 años: adulto/a.\n65 años o más: persona mayor.\n\nLa función debe imprimir un mensaje del tipo: \"La persona es un/a &lt;etapa&gt;\".",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres",
+    "href": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres",
+    "title": "🛠️ Ejercicios",
+    "section": "4 Conteo de caracteres",
+    "text": "4 Conteo de caracteres\nEscriba una función que reciba una cadena de texto y devuelva un diccionario que indique cuántas veces aparece cada caracter en la cadena. La función no debe diferenciar entre mayúsculas y minúsculas y debe ignorar espacios. Utilice el siguiente ejemplo como validación:\ncontar_caracteres(\"Ahora es mejor que nunca\")\n# {\"a\": 3, \"h\": 1, \"o\": 2, \"r\": 2, \"e\": 3, \"s\": 1, \"m\": 1, \"j\": 1, \"q\": 1, \"u\": 2, \"n\": 2, \"c\": 1}\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara saltear pasos de un bucle cuando se encuentra un espacio se puede utilizar la sentencia continue.\nfor i in ...:\n    # ... &lt;- Se ejecuta en todas las iteraciones\n    if condicion_de_salto:\n        continue\n    # ... &lt;- Se ejecuta en las iteraciones 'condicion_de_salto' es False",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#orden-de-mérito",
+    "href": "practica/01_programacion_en_python/ejercicios.html#orden-de-mérito",
+    "title": "🛠️ Ejercicios",
+    "section": "5 Orden de mérito",
+    "text": "5 Orden de mérito\nSe cuenta con una lista de tuplas que contienen las notas del examen final de Programación 2 para un conjunto de alumnos:\nnotas = [\n    (\"Escalada\", 9),\n    (\"Alonso\", 7),\n    (\"Pérez\", 8),\n    (\"Castro\", 8),\n    (\"Rossini\", 10),\n    (\"Martínez\", 9),\n    (\"Pérez\", 6),\n    (\"Riquelme\", 5),\n]\n\nEscriba un programa que a partir de notas genere un diccionario donde las claves se corresponden con los apellidos y los valores con las notas del examen final.\nEscriba un programa que a partir de notas genere un diccionario donde las claves son las notas y el valor asociado sea una lista con los apellidos de quienes tuvieron esa nota.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#rendimento-académico",
+    "href": "practica/01_programacion_en_python/ejercicios.html#rendimento-académico",
+    "title": "🛠️ Ejercicios",
+    "section": "6 Rendimento académico",
+    "text": "6 Rendimento académico\nSe cuenta con el siguiente diccionario que asocia nombres de estudiantes con una lista de sus calificaciones:\nnotas = {\n    \"Ana\": [8, 9, 10],\n    \"Luis\": [6, 7, 8, 3, 9],\n    \"Carla\": [10, 9, 10],\n    \"Marcos\": [5, 6],\n    \"Sofía\": [7, 7, 8],\n    \"Pedro\": [6, 4, 5, 6, 3, 8],\n    \"Lucía\": [9, 8, 10, 9]\n}\nImplemente una función que resuma el rendimiento académico de los estudiantes. La función debe recibir el diccionario de notas y un argumento adicional llamado modo. Según el valor de modo, se debe devolver un nuevo diccionario con la siguiente información:\n\nSi modo es \"promedio\", se debe devolver el promedio de notas por estudiante.\nSi modo es \"proporcion\", se debe devolver la proporción de exámenes aprobados por estudiante (se considera aprobado todo valor mayor o igual a 6).",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#índice-de-precios",
+    "href": "practica/01_programacion_en_python/ejercicios.html#índice-de-precios",
+    "title": "🛠️ Ejercicios",
+    "section": "7 Índice de precios",
+    "text": "7 Índice de precios\nSe cuenta con la serie mensual del Índice de Precios al Consumidor (IPC) del año 2024:\nipc_2024 = [20.6, 13.2, 11.0, 8.8, 4.2, 4.6, 4.0, 4.2, 3.5, 2.7, 2.4, 2.7]\nRealice los siguientes cálculos y análisis:\n\nDetermine el menor y el mayor índice reportado durante el año.\nCalcule el IPC promedio mensual del 2024.\nEncuentre la diferencia entre el IPC mínimo y máximo del año.\n\n¿En qué mes se registró la inflación más alta?\n\nCalcule la inflación mediana del 2024.\n¿Cómo podría calcular el rango del IPC (diferencia entre el valor máximo y mínimo) sin usar las funciones min() ni max()?",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#resúmenes-estadísticos",
+    "href": "practica/01_programacion_en_python/ejercicios.html#resúmenes-estadísticos",
+    "title": "🛠️ Ejercicios",
+    "section": "8 Resúmenes estadísticos",
+    "text": "8 Resúmenes estadísticos\nCree funciones que, dada una lista de números, calculen los siguientes resúmenes estadísticos:\n\nLa media \\[\n\\text{media}(X) = \\frac{1}{n}\\sum_{i=1}^n{x_i}\n\\]\nEl rango \\[\n\\text{rango}(X) = \\text{max}(X) - \\text{min}(X)\n\\]\nLa varianza \\[\n\\text{var}(X) = \\frac{1}{n}\\sum_{i=1}^n{(x_i - \\bar{x})^2}\n\\]\nEl desvío estándar \\[\n\\text{sd}(X) = \\sqrt{\\text{var}(X)}\n\\]\nLa mediana \\[\n\\begin{array}{lr}\n\\text{mediana}(X) = x_{(\\frac{n + 1}{2})} & \\text{Si } n \\text{ es impar} \\\\\n\\text{mediana}(X) = \\frac{x_{(\\frac{n}{2})} + x_{(\\frac{n}{2}+1)}}{2} & \\text{Si } n \\text{ es par}\n\\end{array}\n\\]\ndonde los \\(x_{(i)}\\) están ordenados de manera ascendente.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#validación-de-dni",
+    "href": "practica/01_programacion_en_python/ejercicios.html#validación-de-dni",
+    "title": "🛠️ Ejercicios",
+    "section": "9 Validación de DNI",
+    "text": "9 Validación de DNI\nCrear una función que dada una cadena de caracteres verifique si se corresponde con un DNI.\nSi es un DNI, devolver True. Caso contrario, devolver False.\nA tener en cuenta:\n\nAlgunos ejemplos de DNI válidos\n\n40.094.127\n19053512\n6.392.780\n\nDNI no válidos\n\n40,094,127\n19-053-512\n123456",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#la-física-del-rebote",
+    "href": "practica/01_programacion_en_python/ejercicios.html#la-física-del-rebote",
+    "title": "🛠️ Ejercicios",
+    "section": "10 La física del rebote",
+    "text": "10 La física del rebote\nUna pelota de goma es lanzada desde una altura inicial de 100 metros. Cada vez que toca el suelo, rebota alcanzando una altura equivalente a 3/5 de la altura desde la que cayó.\nEscriba un programa que imprima una tabla mostrando las alturas alcanzadas por la pelota en cada uno de sus primeros 10 rebotes.\nLuego, implemente este programa como una función que reciba dos parámetros:\n\nAltura inicial desde la que se lanza la pelota.\nCantidad de rebotes que se desea calcular.\n\nLa función debe devolver una lista con las alturas alcanzadas en cada rebote.\n\nPunto extra\nModifique la función para que considere un rebote como “significativo” solo si la altura alcanzada es mayor o igual a un valor mínimo especificado (por ejemplo, 1 centímetro).\nSi la pelota no alcanza esta altura mínima en algún rebote, se considera que ha completado su trayectoria y queda quieta. En este caso, la función debe devolver únicamente los valores correspondientes a los “rebotes significativos”.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#un-montón-de-plata",
+    "href": "practica/01_programacion_en_python/ejercicios.html#un-montón-de-plata",
+    "title": "🛠️ Ejercicios",
+    "section": "11 Un montón de plata",
+    "text": "11 Un montón de plata\nUna mañana ponés un billete en la vereda al lado del Monumento a la Bandera. A partir de ahí, cada día vas y duplicás la cantidad de billetes, apilándolos prolijamente. ¿Cuánto tiempo pasa antes de que la pila de billetes sea más alta que la del Monumento?\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nAlgunas constantes útiles para resolver el problema:\nbillete_grosor = 0.11 * 0.001  # grosor de un billete en metros\naltura_monumento = 70          # altura en metros\nSugerencia: Usar un bucle while para realizar el cálculo.\n\n\n\n\nPunto extra\nEscribe una función que permita determinar la cantidad de días necesarios para superar cualquier altura arbitraria.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#la-conjetura-de-collatz",
+    "href": "practica/01_programacion_en_python/ejercicios.html#la-conjetura-de-collatz",
+    "title": "🛠️ Ejercicios",
+    "section": "12 La conjetura de Collatz",
+    "text": "12 La conjetura de Collatz\nLa conjetura de Collatz dice:\n\nSi tomamos un número natural cualquiera, su secuencia de Collatz termina llegando siempre al número 1.\n\nSecuencia de Collatz:\n\nSi el número es par, se divide entre 2.\nSi el número es impar, se multiplica por 3 y se le suma 1.\n\n\\[\nf(n) =\n\\begin{cases}\n    \\displaystyle \\frac{n}{2} & \\text{si } n \\text{ es par,} \\\\ \\\\\n    3n + 1 & \\text{si } n \\text{ es impar.}\n\\end{cases}\n\\]\nEscribir una función que calcule la secuencia de Collatz para un número natural cualquiera.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\n\nUtilizar bucle while.\nEl bucle debe correr solo cuando el valor de la secuencia sigue siendo mayor a 1. Si es 1, hay que frenar.\nInsertar los elementos de la secuencia en una lista.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#adivina-el-número",
+    "href": "practica/01_programacion_en_python/ejercicios.html#adivina-el-número",
+    "title": "🛠️ Ejercicios",
+    "section": "13 Adivina el número",
+    "text": "13 Adivina el número\nEscriba un programa que implemente el clásico juego “Adivina el número”. El programa debe:\n\nTener un número secreto (entero) que el usuario debe adivinar.\nSolicitar al usuario que ingrese un número.\nSi el número ingresado no coincide con el número secreto:\n\nInformar si el número ingresado es mayor o menor que el número secreto.\nPedir al usuario que intente nuevamente.\n\nSi el usuario adivina el número, el programa debe terminar mostrando un mensaje de felicitaciones.\n\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara generar números aleatorios enteros en un rango dado puede utilizar randint() del módulo random:\nimport random\nrandom.randint(-100, 100)     # Genera un número aleatorio entre -100 y 100\n\n\n\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nEl programa que resuelve este problema realiza una cantidad de iteraciones que se desconoce al momento de escribirlo. La solución típica a este tipo de problema involucra el uso de while True junto a la sentencia break.\nwhile True:\n    # realizar alguna accion\n    if condicion_de_salida:\n        break\n\n\n\n\nPunto extra\nImplemente una versión de este programa donde el usuario cuenta con 10 intentos.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-pythonico",
+    "href": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-pythonico",
+    "title": "🛠️ Ejercicios",
+    "section": "14 Conteo de caracteres Pythonico",
+    "text": "14 Conteo de caracteres Pythonico\nLos diccionarios en Python cuentan con un método .get() que devuelve el valor asociado a una clave. Este método permite pasarle un segundo argumento con un valor que se devuelve cuando no se encuentra un elemento asociado a la clave que le pasamos. Por ejemplo:\nd = {\"a\": 1, \"b\": 20}\nd.get(\"b\", 0)\n20\nd.get(\"c\", 0)\n0\nModifique la función contar_caracteres del ejercicio Conteo de caracteres utilizando el metodo .get() para obtener una implementación más sencilla. Así, debería poder eliminar el bloque if.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#validador-de-contraseñas",
+    "href": "practica/01_programacion_en_python/ejercicios.html#validador-de-contraseñas",
+    "title": "🛠️ Ejercicios",
+    "section": "15 Validador de contraseñas 😱",
+    "text": "15 Validador de contraseñas 😱\nEscriba un programa que solicite al usuario una contraseña y verifique que cumpla con las siguientes condiciones:\n\nDebe tener entre de 8 y 24 caracteres.\nDebe incluir letras, números y caracteres especiales (@#$%^&*()).\n\nSi la contraseña no es válida, el programa debe informar al usuario qué condición no se cumple y permitirle ingresar una nueva contraseña. El proceso se repite hasta que el usuario ingrese una contraseña válida o decida no continuar.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
+    ]
+  },
+  {
+    "objectID": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-ii",
+    "href": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-ii",
+    "title": "🛠️ Ejercicios",
+    "section": "16 Conteo de caracteres II 😱",
+    "text": "16 Conteo de caracteres II 😱\nAgregue a la función contar_frecuencias del ejercicio Conteo de caracteres un argumento llamado orden que admita los valores \"aparicion\", \"alfabetico\" y \"frecuencia\".\nEste argumento debe permitir ordenar las claves del diccionario resultante según el siguiente criterio:\n\n\"aparicion\": mantiene el orden en que las palabras aparecen por primera vez en la lista original.\n\"alfabetico\": ordena las palabras alfabéticamente.\n\"frecuencia\": ordena las palabras por su frecuencia, de mayor a menor.",
+    "crumbs": [
+      "Práctica",
+      "U1 - Programación en Python",
+      "🛠️ Ejercicios"
     ]
   },
   {
@@ -935,777 +1698,26 @@
     ]
   },
   {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html",
-    "href": "practica/01_programacion_en_python/ejercicios.html",
-    "title": "🛠️ Ejercicios",
+    "objectID": "proyectos/grupal.html",
+    "href": "proyectos/grupal.html",
+    "title": "Proyecto grupal",
     "section": "",
-    "text": "Escriba una función en Python que reciba el radio de un círculo y devuelva su área. Luego, escriba otra función que también reciba el radio de un círculo, pero devuelva su perímetro. Finalmente, escriba una tercera función que reciba el radio de un círculo y devuelva tanto el área como el perímetro.\nUna vez que haya implementado todas las funciones, analice la diferencia entre:\narea, perimetro = calcular_area_y_perimetro(radio=5)\ny\nresultados = calcular_area_y_perimetro(radio=5)\nConsidere el tipo de las variables area, perimetro y resultados.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\n\\[\n\\begin{aligned}\nA &= \\pi \\cdot r^2 \\\\\nP &= 2 \\cdot \\pi \\cdot r\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#área-y-perímetro-de-un-círculo",
-    "href": "practica/01_programacion_en_python/ejercicios.html#área-y-perímetro-de-un-círculo",
-    "title": "🛠️ Ejercicios",
-    "section": "",
-    "text": "Escriba una función en Python que reciba el radio de un círculo y devuelva su área. Luego, escriba otra función que también reciba el radio de un círculo, pero devuelva su perímetro. Finalmente, escriba una tercera función que reciba el radio de un círculo y devuelva tanto el área como el perímetro.\nUna vez que haya implementado todas las funciones, analice la diferencia entre:\narea, perimetro = calcular_area_y_perimetro(radio=5)\ny\nresultados = calcular_area_y_perimetro(radio=5)\nConsidere el tipo de las variables area, perimetro y resultados.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\n\\[\n\\begin{aligned}\nA &= \\pi \\cdot r^2 \\\\\nP &= 2 \\cdot \\pi \\cdot r\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#promociones",
-    "href": "practica/01_programacion_en_python/ejercicios.html#promociones",
-    "title": "🛠️ Ejercicios",
-    "section": "2 Promociones",
-    "text": "2 Promociones\nEscriba una función llamada calcular_precio que reciba dos argumentos: el monto total de una compra y el medio de pago utilizado.\nEl medio de pago puede ser \"efectivo\", \"débito\" o \"crédito\", y según el caso se aplicará una modificación sobre el monto:\n\nSi el medio de pago es \"efectivo\", el monto no se modifica.\nSi es \"débito\", se aplica un descuento del 10% sobre el monto.\nSi es \"crédito\", se aplica un recargo del 5% sobre el monto.\n\nLa función debe retornar el monto final a pagar, con el descuento o recargo aplicado según corresponda.\n\nPunto extra\nModifique la función de modo tal que no sea necesario especificar el medio de pago. En tal caso, el medio de pago se asume \"efectivo\". Ayuda: asigne un valor por defecto al argumento medio. Considere una implementación donde este sea \"efectivo\" y otra donde sea None.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#etapas-de-la-vida",
-    "href": "practica/01_programacion_en_python/ejercicios.html#etapas-de-la-vida",
-    "title": "🛠️ Ejercicios",
-    "section": "3 Etapas de la vida",
-    "text": "3 Etapas de la vida\nImplemente una función que reciba una edad y devuelva un mensaje que indique la etapa de la vida correspondiente.\nUtilice una cadena de condicionales if-elif-else para clasificar la edad en alguno de los siguientes grupos:\n\nMenor a 2 años: bebé.\nEntre 2 (inclusive) y 4 años: infante.\nEntre 4 (inclusive) y 13 años: niño/a.\nEntre 13 (inclusive) y 20 años: adolescente.\nEntre 20 (inclusive) y 65 años: adulto/a.\n65 años o más: persona mayor.\n\nLa función debe imprimir un mensaje del tipo: \"La persona es un/a &lt;etapa&gt;\".",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres",
-    "href": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres",
-    "title": "🛠️ Ejercicios",
-    "section": "4 Conteo de caracteres",
-    "text": "4 Conteo de caracteres\nEscriba una función que reciba una cadena de texto y devuelva un diccionario que indique cuántas veces aparece cada caracter en la cadena. La función no debe diferenciar entre mayúsculas y minúsculas y debe ignorar espacios. Utilice el siguiente ejemplo como validación:\ncontar_caracteres(\"Ahora es mejor que nunca\")\n# {\"a\": 3, \"h\": 1, \"o\": 2, \"r\": 2, \"e\": 3, \"s\": 1, \"m\": 1, \"j\": 1, \"q\": 1, \"u\": 2, \"n\": 2, \"c\": 1}\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara saltear pasos de un bucle cuando se encuentra un espacio se puede utilizar la sentencia continue.\nfor i in ...:\n    # ... &lt;- Se ejecuta en todas las iteraciones\n    if condicion_de_salto:\n        continue\n    # ... &lt;- Se ejecuta en las iteraciones 'condicion_de_salto' es False",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#orden-de-mérito",
-    "href": "practica/01_programacion_en_python/ejercicios.html#orden-de-mérito",
-    "title": "🛠️ Ejercicios",
-    "section": "5 Orden de mérito",
-    "text": "5 Orden de mérito\nSe cuenta con una lista de tuplas que contienen las notas del examen final de Programación 2 para un conjunto de alumnos:\nnotas = [\n    (\"Escalada\", 9),\n    (\"Alonso\", 7),\n    (\"Pérez\", 8),\n    (\"Castro\", 8),\n    (\"Rossini\", 10),\n    (\"Martínez\", 9),\n    (\"Pérez\", 6),\n    (\"Riquelme\", 5),\n]\n\nEscriba un programa que a partir de notas genere un diccionario donde las claves se corresponden con los apellidos y los valores con las notas del examen final.\nEscriba un programa que a partir de notas genere un diccionario donde las claves son las notas y el valor asociado sea una lista con los apellidos de quienes tuvieron esa nota.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#rendimento-académico",
-    "href": "practica/01_programacion_en_python/ejercicios.html#rendimento-académico",
-    "title": "🛠️ Ejercicios",
-    "section": "6 Rendimento académico",
-    "text": "6 Rendimento académico\nSe cuenta con el siguiente diccionario que asocia nombres de estudiantes con una lista de sus calificaciones:\nnotas = {\n    \"Ana\": [8, 9, 10],\n    \"Luis\": [6, 7, 8, 3, 9],\n    \"Carla\": [10, 9, 10],\n    \"Marcos\": [5, 6],\n    \"Sofía\": [7, 7, 8],\n    \"Pedro\": [6, 4, 5, 6, 3, 8],\n    \"Lucía\": [9, 8, 10, 9]\n}\nImplemente una función que resuma el rendimiento académico de los estudiantes. La función debe recibir el diccionario de notas y un argumento adicional llamado modo. Según el valor de modo, se debe devolver un nuevo diccionario con la siguiente información:\n\nSi modo es \"promedio\", se debe devolver el promedio de notas por estudiante.\nSi modo es \"proporcion\", se debe devolver la proporción de exámenes aprobados por estudiante (se considera aprobado todo valor mayor o igual a 6).",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#índice-de-precios",
-    "href": "practica/01_programacion_en_python/ejercicios.html#índice-de-precios",
-    "title": "🛠️ Ejercicios",
-    "section": "7 Índice de precios",
-    "text": "7 Índice de precios\nSe cuenta con la serie mensual del Índice de Precios al Consumidor (IPC) del año 2024:\nipc_2024 = [20.6, 13.2, 11.0, 8.8, 4.2, 4.6, 4.0, 4.2, 3.5, 2.7, 2.4, 2.7]\nRealice los siguientes cálculos y análisis:\n\nDetermine el menor y el mayor índice reportado durante el año.\nCalcule el IPC promedio mensual del 2024.\nEncuentre la diferencia entre el IPC mínimo y máximo del año.\n\n¿En qué mes se registró la inflación más alta?\n\nCalcule la inflación mediana del 2024.\n¿Cómo podría calcular el rango del IPC (diferencia entre el valor máximo y mínimo) sin usar las funciones min() ni max()?",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#resúmenes-estadísticos",
-    "href": "practica/01_programacion_en_python/ejercicios.html#resúmenes-estadísticos",
-    "title": "🛠️ Ejercicios",
-    "section": "8 Resúmenes estadísticos",
-    "text": "8 Resúmenes estadísticos\nCree funciones que, dada una lista de números, calculen los siguientes resúmenes estadísticos:\n\nLa media \\[\n\\text{media}(X) = \\frac{1}{n}\\sum_{i=1}^n{x_i}\n\\]\nEl rango \\[\n\\text{rango}(X) = \\text{max}(X) - \\text{min}(X)\n\\]\nLa varianza \\[\n\\text{var}(X) = \\frac{1}{n}\\sum_{i=1}^n{(x_i - \\bar{x})^2}\n\\]\nEl desvío estándar \\[\n\\text{sd}(X) = \\sqrt{\\text{var}(X)}\n\\]\nLa mediana \\[\n\\begin{array}{lr}\n\\text{mediana}(X) = x_{(\\frac{n + 1}{2})} & \\text{Si } n \\text{ es impar} \\\\\n\\text{mediana}(X) = \\frac{x_{(\\frac{n}{2})} + x_{(\\frac{n}{2}+1)}}{2} & \\text{Si } n \\text{ es par}\n\\end{array}\n\\]\ndonde los \\(x_{(i)}\\) están ordenados de manera ascendente.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#validación-de-dni",
-    "href": "practica/01_programacion_en_python/ejercicios.html#validación-de-dni",
-    "title": "🛠️ Ejercicios",
-    "section": "9 Validación de DNI",
-    "text": "9 Validación de DNI\nCrear una función que dada una cadena de caracteres verifique si se corresponde con un DNI.\nSi es un DNI, devolver True. Caso contrario, devolver False.\nA tener en cuenta:\n\nAlgunos ejemplos de DNI válidos\n\n40.094.127\n19053512\n6.392.780\n\nDNI no válidos\n\n40,094,127\n19-053-512\n123456",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#la-física-del-rebote",
-    "href": "practica/01_programacion_en_python/ejercicios.html#la-física-del-rebote",
-    "title": "🛠️ Ejercicios",
-    "section": "10 La física del rebote",
-    "text": "10 La física del rebote\nUna pelota de goma es lanzada desde una altura inicial de 100 metros. Cada vez que toca el suelo, rebota alcanzando una altura equivalente a 3/5 de la altura desde la que cayó.\nEscriba un programa que imprima una tabla mostrando las alturas alcanzadas por la pelota en cada uno de sus primeros 10 rebotes.\nLuego, implemente este programa como una función que reciba dos parámetros:\n\nAltura inicial desde la que se lanza la pelota.\nCantidad de rebotes que se desea calcular.\n\nLa función debe devolver una lista con las alturas alcanzadas en cada rebote.\n\nPunto extra\nModifique la función para que considere un rebote como “significativo” solo si la altura alcanzada es mayor o igual a un valor mínimo especificado (por ejemplo, 1 centímetro).\nSi la pelota no alcanza esta altura mínima en algún rebote, se considera que ha completado su trayectoria y queda quieta. En este caso, la función debe devolver únicamente los valores correspondientes a los “rebotes significativos”.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#un-montón-de-plata",
-    "href": "practica/01_programacion_en_python/ejercicios.html#un-montón-de-plata",
-    "title": "🛠️ Ejercicios",
-    "section": "11 Un montón de plata",
-    "text": "11 Un montón de plata\nUna mañana ponés un billete en la vereda al lado del Monumento a la Bandera. A partir de ahí, cada día vas y duplicás la cantidad de billetes, apilándolos prolijamente. ¿Cuánto tiempo pasa antes de que la pila de billetes sea más alta que la del Monumento?\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nAlgunas constantes útiles para resolver el problema:\nbillete_grosor = 0.11 * 0.001  # grosor de un billete en metros\naltura_monumento = 70          # altura en metros\nSugerencia: Usar un bucle while para realizar el cálculo.\n\n\n\n\nPunto extra\nEscribe una función que permita determinar la cantidad de días necesarios para superar cualquier altura arbitraria.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#la-conjetura-de-collatz",
-    "href": "practica/01_programacion_en_python/ejercicios.html#la-conjetura-de-collatz",
-    "title": "🛠️ Ejercicios",
-    "section": "12 La conjetura de Collatz",
-    "text": "12 La conjetura de Collatz\nLa conjetura de Collatz dice:\n\nSi tomamos un número natural cualquiera, su secuencia de Collatz termina llegando siempre al número 1.\n\nSecuencia de Collatz:\n\nSi el número es par, se divide entre 2.\nSi el número es impar, se multiplica por 3 y se le suma 1.\n\n\\[\nf(n) =\n\\begin{cases}\n    \\displaystyle \\frac{n}{2} & \\text{si } n \\text{ es par,} \\\\ \\\\\n    3n + 1 & \\text{si } n \\text{ es impar.}\n\\end{cases}\n\\]\nEscribir una función que calcule la secuencia de Collatz para un número natural cualquiera.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\n\nUtilizar bucle while.\nEl bucle debe correr solo cuando el valor de la secuencia sigue siendo mayor a 1. Si es 1, hay que frenar.\nInsertar los elementos de la secuencia en una lista.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#adivina-el-número",
-    "href": "practica/01_programacion_en_python/ejercicios.html#adivina-el-número",
-    "title": "🛠️ Ejercicios",
-    "section": "13 Adivina el número",
-    "text": "13 Adivina el número\nEscriba un programa que implemente el clásico juego “Adivina el número”. El programa debe:\n\nTener un número secreto (entero) que el usuario debe adivinar.\nSolicitar al usuario que ingrese un número.\nSi el número ingresado no coincide con el número secreto:\n\nInformar si el número ingresado es mayor o menor que el número secreto.\nPedir al usuario que intente nuevamente.\n\nSi el usuario adivina el número, el programa debe terminar mostrando un mensaje de felicitaciones.\n\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara generar números aleatorios enteros en un rango dado puede utilizar randint() del módulo random:\nimport random\nrandom.randint(-100, 100)     # Genera un número aleatorio entre -100 y 100\n\n\n\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nEl programa que resuelve este problema realiza una cantidad de iteraciones que se desconoce al momento de escribirlo. La solución típica a este tipo de problema involucra el uso de while True junto a la sentencia break.\nwhile True:\n    # realizar alguna accion\n    if condicion_de_salida:\n        break\n\n\n\n\nPunto extra\nImplemente una versión de este programa donde el usuario cuenta con 10 intentos.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-pythonico",
-    "href": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-pythonico",
-    "title": "🛠️ Ejercicios",
-    "section": "14 Conteo de caracteres Pythonico",
-    "text": "14 Conteo de caracteres Pythonico\nLos diccionarios en Python cuentan con un método .get() que devuelve el valor asociado a una clave. Este método permite pasarle un segundo argumento con un valor que se devuelve cuando no se encuentra un elemento asociado a la clave que le pasamos. Por ejemplo:\nd = {\"a\": 1, \"b\": 20}\nd.get(\"b\", 0)\n20\nd.get(\"c\", 0)\n0\nModifique la función contar_caracteres del ejercicio Conteo de caracteres utilizando el metodo .get() para obtener una implementación más sencilla. Así, debería poder eliminar el bloque if.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#validador-de-contraseñas",
-    "href": "practica/01_programacion_en_python/ejercicios.html#validador-de-contraseñas",
-    "title": "🛠️ Ejercicios",
-    "section": "15 Validador de contraseñas 😱",
-    "text": "15 Validador de contraseñas 😱\nEscriba un programa que solicite al usuario una contraseña y verifique que cumpla con las siguientes condiciones:\n\nDebe tener entre de 8 y 24 caracteres.\nDebe incluir letras, números y caracteres especiales (@#$%^&*()).\n\nSi la contraseña no es válida, el programa debe informar al usuario qué condición no se cumple y permitirle ingresar una nueva contraseña. El proceso se repite hasta que el usuario ingrese una contraseña válida o decida no continuar.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-ii",
-    "href": "practica/01_programacion_en_python/ejercicios.html#conteo-de-caracteres-ii",
-    "title": "🛠️ Ejercicios",
-    "section": "16 Conteo de caracteres II 😱",
-    "text": "16 Conteo de caracteres II 😱\nAgregue a la función contar_frecuencias del ejercicio Conteo de caracteres un argumento llamado orden que admita los valores \"aparicion\", \"alfabetico\" y \"frecuencia\".\nEste argumento debe permitir ordenar las claves del diccionario resultante según el siguiente criterio:\n\n\"aparicion\": mantiene el orden en que las palabras aparecen por primera vez en la lista original.\n\"alfabetico\": ordena las palabras alfabéticamente.\n\"frecuencia\": ordena las palabras por su frecuencia, de mayor a menor.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "informacion/programa.html",
-    "href": "informacion/programa.html",
-    "title": "Programa",
-    "section": "",
-    "text": "Los profesionales en Estadística necesitan contar con habilidades avanzadas de programación, que les permitan abordar problemas complejos y desarrollar soluciones eficientes y robustas.\nLa asignatura Programación en Python tiene como propósito consolidar las habilidades de programación de los estudiantes a través del uso del lenguaje Python, ampliamente adoptado en la comunidad científica y en la industria por su versatilidad y su extenso ecosistema de librerías. En esta asignatura, se abordan los principales paradigmas de programación (imperativo, orientado a objetos y funcional), promoviendo un pensamiento computacional flexible y la escritura de programas estructurados, legibles y reutilizables.\nLa materia también introduce herramientas fundamentales para el análisis de datos en Python, incluyendo el uso de paquetes como NumPy, Polars, Matplotlib, Seaborn, Plotnine, statsmodels y scikit-learn, que resultan fundamentales en el desarrollo de proyectos de análisis, modelización y visualización de datos.\nAdemás, se incorporan prácticas y herramientas que promueven un trabajo colaborativo ágil, robusto y escalable. Estas incluyen el control de versiones con git y el uso de GitHub como plataforma de trabajo colaborativo, el uso de entornos virtuales para aislar dependencias y la incorporación de herramientas que robustecen y automatizan el desarrollo de soluciones basadas en la programación, como el análisis estático, el formateo automático y los flujos de integración continua.\nOfrecida como materia electiva para la Licenciatura en Estadística, esta asignatura consolida las competencias informáticas de los estudiantes y los prepara para afrontar desafíos profesionales que requieren un dominio sólido de la programación y de las herramientas modernas del análisis de datos.",
-    "crumbs": [
-      "Información",
-      "Programa"
-    ]
-  },
-  {
-    "objectID": "informacion/programa.html#fundamentación",
-    "href": "informacion/programa.html#fundamentación",
-    "title": "Programa",
-    "section": "",
-    "text": "Los profesionales en Estadística necesitan contar con habilidades avanzadas de programación, que les permitan abordar problemas complejos y desarrollar soluciones eficientes y robustas.\nLa asignatura Programación en Python tiene como propósito consolidar las habilidades de programación de los estudiantes a través del uso del lenguaje Python, ampliamente adoptado en la comunidad científica y en la industria por su versatilidad y su extenso ecosistema de librerías. En esta asignatura, se abordan los principales paradigmas de programación (imperativo, orientado a objetos y funcional), promoviendo un pensamiento computacional flexible y la escritura de programas estructurados, legibles y reutilizables.\nLa materia también introduce herramientas fundamentales para el análisis de datos en Python, incluyendo el uso de paquetes como NumPy, Polars, Matplotlib, Seaborn, Plotnine, statsmodels y scikit-learn, que resultan fundamentales en el desarrollo de proyectos de análisis, modelización y visualización de datos.\nAdemás, se incorporan prácticas y herramientas que promueven un trabajo colaborativo ágil, robusto y escalable. Estas incluyen el control de versiones con git y el uso de GitHub como plataforma de trabajo colaborativo, el uso de entornos virtuales para aislar dependencias y la incorporación de herramientas que robustecen y automatizan el desarrollo de soluciones basadas en la programación, como el análisis estático, el formateo automático y los flujos de integración continua.\nOfrecida como materia electiva para la Licenciatura en Estadística, esta asignatura consolida las competencias informáticas de los estudiantes y los prepara para afrontar desafíos profesionales que requieren un dominio sólido de la programación y de las herramientas modernas del análisis de datos.",
-    "crumbs": [
-      "Información",
-      "Programa"
-    ]
-  },
-  {
-    "objectID": "informacion/programa.html#objetivos",
-    "href": "informacion/programa.html#objetivos",
-    "title": "Programa",
-    "section": "Objetivos",
-    "text": "Objetivos\nQue los estudiantes logren:\n\nutilizar Python como lenguaje de programación general para resolver problemas y desarrollar programas eficientes, aplicando los paradigmas imperativo, orientado a objetos y funcional;\ndiseñar, implementar y documentar soluciones empleando buenas prácticas y aprovechando el ecosistema de Python para el análisis, modelización y visualización de datos;\ndesarrollar proyectos integrales de análisis de datos con flujos de trabajo eficientes, reproducibles y portables; y\ntrabajar de forma colaborativa utilizando git, GitHub y otras herramientas que promuevan la calidad, la trazabilidad y el desarrollo sostenible de soluciones basadas en código.",
-    "crumbs": [
-      "Información",
-      "Programa"
-    ]
-  },
-  {
-    "objectID": "informacion/programa.html#contenidos",
-    "href": "informacion/programa.html#contenidos",
-    "title": "Programa",
-    "section": "Contenidos",
-    "text": "Contenidos\n\nUnidad 1. Introducción a Python\n\nLenguaje Python y su ecosistema. Uso de la interfaz Positron. Sintaxis de Python. Expresiones. Variables y asignaciones. Tipos de datos elementales. Operadores numéricos, de comparación y lógicos. Funciones. Ejecución condicional de código. Bucles definidos y no definidos. Listas, tuplas y diccionarios. Uso de código externo. Módulos y librerías. Librería estándar de Python. Instalación y gestión de librerías. Noción de ambiente virtual. Scripting. Lectura y escritura de archivos de texto plano. Manejo de excepciones.\n\nUnidad 2. Programación orientada a objetos\n\nPrincipios fundamentales. Objetos, clases e instancias. Atributos y métodos. Encapsulamiento. Propiedades públicas y privadas. Atributos y métodos de clase. Herencia. Polimorfismo. Sobrecarga de operadores. Excepciones a medida.\n\nUnidad 3. Programación funcional\n\nPrincipios fundamentales. Funciones como ciudadanos de primera clase. Funciones puras. Funciones anónimas. Closures. Recursión. Funciones de orden superior: map, filter, reduce. Comprensiones como alternativas idiomáticas a map y filter. Aplicación parcial de funciones. Decoradores. Evaluación estricta y no estricta. Evaluación perezosa (lazy) e inmediata (eager). Generadores. Iterables e iteradores\n\nUnidad 4. Análisis de datos en Python\n\nIntroducción a las Jupyter Notebooks. Trabajo con arreglos multidimensionales en NumPy. Lectura y procesamiento de datos tabulares con Polars. El formato .parquet. Uso de LazyFrames de Polars para el cómputo eficiente con grandes conjuntos de datos. Creación de visualizaciones con Matplotlib, Seaborn y Plotnine. Modelos estadísticos y de aprendizaje automático con statsmodels y scikit-learn. Pipelines de procesamiento de datos en scikit-learn.\n\nUnidad 5. Herramientas y prácticas para el desarrollo colaborativo\n\nGit y sus comandos fundamentales: clone, fetch, merge, pull, add, push, checkout, status, branch, merge, log y rebase. GitHub. Herramientas del trabajo colaborativo en GitHub: issues, pull requests y forks. Integración y despliegue continuo con GitHub Actions. Herramientas para el análisis estático y formateo de código. Herramientas modernas para la gestión de ambientes virtuales. Pre-commit. Buenas prácticas en la gestión de datos en proyectos colaborativos. Gestión segura de claves.",
-    "crumbs": [
-      "Información",
-      "Programa"
-    ]
-  },
-  {
-    "objectID": "informacion/calendario.html",
-    "href": "informacion/calendario.html",
-    "title": "Calendario",
-    "section": "",
-    "text": "Semana\nFecha\nUnidad\nTemas\nActividades\n\n\n\n\n1\n16-mar\n1\n\nPython y su ecosistema.\nPositron.\nExpresiones.\nVariables y asignaciones.\nTipos de datos elementales.\nOperadores numéricos, de comparación y lógicos.\nFunciones.\nEjecución condicional de código.\nBucles definidos y no definidos.\n\n\n\n\n2\n23-mar\n1\n\nListas, tuplas y diccionarios.\nUso de código externo.\n\nMódulos y librerías.\n\nLibrería estándar de Python.\n\n\n\n\n3\n30-mar\n1\n\nAmbientes virtuales.\nInstalación y gestión de librerías.\nLectura y escritura de archivos de texto plano.\nScripting.\nExcepciones.\n\n\n\n\n4\n6-abr\n2\n\nObjetos, clases e instancias.\nAtributos y métodos.\nEncapsulamiento.\n\n\n\n\n5\n13-abr\n2\n\nPolimorfismo.\n\nMétodos mágicos.\nSobrecaraga de operadores.\n\nHerencia.\n\nSimple.\nDoble.\n\nExcepciones a medida.\n\n\n\n\n6\n20-abr\n3\n\nFunciones como ciudadanos de primera clase.\nFunciones puras.\nFunciones anonimas.\nFunciones variádicas.\nRecursión.\n\n\n\n\n7\n27-abr\n3\n\nFunciones de orden superior: map, filter, reduce.\nComprensiones.\nGeneradores.\nIterables e iteradores.\nDecoradores.\nClosures.\nAplicacion parcial de funciones.\n\n\n\n\n8\n4-may\n4\n\nUso de Jupyter Notebooks.\nLectura y procesamiento de datos tabulares con Polars.\nEl formato .parquet.\nArreglos multidimensionales en NumPy.\nUso de LazyFrames de Polars.\n\nParcial\n\n\n9\n11-may\n4\n\nModelización estadística y aprendizaje automático.\n\nstatsmodels\nscikit-learn\n\nCreacion de visualizaciones.\n\nmatplotlib\nseaborn\nplotnine\n\nPipelines de procesamiento de datos en scikit-learn.\n\nPublicación TP 1\n\n\n10\n18-may\n4\n\nCierre de temas de Unidad 4.\nTrabajo en TP 1.\n\nRecuperatorio\n\n\n11\n25-may\n4\n\nTrabajo en TP 1.\n\nPresentación TP 1\n\n\n12\n1-jun\n5\n\nSistemas de control de versiones.\nGit y sus comandos fundamentales.\nGitHub:\n\nAutenticación.\nConfiguración.\nCreacion de repositorios.\n\nHerramientas del trabajo colaborativo en GitHub:\n\nissues, pull requests y forks.\n\nWorkflow de trabajo colaborativo.\n\nPublicación TP 2\n\n\n13\n8-jun\n5\n\nGestión de ambientes virtuales uv.\nAnalisis estático y formateo de código con ruff.\nUso de pre-commit.\nGitHub Actions.\nBuenas practicas en proyectos colaborativos:\n\nGestión de datos.\nGestion de claves.\n\n\n\n\n\n14\n15-jun\n5\n\nCierre de temas de Unidad 5.\nTrabajo en TP 2.\n\n\n\n\n15\n22-jun\n5\n\nTrabajo en TP 2.\n\nPresentación TP 2",
-    "crumbs": [
-      "Información",
-      "Calendario"
-    ]
-  },
-  {
-    "objectID": "informacion/aprobacion.html",
-    "href": "informacion/aprobacion.html",
-    "title": "Aprobación",
-    "section": "",
-    "text": "📝 Examen parcial: individual y en computadora. Hay un recuperatorio, de similares características, que reemplaza la nota del parcial.\n🧠🤝 Trabajos prácticos (2): se realizan tanto en clase como fuera de ella, en grupos de dos o tres integrantes. Se entrega el código desarrollado, un resumen ejecutivo y se presenta oralmente en clase.\n\nTodas las instancias se califican en una escala de 0 a 10 y se aprueban con 6.",
-    "crumbs": [
-      "Información",
-      "Aprobación"
-    ]
-  },
-  {
-    "objectID": "informacion/aprobacion.html#instancias-de-evaluación",
-    "href": "informacion/aprobacion.html#instancias-de-evaluación",
-    "title": "Aprobación",
-    "section": "",
-    "text": "📝 Examen parcial: individual y en computadora. Hay un recuperatorio, de similares características, que reemplaza la nota del parcial.\n🧠🤝 Trabajos prácticos (2): se realizan tanto en clase como fuera de ella, en grupos de dos o tres integrantes. Se entrega el código desarrollado, un resumen ejecutivo y se presenta oralmente en clase.\n\nTodas las instancias se califican en una escala de 0 a 10 y se aprueban con 6.",
-    "crumbs": [
-      "Información",
-      "Aprobación"
-    ]
-  },
-  {
-    "objectID": "informacion/aprobacion.html#condiciones-de-aprobación",
-    "href": "informacion/aprobacion.html#condiciones-de-aprobación",
-    "title": "Aprobación",
-    "section": "Condiciones de aprobación",
-    "text": "Condiciones de aprobación\n\nPromoción\n\nQuienes aprueben el parcial individual (con nota \\(\\text{PI}\\)), el trabajo práctico grupal 1 (con nota \\(\\text{TP1}\\)) y el trabajo práctico grupal 2 (con nota \\(\\text{TP2}\\)), adquieren la condición de estudiante promovido y su nota final se calcula como \\(\\frac{1}{3} \\times (\\text{PI} + \\text{TP1} + \\text{TP2})\\).\n\nRegularidad\n\nQuienes aprueben el parcial individual (o su recuperatorio) y solo uno de los trabajos prácticos grupales, adquieren la condición de estudiante regular.\n\nLibres\n\nQuienes no aprueben el parcial individual (ni su recuperatorio) o ninguno de los dos trabajos prácticos grupales, adquieren la condición de estudiante libre.",
-    "crumbs": [
-      "Información",
-      "Aprobación"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programación en Python",
-    "section": "",
-    "text": "Programación en Python\n      \n\n      \n      \n        \n        \n          \n           \n          Licenciatura en Estadística\n        \n        \n        \n          \n           \n          Facultad de Ciencias Económicas y Estadística (UNR)\n        \n        \n        \n          \n           \n          1° Cuatrimestre 2026\n        \n        \n        \n          \n           \n          Miércoles - 11:00 a 14:00   |   Jueves - 8:00 a 10:00\n        \n        \n      \n      \n    \n  \n\n  \n  \n    \n  \n  \n\nNo hay resultados\n\n\n\n  \n    Docentes\n\n    \n\n    \n    \n        \n\n        Tomás Capretto\n        \n          \n          \n          \n            \n            tomas.capretto@fcecon.unr.edu.ar\n          \n          \n          \n          \n            \n            \n            Consultas: Viernes 17:00hs\n            \n          \n          \n        \n      \n    \n        \n\n        Dolores Sollberger\n        \n          \n          \n          \n            \n            dolores.sollberger@fcecon.unr.edu.ar\n          \n          \n          \n          \n            \n            \n            Consultas: Martes 17:00hs\n            \n          \n          \n        \n      \n    \n    \n  \n\nNo hay resultados"
-  },
-  {
-    "objectID": "informacion/bibliografia.html",
-    "href": "informacion/bibliografia.html",
-    "title": "Bibliografía",
-    "section": "",
-    "text": "Downey (2024) Matthes (2022) Sweigart (2025)\n\n\n\nDowney, Allen B. 2024. Think Python. 3.ª ed. O’Reilly Media. https://allendowney.github.io/ThinkPython/.\n\n\nMatthes, Eric. 2022. Python Crash Course. 3rd ed. No Starch Press.\n\n\nSweigart, Al. 2025. Automate the Boring Stuff with Python. 3rd ed. No Starch Press. https://automatetheboringstuff.com/3e/.\n\n\n\n\n\n\nKalb (2022) Lott y Phillips (2021) Sweigart (2020)\n\n\n\nKalb, Irv. 2022. Object-Oriented Python. No Starch Press.\n\n\nLott, Steven F., y Dusty Phillips. 2021. Python Object-Oriented Programming. 4th ed. Packt Publishing.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nBhargava (2024) Lott (2022) Mertz (2015) Sturtz (2024) Sweigart (2020)\n\n\n\nBhargava, Aditya Y. 2024. Grokking Algorithms. 2nd ed. Manning Publications.\n\n\nLott, Steven F. 2022. Functional Python Programming. 3rd ed. Packt Publishing.\n\n\nMertz, David. 2015. Functional Programming in Python. O’Reilly Media.\n\n\nSturtz, John. 2024. «Functional Programming in Python: When and How to Use It». 2024. https://realpython.com/python-functional-programming/.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nGéron (2025) Holtz (s. f.) Janssens y Nieuwdorp (2025) Kakegawa (2024) Kibirige, H. (s. f.) Polars Developers (s. f.) Rougier (2021) Scikit-learn Developers (s. f.) Statsmodels Developers (s. f.)\n\n\n\nGéron, Aurélien. 2025. Hands-On Machine Learning with Scikit-Learn and PyTorch. 4.ª ed. O’Reilly Media.\n\n\nHoltz, Yan. s. f. «Python Graph Gallery». https://python-graph-gallery.com.\n\n\nJanssens, Jeroen, y Timo Nieuwdorp. 2025. Python Polars: The Definitive Guide. O’Reilly Media.\n\n\nKakegawa, Yuki. 2024. Polars Cookbook. Packt Publishing.\n\n\nKibirige, H. s. f. «Documentación de Plotnine». https://plotnine.org/.\n\n\nPolars Developers. s. f. «Polars User Guide». https://docs.pola.rs/.\n\n\nRougier, Nicolas P. 2021. «Scientific Visualization: Python + Matplotlib». 2021. https://github.com/rougier/scientific-visualization-book.\n\n\nScikit-learn Developers. s. f. «Documentación de Scikit-learn». https://scikit-learn.org.\n\n\nStatsmodels Developers. s. f. «Documentación de Statsmodels». https://www.statsmodels.org.\n\n\n\n\n\n\nAstral (s. f.a) Astral (s. f.b) Moure (2024) Skoulikari (2021) Sottile, Anthony (s. f.)\n\n\n\nAstral. s. f.a. «Documentación de Ruff». https://docs.astral.sh/ruff/.\n\n\nAstral. s. f.b. «Documentación de uv». https://docs.astral.sh/uv.\n\n\nMoure, Brais. 2024. Git y GitHub desde cero. 2.ª ed. Leanpub.\n\n\nSkoulikari, Anna. 2021. Learning Git. O’Reilly Media.\n\n\nSottile, Anthony. s. f. «Documentación de pre-commit». https://pre-commit.com/.",
-    "crumbs": [
-      "Información",
-      "Bibliografía"
-    ]
-  },
-  {
-    "objectID": "informacion/bibliografia.html#principal",
-    "href": "informacion/bibliografia.html#principal",
-    "title": "Bibliografía",
-    "section": "",
-    "text": "Downey (2024) Matthes (2022) Sweigart (2025)\n\n\n\nDowney, Allen B. 2024. Think Python. 3.ª ed. O’Reilly Media. https://allendowney.github.io/ThinkPython/.\n\n\nMatthes, Eric. 2022. Python Crash Course. 3rd ed. No Starch Press.\n\n\nSweigart, Al. 2025. Automate the Boring Stuff with Python. 3rd ed. No Starch Press. https://automatetheboringstuff.com/3e/.\n\n\n\n\n\n\nKalb (2022) Lott y Phillips (2021) Sweigart (2020)\n\n\n\nKalb, Irv. 2022. Object-Oriented Python. No Starch Press.\n\n\nLott, Steven F., y Dusty Phillips. 2021. Python Object-Oriented Programming. 4th ed. Packt Publishing.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nBhargava (2024) Lott (2022) Mertz (2015) Sturtz (2024) Sweigart (2020)\n\n\n\nBhargava, Aditya Y. 2024. Grokking Algorithms. 2nd ed. Manning Publications.\n\n\nLott, Steven F. 2022. Functional Python Programming. 3rd ed. Packt Publishing.\n\n\nMertz, David. 2015. Functional Programming in Python. O’Reilly Media.\n\n\nSturtz, John. 2024. «Functional Programming in Python: When and How to Use It». 2024. https://realpython.com/python-functional-programming/.\n\n\nSweigart, Al. 2020. Beyond the Basic Stuff with Python. No Starch Press. https://inventwithpython.com/beyond/.\n\n\n\n\n\n\nGéron (2025) Holtz (s. f.) Janssens y Nieuwdorp (2025) Kakegawa (2024) Kibirige, H. (s. f.) Polars Developers (s. f.) Rougier (2021) Scikit-learn Developers (s. f.) Statsmodels Developers (s. f.)\n\n\n\nGéron, Aurélien. 2025. Hands-On Machine Learning with Scikit-Learn and PyTorch. 4.ª ed. O’Reilly Media.\n\n\nHoltz, Yan. s. f. «Python Graph Gallery». https://python-graph-gallery.com.\n\n\nJanssens, Jeroen, y Timo Nieuwdorp. 2025. Python Polars: The Definitive Guide. O’Reilly Media.\n\n\nKakegawa, Yuki. 2024. Polars Cookbook. Packt Publishing.\n\n\nKibirige, H. s. f. «Documentación de Plotnine». https://plotnine.org/.\n\n\nPolars Developers. s. f. «Polars User Guide». https://docs.pola.rs/.\n\n\nRougier, Nicolas P. 2021. «Scientific Visualization: Python + Matplotlib». 2021. https://github.com/rougier/scientific-visualization-book.\n\n\nScikit-learn Developers. s. f. «Documentación de Scikit-learn». https://scikit-learn.org.\n\n\nStatsmodels Developers. s. f. «Documentación de Statsmodels». https://www.statsmodels.org.\n\n\n\n\n\n\nAstral (s. f.a) Astral (s. f.b) Moure (2024) Skoulikari (2021) Sottile, Anthony (s. f.)\n\n\n\nAstral. s. f.a. «Documentación de Ruff». https://docs.astral.sh/ruff/.\n\n\nAstral. s. f.b. «Documentación de uv». https://docs.astral.sh/uv.\n\n\nMoure, Brais. 2024. Git y GitHub desde cero. 2.ª ed. Leanpub.\n\n\nSkoulikari, Anna. 2021. Learning Git. O’Reilly Media.\n\n\nSottile, Anthony. s. f. «Documentación de pre-commit». https://pre-commit.com/.",
-    "crumbs": [
-      "Información",
-      "Bibliografía"
-    ]
-  },
-  {
-    "objectID": "informacion/bibliografia.html#complementaria",
-    "href": "informacion/bibliografia.html#complementaria",
-    "title": "Bibliografía",
-    "section": "Complementaria",
-    "text": "Complementaria\n\nRamalho (2022) Stephenson (2019) Sweigart (2021) Vaughan (2019)\n\n\n\n\n\nRamalho, Luciano. 2022. Fluent Python. 2.ª ed. O’Reilly Media.\n\n\nStephenson, Ben. 2019. The Python Workbook. 2.ª ed. Springer Cham.\n\n\nSweigart, Al. 2021. The Big Book of Small Python Projects. No Starch Press. https://inventwithpython.com/bigbookpython/.\n\n\nVaughan, Lee. 2019. Impractical Python Projects. No Starch Press.",
-    "crumbs": [
-      "Información",
-      "Bibliografía"
-    ]
-  },
-  {
-    "objectID": "informacion/ia.html",
-    "href": "informacion/ia.html",
-    "title": "Uso de Inteligencia Artificial",
-    "section": "",
-    "text": "Las herramientas de Inteligencia Artificial (IA) son muy poderosas y pueden ayudarte a resolver de manera efectiva problemas de todo tipo, especialmente problemas de programación. De hecho, seguramente la IA pueda resolver todos los ejercicios que se presenten en esta materia por vos. El punto es que no tiene sentido cursar la materia si te vas a limitar a copiar y pegar enunciados en un chat. A corto plazo, te puede dar una sensación atractiva de satisfacción y alivio (¿a quién no le gusta tener la práctica resuelta?), pero a mediano y largo plazo puede contribuir a aumentar tu frustración cuando aparezca un problema que la IA o bien no resuelve, o no lo hace de la mejor manera, y vos no logras comprender ni resolver por cuenta propia.\nAhora bien, es innegable que en el mundo profesional las herramientas de IA se usan muchísimo. Ayudan de verdad a resolver problemas que quizá no podríamos abordar por nuestra cuenta, o que podríamos resolver, pero a un costo de tiempo mucho mayor. Por eso, aprender a usarlas sí que tiene un valor real.\nPor otro lado, cuando la tendencia a siempre responder, y de manera complaciente, de los modelos de IA se combinan con nuestro sesgo de automatización, es fácil caer en una encerrona cognitiva. En esa situación, podemos aceptar sin suficiente juicio lo que la herramienta propone y perder de vista si realmente entendemos lo que está pasando y, sobre todo, si la solución que se obtiene es satisfactoria. Salir de esa encerrona, por ahora, sigue siendo parte del trabajo humano.\nPara extraer lo mejor de estas herramientas, entonces, es clave conocer el problema que se está resolviendo. Si vamos a usarlas para programar en Python (o cualquier otro lenguaje), necesitamos contar con un dominio sólido del lenguaje y de los fundamentos de la programación.\nEn otras palabaras, en esta materia no estamos en contra del uso de herramientas de IA. Todo lo contrario. Creemos que pueden ser muy valiosas en el trabajo profesional y también pueden aportar al aprendizaje. Sin embargo, la base propia de conocimientos necesaria para usar la IA de manera efectiva solo se construye atravesando el proceso de aprendizaje. La IA no puede reemplazar ese proceso porque es personal. Con ese objetivo, dejamos estas recomendaciones generales para el uso de IA durante la materia:\n\nEn vez de copiar y pegar el enunciado de un ejercicio en un chat, describile con tus palabras:\n\nde qué se trata el ejercicio que estás trabajando\nqué avances hiciste hasta ahora\nqué parte no entendés\ntu código y los errores, si los hay.\n\nEs mejor usar la IA como un tutor que te guía, que como un particular que realiza la tarea por vos.\nDel mismo modo que mirar videos de cocina no te hace buen chef, copiar y pegar código tampoco te convertirá en buen programador. Cuando la IA te devuelva código, no copies y pegues ese código en el editor de manera automática. Transcribilo manualmente, aunque pese, siendo crítico de lo que la IA te provee:\n\n¿por qué hace este paso?\n¿podría escribir esta parte del programa de otra manera?\n¿es necesario agregar este comentario?\n¿tiene sentido documentar tan exhaustivamente esta función auxiliar?\n\nCopiar y pegar texto para dar la impresión que dominas un tema tampoco te ayuda a aprender. El proceso de escritura enriquece y solidifica el entendimiento sobre un tema. Por eso se recomienda no utilizar la IA inmediatamente a la hora de redactar respuestas o párrafos enteros. Una vez que elaboraste al menos un borrador de tu respuesta (por ejemplo, un punteo con los puntos principales en un orden presuntamente correcto) se puede utilizar la IA para buscar expresiones alternativas, corregir errores gramaticales, adaptar estilo y/o tono y, en general, obtener una segunda opinión y revisión general del texto elaborado.\n\nLa distinción clave es si la IA contribuye a tu aprendizaje o si está realizando el trabajo intelectual que se espera que vos realices. En caso de duda, una regla orientadora es preguntarse: ¿puedo explicar y defender con palabras propias todo lo que estoy entregando?",
-    "crumbs": [
-      "Información",
-      "Uso de Inteligencia Artificial"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html",
-    "title": "🪞 Autoevaluación",
-    "section": "",
-    "text": "¿Qué valor contiene la variable contador luego de ejecutar el siguiente código?\ncontador = 20\ncontador + 1\nComplete la siguiente tabla indicando si el nombre es válido para una variable de Python.\n\n\n\nNombre\n¿Válido?\nJustificación\n\n\n\n\nbalance\n\n\n\n\nbalanceActual\n\n\n\n\nbalance-actual\n\n\n\n\nbalance actual\n\n\n\n\nbalance_actual\n\n\n\n\nmis.datos\n\n\n\n\n0cuenta\n\n\n\n\ncuenta0\n\n\n\n\n_cuenta\n\n\n\n\nSPAM\n\n\n\n\ncantidad$",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#variables",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#variables",
-    "title": "🪞 Autoevaluación",
-    "section": "",
-    "text": "¿Qué valor contiene la variable contador luego de ejecutar el siguiente código?\ncontador = 20\ncontador + 1\nComplete la siguiente tabla indicando si el nombre es válido para una variable de Python.\n\n\n\nNombre\n¿Válido?\nJustificación\n\n\n\n\nbalance\n\n\n\n\nbalanceActual\n\n\n\n\nbalance-actual\n\n\n\n\nbalance actual\n\n\n\n\nbalance_actual\n\n\n\n\nmis.datos\n\n\n\n\n0cuenta\n\n\n\n\ncuenta0\n\n\n\n\n_cuenta\n\n\n\n\nSPAM\n\n\n\n\ncantidad$",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#números",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#números",
-    "title": "🪞 Autoevaluación",
-    "section": "2 Números",
-    "text": "2 Números\n\n¿Cuál es el tipo de 10 / 2? ¿Por qué?\n¿Cuál es el tipo de 5 * 2? ¿Por qué?\n¿Por qué 5 == 5.0 es True?",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#booleanos",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#booleanos",
-    "title": "🪞 Autoevaluación",
-    "section": "3 Booleanos",
-    "text": "3 Booleanos\n\n¿Cuál es el resultado de las siguientes expresiones? ¿Por qué?\nFalse or not False\nnot (True and True)\nnot True and True\n\"True\" != True\n10 &gt; 5 + 3\nNone is None\nFalse is False\nEjecute línea por línea los siguientes bloques y analice los resultados.\nint(True) * 50\nTrue * 50\n1 is True\nbool(1) is True\nid(True)\nid(bool(1))\nid(bool(1024))\n¿Cuáles son los 3 operadores booleanos?",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#cadenas-de-caracteres",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#cadenas-de-caracteres",
-    "title": "🪞 Autoevaluación",
-    "section": "4 Cadenas de caracteres",
-    "text": "4 Cadenas de caracteres\n\n¿Por qué la siguiente comparación resulta en True?\n\"spam\" + \"spamspam\" == \"spam\" * 3\n¿Por qué la siguiente expresión resulta en un error? ¿Cómo se puede arreglar?\n\"Me comí \" + 6 + \" panchos.\"\n¿Encuentra algo extraño en la siguiente expresión? ¿Cómo la mejoraría?\nmateria = \"Programación 2\"\nprint(\"¡Sean bienvenidos a la materia {materia}!\")\nExplique por qué es redundante utilizar str() en el siguiente bloque de código:\nx, y = 10, 20\nprint(f\"La suma de {str(x)} y {str(y)} es: {str(x + y)}.\")\nConsidere el siguiente bloque de código:\nmensaje = \"Hola, ¿cómo estes?\"\nmensaje[-3] = \"á\"\n\n¿Cuál es la intención detrás del programa?\n¿Por qué no funciona?\n¿Cómo podría arreglarlo? Alerta: la solución no es muy elegante.\n\n¿Cuál es el resultado de list(\"abcdefgh\")? ¿Por qué?\n¿Por qué set(\"abcde\") es distinto de {\"abcde\"}?",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#funciones",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#funciones",
-    "title": "🪞 Autoevaluación",
-    "section": "5 Funciones",
-    "text": "5 Funciones\n\n¿Cuál es la diferencia entre una función y una llamada a función?\n¿Cuál es el valor que devuelve una función que no tiene return?\n¿Cuándo se ejecuta el código dentro de una función: cuando la función se define o cuando se la llama? Considere la siguiente función:\ndef suma(x, y):\n    print(100 / 0)\n    return x + y\nLuego, ejecute el siguiente bloque:\nsuma(2, 4)",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#listas",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#listas",
-    "title": "🪞 Autoevaluación",
-    "section": "6 Listas",
-    "text": "6 Listas\n\n¿Qué es []? ¿Cuál es el resultado de len([])?\n¿Por qué la siguiente expresión resulta en False? Ayuda: use la función id().\n[] is []\n¿Por qué se obtiene un error en el siguiente bloque de código?\nl = []\nl[0]\nSi [0][0] devuelve 0, ¿por qué [1][1] no devuelve [1]?\n¿Cuál es el valor de x en el siguiente bloque de código? ¿Por qué?\nl = [\"hola\", \"hola hola\", \"hasta luego\"]\nx = l.remove(\"hola\")\n¿Cómo le asignaría el valor \"hola\" como el tercer valor en una lista almacenada en una variable llamada cosas? Asuma que cosas contiene [2, 4, 6, 8, 10].\nAsuma que letras contiene la lista [\"a\", \"b\", \"c\", \"d\"]:\n\n¿A qué evalúa letras[-1]?\n¿A qué evalúa letras[:2]?\n¿A qué evalúa letras[int(int('3' * 2) // 11)]? ¿Es necesario usar dos veces int()?\n\nAsuma que bartulos contiene la lista [3.14, \"casa\", 11, \"casa\", True]:\n\n¿A qué evalúa bartulos.index(\"casa\")? ¿Por qué?\n¿Cómo queda la lista en bartulos después de ejecutar bartulos.append(99)?\n¿Cómo queda la lista en bartulos después de ejecutar bartulos.remove(\"casa\"') ?¿Por qué?\n\n¿Cuáles son los operadores para la concatenación y la replicación de listas?\n¿Cuál es la diferencia entre los métodos append() e insert() de las listas?\n¿Cuáles son dos formas de eliminar valores de una lista?\nEl siguiente bloque de código imprime ['a', 'b', True, 30]. ¿Por qué?\ncosas = [\"a\", \"b\", True]\nbartulos = cosas\nbartulos.append(20 + 10)\nprint(cosas)\nConsidere el siguiente bloque de código:\nmarcas = [\"Milka\", \"Cofler\", \"Águila\", \"Cadbury\", \"Lindt\", \"Toblerone\", \"After Eight\"]\nmarcas[2:5]\nque correctamente muestra [\"Águila\", \"Cadbury\", \"Lindt\"]. ¿Por qué el siguiente bloque de código no funciona?\nmarcas = [\"Milka\", \"Cofler\", \"Águila\", \"Cadbury\", \"Lindt\", \"Toblerone\", \"After Eight\"]\nindices = 2:5\nmarcas[indices]",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#tuplas",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#tuplas",
-    "title": "🪞 Autoevaluación",
-    "section": "7 Tuplas",
-    "text": "7 Tuplas\n\n¿Por qué la tupla no implementa un método similar al método .extend() de las listas?\nLas tuplas de Python son conocidas por ser inmutables. Por ejemplo, el siguiente bloque de código resulta en un error:\ntupla = (1, 2, 3)\ntupla[1] = 10\nSin embargo, el siguiente bloque no arroja ningún error y pareciera que se logra modificar la tupla exitosamente:\nbartulos = [\"Hola\", 10, None]\ntupla = (1, bartulos, 3)\n\ntupla[1].append(\"¡Sorpesa!\")\n\nprint(tupla)\n¿Qué pasó?",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#diccionarios",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#diccionarios",
-    "title": "🪞 Autoevaluación",
-    "section": "8 Diccionarios",
-    "text": "8 Diccionarios\n\n¿Cómo se escribe en código un diccionario vacío?\n¿Cómo se ve un diccionario que tiene la clave \"cosa\" y el valor 15?\n¿Cuál es la principal diferencia entre un diccionario y una lista?\n¿Qué ocurre si se intenta acceder a bartulos[\"cosa\"] cuando bartulos es {\"coso\": 100}?\nSi un diccionario está almacenado en bartulos, ¿cuál es la diferencia entre las siguientes expresiones?\n\"cosa\" in bartulos\n\"cosa\" in bartulos.keys()\nSuponga el diccionario datos = {\"nombre\": \"Juan\"}. ¿Por qué la siguiente expresión resulta en False?\n\"Juan\" in datos",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/autoevaluacion.html#control-de-flujo",
-    "href": "practica/01_programacion_en_python/autoevaluacion.html#control-de-flujo",
-    "title": "🪞 Autoevaluación",
-    "section": "9 Control de flujo",
-    "text": "9 Control de flujo\n\n9.1 Condicionales\n\nExplique qué es una condición y en qué situaciones se utilizaría.\nIdentifique los tres bloques de código en el siguiente ejemplo:\ncodigo = 0\n\nif codigo == 10:\n    print(\"mensaje 1\")\n    if codigo &gt; 5:\n        print(\"mensaje 2\")\n    else:\n        print(\"mensaje alternativo\")\n    print(\"mensaje final\")\n\nprint(\"Fin del programa\")\n¿Tienen sentido las comparaciones utilizadas?\n¿Cuál es el problema con el siguiente programa? Proponga una solución.\nnumero = 10\nif numero &lt; 0:\n    print(f\"El numero {numero} es negativo\")\nelif numero &lt; -5:\n    print(f\"El numero {numero} es menor a -5\")\nelif numero &gt; 0:\n    print(f\"El numero {numero} es positivo\")\nelse:\n    print(f\"El numero {numero} es 0\")\n\n\n\n9.2 Bucles\n\nConsidere el siguiente programa:\nfor i in range(10):\n    print(i)\nEscriba un programa que realice la misma tarea utilizando un bucle while.\n¿Cuál es la diferencia entre range(10), range(0, 10) y range(0, 10, 1) en un bucle for?\nSuponga que numeros es una lista que contiene numeros enteros, ¿en qué se diferencian los siguientes bloques de código?\nfor i in numeros:\n    if i % 2 == 0:\n        break\n    print(i)\nfor i in numeros:\n    if i % 2 == 0:\n        continue\n    print(i)\n¿Es posible re-escribir el siguiente bloque de código usando while True? ¿Qué modificaciones habría que hacer?\nsuma = 0\ni = 0\nwhile suma &lt;= limite:\n    suma += numeros[i]\n    i += 1",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/problemas.html",
-    "href": "practica/01_programacion_en_python/problemas.html",
-    "title": "🧩 Problemas",
-    "section": "",
-    "text": "En criptografía, el cifrado César es una de las técnicas de cifrado más simples y más usadas.\nEs un tipo de cifrado en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.\nPor ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc.\n\n\n\n\n\nEscriba una función, y luego un script, que permita cifrar y descifrar cadenas usando el cifrado César con un número arbitrario de posiciones.\nDos funciones incluidas con Python que pueden ser útiles para esta tarea son ord(), que convierte caracteres numéricos a números, y chr(), que realiza la operación inversa.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara el cifrado de un único caracter:\n\nDefinir un desplazamiento, por ejemplo 3.\nConvertir el caracter a número usando ord().\nSumarle desplazamiento.\nFinalmente, convertirlo a caracter nuevamente utilizando chr().\n\nY para el descifrado:\n\nConvertir el caracter a número.\nRestarle desplazamiento.\nConvertirlo a caracter nuevamente utilizando chr().\n\nAsí, se debería recuperar el caracter definido al principio.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/problemas.html#cifrado-césar",
-    "href": "practica/01_programacion_en_python/problemas.html#cifrado-césar",
-    "title": "🧩 Problemas",
-    "section": "",
-    "text": "En criptografía, el cifrado César es una de las técnicas de cifrado más simples y más usadas.\nEs un tipo de cifrado en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.\nPor ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc.\n\n\n\n\n\nEscriba una función, y luego un script, que permita cifrar y descifrar cadenas usando el cifrado César con un número arbitrario de posiciones.\nDos funciones incluidas con Python que pueden ser útiles para esta tarea son ord(), que convierte caracteres numéricos a números, y chr(), que realiza la operación inversa.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nPara el cifrado de un único caracter:\n\nDefinir un desplazamiento, por ejemplo 3.\nConvertir el caracter a número usando ord().\nSumarle desplazamiento.\nFinalmente, convertirlo a caracter nuevamente utilizando chr().\n\nY para el descifrado:\n\nConvertir el caracter a número.\nRestarle desplazamiento.\nConvertirlo a caracter nuevamente utilizando chr().\n\nAsí, se debería recuperar el caracter definido al principio.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/problemas.html#números-aleatorios",
-    "href": "practica/01_programacion_en_python/problemas.html#números-aleatorios",
-    "title": "🧩 Problemas",
-    "section": "2 Números aleatorios",
-    "text": "2 Números aleatorios\nConstruya un programa en Python que genere una cantidad determinada de números aleatorios uniformes dentro de un rango definido por el usuario. El programa debe:\n\nSolicitar al usuario la cantidad de números a generar y los valores mínimo y máximo del rango.\nGenerar los números aleatorios\nGuardar los números en un archivo de texto, uno por línea.\nOfrecer la opción de mostrar un resumen estadístico con mínimo, máximo, media y desvío estándar, solo si el usuario lo solicita.\n\nPara resolver este problema utilice el módulo random y las funciones desarrolladas en el ejercicio Resúmenes estadísticos guardadas en un módulo llamado estadistica.py.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/problemas.html#mensaje-al-descubierto",
-    "href": "practica/01_programacion_en_python/problemas.html#mensaje-al-descubierto",
-    "title": "🧩 Problemas",
-    "section": "3 Mensaje al descubierto",
-    "text": "3 Mensaje al descubierto\nResulta que Franco, un amigo que estudia Ciencias de la Computación en la FCEIA, te envía por WhatsApp un archivo de texto plano con mensajes “encriptados” usando caracteres sobrantes y símbolos extraños:\n    !!!,.,  aY??/u/DAM**e,, se =m!!e\n&&M&&e v!o!?LV...I.O /L/*oC/*o\n        __?e_?l//+ T++**e/*Cl!?aD==*O**\nTiene sentido pensar que está experimentando con nuevos algoritmos de cifrado y, de paso, te lanza el reto de descifrarlo.\nTu misión es escribir un programa que:\n\nLea un archivo de texto plano cualquiera.\nMuestre en pantalla su contenido original (tal cual llega).\nAplique un proceso de limpieza basado en las siguientes reglas:\n\nEliminar todos los caracteres +, *, -, /, =, !, ?, & y _.\nReemplazar cualquier secuencia de espacios múltiples por un solo espacio.\nHomogeinizar la capitalización de los caracteres.\nConservar los saltos de línea tal cual aparecen en el archivo original.\n\nMuestre en pantalla la versión desencriptada del texto.\nGuarde la versión limpia en un nuevo archivo de texto.\n\nEl usuario debe poder especificar el nombre del archivo de salida.\nSi no lo hace, se generará uno con el sufijo _limpio antes de la extensión original (por ejemplo, secreto.txt → secreto_limpio.txt).",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/01_programacion_en_python/problemas.html#código-morse",
-    "href": "practica/01_programacion_en_python/problemas.html#código-morse",
-    "title": "🧩 Problemas",
-    "section": "4 Código Morse",
-    "text": "4 Código Morse\nEl código Morse es un sistema utilizado para representar letras mediante combinaciones específicas de señales cortas y largas, denominadas puntos (.) y rayas (-). A continuación se muestra un diccionario con el mapeo de caracteres alfabéticos, dígitos del 0 al 9 y algunos símbolos de puntuación comunes:\nmapeo_morse = {\n    \"A\": \".-\",\n    \"B\": \"-...\",\n    \"C\": \"-.-.\",\n    \"D\": \"-..\",\n    \"E\": \".\",\n    \"F\": \"..-.\",\n    \"G\": \"--.\",\n    \"H\": \"....\",\n    \"I\": \"..\",\n    \"J\": \".---\",\n    \"K\": \"-.-\",\n    \"L\": \".-..\",\n    \"M\": \"--\",\n    \"N\": \"-.\",\n    \"O\": \"---\",\n    \"P\": \".--.\",\n    \"Q\": \"--.-\",\n    \"R\": \".-.\",\n    \"S\": \"...\",\n    \"T\": \"-\",\n    \"U\": \"..-\",\n    \"V\": \"...-\",\n    \"W\": \".--\",\n    \"X\": \"-..-\",\n    \"Y\": \"-.--\",\n    \"Z\": \"--..\",\n    \"1\": \".----\",\n    \"2\": \"..---\",\n    \"3\": \"...--\",\n    \"4\": \"....-\",\n    \"5\": \".....\",\n    \"6\": \"-....\",\n    \"7\": \"--...\",\n    \"8\": \"---..\",\n    \"9\": \"----.\",\n    \"0\": \"-----\",\n    \", \": \"--..--\",\n    \".\": \".-.-.-\",\n}\nEscriba una función en Python que permita convertir cualquier palabra a código Morse utilizando este diccionario. Luego, escriba otra función que haga exactamente lo contrario: dada una secuencia en código Morse, debe recuperar la palabra original. Finalmente, incorpore ambas funciones en un script principal que combine ambas funciones y permita encriptar o desencriptar texto desde un archivo de texto plano. El programa debe recibir:\n\nEl nombre del archivo de entrada.\nEl nombre del archivo de salida.\nLa operación a realizar (encriptar o desencriptar).\n\nAyuda: Para indicar espacios en código Morse utilice /.",
-    "crumbs": [
-      "Práctica",
-      "U1 - Programación en Python",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html",
-    "href": "practica/02_oop/ejercicios.html",
-    "title": "🛠️ Ejercicios",
-    "section": "",
-    "text": "Defina una clase Contador que represente un contador numérico. Por defecto, las instancias comienzan con el valor 0, aunque debe permitirse inicializarlas con un valor distinto.\nImplemente los siguientes métodos:\n\nincrementar: aumenta el valor del contador en una cantidad arbitraria (por defecto, 1).\ndecrementar: disminuye el valor del contador en una cantidad arbitraria (por defecto, 1).\nreiniciar: restablece el contador a su valor inicial (¡que puede ser distinto de 0!).\nvalor: devuelve el valor actual del contador.\n\nEjemplo de uso\ncontador = Contador()\ncontador.incrementar(5)    # El valor interno es 5\ncontador.decrementar(2)    # El valor interno es 3\nprint(contador.valor())    # Imprime 3\ncontador.reiniciar()\nprint(contador.valor())    # Imprime 0",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#contador",
-    "href": "practica/02_oop/ejercicios.html#contador",
-    "title": "🛠️ Ejercicios",
-    "section": "",
-    "text": "Defina una clase Contador que represente un contador numérico. Por defecto, las instancias comienzan con el valor 0, aunque debe permitirse inicializarlas con un valor distinto.\nImplemente los siguientes métodos:\n\nincrementar: aumenta el valor del contador en una cantidad arbitraria (por defecto, 1).\ndecrementar: disminuye el valor del contador en una cantidad arbitraria (por defecto, 1).\nreiniciar: restablece el contador a su valor inicial (¡que puede ser distinto de 0!).\nvalor: devuelve el valor actual del contador.\n\nEjemplo de uso\ncontador = Contador()\ncontador.incrementar(5)    # El valor interno es 5\ncontador.decrementar(2)    # El valor interno es 3\nprint(contador.valor())    # Imprime 3\ncontador.reiniciar()\nprint(contador.valor())    # Imprime 0",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#magia-para-programadores",
-    "href": "practica/02_oop/ejercicios.html#magia-para-programadores",
-    "title": "🛠️ Ejercicios",
-    "section": "2 Magia para programadores",
-    "text": "2 Magia para programadores\nEsta es tu primera clase de Pociones en Hogwarts y el profesor te dio como tarea descubrir de qué color se volverá una poción si se mezcla con otra. Todas las pociones tienen un color definido en formato RGB, desde [0, 0, 0] hasta [255, 255, 255].\nPara complicar un poco más la tarea, el profesor realizará varias mezclas seguidas y luego te preguntará por el color final. Además del color, también deberás calcular qué volumen tendrá la poción después de la mezcla final.\nGracias a tu experiencia en programación descubriste que al mezclar dos pociones, los colores se combinan como si se mezclaran dos colores en formato RGB. Por ejemplo, si mezclas una poción con color [255, 255, 0] y volumen 10 con otra de color [0, 254, 0] y volumen 5, obtendrás una nueva poción con:\n\ncolor [170, 255, 0]\nvolumen 15\n\nPor lo tanto, decidís crear una clase Pocion que tenga:\n\ndos propiedades:\n\ncolor (una lista o tupla con 3 enteros)\nvolumen (un número)\n\nun método mezclar que acepte otra Pocion y devuelva una nueva Pocion ya mezclada.\n\nEjemplo:\nfelix_felicis = Pocion([255, 255, 255],  7)\npocion_multijugos = Pocion([51, 102, 51], 12)\nnueva_pocion = felix_felicis.mezclar(pocion_multijugos)\n\nnueva_pocion.color # Devuelve [127, 159, 127]\nnueva_pocion.volumen # Devuelve 19\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nLos colores de las pociones deben representarse como tríos de números enteros en formato RGB. Al realizar una mezcla de colores, se debe redondear hacia arriba utilizando math.ceil.",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#mensaje-secreto",
-    "href": "practica/02_oop/ejercicios.html#mensaje-secreto",
-    "title": "🛠️ Ejercicios",
-    "section": "3 Mensaje secreto",
-    "text": "3 Mensaje secreto\nUn cifrado por sustitución simple reemplaza cada carácter de un alfabeto con un carácter de un alfabeto alternativo. Cada posición en el alfabeto original se mapea a la posición correspondiente en el alfabeto alternativo, y esto sirve tanto para codificar como para decodificar.\nEl objetivo es crear una clase que, al inicializarse, reciba dos alfabetos (original y alternativo). La clase debe tener un método para encriptar mensajes y otro para revertir la encriptación.\nEjemplo:\nalfabeto = \"abcdefghijklmnopqrstuvwxyz\"\nalfabeto_mezclado = \"etaoinshrdlucmfwypvbgkjqxz\"\n\nmi_cifrado = Cifrado(alfabeto, alfabeto_mezclado)\n\nmi_cifrado.codificar(\"abc\")    # =&gt; \"eta\"\nmi_cifrado.codificar(\"xyz\")    # =&gt; \"qxz\"\nmi_cifrado.codificar(\"aeiou\")  # =&gt; \"eirfg\"\n\nmi_cifrado.decodificar(\"eta\")    # =&gt; \"abc\"\nmi_cifrado.decodificar(\"qxz\")    # =&gt; \"xyz\"\nmi_cifrado.decodificar(\"eirfg\")  # =&gt; \"aeiou\"\n\nPunto extra\nVerifique en el método __init__ que la longitud de los alfabetos sea la misma. Caso contrario, levante una excepción ValueError indicando cuál es el problema.",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#real-envido",
-    "href": "practica/02_oop/ejercicios.html#real-envido",
-    "title": "🛠️ Ejercicios",
-    "section": "4 Real envido",
-    "text": "4 Real envido\nConstruir una clase ManoDeTruco que, al inicializarse, reciba una lista o tupla de hasta tres números enteros, correspondientes a los valores de las cartas en una mano de truco.\nLa clase debe incluir un método llamado comparar_con que recibe otra mano de truco y determine cuál de las dos suma más puntos para el envido. En caso de empate, se considera ganadora la mano que invocó el método.\nEjemplo de uso\nmano1 = ManoDeTruco([7, 5, 6])\nmano2 = ManoDeTruco([4, 11, 2])\n\nganadora = mano1.comparar_con(mano2)\n\n\n\n\n\n\nTipConsideraciones\n\n\n\n\n\n\nAsuma que todas las cartas cargadas en la mano son del mismo palo.\nPara calcular los puntos del envido, solo se consideran dos de las tres cartas, no la suma de las tres.",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#la-muestra-infinita",
-    "href": "practica/02_oop/ejercicios.html#la-muestra-infinita",
-    "title": "🛠️ Ejercicios",
-    "section": "5 La muestra infinita",
-    "text": "5 La muestra infinita\nDefina una clase Muestra que represente un conjunto de datos numéricos. La clase debe inicializarse a partir de un iterable de números e implementar los siguientes métodos:\n\nagregar(x): agrega un número a la muestra.\nn(): devuelve la cantidad de elementos.\nsuma(): devuelve la suma de los valores.\nmedia(): devuelve el promedio de los valores.\nvarianza(muestral=False): calcula la varianza.\n\nSi muestral=False, se usa el denominador n (varianza poblacional).\nSi muestral=True, se usa el denominador n-1 (varianza muestral).\n\n\nEjemplo de uso\nmuestra = Muestra([10, 12, 13, 15])\nmuestra.agregar(20)\nmuestra.n()                     # 5\nmuestra.suma()                  # 70\nmuestra.media()                 # 14.0\nmuestra.varianza()              # varianza poblacional\nmuestra.varianza(muestral=True) # varianza muestral\n\nPunto extra\nModifique la clase para que:\n\nGuarde los datos en un atributo “privado” llamado _datos.\nProvea una propiedad de solo lectura valores, que devuelva una copia inmutable de los datos (por ejemplo, una tupla).",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#orden-en-el-laboratorio",
-    "href": "practica/02_oop/ejercicios.html#orden-en-el-laboratorio",
-    "title": "🛠️ Ejercicios",
-    "section": "6 ¡Orden en el laboratorio!",
-    "text": "6 ¡Orden en el laboratorio!\nEn un laboratorio se necesita llevar un registro ordenado de los experimentos realizados. Cada experimento debe contar con un número identificador único, un nombre y, de manera opcional, el nombre de la persona responsable.\nEl objetivo de este ejercicio es construir una clase que facilite dicha organización.\nPara ello, implemente una clase llamada Experimento que se inicializa con el nombre del experimento y, opcionalmente, con el nombre del responsable. La clase debe asignar automáticamente un número identificador único a cada instancia. Para lograrlo, utilice un atributo de clase llamado total_creados, que comience en 0.\nCada instancia debe contar con:\n\nUn identificador numérico único (asignado automáticamente de forma incremental por la clase).\nUn nombre.\nUn responsable, si se proporciona.\n\nEjemplo de uso\ne1 = Experimento(\"Piloto A\", responsable=\"Dolores\")\ne2 = Experimento(\"Piloto Z\")\nExperimento.total_creados  # Devuelve 2\n\nPuntos extra\nModifique la clase para que también:\n\nSe puedan crear objetos utilizando un método de clase llamado desde_dict que reciba un diccionario de la forma {\"nombre\": ..., \"responsable\": ...} y devuelva una instancia de Experimento.\nImplemente el método mágico __repr__ que devuelva una cadena de texto con el siguiente formato: python     Experimento(id=1, nombre=\"A/B\", responsable=\"Sosa\")\n\nEjemplo de uso\ne = Experimento.desde_dict({\"nombre\": \"Piloto B\", \"responsable\": \"Ana\"})\nrepr(e)\n# Experimento(id=3, nombre=\"Piloto B\", responsable=\"Ana\")",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#sensores-descalibrados",
-    "href": "practica/02_oop/ejercicios.html#sensores-descalibrados",
-    "title": "🛠️ Ejercicios",
-    "section": "7 Sensores descalibrados",
-    "text": "7 Sensores descalibrados\nEste ejercicio requiere diseñar una pequeña jerarquía de clases para simular sensores utilizados en un laboratorio.\nEn la práctica, los sensores no siempre son completamente precisos: pueden registrar valores ligeramente superiores o inferiores al valor real. Para corregir ese desvío, se aplica una calibración, que consiste en ajustar las lecturas mediante un valor adicional o corrector llamado offset.\n\nJerarquía de clases\nClase base: Sensor\nLa clase Sensor debe incluir:\n\nUn atributo nombre para identificar al sensor.\nUn método leer que levante una excepción NotImplementedError, indicando que debe ser implementado por las subclases.\nUn método calibrar(offset) que permita almacenar un valor de ajuste (offset) que se aplicará a las lecturas.\n\nSubclases\nSe deben definir dos subclases: SensorTemperatura y SensorHumedad, ambas con su propia implementación del método leer:\n\nSensorTemperatura: simula una medición utilizando random.uniform(18, 28).\nSensorHumedad: simula una medición utilizando random.uniform(30, 70).\n\nEn ambos casos, la medición debe ser ajustada por el offset correspondiente (si fue calibrado).\n\n\nFunción auxiliar\nAdemás, implemente una función llamada promedio_lecturas que reciba dos argumentos: una secuencia de sensores y un número entero n, que indica cuántas lecturas realizar con cada sensor.\nLa función debe realizar n lecturas para cada sensor utilizando su método leer, calcular el promedio de esas lecturas y devolver un diccionario que asocie el nombre de cada sensor con su promedio correspondiente.\nEjemplo de uso\nst = SensorTemperatura(\"T1\")\nsh = SensorHumedad(\"H1\")\nst.calibrar(0.5)\n\npromedios = promedio_lecturas([st, sh], n=3)\n# {'T1': ..., 'H1': ...}",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#python-para-matemáticos",
-    "href": "practica/02_oop/ejercicios.html#python-para-matemáticos",
-    "title": "🛠️ Ejercicios",
-    "section": "8 Python para matemáticos",
-    "text": "8 Python para matemáticos\nConstruya una clase Fraccion que acepte dos argumentos: numerador y denominador. Se desea que esta clase:\n\nSea representable como cadena de texto.\nImplemente la suma entre fracciones.\nDevuelva siempre el resultado en la mínima representación posible (fracción irreducible).\n\nEjemplo:\nfraccion1 = Fraccion(4, 5)\nprint(fraccion1 + Fraccion(1, 8))\n#&gt; \"37/40\"\n\nPunto extra\nExtender la funcionalidad de la clase incluyendo las operaciones de resta, multiplicación y división.",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/02_oop/ejercicios.html#tiempo-al-tiempo",
-    "href": "practica/02_oop/ejercicios.html#tiempo-al-tiempo",
-    "title": "🛠️ Ejercicios",
-    "section": "9 Tiempo al tiempo ⏳",
-    "text": "9 Tiempo al tiempo ⏳\nEl módulo estándar datetime de Python incluye, entre otras cosas, la clase date para trabajar con fechas. El objetivo de este ejercicio es implementar, desde cero, una nueva clase Date que permita representar fechas y operar con ellas.\n\nPrimera implementación\n\nConstruya la clase Date. El método __init__ debe tomar 3 parámetros: year, month y day, y asignarlos como atributos de la instancia. Cree un objeto que represente el 6 de noviembre de 1995 y verifique que los atributos contengan los valores esperados.\nImplemente el método __str__, que debe devolver una cadena con el formato YYYY-MM-DD, donde YYYY representa el año, MM el mes y DD el día. Ayuda: Puede utilizar el método .rjust de las cadenas de texto para agregar ceros a la izquierda cuando sea necesario. Por ejemplo, para el 6 de noviembre de 1995, str(fecha) debe devolver \"1995-11-06\".\nImplemente el método __repr__, que debe devolver una representación similar a la utilizada para crear la instancia. Para la fecha 6 de noviembre de 1995, debe devolver la cadena \"Date(year=1995, month=11, day=6)\".\nImplemente un método de clase que permita crear una Date a partir de una cadena en formato YYYY-MM-DD. Por ejemplo, Date.from_str(\"2025-03-08\") debe devolver un objeto Date que representa al 8 de marzo de 2025. Ayuda: Puede utilizar el método .lstrip(\"0\") para eliminar ceros a la izquierda en una cadena.\nImplemente los métodos de comparación entre objetos Date.\n\n__eq__: igualdad (==)\n__ne__: desigualdad (!=)\n__lt__: menor que (&lt;)\n__gt__: mayor que (&gt;)\n__le__: menor o igual que (&lt;=)\n__ge__: mayor o igual que (&gt;=)\n\nAyuda: Dos fechas se consideran iguales si sus atributos year, month, y day coinciden. Para las comparaciones, considere primero el año, luego el mes y finalmente el día.\n\n\n\nA prueba de balas\nA esta altura, se cuenta con una implementación razonablemente completa y funcional para representar objetos de tipo fecha. Sin embargo, la clase Date no garantiza la validez ni la robustez de las instancias que se crean. Es posible construir objetos Date que representen fechas inválidas, como el 31 de abril o el 55.8 del mes 25.3, y operar con ellos sin que el programa emita ningún tipo de advertencia.\n\nModifique la implementación de los atributos year, month y day de modo que sean privados y que su asignación incluya una verificación de validez. Para ello, se propone lo siguiente:\n\nUtilice atributos privados llamados _year, _month y _day.\nDefina métodos year, month y day, decorados con @property, que expongan dichos atributos para su lectura. Estos métodos deben devolver el valor del atributo correspondiente.\nPara permitir la asignación controlada, implemente un setter para cada atributo Para ello, decore el mismo método con @&lt;nombre&gt;.setter (por ejemplo, @year.setter) y defina allí la lógica de verificación. Por el momento, verifique únicamente que el valor asignado sea un número entero y positivo. Eleve un ValueError en caso de que el valor por asignar no pase la verificación.\n\n\nUtilice los siguientes ejemplos de verificación\nd = Date(2022, 7, 1)\nrepr(d) # Date(year=2022, month=7, day=1)\nstr(d)  # \"2022-07-01\"\n(d.year, d.month, d.day) # (2022, 7, 1)\nDate(2022, 0, 1)       # Falla: el mes no es positivo\nDate(2022, 3, 5.5)     # Falla: el día no es un entero\nDate(\"11\", 3, 1)       # Falla: el año es una cadena de texto\nd = Date(2022, 7, 1)\nd.day = 11             # Funciona: pasa la verificación\nstr(d)                 # \"2022-07-11\"\n\nd.month = -1           # Falla\nd.year = -1            # Falla\n\nMejore ahora las verificaciones de los valores asignados para que sean más robustas:\n\nEl año debe ser entero y mayor o igual a 0.\nEl mes debe ser un número entero entre 1 y 12 inclusive.\nEl día debe ser un número entero mayor o igual a 1 y menor o igual a la cantidad de días del mes correspondiente.\n\n\nLa cantidad de días depende del mes. Para todos los meses excepto febrero, utilice el diccionario provisto en la ayuda debajo. Para el caso de febrero, implemente un método estático que reciba un año como argumento y devuelva un booleano indicando si ese año es bisiesto.\n\n\n\n\n\n\nTipAyuda\n\n\n\n\n\nDiccionario de días por mes:\nDOM = {\n    1: 31,  # Enero\n    2: 28,  # Febrero (29 en año bisiesto)\n    3: 31,  # Marzo\n    4: 30,  # Abril\n    5: 31,  # Mayo\n    6: 30,  # Junio\n    7: 31,  # Julio\n    8: 31,  # Agosto\n    9: 30,  # Septiembre\n    10: 31, # Octubre\n    11: 30, # Noviembre\n    12: 31, # Diciembre\n}\n\nDOM[5] # Devuelve 31, porque es mayo\nPor otro lado, un año es bisiesto si:\n\nEs divisible por 4,\nexcepto que sea divisible por 100,\nsalvo que tambien sea divisibles por 400\n\nEn Python\n(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\n\n\n\nFinalmente, verifique que su clase Date funciona correctamente con los siguientes ejemplos:\n# Definición de fechas\nd1 = Date(1990, 5, 20)\nd2 = Date(1998, 9, 21)\nd3 = Date(1998, 9, 20)\nd4 = Date(2022, 12, 18)\n\nd1 &lt; d2\nd1 &gt; d2\nd1 != d3\nd4 &gt;= d3\n\nDate(2000, 2, 29) # Funciona, es bisiesto\nDate(2001, 2, 29) # Falla, no es bisiesto\n\n\nl = [d1, d2, d3, d4]\nsorted(l) # Funciona, ¿por qué?",
-    "crumbs": [
-      "Práctica",
-      "U2 - Programación Orientada a Objetos",
-      "🛠️ Ejercicios"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/autoevaluacion.html",
-    "href": "practica/03_funcional/autoevaluacion.html",
-    "title": "🪞 Autoevaluación",
-    "section": "",
-    "text": "¿Por qué decimos que fun es una función con efectos secundarios?\ndef fun():\n    global x\n    x = 10\n    return x\n¿Cuál es el problema con la siguiente función? Explore el resultado de las llamadas que se incluyen luego de la definición.\ndef agregar_usuario(usuario, listado=[]):\n    listado.append(usuario)\n    return listado\n\nbase1 = agregar_usuario(\"Adrián\")\nbase2 = agregar_usuario(\"Daniela\")\nExplore el contenido y la identidad de base1 y base2. Si es necesario, utilice algún agente de IA para explorar en qué parte de la definición de la función se esconde una trampa.\n\n\n\n\n\n¿Por qué la siguiente definición devuelve un error?\nlambda x: return x + 1\n¿Qué hacen los siguientes bloques de código?\n(lambda x, y: x + y)(1, 5)\n(lambda f, x: f(x + 10))(lambda y: y * 5, 2)\n¿Qué devuelve la siguiente llamada? ¿Por qué?\n(lambda x: print(x))(1)\nAyuda: asigne el resultado a una variable y explore el valor de esa variable.\n\n\n\n\n\n¿Cuál es el valor de args en la siguiente llamada? ¿Por qué?\n def fun(x, *args):\n     return x + 10\n\n fun(128)\n¿Y el valor de kwargs debajo?\ndef fun(x, **kwargs):\n    return x + 11\n\nfun(128)\nLos siguientes intentos por definir una función arrojan un error. Investigue por qué y reflexione sobre el sentido de los errores.\ndef fun(**kwargs, x, y):\n    return x + y\ndef fun(**kwargs, *args):\n    return sum(args)\nCualquier llamada a la siguiente función que solo pase argumentos posicionales va a resultar en un error. ¿Por qué? ¿Cómo habría que llamarla para que no resulte en un error?\ndef fun(*args, x, y):\n    return sum(args), x + y\n\n\n\n\n\nEjecute el siguiente bloque de código e inspeccione el objeto que devuelven las sucesivas llamadas realizadas. Analice por qué ocurre este comportamiento y piense qué tipo de funcionalidades podrían aprovechar un mecanismo similar.\ndef fabrica():\n    cosas = []\n    def fun(elemento):\n        cosas.append(elemento)\n        return cosas\n    return fun\n\nf = fabrica()\nf(128)\nf(256)\nf(1024)\nAyuda: Compare el ID de los objetos devueltos en cada llamada. ¿Podría observar el mismo comportamiento si en vez de usar una lista para cosas se usara una tupla?",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/autoevaluacion.html#funciones",
-    "href": "practica/03_funcional/autoevaluacion.html#funciones",
-    "title": "🪞 Autoevaluación",
-    "section": "",
-    "text": "¿Por qué decimos que fun es una función con efectos secundarios?\ndef fun():\n    global x\n    x = 10\n    return x\n¿Cuál es el problema con la siguiente función? Explore el resultado de las llamadas que se incluyen luego de la definición.\ndef agregar_usuario(usuario, listado=[]):\n    listado.append(usuario)\n    return listado\n\nbase1 = agregar_usuario(\"Adrián\")\nbase2 = agregar_usuario(\"Daniela\")\nExplore el contenido y la identidad de base1 y base2. Si es necesario, utilice algún agente de IA para explorar en qué parte de la definición de la función se esconde una trampa.\n\n\n\n\n\n¿Por qué la siguiente definición devuelve un error?\nlambda x: return x + 1\n¿Qué hacen los siguientes bloques de código?\n(lambda x, y: x + y)(1, 5)\n(lambda f, x: f(x + 10))(lambda y: y * 5, 2)\n¿Qué devuelve la siguiente llamada? ¿Por qué?\n(lambda x: print(x))(1)\nAyuda: asigne el resultado a una variable y explore el valor de esa variable.\n\n\n\n\n\n¿Cuál es el valor de args en la siguiente llamada? ¿Por qué?\n def fun(x, *args):\n     return x + 10\n\n fun(128)\n¿Y el valor de kwargs debajo?\ndef fun(x, **kwargs):\n    return x + 11\n\nfun(128)\nLos siguientes intentos por definir una función arrojan un error. Investigue por qué y reflexione sobre el sentido de los errores.\ndef fun(**kwargs, x, y):\n    return x + y\ndef fun(**kwargs, *args):\n    return sum(args)\nCualquier llamada a la siguiente función que solo pase argumentos posicionales va a resultar en un error. ¿Por qué? ¿Cómo habría que llamarla para que no resulte en un error?\ndef fun(*args, x, y):\n    return sum(args), x + y\n\n\n\n\n\nEjecute el siguiente bloque de código e inspeccione el objeto que devuelven las sucesivas llamadas realizadas. Analice por qué ocurre este comportamiento y piense qué tipo de funcionalidades podrían aprovechar un mecanismo similar.\ndef fabrica():\n    cosas = []\n    def fun(elemento):\n        cosas.append(elemento)\n        return cosas\n    return fun\n\nf = fabrica()\nf(128)\nf(256)\nf(1024)\nAyuda: Compare el ID de los objetos devueltos en cada llamada. ¿Podría observar el mismo comportamiento si en vez de usar una lista para cosas se usara una tupla?",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/autoevaluacion.html#recursión",
-    "href": "practica/03_funcional/autoevaluacion.html#recursión",
-    "title": "🪞 Autoevaluación",
-    "section": "2 Recursión",
-    "text": "2 Recursión\n\n¿Cuál de las siguientes funciones es recursiva?\ndef f(x):\n    return x + 1\n\ndef g(x):\n    return f(x)\n\ndef h(x):\n    return h(x - 1)\n¿Qué son el caso base y el caso recursivo?\n¿Por qué toda recursión necesita un caso base?\n¿Qué pasa si una función recursiva nunca llega al caso base?\nReflexione sobre ventajas y desventajas de la recursión.",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/autoevaluacion.html#funciones-de-orden-superior",
-    "href": "practica/03_funcional/autoevaluacion.html#funciones-de-orden-superior",
-    "title": "🪞 Autoevaluación",
-    "section": "3 Funciones de orden superior",
-    "text": "3 Funciones de orden superior\n\nExplique por qué el primer print muestra 10 y el segundo falla:\nfrom functools import partial\n\ndef suma(x, y):\n    return x + y\n\nsuma2 = partial(suma, 10, 0)\nprint(suma2())\nprint(suma2(10))\n¿Cuál de las siguientes funciones es de orden superior?\ndef f(x):\n    return x + 1\n\ndef g(fn, x):\n    return fn(x)\n\ndef h():\n    return f\n¿Cuál de las siguientes funciones de Python es de orden superior?\n\nsum\nmax\nmin\nsorted\nprint\nfunctools.partial\n\n¿Qué hace la función fun? ¿Qué condicion debe cumplir f respecto de sus valores de entrada y salida?\ndef fun(f, x):\n    return f(f(x))\n¿Para qué sirve la función definida debajo?\ndef fun(f, g):\n    return lambda x: f(g(x))\n¿Qué tipo de función se necesita pasar a filter?\n¿Cuál es el resultado de la última línea de código? ¿Por qué?\nfilter_obj = filter(lambda x: x &gt; 2, range(5))\nlist(filter_obj) # Primera conversión a lista\nlist(filter_obj) # Segunda conversión a lista\nAyuda: Para comprender lo que sucede en este ejercicio es necesario estar familiarizados con los generadores.\n¿Cuál implementación es más eficiente desde el punto de vista del consumo de memoria? ¿Por qué?\nimpares = list(filter(lambda x: x % 2, range(1_000)))\nimpares_al_cubo = list(map(lambda x: x ** 3, impares))\nimpares_al_cubo = list(map(lambda x: x ** 3, filter(lambda x: x % 2, range(1_000))))\nAyuda: Nuevamente, es necesario estar familiarizados con los generadores para responder a esta pregunta.\n¿Cuál es el resultado de la reducción debajo? ¿Por qué?\nfrom functools import reduce\nreduce(lambda x, y: x + [y], range(3), [])\nAyuda: reduce ejecuta la función que se le pasa solamente 3 veces. Podría resultar de ayuda enumerar cada una de las llamadas manualmente.",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/autoevaluacion.html#comprehensions",
-    "href": "practica/03_funcional/autoevaluacion.html#comprehensions",
-    "title": "🪞 Autoevaluación",
-    "section": "4 Comprehensions",
-    "text": "4 Comprehensions\n\n¿Qué diferencia hay entre las siguientes dos líneas de código? Asuma que f es una función y xs es una secuencia.\nmap(f, xs)\n[f(x) for x in xs]\n¿Cuál es el resultado de esta expresión?\n[x for x in \"hola\" if x != \"o\"]\nEscriba una list comprehension para obtener una lista con la primera letra de cada palabra.\npalabras = [\"hola\", \"mundo\", \"python\"]\nEscriba una list comprehension que reemplace los None por un -1.\ndatos = [1, None, 3, None, 5]\nConvierta este bucle en una list comprehension.\nresultado = []\nfor x in range(5):\n    if x % 2 != 0:\n        resultado.append(x)\n¿Es posible que una list comprehension devuelva una lista vacía? ¿Cuándo?\nConstruya una única list comprehension que realice lo mismo que el siguiente bloque:\ndef f(x):\n    return 10 / x\n\ndef g(x):\n    return x != 0\n\nnumeros = [1, 0, -1, 0, 2, 0, -2, 0, 3, 0, -3]\nlist(map(f, filter(g, numeros)))",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/autoevaluacion.html#generadores",
-    "href": "practica/03_funcional/autoevaluacion.html#generadores",
-    "title": "🪞 Autoevaluación",
-    "section": "5 Generadores",
-    "text": "5 Generadores\n\n¿Qué diferencia a una función regular de una función generadora?\n¿En qué momento se ejecuta el cuerpo de una función generadora? ¿Siempre se ejecuta todo?\n¿Cómo se puede obtener una lista a partir de un generador? ¿Cuántas veces se puede realizar esa operación sobre el mismo generador?\n¿Qué ventaja tiene un generador frente a una lista?\n¿Qué significa que un generador sea perezoso?\n¿Qué pasa si se llama a next sobre un generador más veces que la cantidad de yield en él?\n¿Qué se obtiene en el siguiente bloque de código?\ndef f():\n    yield 1\n    yield 2\n\ngen = f()\nprint(list(gen))\n¿Qué pasa si se corre next(gen) a continuación?\n¿Qué se imprime en pantalla?\nprint((x * 2 for x in [1, 2, 3]))\n¿Por qué es posible implementar un bucle infinito dentro de un generador?\n¿Cuántas veces es posible llamar a next sobre el generador g?\ndef fun():\n    yield 1\n    return 2\n    yield 3\n\ng = fun()",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🪞 Autoevaluación"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/problemas.html",
-    "href": "practica/03_funcional/problemas.html",
-    "title": "🧩 Problemas",
-    "section": "",
-    "text": "En programación, el logging es el proceso de registrar eventos durante la ejecución de un programa. Estos registros, llamados logs, permiten mantener un historial de lo que ocurrió, incluyendo estados del sistema, acciones realizadas y posibles errores o advertencias.\nEn este problema se propone implementar un decorador llamado log que registre, en un archivo, los valores de entrada y salida de cada llamada a las funciones decoradas. El decorador debe recibir como argumento la ruta del archivo donde se guardarán los mensajes.\nPor ejemplo, el siguiente código:\nimport time\n\n@log(\"registro.log\")\ndef f(x, y):\n    return x + y\n\n@log(\"registro.log\")\ndef g(a, b):\n    return a + b ** 2\n\nf(3, 9)\ntime.sleep(1)\nf(256, 256)\ntime.sleep(3)\ng(3, 2)\nf(7, 8)\nDebería generar un archivo registro.log con un contenido similar al siguiente:\n\n\nregistro.log\n\n2025-09-02 18:04:07 - | f(x=3, y=9) -&gt; 12\n2025-09-02 18:04:08 - | f(x=256, y=256) -&gt; 512\n2025-09-02 18:04:11 - | g(a=3, b=2) -&gt; 7\n2025-09-02 18:04:11 - | f(x=7, y=8) -&gt; 15\n\n\n\n\nSi el archivo no existe, debe crearse automáticamente.\nSi el archivo ya existe, los nuevos registros deben agregarse al final, sin sobrescribir los anteriores.\n\n\n\n\n\nPara obtener el momento exacto de la llamada, puede usar datetime.now() del módulo datetime.\nPara formatear ese valor como texto, utilice el método .strftime.\n\nPor ejemplo:\ndatetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n2025-09-02 18:30:39",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/problemas.html#registro-de-llamadas",
-    "href": "practica/03_funcional/problemas.html#registro-de-llamadas",
-    "title": "🧩 Problemas",
-    "section": "",
-    "text": "En programación, el logging es el proceso de registrar eventos durante la ejecución de un programa. Estos registros, llamados logs, permiten mantener un historial de lo que ocurrió, incluyendo estados del sistema, acciones realizadas y posibles errores o advertencias.\nEn este problema se propone implementar un decorador llamado log que registre, en un archivo, los valores de entrada y salida de cada llamada a las funciones decoradas. El decorador debe recibir como argumento la ruta del archivo donde se guardarán los mensajes.\nPor ejemplo, el siguiente código:\nimport time\n\n@log(\"registro.log\")\ndef f(x, y):\n    return x + y\n\n@log(\"registro.log\")\ndef g(a, b):\n    return a + b ** 2\n\nf(3, 9)\ntime.sleep(1)\nf(256, 256)\ntime.sleep(3)\ng(3, 2)\nf(7, 8)\nDebería generar un archivo registro.log con un contenido similar al siguiente:\n\n\nregistro.log\n\n2025-09-02 18:04:07 - | f(x=3, y=9) -&gt; 12\n2025-09-02 18:04:08 - | f(x=256, y=256) -&gt; 512\n2025-09-02 18:04:11 - | g(a=3, b=2) -&gt; 7\n2025-09-02 18:04:11 - | f(x=7, y=8) -&gt; 15\n\n\n\n\nSi el archivo no existe, debe crearse automáticamente.\nSi el archivo ya existe, los nuevos registros deben agregarse al final, sin sobrescribir los anteriores.\n\n\n\n\n\nPara obtener el momento exacto de la llamada, puede usar datetime.now() del módulo datetime.\nPara formatear ese valor como texto, utilice el método .strftime.\n\nPor ejemplo:\ndatetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n2025-09-02 18:30:39",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "practica/03_funcional/problemas.html#fibonacci-el-memorioso",
-    "href": "practica/03_funcional/problemas.html#fibonacci-el-memorioso",
-    "title": "🧩 Problemas",
-    "section": "2 Fibonacci el memorioso",
-    "text": "2 Fibonacci el memorioso\nLa implementación recursiva más directa de la secuencia de Fibonacci es tan concisa como ineficiente.\ndef fibonacci(n):\n    if n &lt;= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\nAl invocar fibonacci(7), se realizan llamadas a fibonacci(6) y fibonacci(5). Luego, fibonacci(6) vuelve a llamar a fibonacci(5) y fibonacci(4), y así sucesivamente. Muchas de estas llamadas se repiten: por ejemplo, fibonacci(5) se calcula más de una vez.\nEste comportamiento muestra que los subproblemas se superponen: los mismos valores se recalculan de manera redundante.\nEl objetivo de este ejercicio es diseñar una función capaz de recordar resultados ya obtenidos, evitando recomputarlos cada vez que aparecen. Para lograrlo, podemos construir una función recursiva que memorice sus valores anteriores y, así, avance en la secuencia sin rehacer todos los cálculos previos.\n\nAyuda\nConsidere una function factory que devuelva la función recursiva. Dentro del ámbito de la function factory puede existir una estructura de datos mutable que almacene los resultados ya calculados.",
-    "crumbs": [
-      "Práctica",
-      "U3 - Programación Funcional",
-      "🧩 Problemas"
-    ]
-  },
-  {
-    "objectID": "proyectos/individual.html",
-    "href": "proyectos/individual.html",
-    "title": "Proyecto individual",
-    "section": "",
-    "text": "Luego del proyecto grupal, podría realizarse un proyecto individual.",
+    "text": "Si aplica, se puede incluir un proyecto grupal.",
     "crumbs": [
       "Proyectos",
-      "Proyecto individual"
+      "Proyecto grupal"
     ]
   },
   {
-    "objectID": "recursos/clases/04.html",
-    "href": "recursos/clases/04.html",
-    "title": "Clase 4: Programación Orientada a Objetos",
+    "objectID": "recursos/clases/05.html",
+    "href": "recursos/clases/05.html",
+    "title": "Clase 5: Programación Orientada a Objetos",
     "section": "",
     "text": "Descargar Notebook",
     "crumbs": [
       "Recursos",
       "Material de clase",
-      "Clase 4: Programación Orientada a Objetos"
+      "Clase 5: Programación Orientada a Objetos"
     ]
   },
   {
