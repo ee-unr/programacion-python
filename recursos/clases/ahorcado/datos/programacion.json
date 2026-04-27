@@ -1,0 +1,247 @@
+[
+  {
+    "palabra": "python",
+    "dificultad": "facil",
+    "significado": "Lenguaje de programacion interpretado."
+  },
+  {
+    "palabra": "bucle",
+    "dificultad": "facil",
+    "significado": "Estructura que repite instrucciones."
+  },
+  {
+    "palabra": "lista",
+    "dificultad": "facil",
+    "significado": "Coleccion ordenada y mutable de elementos."
+  },
+  {
+    "palabra": "entero",
+    "dificultad": "facil",
+    "significado": "Numero sin parte decimal."
+  },
+  {
+    "palabra": "float",
+    "dificultad": "facil",
+    "significado": "Numero con decimales."
+  },
+  {
+    "palabra": "texto",
+    "dificultad": "facil",
+    "significado": "Cadena de caracteres."
+  },
+  {
+    "palabra": "nulo",
+    "dificultad": "facil",
+    "significado": "Valor vacio o ausente."
+  },
+  {
+    "palabra": "print",
+    "dificultad": "facil",
+    "significado": "Funcion para mostrar datos en pantalla."
+  },
+  {
+    "palabra": "input",
+    "dificultad": "facil",
+    "significado": "Funcion para leer datos del usuario."
+  },
+  {
+    "palabra": "while",
+    "dificultad": "facil",
+    "significado": "Bucle que corre mientras una condicion sea verdadera."
+  },
+  {
+    "palabra": "funcion",
+    "dificultad": "media",
+    "significado": "Bloque reutilizable de codigo."
+  },
+  {
+    "palabra": "cadena",
+    "dificultad": "media",
+    "significado": "Texto almacenado como secuencia de caracteres."
+  },
+  {
+    "palabra": "logico",
+    "dificultad": "media",
+    "significado": "Relacionado con valores verdadero o falso."
+  },
+  {
+    "palabra": "bool",
+    "dificultad": "media",
+    "significado": "Tipo de dato booleano."
+  },
+  {
+    "palabra": "none",
+    "dificultad": "media",
+    "significado": "Valor especial que representa ausencia de dato."
+  },
+  {
+    "palabra": "modulo",
+    "dificultad": "media",
+    "significado": "Archivo con codigo reutilizable."
+  },
+  {
+    "palabra": "archivo",
+    "dificultad": "media",
+    "significado": "Documento guardado en disco."
+  },
+  {
+    "palabra": "variable",
+    "dificultad": "media",
+    "significado": "Nombre que referencia un valor."
+  },
+  {
+    "palabra": "operador",
+    "dificultad": "media",
+    "significado": "Simbolo que realiza una operacion."
+  },
+  {
+    "palabra": "metodo",
+    "dificultad": "media",
+    "significado": "Funcion asociada a un objeto."
+  },
+  {
+    "palabra": "import",
+    "dificultad": "media",
+    "significado": "Instruccion para cargar modulos."
+  },
+  {
+    "palabra": "return",
+    "dificultad": "media",
+    "significado": "Instruccion que devuelve un resultado."
+  },
+  {
+    "palabra": "tuple",
+    "dificultad": "media",
+    "significado": "Coleccion ordenada e inmutable."
+  },
+  {
+    "palabra": "algoritmo",
+    "dificultad": "dificil",
+    "significado": "Secuencia de pasos para resolver un problema."
+  },
+  {
+    "palabra": "comparacion",
+    "dificultad": "dificil",
+    "significado": "Operacion que enfrenta dos valores."
+  },
+  {
+    "palabra": "identidad",
+    "dificultad": "dificil",
+    "significado": "Relacion de ser exactamente el mismo objeto."
+  },
+  {
+    "palabra": "asignacion",
+    "dificultad": "dificil",
+    "significado": "Operacion de guardar un valor en una variable."
+  },
+  {
+    "palabra": "booleano",
+    "dificultad": "dificil",
+    "significado": "Dato que solo puede ser verdadero o falso."
+  },
+  {
+    "palabra": "expresion",
+    "dificultad": "dificil",
+    "significado": "Fragmento de codigo que produce un valor."
+  },
+  {
+    "palabra": "memoria",
+    "dificultad": "dificil",
+    "significado": "Espacio donde se almacenan datos temporalmente."
+  },
+  {
+    "palabra": "capitalize",
+    "dificultad": "dificil",
+    "significado": "Metodo que pone en mayuscula la primera letra."
+  },
+  {
+    "palabra": "argumento",
+    "dificultad": "dificil",
+    "significado": "Valor enviado a una funcion."
+  },
+  {
+    "palabra": "condicion",
+    "dificultad": "dificil",
+    "significado": "Expresion que decide un flujo."
+  },
+  {
+    "palabra": "clase",
+    "dificultad": "facil",
+    "significado": "Molde para crear objetos."
+  },
+  {
+    "palabra": "objeto",
+    "dificultad": "facil",
+    "significado": "Instancia creada desde una clase."
+  },
+  {
+    "palabra": "instancia",
+    "dificultad": "media",
+    "significado": "Objeto particular de una clase."
+  },
+  {
+    "palabra": "atributo",
+    "dificultad": "media",
+    "significado": "Dato asociado a un objeto."
+  },
+  {
+    "palabra": "interfaz",
+    "dificultad": "media",
+    "significado": "Forma en que un componente se usa o comunica."
+  },
+  {
+    "palabra": "getter",
+    "dificultad": "media",
+    "significado": "Metodo para obtener un valor."
+  },
+  {
+    "palabra": "setter",
+    "dificultad": "media",
+    "significado": "Metodo para modificar un valor."
+  },
+  {
+    "palabra": "estado",
+    "dificultad": "media",
+    "significado": "Conjunto de valores actuales de un objeto."
+  },
+  {
+    "palabra": "property",
+    "dificultad": "dificil",
+    "significado": "Mecanismo para acceder a metodos como atributos."
+  },
+  {
+    "palabra": "docstring",
+    "dificultad": "dificil",
+    "significado": "Texto de documentacion dentro del codigo."
+  },
+  {
+    "palabra": "decorador",
+    "dificultad": "dificil",
+    "significado": "Funcion que modifica otra funcion o clase."
+  },
+  {
+    "palabra": "protegido",
+    "dificultad": "dificil",
+    "significado": "Atributo pensado para uso interno."
+  },
+  {
+    "palabra": "encapsulamiento",
+    "dificultad": "dificil",
+    "significado": "Ocultar detalles internos de un objeto."
+  },
+  {
+    "palabra": "herencia",
+    "dificultad": "dificil",
+    "significado": "Mecanismo para reutilizar una clase base."
+  },
+  {
+    "palabra": "polimorfismo",
+    "dificultad": "dificil",
+    "significado": "Capacidad de usar una misma interfaz con distintos tipos."
+  },
+  {
+    "palabra": "classmethod",
+    "dificultad": "dificil",
+    "significado": "Metodo que recibe la clase en lugar de la instancia."
+  }
+]

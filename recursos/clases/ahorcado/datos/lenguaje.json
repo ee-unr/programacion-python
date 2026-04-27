@@ -1,0 +1,4227 @@
+[
+  {
+    "palabra": "humanidad",
+    "dificultad": "media",
+    "significado": "Conjunto de los seres humanos."
+  },
+  {
+    "palabra": "humano",
+    "dificultad": "facil",
+    "significado": "Propio de las personas."
+  },
+  {
+    "palabra": "persona",
+    "dificultad": "facil",
+    "significado": "Ser humano."
+  },
+  {
+    "palabra": "hombre",
+    "dificultad": "facil",
+    "significado": "Varón adulto."
+  },
+  {
+    "palabra": "adolescente",
+    "dificultad": "dificil",
+    "significado": "Persona en la pubertad o juventud."
+  },
+  {
+    "palabra": "adulto",
+    "dificultad": "facil",
+    "significado": "Persona ya desarrollada."
+  },
+  {
+    "palabra": "adulta",
+    "dificultad": "facil",
+    "significado": "Mujer adulta."
+  },
+  {
+    "palabra": "anciano",
+    "dificultad": "facil",
+    "significado": "Persona de mucha edad."
+  },
+  {
+    "palabra": "anciana",
+    "dificultad": "facil",
+    "significado": "Mujer de mucha edad."
+  },
+  {
+    "palabra": "senora",
+    "dificultad": "facil",
+    "significado": "Mujer adulta tratada con respeto."
+  },
+  {
+    "palabra": "caballero",
+    "dificultad": "media",
+    "significado": "Hombre cortés o distinguido."
+  },
+  {
+    "palabra": "individuo",
+    "dificultad": "media",
+    "significado": "Ser considerado por separado."
+  },
+  {
+    "palabra": "cuerpo",
+    "dificultad": "facil",
+    "significado": "Parte física de un ser vivo."
+  },
+  {
+    "palabra": "pierna",
+    "dificultad": "facil",
+    "significado": "Miembro inferior del cuerpo."
+  },
+  {
+    "palabra": "espinilla",
+    "dificultad": "media",
+    "significado": "Parte frontal de la pierna."
+  },
+  {
+    "palabra": "rodilla",
+    "dificultad": "facil",
+    "significado": "Articulación entre muslo y pierna."
+  },
+  {
+    "palabra": "cabeza",
+    "dificultad": "facil",
+    "significado": "Parte superior del cuerpo."
+  },
+  {
+    "palabra": "diente",
+    "dificultad": "facil",
+    "significado": "Pieza dura de la boca."
+  },
+  {
+    "palabra": "bigote",
+    "dificultad": "facil",
+    "significado": "Vello sobre el labio superior."
+  },
+  {
+    "palabra": "cabello",
+    "dificultad": "facil",
+    "significado": "Conjunto de pelos de la cabeza."
+  },
+  {
+    "palabra": "cerebro",
+    "dificultad": "facil",
+    "significado": "Órgano principal del sistema nervioso."
+  },
+  {
+    "palabra": "estomago",
+    "dificultad": "media",
+    "significado": "Órgano que digiere los alimentos."
+  },
+  {
+    "palabra": "hombro",
+    "dificultad": "facil",
+    "significado": "Articulación entre brazo y tronco."
+  },
+  {
+    "palabra": "muneca",
+    "dificultad": "facil",
+    "significado": "Articulación del cuerpo que une el brazo con la mano."
+  },
+  {
+    "palabra": "trasero",
+    "dificultad": "facil",
+    "significado": "Situado en la parte de atrás de algo."
+  },
+  {
+    "palabra": "gluteos",
+    "dificultad": "facil",
+    "significado": "Plural de glúteo."
+  },
+  {
+    "palabra": "abdomen",
+    "dificultad": "facil",
+    "significado": "Parte inferior del tronco."
+  },
+  {
+    "palabra": "higado",
+    "dificultad": "facil",
+    "significado": "Órgano que procesa nutrientes y toxinas."
+  },
+  {
+    "palabra": "musculo",
+    "dificultad": "facil",
+    "significado": "Tejido del cuerpo que produce movimiento."
+  },
+  {
+    "palabra": "cuello",
+    "dificultad": "facil",
+    "significado": "Parte que une la cabeza con el tronco."
+  },
+  {
+    "palabra": "corazon",
+    "dificultad": "facil",
+    "significado": "Órgano de los animales que se ocupa de bombear la sangre."
+  },
+  {
+    "palabra": "espiritu",
+    "dificultad": "media",
+    "significado": "Substancia inmaterial de una persona."
+  },
+  {
+    "palabra": "cintura",
+    "dificultad": "facil",
+    "significado": "Parte estrecha entre torso y cadera."
+  },
+  {
+    "palabra": "cadera",
+    "dificultad": "facil",
+    "significado": "Zona lateral de la pelvis."
+  },
+  {
+    "palabra": "espalda",
+    "dificultad": "facil",
+    "significado": "Parte posterior del tronco."
+  },
+  {
+    "palabra": "sangre",
+    "dificultad": "facil",
+    "significado": "Líquido rojo que circula por el cuerpo."
+  },
+  {
+    "palabra": "resfriado",
+    "dificultad": "media",
+    "significado": "Que ha cogido un resfrío o resfriado."
+  },
+  {
+    "palabra": "diarrea",
+    "dificultad": "facil",
+    "significado": "Evacuación frecuente y líquida."
+  },
+  {
+    "palabra": "enfermedad",
+    "dificultad": "dificil",
+    "significado": "Alteración de la salud."
+  },
+  {
+    "palabra": "familia",
+    "dificultad": "facil",
+    "significado": "Conjunto de personas, unidas por descendencia."
+  },
+  {
+    "palabra": "conocido",
+    "dificultad": "media",
+    "significado": "Persona o cosa ya conocida."
+  },
+  {
+    "palabra": "conocida",
+    "dificultad": "media",
+    "significado": "Femenino de conocido."
+  },
+  {
+    "palabra": "colega",
+    "dificultad": "facil",
+    "significado": "Persona del mismo oficio o ámbito."
+  },
+  {
+    "palabra": "pareja",
+    "dificultad": "facil",
+    "significado": "Persona con vínculo amoroso."
+  },
+  {
+    "palabra": "esposo",
+    "dificultad": "facil",
+    "significado": "Hombre casado, con respecto de su cónyuge."
+  },
+  {
+    "palabra": "esposa",
+    "dificultad": "facil",
+    "significado": "Mujer casada con respecto de su cónyuge."
+  },
+  {
+    "palabra": "matrimonio",
+    "dificultad": "dificil",
+    "significado": "Unión legal o estable de dos personas."
+  },
+  {
+    "palabra": "hermano",
+    "dificultad": "facil",
+    "significado": "Hijo de los mismos padres."
+  },
+  {
+    "palabra": "hermana",
+    "dificultad": "facil",
+    "significado": "Femenino de hermano."
+  },
+  {
+    "palabra": "abuelo",
+    "dificultad": "facil",
+    "significado": "Ascendiente directo en segunda generación."
+  },
+  {
+    "palabra": "abuela",
+    "dificultad": "facil",
+    "significado": "Femenino de abuelo."
+  },
+  {
+    "palabra": "bisabuelo",
+    "dificultad": "media",
+    "significado": "Padre del abuelo o la abuela."
+  },
+  {
+    "palabra": "bisabuela",
+    "dificultad": "media",
+    "significado": "Madre del abuelo o la abuela."
+  },
+  {
+    "palabra": "bisnieto",
+    "dificultad": "media",
+    "significado": "Hijo del nieto o de la nieta."
+  },
+  {
+    "palabra": "bisnieta",
+    "dificultad": "media",
+    "significado": "Femenino de bisnieto."
+  },
+  {
+    "palabra": "sobrino",
+    "dificultad": "facil",
+    "significado": "Hijo de un hermano o hermana."
+  },
+  {
+    "palabra": "sobrina",
+    "dificultad": "facil",
+    "significado": "Hija de un hermano o hermana."
+  },
+  {
+    "palabra": "criatura",
+    "dificultad": "media",
+    "significado": "Toda cosa criada."
+  },
+  {
+    "palabra": "especie",
+    "dificultad": "facil",
+    "significado": "Conjunto de cosas que tienen atributos en común."
+  },
+  {
+    "palabra": "nacimiento",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de nacer."
+  },
+  {
+    "palabra": "reproduccion",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de reproducir."
+  },
+  {
+    "palabra": "muerte",
+    "dificultad": "facil",
+    "significado": "Fin de la vida , en especial de una persona."
+  },
+  {
+    "palabra": "naturaleza",
+    "dificultad": "dificil",
+    "significado": "Conjunto de los seres y fenómenos naturales."
+  },
+  {
+    "palabra": "bosque",
+    "dificultad": "facil",
+    "significado": "Terreno cubierto por árboles y otra vegetación."
+  },
+  {
+    "palabra": "jungla",
+    "dificultad": "facil",
+    "significado": "Bosque denso tropical."
+  },
+  {
+    "palabra": "desierto",
+    "dificultad": "media",
+    "significado": "Vacío , abandonado,despoblado."
+  },
+  {
+    "palabra": "laguna",
+    "dificultad": "facil",
+    "significado": "Depósito natural de agua."
+  },
+  {
+    "palabra": "oceano",
+    "dificultad": "facil",
+    "significado": "Gran masa de agua salada."
+  },
+  {
+    "palabra": "montana",
+    "dificultad": "facil",
+    "significado": "Elevación grande del terreno."
+  },
+  {
+    "palabra": "energia",
+    "dificultad": "facil",
+    "significado": "Elemento del entorno natural."
+  },
+  {
+    "palabra": "animal",
+    "dificultad": "facil",
+    "significado": "Ser vivo que siente y se mueve."
+  },
+  {
+    "palabra": "caballo",
+    "dificultad": "facil",
+    "significado": "Mamífero."
+  },
+  {
+    "palabra": "conejo",
+    "dificultad": "facil",
+    "significado": "Mamífero orejudo de patas traseras fuertes."
+  },
+  {
+    "palabra": "dragon",
+    "dificultad": "facil",
+    "significado": "Ser fantástico con forma de reptil gigante."
+  },
+  {
+    "palabra": "ciervo",
+    "dificultad": "facil",
+    "significado": "Mamífero."
+  },
+  {
+    "palabra": "jirafa",
+    "dificultad": "facil",
+    "significado": "Mamífero."
+  },
+  {
+    "palabra": "elefante",
+    "dificultad": "media",
+    "significado": "Mamífero grande de trompa."
+  },
+  {
+    "palabra": "pajaro",
+    "dificultad": "facil",
+    "significado": "Ave , en especial si es de pequeño tamaño."
+  },
+  {
+    "palabra": "gallina",
+    "dificultad": "facil",
+    "significado": "Ave."
+  },
+  {
+    "palabra": "gorrion",
+    "dificultad": "facil",
+    "significado": "Pájaro cosmopolita que mide 14, 5 cm."
+  },
+  {
+    "palabra": "cuervo",
+    "dificultad": "facil",
+    "significado": "Ave negra de canto áspero."
+  },
+  {
+    "palabra": "aguila",
+    "dificultad": "facil",
+    "significado": "Ave rapaz de gran tamaño."
+  },
+  {
+    "palabra": "halcon",
+    "dificultad": "facil",
+    "significado": "Ave."
+  },
+  {
+    "palabra": "camaron",
+    "dificultad": "facil",
+    "significado": "Crustáceo pequeño parecido al langostino."
+  },
+  {
+    "palabra": "langosta",
+    "dificultad": "media",
+    "significado": "Crustáceo marino de gran tamaño."
+  },
+  {
+    "palabra": "sardina",
+    "dificultad": "facil",
+    "significado": "Pez pequeño de mar."
+  },
+  {
+    "palabra": "calamar",
+    "dificultad": "facil",
+    "significado": "Molusco cefalópodo de la familia Teuthidae."
+  },
+  {
+    "palabra": "insecto",
+    "dificultad": "facil",
+    "significado": "Animal invertebrado, del filo de los artrópodos."
+  },
+  {
+    "palabra": "mariposa",
+    "dificultad": "media",
+    "significado": "Insecto alado de colores."
+  },
+  {
+    "palabra": "polilla",
+    "dificultad": "facil",
+    "significado": "Insecto nocturno parecido a la mariposa."
+  },
+  {
+    "palabra": "saltamontes",
+    "dificultad": "dificil",
+    "significado": "Insecto del orden Ortópteros."
+  },
+  {
+    "palabra": "mosquito",
+    "dificultad": "media",
+    "significado": "Insecto."
+  },
+  {
+    "palabra": "cucaracha",
+    "dificultad": "media",
+    "significado": "Insecto resistente de cuerpo aplanado."
+  },
+  {
+    "palabra": "caracol",
+    "dificultad": "facil",
+    "significado": "Molusco con concha en espiral."
+  },
+  {
+    "palabra": "babosa",
+    "dificultad": "facil",
+    "significado": "Molusco sin concha."
+  },
+  {
+    "palabra": "lombriz",
+    "dificultad": "facil",
+    "significado": "Gusano de cuerpo alargado."
+  },
+  {
+    "palabra": "marisco",
+    "dificultad": "facil",
+    "significado": "Animal marino comestible."
+  },
+  {
+    "palabra": "molusco",
+    "dificultad": "facil",
+    "significado": "Animal blando, con o sin concha."
+  },
+  {
+    "palabra": "lagarto",
+    "dificultad": "facil",
+    "significado": "Reptil pequeño de cola larga."
+  },
+  {
+    "palabra": "serpiente",
+    "dificultad": "media",
+    "significado": "Reptil alargado sin patas."
+  },
+  {
+    "palabra": "cocodrilo",
+    "dificultad": "media",
+    "significado": "Gran reptil acuático de hocico alargado."
+  },
+  {
+    "palabra": "alimento",
+    "dificultad": "media",
+    "significado": "Sustancia normalmente comida o bebida por los seres vivos."
+  },
+  {
+    "palabra": "comida",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de comer."
+  },
+  {
+    "palabra": "bebida",
+    "dificultad": "facil",
+    "significado": "Líquido que puede ser ingerido."
+  },
+  {
+    "palabra": "vegetal",
+    "dificultad": "facil",
+    "significado": "Ser vivo del reino vegetal."
+  },
+  {
+    "palabra": "planta",
+    "dificultad": "facil",
+    "significado": "Ser vivo que crece en la tierra."
+  },
+  {
+    "palabra": "cesped",
+    "dificultad": "facil",
+    "significado": "Hierba que cubre el suelo en los jardines."
+  },
+  {
+    "palabra": "semilla",
+    "dificultad": "facil",
+    "significado": "Grano que da origen a una planta."
+  },
+  {
+    "palabra": "ciruela",
+    "dificultad": "facil",
+    "significado": "Fruta del ciruelo."
+  },
+  {
+    "palabra": "almendra",
+    "dificultad": "media",
+    "significado": "Fruto del almendro."
+  },
+  {
+    "palabra": "castana",
+    "dificultad": "facil",
+    "significado": "Fruto seco del castaño."
+  },
+  {
+    "palabra": "cebada",
+    "dificultad": "facil",
+    "significado": "Cereal usado en pan y cerveza."
+  },
+  {
+    "palabra": "verdura",
+    "dificultad": "facil",
+    "significado": "Hortaliza comestible."
+  },
+  {
+    "palabra": "patatas",
+    "dificultad": "facil",
+    "significado": "Plural de patata."
+  },
+  {
+    "palabra": "judias",
+    "dificultad": "facil",
+    "significado": "Forma de femenino plural de judío."
+  },
+  {
+    "palabra": "guisantes",
+    "dificultad": "media",
+    "significado": "Plural de guisante."
+  },
+  {
+    "palabra": "porotos",
+    "dificultad": "facil",
+    "significado": "Plural de poroto."
+  },
+  {
+    "palabra": "rabano",
+    "dificultad": "facil",
+    "significado": "Raíz comestible de sabor picante."
+  },
+  {
+    "palabra": "zanahoria",
+    "dificultad": "media",
+    "significado": "Planta herbácea bienal, de la familia de las apiáceas."
+  },
+  {
+    "palabra": "manzana",
+    "dificultad": "facil",
+    "significado": "Fruta comestible del manzano, un pomo crujiente."
+  },
+  {
+    "palabra": "naranja",
+    "dificultad": "facil",
+    "significado": "Color entre rojo y amarillo."
+  },
+  {
+    "palabra": "platano",
+    "dificultad": "facil",
+    "significado": "Árbol del género plátano."
+  },
+  {
+    "palabra": "castano",
+    "dificultad": "facil",
+    "significado": "Árbol."
+  },
+  {
+    "palabra": "durazno",
+    "dificultad": "facil",
+    "significado": "Árbol."
+  },
+  {
+    "palabra": "tomate",
+    "dificultad": "facil",
+    "significado": "Fruto rojo muy usado en cocina."
+  },
+  {
+    "palabra": "sandia",
+    "dificultad": "facil",
+    "significado": "Fruta grande y jugosa."
+  },
+  {
+    "palabra": "gaseosa",
+    "dificultad": "facil",
+    "significado": "Bebida refrescante de fantasía."
+  },
+  {
+    "palabra": "tiempo",
+    "dificultad": "facil",
+    "significado": "Duración de las cosas."
+  },
+  {
+    "palabra": "calendario",
+    "dificultad": "dificil",
+    "significado": "Sistema que divide el tiempo en días."
+  },
+  {
+    "palabra": "instante",
+    "dificultad": "media",
+    "significado": "Fracción diminuta de tiempo."
+  },
+  {
+    "palabra": "momento",
+    "dificultad": "facil",
+    "significado": "Cantidad relativamente corta de tiempo."
+  },
+  {
+    "palabra": "segundo",
+    "dificultad": "facil",
+    "significado": "Unidad mínima común del tiempo."
+  },
+  {
+    "palabra": "minuto",
+    "dificultad": "facil",
+    "significado": "Dicho del dinero."
+  },
+  {
+    "palabra": "semana",
+    "dificultad": "facil",
+    "significado": "Período de siete días."
+  },
+  {
+    "palabra": "decada",
+    "dificultad": "facil",
+    "significado": "Período de diez años."
+  },
+  {
+    "palabra": "milenio",
+    "dificultad": "facil",
+    "significado": "Periodo de mil años de duración."
+  },
+  {
+    "palabra": "manana",
+    "dificultad": "facil",
+    "significado": "Primeras horas del día."
+  },
+  {
+    "palabra": "amanecer",
+    "dificultad": "media",
+    "significado": "Comenzar a ser visible la luz del día."
+  },
+  {
+    "palabra": "mediodia",
+    "dificultad": "media",
+    "significado": "Hora central del día."
+  },
+  {
+    "palabra": "anochecer",
+    "dificultad": "media",
+    "significado": "Momento en que cae la noche."
+  },
+  {
+    "palabra": "martes",
+    "dificultad": "facil",
+    "significado": "Segundo día de la semana laboral."
+  },
+  {
+    "palabra": "miercoles",
+    "dificultad": "media",
+    "significado": "Cuarto día de la semana litúrgica y del mundo anglosajón."
+  },
+  {
+    "palabra": "jueves",
+    "dificultad": "facil",
+    "significado": "Quinto día de la semana."
+  },
+  {
+    "palabra": "viernes",
+    "dificultad": "facil",
+    "significado": "Quinto día de la semana."
+  },
+  {
+    "palabra": "sabado",
+    "dificultad": "facil",
+    "significado": "Sexto día de la semana."
+  },
+  {
+    "palabra": "domingo",
+    "dificultad": "facil",
+    "significado": "Séptimo día de la semana."
+  },
+  {
+    "palabra": "ambiente",
+    "dificultad": "media",
+    "significado": "Aire , atmósfera , entorno , ámbito."
+  },
+  {
+    "palabra": "espacio",
+    "dificultad": "facil",
+    "significado": "Extensión o lugar disponible."
+  },
+  {
+    "palabra": "entorno",
+    "dificultad": "facil",
+    "significado": "Lo que rodea a algo."
+  },
+  {
+    "palabra": "superficie",
+    "dificultad": "dificil",
+    "significado": "Medida de espacio bidimiensional."
+  },
+  {
+    "palabra": "volumen",
+    "dificultad": "facil",
+    "significado": "Cantidad de espacio tridimensional que ocupa algo."
+  },
+  {
+    "palabra": "region",
+    "dificultad": "facil",
+    "significado": "Gran división administrativa de una nación."
+  },
+  {
+    "palabra": "planeta",
+    "dificultad": "facil",
+    "significado": "Cuerpo celeste que orbita una estrella."
+  },
+  {
+    "palabra": "estrella",
+    "dificultad": "media",
+    "significado": "Astro visible en el cielo nocturno."
+  },
+  {
+    "palabra": "galaxia",
+    "dificultad": "facil",
+    "significado": "Conjunto de estrellas y materia interestelar."
+  },
+  {
+    "palabra": "universo",
+    "dificultad": "media",
+    "significado": "Conjunto de todo lo existente."
+  },
+  {
+    "palabra": "despejado",
+    "dificultad": "media",
+    "significado": "Que esta desocupado."
+  },
+  {
+    "palabra": "nublado",
+    "dificultad": "facil",
+    "significado": "Que está cubierto de nubes."
+  },
+  {
+    "palabra": "lluvia",
+    "dificultad": "facil",
+    "significado": "Precipitación de gotas de agua."
+  },
+  {
+    "palabra": "viento",
+    "dificultad": "facil",
+    "significado": "Movimiento del aire."
+  },
+  {
+    "palabra": "trueno",
+    "dificultad": "facil",
+    "significado": "Ruido fuerte de una tormenta."
+  },
+  {
+    "palabra": "tormenta",
+    "dificultad": "media",
+    "significado": "Fenómeno atmosférico violento."
+  },
+  {
+    "palabra": "derecha",
+    "dificultad": "facil",
+    "significado": "En el cuerpo humano, mano del lado opuesto al corazón."
+  },
+  {
+    "palabra": "izquierda",
+    "dificultad": "media",
+    "significado": "Lado opuesto a la derecha."
+  },
+  {
+    "palabra": "diagonal",
+    "dificultad": "media",
+    "significado": "Línea o dirección oblicua."
+  },
+  {
+    "palabra": "exterior",
+    "dificultad": "media",
+    "significado": "Parte de afuera."
+  },
+  {
+    "palabra": "interior",
+    "dificultad": "media",
+    "significado": "Parte de adentro."
+  },
+  {
+    "palabra": "atmosfera",
+    "dificultad": "media",
+    "significado": "Capa de gases que rodea la Tierra."
+  },
+  {
+    "palabra": "tierra",
+    "dificultad": "facil",
+    "significado": "Suelo o planeta que habitamos."
+  },
+  {
+    "palabra": "metalico",
+    "dificultad": "media",
+    "significado": "Propio de, relativo a o similar al metal."
+  },
+  {
+    "palabra": "hierro",
+    "dificultad": "facil",
+    "significado": "Elemento químico con número atómico 26 cuyo símbolo es Fe."
+  },
+  {
+    "palabra": "milimetro",
+    "dificultad": "media",
+    "significado": "Medida o cantidad."
+  },
+  {
+    "palabra": "centimetro",
+    "dificultad": "dificil",
+    "significado": "Medida o cantidad."
+  },
+  {
+    "palabra": "kilometro",
+    "dificultad": "media",
+    "significado": "Unidad de longitud , equivalente a mil metros o 10 metros."
+  },
+  {
+    "palabra": "cantidad",
+    "dificultad": "media",
+    "significado": "Medida o cantidad."
+  },
+  {
+    "palabra": "medida",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de medir."
+  },
+  {
+    "palabra": "sociedad",
+    "dificultad": "media",
+    "significado": "Conjunto de personas organizadas."
+  },
+  {
+    "palabra": "comunidad",
+    "dificultad": "media",
+    "significado": "Calidad de común y propio de todos."
+  },
+  {
+    "palabra": "reunion",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de reunir o de reunirse."
+  },
+  {
+    "palabra": "encuentro",
+    "dificultad": "media",
+    "significado": "Acción o efecto de encontrar o de encontrarse."
+  },
+  {
+    "palabra": "estructura",
+    "dificultad": "dificil",
+    "significado": "Organización de las partes de un conjunto."
+  },
+  {
+    "palabra": "administracion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de administrar."
+  },
+  {
+    "palabra": "organizacion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de organizar o de organizarse."
+  },
+  {
+    "palabra": "asociacion",
+    "dificultad": "dificil",
+    "significado": "El acto de asociarse."
+  },
+  {
+    "palabra": "empresa",
+    "dificultad": "facil",
+    "significado": "Organización dedicada a una actividad económica."
+  },
+  {
+    "palabra": "equipo",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de equipar."
+  },
+  {
+    "palabra": "autoridad",
+    "dificultad": "media",
+    "significado": "Poder o persona que manda."
+  },
+  {
+    "palabra": "campana",
+    "dificultad": "facil",
+    "significado": "Extensión campestre llana, en contraposición al monte."
+  },
+  {
+    "palabra": "comision",
+    "dificultad": "media",
+    "significado": "Acción de cometer."
+  },
+  {
+    "palabra": "congreso",
+    "dificultad": "media",
+    "significado": "Asamblea de representantes."
+  },
+  {
+    "palabra": "consejo",
+    "dificultad": "facil",
+    "significado": "Órgano o junta de decisión."
+  },
+  {
+    "palabra": "partido",
+    "dificultad": "facil",
+    "significado": "Organización política o equipo en competencia."
+  },
+  {
+    "palabra": "nacion",
+    "dificultad": "facil",
+    "significado": "Conjunto de habitantes de un país."
+  },
+  {
+    "palabra": "gobierno",
+    "dificultad": "media",
+    "significado": "Acción o efecto de gobernar."
+  },
+  {
+    "palabra": "estado",
+    "dificultad": "facil",
+    "significado": "Situación en que está una persona o una cosa."
+  },
+  {
+    "palabra": "provincia",
+    "dificultad": "media",
+    "significado": "División territorial de un país."
+  },
+  {
+    "palabra": "departamento",
+    "dificultad": "dificil",
+    "significado": "División administrativa o área de trabajo."
+  },
+  {
+    "palabra": "municipio",
+    "dificultad": "media",
+    "significado": "Gobierno local de una ciudad o pueblo."
+  },
+  {
+    "palabra": "democracia",
+    "dificultad": "dificil",
+    "significado": "Sistema donde el pueblo elige."
+  },
+  {
+    "palabra": "dictadura",
+    "dificultad": "media",
+    "significado": "Forma de gobierno que se concentra en las manos."
+  },
+  {
+    "palabra": "politica",
+    "dificultad": "media",
+    "significado": "Actividad relativa al gobierno."
+  },
+  {
+    "palabra": "politico",
+    "dificultad": "media",
+    "significado": "Relativo al gobierno o al poder."
+  },
+  {
+    "palabra": "presidente",
+    "dificultad": "dificil",
+    "significado": "Que preside una reunión , organización o cuerpo colegiado."
+  },
+  {
+    "palabra": "ministro",
+    "dificultad": "media",
+    "significado": "El que ministra alguna cosa."
+  },
+  {
+    "palabra": "director",
+    "dificultad": "media",
+    "significado": "Que dirige o encabeza."
+  },
+  {
+    "palabra": "parlamentario",
+    "dificultad": "dificil",
+    "significado": "Perteneciente al parlamento judicial o político."
+  },
+  {
+    "palabra": "congresista",
+    "dificultad": "dificil",
+    "significado": "Miembro de un congreso científico, económico, etc."
+  },
+  {
+    "palabra": "senador",
+    "dificultad": "facil",
+    "significado": "Miembro del senado."
+  },
+  {
+    "palabra": "diputado",
+    "dificultad": "media",
+    "significado": "Representante elegido en una cámara."
+  },
+  {
+    "palabra": "representante",
+    "dificultad": "dificil",
+    "significado": "Que representa."
+  },
+  {
+    "palabra": "gobernador",
+    "dificultad": "dificil",
+    "significado": "Que gobierna."
+  },
+  {
+    "palabra": "intendente",
+    "dificultad": "dificil",
+    "significado": "Persona a cargo de administrar, superentender."
+  },
+  {
+    "palabra": "alcalde",
+    "dificultad": "facil",
+    "significado": "Centro urbano."
+  },
+  {
+    "palabra": "policia",
+    "dificultad": "facil",
+    "significado": "Fuerza encargada de la seguridad."
+  },
+  {
+    "palabra": "bomberos",
+    "dificultad": "media",
+    "significado": "Plural de bombero."
+  },
+  {
+    "palabra": "capital",
+    "dificultad": "facil",
+    "significado": "Principal o más importante."
+  },
+  {
+    "palabra": "ciudad",
+    "dificultad": "facil",
+    "significado": "Población grande y urbanizada."
+  },
+  {
+    "palabra": "poblacion",
+    "dificultad": "media",
+    "significado": "Acción o finalidad de poblar un determinado lugar."
+  },
+  {
+    "palabra": "pueblo",
+    "dificultad": "facil",
+    "significado": "Población pequeña o su gente."
+  },
+  {
+    "palabra": "obligacion",
+    "dificultad": "dificil",
+    "significado": "Aquello que hay que cumplir por responsabilidad."
+  },
+  {
+    "palabra": "libertad",
+    "dificultad": "media",
+    "significado": "Facultad de actuar sin coerción."
+  },
+  {
+    "palabra": "derecho",
+    "dificultad": "facil",
+    "significado": "Lado opuesto al corazón."
+  },
+  {
+    "palabra": "permiso",
+    "dificultad": "facil",
+    "significado": "Autorización para hacer algo."
+  },
+  {
+    "palabra": "prohibicion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de prohibir."
+  },
+  {
+    "palabra": "constitucion",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de constituir."
+  },
+  {
+    "palabra": "decreto",
+    "dificultad": "facil",
+    "significado": "Norma dictada por una autoridad."
+  },
+  {
+    "palabra": "economia",
+    "dificultad": "media",
+    "significado": "Administración eficiente y prudente de los bienes."
+  },
+  {
+    "palabra": "consumo",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de consumir."
+  },
+  {
+    "palabra": "demanda",
+    "dificultad": "facil",
+    "significado": "Cantidad que se desea comprar."
+  },
+  {
+    "palabra": "compania",
+    "dificultad": "media",
+    "significado": "Acto o consecuencia de acompañar o acompañarse."
+  },
+  {
+    "palabra": "comercio",
+    "dificultad": "media",
+    "significado": "Intercambio de mercancías."
+  },
+  {
+    "palabra": "mercado",
+    "dificultad": "facil",
+    "significado": "Ámbito donde se compran y venden bienes."
+  },
+  {
+    "palabra": "servicio",
+    "dificultad": "media",
+    "significado": "Acción o efecto de servir."
+  },
+  {
+    "palabra": "producto",
+    "dificultad": "media",
+    "significado": "Bien o servicio ofrecido."
+  },
+  {
+    "palabra": "produccion",
+    "dificultad": "dificil",
+    "significado": "Hecho o acto de producir."
+  },
+  {
+    "palabra": "transaccion",
+    "dificultad": "dificil",
+    "significado": "Intercambio económico entre partes."
+  },
+  {
+    "palabra": "almacen",
+    "dificultad": "facil",
+    "significado": "Local para guardar o vender mercaderías."
+  },
+  {
+    "palabra": "fabrica",
+    "dificultad": "facil",
+    "significado": "Acción y efecto de fabricar."
+  },
+  {
+    "palabra": "cuenta",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de contar."
+  },
+  {
+    "palabra": "boleto",
+    "dificultad": "facil",
+    "significado": "Pasaje."
+  },
+  {
+    "palabra": "entrada",
+    "dificultad": "facil",
+    "significado": "Acceso, ingreso o boleto."
+  },
+  {
+    "palabra": "dinero",
+    "dificultad": "facil",
+    "significado": "Medio de pago."
+  },
+  {
+    "palabra": "billete",
+    "dificultad": "facil",
+    "significado": "Papel moneda."
+  },
+  {
+    "palabra": "vuelto",
+    "dificultad": "facil",
+    "significado": "Medio de pago."
+  },
+  {
+    "palabra": "cambio",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de cambiar."
+  },
+  {
+    "palabra": "precio",
+    "dificultad": "facil",
+    "significado": "Cantidad de dinero en la que está valorado algo."
+  },
+  {
+    "palabra": "tarifa",
+    "dificultad": "facil",
+    "significado": "Tabla de precios , derechos , cuotas , impuestos o tasas."
+  },
+  {
+    "palabra": "escritorio",
+    "dificultad": "dificil",
+    "significado": "Mesa para trabajar o escribir."
+  },
+  {
+    "palabra": "dormitorio",
+    "dificultad": "dificil",
+    "significado": "Pieza o habitación para dormir."
+  },
+  {
+    "palabra": "habitacion",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de habitar o morar en alguna parte."
+  },
+  {
+    "palabra": "cuarto",
+    "dificultad": "facil",
+    "significado": "Que va inmediatamente después del tercero en una serie."
+  },
+  {
+    "palabra": "oficina",
+    "dificultad": "facil",
+    "significado": "Lugar de trabajo administrativo."
+  },
+  {
+    "palabra": "puerta",
+    "dificultad": "facil",
+    "significado": "Abertura móvil para entrar o salir."
+  },
+  {
+    "palabra": "ventana",
+    "dificultad": "facil",
+    "significado": "Abertura que deja pasar luz y aire."
+  },
+  {
+    "palabra": "apartamento",
+    "dificultad": "dificil",
+    "significado": "Vivienda de un edificio."
+  },
+  {
+    "palabra": "edificio",
+    "dificultad": "media",
+    "significado": "Construcción de varios pisos."
+  },
+  {
+    "palabra": "construccion",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de construir."
+  },
+  {
+    "palabra": "elevador",
+    "dificultad": "media",
+    "significado": "Aparato para subir o bajar."
+  },
+  {
+    "palabra": "ascensor",
+    "dificultad": "media",
+    "significado": "Cabina que transporta entre pisos."
+  },
+  {
+    "palabra": "escalera",
+    "dificultad": "media",
+    "significado": "Estructura con peldaños."
+  },
+  {
+    "palabra": "aparato",
+    "dificultad": "facil",
+    "significado": "Dispositivo con una función concreta."
+  },
+  {
+    "palabra": "camara",
+    "dificultad": "facil",
+    "significado": "Aparato que sirve para capturar imágenes estáticas."
+  },
+  {
+    "palabra": "cuerda",
+    "dificultad": "facil",
+    "significado": "Tira larga de fibras trenzadas."
+  },
+  {
+    "palabra": "cordel",
+    "dificultad": "facil",
+    "significado": "Cuerda de escaso grosor."
+  },
+  {
+    "palabra": "cordon",
+    "dificultad": "facil",
+    "significado": "Cierto género de cuerda por lo común redonda."
+  },
+  {
+    "palabra": "bolsillo",
+    "dificultad": "media",
+    "significado": "Bolsa pequeña, ubicada en algunas prendas de vestir."
+  },
+  {
+    "palabra": "paraguas",
+    "dificultad": "media",
+    "significado": "Objeto para protegerse de la lluvia."
+  },
+  {
+    "palabra": "parasol",
+    "dificultad": "facil",
+    "significado": "Objeto para dar sombra del sol."
+  },
+  {
+    "palabra": "pantalla",
+    "dificultad": "media",
+    "significado": "Superficie donde se ve una imagen."
+  },
+  {
+    "palabra": "trancar",
+    "dificultad": "facil",
+    "significado": "Cerrar o asegurar con tranca."
+  },
+  {
+    "palabra": "escultura",
+    "dificultad": "media",
+    "significado": "Obra artística tallada o modelada."
+  },
+  {
+    "palabra": "revista",
+    "dificultad": "facil",
+    "significado": "Publicación periódica."
+  },
+  {
+    "palabra": "cuadro",
+    "dificultad": "facil",
+    "significado": "Lienzo o tabla pintado artísticamente."
+  },
+  {
+    "palabra": "grabado",
+    "dificultad": "facil",
+    "significado": "Imagen obtenida por impresión o incisión."
+  },
+  {
+    "palabra": "electricidad",
+    "dificultad": "dificil",
+    "significado": "Energía producida por cargas eléctricas."
+  },
+  {
+    "palabra": "corriente",
+    "dificultad": "media",
+    "significado": "Que está corriendo."
+  },
+  {
+    "palabra": "conexion",
+    "dificultad": "media",
+    "significado": "Acción o efecto de conectar."
+  },
+  {
+    "palabra": "prenda",
+    "dificultad": "facil",
+    "significado": "Bien mueble que se ofrece como garantía de una operación."
+  },
+  {
+    "palabra": "solapa",
+    "dificultad": "facil",
+    "significado": "Parte doblada de una prenda."
+  },
+  {
+    "palabra": "cremallera",
+    "dificultad": "dificil",
+    "significado": "Cierre dentado deslizante."
+  },
+  {
+    "palabra": "cierre",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de cerrar o de cerrarse."
+  },
+  {
+    "palabra": "cinturon",
+    "dificultad": "media",
+    "significado": "Tira que sujeta la ropa a la cintura."
+  },
+  {
+    "palabra": "zapato",
+    "dificultad": "facil",
+    "significado": "Calzado que cubre el pie."
+  },
+  {
+    "palabra": "pantalon",
+    "dificultad": "media",
+    "significado": "Prenda que cubre ambas piernas."
+  },
+  {
+    "palabra": "camisa",
+    "dificultad": "facil",
+    "significado": "Prenda de vestir, generalmente con mangas y cuellos."
+  },
+  {
+    "palabra": "camiseta",
+    "dificultad": "media",
+    "significado": "Prenda liviana de torso y mangas cortas."
+  },
+  {
+    "palabra": "zapatilla",
+    "dificultad": "media",
+    "significado": "Calzado liviano y cómodo."
+  },
+  {
+    "palabra": "cordones",
+    "dificultad": "media",
+    "significado": "Divisa que traen los cadetes en el hombro derecho."
+  },
+  {
+    "palabra": "abrigo",
+    "dificultad": "facil",
+    "significado": "Prenda para proteger del frío."
+  },
+  {
+    "palabra": "chaqueta",
+    "dificultad": "media",
+    "significado": "Prenda corta de vestir con mangas."
+  },
+  {
+    "palabra": "calcetines",
+    "dificultad": "dificil",
+    "significado": "Plural de calcetín."
+  },
+  {
+    "palabra": "bragas",
+    "dificultad": "facil",
+    "significado": "Plural de braga."
+  },
+  {
+    "palabra": "calzon",
+    "dificultad": "facil",
+    "significado": "Prenda de vestir, tanto masculina como femenina."
+  },
+  {
+    "palabra": "calzoncillo",
+    "dificultad": "dificil",
+    "significado": "Ropa interior masculina."
+  },
+  {
+    "palabra": "sujetador",
+    "dificultad": "media",
+    "significado": "Que sujeta."
+  },
+  {
+    "palabra": "sosten",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de sostener."
+  },
+  {
+    "palabra": "transporte",
+    "dificultad": "dificil",
+    "significado": "Acción o sistema de trasladar."
+  },
+  {
+    "palabra": "transito",
+    "dificultad": "media",
+    "significado": "Acción o efecto de transitar."
+  },
+  {
+    "palabra": "trafico",
+    "dificultad": "facil",
+    "significado": "Circulación de vehículos o personas."
+  },
+  {
+    "palabra": "vehiculo",
+    "dificultad": "media",
+    "significado": "Cualquier medio de locomoción o transporte."
+  },
+  {
+    "palabra": "ferrocarril",
+    "dificultad": "dificil",
+    "significado": "Sistema de trenes y vías."
+  },
+  {
+    "palabra": "subterraneo",
+    "dificultad": "dificil",
+    "significado": "Que se encuentra bajo tierra."
+  },
+  {
+    "palabra": "camino",
+    "dificultad": "facil",
+    "significado": "Lugar por el que se transita."
+  },
+  {
+    "palabra": "carretera",
+    "dificultad": "media",
+    "significado": "Vía para circular vehículos."
+  },
+  {
+    "palabra": "autopista",
+    "dificultad": "media",
+    "significado": "Carretera rápida de varios carriles."
+  },
+  {
+    "palabra": "avenida",
+    "dificultad": "facil",
+    "significado": "Calle ancha e importante , frecuentemente de doble mano."
+  },
+  {
+    "palabra": "estacion",
+    "dificultad": "media",
+    "significado": "Detención temporaria en un viaje."
+  },
+  {
+    "palabra": "parada",
+    "dificultad": "facil",
+    "significado": "Lugar donde se detiene un transporte."
+  },
+  {
+    "palabra": "aeropuerto",
+    "dificultad": "dificil",
+    "significado": "Instalación para aviones y pasajeros."
+  },
+  {
+    "palabra": "automovil",
+    "dificultad": "media",
+    "significado": "Vehículo de cuatro ruedas."
+  },
+  {
+    "palabra": "autobus",
+    "dificultad": "facil",
+    "significado": "Vehículo grande para pasajeros."
+  },
+  {
+    "palabra": "omnibus",
+    "dificultad": "facil",
+    "significado": "Autobús de transporte público."
+  },
+  {
+    "palabra": "ambulancia",
+    "dificultad": "dificil",
+    "significado": "Vehículo para trasladar enfermos."
+  },
+  {
+    "palabra": "numero",
+    "dificultad": "facil",
+    "significado": "Cantidad con relación a su unidad."
+  },
+  {
+    "palabra": "alfabeto",
+    "dificultad": "media",
+    "significado": "Conjunto de letras de un idioma."
+  },
+  {
+    "palabra": "simbolo",
+    "dificultad": "facil",
+    "significado": "Signo que representa una idea."
+  },
+  {
+    "palabra": "origen",
+    "dificultad": "facil",
+    "significado": "El principio de algo."
+  },
+  {
+    "palabra": "fuente",
+    "dificultad": "facil",
+    "significado": "Lugar donde sale agua de la tierra."
+  },
+  {
+    "palabra": "comunicacion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de comunicar o comunicarse."
+  },
+  {
+    "palabra": "expresion",
+    "dificultad": "media",
+    "significado": "Modo de decir o manifestar algo."
+  },
+  {
+    "palabra": "periodismo",
+    "dificultad": "dificil",
+    "significado": "Actividad de informar noticias."
+  },
+  {
+    "palabra": "periodico",
+    "dificultad": "media",
+    "significado": "Lo que pertenece o esta relacionado con un período."
+  },
+  {
+    "palabra": "diario",
+    "dificultad": "facil",
+    "significado": "Dícese de lo que ocurre todos los días."
+  },
+  {
+    "palabra": "diccionario",
+    "dificultad": "dificil",
+    "significado": "Obra escrita, en forma de libro o en soporte electrónico."
+  },
+  {
+    "palabra": "documento",
+    "dificultad": "media",
+    "significado": "Escrito con valor informativo o legal."
+  },
+  {
+    "palabra": "informe",
+    "dificultad": "facil",
+    "significado": "Escrito que expone datos o resultados."
+  },
+  {
+    "palabra": "noticia",
+    "dificultad": "facil",
+    "significado": "Noción , conocimiento elemental."
+  },
+  {
+    "palabra": "computadora",
+    "dificultad": "dificil",
+    "significado": "Máquina electrónica para procesar datos."
+  },
+  {
+    "palabra": "ordenador",
+    "dificultad": "media",
+    "significado": "Computadora."
+  },
+  {
+    "palabra": "japones",
+    "dificultad": "facil",
+    "significado": "De Japón."
+  },
+  {
+    "palabra": "ingles",
+    "dificultad": "facil",
+    "significado": "De Inglaterra o de su idioma."
+  },
+  {
+    "palabra": "aleman",
+    "dificultad": "facil",
+    "significado": "De Alemania."
+  },
+  {
+    "palabra": "espanol",
+    "dificultad": "facil",
+    "significado": "De España o de su idioma."
+  },
+  {
+    "palabra": "frances",
+    "dificultad": "facil",
+    "significado": "De Francia o de su idioma."
+  },
+  {
+    "palabra": "blanco",
+    "dificultad": "facil",
+    "significado": "Color de la nieve."
+  },
+  {
+    "palabra": "anaranjado",
+    "dificultad": "dificil",
+    "significado": "De color parecido al de la yema del huevo."
+  },
+  {
+    "palabra": "amarillo",
+    "dificultad": "media",
+    "significado": "Color del sol o del limón."
+  },
+  {
+    "palabra": "celeste",
+    "dificultad": "facil",
+    "significado": "Que procede."
+  },
+  {
+    "palabra": "violeta",
+    "dificultad": "facil",
+    "significado": "Color azul rojizo o púrpura azulado."
+  },
+  {
+    "palabra": "rosado",
+    "dificultad": "facil",
+    "significado": "Hecho o infusionado con rosas."
+  },
+  {
+    "palabra": "marron",
+    "dificultad": "facil",
+    "significado": "Color café o tierra."
+  },
+  {
+    "palabra": "cultura",
+    "dificultad": "facil",
+    "significado": "Conjunto de saberes y costumbres."
+  },
+  {
+    "palabra": "actuacion",
+    "dificultad": "media",
+    "significado": "Acción o efecto de actuar."
+  },
+  {
+    "palabra": "espectador",
+    "dificultad": "dificil",
+    "significado": "Que asiste o mira a un espectáculo o objeto."
+  },
+  {
+    "palabra": "espectaculo",
+    "dificultad": "dificil",
+    "significado": "Función o acto para entretener."
+  },
+  {
+    "palabra": "entretenimiento",
+    "dificultad": "dificil",
+    "significado": "Actividad para divertirse."
+  },
+  {
+    "palabra": "dibujo",
+    "dificultad": "facil",
+    "significado": "Arte que enseña a dibujar."
+  },
+  {
+    "palabra": "pintura",
+    "dificultad": "facil",
+    "significado": "Arte que se ocupa de la técnica de pintar."
+  },
+  {
+    "palabra": "musica",
+    "dificultad": "facil",
+    "significado": "Arte de combinar sonidos."
+  },
+  {
+    "palabra": "religion",
+    "dificultad": "media",
+    "significado": "Creencia y culto de lo sobrenatural y sagrado."
+  },
+  {
+    "palabra": "articulo",
+    "dificultad": "media",
+    "significado": "Cada una de las partes en que se divide un escrito."
+  },
+  {
+    "palabra": "educacion",
+    "dificultad": "media",
+    "significado": "Proceso de enseñar y aprender."
+  },
+  {
+    "palabra": "escuela",
+    "dificultad": "facil",
+    "significado": "Instituto que ofrece enseñanza primaria."
+  },
+  {
+    "palabra": "instituto",
+    "dificultad": "media",
+    "significado": "Centro de enseñanza o investigación."
+  },
+  {
+    "palabra": "colegio",
+    "dificultad": "facil",
+    "significado": "Centro educativo."
+  },
+  {
+    "palabra": "universidad",
+    "dificultad": "dificil",
+    "significado": "Institución de educación superior."
+  },
+  {
+    "palabra": "estudio",
+    "dificultad": "facil",
+    "significado": "Acción de aprender o analizar."
+  },
+  {
+    "palabra": "formacion",
+    "dificultad": "media",
+    "significado": "Proceso de aprendizaje o preparación."
+  },
+  {
+    "palabra": "analisis",
+    "dificultad": "media",
+    "significado": "Examen detallado de algo."
+  },
+  {
+    "palabra": "investigacion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de investigar."
+  },
+  {
+    "palabra": "conocimiento",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de conocer."
+  },
+  {
+    "palabra": "informacion",
+    "dificultad": "dificil",
+    "significado": "Datos o noticias sobre algo."
+  },
+  {
+    "palabra": "manera",
+    "dificultad": "facil",
+    "significado": "El método de hacer algo."
+  },
+  {
+    "palabra": "estilo",
+    "dificultad": "facil",
+    "significado": "Manera propia de hacer o expresarse."
+  },
+  {
+    "palabra": "figura",
+    "dificultad": "facil",
+    "significado": "Forma exterior característica de un cuerpo."
+  },
+  {
+    "palabra": "elemento",
+    "dificultad": "media",
+    "significado": "Cada uno de los componentes de un ser."
+  },
+  {
+    "palabra": "utilizacion",
+    "dificultad": "dificil",
+    "significado": "Efecto y acto de utilizar."
+  },
+  {
+    "palabra": "ciencia",
+    "dificultad": "facil",
+    "significado": "Conjunto organizado de conocimientos."
+  },
+  {
+    "palabra": "aritmetica",
+    "dificultad": "dificil",
+    "significado": "Rama matemática de los números."
+  },
+  {
+    "palabra": "historia",
+    "dificultad": "media",
+    "significado": "Conjunto de los acontecimientos pasados."
+  },
+  {
+    "palabra": "geografia",
+    "dificultad": "media",
+    "significado": "Estudio de la Tierra y sus lugares."
+  },
+  {
+    "palabra": "deporte",
+    "dificultad": "facil",
+    "significado": "Actividad física reglada."
+  },
+  {
+    "palabra": "carrera",
+    "dificultad": "facil",
+    "significado": "Competencia de velocidad o recorrido."
+  },
+  {
+    "palabra": "competicion",
+    "dificultad": "dificil",
+    "significado": "Rivalidad de los que disputan una misma cosa."
+  },
+  {
+    "palabra": "competencia",
+    "dificultad": "dificil",
+    "significado": "Rivalidad o disputa entre varios."
+  },
+  {
+    "palabra": "busqueda",
+    "dificultad": "media",
+    "significado": "Acción o efecto de buscar."
+  },
+  {
+    "palabra": "pregunta",
+    "dificultad": "media",
+    "significado": "Enunciado que pide respuesta."
+  },
+  {
+    "palabra": "respuesta",
+    "dificultad": "media",
+    "significado": "Acción o efecto de responder."
+  },
+  {
+    "palabra": "cuestion",
+    "dificultad": "media",
+    "significado": "Asunto que se discute o resuelve."
+  },
+  {
+    "palabra": "solicitud",
+    "dificultad": "media",
+    "significado": "Documento que se cursa para solicitar algo."
+  },
+  {
+    "palabra": "decision",
+    "dificultad": "media",
+    "significado": "Determinación tomada entre opciones."
+  },
+  {
+    "palabra": "eleccion",
+    "dificultad": "media",
+    "significado": "Acción o efecto de elegir."
+  },
+  {
+    "palabra": "sugerencia",
+    "dificultad": "dificil",
+    "significado": "Insinuación , inspiración , idea que se sugiere."
+  },
+  {
+    "palabra": "control",
+    "dificultad": "facil",
+    "significado": "Vigilancia o dominio sobre algo."
+  },
+  {
+    "palabra": "sistema",
+    "dificultad": "facil",
+    "significado": "Conjunto de reglas , principios , ideas o cosas."
+  },
+  {
+    "palabra": "trabajo",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de trabajar."
+  },
+  {
+    "palabra": "empleo",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de emplear."
+  },
+  {
+    "palabra": "profesion",
+    "dificultad": "media",
+    "significado": "Acción o efecto de profesar."
+  },
+  {
+    "palabra": "esfuerzo",
+    "dificultad": "media",
+    "significado": "Empleo de la fuerza física o mental para hacer algo."
+  },
+  {
+    "palabra": "cuatro",
+    "dificultad": "facil",
+    "significado": "Tres y uno."
+  },
+  {
+    "palabra": "ciento",
+    "dificultad": "facil",
+    "significado": "Que vale diez veces diez."
+  },
+  {
+    "palabra": "millon",
+    "dificultad": "facil",
+    "significado": "Cantidad igual a mil millares , 1 000 000 , 10."
+  },
+  {
+    "palabra": "posicion",
+    "dificultad": "media",
+    "significado": "Lugar , ubicación."
+  },
+  {
+    "palabra": "movimiento",
+    "dificultad": "dificil",
+    "significado": "Cambio de posición de un objeto que ocurre en el tiempo."
+  },
+  {
+    "palabra": "velocidad",
+    "dificultad": "media",
+    "significado": "Cantidad de espacio que se recorre por unidad de tiempo."
+  },
+  {
+    "palabra": "aceleracion",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de acelerar , incrementar la rapidez."
+  },
+  {
+    "palabra": "direccion",
+    "dificultad": "media",
+    "significado": "Ubicación o rumbo de algo."
+  },
+  {
+    "palabra": "tamano",
+    "dificultad": "facil",
+    "significado": "Medida de grandeza."
+  },
+  {
+    "palabra": "longitud",
+    "dificultad": "media",
+    "significado": "Medida del largo."
+  },
+  {
+    "palabra": "altura",
+    "dificultad": "facil",
+    "significado": "Distancia vertical o elevación."
+  },
+  {
+    "palabra": "mayoria",
+    "dificultad": "facil",
+    "significado": "Parte más numerosa de un conjunto."
+  },
+  {
+    "palabra": "minoria",
+    "dificultad": "facil",
+    "significado": "Grupo menor dentro de un conjunto."
+  },
+  {
+    "palabra": "aumento",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de aumentar."
+  },
+  {
+    "palabra": "reduccion",
+    "dificultad": "media",
+    "significado": "Acción y efecto de reducir de hacer algo más pequeño."
+  },
+  {
+    "palabra": "crecimiento",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de crecer."
+  },
+  {
+    "palabra": "frente",
+    "dificultad": "facil",
+    "significado": "Parte delantera o fachada."
+  },
+  {
+    "palabra": "aspecto",
+    "dificultad": "facil",
+    "significado": "Apariencia externa de un ser."
+  },
+  {
+    "palabra": "contenido",
+    "dificultad": "media",
+    "significado": "Se aplica al que es moderado o templado."
+  },
+  {
+    "palabra": "objeto",
+    "dificultad": "facil",
+    "significado": "Una cosa o entidad que tiene existencia."
+  },
+  {
+    "palabra": "sector",
+    "dificultad": "facil",
+    "significado": "Parte de un todo."
+  },
+  {
+    "palabra": "palabra",
+    "dificultad": "facil",
+    "significado": "Unidad mínima de significado de una lengua o idioma."
+  },
+  {
+    "palabra": "nombre",
+    "dificultad": "facil",
+    "significado": "En general, palabra que designa una entidad o condición."
+  },
+  {
+    "palabra": "codigo",
+    "dificultad": "facil",
+    "significado": "Sistema de signos o reglas."
+  },
+  {
+    "palabra": "secreto",
+    "dificultad": "facil",
+    "significado": "Que no se da a conocer a los demás."
+  },
+  {
+    "palabra": "formalidad",
+    "dificultad": "dificil",
+    "significado": "Precisión , concreción y puntualidad."
+  },
+  {
+    "palabra": "presente",
+    "dificultad": "media",
+    "significado": "Que está en presencia de alguien más."
+  },
+  {
+    "palabra": "pasado",
+    "dificultad": "facil",
+    "significado": "Temporada antes del presente."
+  },
+  {
+    "palabra": "futuro",
+    "dificultad": "facil",
+    "significado": "Que está aún por ocurrir o hacerse efectivo."
+  },
+  {
+    "palabra": "ocasion",
+    "dificultad": "facil",
+    "significado": "Oportunidad ofrecida para realizar o lograr algo."
+  },
+  {
+    "palabra": "accion",
+    "dificultad": "facil",
+    "significado": "Acto de llevar a cabo algo."
+  },
+  {
+    "palabra": "actividad",
+    "dificultad": "media",
+    "significado": "Calidad de activo."
+  },
+  {
+    "palabra": "programa",
+    "dificultad": "media",
+    "significado": "Determinada serie de actividades o acciones a realizarse."
+  },
+  {
+    "palabra": "proyecto",
+    "dificultad": "media",
+    "significado": "Plan de trabajo a futuro."
+  },
+  {
+    "palabra": "acuerdo",
+    "dificultad": "facil",
+    "significado": "Órgano del cuerpo."
+  },
+  {
+    "palabra": "actitud",
+    "dificultad": "facil",
+    "significado": "Disposición para actuar."
+  },
+  {
+    "palabra": "atencion",
+    "dificultad": "media",
+    "significado": "El acto o la facultad de dirigir la mente a algo."
+  },
+  {
+    "palabra": "capacidad",
+    "dificultad": "media",
+    "significado": "Aptitud o espacio disponible."
+  },
+  {
+    "palabra": "concepto",
+    "dificultad": "media",
+    "significado": "Idea general sobre algo."
+  },
+  {
+    "palabra": "condicion",
+    "dificultad": "media",
+    "significado": "Estado o circunstancia de algo."
+  },
+  {
+    "palabra": "conjunto",
+    "dificultad": "media",
+    "significado": "Objeto formado por una cantidad de otros objetos."
+  },
+  {
+    "palabra": "creacion",
+    "dificultad": "media",
+    "significado": "Acción o efecto de crear."
+  },
+  {
+    "palabra": "destruccion",
+    "dificultad": "dificil",
+    "significado": "Acción y efecto de destruir."
+  },
+  {
+    "palabra": "destino",
+    "dificultad": "facil",
+    "significado": "Lugar o fin al que se llega."
+  },
+  {
+    "palabra": "objetivo",
+    "dificultad": "media",
+    "significado": "Blanco para ejercitar el disparo de un arma."
+  },
+  {
+    "palabra": "funcion",
+    "dificultad": "facil",
+    "significado": "Propósito de algo, uso de algo."
+  },
+  {
+    "palabra": "relacion",
+    "dificultad": "media",
+    "significado": "Una conexión existente entre personas o cosas."
+  },
+  {
+    "palabra": "realidad",
+    "dificultad": "media",
+    "significado": "Lo que existe de verdad."
+  },
+  {
+    "palabra": "situacion",
+    "dificultad": "media",
+    "significado": "Manera , forma de estar situado , localizado."
+  },
+  {
+    "palabra": "problema",
+    "dificultad": "media",
+    "significado": "Asunto cuya solución se debe averiguar."
+  },
+  {
+    "palabra": "intento",
+    "dificultad": "facil",
+    "significado": "Atento."
+  },
+  {
+    "palabra": "solucion",
+    "dificultad": "media",
+    "significado": "Respuesta o salida a un problema."
+  },
+  {
+    "palabra": "efecto",
+    "dificultad": "facil",
+    "significado": "Algo que es producido."
+  },
+  {
+    "palabra": "resultado",
+    "dificultad": "media",
+    "significado": "Efecto de una acción , de un hecho o de un cálculo."
+  },
+  {
+    "palabra": "fracaso",
+    "dificultad": "facil",
+    "significado": "Resultado sin éxito."
+  },
+  {
+    "palabra": "consecuencia",
+    "dificultad": "dificil",
+    "significado": "Suceso o cosa que resulta inmediatamente de otra."
+  },
+  {
+    "palabra": "beneficio",
+    "dificultad": "media",
+    "significado": "Bien que se recibe o se hace."
+  },
+  {
+    "palabra": "perjuicio",
+    "dificultad": "media",
+    "significado": "Efecto de perjudicar."
+  },
+  {
+    "palabra": "calidad",
+    "dificultad": "facil",
+    "significado": "Grado de valor o excelencia."
+  },
+  {
+    "palabra": "ataque",
+    "dificultad": "facil",
+    "significado": "Acción de atacar , acometer al enemigo."
+  },
+  {
+    "palabra": "defensa",
+    "dificultad": "facil",
+    "significado": "Acción de proteger o resistir."
+  },
+  {
+    "palabra": "conflicto",
+    "dificultad": "media",
+    "significado": "Batalla, combate, lucha, pelea."
+  },
+  {
+    "palabra": "guerra",
+    "dificultad": "facil",
+    "significado": "Conflicto armado entre grupos o países."
+  },
+  {
+    "palabra": "caracter",
+    "dificultad": "media",
+    "significado": "Signo escrito o grabado."
+  },
+  {
+    "palabra": "caracteristica",
+    "dificultad": "dificil",
+    "significado": "Rasgo propio y distintivo."
+  },
+  {
+    "palabra": "crisis",
+    "dificultad": "facil",
+    "significado": "Situación grave o inestable."
+  },
+  {
+    "palabra": "desarrollo",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de desarrollar o de desarrollarse."
+  },
+  {
+    "palabra": "progreso",
+    "dificultad": "media",
+    "significado": "Acción de avanzar o de ir hacia adelante."
+  },
+  {
+    "palabra": "avance",
+    "dificultad": "facil",
+    "significado": "Progreso hacia adelante."
+  },
+  {
+    "palabra": "retroceso",
+    "dificultad": "media",
+    "significado": "Acción y efecto de retroceder."
+  },
+  {
+    "palabra": "mejora",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de mejorar."
+  },
+  {
+    "palabra": "deterioro",
+    "dificultad": "media",
+    "significado": "Degeneración , empeoramiento gradual del estado de algo."
+  },
+  {
+    "palabra": "comienzo",
+    "dificultad": "media",
+    "significado": "Raíz y origen de alguna cosa."
+  },
+  {
+    "palabra": "inicio",
+    "dificultad": "facil",
+    "significado": "Principio u origen de alguna cosa."
+  },
+  {
+    "palabra": "principio",
+    "dificultad": "media",
+    "significado": "Momento o punto en que algo empieza."
+  },
+  {
+    "palabra": "transcurso",
+    "dificultad": "dificil",
+    "significado": "Acción o acto de transcurrir."
+  },
+  {
+    "palabra": "secuencia",
+    "dificultad": "media",
+    "significado": "Serie ordenada de elementos."
+  },
+  {
+    "palabra": "proceso",
+    "dificultad": "facil",
+    "significado": "Conjunto de etapas sucesivas."
+  },
+  {
+    "palabra": "interrupcion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de interrumpir."
+  },
+  {
+    "palabra": "espera",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de esperar."
+  },
+  {
+    "palabra": "diferencia",
+    "dificultad": "dificil",
+    "significado": "El estado o relación de ser diferente de no ser igual."
+  },
+  {
+    "palabra": "similitud",
+    "dificultad": "media",
+    "significado": "Calidad o cualidad de similar."
+  },
+  {
+    "palabra": "sentido",
+    "dificultad": "facil",
+    "significado": "Que manifiesta un sentimiento o lo contiene."
+  },
+  {
+    "palabra": "sensacion",
+    "dificultad": "media",
+    "significado": "Impresión recibida por los sentidos."
+  },
+  {
+    "palabra": "olfato",
+    "dificultad": "facil",
+    "significado": "Sentido que percibe el olor."
+  },
+  {
+    "palabra": "conciencia",
+    "dificultad": "dificil",
+    "significado": "Conocimiento de uno mismo y del entorno."
+  },
+  {
+    "palabra": "percepcion",
+    "dificultad": "dificil",
+    "significado": "Acción o efecto de percibir."
+  },
+  {
+    "palabra": "imagen",
+    "dificultad": "facil",
+    "significado": "Representación visual de una cosa."
+  },
+  {
+    "palabra": "fuerza",
+    "dificultad": "facil",
+    "significado": "Capacidad para ejercer energía o resistencia."
+  },
+  {
+    "palabra": "potencia",
+    "dificultad": "media",
+    "significado": "Fuerza, la habilidad o capacidad para realizar algo."
+  },
+  {
+    "palabra": "presencia",
+    "dificultad": "media",
+    "significado": "El hecho de estar o existir en un determinado lugar."
+  },
+  {
+    "palabra": "existencia",
+    "dificultad": "dificil",
+    "significado": "Hecho de existir."
+  },
+  {
+    "palabra": "experiencia",
+    "dificultad": "dificil",
+    "significado": "Conocimiento que se obtiene a través de la práctica."
+  },
+  {
+    "palabra": "posibilidad",
+    "dificultad": "dificil",
+    "significado": "Calidad o cualidad de posible."
+  },
+  {
+    "palabra": "probabilidad",
+    "dificultad": "dificil",
+    "significado": "Verosimilitud o fundada apariencia de verdad."
+  },
+  {
+    "palabra": "verdad",
+    "dificultad": "facil",
+    "significado": "Conformidad con lo real."
+  },
+  {
+    "palabra": "mentira",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de mentir."
+  },
+  {
+    "palabra": "acierto",
+    "dificultad": "facil",
+    "significado": "Acción de acertar y su resultado."
+  },
+  {
+    "palabra": "equivocacion",
+    "dificultad": "dificil",
+    "significado": "Error o desacierto."
+  },
+  {
+    "palabra": "necesidad",
+    "dificultad": "media",
+    "significado": "Calidad de necesario."
+  },
+  {
+    "palabra": "significado",
+    "dificultad": "dificil",
+    "significado": "Sentido de una palabra o cosa."
+  },
+  {
+    "palabra": "personalidad",
+    "dificultad": "dificil",
+    "significado": "Conjunto de rasgos de una persona."
+  },
+  {
+    "palabra": "pensamiento",
+    "dificultad": "dificil",
+    "significado": "Potencia o facultad de pensar."
+  },
+  {
+    "palabra": "memoria",
+    "dificultad": "facil",
+    "significado": "Facultad mental para retener y recordar el pasado."
+  },
+  {
+    "palabra": "recuerdo",
+    "dificultad": "media",
+    "significado": "Acción o efecto de recordar."
+  },
+  {
+    "palabra": "alegria",
+    "dificultad": "facil",
+    "significado": "Sentimiento de felicidad."
+  },
+  {
+    "palabra": "tristeza",
+    "dificultad": "media",
+    "significado": "Sentimiento de pena."
+  },
+  {
+    "palabra": "enfado",
+    "dificultad": "facil",
+    "significado": "Acción o efecto de enfadar o enfadarse."
+  },
+  {
+    "palabra": "placer",
+    "dificultad": "facil",
+    "significado": "Sentimiento de satisfacción o sensación agradable."
+  },
+  {
+    "palabra": "extasis",
+    "dificultad": "facil",
+    "significado": "Estado de emoción o placer intenso."
+  },
+  {
+    "palabra": "empatia",
+    "dificultad": "facil",
+    "significado": "Capacidad de comprender a otro."
+  },
+  {
+    "palabra": "interes",
+    "dificultad": "facil",
+    "significado": "Preferencia o inclinación que se siente por algo."
+  },
+  {
+    "palabra": "aburrimiento",
+    "dificultad": "dificil",
+    "significado": "Falta de interés o diversión."
+  },
+  {
+    "palabra": "cansancio",
+    "dificultad": "media",
+    "significado": "Fatiga o falta de energía."
+  },
+  {
+    "palabra": "sorpresa",
+    "dificultad": "media",
+    "significado": "Acción o efecto de sorprender."
+  },
+  {
+    "palabra": "seguridad",
+    "dificultad": "media",
+    "significado": "Ausencia de peligro."
+  },
+  {
+    "palabra": "confianza",
+    "dificultad": "media",
+    "significado": "Ilusión segura que se deposita en alguna persona o cosa."
+  },
+  {
+    "palabra": "ejemplo",
+    "dificultad": "facil",
+    "significado": "Caso que sirve de muestra."
+  },
+  {
+    "palabra": "superior",
+    "dificultad": "media",
+    "significado": "Grado comparativo irregular de alto."
+  },
+  {
+    "palabra": "inferior",
+    "dificultad": "media",
+    "significado": "Grado comparativo irregular de bajo."
+  },
+  {
+    "palabra": "central",
+    "dificultad": "facil",
+    "significado": "Que pertenece o concierne al centro."
+  },
+  {
+    "palabra": "lateral",
+    "dificultad": "facil",
+    "significado": "Ubicado a un lado de algo."
+  },
+  {
+    "palabra": "frontal",
+    "dificultad": "facil",
+    "significado": "Propio de o relativo al frente de una cosa."
+  },
+  {
+    "palabra": "posterior",
+    "dificultad": "media",
+    "significado": "Que fué o viene después."
+  },
+  {
+    "palabra": "cierto",
+    "dificultad": "facil",
+    "significado": "Que se sabe real, verdadero."
+  },
+  {
+    "palabra": "importante",
+    "dificultad": "dificil",
+    "significado": "Algo o alguien que hay que tener en cuenta."
+  },
+  {
+    "palabra": "necesario",
+    "dificultad": "media",
+    "significado": "Que es indispensable."
+  },
+  {
+    "palabra": "absoluto",
+    "dificultad": "media",
+    "significado": "Independiente , con pleno poder , sin restricción alguna."
+  },
+  {
+    "palabra": "relativo",
+    "dificultad": "media",
+    "significado": "Que se refiere o concierne a algo a alguien."
+  },
+  {
+    "palabra": "barato",
+    "dificultad": "facil",
+    "significado": "De bajo precio."
+  },
+  {
+    "palabra": "cualquier",
+    "dificultad": "media",
+    "significado": "Variante de cualquiera."
+  },
+  {
+    "palabra": "actual",
+    "dificultad": "facil",
+    "significado": "Del tiempo presente."
+  },
+  {
+    "palabra": "reciente",
+    "dificultad": "media",
+    "significado": "Que acaba de suceder o acontecer."
+  },
+  {
+    "palabra": "simple",
+    "dificultad": "facil",
+    "significado": "Fácil de hacer o de entender."
+  },
+  {
+    "palabra": "sencillo",
+    "dificultad": "media",
+    "significado": "Simple y sin complicaciones."
+  },
+  {
+    "palabra": "dificil",
+    "dificultad": "facil",
+    "significado": "Duro, costoso, complicado, no fácil."
+  },
+  {
+    "palabra": "complicado",
+    "dificultad": "dificil",
+    "significado": "Difícil de entender o hacer."
+  },
+  {
+    "palabra": "posible",
+    "dificultad": "facil",
+    "significado": "Que puede existir , ser o acontecer."
+  },
+  {
+    "palabra": "imposible",
+    "dificultad": "media",
+    "significado": "Que no es posible."
+  },
+  {
+    "palabra": "probable",
+    "dificultad": "media",
+    "significado": "Que se puede probar."
+  },
+  {
+    "palabra": "improbable",
+    "dificultad": "dificil",
+    "significado": "Que la probabilidad de que suceda es pequeña."
+  },
+  {
+    "palabra": "estricto",
+    "dificultad": "media",
+    "significado": "Que no admite alternativas ni variantes."
+  },
+  {
+    "palabra": "general",
+    "dificultad": "facil",
+    "significado": "Común o aplicable a muchos casos."
+  },
+  {
+    "palabra": "particular",
+    "dificultad": "dificil",
+    "significado": "Propio y privativo de una cosa."
+  },
+  {
+    "palabra": "especial",
+    "dificultad": "media",
+    "significado": "Singular o particular."
+  },
+  {
+    "palabra": "extrano",
+    "dificultad": "facil",
+    "significado": "Raro o poco común."
+  },
+  {
+    "palabra": "fuerte",
+    "dificultad": "facil",
+    "significado": "Que es capaz de ejercer una fuerza grande."
+  },
+  {
+    "palabra": "correcto",
+    "dificultad": "media",
+    "significado": "Que está libre de error."
+  },
+  {
+    "palabra": "acertado",
+    "dificultad": "media",
+    "significado": "Que tiene acierto."
+  },
+  {
+    "palabra": "incorrecto",
+    "dificultad": "dificil",
+    "significado": "Que no es correcto."
+  },
+  {
+    "palabra": "desacertado",
+    "dificultad": "dificil",
+    "significado": "Participio de desacertar."
+  },
+  {
+    "palabra": "contrario",
+    "dificultad": "media",
+    "significado": "Opuesto a una cosa."
+  },
+  {
+    "palabra": "opuesto",
+    "dificultad": "facil",
+    "significado": "Contrario o situado enfrente."
+  },
+  {
+    "palabra": "inverso",
+    "dificultad": "facil",
+    "significado": "Alterado , trastornado."
+  },
+  {
+    "palabra": "diferente",
+    "dificultad": "media",
+    "significado": "Que no es igual."
+  },
+  {
+    "palabra": "distinto",
+    "dificultad": "media",
+    "significado": "Que muestra diferencia."
+  },
+  {
+    "palabra": "parecido",
+    "dificultad": "media",
+    "significado": "Con semejanza a otra cosa."
+  },
+  {
+    "palabra": "similar",
+    "dificultad": "facil",
+    "significado": "Que tiene características comunes."
+  },
+  {
+    "palabra": "diverso",
+    "dificultad": "facil",
+    "significado": "Distinto , diferente."
+  },
+  {
+    "palabra": "manual",
+    "dificultad": "facil",
+    "significado": "Hecho con las manos."
+  },
+  {
+    "palabra": "automatico",
+    "dificultad": "dificil",
+    "significado": "Que funciona por sí solo."
+  },
+  {
+    "palabra": "universal",
+    "dificultad": "media",
+    "significado": "Que pertenece o concierne al universo."
+  },
+  {
+    "palabra": "mundial",
+    "dificultad": "facil",
+    "significado": "De todo el mundo."
+  },
+  {
+    "palabra": "continental",
+    "dificultad": "dificil",
+    "significado": "Relativo a un continente."
+  },
+  {
+    "palabra": "internacional",
+    "dificultad": "dificil",
+    "significado": "Que está relacionado con dos o más naciones."
+  },
+  {
+    "palabra": "nacional",
+    "dificultad": "media",
+    "significado": "Perteneciente o relativo a una nación."
+  },
+  {
+    "palabra": "regional",
+    "dificultad": "media",
+    "significado": "Propio o relacionado con una región."
+  },
+  {
+    "palabra": "urbano",
+    "dificultad": "facil",
+    "significado": "Propio de, o relativo de la ciudad."
+  },
+  {
+    "palabra": "social",
+    "dificultad": "facil",
+    "significado": "Relativo a la sociedad."
+  },
+  {
+    "palabra": "cultural",
+    "dificultad": "media",
+    "significado": "Relativo a la cultura."
+  },
+  {
+    "palabra": "artistico",
+    "dificultad": "media",
+    "significado": "Que pertenece o concierne al arte o a las artes."
+  },
+  {
+    "palabra": "propio",
+    "dificultad": "facil",
+    "significado": "Que pertenece a alguien."
+  },
+  {
+    "palabra": "publico",
+    "dificultad": "facil",
+    "significado": "Espectadores de cualquier acto."
+  },
+  {
+    "palabra": "privado",
+    "dificultad": "facil",
+    "significado": "De uso o propiedad particular."
+  },
+  {
+    "palabra": "grande",
+    "dificultad": "facil",
+    "significado": "De mucho tamaño."
+  },
+  {
+    "palabra": "pequeno",
+    "dificultad": "facil",
+    "significado": "De tamaño reducido, menor a lo común o normal."
+  },
+  {
+    "palabra": "amplio",
+    "dificultad": "facil",
+    "significado": "De gran extensión , espacio , duración o profundidad."
+  },
+  {
+    "palabra": "angosto",
+    "dificultad": "facil",
+    "significado": "Con poco espacio hacia los lados, de un ancho reducido."
+  },
+  {
+    "palabra": "compacto",
+    "dificultad": "media",
+    "significado": "Un cuerpo o material de textura densa , poco porosa."
+  },
+  {
+    "palabra": "delgado",
+    "dificultad": "facil",
+    "significado": "De poca anchura corporal."
+  },
+  {
+    "palabra": "grueso",
+    "dificultad": "facil",
+    "significado": "De volumen o espesor superior a lo habitual."
+  },
+  {
+    "palabra": "caliente",
+    "dificultad": "media",
+    "significado": "Que tiene una temperatura elevada."
+  },
+  {
+    "palabra": "ligero",
+    "dificultad": "facil",
+    "significado": "Que pesa poco o que tiene poca densidad."
+  },
+  {
+    "palabra": "pesado",
+    "dificultad": "facil",
+    "significado": "Que pesa mucho."
+  },
+  {
+    "palabra": "flexible",
+    "dificultad": "media",
+    "significado": "Dotado de fácil variación tanto en forma como en tamaño."
+  },
+  {
+    "palabra": "blando",
+    "dificultad": "facil",
+    "significado": "Suave o poco duro."
+  },
+  {
+    "palabra": "caluroso",
+    "dificultad": "media",
+    "significado": "Que genera calor."
+  },
+  {
+    "palabra": "fresco",
+    "dificultad": "facil",
+    "significado": "De factura o producción muy reciente."
+  },
+  {
+    "palabra": "delicioso",
+    "dificultad": "media",
+    "significado": "Muy placentero."
+  },
+  {
+    "palabra": "apetitoso",
+    "dificultad": "media",
+    "significado": "Que estimula el apetito."
+  },
+  {
+    "palabra": "horrible",
+    "dificultad": "media",
+    "significado": "Que provoca o tiende a provocar horror."
+  },
+  {
+    "palabra": "picante",
+    "dificultad": "facil",
+    "significado": "Que produce ardor al gusto."
+  },
+  {
+    "palabra": "salado",
+    "dificultad": "facil",
+    "significado": "Que tiene el sabor característico de la sal."
+  },
+  {
+    "palabra": "amargo",
+    "dificultad": "facil",
+    "significado": "De sabor áspero y desagradable."
+  },
+  {
+    "palabra": "anterior",
+    "dificultad": "media",
+    "significado": "Que ocurrió antes."
+  },
+  {
+    "palabra": "siguiente",
+    "dificultad": "media",
+    "significado": "Que viene después."
+  },
+  {
+    "palabra": "cercano",
+    "dificultad": "facil",
+    "significado": "Que se encuentra a poca distancia."
+  },
+  {
+    "palabra": "lejano",
+    "dificultad": "facil",
+    "significado": "Que se halla a gran distancia física."
+  },
+  {
+    "palabra": "separado",
+    "dificultad": "media",
+    "significado": "Participio de separar o de separarse."
+  },
+  {
+    "palabra": "alejado",
+    "dificultad": "facil",
+    "significado": "Que está lejos en el espacio , el tiempo."
+  },
+  {
+    "palabra": "triste",
+    "dificultad": "facil",
+    "significado": "Que siente tristeza."
+  },
+  {
+    "palabra": "solitario",
+    "dificultad": "media",
+    "significado": "Desamparado , desierto."
+  },
+  {
+    "palabra": "contento",
+    "dificultad": "media",
+    "significado": "Gustoso , alegre , satisfecho."
+  },
+  {
+    "palabra": "tranquilo",
+    "dificultad": "media",
+    "significado": "Pacífico, sin conmoción, calmado."
+  },
+  {
+    "palabra": "enojado",
+    "dificultad": "facil",
+    "significado": "Valentón , iracundo."
+  },
+  {
+    "palabra": "enfadado",
+    "dificultad": "media",
+    "significado": "Contrariado o disgustado por algo."
+  },
+  {
+    "palabra": "agitado",
+    "dificultad": "facil",
+    "significado": "Participio de agitar."
+  },
+  {
+    "palabra": "ansioso",
+    "dificultad": "facil",
+    "significado": "Que padece ansia o ansiedad."
+  },
+  {
+    "palabra": "interesado",
+    "dificultad": "dificil",
+    "significado": "Codicioso , avariento."
+  },
+  {
+    "palabra": "aburrido",
+    "dificultad": "media",
+    "significado": "Que no es interesante."
+  },
+  {
+    "palabra": "encantado",
+    "dificultad": "media",
+    "significado": "Distraído o embobado."
+  },
+  {
+    "palabra": "cansado",
+    "dificultad": "facil",
+    "significado": "Con fatiga o sin fuerzas."
+  },
+  {
+    "palabra": "sorprendido",
+    "dificultad": "dificil",
+    "significado": "Participio de sorprender o de sorprenderse."
+  },
+  {
+    "palabra": "asustado",
+    "dificultad": "media",
+    "significado": "Participio de asustar."
+  },
+  {
+    "palabra": "atemorizado",
+    "dificultad": "dificil",
+    "significado": "Participio de atemorizar o de atemorizarse."
+  },
+  {
+    "palabra": "doloroso",
+    "dificultad": "media",
+    "significado": "Que causa o produce dolor."
+  },
+  {
+    "palabra": "ardiente",
+    "dificultad": "media",
+    "significado": "Que arde."
+  },
+  {
+    "palabra": "apestoso",
+    "dificultad": "media",
+    "significado": "Que apesta."
+  },
+  {
+    "palabra": "maloliente",
+    "dificultad": "dificil",
+    "significado": "Que huele mal."
+  },
+  {
+    "palabra": "primer",
+    "dificultad": "facil",
+    "significado": "Variante de primero."
+  },
+  {
+    "palabra": "primero",
+    "dificultad": "facil",
+    "significado": "Que está antes que todos los demás en una serie ordenada."
+  },
+  {
+    "palabra": "primera",
+    "dificultad": "facil",
+    "significado": "Que ocupa el primer lugar."
+  },
+  {
+    "palabra": "tercero",
+    "dificultad": "facil",
+    "significado": "Que ocupa el tercer lugar."
+  },
+  {
+    "palabra": "quinto",
+    "dificultad": "facil",
+    "significado": "Que ocupa el quinto lugar."
+  },
+  {
+    "palabra": "decimo",
+    "dificultad": "facil",
+    "significado": "Que ocupa el décimo lugar."
+  },
+  {
+    "palabra": "centesimo",
+    "dificultad": "media",
+    "significado": "Una parte de cien partes en que se divide algo."
+  },
+  {
+    "palabra": "millonesimo",
+    "dificultad": "dificil",
+    "significado": "Que ocupa el lugar número un millón."
+  },
+  {
+    "palabra": "penultimo",
+    "dificultad": "media",
+    "significado": "Que está inmediatamente antes del o de lo último."
+  },
+  {
+    "palabra": "ultimo",
+    "dificultad": "facil",
+    "significado": "Que va al final."
+  },
+  {
+    "palabra": "nuestro",
+    "dificultad": "facil",
+    "significado": "Que pertenece a nosotros."
+  },
+  {
+    "palabra": "nuestra",
+    "dificultad": "facil",
+    "significado": "Forma femenina singular de nuestro."
+  },
+  {
+    "palabra": "vuestro",
+    "dificultad": "facil",
+    "significado": "Que pertenece a vosotros."
+  },
+  {
+    "palabra": "vuestra",
+    "dificultad": "facil",
+    "significado": "Que pertenece a vosotras."
+  },
+  {
+    "palabra": "aparecer",
+    "dificultad": "media",
+    "significado": "Hacerse visible."
+  },
+  {
+    "palabra": "desaparecer",
+    "dificultad": "dificil",
+    "significado": "Dejar de estar a la vista o de ser visible."
+  },
+  {
+    "palabra": "existir",
+    "dificultad": "facil",
+    "significado": "Tener realidad."
+  },
+  {
+    "palabra": "cambiar",
+    "dificultad": "facil",
+    "significado": "Sustituir una cosa por otra."
+  },
+  {
+    "palabra": "crecer",
+    "dificultad": "facil",
+    "significado": "De una persona o animal."
+  },
+  {
+    "palabra": "revivir",
+    "dificultad": "facil",
+    "significado": "Volver a vivir o animarse."
+  },
+  {
+    "palabra": "volver",
+    "dificultad": "facil",
+    "significado": "Regresar."
+  },
+  {
+    "palabra": "partir",
+    "dificultad": "facil",
+    "significado": "Irse o dividirse."
+  },
+  {
+    "palabra": "llegar",
+    "dificultad": "facil",
+    "significado": "Alcanzar un destino."
+  },
+  {
+    "palabra": "llevar",
+    "dificultad": "facil",
+    "significado": "Transportar o tener consigo."
+  },
+  {
+    "palabra": "arrojar",
+    "dificultad": "facil",
+    "significado": "Lanzar con fuerza."
+  },
+  {
+    "palabra": "lanzar",
+    "dificultad": "facil",
+    "significado": "Impulsar hacia adelante."
+  },
+  {
+    "palabra": "agarrar",
+    "dificultad": "facil",
+    "significado": "Asir algo con la mano o los miembros."
+  },
+  {
+    "palabra": "quitar",
+    "dificultad": "facil",
+    "significado": "Apartar algo de su poseedor."
+  },
+  {
+    "palabra": "alcanzar",
+    "dificultad": "media",
+    "significado": "Llegar hasta algo."
+  },
+  {
+    "palabra": "acercar",
+    "dificultad": "facil",
+    "significado": "Poner más cerca o menos lejos."
+  },
+  {
+    "palabra": "alejar",
+    "dificultad": "facil",
+    "significado": "Poner o llevar lejos o a mayor distancia."
+  },
+  {
+    "palabra": "sujetar",
+    "dificultad": "facil",
+    "significado": "Mantener algo firme con tal que no se mueva o no se caiga."
+  },
+  {
+    "palabra": "golpear",
+    "dificultad": "facil",
+    "significado": "Impactar con fuerza una cosa en otra."
+  },
+  {
+    "palabra": "patear",
+    "dificultad": "facil",
+    "significado": "Dar golpes con los pies o patas."
+  },
+  {
+    "palabra": "recoger",
+    "dificultad": "facil",
+    "significado": "Volver a tomar una cosa."
+  },
+  {
+    "palabra": "levantar",
+    "dificultad": "media",
+    "significado": "Mover algo incrementando su altura."
+  },
+  {
+    "palabra": "sentir",
+    "dificultad": "facil",
+    "significado": "Percibir o experimentar."
+  },
+  {
+    "palabra": "escuchar",
+    "dificultad": "media",
+    "significado": "Prestar atención a lo que se oye."
+  },
+  {
+    "palabra": "percibir",
+    "dificultad": "media",
+    "significado": "Recibir una cosa y entregarse de ella."
+  },
+  {
+    "palabra": "querer",
+    "dificultad": "facil",
+    "significado": "Tener el deseo de hacer algo."
+  },
+  {
+    "palabra": "desear",
+    "dificultad": "facil",
+    "significado": "Querer una cosa con mucho anhelo."
+  },
+  {
+    "palabra": "detestar",
+    "dificultad": "media",
+    "significado": "Sentir intenso rechazo hacia algo o alguien."
+  },
+  {
+    "palabra": "entristecerse",
+    "dificultad": "dificil",
+    "significado": "Ponerse triste."
+  },
+  {
+    "palabra": "llorar",
+    "dificultad": "facil",
+    "significado": "Derramar lágrimas."
+  },
+  {
+    "palabra": "enojarse",
+    "dificultad": "media",
+    "significado": "Ponerse de mal humor , causar enojo."
+  },
+  {
+    "palabra": "enfadarse",
+    "dificultad": "media",
+    "significado": "Alcanzar un estado de enfado."
+  },
+  {
+    "palabra": "admirar",
+    "dificultad": "facil",
+    "significado": "Mirar con encanto."
+  },
+  {
+    "palabra": "alabar",
+    "dificultad": "facil",
+    "significado": "Elogiar."
+  },
+  {
+    "palabra": "elogiar",
+    "dificultad": "facil",
+    "significado": "Hacer elogios."
+  },
+  {
+    "palabra": "alegrarse",
+    "dificultad": "media",
+    "significado": "Felicitarse , congratularse , etc."
+  },
+  {
+    "palabra": "encantarse",
+    "dificultad": "dificil",
+    "significado": "Dejar de prestar atención a lo que lo rodea a uno."
+  },
+  {
+    "palabra": "consolar",
+    "dificultad": "media",
+    "significado": "Aliviar la pena o aflicción de alguien."
+  },
+  {
+    "palabra": "interesarse",
+    "dificultad": "dificil",
+    "significado": "Tomar interés por alguna persona o cosa."
+  },
+  {
+    "palabra": "aburrirse",
+    "dificultad": "media",
+    "significado": "Sentir aburrimiento."
+  },
+  {
+    "palabra": "cansarse",
+    "dificultad": "media",
+    "significado": "Fatigarse , perder la energía uno mismo."
+  },
+  {
+    "palabra": "sorprenderse",
+    "dificultad": "dificil",
+    "significado": "Recibir una sorpresa , experimentar asombro."
+  },
+  {
+    "palabra": "asustarse",
+    "dificultad": "media",
+    "significado": "Sentir de pronto un susto , atemorizarse."
+  },
+  {
+    "palabra": "atemorizarse",
+    "dificultad": "dificil",
+    "significado": "Sentir o comenzar a tener temor o miedo."
+  },
+  {
+    "palabra": "comunicarse",
+    "dificultad": "dificil",
+    "significado": "Intercambiar información."
+  },
+  {
+    "palabra": "afirmar",
+    "dificultad": "facil",
+    "significado": "Expresar algo de forma firme o segura."
+  },
+  {
+    "palabra": "hablar",
+    "dificultad": "facil",
+    "significado": "Expresar algo usando palabras de viva voz."
+  },
+  {
+    "palabra": "callar",
+    "dificultad": "facil",
+    "significado": "Guardar silencio."
+  },
+  {
+    "palabra": "escribir",
+    "dificultad": "media",
+    "significado": "Poner palabras por escrito."
+  },
+  {
+    "palabra": "analizar",
+    "dificultad": "media",
+    "significado": "Examinar en detalle."
+  },
+  {
+    "palabra": "pensar",
+    "dificultad": "facil",
+    "significado": "Formar ideas en la mente."
+  },
+  {
+    "palabra": "cantar",
+    "dificultad": "facil",
+    "significado": "Producir sonidos musicales."
+  },
+  {
+    "palabra": "senalar",
+    "dificultad": "facil",
+    "significado": "Poner alguna señal o marca en alguna cosa."
+  },
+  {
+    "palabra": "apunalar",
+    "dificultad": "media",
+    "significado": "Herir con un puñal."
+  },
+  {
+    "palabra": "morder",
+    "dificultad": "facil",
+    "significado": "Clavar los dientes."
+  },
+  {
+    "palabra": "clavar",
+    "dificultad": "facil",
+    "significado": "Hundir o fijar algo."
+  },
+  {
+    "palabra": "acordar",
+    "dificultad": "facil",
+    "significado": "Recordar o convenir."
+  },
+  {
+    "palabra": "afectar",
+    "dificultad": "facil",
+    "significado": "Producir efecto en algo."
+  },
+  {
+    "palabra": "generar",
+    "dificultad": "facil",
+    "significado": "Hacer o realizar objetos y otras cosas."
+  },
+  {
+    "palabra": "anadir",
+    "dificultad": "facil",
+    "significado": "Agregar algo."
+  },
+  {
+    "palabra": "agregar",
+    "dificultad": "facil",
+    "significado": "Añadir."
+  },
+  {
+    "palabra": "mejorar",
+    "dificultad": "facil",
+    "significado": "Hacer más bueno o eficiente."
+  },
+  {
+    "palabra": "empeorar",
+    "dificultad": "media",
+    "significado": "Hacer que algo que ya era malo se vuelva aún peor."
+  },
+  {
+    "palabra": "seguir",
+    "dificultad": "facil",
+    "significado": "Caminar detrás de alguien o de algo."
+  },
+  {
+    "palabra": "avanzar",
+    "dificultad": "facil",
+    "significado": "Mover hacia adelante en el tiempo o en el espacio."
+  },
+  {
+    "palabra": "retroceder",
+    "dificultad": "dificil",
+    "significado": "Ir hacia atrás."
+  },
+  {
+    "palabra": "ayudar",
+    "dificultad": "facil",
+    "significado": "Prestar apoyo."
+  },
+  {
+    "palabra": "complicar",
+    "dificultad": "media",
+    "significado": "Mezclar , combinar o unir cosas diversas entre sí."
+  },
+  {
+    "palabra": "reunirse",
+    "dificultad": "media",
+    "significado": "Quedar otra vez unido lo que se había separado."
+  },
+  {
+    "palabra": "entrevistar",
+    "dificultad": "dificil",
+    "significado": "Hacer preguntas a alguien."
+  },
+  {
+    "palabra": "desenvolver",
+    "dificultad": "dificil",
+    "significado": "Quitar lo que envuelve algo."
+  },
+  {
+    "palabra": "faltar",
+    "dificultad": "facil",
+    "significado": "No estar en un sitio."
+  },
+  {
+    "palabra": "recibir",
+    "dificultad": "facil",
+    "significado": "Tomar alguien algo que se le da o se le envía."
+  },
+  {
+    "palabra": "romper",
+    "dificultad": "facil",
+    "significado": "Separar en partes o pedazos , usualmente con violencia."
+  },
+  {
+    "palabra": "doblar",
+    "dificultad": "facil",
+    "significado": "Hacer que algo sea dos veces lo que era."
+  },
+  {
+    "palabra": "cortar",
+    "dificultad": "facil",
+    "significado": "Separar con un instrumento."
+  },
+  {
+    "palabra": "comprar",
+    "dificultad": "facil",
+    "significado": "Medio de pago."
+  },
+  {
+    "palabra": "vender",
+    "dificultad": "facil",
+    "significado": "Entregar algo a cambio de dinero."
+  },
+  {
+    "palabra": "intercambiar",
+    "dificultad": "dificil",
+    "significado": "Cambiar una cosa por otra."
+  },
+  {
+    "palabra": "sustituir",
+    "dificultad": "media",
+    "significado": "Poner algo en lugar de otra cosa."
+  },
+  {
+    "palabra": "reemplazar",
+    "dificultad": "dificil",
+    "significado": "Ocupar el lugar de otra cosa."
+  },
+  {
+    "palabra": "cerrar",
+    "dificultad": "facil",
+    "significado": "Colocar o modificar algo para evitar su apertura."
+  },
+  {
+    "palabra": "buscar",
+    "dificultad": "facil",
+    "significado": "Esforzarse por encontrar o hallar algo o a alguien."
+  },
+  {
+    "palabra": "encontrar",
+    "dificultad": "media",
+    "significado": "Hallarse de pronto una persona frente a otra."
+  },
+  {
+    "palabra": "obtener",
+    "dificultad": "facil",
+    "significado": "Conseguir lo que se busca, intenta, desea o merece."
+  },
+  {
+    "palabra": "conseguir",
+    "dificultad": "media",
+    "significado": "Alcanzar lo que se desea o busca."
+  },
+  {
+    "palabra": "comenzar",
+    "dificultad": "media",
+    "significado": "Dar inicio a algo."
+  },
+  {
+    "palabra": "iniciar",
+    "dificultad": "facil",
+    "significado": "Comenzar , promover el principio de algo."
+  },
+  {
+    "palabra": "empezar",
+    "dificultad": "facil",
+    "significado": "Dar comienzo a algo."
+  },
+  {
+    "palabra": "terminar",
+    "dificultad": "media",
+    "significado": "Poner fin o llevar a su término una cosa."
+  },
+  {
+    "palabra": "acabar",
+    "dificultad": "facil",
+    "significado": "Llevar algo a su fin."
+  },
+  {
+    "palabra": "abandonar",
+    "dificultad": "media",
+    "significado": "Dejar, desamparar a una persona, animal o cosa."
+  },
+  {
+    "palabra": "entrar",
+    "dificultad": "facil",
+    "significado": "Ir o pasar de fuera adentro."
+  },
+  {
+    "palabra": "quedarse",
+    "dificultad": "media",
+    "significado": "Permanecer o estar durante algún tiempo en un lugar."
+  },
+  {
+    "palabra": "atender",
+    "dificultad": "facil",
+    "significado": "Prestar atención o asistir."
+  },
+  {
+    "palabra": "considerar",
+    "dificultad": "dificil",
+    "significado": "Pensar o juzgar algo."
+  },
+  {
+    "palabra": "comparar",
+    "dificultad": "media",
+    "significado": "Examinar semejanzas y diferencias."
+  },
+  {
+    "palabra": "evaluar",
+    "dificultad": "facil",
+    "significado": "Valorar algo."
+  },
+  {
+    "palabra": "decidir",
+    "dificultad": "facil",
+    "significado": "Zanjar una cuestión, tomar una resolución definitiva."
+  },
+  {
+    "palabra": "construir",
+    "dificultad": "media",
+    "significado": "Levantar o fabricar una obra."
+  },
+  {
+    "palabra": "destruir",
+    "dificultad": "media",
+    "significado": "Deshacer , dejar en nada algo ya hecho."
+  },
+  {
+    "palabra": "conocer",
+    "dificultad": "facil",
+    "significado": "Saber quién o qué es algo."
+  },
+  {
+    "palabra": "entender",
+    "dificultad": "media",
+    "significado": "Captar la información o explicación."
+  },
+  {
+    "palabra": "comprender",
+    "dificultad": "dificil",
+    "significado": "Entender."
+  },
+  {
+    "palabra": "trabajar",
+    "dificultad": "media",
+    "significado": "Realizar una actividad sea física o mental."
+  },
+  {
+    "palabra": "separar",
+    "dificultad": "facil",
+    "significado": "Poner distancia."
+  },
+  {
+    "palabra": "dividir",
+    "dificultad": "facil",
+    "significado": "Separar en partes."
+  },
+  {
+    "palabra": "descansar",
+    "dificultad": "media",
+    "significado": "Interrumpir el trabajo, dejar de trabajar."
+  },
+  {
+    "palabra": "dormir",
+    "dificultad": "facil",
+    "significado": "Descansar en sueño."
+  },
+  {
+    "palabra": "despertar",
+    "dificultad": "media",
+    "significado": "Interrumpir el sueño de quien duerme."
+  },
+  {
+    "palabra": "aceptar",
+    "dificultad": "facil",
+    "significado": "Dar por bueno, reconocer como correcto."
+  },
+  {
+    "palabra": "rechazar",
+    "dificultad": "media",
+    "significado": "Impedir que algo o alguien llegue a o entre en un lugar."
+  },
+  {
+    "palabra": "descartar",
+    "dificultad": "media",
+    "significado": "Eliminar algo de una lista , una categoría."
+  },
+  {
+    "palabra": "acompanar",
+    "dificultad": "media",
+    "significado": "Hacer o dar compañía."
+  },
+  {
+    "palabra": "solicitar",
+    "dificultad": "media",
+    "significado": "Pedir formalmente."
+  },
+  {
+    "palabra": "pretender",
+    "dificultad": "media",
+    "significado": "Intentar o aspirar a algo."
+  },
+  {
+    "palabra": "proponer",
+    "dificultad": "media",
+    "significado": "Plantear una idea."
+  },
+  {
+    "palabra": "sugerir",
+    "dificultad": "facil",
+    "significado": "Proponer a alguien una idea o la ejecución de una acción."
+  },
+  {
+    "palabra": "utilizar",
+    "dificultad": "media",
+    "significado": "Emplear algo para un fin."
+  },
+  {
+    "palabra": "fabricar",
+    "dificultad": "media",
+    "significado": "Producir objetos."
+  },
+  {
+    "palabra": "arreglar",
+    "dificultad": "media",
+    "significado": "Modificar algo para que se ajuste a una regla."
+  },
+  {
+    "palabra": "reparar",
+    "dificultad": "facil",
+    "significado": "Volver a poner en buen estado."
+  },
+  {
+    "palabra": "explicar",
+    "dificultad": "media",
+    "significado": "Declarar , exponer una persona lo que piensa."
+  },
+  {
+    "palabra": "mostrar",
+    "dificultad": "facil",
+    "significado": "Hacer ver algo."
+  },
+  {
+    "palabra": "tratar",
+    "dificultad": "facil",
+    "significado": "Disponer o hacer uso de alguna cosa."
+  },
+  {
+    "palabra": "evitar",
+    "dificultad": "facil",
+    "significado": "Precaver que suceda una cosa."
+  },
+  {
+    "palabra": "probar",
+    "dificultad": "facil",
+    "significado": "Estudiar el funcionamiento o las cualidades de algo."
+  },
+  {
+    "palabra": "intentar",
+    "dificultad": "media",
+    "significado": "Tratar de lograr algo."
+  },
+  {
+    "palabra": "comprobar",
+    "dificultad": "media",
+    "significado": "Verificar si algo es cierto."
+  },
+  {
+    "palabra": "verificar",
+    "dificultad": "media",
+    "significado": "Comprobar o demostrar la veracidad de algo."
+  },
+  {
+    "palabra": "variar",
+    "dificultad": "facil",
+    "significado": "Cambiar el estado , la forma o la composición de una cosa."
+  },
+  {
+    "palabra": "esperar",
+    "dificultad": "facil",
+    "significado": "Aguardar."
+  },
+  {
+    "palabra": "necesitar",
+    "dificultad": "media",
+    "significado": "Tener necesidad de algo."
+  },
+  {
+    "palabra": "precisar",
+    "dificultad": "media",
+    "significado": "Obligar a alguno a la ejecución de alguna cosa."
+  },
+  {
+    "palabra": "significar",
+    "dificultad": "dificil",
+    "significado": "Tener un sentido."
+  },
+  {
+    "palabra": "parecer",
+    "dificultad": "facil",
+    "significado": "Tener cierto aspecto o apariencia."
+  },
+  {
+    "palabra": "distinguir",
+    "dificultad": "dificil",
+    "significado": "Percibir una cosa en medio de otras."
+  },
+  {
+    "palabra": "apenas",
+    "dificultad": "facil",
+    "significado": "En muy poca proporción o intensidad."
+  },
+  {
+    "palabra": "aproximadamente",
+    "dificultad": "dificil",
+    "significado": "De forma aproximada."
+  },
+  {
+    "palabra": "exactamente",
+    "dificultad": "dificil",
+    "significado": "De modo exacto , con exactitud."
+  },
+  {
+    "palabra": "bastante",
+    "dificultad": "media",
+    "significado": "Que basta."
+  },
+  {
+    "palabra": "demasiado",
+    "dificultad": "media",
+    "significado": "Excesivo , sobrado."
+  },
+  {
+    "palabra": "etcetera",
+    "dificultad": "media",
+    "significado": "Y otras cosas semejantes."
+  },
+  {
+    "palabra": "solamente",
+    "dificultad": "media",
+    "significado": "De un solo modo."
+  },
+  {
+    "palabra": "cuando",
+    "dificultad": "facil",
+    "significado": "Para preguntar por el momento en el que ocurrió un suceso."
+  },
+  {
+    "palabra": "cuanto",
+    "dificultad": "facil",
+    "significado": "Qué número de o qué cantidad de."
+  },
+  {
+    "palabra": "cuales",
+    "dificultad": "facil",
+    "significado": "Qué personas o cosas."
+  },
+  {
+    "palabra": "regular",
+    "dificultad": "facil",
+    "significado": "Ajustado y conforme a regla."
+  },
+  {
+    "palabra": "despacio",
+    "dificultad": "media",
+    "significado": "Que procede lentamente."
+  },
+  {
+    "palabra": "deprisa",
+    "dificultad": "facil",
+    "significado": "Con prontitud y celeridad."
+  },
+  {
+    "palabra": "adrede",
+    "dificultad": "facil",
+    "significado": "Deliberadamente, intencionalmente."
+  },
+  {
+    "palabra": "exacto",
+    "dificultad": "facil",
+    "significado": "Puntual , fiel y cabal."
+  },
+  {
+    "palabra": "inclusive",
+    "dificultad": "media",
+    "significado": "Con inclusión."
+  },
+  {
+    "palabra": "ademas",
+    "dificultad": "facil",
+    "significado": "En adición, para agregar."
+  },
+  {
+    "palabra": "asimismo",
+    "dificultad": "media",
+    "significado": "De manera igual a la de otro elemento ya indicado."
+  },
+  {
+    "palabra": "unicamente",
+    "dificultad": "dificil",
+    "significado": "De un único modo, sin otra cosa."
+  },
+  {
+    "palabra": "especialmente",
+    "dificultad": "dificil",
+    "significado": "De modo especial."
+  },
+  {
+    "palabra": "incluso",
+    "dificultad": "facil",
+    "significado": "Comprendido."
+  },
+  {
+    "palabra": "viceversa",
+    "dificultad": "media",
+    "significado": "A la inversa."
+  },
+  {
+    "palabra": "siquiera",
+    "dificultad": "media",
+    "significado": "A lo menos."
+  },
+  {
+    "palabra": "inicialmente",
+    "dificultad": "dificil",
+    "significado": "En el inicio."
+  },
+  {
+    "palabra": "finalmente",
+    "dificultad": "dificil",
+    "significado": "Últimamente , en conclusión."
+  },
+  {
+    "palabra": "siempre",
+    "dificultad": "facil",
+    "significado": "Una acción que ocurre en cualquiera o en todo el tiempo."
+  },
+  {
+    "palabra": "tambien",
+    "dificultad": "facil",
+    "significado": "Además."
+  },
+  {
+    "palabra": "tampoco",
+    "dificultad": "facil",
+    "significado": "Ni eso."
+  },
+  {
+    "palabra": "quizas",
+    "dificultad": "facil",
+    "significado": "Tal vez."
+  },
+  {
+    "palabra": "facilmente",
+    "dificultad": "dificil",
+    "significado": "Con facilidad , sin complicación."
+  },
+  {
+    "palabra": "dificilmente",
+    "dificultad": "dificil",
+    "significado": "De un modo difícil , con dificultad."
+  },
+  {
+    "palabra": "probablemente",
+    "dificultad": "dificil",
+    "significado": "Tal vez."
+  },
+  {
+    "palabra": "posiblemente",
+    "dificultad": "dificil",
+    "significado": "Quizás , quizá , a lo mejor."
+  },
+  {
+    "palabra": "seguramente",
+    "dificultad": "dificil",
+    "significado": "De modo seguro , con seguridad."
+  },
+  {
+    "palabra": "anteriormente",
+    "dificultad": "dificil",
+    "significado": "Antes de ahora."
+  },
+  {
+    "palabra": "actualmente",
+    "dificultad": "dificil",
+    "significado": "En el tiempo presente."
+  },
+  {
+    "palabra": "enseguida",
+    "dificultad": "media",
+    "significado": "De forma inmediata."
+  },
+  {
+    "palabra": "inmediatamente",
+    "dificultad": "dificil",
+    "significado": "De manera inmediata , sin que medie nada más."
+  },
+  {
+    "palabra": "todavia",
+    "dificultad": "facil",
+    "significado": "Aún o hasta este momento."
+  },
+  {
+    "palabra": "recien",
+    "dificultad": "facil",
+    "significado": "Recientemente."
+  },
+  {
+    "palabra": "mientras",
+    "dificultad": "media",
+    "significado": "Entre tanto, en tanto o entre tanto que."
+  },
+  {
+    "palabra": "despues",
+    "dificultad": "facil",
+    "significado": "Más tarde o a continuación."
+  },
+  {
+    "palabra": "pronto",
+    "dificultad": "facil",
+    "significado": "Dentro de poco tiempo."
+  },
+  {
+    "palabra": "temprano",
+    "dificultad": "media",
+    "significado": "Antes de lo habitual."
+  },
+  {
+    "palabra": "anoche",
+    "dificultad": "facil",
+    "significado": "En la noche pasada inmediata al día presente."
+  },
+  {
+    "palabra": "proximamente",
+    "dificultad": "dificil",
+    "significado": "Con cercanía en el tiempo."
+  },
+  {
+    "palabra": "arriba",
+    "dificultad": "facil",
+    "significado": "En lugar superior o anterior."
+  },
+  {
+    "palabra": "encima",
+    "dificultad": "facil",
+    "significado": "Arriba de."
+  },
+  {
+    "palabra": "debajo",
+    "dificultad": "facil",
+    "significado": "En un plano inferior respecto a la vertical."
+  },
+  {
+    "palabra": "adelante",
+    "dificultad": "media",
+    "significado": "Más allá o más arriba."
+  },
+  {
+    "palabra": "delante",
+    "dificultad": "facil",
+    "significado": "Antes o con preferencia de lugar."
+  },
+  {
+    "palabra": "detras",
+    "dificultad": "facil",
+    "significado": "En la parte posterior."
+  },
+  {
+    "palabra": "centro",
+    "dificultad": "facil",
+    "significado": "Parte central de algo."
+  },
+  {
+    "palabra": "alrededor",
+    "dificultad": "media",
+    "significado": "En torno a algo."
+  },
+  {
+    "palabra": "enfrente",
+    "dificultad": "media",
+    "significado": "A la parte opuesta , frente a frente."
+  },
+  {
+    "palabra": "adentro",
+    "dificultad": "facil",
+    "significado": "Hacia el interior."
+  },
+  {
+    "palabra": "dentro",
+    "dificultad": "facil",
+    "significado": "En el interior."
+  },
+  {
+    "palabra": "afuera",
+    "dificultad": "facil",
+    "significado": "Hacia el exterior."
+  },
+  {
+    "palabra": "adonde",
+    "dificultad": "facil",
+    "significado": "Indaga acerca del movimiento o dirección de la acción."
+  },
+  {
+    "palabra": "contra",
+    "dificultad": "facil",
+    "significado": "En oposición a algo."
+  },
+  {
+    "palabra": "durante",
+    "dificultad": "facil",
+    "significado": "A lo largo de un tiempo."
+  },
+  {
+    "palabra": "mediante",
+    "dificultad": "media",
+    "significado": "Por medio de algo."
+  },
+  {
+    "palabra": "aunque",
+    "dificultad": "facil",
+    "significado": "Sin embargo , no obstante , si bien."
+  },
+  {
+    "palabra": "entonces",
+    "dificultad": "media",
+    "significado": "En ese momento o en ese caso."
+  },
+  {
+    "palabra": "excepto",
+    "dificultad": "facil",
+    "significado": "Salvo, menos."
+  },
+  {
+    "palabra": "porque",
+    "dificultad": "facil",
+    "significado": "Introduce una oración que explica la causa o el motivo."
+  },
+  {
+    "palabra": "nosotros",
+    "dificultad": "media",
+    "significado": "Grupo que incluye al hablante."
+  },
+  {
+    "palabra": "nosotras",
+    "dificultad": "media",
+    "significado": "Grupo femenino que incluye a la hablante."
+  },
+  {
+    "palabra": "vosotros",
+    "dificultad": "media",
+    "significado": "Grupo al que se habla."
+  },
+  {
+    "palabra": "vosotras",
+    "dificultad": "media",
+    "significado": "Grupo femenino al que se habla."
+  },
+  {
+    "palabra": "ustedes",
+    "dificultad": "facil",
+    "significado": "Pronombre para varias personas."
+  },
+  {
+    "palabra": "conmigo",
+    "dificultad": "facil",
+    "significado": "Con mi persona."
+  },
+  {
+    "palabra": "contigo",
+    "dificultad": "facil",
+    "significado": "Con tu persona."
+  },
+  {
+    "palabra": "consigo",
+    "dificultad": "facil",
+    "significado": "Con él mismo o con ella misma."
+  },
+  {
+    "palabra": "alguna",
+    "dificultad": "facil",
+    "significado": "Una persona o cosa no definida."
+  },
+  {
+    "palabra": "ninguno",
+    "dificultad": "facil",
+    "significado": "Ni uno solo."
+  },
+  {
+    "palabra": "ninguna",
+    "dificultad": "facil",
+    "significado": "Ni una sola."
+  },
+  {
+    "palabra": "varios",
+    "dificultad": "facil",
+    "significado": "Algunos , unos cuantos."
+  },
+  {
+    "palabra": "varias",
+    "dificultad": "facil",
+    "significado": "Algunas, más de una."
+  },
+  {
+    "palabra": "alguien",
+    "dificultad": "facil",
+    "significado": "Alguna persona."
+  },
+  {
+    "palabra": "cualquiera",
+    "dificultad": "dificil",
+    "significado": "Persona o cosa indeterminada."
+  },
+  {
+    "palabra": "aquella",
+    "dificultad": "facil",
+    "significado": "Esa que está lejos."
+  },
+  {
+    "palabra": "aquello",
+    "dificultad": "facil",
+    "significado": "Eso que está lejos."
+  },
+  {
+    "palabra": "aquellos",
+    "dificultad": "media",
+    "significado": "Esos que están lejos."
+  },
+  {
+    "palabra": "aquellas",
+    "dificultad": "media",
+    "significado": "Esas que están lejos."
+  },
+  {
+    "palabra": "gracias",
+    "dificultad": "facil",
+    "significado": "Úsase para expresar agradecimiento."
+  }
+]

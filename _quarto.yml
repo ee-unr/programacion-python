@@ -90,6 +90,7 @@ website:
             - recursos/clases/02_2.qmd
             - recursos/clases/04.qmd
             - recursos/clases/05.qmd
+            - recursos/clases/06.qmd
         - text: Tutoriales
           contents:
             - recursos/tutoriales/instalacion_python.qmd

@@ -1,0 +1,487 @@
+[
+  {
+    "palabra": "media",
+    "dificultad": "facil",
+    "significado": "Promedio de un conjunto de datos."
+  },
+  {
+    "palabra": "moda",
+    "dificultad": "facil",
+    "significado": "Valor que mas se repite."
+  },
+  {
+    "palabra": "muestra",
+    "dificultad": "facil",
+    "significado": "Subconjunto usado para analizar una poblacion."
+  },
+  {
+    "palabra": "dato",
+    "dificultad": "facil",
+    "significado": "Valor u observacion registrada."
+  },
+  {
+    "palabra": "tabla",
+    "dificultad": "facil",
+    "significado": "Organizacion de datos en filas y columnas."
+  },
+  {
+    "palabra": "sesgo",
+    "dificultad": "facil",
+    "significado": "Desvio sistematico en una medicion o estimacion."
+  },
+  {
+    "palabra": "censo",
+    "dificultad": "facil",
+    "significado": "Recoleccion de datos de toda la poblacion."
+  },
+  {
+    "palabra": "rango",
+    "dificultad": "facil",
+    "significado": "Diferencia entre el valor mayor y el menor."
+  },
+  {
+    "palabra": "varianza",
+    "dificultad": "media",
+    "significado": "Medida de la dispersion respecto de la media."
+  },
+  {
+    "palabra": "mediana",
+    "dificultad": "media",
+    "significado": "Valor central de un conjunto ordenado."
+  },
+  {
+    "palabra": "percentil",
+    "dificultad": "media",
+    "significado": "Punto que deja debajo un porcentaje de datos."
+  },
+  {
+    "palabra": "histograma",
+    "dificultad": "media",
+    "significado": "Grafico de barras para frecuencias."
+  },
+  {
+    "palabra": "frecuencia",
+    "dificultad": "media",
+    "significado": "Cantidad de veces que aparece un valor."
+  },
+  {
+    "palabra": "intervalo",
+    "dificultad": "media",
+    "significado": "Rango entre dos valores."
+  },
+  {
+    "palabra": "muestreo",
+    "dificultad": "media",
+    "significado": "Proceso de seleccionar una muestra."
+  },
+  {
+    "palabra": "dispersion",
+    "dificultad": "media",
+    "significado": "Grado de separacion entre los datos."
+  },
+  {
+    "palabra": "poblacion",
+    "dificultad": "media",
+    "significado": "Conjunto total de elementos de estudio."
+  },
+  {
+    "palabra": "covarianza",
+    "dificultad": "media",
+    "significado": "Medida de variacion conjunta entre dos variables."
+  },
+  {
+    "palabra": "regresion",
+    "dificultad": "dificil",
+    "significado": "Modelo para relacionar variables."
+  },
+  {
+    "palabra": "correlacion",
+    "dificultad": "dificil",
+    "significado": "Medida de asociacion entre variables."
+  },
+  {
+    "palabra": "probabilidad",
+    "dificultad": "dificil",
+    "significado": "Chance de que ocurra un evento."
+  },
+  {
+    "palabra": "estimador",
+    "dificultad": "dificil",
+    "significado": "Regla para aproximar un parametro."
+  },
+  {
+    "palabra": "parametro",
+    "dificultad": "dificil",
+    "significado": "Valor que describe una poblacion."
+  },
+  {
+    "palabra": "hipotesis",
+    "dificultad": "dificil",
+    "significado": "Suposicion que se pone a prueba."
+  },
+  {
+    "palabra": "binomial",
+    "dificultad": "dificil",
+    "significado": "Distribucion para conteos de exitos y fracasos."
+  },
+  {
+    "palabra": "gaussiana",
+    "dificultad": "dificil",
+    "significado": "Distribucion normal con forma de campana."
+  },
+  {
+    "palabra": "asimetria",
+    "dificultad": "dificil",
+    "significado": "Medida de la falta de simetria."
+  },
+  {
+    "palabra": "curtosis",
+    "dificultad": "dificil",
+    "significado": "Medida del peso de las colas de una distribucion."
+  },
+  {
+    "palabra": "likelihood",
+    "dificultad": "dificil",
+    "significado": "Funcion de verosimilitud de un modelo."
+  },
+  {
+    "palabra": "bootstrap",
+    "dificultad": "dificil",
+    "significado": "Metodo de remuestreo con reemplazo."
+  },
+  {
+    "palabra": "datos",
+    "dificultad": "facil",
+    "significado": "Conjunto de valores observados."
+  },
+  {
+    "palabra": "variable",
+    "dificultad": "facil",
+    "significado": "Caracteristica que puede tomar distintos valores."
+  },
+  {
+    "palabra": "desviacion",
+    "dificultad": "media",
+    "significado": "Alejamiento respecto de un valor central."
+  },
+  {
+    "palabra": "distribucion",
+    "dificultad": "media",
+    "significado": "Forma en que se reparten los valores."
+  },
+  {
+    "palabra": "evento",
+    "dificultad": "facil",
+    "significado": "Resultado o conjunto de resultados posibles."
+  },
+  {
+    "palabra": "experimento",
+    "dificultad": "media",
+    "significado": "Proceso que genera observaciones o resultados."
+  },
+  {
+    "palabra": "grafico",
+    "dificultad": "facil",
+    "significado": "Representacion visual de datos."
+  },
+  {
+    "palabra": "cuartil",
+    "dificultad": "media",
+    "significado": "Punto que divide los datos en cuatro partes."
+  },
+  {
+    "palabra": "decil",
+    "dificultad": "media",
+    "significado": "Punto que divide los datos en diez partes."
+  },
+  {
+    "palabra": "inferencia",
+    "dificultad": "dificil",
+    "significado": "Conclusion sobre una poblacion desde una muestra."
+  },
+  {
+    "palabra": "estimacion",
+    "dificultad": "media",
+    "significado": "Calculo aproximado de un valor desconocido."
+  },
+  {
+    "palabra": "estadistico",
+    "dificultad": "dificil",
+    "significado": "Valor calculado a partir de una muestra."
+  },
+  {
+    "palabra": "error",
+    "dificultad": "facil",
+    "significado": "Diferencia entre un valor real y uno estimado."
+  },
+  {
+    "palabra": "independencia",
+    "dificultad": "dificil",
+    "significado": "Ausencia de influencia entre eventos o variables."
+  },
+  {
+    "palabra": "aleatoriedad",
+    "dificultad": "dificil",
+    "significado": "Caracter impredecible de un proceso."
+  },
+  {
+    "palabra": "significancia",
+    "dificultad": "dificil",
+    "significado": "Importancia estadistica de un resultado."
+  },
+  {
+    "palabra": "normal",
+    "dificultad": "facil",
+    "significado": "Distribucion simetrica con forma de campana."
+  },
+  {
+    "palabra": "poisson",
+    "dificultad": "dificil",
+    "significado": "Distribucion para contar sucesos raros."
+  },
+  {
+    "palabra": "estratificado",
+    "dificultad": "dificil",
+    "significado": "Dividido en grupos antes de muestrear."
+  },
+  {
+    "palabra": "teorema",
+    "dificultad": "media",
+    "significado": "Resultado demostrado matematicamente."
+  },
+  {
+    "palabra": "anova",
+    "dificultad": "media",
+    "significado": "Metodo para comparar medias entre grupos."
+  },
+  {
+    "palabra": "lineal",
+    "dificultad": "facil",
+    "significado": "Que sigue una relacion de linea recta."
+  },
+  {
+    "palabra": "multiple",
+    "dificultad": "media",
+    "significado": "Que involucra varias variables o factores."
+  },
+  {
+    "palabra": "consistencia",
+    "dificultad": "dificil",
+    "significado": "Propiedad de acercarse al valor real con mas datos."
+  },
+  {
+    "palabra": "eficiencia",
+    "dificultad": "media",
+    "significado": "Capacidad de estimar con poca variabilidad."
+  },
+  {
+    "palabra": "discreta",
+    "dificultad": "media",
+    "significado": "Variable que toma valores separados."
+  },
+  {
+    "palabra": "bayes",
+    "dificultad": "media",
+    "significado": "Referencia al enfoque bayesiano."
+  },
+  {
+    "palabra": "prior",
+    "dificultad": "media",
+    "significado": "Distribucion inicial antes de observar datos."
+  },
+  {
+    "palabra": "posterior",
+    "dificultad": "media",
+    "significado": "Distribucion actualizada tras ver los datos."
+  },
+  {
+    "palabra": "verosimilitud",
+    "dificultad": "dificil",
+    "significado": "Medida de cuan compatibles son los datos con un parametro."
+  },
+  {
+    "palabra": "evidencia",
+    "dificultad": "media",
+    "significado": "Probabilidad total de los datos observados."
+  },
+  {
+    "palabra": "condicional",
+    "dificultad": "media",
+    "significado": "Que depende de que ocurra otro evento."
+  },
+  {
+    "palabra": "marginal",
+    "dificultad": "media",
+    "significado": "Distribucion de una variable aislada."
+  },
+  {
+    "palabra": "conjugado",
+    "dificultad": "dificil",
+    "significado": "Prior que produce una posterior de la misma familia."
+  },
+  {
+    "palabra": "hiperparametro",
+    "dificultad": "dificil",
+    "significado": "Parametro que define otra distribucion."
+  },
+  {
+    "palabra": "modelo",
+    "dificultad": "facil",
+    "significado": "Representacion simplificada de un fenomeno."
+  },
+  {
+    "palabra": "generativo",
+    "dificultad": "dificil",
+    "significado": "Modelo que describe como se generan los datos."
+  },
+  {
+    "palabra": "latente",
+    "dificultad": "media",
+    "significado": "Variable no observada directamente."
+  },
+  {
+    "palabra": "mixtura",
+    "dificultad": "dificil",
+    "significado": "Combinacion de varias distribuciones."
+  },
+  {
+    "palabra": "gaussiano",
+    "dificultad": "dificil",
+    "significado": "Relacionado con la distribucion normal."
+  },
+  {
+    "palabra": "dirichlet",
+    "dificultad": "dificil",
+    "significado": "Distribucion usada sobre probabilidades multiples."
+  },
+  {
+    "palabra": "proceso",
+    "dificultad": "media",
+    "significado": "Secuencia o mecanismo que genera resultados."
+  },
+  {
+    "palabra": "kernel",
+    "dificultad": "dificil",
+    "significado": "Funcion base usada para medir similitud."
+  },
+  {
+    "palabra": "densidad",
+    "dificultad": "media",
+    "significado": "Funcion que describe la probabilidad continua."
+  },
+  {
+    "palabra": "jerarquico",
+    "dificultad": "dificil",
+    "significado": "Modelo con niveles de parametros."
+  },
+  {
+    "palabra": "responsabilidad",
+    "dificultad": "dificil",
+    "significado": "Probabilidad de que un componente explique un dato."
+  },
+  {
+    "palabra": "esperanza",
+    "dificultad": "media",
+    "significado": "Valor medio esperado de una variable."
+  },
+  {
+    "palabra": "maximizacion",
+    "dificultad": "dificil",
+    "significado": "Busqueda del valor mas alto de una funcion."
+  },
+  {
+    "palabra": "algoritmo",
+    "dificultad": "media",
+    "significado": "Conjunto ordenado de pasos para resolver un problema."
+  },
+  {
+    "palabra": "montecarlo",
+    "dificultad": "dificil",
+    "significado": "Metodo que usa simulacion aleatoria."
+  },
+  {
+    "palabra": "gibbs",
+    "dificultad": "dificil",
+    "significado": "Metodo MCMC de muestreo condicional."
+  },
+  {
+    "palabra": "metropolis",
+    "dificultad": "dificil",
+    "significado": "Metodo MCMC basado en aceptar propuestas."
+  },
+  {
+    "palabra": "hastings",
+    "dificultad": "dificil",
+    "significado": "Extension del metodo Metropolis."
+  },
+  {
+    "palabra": "mcmc",
+    "dificultad": "dificil",
+    "significado": "Tecnicas de Monte Carlo por cadenas de Markov."
+  },
+  {
+    "palabra": "importancia",
+    "dificultad": "media",
+    "significado": "Peso relativo asignado a una observacion o muestra."
+  },
+  {
+    "palabra": "resampling",
+    "dificultad": "dificil",
+    "significado": "Nuevo muestreo a partir de datos existentes."
+  },
+  {
+    "palabra": "predictiva",
+    "dificultad": "media",
+    "significado": "Relacionada con anticipar valores futuros."
+  },
+  {
+    "palabra": "validacion",
+    "dificultad": "media",
+    "significado": "Proceso para evaluar un modelo."
+  },
+  {
+    "palabra": "cruzada",
+    "dificultad": "media",
+    "significado": "Metodo de particiones repetidas para validar."
+  },
+  {
+    "palabra": "comparacion",
+    "dificultad": "media",
+    "significado": "Analisis de diferencias entre modelos o grupos."
+  },
+  {
+    "palabra": "decision",
+    "dificultad": "media",
+    "significado": "Eleccion basada en datos o probabilidades."
+  },
+  {
+    "palabra": "complejidad",
+    "dificultad": "dificil",
+    "significado": "Nivel de dificultad o costo de un metodo."
+  },
+  {
+    "palabra": "grafo",
+    "dificultad": "media",
+    "significado": "Estructura de nodos y conexiones."
+  },
+  {
+    "palabra": "bayesiano",
+    "dificultad": "dificil",
+    "significado": "Basado en actualizar creencias con datos."
+  },
+  {
+    "palabra": "actualizacion",
+    "dificultad": "media",
+    "significado": "Cambio de una estimacion con nueva informacion."
+  },
+  {
+    "palabra": "priori",
+    "dificultad": "dificil",
+    "significado": "Conocimiento previo a observar datos."
+  },
+  {
+    "palabra": "posteriori",
+    "dificultad": "dificil",
+    "significado": "Conocimiento obtenido despues de observar datos."
+  }
+]

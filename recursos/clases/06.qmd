@@ -1,0 +1,183 @@
+---
+title: "Clase 6: Ahorcado en Python"
+format: html
+resources:
+    - ahorcado/
+    - ahorcado.zip
+    - 404.txt
+---
+
+
+[Descargar carpeta del proyecto](ahorcado.zip)
+
+```{=html}
+<style>
+.cm-file-browser {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: 650px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cm-sidebar {
+  padding: 0.75rem;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.cm-file {
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.cm-file:hover {
+  background: #eaeaea;
+}
+
+.cm-file.active {
+  background: #dbeafe;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.cm-editor-wrap {
+  min-width: 0;
+}
+
+#cm-filename {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #ddd;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+#cm-editor {
+  height: 610px;
+}
+
+.cm-editor {
+  height: 100%;
+}
+</style>
+
+<div class="cm-file-browser">
+  <div class="cm-sidebar" id="cm-file-list"></div>
+  <div class="cm-editor-wrap">
+    <h3 id="cm-filename">Seleccionar archivo</h3>
+    <div id="cm-editor"></div>
+  </div>
+</div>
+
+<script type="module">
+import { EditorView, basicSetup } from "https://esm.sh/codemirror";
+import { EditorState } from "https://esm.sh/@codemirror/state";
+import { python } from "https://esm.sh/@codemirror/lang-python";
+import { json } from "https://esm.sh/@codemirror/lang-json";
+import { markdown } from "https://esm.sh/@codemirror/lang-markdown";
+import { oneDark } from "https://esm.sh/@codemirror/theme-one-dark";
+
+const fileList = document.getElementById("cm-file-list");
+const filename = document.getElementById("cm-filename");
+
+const tree = {
+    "datos": {
+        "estadistica.json": "ahorcado/datos/estadistica.json",
+        "lenguaje.json": "ahorcado/datos/lenguaje.json",
+        "programacion.json": "ahorcado/datos/programacion.json",
+        "raras.json": "ahorcado/datos/raras.json"
+    },
+    "sonidos": {
+        "block.wav": "404.txt",
+        "fail.wav": "404.txt",
+        "win.wav": "404.txt",
+        "wrong.wav": "404.txt"
+    },
+    "ahorcado.py": "ahorcado/ahorcado.py",
+    "README.md": "ahorcado/README.md"
+};
+
+function languageFor(path) {
+  if (path.endsWith(".py")) return python();
+  if (path.endsWith(".json")) return json();
+  if (path.endsWith(".md")) return markdown();
+  return [];
+}
+
+let editor = new EditorView({
+  state: EditorState.create({
+    doc: "Selecciona un archivo desde el panel lateral.",
+    extensions: [
+      basicSetup,
+      oneDark,
+      EditorView.editable.of(false),
+      EditorState.readOnly.of(true)
+    ]
+  }),
+  parent: document.getElementById("cm-editor")
+});
+
+async function openFile(path, element) {
+  filename.textContent = path;
+
+  document.querySelectorAll(".cm-file").forEach(el => {
+    el.classList.remove("active");
+  });
+  element.classList.add("active");
+
+  const response = await fetch(path);
+  const text = response.ok
+    ? await response.text()
+    : `Could not load ${path}`;
+
+  editor.setState(EditorState.create({
+    doc: text,
+    extensions: [
+      basicSetup,
+      oneDark,
+      languageFor(path),
+      EditorView.editable.of(false),
+      EditorState.readOnly.of(true)
+    ]
+  }));
+}
+
+function renderTree(node, parent) {
+  Object.entries(node).forEach(([name, value]) => {
+    if (typeof value === "string") {
+      const item = document.createElement("div");
+      item.className = "cm-file";
+      item.textContent = name;
+      item.onclick = () => openFile(value, item);
+      parent.appendChild(item);
+    } else {
+      const folder = document.createElement("details");
+      folder.open = true;
+
+      const summary = document.createElement("summary");
+      summary.textContent = name;
+      folder.appendChild(summary);
+
+      const children = document.createElement("div");
+      children.style.paddingLeft = "1rem";
+      folder.appendChild(children);
+
+      renderTree(value, children);
+      parent.appendChild(folder);
+    }
+  });
+}
+
+renderTree(tree, fileList);
+</script>
+```
