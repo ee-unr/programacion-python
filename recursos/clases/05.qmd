@@ -2,7 +2,7 @@
 title: "Clase 5: Programación Orientada a Objetos"
 ---
 
-{{< downloadthis ../../notebooks/clase_05.ipynb dname=clase_04 label="Descargar Notebook" icon=journal-code type=default class=data-button id=clase_04 >}}
+{{< downloadthis ../../notebooks/clase_05.ipynb dname=clase_05 label="Descargar Notebook" icon=journal-code type=default class=data-button id=clase_05 >}}
 
 <iframe
   src="https://tomicapretto.com/jupyter-lite-site/notebooks/?path=pp/clase_05.ipynb"

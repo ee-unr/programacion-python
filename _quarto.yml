@@ -85,12 +85,7 @@ website:
         #     - recursos/ejemplos/clases.qmd
         - text: Material de clase
           contents:
-            - recursos/clases/01.qmd
-            - recursos/clases/02_1.qmd
-            - recursos/clases/02_2.qmd
-            - recursos/clases/04.qmd
-            - recursos/clases/05.qmd
-            - recursos/clases/06.qmd
+            - auto: recursos/clases/*.qmd
         - text: Tutoriales
           contents:
             - recursos/tutoriales/instalacion_python.qmd
