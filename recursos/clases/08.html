@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Clase 8: Práctica adicional – Programación en Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../recursos/ejercicios/01_programacion_en_python/index.html" rel="next">
+<link href="../../recursos/clases/07.html" rel="prev">
+<link href="../../imgs/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0994e74a0f8005735345d54a8654233e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0994e74a0f8005735345d54a8654233e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0994e74a0f8005735345d54a8654233e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Programación en Python</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../informacion/programa.html"> 
+<span class="menu-text">Información</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teoria/01_programacion_en_python/01_introduccion.html"> 
+<span class="menu-text">Teoría</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../practica/01_programacion_en_python/autoevaluacion.html"> 
+<span class="menu-text">Práctica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../proyectos/grupal.html"> 
+<span class="menu-text">Proyectos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../recursos/tutoriales/instalacion_python.html" aria-current="page"> 
+<span class="menu-text">Recursos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ee-unr/programacion-python"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../recursos/clases/01.html">Material de clase</a></li><li class="breadcrumb-item"><a href="../../recursos/clases/08.html">Clase 8: Práctica adicional</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">Material de clase</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 1: Conociendo Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/02_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 2.1: Colecciones de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/02_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 2.2: Uso de código externo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 4: Programación Orientada a Objetos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 5: Programación Orientada a Objetos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 6: Ahorcado en Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clase 7: Programación Funcional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/clases/08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Clase 8: Práctica adicional</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">Ejercicios</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/ejercicios/01_programacion_en_python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">U1 - Programación en Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/ejercicios/02_oop/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">U2 - Programación Orientada a Objetos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/ejercicios/03_funcional/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">U3 - Programación funcional</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutoriales</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../recursos/tutoriales/instalacion_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instalación de Python y Positron en Windows</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#anagramas" id="toc-anagramas" class="nav-link active" data-scroll-target="#anagramas"><span class="header-section-number">1</span> Anagramas</a></li>
+  <li><a href="#filtros" id="toc-filtros" class="nav-link" data-scroll-target="#filtros"><span class="header-section-number">2</span> Filtros</a></li>
+  <li><a href="#miembros" id="toc-miembros" class="nav-link" data-scroll-target="#miembros"><span class="header-section-number">3</span> Miembros</a></li>
+  <li><a href="#primera-aparción" id="toc-primera-aparción" class="nav-link" data-scroll-target="#primera-aparción"><span class="header-section-number">4</span> Primera aparción</a></li>
+  <li><a href="#biblioteca" id="toc-biblioteca" class="nav-link" data-scroll-target="#biblioteca"><span class="header-section-number">5</span> Biblioteca</a></li>
+  <li><a href="#intervalos-superpuestos" id="toc-intervalos-superpuestos" class="nav-link" data-scroll-target="#intervalos-superpuestos"><span class="header-section-number">6</span> Intervalos superpuestos</a></li>
+  <li><a href="#combinaciones-telefónicas" id="toc-combinaciones-telefónicas" class="nav-link" data-scroll-target="#combinaciones-telefónicas"><span class="header-section-number">7</span> Combinaciones telefónicas</a></li>
+  <li><a href="#entero-a-número-romano" id="toc-entero-a-número-romano" class="nav-link" data-scroll-target="#entero-a-número-romano"><span class="header-section-number">8</span> Entero a número romano 🧩</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../recursos/clases/01.html">Material de clase</a></li><li class="breadcrumb-item"><a href="../../recursos/clases/08.html">Clase 8: Práctica adicional</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Clase 8: Práctica adicional</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="anagramas" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="anagramas"><span class="header-section-number">1</span> Anagramas</h2>
+<p>Implemente una función que recibe una lista de <em>strings</em> y agrupe en sublistas aquellas palabras que sean anagramas entre sí.</p>
+<p>La función debe devolver una lista de listas, donde cada sublista contenga todas las palabras que pertenecen al mismo grupo de anagramas. El orden de los grupos en la salida puede ser arbitrario y puede asumir que las palabras no se repiten.</p>
+<p>Dos cadenas se consideran anagramas si contienen exactamente los mismos caracteres, aunque en un orden diferente.</p>
+<section id="ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> palabras <span class="op">=</span> [<span class="st">"roma"</span>, <span class="st">"amor"</span>, <span class="st">"ramo"</span>, <span class="st">"casa"</span>, <span class="st">"saco"</span>, <span class="st">"caso"</span>, <span class="st">"roca"</span>, <span class="st">"saca"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> encontrar_anagramas(palabras)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'roma'</span>, <span class="st">'amor'</span>, <span class="st">'ramo'</span>], [<span class="st">'casa'</span>, <span class="st">'saca'</span>], [<span class="st">'saco'</span>, <span class="st">'caso'</span>], [<span class="st">'roca'</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> palabras <span class="op">=</span> [<span class="st">"abc"</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> encontrar_anagramas(palabras)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'abc'</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="filtros" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="filtros"><span class="header-section-number">2</span> Filtros</h2>
+<p>Implemente una función <code>filtrar(secuencia, *filtros)</code> que reciba una secuencia (por ejemplo una lista, o una lista de diccionarios) y una cantidad arbitraria de filtros (funciones). La función debe devolver una sub-secuencia con los elementos que cumplen todos los filtros.</p>
+<p>Si no se reciben filtros, devuelva la secuencia original.</p>
+<section id="ejemplos-1" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-1">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> datos <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> filtrar(datos, <span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, <span class="kw">lambda</span> x: x <span class="op">&gt;</span> <span class="dv">4</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">6</span>, <span class="dv">8</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> personas <span class="op">=</span> [</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>...     {<span class="st">"nombre"</span>: <span class="st">"Ana"</span>, <span class="st">"edad"</span>: <span class="dv">19</span>},</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>...     {<span class="st">"nombre"</span>: <span class="st">"Luis"</span>, <span class="st">"edad"</span>: <span class="dv">25</span>},</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>...     {<span class="st">"nombre"</span>: <span class="st">"Eva"</span>, <span class="st">"edad"</span>: <span class="dv">25</span>},</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>... ]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> filtrar(personas, <span class="kw">lambda</span> d: d[<span class="st">"edad"</span>] <span class="op">==</span> <span class="dv">25</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>[{<span class="st">'nombre'</span>: <span class="st">'Luis'</span>, <span class="st">'edad'</span>: <span class="dv">25</span>}, {<span class="st">'nombre'</span>: <span class="st">'Eva'</span>, <span class="st">'edad'</span>: <span class="dv">25</span>}]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="miembros" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="miembros"><span class="header-section-number">3</span> Miembros</h2>
+<p>Implemente una clase <code>Miembro</code> y una clase derivada <code>MiembroPremium</code> que representan usuarios de un sistema que gestiona créditos y consumos de películas.</p>
+<p><code>Miembro</code> se inicializa con un nombre de <code>usuario</code> y opcionalmente un <code>saldo</code>, que por defecto es 0. Debe contar con las propiedades de solo lectura <code>usuario</code>, <code>saldo</code> e <code>historial</code>. Debe implementar un método <code>cargar</code> que incrementa el saldo en <code>monto</code> créditos, lanzando un <code>ValueError</code> cuando <code>monto</code> es menor o igual 0 y un método <code>consumir</code> que recibe el nombre del contenido y el costo asocaido al mismo. si el saldo es suficiente, descuenta el costo y agrega el contenido al historial. Si no, arroja un <code>ValueError</code>.</p>
+<p>Por su parte, la clase <code>MiembroPremium</code> modifica el comportamiento de <code>Miembro</code> para que se otorgue un 20% de descuento sobre el costo original a la hora de realizar consumos.</p>
+<section id="ejemplo" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m <span class="op">=</span> Miembro(<span class="st">"Ana"</span>, <span class="dv">100</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m.cargar(<span class="dv">20</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m.consumir(<span class="st">"Película A"</span>, <span class="dv">80</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m.saldo</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">40</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m.consumir(<span class="st">"Película A"</span>, <span class="dv">80</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"¡Saldo insuficiente!"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m.historial</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>[<span class="st">"Película A"</span>]</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> p <span class="op">=</span> MiembroPremium(<span class="st">"Luis"</span>, <span class="dv">160</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> p.consumir(<span class="st">"Película A"</span>, <span class="dv">80</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> p.saldo</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="dv">96</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> p.cargar(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"No se puede cargar saldo negativo"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="primera-aparción" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="primera-aparción"><span class="header-section-number">4</span> Primera aparción</h2>
+<p>Implemente una función que reciba dos cadenas, <code>cadena</code> y <code>subcadena</code>, y devuelva el índice de la primera aparición de <code>subcadena</code> dentro de <code>cadena</code>.</p>
+<p>Si <code>subcadena</code> no aparece dentro de <code>cadena</code>, la función debe devolver <code>-1</code>.</p>
+<section id="ejemplos-2" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-2">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> buscar_subcadena(<span class="st">"programacion"</span>, <span class="st">"grama"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> buscar_subcadena(<span class="st">"casa"</span>, <span class="st">"sol"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span><span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="biblioteca" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="biblioteca"><span class="header-section-number">5</span> Biblioteca</h2>
+<p>Implemente una clase <code>Libro</code>, una clase <code>Socio</code> y una clase <code>Biblioteca</code>.</p>
+<p><code>Libro</code> se inicializa con un <code>titulo</code> y un <code>autor</code>. Debe contar con las propiedades de solo lectura <code>titulo</code>, <code>autor</code> y <code>prestado</code>. Inicialmente, <code>prestado</code> vale <code>False</code>.</p>
+<p><code>Socio</code> se inicializa con un <code>nombre</code> y opcionalmente un <code>max_prestamos</code>, que por defecto es 2. Debe contar con las propiedades de solo lectura <code>nombre</code> y <code>libros_prestados</code>. La propiedad <code>libros_prestados</code> debe devolver una copia de la lista interna.</p>
+<p><code>Biblioteca</code> se inicializa con un <code>nombre</code>. Debe contar con las propiedades de solo lectura <code>nombre</code>, <code>libros</code> y <code>socios</code>. Las propiedades <code>libros</code> y <code>socios</code> deben devolver una copia de las colecciones internas.</p>
+<p>La clase <code>Biblioteca</code> debe implementar estos métodos:</p>
+<ul>
+<li><code>agregar_libro(libro)</code>: agrega un libro al catálogo.</li>
+<li><code>registrar_socio(socio)</code>: agrega un socio a la biblioteca.</li>
+<li><code>prestar_libro(libro, socio)</code>: presta un libro a un socio. Debe lanzar un <code>ValueError</code> si el libro no pertenece al catálogo, si el socio no está registrado, si el libro ya está prestado o si el socio alcanzó su máximo de préstamos.</li>
+<li><code>devolver_libro(libro, socio)</code>: devuelve un libro prestado. Debe lanzar un <code>ValueError</code> si el libro no pertenece al catálogo, si el socio no está registrado o si el socio no tenía ese libro.</li>
+</ul>
+<p>Cuando un préstamo se realiza correctamente, el libro pasa a estar prestado y se agrega a la lista de libros prestados del socio. Cuando se devuelve, ocurre lo contrario.</p>
+<section id="ejemplos-3" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-3">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> libro1 <span class="op">=</span> Libro(<span class="st">"El principito"</span>, <span class="st">"Saint-Exupéry"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> libro2 <span class="op">=</span> Libro(<span class="st">"1984"</span>, <span class="st">"George Orwell"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> libro3 <span class="op">=</span> Libro(<span class="st">"Rayuela"</span>, <span class="st">"Julio Cortázar"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> socio1 <span class="op">=</span> Socio(<span class="st">"Ana"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> socio2 <span class="op">=</span> Socio(<span class="st">"Luis"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca <span class="op">=</span> Biblioteca(<span class="st">"Municipal"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.agregar_libro(libro1)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.agregar_libro(libro2)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.registrar_socio(socio1)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.prestar(libro1, socio1)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> libro1.prestado</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [libro.titulo <span class="cf">for</span> libro <span class="kw">in</span> socio1.libros_prestados]</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>[<span class="st">"El principito"</span>]</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.prestar(libro1, socio1)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"No se puede prestar el libro"</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.prestar(libro2, socio1)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [libro.titulo <span class="cf">for</span> libro <span class="kw">in</span> socio1.libros_prestados]</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>[<span class="st">"El principito"</span>, <span class="st">"1984"</span>]</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.prestar(libro3, socio1)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"El libro no pertenece al catálogo"</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.prestar(libro1, socio2)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"El socio no está registrado"</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.registrar_socio(socio2)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.prestar(libro2, socio2)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"El libro ya está prestado"</span>)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.devolver(libro1, socio1)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> libro1.prestado</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [libro.titulo <span class="cf">for</span> libro <span class="kw">in</span> socio1.libros_prestados]</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>[<span class="st">"1984"</span>]</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca.devolver(libro1, socio1)</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"El socio no tenía prestado ese libro"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="punto-extra" class="level3">
+<h3 class="anchored" data-anchor-id="punto-extra">Punto extra</h3>
+<p>Modifique la clase <code>Biblioteca</code> para que dos bibliotecas puedan prestarse libros entre sí.</p>
+<p>Para ello, implemente un método que permita que una biblioteca solicite un libro a otra y lo incorpore temporalmente a su catálogo. Una vez hecho esto, el libro podrá ser prestado a uno de sus socios utilizando las mismas reglas definidas anteriormente.</p>
+<p>Tenga en cuenta que un socio solo puede solicitar libros en la biblioteca en la que se encuentra registrado. Es decir, si un libro pertenece al catálogo de otra biblioteca, primero debe producirse el préstamo entre bibliotecas y recién luego podrá prestarse al socio.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> libro1 <span class="op">=</span> Libro(<span class="st">"Ficciones"</span>, <span class="st">"Jorge Luis Borges"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> socio1 <span class="op">=</span> Socio(<span class="st">"Ana"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca1 <span class="op">=</span> Biblioteca(<span class="st">"Biblioteca Norte"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca2 <span class="op">=</span> Biblioteca(<span class="st">"Biblioteca Sur"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca2.agregar_libro(libro1)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca1.registrar_socio(socio1)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca1.prestar(libro1, socio1)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="pp">ValueError</span>(<span class="st">"El libro no pertenece al catálogo"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca1.solicitar_libro(libro1, biblioteca2)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> biblioteca1.prestar(libro1, socio1)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [libro.titulo <span class="cf">for</span> libro <span class="kw">in</span> socio1.libros_prestados]</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>[<span class="st">"Ficciones"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="intervalos-superpuestos" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="intervalos-superpuestos"><span class="header-section-number">6</span> Intervalos superpuestos</h2>
+<p>Implemente una función que reciba una lista de intervalos <code>intervalos</code>, donde cada elemento tenga la forma <code>[inicio, fin]</code>, y devuelva una nueva lista en la que todos los intervalos superpuestos hayan sido unidos.</p>
+<p>La función debe devolver una lista de intervalos sin superposiciones que cubra exactamente los intervalos de entrada.</p>
+<p>Considere que dos intervalos también se consideran superpuestos cuando el final de uno coincide con el inicio del otro.</p>
+<section id="ejemplos-4" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-4">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> intervalos <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>], [<span class="dv">2</span>, <span class="dv">6</span>], [<span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">15</span>, <span class="dv">18</span>]]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> unir_intervalos(intervalos)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">6</span>], [<span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">15</span>, <span class="dv">18</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> intervalos <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">4</span>], [<span class="dv">4</span>, <span class="dv">5</span>]]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> unir_intervalos(intervalos)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">5</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> intervalos <span class="op">=</span> [[<span class="dv">4</span>, <span class="dv">7</span>], [<span class="dv">1</span>, <span class="dv">4</span>]]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> unir_intervalos(intervalos)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">7</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="ayuda" class="level3">
+<h3 class="anchored" data-anchor-id="ayuda">Ayuda</h3>
+<p>Para resolver el problema, puede resultar útil ordenar previamente los intervalos de manera ascendente según su valor inicial:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> intervalos <span class="op">=</span> [[<span class="dv">4</span>, <span class="dv">7</span>], [<span class="dv">1</span>, <span class="dv">4</span>], [<span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">2</span>, <span class="dv">6</span>]]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">sorted</span>(intervalos, key<span class="op">=</span><span class="kw">lambda</span> intervalo: intervalo[<span class="dv">0</span>])</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">4</span>], [<span class="dv">2</span>, <span class="dv">6</span>], [<span class="dv">4</span>, <span class="dv">7</span>], [<span class="dv">8</span>, <span class="dv">10</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="combinaciones-telefónicas" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="combinaciones-telefónicas"><span class="header-section-number">7</span> Combinaciones telefónicas</h2>
+<p>Implemente una función que reciba una cadena <code>digitos</code>, compuesta por caracteres entre <code>2</code> y <code>9</code>, y devuelva todas las combinaciones de letras que ese número puede representar.</p>
+<p>Cada dígito se asocia a un conjunto de letras, como ocurre en los botones de un teléfono celular. La función puede devolver las combinaciones en cualquier orden.</p>
+<p>Puede asumir que la función se utilizará con cadenas formadas únicamente por dígitos entre <code>2</code> y <code>9</code>.</p>
+<center>
+<img src="t9.png" class="img-fluid" width="300">
+</center>
+<section id="ejemplos-5" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-5">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> combinar_letras(<span class="st">"23"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>[<span class="st">'ad'</span>, <span class="st">'ae'</span>, <span class="st">'af'</span>, <span class="st">'bd'</span>, <span class="st">'be'</span>, <span class="st">'bf'</span>, <span class="st">'cd'</span>, <span class="st">'ce'</span>, <span class="st">'cf'</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> combinar_letras(<span class="st">"2"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> combinar_letras(<span class="st">"243"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>[<span class="st">'agd'</span>, <span class="st">'age'</span>, <span class="st">'agf'</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a> <span class="st">'ahd'</span>, <span class="st">'ahe'</span>, <span class="st">'ahf'</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a> <span class="st">'aid'</span>, <span class="st">'aie'</span>, <span class="st">'aif'</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a> <span class="st">'bgd'</span>, <span class="st">'bge'</span>, <span class="st">'bgf'</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a> <span class="st">'bhd'</span>, <span class="st">'bhe'</span>, <span class="st">'bhf'</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a> <span class="st">'bid'</span>, <span class="st">'bie'</span>, <span class="st">'bif'</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a> <span class="st">'cgd'</span>, <span class="st">'cge'</span>, <span class="st">'cgf'</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a> <span class="st">'chd'</span>, <span class="st">'che'</span>, <span class="st">'chf'</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a> <span class="st">'cid'</span>, <span class="st">'cie'</span>, <span class="st">'cif'</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="ayuda-1" class="level3">
+<h3 class="anchored" data-anchor-id="ayuda-1">Ayuda</h3>
+<p>Para la resolución de este ejercicio, puede resultar útil representar la correspondencia entre cada dígito y sus letras asociadas mediante un diccionario:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>mapa <span class="op">=</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2"</span>: <span class="st">"abc"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"3"</span>: <span class="st">"def"</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>: <span class="st">"ghi"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"5"</span>: <span class="st">"jkl"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"6"</span>: <span class="st">"mno"</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"7"</span>: <span class="st">"pqrs"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"8"</span>: <span class="st">"tuv"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"9"</span>: <span class="st">"wxyz"</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="entero-a-número-romano" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="entero-a-número-romano"><span class="header-section-number">8</span> Entero a número romano 🧩</h2>
+<p>Implemente una función que reciba un número entero <code>numero</code> y devuelva su representación en numeración romana. Puede asumir que la función se utilizará con valores comprendidos entre <code>1</code> y <code>3999</code>.</p>
+<p>Los símbolos romanos y sus valores son:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>I</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td>X</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>L</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td style="text-align: right;">500</td>
+</tr>
+<tr class="odd">
+<td>M</td>
+<td style="text-align: right;">1000</td>
+</tr>
+</tbody>
+</table>
+<p>Los números romanos se forman de <strong>mayor a menor</strong>, concatenando los símbolos correspondientes. Tenga en cuenta las siguientes reglas:</p>
+<ul>
+<li>Existen casos de notación sustractiva: <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code>, <code>CM</code>.</li>
+<li>Solo <code>I</code>, <code>X</code>, <code>C</code> y <code>M</code> pueden repetirse hasta 3 veces seguidas.</li>
+<li><code>V</code>, <code>L</code> y <code>D</code> no se repiten.</li>
+<li>Si un símbolo debería repetirse 4 veces, debe usarse la forma sustractiva.</li>
+</ul>
+<p>La conversión debe realizarse por posiciones decimales y no combinando valores de manera arbitraria.</p>
+<section id="ejemplos-6" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-6">Ejemplos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> convertir_a_romano(<span class="dv">3749</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">'MMMDCCXLIX'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En este caso:</p>
+<ul>
+<li><code>3000 = MMM</code></li>
+<li><code>700 = DCC</code></li>
+<li><code>40 = XL</code></li>
+<li><code>9 = IX</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> convertir_a_romano(<span class="dv">58</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">'LVIII'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>50 = L</code></li>
+<li><code>8 = VIII</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> convertir_a_romano(<span class="dv">1994</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">'MCMXCIV'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>1000 = M</code></li>
+<li><code>900 = CM</code></li>
+<li><code>90 = XC</code></li>
+<li><code>4 = IV</code></li>
+</ul>
+</section>
+<section id="ayuda-2" class="level3">
+<h3 class="anchored" data-anchor-id="ayuda-2">Ayuda</h3>
+<p>Una forma conveniente de resolver este problema es construir una lista de pares <code>(valor, simbolo)</code> ordenada de mayor a menor, incluyendo también los casos especiales como <code>900</code>, <code>400</code>, <code>90</code>, <code>40</code>, <code>9</code> y <code>4</code>.</p>
+<p>Luego, puede recorrerse esa lista e ir restando del número el mayor valor posible mientras se agrega el símbolo correspondiente al resultado.</p>
+<p>En otras palabras, cada vez que el número restante sea mayor o igual que uno de esos valores, puede agregarse el símbolo asociado y restarse dicho valor.</p>
+<p>Por ejemplo, si el número es <code>58</code>, una posible descomposición es:</p>
+<ul>
+<li><code>50 = L</code></li>
+<li><code>5 = V</code></li>
+<li><code>3 = III</code></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../recursos/clases/07.html" class="pagination-link" aria-label="Clase 7: Programación Funcional">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Clase 7: Programación Funcional</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../recursos/ejercicios/01_programacion_en_python/index.html" class="pagination-link" aria-label="U1 - Programación en Python">
+        <span class="nav-page-text">U1 - Programación en Python</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Esta página fue hecha con ❤️ y <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
