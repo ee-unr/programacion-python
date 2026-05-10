@@ -74,6 +74,9 @@ website:
             - practica/03_funcional/autoevaluacion.qmd
             - practica/03_funcional/ejercicios.qmd
             - practica/03_funcional/problemas.qmd
+        - text: U4 - Análisis de Datos
+          contents:
+            - practica/04_analisis_datos/proyectos.qmd
     - title: Proyectos
       contents:
         - proyectos/grupal.qmd
