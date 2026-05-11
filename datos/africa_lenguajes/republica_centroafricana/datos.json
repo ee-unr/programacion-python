@@ -1,0 +1,87 @@
+[
+  {
+    "language": "Aiki",
+    "family": "Nilo-Saharan",
+    "native_speakers": 19000
+  },
+  {
+    "language": "Aja",
+    "family": "Nilo-Saharan",
+    "native_speakers": 200
+  },
+  {
+    "language": "Aka",
+    "family": "Niger-Congo",
+    "native_speakers": 30000
+  },
+  {
+    "language": "Birri",
+    "family": "Nilo-Saharan",
+    "native_speakers": 200
+  },
+  {
+    "language": "Bomitaba",
+    "family": "Niger-Congo",
+    "native_speakers": 9800
+  },
+  {
+    "language": "Central Banda",
+    "family": "Niger-Congo",
+    "native_speakers": 580000
+  },
+  {
+    "language": "Geme",
+    "family": "Niger-Congo",
+    "native_speakers": 550
+  },
+  {
+    "language": "Mbandja",
+    "family": "Ubangian",
+    "native_speakers": 360000
+  },
+  {
+    "language": "Mbati",
+    "family": "Niger-Congo",
+    "native_speakers": 60000
+  },
+  {
+    "language": "Ngando",
+    "family": "Niger-Congo",
+    "native_speakers": 5000
+  },
+  {
+    "language": "Nzakara",
+    "family": "Niger-Congo",
+    "native_speakers": 50000
+  },
+  {
+    "language": "Pande",
+    "family": "Niger-Congo",
+    "native_speakers": 8870
+  },
+  {
+    "language": "South Banda",
+    "family": "Ubangian",
+    "native_speakers": 200000
+  },
+  {
+    "language": "West Banda",
+    "family": "Ubangian",
+    "native_speakers": 7500
+  },
+  {
+    "language": "Yangere",
+    "family": "Ubangian",
+    "native_speakers": 27000
+  },
+  {
+    "language": "Yulu",
+    "family": "Nilo-Saharan",
+    "native_speakers": 13000
+  },
+  {
+    "language": "Zande",
+    "family": "Niger-Congo",
+    "native_speakers": 1800000
+  }
+]

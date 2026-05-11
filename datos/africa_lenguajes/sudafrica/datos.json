@@ -1,0 +1,127 @@
+[
+  {
+    "language": "Afrikaans",
+    "family": "Indo-European",
+    "native_speakers": 7200000
+  },
+  {
+    "language": "Ekoka ǃKung",
+    "family": "Kxʼa",
+    "native_speakers": 16500
+  },
+  {
+    "language": "Khwe",
+    "family": "Khoe-Kwadi",
+    "native_speakers": 8000
+  },
+  {
+    "language": "Lobedu",
+    "family": "Niger-Congo",
+    "native_speakers": 1000000
+  },
+  {
+    "language": "Lozi",
+    "family": "Niger-Congo",
+    "native_speakers": 725000
+  },
+  {
+    "language": "Ndebele",
+    "family": "Niger-Congo",
+    "native_speakers": 1100000
+  },
+  {
+    "language": "Northern Sotho",
+    "family": "Niger-Congo",
+    "native_speakers": 4700000
+  },
+  {
+    "language": "Phuthi",
+    "family": "Niger-Congo",
+    "native_speakers": 20000
+  },
+  {
+    "language": "Ronga",
+    "family": "Niger-Congo",
+    "native_speakers": 720000
+  },
+  {
+    "language": "Sepedi",
+    "family": "Niger-Congo",
+    "native_speakers": 4700000
+  },
+  {
+    "language": "Sesotho",
+    "family": "Niger-Congo",
+    "native_speakers": 5600000
+  },
+  {
+    "language": "Sotho",
+    "family": "Niger-Congo",
+    "native_speakers": 5600000
+  },
+  {
+    "language": "Southern Ndebele",
+    "family": "Niger-Congo",
+    "native_speakers": 1100000
+  },
+  {
+    "language": "Swazi",
+    "family": "Niger-Congo",
+    "native_speakers": 2300000
+  },
+  {
+    "language": "Tsotsitaal and Camtho, aka Iscamtho",
+    "family": "Niger-Congo",
+    "native_speakers": 500000
+  },
+  {
+    "language": "Tsonga or Xitsonga",
+    "family": "Niger-Congo",
+    "native_speakers": 3700000
+  },
+  {
+    "language": "Tsonga or Xitsonga",
+    "family": "Niger-Congo",
+    "native_speakers": 3700000
+  },
+  {
+    "language": "Tshivenda",
+    "family": "Niger-Congo",
+    "native_speakers": 1300000
+  },
+  {
+    "language": "Tswana",
+    "family": "Niger-Congo",
+    "native_speakers": 5800000
+  },
+  {
+    "language": "Tswana",
+    "family": "Niger-Congo",
+    "native_speakers": 5800000
+  },
+  {
+    "language": "Venda",
+    "family": "Niger-Congo",
+    "native_speakers": 1300000
+  },
+  {
+    "language": "Venda",
+    "family": "Niger-Congo",
+    "native_speakers": 1300000
+  },
+  {
+    "language": "Xhosa",
+    "family": "Niger-Congo",
+    "native_speakers": 7600000
+  },
+  {
+    "language": "Xhosa",
+    "family": "Niger-Congo",
+    "native_speakers": 7600000
+  },
+  {
+    "language": "Zulu",
+    "family": "Niger-Congo",
+    "native_speakers": 12000000
+  }
+]

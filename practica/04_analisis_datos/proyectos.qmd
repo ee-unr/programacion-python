@@ -94,6 +94,177 @@ Responda las siguientes preguntas:
 
 De ser posible, utilice algún gráfico para resumir hallazgos de interés.
 
+## Colisiones entre aeronaves y fauna
+
+Entre 1990 y 1997 se registraron en Estados Unidos miles de colisiones entre aeronaves y
+aves u otros animales silvestres. En este ejercicio interesa estudiar en qué contextos
+ocurren estos eventos y qué factores parecen estar asociados con su frecuencia o gravedad.
+
+Los datos provistos se encuentran en el archivo `datos/birds.csv`.
+
+::: {style="max-width:90%; margin:auto;"}
+
+| variable | descripción |
+|----------|-------------|
+| `opid` | Código de tres letras del operador. |
+| `operator` | Nombre de la aerolínea u operador. |
+| `atype` | Modelo de aeronave. |
+| `remarks` | Observaciones textuales sobre el incidente. |
+| `phase_of_flt` | Fase del vuelo en que ocurrió la colisión. |
+| `ac_mass` | Categoría de masa de la aeronave. |
+| `num_engs` | Cantidad de motores. |
+| `date` | Fecha del incidente. |
+| `time_of_day` | Momento del día. |
+| `state` | Estado de EE.UU. donde ocurrió el incidente. |
+| `height` | Altura sobre el suelo, en pies. |
+| `speed` | Velocidad indicada, en nudos. |
+| `effect` | Efecto del incidente sobre el vuelo. |
+| `sky` | Condición de nubosidad. |
+| `species` | Especie o tipo de ave/animal involucrado. |
+| `birds_seen` | Cantidad de animales observados. |
+| `birds_struck` | Cantidad de animales impactados. |
+
+: {.striped .hover}
+:::
+
+Responda las siguientes preguntas:
+
+* ¿Cuántas observaciones hay en el conjunto de datos? ¿Hay valores faltantes? ¿Qué tipos de columnas aparecen?
+* ¿Cómo evoluciona la cantidad de incidentes a lo largo del tiempo?
+* ¿En qué fases del vuelo se registran más colisiones?
+* ¿Existen diferencias claras entre los incidentes ocurridos de día, de noche, al amanecer o al atardecer?
+* ¿Qué especies o grupos de especies aparecen con mayor frecuencia en los reportes?
+* Analice la relación entre la cantidad de animales observados y la cantidad de animales impactados.
+* ¿Qué estados registran mayor cantidad de incidentes? 
+Si lo considera conveniente, compare también valores relativos o concentre el análisis en algunos estados.
+* Explore si ciertos efectos sobre el vuelo parecen más frecuentes en determinadas fases del vuelo, alturas o velocidades.
+* Incorpore al menos una visualización que resuma un hallazgo relevante.
+
+Si lo considera conveniente, complemente el trabajo con algún análisis o gráfico adicional.
+
+Los datos de este ejercicio fueron publicados por OpenIntro y pueden encontrarse en
+[este enlace](https://www.openintro.org/data/index.php?data=birds).
+
+## Sarampión y rubéola en el mundo
+
+Los casos de sarampión y rubéola muestran trayectorias muy diferentes según la región y el
+período considerado. En este ejercicio interesa analizar cómo evolucionan estos casos en
+distintos países y regiones, tanto en términos absolutos como relativos.
+
+Los datos provistos se encuentran en la carpeta `datos/measles`, donde se incluyen dos
+conjuntos: `cases_month.csv`, con registros mensuales por país, y `cases_year.csv`, con
+registros anuales.
+
+Estos dos archivos forman parte del mismo problema y contienen información complementaria.
+En cada consigna deberá evaluar cuál de los dos resulta más adecuado para el análisis.
+
+### Variables en `cases_month.csv`
+
+::: {style="max-width:90%; margin:auto;"}
+
+| variable | descripción |
+|----------|-------------|
+| `region` | Región de la OMS. |
+| `country` | Nombre del país. |
+| `iso3` | Código ISO de tres letras del país. |
+| `year` | Año del registro. |
+| `month` | Mes del registro. |
+| `measles_suspect` | Casos sospechosos de sarampión. |
+| `measles_clinical` | Casos clínicamente compatibles con sarampión. |
+| `measles_epi_linked` | Casos de sarampión vinculados epidemiológicamente. |
+| `measles_lab_confirmed` | Casos de sarampión confirmados por laboratorio. |
+| `measles_total` | Total de casos de sarampión. |
+| `rubella_clinical` | Casos clínicamente compatibles con rubéola. |
+| `rubella_epi_linked` | Casos de rubéola vinculados epidemiológicamente. |
+| `rubella_lab_confirmed` | Casos de rubéola confirmados por laboratorio. |
+| `rubella_total` | Total de casos de rubéola. |
+| `discarded` | Casos descartados. |
+
+: {.striped .hover}
+:::
+
+### Variables en `cases_year.csv`
+
+::: {style="max-width:90%; margin:auto;"}
+
+| variable | descripción |
+|----------|-------------|
+| `region` | Región de la OMS. |
+| `country` | Nombre del país. |
+| `iso3` | Código ISO de tres letras del país. |
+| `year` | Año del registro. |
+| `total_population` | Población total del país. |
+| `annualized_population_most_recent_year_only` | Población anualizada para 2025. |
+| `total_suspected_measles_rubella_cases` | Casos sospechosos de sarampión o rubéola. |
+| `measles_total` | Total de casos de sarampión. |
+| `measles_lab_confirmed` | Casos de sarampión confirmados por laboratorio. |
+| `measles_epi_linked` | Casos de sarampión vinculados epidemiológicamente. |
+| `measles_clinical` | Casos clínicamente compatibles con sarampión. |
+| `measles_incidence_rate_per_1000000_total_population` | Tasa de sarampión por millón de habitantes. |
+| `rubella_total` | Total de casos de rubéola. |
+| `rubella_lab_confirmed` | Casos de rubéola confirmados por laboratorio. |
+| `rubella_epi_linked` | Casos de rubéola vinculados epidemiológicamente. |
+| `rubella_clinical` | Casos clínicamente compatibles con rubéola. |
+| `rubella_incidence_rate_per_1000000_total_population` | Tasa de rubéola por millón de habitantes. |
+| `discarded_cases` | Casos descartados. |
+| `discarded_non_measles_rubella_cases_per_100000_total_population` | Casos descartados por millón de habitantes. |
+
+: {.striped .hover}
+:::
+
+Responda las siguientes preguntas:
+
+* ¿Cuántos países y regiones aparecen en los datos? ¿Hay valores faltantes?
+* Obtenga la cantidad total de casos de sarampión por año y describa su evolución.
+* Compare la evolución anual de los casos de sarampión y rubéola.
+* ¿Qué regiones o países registran sistemáticamente mayor cantidad de casos de sarampión?
+* Analice si existen patrones estacionales en los casos mensuales de sarampión.
+* Compare algunos países o regiones usando tasas de incidencia en lugar de cantidades absolutas.
+* Explore la relación entre los casos confirmados por laboratorio y los casos totales de sarampión.
+* Si lo considera conveniente, complemente el análisis con alguna visualización adicional que ayude a resumir los principales hallazgos.
+
+Los datos de este ejercicio fueron publicados por la iniciativa TidyTuesday y pueden
+encontrarse en [este enlace](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-06-24/readme.md).
+
+## Lenguas de África
+
+África presenta una enorme diversidad lingüística, distribuida de manera muy desigual entre
+países y familias de lenguas. En este ejercicio interesa reconstruir una estructura de datos
+a partir de archivos JSON por país y, desde allí, analizar la distribución de lenguas,
+familias lingüísticas y cantidad de hablantes nativos.
+
+Los datos provistos se encuentran en la carpeta `datos/africa_lenguajes`. Dentro de esa
+carpeta hay una subcarpeta por país, nombrada en español, y dentro de cada una se incluye un
+archivo `datos.json`.
+
+Cada archivo `datos.json` contiene una lista de registros correspondientes a las lenguas
+habladas en ese país. Cada registro incluye las siguientes variables:
+
+* `language`: nombre del idioma.
+* `family`: familia lingüística a la que pertenece el idioma.
+* `native_speakers`: cantidad de hablantes nativos.
+
+El nombre del país no aparece dentro de cada objeto del JSON porque esa información está dada
+por la carpeta que contiene al archivo. Una primera parte importante del trabajo consistirá
+en leer estos archivos JSON, combinarlos si resulta necesario y construir a partir de ellos
+las estructuras de datos que considere convenientes para el análisis.
+
+Responda las siguientes preguntas:
+
+* Recorra la carpeta `datos/africa_lenguajes`, lea los archivos `datos.json` y construya a partir de ellos una estructura de datos o una tabla que le resulte útil para el análisis.
+* ¿Cuántos países quedaron representados en los datos? ¿Cuántas lenguas aparecen en total? ¿Hay valores faltantes?
+* ¿Qué país de África presenta la mayor cantidad de lenguas registradas?
+* ¿Qué familias lingüísticas concentran mayor cantidad de hablantes nativos?
+* ¿Qué lenguas aparecen en más de un país?
+* Compare algunos países en función de la cantidad de lenguas registradas o de la cantidad total de hablantes nativos.
+* Incorpore al menos una visualización que resuma un hallazgo relevante.
+
+Si lo considera conveniente, complemente el trabajo con algún análisis o gráfico adicional.
+
+Los datos de este ejercicio fueron publicados por la iniciativa TidyTuesday y pueden
+encontrarse en
+[este enlace](https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-01-13/readme.md).
+
 ## Campaña agropecuaria
 
 Los datos provistos se encuentran en la carpeta `datos/rindes` y están organizados en tres
