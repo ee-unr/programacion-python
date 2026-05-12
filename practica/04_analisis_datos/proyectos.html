@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>📊 Proyectos – Programación en Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../practica/03_funcional/problemas.html" rel="prev">
+<link href="../../imgs/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0994e74a0f8005735345d54a8654233e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0994e74a0f8005735345d54a8654233e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0994e74a0f8005735345d54a8654233e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Programación en Python</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../informacion/programa.html"> 
+<span class="menu-text">Información</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teoria/01_programacion_en_python/01_introduccion.html"> 
+<span class="menu-text">Teoría</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../practica/01_programacion_en_python/autoevaluacion.html" aria-current="page"> 
+<span class="menu-text">Práctica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../proyectos/grupal.html"> 
+<span class="menu-text">Proyectos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../recursos/tutoriales/instalacion_python.html"> 
+<span class="menu-text">Recursos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ee-unr/programacion-python"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practica/04_analisis_datos/proyectos.html">U4 - Análisis de Datos</a></li><li class="breadcrumb-item"><a href="../../practica/04_analisis_datos/proyectos.html">📊 Proyectos</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U1 - Programación en Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/01_programacion_en_python/autoevaluacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🪞 Autoevaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/01_programacion_en_python/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🛠️ Ejercicios</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/01_programacion_en_python/problemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧩 Problemas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U2 - Programación Orientada a Objetos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/02_oop/autoevaluacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🪞 Autoevaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/02_oop/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🛠️ Ejercicios</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/02_oop/problemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧩 Problemas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U3 - Programación Funcional</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/03_funcional/autoevaluacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🪞 Autoevaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/03_funcional/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🛠️ Ejercicios</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/03_funcional/problemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🧩 Problemas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true">
+ <span class="menu-text">U4 - Análisis de Datos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../practica/04_analisis_datos/proyectos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">📊 Proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#trigo-pampeano" id="toc-trigo-pampeano" class="nav-link active" data-scroll-target="#trigo-pampeano"><span class="header-section-number">1</span> Trigo pampeano</a></li>
+  <li><a href="#engordes-en-feedlot" id="toc-engordes-en-feedlot" class="nav-link" data-scroll-target="#engordes-en-feedlot"><span class="header-section-number">2</span> Engordes en <em>feedlot</em></a></li>
+  <li><a href="#interacción-genotipo-ambiente" id="toc-interacción-genotipo-ambiente" class="nav-link" data-scroll-target="#interacción-genotipo-ambiente"><span class="header-section-number">3</span> Interacción genotipo ambiente</a></li>
+  <li><a href="#colisiones-entre-aeronaves-y-fauna" id="toc-colisiones-entre-aeronaves-y-fauna" class="nav-link" data-scroll-target="#colisiones-entre-aeronaves-y-fauna"><span class="header-section-number">4</span> Colisiones entre aeronaves y fauna</a></li>
+  <li><a href="#sarampión-y-rubéola-en-el-mundo" id="toc-sarampión-y-rubéola-en-el-mundo" class="nav-link" data-scroll-target="#sarampión-y-rubéola-en-el-mundo"><span class="header-section-number">5</span> Sarampión y rubéola en el mundo</a></li>
+  <li><a href="#lenguas-de-áfrica" id="toc-lenguas-de-áfrica" class="nav-link" data-scroll-target="#lenguas-de-áfrica"><span class="header-section-number">6</span> Lenguas de África</a></li>
+  <li><a href="#campaña-agropecuaria" id="toc-campaña-agropecuaria" class="nav-link" data-scroll-target="#campaña-agropecuaria"><span class="header-section-number">7</span> Campaña agropecuaria</a></li>
+  <li><a href="#un-clima-estresante" id="toc-un-clima-estresante" class="nav-link" data-scroll-target="#un-clima-estresante"><span class="header-section-number">8</span> Un clima estresante</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practica/04_analisis_datos/proyectos.html">U4 - Análisis de Datos</a></li><li class="breadcrumb-item"><a href="../../practica/04_analisis_datos/proyectos.html">📊 Proyectos</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">📊 Proyectos</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="trigo-pampeano" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="trigo-pampeano"><span class="header-section-number">1</span> Trigo pampeano</h2>
+<p>El cultivo de trigo en la provincia de La Pampa contribuye con el 3% de la producción a nivel Nacional. Es fundamental ubicar la fecha de floración en condiciones óptimas de crecimiento para la formación de los granos ya que el retraso de la fecha de siembra óptima genera caídas en el potencial de rendimiento.</p>
+<p>En La Pampa, la fecha de floración está fundamentalmente condicionada por la fecha de la última helada, las elevadas temperaturas durante el llenado de granos, las precipitaciones y el cociente fototermal, colocando como fecha de floración óptima entre el 27 y 31 de octubre.</p>
+<p>En función de la fecha de floración y conociendo el requerimiento térmico de las variedades hasta floración se puede estimar la fecha óptima de siembra.</p>
+<p>En el año 2021 se realizó un ensayo en la EEA INTA Anguil para evaluar las variaciones del rendimiento de las variedades ante un cambio en la fecha de siembra óptima. Los datos se encuentran en el archivo <code>trigo.csv</code> que tiene las siguientes columnas:</p>
+<ul>
+<li><strong>dias</strong>: fecha de la siembra en días desde el 1 de junio.</li>
+<li><strong>rendimiento</strong>: Rendimiento en kilogramos por hectárea.</li>
+<li><strong>variedad</strong>: Variedad de trigo.</li>
+</ul>
+<p>Considere los siguientes puntos para el análisis:</p>
+<ul>
+<li>Visualice la distribución del día de siembra.</li>
+<li>¿Cuál de las dos variedades presenta un mayor rinde?</li>
+<li>Visualice la relación entre día de siembra y el rinde para las diferentes variedades.</li>
+<li>Agrupe los días de siembras en decenas. Para eso utilice el método <code>cut</code>.</li>
+<li>Compare el rinde promedio por decena. Obtenga una tabla resumen o un gráfico que crea conveniente.</li>
+<li>En base a la información disponible, ¿qué variedad conviene cultivar?</li>
+</ul>
+</section>
+<section id="engordes-en-feedlot" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="engordes-en-feedlot"><span class="header-section-number">2</span> Engordes en <em>feedlot</em></h2>
+<p>El archivo <code>feedlot.csv</code> contiene información proveniente de un estudio de engorde realizado en un <em>feedlot</em>. Se estudiaron terneros de un año de edad en distintos rodeos. Cada animal fue alimentado con una de tres dietas con bajo, medio o alto contenido energético. Para cada animal se tiene el peso inicial y el peso final (que se registró en el momento del sacrificio). El archivo contiene las siguientes variables:</p>
+<ul>
+<li><strong>rodeo</strong>: Identificador del rodeo al que pertenece el animal.</li>
+<li><strong>dieta</strong>: Tipo de dieta que siguió el animal.</li>
+<li><strong>peso_inicial</strong>: Peso inicial del ternero (en libras).</li>
+<li><strong>peso_final</strong>: Peso final del ternero (en libras).</li>
+</ul>
+<p>Además, se conoce de qué raza son los terneros de los diferentes rodeos:</p>
+<div style="max-width:60%; margin:auto; text-align:center;">
+<table class="table-striped table-hover caption-top table">
+<thead>
+<tr class="header">
+<th>Rodeo</th>
+<th>Raza</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Charolesa x Hereford</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Angus x Hereford</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Charolesa x Hereford</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>Angus</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Brangus</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>Brangus</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>Charolesa x Hereford</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Realice las siguientes actividades:</p>
+<ul>
+<li>Convierta el peso de libras a kilogramos. Guarde el resultado en otra columna.</li>
+<li>Elabore un gráfico que le permita ver la relación entre el peso inicial y el peso final.</li>
+<li>Replique el gráfico anterior coloreando los puntos según dieta.</li>
+<li>Replique nuevamente el gráfico anterior, pero coloree los puntos según raza.</li>
+<li>Calcular la ganancia de peso para cada animal.</li>
+<li>¿Qué raza es la que más peso ganó en promedio?</li>
+<li>Ahora divida la ganancia de peso por el peso inicial y determine nuevamente qué raza es la que ganó más peso en promedio y compare ambos análisis.</li>
+</ul>
+</section>
+<section id="interacción-genotipo-ambiente" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="interacción-genotipo-ambiente"><span class="header-section-number">3</span> Interacción genotipo ambiente</h2>
+<p>Un grupo de investigadores del Reino Unido están interesados en estudiar la interacción genotipo ambiente en el cultivo de papas. Cuentan con información de diversas variedades de papas cultivadas en varias ubicaciones del Reino Unido. Los datos se encuentran en el archivo <code>papas.csv</code> y este contiene las siguientes columnas:</p>
+<ul>
+<li><strong>variedad</strong>: Nombre de la variedad de papa.</li>
+<li><strong>ubicacion</strong>: Nombre del lugar donde se cultivó la papa.</li>
+<li><strong>rendimiento</strong>: Rendimiento de la papa en toneladas por hectárea.</li>
+</ul>
+<p>Responda las siguientes preguntas:</p>
+<ul>
+<li>¿Cuántas observaciones hay en total? ¿Hay datos faltantes?</li>
+<li>¿Cuántas ubicaciones hay en el conjunto de datos? ¿Y cuántos genotipos?</li>
+<li>¿Cuántos registros hay por genotipo? ¿Y por ubicación? ¿Y por genotipo y ubicación?</li>
+<li>¿Qué ubicación presenta los peores rendimientos?</li>
+<li>¿Qué ubicación y variedad presenta el mejor rinde?</li>
+</ul>
+<p>De ser posible, utilice algún gráfico para resumir hallazgos de interés.</p>
+</section>
+<section id="colisiones-entre-aeronaves-y-fauna" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="colisiones-entre-aeronaves-y-fauna"><span class="header-section-number">4</span> Colisiones entre aeronaves y fauna</h2>
+<p>Entre 1990 y 1997 se registraron en Estados Unidos miles de colisiones entre aeronaves y aves u otros animales silvestres. En este ejercicio interesa estudiar en qué contextos ocurren estos eventos y qué factores parecen estar asociados con su frecuencia o gravedad.</p>
+<p>Los datos provistos se encuentran en el archivo <code>datos/birds.csv</code>.</p>
+<div style="max-width:90%; margin:auto;">
+<table class="table-striped table-hover caption-top table">
+<thead>
+<tr class="header">
+<th>variable</th>
+<th>descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>opid</code></td>
+<td>Código de tres letras del operador.</td>
+</tr>
+<tr class="even">
+<td><code>operator</code></td>
+<td>Nombre de la aerolínea u operador.</td>
+</tr>
+<tr class="odd">
+<td><code>atype</code></td>
+<td>Modelo de aeronave.</td>
+</tr>
+<tr class="even">
+<td><code>remarks</code></td>
+<td>Observaciones textuales sobre el incidente.</td>
+</tr>
+<tr class="odd">
+<td><code>phase_of_flt</code></td>
+<td>Fase del vuelo en que ocurrió la colisión.</td>
+</tr>
+<tr class="even">
+<td><code>ac_mass</code></td>
+<td>Categoría de masa de la aeronave.</td>
+</tr>
+<tr class="odd">
+<td><code>num_engs</code></td>
+<td>Cantidad de motores.</td>
+</tr>
+<tr class="even">
+<td><code>date</code></td>
+<td>Fecha del incidente.</td>
+</tr>
+<tr class="odd">
+<td><code>time_of_day</code></td>
+<td>Momento del día.</td>
+</tr>
+<tr class="even">
+<td><code>state</code></td>
+<td>Estado de EE.UU. donde ocurrió el incidente.</td>
+</tr>
+<tr class="odd">
+<td><code>height</code></td>
+<td>Altura sobre el suelo, en pies.</td>
+</tr>
+<tr class="even">
+<td><code>speed</code></td>
+<td>Velocidad indicada, en nudos.</td>
+</tr>
+<tr class="odd">
+<td><code>effect</code></td>
+<td>Efecto del incidente sobre el vuelo.</td>
+</tr>
+<tr class="even">
+<td><code>sky</code></td>
+<td>Condición de nubosidad.</td>
+</tr>
+<tr class="odd">
+<td><code>species</code></td>
+<td>Especie o tipo de ave/animal involucrado.</td>
+</tr>
+<tr class="even">
+<td><code>birds_seen</code></td>
+<td>Cantidad de animales observados.</td>
+</tr>
+<tr class="odd">
+<td><code>birds_struck</code></td>
+<td>Cantidad de animales impactados.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Responda las siguientes preguntas:</p>
+<ul>
+<li>¿Cuántas observaciones hay en el conjunto de datos? ¿Hay valores faltantes? ¿Qué tipos de columnas aparecen?</li>
+<li>¿Cómo evoluciona la cantidad de incidentes a lo largo del tiempo?</li>
+<li>¿En qué fases del vuelo se registran más colisiones?</li>
+<li>¿Existen diferencias claras entre los incidentes ocurridos de día, de noche, al amanecer o al atardecer?</li>
+<li>¿Qué especies o grupos de especies aparecen con mayor frecuencia en los reportes?</li>
+<li>Analice la relación entre la cantidad de animales observados y la cantidad de animales impactados.</li>
+<li>¿Qué estados registran mayor cantidad de incidentes? Si lo considera conveniente, compare también valores relativos o concentre el análisis en algunos estados.</li>
+<li>Explore si ciertos efectos sobre el vuelo parecen más frecuentes en determinadas fases del vuelo, alturas o velocidades.</li>
+<li>Incorpore al menos una visualización que resuma un hallazgo relevante.</li>
+</ul>
+<p>Si lo considera conveniente, complemente el trabajo con algún análisis o gráfico adicional.</p>
+<p>Los datos de este ejercicio fueron publicados por OpenIntro y pueden encontrarse en <a href="https://www.openintro.org/data/index.php?data=birds">este enlace</a>.</p>
+</section>
+<section id="sarampión-y-rubéola-en-el-mundo" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sarampión-y-rubéola-en-el-mundo"><span class="header-section-number">5</span> Sarampión y rubéola en el mundo</h2>
+<p>Los casos de sarampión y rubéola muestran trayectorias muy diferentes según la región y el período considerado. En este ejercicio interesa analizar cómo evolucionan estos casos en distintos países y regiones, tanto en términos absolutos como relativos.</p>
+<p>Los datos provistos se encuentran en la carpeta <code>datos/measles</code>, donde se incluyen dos conjuntos: <code>cases_month.csv</code>, con registros mensuales por país, y <code>cases_year.csv</code>, con registros anuales.</p>
+<p>Estos dos archivos forman parte del mismo problema y contienen información complementaria. En cada consigna deberá evaluar cuál de los dos resulta más adecuado para el análisis.</p>
+<section id="variables-en-cases_month.csv" class="level3">
+<h3 class="anchored" data-anchor-id="variables-en-cases_month.csv">Variables en <code>cases_month.csv</code></h3>
+<div style="max-width:90%; margin:auto;">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>variable</th>
+<th>descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>region</code></td>
+<td>Región de la OMS.</td>
+</tr>
+<tr class="even">
+<td><code>country</code></td>
+<td>Nombre del país.</td>
+</tr>
+<tr class="odd">
+<td><code>iso3</code></td>
+<td>Código ISO de tres letras del país.</td>
+</tr>
+<tr class="even">
+<td><code>year</code></td>
+<td>Año del registro.</td>
+</tr>
+<tr class="odd">
+<td><code>month</code></td>
+<td>Mes del registro.</td>
+</tr>
+<tr class="even">
+<td><code>measles_suspect</code></td>
+<td>Casos sospechosos de sarampión.</td>
+</tr>
+<tr class="odd">
+<td><code>measles_clinical</code></td>
+<td>Casos clínicamente compatibles con sarampión.</td>
+</tr>
+<tr class="even">
+<td><code>measles_epi_linked</code></td>
+<td>Casos de sarampión vinculados epidemiológicamente.</td>
+</tr>
+<tr class="odd">
+<td><code>measles_lab_confirmed</code></td>
+<td>Casos de sarampión confirmados por laboratorio.</td>
+</tr>
+<tr class="even">
+<td><code>measles_total</code></td>
+<td>Total de casos de sarampión.</td>
+</tr>
+<tr class="odd">
+<td><code>rubella_clinical</code></td>
+<td>Casos clínicamente compatibles con rubéola.</td>
+</tr>
+<tr class="even">
+<td><code>rubella_epi_linked</code></td>
+<td>Casos de rubéola vinculados epidemiológicamente.</td>
+</tr>
+<tr class="odd">
+<td><code>rubella_lab_confirmed</code></td>
+<td>Casos de rubéola confirmados por laboratorio.</td>
+</tr>
+<tr class="even">
+<td><code>rubella_total</code></td>
+<td>Total de casos de rubéola.</td>
+</tr>
+<tr class="odd">
+<td><code>discarded</code></td>
+<td>Casos descartados.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="variables-en-cases_year.csv" class="level3">
+<h3 class="anchored" data-anchor-id="variables-en-cases_year.csv">Variables en <code>cases_year.csv</code></h3>
+<div style="max-width:90%; margin:auto;">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>variable</th>
+<th>descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>region</code></td>
+<td>Región de la OMS.</td>
+</tr>
+<tr class="even">
+<td><code>country</code></td>
+<td>Nombre del país.</td>
+</tr>
+<tr class="odd">
+<td><code>iso3</code></td>
+<td>Código ISO de tres letras del país.</td>
+</tr>
+<tr class="even">
+<td><code>year</code></td>
+<td>Año del registro.</td>
+</tr>
+<tr class="odd">
+<td><code>total_population</code></td>
+<td>Población total del país.</td>
+</tr>
+<tr class="even">
+<td><code>annualized_population_most_recent_year_only</code></td>
+<td>Población anualizada para 2025.</td>
+</tr>
+<tr class="odd">
+<td><code>total_suspected_measles_rubella_cases</code></td>
+<td>Casos sospechosos de sarampión o rubéola.</td>
+</tr>
+<tr class="even">
+<td><code>measles_total</code></td>
+<td>Total de casos de sarampión.</td>
+</tr>
+<tr class="odd">
+<td><code>measles_lab_confirmed</code></td>
+<td>Casos de sarampión confirmados por laboratorio.</td>
+</tr>
+<tr class="even">
+<td><code>measles_epi_linked</code></td>
+<td>Casos de sarampión vinculados epidemiológicamente.</td>
+</tr>
+<tr class="odd">
+<td><code>measles_clinical</code></td>
+<td>Casos clínicamente compatibles con sarampión.</td>
+</tr>
+<tr class="even">
+<td><code>measles_incidence_rate_per_1000000_total_population</code></td>
+<td>Tasa de sarampión por millón de habitantes.</td>
+</tr>
+<tr class="odd">
+<td><code>rubella_total</code></td>
+<td>Total de casos de rubéola.</td>
+</tr>
+<tr class="even">
+<td><code>rubella_lab_confirmed</code></td>
+<td>Casos de rubéola confirmados por laboratorio.</td>
+</tr>
+<tr class="odd">
+<td><code>rubella_epi_linked</code></td>
+<td>Casos de rubéola vinculados epidemiológicamente.</td>
+</tr>
+<tr class="even">
+<td><code>rubella_clinical</code></td>
+<td>Casos clínicamente compatibles con rubéola.</td>
+</tr>
+<tr class="odd">
+<td><code>rubella_incidence_rate_per_1000000_total_population</code></td>
+<td>Tasa de rubéola por millón de habitantes.</td>
+</tr>
+<tr class="even">
+<td><code>discarded_cases</code></td>
+<td>Casos descartados.</td>
+</tr>
+<tr class="odd">
+<td><code>discarded_non_measles_rubella_cases_per_100000_total_population</code></td>
+<td>Casos descartados por millón de habitantes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Responda las siguientes preguntas:</p>
+<ul>
+<li>¿Cuántos países y regiones aparecen en los datos? ¿Hay valores faltantes?</li>
+<li>Obtenga la cantidad total de casos de sarampión por año y describa su evolución.</li>
+<li>Compare la evolución anual de los casos de sarampión y rubéola.</li>
+<li>¿Qué regiones o países registran sistemáticamente mayor cantidad de casos de sarampión?</li>
+<li>Analice si existen patrones estacionales en los casos mensuales de sarampión.</li>
+<li>Compare algunos países o regiones usando tasas de incidencia en lugar de cantidades absolutas.</li>
+<li>Explore la relación entre los casos confirmados por laboratorio y los casos totales de sarampión.</li>
+<li>Si lo considera conveniente, complemente el análisis con alguna visualización adicional que ayude a resumir los principales hallazgos.</li>
+</ul>
+<p>Los datos de este ejercicio fueron publicados por la iniciativa TidyTuesday y pueden encontrarse en <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-06-24/readme.md">este enlace</a>.</p>
+</section>
+</section>
+<section id="lenguas-de-áfrica" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="lenguas-de-áfrica"><span class="header-section-number">6</span> Lenguas de África</h2>
+<p>África presenta una enorme diversidad lingüística, distribuida de manera muy desigual entre países y familias de lenguas. En este ejercicio interesa reconstruir una estructura de datos a partir de archivos JSON por país y, desde allí, analizar la distribución de lenguas, familias lingüísticas y cantidad de hablantes nativos.</p>
+<p>Los datos provistos se encuentran en la carpeta <code>datos/africa_lenguajes</code>. Dentro de esa carpeta hay una subcarpeta por país, nombrada en español, y dentro de cada una se incluye un archivo <code>datos.json</code>.</p>
+<p>Cada archivo <code>datos.json</code> contiene una lista de registros correspondientes a las lenguas habladas en ese país. Cada registro incluye las siguientes variables:</p>
+<ul>
+<li><code>language</code>: nombre del idioma.</li>
+<li><code>family</code>: familia lingüística a la que pertenece el idioma.</li>
+<li><code>native_speakers</code>: cantidad de hablantes nativos.</li>
+</ul>
+<p>El nombre del país no aparece dentro de cada objeto del JSON porque esa información está dada por la carpeta que contiene al archivo. Una primera parte importante del trabajo consistirá en leer estos archivos JSON, combinarlos si resulta necesario y construir a partir de ellos las estructuras de datos que considere convenientes para el análisis.</p>
+<p>Responda las siguientes preguntas:</p>
+<ul>
+<li>Recorra la carpeta <code>datos/africa_lenguajes</code>, lea los archivos <code>datos.json</code> y construya a partir de ellos una estructura de datos o una tabla que le resulte útil para el análisis.</li>
+<li>¿Cuántos países quedaron representados en los datos? ¿Cuántas lenguas aparecen en total? ¿Hay valores faltantes?</li>
+<li>¿Qué país de África presenta la mayor cantidad de lenguas registradas?</li>
+<li>¿Qué familias lingüísticas concentran mayor cantidad de hablantes nativos?</li>
+<li>¿Qué lenguas aparecen en más de un país?</li>
+<li>Compare algunos países en función de la cantidad de lenguas registradas o de la cantidad total de hablantes nativos.</li>
+<li>Incorpore al menos una visualización que resuma un hallazgo relevante.</li>
+</ul>
+<p>Si lo considera conveniente, complemente el trabajo con algún análisis o gráfico adicional.</p>
+<p>Los datos de este ejercicio fueron publicados por la iniciativa TidyTuesday y pueden encontrarse en <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-01-13/readme.md">este enlace</a>.</p>
+</section>
+<section id="campaña-agropecuaria" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="campaña-agropecuaria"><span class="header-section-number">7</span> Campaña agropecuaria</h2>
+<p>Los datos provistos se encuentran en la carpeta <code>datos/rindes</code> y están organizados en tres conjuntos de datos que contienen registros obtenidos en un campo dividido en varios lotes:</p>
+<ul>
+<li><code>lotes.parquet</code>: información sobre los lotes del campo.</li>
+<li><code>rindes.parquet</code>: información sobre los cultivos y rindes registrados en cada campaña.</li>
+<li><code>lluvias.parquet</code>: información sobre las precipitaciones registradas en cada lote y campaña.</li>
+</ul>
+<p>Las columnas de estos conjuntos de datos son las siguientes:</p>
+<p>En <code>lotes.parquet</code>:</p>
+<ul>
+<li><strong>lote</strong>: Número que identifica a un lote dentro del campo.</li>
+<li><strong>hectáreas</strong>: Tamaño del lote en hectáreas.</li>
+</ul>
+<p>En <code>rindes.parquet</code>:</p>
+<ul>
+<li><strong>campaña</strong>: Indica a qué campaña pertenece el registro.</li>
+<li><strong>lote</strong>: Número que identifica a un lote dentro del campo.</li>
+<li><strong>qq/ha</strong>: Rinde por hectárea registrado en el lote.</li>
+<li><strong>producto</strong>: Producto cultivado en el lote en esa campaña.</li>
+</ul>
+<p>En <code>lluvias.parquet</code>:</p>
+<ul>
+<li><strong>lote</strong>: Número que identifica a un lote dentro del campo.</li>
+<li><strong>campaña</strong>: Indica a qué campaña pertenece el registro.</li>
+<li><strong>lluvia</strong>: Cantidad de precipitaciones registradas entre octubre y marzo en ese lote.</li>
+</ul>
+<p>Lea los datos provistos y explore la cantidad de filas, los tipos de las columnas, y verifique que no se cuentan con datos perdidos. Luego, desarrolle una Jupyter Notebook con el código necesario para responder las siguientes preguntas:</p>
+<ul>
+<li>¿Cuál es el tamaño del campo? ¿Cuántos lotes hay en el campo? ¿De qué tamaño son?</li>
+<li>¿Para cuántas campañas se tienen registros? ¿Cuáles son?</li>
+<li>¿Qué cultivos se trabajaron en estas campañas?</li>
+<li>¿Cuántas hectáreas de cada cultivo se sembraron en todo el periodo analizado?</li>
+<li>¿Cuál fue el rinde promedio por hectárea para cada cultivo?</li>
+<li>Obtenga la cantidad total de quintales cosechados de cada cultivo por campaña.</li>
+<li>¿En qué año obtuvo el mejor rinde cada cultivo?</li>
+<li>¿Qué lote registró la mayor cantidad de lluvias en una temporada? ¿En qué año sucedió?</li>
+<li>Calcule el promedio de lluvia por campaña.</li>
+<li>Visualice la relación entre la cantidad de lluvia caída y el rinde de cada producto.</li>
+<li>Visualice la cantidad total quintales cosechados por cultivo y por campaña.</li>
+</ul>
+<p>Si lo cree necesario, complemente el trabajo realizando algún análisis que crea conveniente para extraer información de estos datos.</p>
+</section>
+<section id="un-clima-estresante" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="un-clima-estresante"><span class="header-section-number">8</span> Un clima estresante</h2>
+<p>SILO (Scientific Information for Land Owners) es una base de datos en línea australiana que proporciona datos climáticos. Administrada por el Departamento de Agricultura y Pesca de Queensland, SILO ofrece acceso a una amplia gama de datos meteorológicos y climáticos históricos y actuales para diversas aplicaciones en la agricultura, la investigación, la gestión de recursos naturales y la planificación ambiental.</p>
+<p>Los datos proporcionados por SILO incluyen variables como temperatura, precipitación, humedad relativa, evaporación y radiación solar.</p>
+<p>Los datos provistos se encuentran en la carpeta <code>datos/boonah</code> y están organizados por año. Dentro de cada carpeta anual hay tres conjuntos de datos con registros diarios proporcionados por SILO para las coordenadas (-27.9927, 152.6906), que se encuentran en las afueras de Boonah, una ciudad rural en Queensland, Australia:</p>
+<ul>
+<li><code>lluvias.csv</code>: información sobre precipitaciones diarias.</li>
+<li><code>atmosfera.csv</code>: información sobre temperaturas y humedad relativa.</li>
+<li><code>energia.csv</code>: información sobre evaporación y radiación.</li>
+</ul>
+<p>Las columnas en estos conjuntos de datos son las siguientes:</p>
+<p>En <code>lluvias.csv</code>:</p>
+<ul>
+<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code>.</li>
+<li><strong>lluvia</strong>: Cantidad de lluvia caída en el día (mm).</li>
+</ul>
+<p>En <code>atmosfera.csv</code>:</p>
+<ul>
+<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code> (4 dígitos para el año, 2 para el mes y 2 para el día).</li>
+<li><strong>t_min</strong>: Temperatura mínima registrada en el día (°C).</li>
+<li><strong>t_max</strong>: Temperatura máxima registrada en el día (°C).</li>
+<li><strong>hr_t_min</strong>: Humedad relativa en el momento que se registra la temperatura mínima (%).</li>
+<li><strong>hr_t_max</strong>: Humedad relativa en el momento que se registra la temperatura máxima (%).</li>
+</ul>
+<p>En <code>energia.csv</code>:</p>
+<ul>
+<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code> (4 dígitos para el año, 2 para el mes y 2 para el día).</li>
+<li><strong>evaporación</strong>: Evaporación (mm).</li>
+<li><strong>radiación</strong>: Exposición solar en Megajulios por metro cuadrado (MJ / m²).</li>
+</ul>
+<p>A continuación, se listan preguntas a responder y actividades a realizar:</p>
+<ul>
+<li>¿Cuántas observaciones hay en el conjunto de datos? ¿Cuántas para cada año?</li>
+<li>¿Hay datos faltantes?</li>
+<li>¿Cuál es la cantidad total de lluvia caída en la zona? ¿Y cuánto se corresponde a cada año? Realice un gráfico de barras.</li>
+<li>Visualice la cantidad de lluvia por mes y año en un gráfico de líneas.</li>
+<li>Obtenga uno o varios gráficos que muestre(n) la evolución de la temperatura mínima y máxima a lo largo del tiempo.</li>
+<li>Obtenga un gráfico que permita ver la asociación entre la temperatura mínima y máxima.</li>
+<li>Calcule la amplitud térmica, es decir, la diferencia entre la mayor y menor temperatura diaria.</li>
+<li>Visualice el comportamiento de la amplitud térmica:
+<ul>
+<li>Globalmente y a lo largo del tiempo.</li>
+<li>¿Hay alguna asociación entre la amplitud térmica y la temperatura mínima o máxima del día?</li>
+<li>¿Hay alguna asociación entre la amplitud térmica y la cantidad de precipitaciones que se registran?</li>
+</ul></li>
+<li>¿Cuál es el mes (o los meses) que suelen recibir mayor radiación? Aquí puede utilizar simple medidas resumen o un gráfico, lo que crea conveniente.</li>
+<li>¿En qué mes a lo largo de los 5 años de datos se observó el mayor nivel de evaporación?</li>
+</ul>
+<p>Los “días de estrés” se refieren a días en que las condiciones ambientales son desfavorables para el crecimiento óptimo de los cultivos. Un factor que determina el nivel de estrés es la temperatura. Cuando estas son extremas, pueden causar estrés térmico en los cultivos. En este ejercicio nos interesa determinar días de estrés térmico utilizando como indicador a la temperatura máxima. Se establece una temperatura de referencia de 32 grados centígrados.</p>
+<ul>
+<li>Determine los días de estrés en base a la temperatura máxima. Para ello, cree una nueva columna en el data frame que se llame <code>"estrés"</code> y que contenga valores <code>False</code> y <code>True</code> o valores <code>0</code> y <code>1</code>.</li>
+<li>¿Cuántos días de estrés térmico se observan entre el <code>2019-10-14</code> y el <code>2019-12-03</code>? <strong>Ayuda</strong>: Se puede filtrar el conjunto de datos para conservar solo las filas dentro del rango de fechas y luego sumar la cantidad de días con estrés.</li>
+<li>Obtenga la cantidad de días de estrés térmico por mes a lo largo de los 5 años y visualícelo en un gráfico de línea.</li>
+</ul>
+<section id="puntos-extra" class="level3">
+<h3 class="anchored" data-anchor-id="puntos-extra">Puntos extra</h3>
+<section id="parte-1" class="level4">
+<h4 class="anchored" data-anchor-id="parte-1">Parte 1</h4>
+<p>Elabore una función que, dado el conjunto de datos, una fecha de inicio y una fecha de fin, devuelva la cantidad de días de estrés térmico dentro del rango de fechas indicado.</p>
+</section>
+<section id="parte-2" class="level4">
+<h4 class="anchored" data-anchor-id="parte-2">Parte 2</h4>
+<p>El déficit de presión de vapor (VPD, por sus siglas en inglés) es una medida de la diferencia entre la cantidad de humedad en el aire y la cantidad máxima de humedad que el aire puede contener a una temperatura específica. Se calcula restando la presión de vapor actual del aire (<span class="math inline">\(vp_a\)</span>) de la presión de vapor de saturación (<span class="math inline">\(vp_s\)</span>) a la misma temperatura. Su fórmula es:</p>
+<p><span class="math display">\[
+\text{VPD} = vp_s - vp_a
+\]</span></p>
+<p>A su vez, para calcular la <strong>presión de vapor de saturación</strong> se puede usar la Ecuación de Tetens:</p>
+<p><span class="math display">\[
+vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times T}{T + 237.3}\right)
+\]</span></p>
+<p>donde <span class="math inline">\(T\)</span> es temperatura en grados centígrados. Por ejemplo, para una temperatura de 25 grados centígrados la presión de vapor de saturación <span class="math inline">\(vp_s\)</span> es:</p>
+<p><span class="math display">\[
+0.61078 \times \text{exp}\left(\frac{17.27 \times 25}{25 + 237.3}\right) = 3.16
+\]</span></p>
+<p>El resultado se mide en <strong>kilopascales (kPa)</strong>.</p>
+<p>Por otro lado, para calcular la <strong>presión de vapor actual</strong>, se puede utilizar la siguiente fórmula:</p>
+<p><span class="math display">\[
+vp_a = vp_s \times \frac{\text{Humedad relativa}}{100}
+\]</span></p>
+<p>Por ejemplo, si la temperatura es de 27.5 °C y la humedad relativa es del 78%, el VPD se obtiene de la siguiente manera:</p>
+<p><strong>1. Cálculo de presión de vapor de saturación</strong></p>
+<p><span class="math display">\[
+vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times 27.5}{27.5 + 237.3}\right) \approx 3.67 \ \text{kPa}
+\]</span></p>
+<p><strong>2. Cálculo de presión de vapor actual</strong></p>
+<p><span class="math display">\[vp_a = vp_s \times \frac{\text{Humedad relativa}}{100} =  3.67 \times \frac{78}{100} \approx 2.86 \ \text{kPa}\]</span></p>
+<p><strong>3. Cálculo de presión de VPD</strong></p>
+<p><span class="math display">\[\text{VPD} = vp_s - vp_a = 3.67115 - 2.863497 \approx 0.81 \ \text{kPa}\]</span></p>
+<p>Calcule el déficit de presión de vapor en el momento que se registró la temperatura máxima. Luego, obtenga una nueva variable que clasifique a los días de acuerdo a la siguiente regla:</p>
+<ul>
+<li>VPD entre <strong>0 y 0.5 kPa</strong>: Condiciones muy húmedas.</li>
+<li>VPD entre <strong>0.5 y 1.0 kPa</strong>: Condiciones moderadamente húmedas.</li>
+<li>VPD entre <strong>1.0 y 2.0 kPa</strong>: Condiciones semiáridas.</li>
+<li>VPD entre <strong>2.0 y 3.0 kPa</strong>: Condiciones áridas.</li>
+<li>VPD mayor a <strong>3.0 kPa</strong>: Condiciones extremadamente secas.</li>
+</ul>
+<p>y reporte el porcentaje de días en cada condición. Si lo cree conveniente, vuelque esa información en un gráfico apropiado.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../practica/03_funcional/problemas.html" class="pagination-link" aria-label="🧩 Problemas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">🧩 Problemas</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Esta página fue hecha con ❤️ y <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
