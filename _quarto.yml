@@ -57,6 +57,10 @@ website:
           contents:
             - auto: teoria/03_funcional/*.qmd
             - sort-ui: false
+        - text: U4 - Análisis de datos
+          contents:
+            - auto: teoria/04_analisis_datos/*.ipynb
+            - sort-ui: false
     - title: Práctica
       contents:
         - text: U1 - Programación en Python
