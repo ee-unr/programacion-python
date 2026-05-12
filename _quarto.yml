@@ -57,6 +57,10 @@ website:
           contents:
             - auto: teoria/03_funcional/*.qmd
             - sort-ui: false
+        - text: U4 - Análisis de datos
+          contents:
+            - auto: teoria/04_analisis_datos/*.ipynb
+            - sort-ui: false
     - title: Práctica
       contents:
         - text: U1 - Programación en Python
@@ -74,6 +78,9 @@ website:
             - practica/03_funcional/autoevaluacion.qmd
             - practica/03_funcional/ejercicios.qmd
             - practica/03_funcional/problemas.qmd
+        - text: U4 - Análisis de Datos
+          contents:
+            - practica/04_analisis_datos/proyectos.qmd
     - title: Proyectos
       contents:
         - proyectos/grupal.qmd

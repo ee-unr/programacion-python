@@ -1,0 +1,367 @@
+[
+  {
+    "language": "Adara",
+    "family": "Niger-Congo",
+    "native_speakers": 300000
+  },
+  {
+    "language": "Ambo",
+    "family": "Niger-Congo",
+    "native_speakers": 1000
+  },
+  {
+    "language": "Anaang",
+    "family": "Niger-Congo",
+    "native_speakers": 2900000
+  },
+  {
+    "language": "Atsam",
+    "family": "Niger-Congo",
+    "native_speakers": 30000
+  },
+  {
+    "language": "Bacama",
+    "family": "Afroasiatic",
+    "native_speakers": 300000
+  },
+  {
+    "language": "Bade",
+    "family": "Afroasiatic",
+    "native_speakers": 360000
+  },
+  {
+    "language": "Bariba",
+    "family": "Niger-Congo",
+    "native_speakers": 1100000
+  },
+  {
+    "language": "Bamum",
+    "family": "Niger-Congo",
+    "native_speakers": 420000
+  },
+  {
+    "language": "Batu",
+    "family": "Niger-Congo",
+    "native_speakers": 25000
+  },
+  {
+    "language": "Bina",
+    "family": "Niger-Congo",
+    "native_speakers": 7000
+  },
+  {
+    "language": "Biseni",
+    "family": "Niger-Congo",
+    "native_speakers": 4800
+  },
+  {
+    "language": "Bitare",
+    "family": "Niger-Congo",
+    "native_speakers": 52000
+  },
+  {
+    "language": "Bole",
+    "family": "Afroasiatic",
+    "native_speakers": 250000
+  },
+  {
+    "language": "Bono",
+    "family": "Niger-Congo",
+    "native_speakers": 200000
+  },
+  {
+    "language": "Boko",
+    "family": "Niger-Congo",
+    "native_speakers": 150000
+  },
+  {
+    "language": "Buru-Angwe",
+    "family": "Niger-Congo",
+    "native_speakers": 1000
+  },
+  {
+    "language": "Busa",
+    "family": "Niger-Congo",
+    "native_speakers": 110000
+  },
+  {
+    "language": "Dendi",
+    "family": "Nilo-Saharan",
+    "native_speakers": 440000
+  },
+  {
+    "language": "Defaka",
+    "family": "Niger-Congo",
+    "native_speakers": 200
+  },
+  {
+    "language": "Dzodinka",
+    "family": "Niger-Congo",
+    "native_speakers": 2600
+  },
+  {
+    "language": "Ebira",
+    "family": "Niger-Congo",
+    "native_speakers": 2200000
+  },
+  {
+    "language": "Evant",
+    "family": "Niger-Congo",
+    "native_speakers": 10000
+  },
+  {
+    "language": "Fulani",
+    "family": "Niger-Congo",
+    "native_speakers": 40000000
+  },
+  {
+    "language": "Gourmanché",
+    "family": "Niger-Congo",
+    "native_speakers": 1500000
+  },
+  {
+    "language": "Gwari",
+    "family": "Niger-Congo",
+    "native_speakers": 1840000
+  },
+  {
+    "language": "Gyong",
+    "family": "Niger-Congo",
+    "native_speakers": 25000
+  },
+  {
+    "language": "Hausa",
+    "family": "Afroasiatic",
+    "native_speakers": 54000000
+  },
+  {
+    "language": "Hõne",
+    "family": "Niger-Congo",
+    "native_speakers": 7000
+  },
+  {
+    "language": "Hun-Saare",
+    "family": "Niger-Congo",
+    "native_speakers": 73000
+  },
+  {
+    "language": "Hyam",
+    "family": "Niger-Congo",
+    "native_speakers": 300000
+  },
+  {
+    "language": "Ibibio",
+    "family": "Niger-Congo",
+    "native_speakers": 6300000
+  },
+  {
+    "language": "Iceve-Maci",
+    "family": "Niger-Congo",
+    "native_speakers": 12000
+  },
+  {
+    "language": "Idun",
+    "family": "Niger-Congo",
+    "native_speakers": 78000
+  },
+  {
+    "language": "Igala",
+    "family": "Niger-Congo",
+    "native_speakers": 1600000
+  },
+  {
+    "language": "Igbo",
+    "family": "Niger-Congo",
+    "native_speakers": 31000000
+  },
+  {
+    "language": "Iyive",
+    "family": "Niger-Congo",
+    "native_speakers": 2000
+  },
+  {
+    "language": "Izon",
+    "family": "Niger-Congo",
+    "native_speakers": 2400000
+  },
+  {
+    "language": "Jagham",
+    "family": "Niger-Congo",
+    "native_speakers": 120000
+  },
+  {
+    "language": "Jarawa",
+    "family": "Niger-Congo",
+    "native_speakers": 250000
+  },
+  {
+    "language": "Jiba",
+    "family": "Niger-Congo",
+    "native_speakers": 2000
+  },
+  {
+    "language": "Jju",
+    "family": "Niger-Congo",
+    "native_speakers": 600000
+  },
+  {
+    "language": "Jukun Takum",
+    "family": "Niger-Congo",
+    "native_speakers": 2400
+  },
+  {
+    "language": "Kalabari",
+    "family": "Niger-Congo",
+    "native_speakers": 258000
+  },
+  {
+    "language": "Kanuri",
+    "family": "Nilo-Saharan",
+    "native_speakers": 9600000
+  },
+  {
+    "language": "Koro Wachi",
+    "family": "Niger-Congo",
+    "native_speakers": 150000
+  },
+  {
+    "language": "Kukelle",
+    "family": "Niger-Congo",
+    "native_speakers": 180000
+  },
+  {
+    "language": "Kurama",
+    "family": "Niger-Congo",
+    "native_speakers": 40000
+  },
+  {
+    "language": "Kyenga",
+    "family": "Niger-Congo",
+    "native_speakers": 12000
+  },
+  {
+    "language": "Kyoli",
+    "family": "Niger-Congo",
+    "native_speakers": 7000
+  },
+  {
+    "language": "Mada",
+    "family": "Niger-Congo",
+    "native_speakers": 100000
+  },
+  {
+    "language": "Maninka",
+    "family": "Niger-Congo",
+    "native_speakers": 4600000
+  },
+  {
+    "language": "Mbe",
+    "family": "Niger-Congo",
+    "native_speakers": 65000
+  },
+  {
+    "language": "Naki",
+    "family": "Niger-Congo",
+    "native_speakers": 3000
+  },
+  {
+    "language": "Nigerian Pidgin",
+    "family": "Niger-Congo",
+    "native_speakers": 4700000
+  },
+  {
+    "language": "Ninzo",
+    "family": "Niger-Congo",
+    "native_speakers": 35000
+  },
+  {
+    "language": "Nkoroo",
+    "family": "Niger-Congo",
+    "native_speakers": 4500
+  },
+  {
+    "language": "Numana",
+    "family": "Niger-Congo",
+    "native_speakers": 50000
+  },
+  {
+    "language": "Nupe",
+    "family": "Niger-Congo",
+    "native_speakers": 1800000
+  },
+  {
+    "language": "Nyankpa",
+    "family": "Niger-Congo",
+    "native_speakers": 70000
+  },
+  {
+    "language": "Okodia",
+    "family": "Niger-Congo",
+    "native_speakers": 3600
+  },
+  {
+    "language": "Oruma",
+    "family": "Niger-Congo",
+    "native_speakers": 5000
+  },
+  {
+    "language": "Otank",
+    "family": "Niger-Congo",
+    "native_speakers": 15000
+  },
+  {
+    "language": "Southeast Ijo",
+    "family": "Niger-Congo",
+    "native_speakers": 72000
+  },
+  {
+    "language": "Sukur",
+    "family": "Afroasiatic",
+    "native_speakers": 15000
+  },
+  {
+    "language": "Tiv",
+    "family": "Niger-Congo",
+    "native_speakers": 5200000
+  },
+  {
+    "language": "Tyap",
+    "family": "Niger-Congo",
+    "native_speakers": 875000
+  },
+  {
+    "language": "Vori",
+    "family": "Niger-Congo",
+    "native_speakers": 3000
+  },
+  {
+    "language": "Wapan",
+    "family": "Niger-Congo",
+    "native_speakers": 100000
+  },
+  {
+    "language": "Wushi",
+    "family": "Niger-Congo",
+    "native_speakers": 27000
+  },
+  {
+    "language": "Yamba",
+    "family": "Niger-Congo",
+    "native_speakers": 80000
+  },
+  {
+    "language": "Yoruba",
+    "family": "Niger-Congo",
+    "native_speakers": 45000000
+  },
+  {
+    "language": "Zarma",
+    "family": "Nilo-Saharan",
+    "native_speakers": 6000000
+  },
+  {
+    "language": "Zhire",
+    "family": "Niger-Congo",
+    "native_speakers": 11000
+  }
+]

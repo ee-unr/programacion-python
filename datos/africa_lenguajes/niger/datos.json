@@ -1,0 +1,87 @@
+[
+  {
+    "language": "Bariba",
+    "family": "Niger-Congo",
+    "native_speakers": 1100000
+  },
+  {
+    "language": "Daza",
+    "family": "Nilo-Saharan",
+    "native_speakers": 700000
+  },
+  {
+    "language": "Dendi",
+    "family": "Nilo-Saharan",
+    "native_speakers": 440000
+  },
+  {
+    "language": "Fulani",
+    "family": "Niger-Congo",
+    "native_speakers": 40000000
+  },
+  {
+    "language": "Gourmanché",
+    "family": "Niger-Congo",
+    "native_speakers": 1500000
+  },
+  {
+    "language": "Hausa",
+    "family": "Afroasiatic",
+    "native_speakers": 54000000
+  },
+  {
+    "language": "Kanuri",
+    "family": "Nilo-Saharan",
+    "native_speakers": 9600000
+  },
+  {
+    "language": "Mooré",
+    "family": "Niger-Congo",
+    "native_speakers": 12000000
+  },
+  {
+    "language": "Piti",
+    "family": "Niger-Congo",
+    "native_speakers": 8100
+  },
+  {
+    "language": "Rigwe",
+    "family": "Niger-Congo",
+    "native_speakers": 40000
+  },
+  {
+    "language": "Saya",
+    "family": "Niger-Congo",
+    "native_speakers": 300000
+  },
+  {
+    "language": "Songhoyboro Ciine",
+    "family": "Nilo-Saharan",
+    "native_speakers": 946000
+  },
+  {
+    "language": "Tadaksahak",
+    "family": "Nilo-Saharan",
+    "native_speakers": 170000
+  },
+  {
+    "language": "Tagdal",
+    "family": "Nilo-Saharan",
+    "native_speakers": 65000
+  },
+  {
+    "language": "Tasawaq",
+    "family": "Nilo-Saharan",
+    "native_speakers": 21000
+  },
+  {
+    "language": "Teda",
+    "family": "Nilo-Saharan",
+    "native_speakers": 130000
+  },
+  {
+    "language": "Zarma",
+    "family": "Nilo-Saharan",
+    "native_speakers": 6000000
+  }
+]

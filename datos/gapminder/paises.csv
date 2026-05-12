@@ -1,0 +1,196 @@
+pais,continente,region
+Afganistan,Asia,Asia Meridional
+Albania,Europa,Europa del Sur
+Alemania,Europa,Europa Occidental
+Andorra,Europa,Europa del Sur
+Angola,Africa,Africa Central
+Antigua y Barbuda,America,Caribe
+Arabia Saudita,Asia,Asia Occidental
+Argelia,Africa,Africa del Norte
+Argentina,America,America del Sur
+Armenia,Asia,Asia Occidental
+Australia,Oceania,Australia y Nueva Zelanda
+Austria,Europa,Europa Occidental
+Azerbaiyan,Asia,Asia Occidental
+Bahamas,America,Caribe
+Banglades,Asia,Asia Meridional
+Barbados,America,Caribe
+Barein,Asia,Asia Occidental
+Belgica,Europa,Europa Occidental
+Belice,America,America Central
+Benin,Africa,Africa Occidental
+Bielorrusia,Europa,Europa Oriental
+Bolivia,America,America del Sur
+Bosnia y Herzegovina,Europa,Europa del Sur
+Botsuana,Africa,Africa Austral
+Brasil,America,America del Sur
+Brunei,Asia,Sudeste Asiatico
+Bulgaria,Europa,Europa Oriental
+Burkina Faso,Africa,Africa Occidental
+Burundi,Africa,Africa Oriental
+Butan,Asia,Asia Meridional
+Cabo Verde,Africa,Africa Occidental
+Camboya,Asia,Sudeste Asiatico
+Camerun,Africa,Africa Central
+Canada,America,America del Norte
+Catar,Asia,Asia Occidental
+Chad,Africa,Africa Central
+Chile,America,America del Sur
+China,Asia,Asia Oriental
+Chipre,Asia,Asia Occidental
+Cisjordania y Gaza,Asia,Asia Occidental
+Colombia,America,America del Sur
+Comoras,Africa,Africa Oriental
+Corea del Norte,Asia,Asia Oriental
+Corea del Sur,Asia,Asia Oriental
+Costa Rica,America,America Central
+Costa de Marfil,Africa,Africa Occidental
+Croacia,Europa,Europa del Sur
+Cuba,America,Caribe
+Dinamarca,Europa,Europa del Norte
+Dominica,America,Caribe
+Ecuador,America,America del Sur
+Egipto,Africa,Africa del Norte
+El Salvador,America,America Central
+Emiratos Arabes Unidos,Asia,Asia Occidental
+Eritrea,Africa,Africa Oriental
+Eslovenia,Europa,Europa del Sur
+Espana,Europa,Europa del Sur
+Estados Unidos,America,America del Norte
+Estonia,Europa,Europa del Norte
+Etiopia,Africa,Africa Oriental
+Filipinas,Asia,Sudeste Asiatico
+Finlandia,Europa,Europa del Norte
+Fiyi,Oceania,Melanesia
+Francia,Europa,Europa Occidental
+Gabon,Africa,Africa Central
+Gambia,Africa,Africa Occidental
+Georgia,Asia,Asia Occidental
+Ghana,Africa,Africa Occidental
+Granada,America,Caribe
+Grecia,Europa,Europa del Sur
+Guatemala,America,America Central
+Guinea,Africa,Africa Occidental
+Guinea Ecuatorial,Africa,Africa Central
+Guinea-Bisau,Africa,Africa Occidental
+Guyana,America,America del Sur
+Haiti,America,Caribe
+Honduras,America,America Central
+Hungria,Europa,Europa Oriental
+India,Asia,Asia Meridional
+Indonesia,Asia,Sudeste Asiatico
+Irak,Asia,Asia Occidental
+Iran,Asia,Asia Meridional
+Irlanda,Europa,Europa del Norte
+Islandia,Europa,Europa del Norte
+Islas Marshall,Oceania,Micronesia
+Islas Salomon,Oceania,Melanesia
+Israel,Asia,Asia Occidental
+Italia,Europa,Europa del Sur
+Jamaica,America,Caribe
+Japon,Asia,Asia Oriental
+Jordania,Asia,Asia Occidental
+Kazajistan,Asia,Asia Central
+Kenia,Africa,Africa Oriental
+Kiribati,Oceania,Micronesia
+Kuwait,Asia,Asia Occidental
+Laos,Asia,Sudeste Asiatico
+Lesoto,Africa,Africa Austral
+Letonia,Europa,Europa del Norte
+Libano,Asia,Asia Occidental
+Liberia,Africa,Africa Occidental
+Libia,Africa,Africa del Norte
+Liechtenstein,Europa,Europa Occidental
+Lituania,Europa,Europa del Norte
+Luxemburgo,Europa,Europa Occidental
+Macedonia del Norte,Europa,Europa del Sur
+Madagascar,Africa,Africa Oriental
+Malasia,Asia,Sudeste Asiatico
+Malaui,Africa,Africa Oriental
+Maldivas,Asia,Asia Meridional
+Mali,Africa,Africa Occidental
+Malta,Europa,Europa del Sur
+Marruecos,Africa,Africa del Norte
+Mauricio,Africa,Africa Oriental
+Mauritania,Africa,Africa Occidental
+Mexico,America,America Central
+"Micronesia, Estados Federados de",Oceania,Micronesia
+Moldavia,Europa,Europa Oriental
+Monaco,Europa,Europa Occidental
+Mongolia,Asia,Asia Oriental
+Montenegro,Europa,Europa del Sur
+Mozambique,Africa,Africa Oriental
+Myanmar,Asia,Sudeste Asiatico
+Namibia,Africa,Africa Austral
+Nauru,Oceania,Micronesia
+Nepal,Asia,Asia Meridional
+Nicaragua,America,America Central
+Niger,Africa,Africa Occidental
+Nigeria,Africa,Africa Occidental
+Noruega,Europa,Europa del Norte
+Nueva Zelanda,Oceania,Australia y Nueva Zelanda
+Oman,Asia,Asia Occidental
+Paises Bajos,Europa,Europa Occidental
+Pakistan,Asia,Asia Meridional
+Palaos,Oceania,Micronesia
+Panama,America,America Central
+Papua Nueva Guinea,Oceania,Melanesia
+Paraguay,America,America del Sur
+Peru,America,America del Sur
+Polonia,Europa,Europa Oriental
+Portugal,Europa,Europa del Sur
+Reino Unido,Europa,Europa del Norte
+Republica Centroafricana,Africa,Africa Central
+Republica Checa,Europa,Europa Oriental
+Republica Democratica del Congo,Africa,Africa Central
+Republica Dominicana,America,Caribe
+Republica Eslovaca,Europa,Europa Oriental
+Republica Kirguisa,Asia,Asia Central
+Republica del Congo,Africa,Africa Central
+Ruanda,Africa,Africa Oriental
+Rumania,Europa,Europa Oriental
+Rusia,Europa,Europa Oriental
+Samoa,Oceania,Polinesia
+San Cristobal y Nieves,America,Caribe
+San Marino,Europa,Europa del Sur
+San Vicente y las Granadinas,America,Caribe
+Santa Lucia,America,Caribe
+Santa Sede,Europa,Europa del Sur
+Santo Tome y Principe,Africa,Africa Central
+Senegal,Africa,Africa Occidental
+Serbia,Europa,Europa del Sur
+Seychelles,Africa,Africa Oriental
+Sierra Leona,Africa,Africa Occidental
+Singapur,Asia,Sudeste Asiatico
+Siria,Asia,Asia Occidental
+Somalia,Africa,Africa Oriental
+Sri Lanka,Asia,Asia Meridional
+Suazilandia,Africa,Africa Austral
+Sudafrica,Africa,Africa Austral
+Sudan,Africa,Africa del Norte
+Sudan del Sur,Africa,Africa Oriental
+Suecia,Europa,Europa del Norte
+Suiza,Europa,Europa Occidental
+Surinam,America,America del Sur
+Tailandia,Asia,Sudeste Asiatico
+Tanzania,Africa,Africa Oriental
+Tayikistan,Asia,Asia Central
+Timor Oriental,Asia,Sudeste Asiatico
+Togo,Africa,Africa Occidental
+Tonga,Oceania,Polinesia
+Trinidad y Tobago,America,Caribe
+Tunez,Africa,Africa del Norte
+Turkmenistan,Asia,Asia Central
+Turquia,Asia,Asia Occidental
+Tuvalu,Oceania,Polinesia
+Ucrania,Europa,Europa Oriental
+Uganda,Africa,Africa Oriental
+Uruguay,America,America del Sur
+Uzbekistan,Asia,Asia Central
+Vanuatu,Oceania,Melanesia
+Venezuela,America,America del Sur
+Vietnam,Asia,Sudeste Asiatico
+Yemen,Asia,Asia Occidental
+Yibuti,Africa,Africa Oriental
+Zambia,Africa,Africa Oriental
+Zimbabue,Africa,Africa Oriental

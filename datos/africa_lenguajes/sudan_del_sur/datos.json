@@ -1,0 +1,117 @@
+[
+  {
+    "language": "Aja",
+    "family": "Nilo-Saharan",
+    "native_speakers": 200
+  },
+  {
+    "language": "Avokaya",
+    "family": "Nilo-Saharan",
+    "native_speakers": 100000
+  },
+  {
+    "language": "Baka",
+    "family": "Nilo-Saharan",
+    "native_speakers": 60000
+  },
+  {
+    "language": "Beli",
+    "family": "Nilo-Saharan",
+    "native_speakers": 65000
+  },
+  {
+    "language": "Bongo",
+    "family": "Nilo-Saharan",
+    "native_speakers": 21000
+  },
+  {
+    "language": "Central Banda",
+    "family": "Niger-Congo",
+    "native_speakers": 580000
+  },
+  {
+    "language": "Dinka",
+    "family": "Nilo-Saharan",
+    "native_speakers": 4238400
+  },
+  {
+    "language": "Juba Arabic",
+    "family": "Arabic-based",
+    "native_speakers": 250000
+  },
+  {
+    "language": "Jur Modo",
+    "family": "Nilo-Saharan",
+    "native_speakers": 180000
+  },
+  {
+    "language": "Keliko",
+    "family": "Nilo-Saharan",
+    "native_speakers": 42500
+  },
+  {
+    "language": "Komo",
+    "family": "Nilo-Saharan",
+    "native_speakers": 10000
+  },
+  {
+    "language": "Kresh",
+    "family": "Nilo-Saharan",
+    "native_speakers": 16000
+  },
+  {
+    "language": "Ma'di",
+    "family": "Nilo-Saharan",
+    "native_speakers": 310000
+  },
+  {
+    "language": "Morokodo",
+    "family": "Nilo-Saharan",
+    "native_speakers": 3400
+  },
+  {
+    "language": "Moru",
+    "family": "Nilo-Saharan",
+    "native_speakers": 230000
+  },
+  {
+    "language": "Mündü",
+    "family": "Ubangian",
+    "native_speakers": 26000
+  },
+  {
+    "language": "Nuer",
+    "family": "Nilo-Saharan",
+    "native_speakers": 1700000
+  },
+  {
+    "language": "Oluʼbo",
+    "family": "Nilo-Saharan",
+    "native_speakers": 33000
+  },
+  {
+    "language": "Opuo",
+    "family": "Nilo-Saharan",
+    "native_speakers": 20000
+  },
+  {
+    "language": "Uduk",
+    "family": "Nilo-Saharan",
+    "native_speakers": 22000
+  },
+  {
+    "language": "West Banda",
+    "family": "Ubangian",
+    "native_speakers": 7500
+  },
+  {
+    "language": "Yulu",
+    "family": "Nilo-Saharan",
+    "native_speakers": 13000
+  },
+  {
+    "language": "Zande",
+    "family": "Niger-Congo",
+    "native_speakers": 1800000
+  }
+]
