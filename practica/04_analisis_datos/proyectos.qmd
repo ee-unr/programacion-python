@@ -382,14 +382,11 @@ Para ello, cree una nueva columna en el data frame que se llame `"estrés"` y qu
 * ¿Cuántos días de estrés térmico se observan entre el `2019-10-14` y el `2019-12-03`? **Ayuda**: Se puede filtrar el conjunto de datos para conservar solo las filas dentro del rango de fechas y luego sumar la cantidad de días con estrés.
 * Obtenga la cantidad de días de estrés térmico por mes a lo largo de los 5 años y visualícelo en un gráfico de línea.
 
-### Puntos extra
 
-#### Parte 1
-
-Elabore una función que, dado el conjunto de datos, una fecha de inicio y una fecha de fin,
+Además, elabore una función que, dado el conjunto de datos, una fecha de inicio y una fecha de fin,
 devuelva la cantidad de días de estrés térmico dentro del rango de fechas indicado.
 
-#### Parte 2
+### Déficit de presion de vaporzb<
 
 El déficit de presión de vapor (VPD, por sus siglas en inglés) es una medida de la 
 diferencia entre la cantidad de humedad en el aire y la cantidad máxima de humedad que el aire puede contener a una temperatura específica.
