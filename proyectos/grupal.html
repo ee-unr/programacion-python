@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto grupal – Programación en Python</title>
+<title>Proyecto grupal: Un clima estresante – Programación en Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -130,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../proyectos/grupal.html">Proyecto grupal</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../proyectos/grupal.html">Proyecto grupal: Un clima estresante</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -145,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../proyectos/grupal.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Proyecto grupal</span></a>
+ <span class="menu-text">Proyecto grupal: Un clima estresante</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -165,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proyecto grupal</h1>
+<h1 class="title">Proyecto grupal: Un clima estresante</h1>
 </div>
 
 
@@ -182,9 +211,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Si aplica, se puede incluir un proyecto grupal.</p>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>SILO (Scientific Information for Land Owners) es una base de datos en línea australiana que proporciona datos climáticos. Administrada por el Departamento de Agricultura y Pesca de Queensland, SILO ofrece acceso a una amplia gama de datos meteorológicos y climáticos históricos y actuales para diversas aplicaciones en la agricultura, la investigación, la gestión de recursos naturales y la planificación ambiental.</p>
+<p>Los datos proporcionados por SILO incluyen variables como temperatura, precipitación, humedad relativa, evaporación y radiación solar.</p>
+<p>Los datos provistos se encuentran en la carpeta <code>datos/boonah</code> y están organizados por año. Dentro de cada carpeta anual hay tres conjuntos de datos con registros diarios proporcionados por SILO para las coordenadas <code>(-27.9927, 152.6906)</code>, que se encuentran en las afueras de Boonah, una ciudad rural en Queensland, Australia:</p>
+<ul>
+<li><code>lluvias.csv</code>: información sobre precipitaciones diarias.</li>
+<li><code>atmosfera.csv</code>: información sobre temperaturas y humedad relativa.</li>
+<li><code>energia.csv</code>: información sobre evaporación y radiación.</li>
+</ul>
+<p>Las columnas en estos conjuntos de datos son las siguientes:</p>
+<p>En <code>lluvias.csv</code>:</p>
+<ul>
+<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code>.</li>
+<li><strong>lluvia</strong>: Cantidad de lluvia caída en el día (mm).</li>
+</ul>
+<p>En <code>atmosfera.csv</code>:</p>
+<ul>
+<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code> (4 dígitos para el año, 2 para el mes y 2 para el día).</li>
+<li><strong>t_min</strong>: Temperatura mínima registrada en el día (°C).</li>
+<li><strong>t_max</strong>: Temperatura máxima registrada en el día (°C).</li>
+<li><strong>hr_t_min</strong>: Humedad relativa en el momento que se registra la temperatura mínima (%).</li>
+<li><strong>hr_t_max</strong>: Humedad relativa en el momento que se registra la temperatura máxima (%).</li>
+</ul>
+<p>En <code>energia.csv</code>:</p>
+<ul>
+<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code> (4 dígitos para el año, 2 para el mes y 2 para el día).</li>
+<li><strong>evaporación</strong>: Evaporación (mm).</li>
+<li><strong>radiación</strong>: Exposición solar en Megajulios por metro cuadrado (MJ / m²).</li>
+</ul>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<p>A continuación, se listan preguntas a responder y actividades a realizar:</p>
+<ul>
+<li>¿Cuántas observaciones hay en el conjunto de datos? ¿Cuántas para cada año?</li>
+<li>¿Hay datos faltantes?</li>
+<li>¿Cuál es la cantidad total de lluvia caída en la zona? ¿Y cuánto se corresponde a cada año? Realice un gráfico de barras.</li>
+<li>Visualice la cantidad de lluvia por mes y año en un gráfico de líneas.</li>
+<li>Obtenga uno o varios gráficos que muestre(n) la evolución de la temperatura mínima y máxima a lo largo del tiempo.</li>
+<li>Obtenga un gráfico que permita ver la asociación entre la temperatura mínima y máxima.</li>
+<li>Calcule la amplitud térmica, es decir, la diferencia entre la mayor y menor temperatura diaria.</li>
+<li>Visualice el comportamiento de la amplitud térmica:
+<ul>
+<li>Globalmente y a lo largo del tiempo.</li>
+<li>¿Hay alguna asociación entre la amplitud térmica y la temperatura mínima o máxima del día?</li>
+<li>¿Hay alguna asociación entre la amplitud térmica y la cantidad de precipitaciones que se registran?</li>
+</ul></li>
+<li>¿Cuál es el mes (o los meses) que suelen recibir mayor radiación? Aquí puede utilizar simple medidas resumen o un gráfico, lo que crea conveniente.</li>
+<li>¿En qué mes a lo largo de los 5 años de datos se observó el mayor nivel de evaporación?</li>
+</ul>
+<section id="días-de-estrés" class="level3">
+<h3 class="anchored" data-anchor-id="días-de-estrés">Días de estrés</h3>
+<p>Los “días de estrés” se refieren a días en que las condiciones ambientales son desfavorables para el crecimiento óptimo de los cultivos. Un factor que determina el nivel de estrés es la temperatura. Cuando estas son extremas, pueden causar estrés térmico en los cultivos. En este ejercicio nos interesa determinar días de estrés térmico utilizando como indicador a la temperatura máxima. Se establece una temperatura de referencia de 32 grados centígrados.</p>
+<ul>
+<li>Determine los días de estrés en base a la temperatura máxima. Para ello, cree una nueva columna en el data frame que se llame <code>"estrés"</code> y que contenga valores <code>False</code> y <code>True</code> o valores <code>0</code> y <code>1</code>.</li>
+<li>¿Cuántos días de estrés térmico se observan entre el <code>2019-10-14</code> y el <code>2019-12-03</code>? <strong>Ayuda</strong>: Se puede filtrar el conjunto de datos para conservar solo las filas dentro del rango de fechas y luego sumar la cantidad de días con estrés.</li>
+<li>Obtenga la cantidad de días de estrés térmico por mes a lo largo de los 5 años y visualícelo en un gráfico de línea.</li>
+</ul>
+<p>Además, elabore una función que, dado el conjunto de datos, una fecha de inicio y una fecha de fin, devuelva la cantidad de días de estrés térmico dentro del rango de fechas indicado.</p>
+</section>
+<section id="déficit-de-presion-de-vapor" class="level3">
+<h3 class="anchored" data-anchor-id="déficit-de-presion-de-vapor">Déficit de presion de vapor</h3>
+<p>El déficit de presión de vapor (VPD, por sus siglas en inglés) es una medida de la diferencia entre la cantidad de humedad en el aire y la cantidad máxima de humedad que el aire puede contener a una temperatura específica. Se calcula restando la presión de vapor actual del aire (<span class="math inline">\(vp_a\)</span>) de la presión de vapor de saturación (<span class="math inline">\(vp_s\)</span>) a la misma temperatura. Su fórmula es:</p>
+<p><span class="math display">\[
+\text{VPD} = vp_s - vp_a
+\]</span></p>
+<p>A su vez, para calcular la <strong>presión de vapor de saturación</strong> se puede usar la Ecuación de Tetens:</p>
+<p><span class="math display">\[
+vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times T}{T + 237.3}\right)
+\]</span></p>
+<p>donde <span class="math inline">\(T\)</span> es temperatura en grados centígrados. Por ejemplo, para una temperatura de 25 grados centígrados la presión de vapor de saturación <span class="math inline">\(vp_s\)</span> es:</p>
+<p><span class="math display">\[
+0.61078 \times \text{exp}\left(\frac{17.27 \times 25}{25 + 237.3}\right) = 3.16
+\]</span></p>
+<p>El resultado se mide en <strong>kilopascales (kPa)</strong>.</p>
+<p>Por otro lado, para calcular la <strong>presión de vapor actual</strong>, se puede utilizar la siguiente fórmula:</p>
+<p><span class="math display">\[
+vp_a = vp_s \times \frac{\text{Humedad relativa}}{100}
+\]</span></p>
+<p>Por ejemplo, si la temperatura es de 27.5 °C y la humedad relativa es del 78%, el VPD se obtiene de la siguiente manera:</p>
+<p><strong>1. Cálculo de presión de vapor de saturación</strong></p>
+<p><span class="math display">\[
+vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times 27.5}{27.5 + 237.3}\right) \approx 3.67 \ \text{kPa}
+\]</span></p>
+<p><strong>2. Cálculo de presión de vapor actual</strong></p>
+<p><span class="math display">\[vp_a = vp_s \times \frac{\text{Humedad relativa}}{100} =  3.67 \times \frac{78}{100} \approx 2.86 \ \text{kPa}\]</span></p>
+<p><strong>3. Cálculo de presión de VPD</strong></p>
+<p><span class="math display">\[\text{VPD} = vp_s - vp_a = 3.67115 - 2.863497 \approx 0.81 \ \text{kPa}\]</span></p>
+<p>Calcule el déficit de presión de vapor en el momento que se registró la temperatura máxima. Luego, obtenga una nueva variable que clasifique a los días de acuerdo a la siguiente regla:</p>
+<ul>
+<li>VPD entre <strong>0 y 0.5 kPa</strong>: Condiciones muy húmedas.</li>
+<li>VPD entre <strong>0.5 y 1.0 kPa</strong>: Condiciones moderadamente húmedas.</li>
+<li>VPD entre <strong>1.0 y 2.0 kPa</strong>: Condiciones semiáridas.</li>
+<li>VPD entre <strong>2.0 y 3.0 kPa</strong>: Condiciones áridas.</li>
+<li>VPD mayor a <strong>3.0 kPa</strong>: Condiciones extremadamente secas.</li>
+</ul>
+<p>y reporte el porcentaje de días en cada condición. Si lo cree conveniente, vuelque esa información en un gráfico apropiado.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
