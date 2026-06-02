@@ -1,0 +1,9 @@
+---
+title: "Clase 12: Git & GitHub"
+---
+
+```{=html}
+<div class="pdf-container">
+  <iframe src="../../slides/12_git_github.pdf"></iframe>
+</div>
+```

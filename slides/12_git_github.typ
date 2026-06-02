@@ -1,22 +1,8 @@
 #import "@preview/touying:0.6.3": *
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
-#import "@preview/gentle-clues:1.3.1": *
-#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
-#import fletcher.shapes: diamond, ellipse
 
 #import "template.typ": inverted-slide, new-section-slide, setup-template
-#import "utils.typ": item-by-item, reveal-code
-#import "list-diagram.typ": list-diagram
-
-#let fletcher-diagram = touying-reducer.with(reduce: fletcher.diagram, cover: fletcher.hide)
-#let commit-style = (
-  width: 11mm,
-  height: 9mm,
-  fill: white,
-  stroke: rgb("#BF0F1F"),
-  shape: ellipse,
-)
 
 #show: codly-init.with()
 #codly(
@@ -379,11 +365,9 @@
   git branch -D <nombre_rama>
   ```
 
-  #item-by-item[
-    - `-d` intenta borrar la rama de manera segura.
-    - `-D` fuerza la eliminación.
-    - Conviene borrar ramas cuando ya fueron integradas o dejaron de ser útiles.
-  ]
+  - `-d` intenta borrar la rama de manera segura.
+  - `-D` fuerza la eliminación.
+  - Conviene borrar ramas cuando ya fueron integradas o dejaron de ser útiles.
 ]
 
 #slide[
@@ -414,6 +398,197 @@
 
 ]
 
+#new-section-slide[GitHub]
+
+#slide[
+  = GitHub: de local a remoto
+
+  Hasta ahora trabajamos con Git en nuestra computadora.
+
+  GitHub agrega un repositorio remoto: una copia del proyecto alojada en un servidor.
+
+  - Permite compartir código con otras personas.
+  - Sirve como punto común para sincronizar cambios.
+  - Conserva el historial de Git también en la nube.
+  - Es útil tanto para equipos como para proyectos individuales.
+]
+
+#slide[
+  = Repositorios remotos
+
+  En GitHub, los proyectos se guardan en repositorios.
+
+  - Un repositorio público puede ser visto por cualquier persona.
+  - Un repositorio privado solo es accesible para quienes tengan permiso.
+  - Cada repositorio tiene una URL propia.
+  - La URL suele seguir el formato `https://github.com/<usuario>/<repositorio>`.
+
+  GitHub también suma herramientas de colaboración: issues, pull requests, revisión de código y acciones automáticas.
+]
+
+#slide[
+  = Repositorio personal y repositorio de proyecto
+
+  GitHub permite crear distintos tipos de repositorios.
+
+  - El repositorio personal usa el mismo nombre que el usuario.
+  - Ese repositorio define la página principal del perfil.
+  - Un repositorio de proyecto guarda el código de una aplicación, análisis, paquete o trabajo específico.
+  - Para un proyecto existente en local, se puede crear un repositorio vacío en GitHub y vincularlo después.
+]
+
+#slide[
+  = Archivos habituales en GitHub
+
+  Al crear un repositorio, GitHub puede inicializar algunos archivos útiles.
+
+  - `README.md`: documentación inicial del proyecto.
+  - `.gitignore`: reglas para no versionar archivos innecesarios o sensibles.
+  - Licencia: condiciones de uso, distribución y colaboración.
+
+  `README.md` se escribe normalmente en Markdown, un formato simple para estructurar texto, enlaces, listas, tablas e imágenes.
+]
+
+#slide[
+  = Autenticación SSH
+
+  Para interactuar con GitHub desde la terminal necesitamos autenticarnos.
+
+  SSH utiliza dos claves:
+
+  - Una clave privada, que queda en nuestra computadora.
+  - Una clave pública, que agregamos a la cuenta de GitHub.
+
+  Con esa relación, GitHub puede reconocer que nuestra computadora está autorizada para acceder a los repositorios correspondientes.
+
+  #link("https://docs.github.com/es/authentication/connecting-to-github-with-ssh")
+
+]
+
+#slide[
+  = Conectar local y remoto
+
+  Si ya tenemos un proyecto con Git en local, debemos asociarlo al repositorio remoto.
+
+  ```bash
+  git remote add origin git@github.com:<usuario>/<repositorio>.git
+  ```
+
+  `origin` es el nombre habitual de la referencia remota.
+
+  La primera subida suele indicar también rama y remoto:
+
+  ```bash
+  git push -u origin main
+  ```
+
+  El `-u` deja configurado el destino para futuros `git push`.
+]
+
+#slide[
+  = Clonar un repositorio
+
+  Si el proyecto ya existe en GitHub, podemos traerlo a nuestra computadora.
+
+  ```bash
+  git clone <URL>
+  ```
+
+  Clonar no es lo mismo que descargar un `.zip`.
+
+  - Trae archivos, ramas, etiquetas e historial.
+  - Deja el proyecto listo para seguir usando Git.
+  - Puede hacerse con HTTPS o SSH.
+  - SSH suele ser más cómodo cuando ya configuramos autenticación.
+]
+
+#slide[
+  = Sincronización remota
+
+  En un proyecto compartido, el repositorio remoto puede cambiar mientras trabajamos en local.
+
+  ```bash
+  git fetch
+  git pull
+  ```
+
+  - `git fetch` descarga información del remoto, pero no aplica cambios sobre nuestros archivos.
+  - `git pull` descarga cambios y los fusiona con nuestra rama local.
+  - Si aparecen conflictos, hay que resolverlos antes de continuar.
+  - La primera vez puede ser necesario definir cómo combinar cambios:
+
+  ```bash
+  git config pull.rebase false
+  ```
+]
+
+#slide[
+  = Subir código a GitHub
+
+  El flujo local sigue siendo el mismo: modificar, preparar y crear commit.
+
+  ```bash
+  git status
+  git add <archivo>
+  git commit -m "<mensaje>"
+  git push
+  ```
+
+  `git push` envía los commits locales al repositorio remoto.
+
+  Si otras personas subieron cambios antes, Git puede rechazar el `push` hasta que sincronicemos con `pull`.
+]
+
+
+#slide[
+  = Forks
+
+  Un *fork* es una copia de un repositorio creada en nuestra cuenta de GitHub.
+
+  Se usa cuando:
+
+  - No tenemos permisos de escritura en el repositorio original.
+  - Queremos proponer cambios sin modificar directamente el proyecto base.
+  - Queremos experimentar o evolucionar el proyecto por nuestra cuenta.
+
+  Después de hacer el fork, podemos clonarlo, modificarlo, hacer commits y subir cambios a nuestra copia.
+]
+
+#slide[
+  = Pull Requests
+
+  Una *pull request* es una solicitud para que revisen e integren nuestros cambios.
+
+  En el flujo con fork:
+
+  - Hacemos un fork del repositorio original.
+  - Clonamos nuestra copia.
+  - Modificamos archivos y creamos commits.
+  - Subimos los cambios con `git push`.
+  - Abrimos una pull request hacia el repositorio original.
+
+  Quien mantiene el proyecto revisa la propuesta y, si corresponde, hace el merge.
+]
+
+#slide[
+  = Resumen GitHub
+
+  Proyecto propio:
+
+  ```text
+  crear repo remoto -> git remote add -> git push -> git pull / git fetch
+  ```
+
+  Proyecto ajeno:
+
+  ```text
+  fork -> git clone -> cambios -> git add / commit / push -> pull request
+  ```
+
+  Git sigue registrando el historial.
+
+  GitHub agrega el punto remoto donde se comparte, sincroniza y revisa el trabajo.
+]
 
 // #slide[
 //   = Resumen
