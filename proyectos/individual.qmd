@@ -1,6 +1,0 @@
----
-title: Proyecto individual
----
-
-Luego del [proyecto grupal](grupal.qmd), podría realizarse un proyecto individual.
-

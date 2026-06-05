@@ -1,0 +1,171 @@
+---
+title: "TP 2: _Swing_ o no _swing_, esa es la cuestión"
+---
+
+## Introducción
+
+En Hamlet, la tragedia de William Shakespeare, la pregunta "ser o no ser" condensa una
+duda existencial: seguir soportando los golpes de la fortuna o enfrentarse a ellos, aun sin
+saber qué puede venir después. En este trabajo, la escena es bastante menos trágica, pero
+también gira alrededor de una decisión: ante cada lanzamiento, el bateador debe resolver en
+una fracción de segundo si conviene hacer _swing_ o dejar pasar la pelota.
+
+En _baseball_, esa elección depende de múltiples factores: la cuenta, el tipo de pitcheo,
+la velocidad, el movimiento de la pelota, la ubicación en el plato, las características del
+bateador y del _pitcher_, entre otras.
+
+En este trabajo práctico van a participar de un _challenge_ de _machine learning_. El objetivo
+es construir un modelo que permita estimar la probabilidad de que un bateador haga _swing_
+ante un determinado pitcheo.
+
+Para ello, cuentan con datos de una primera temporada, `temporada1.parquet`, que deberán usar
+para explorar el problema, definir la variable objetivo, entrenar modelos y evaluar sus
+predicciones. Luego deberán generar predicciones para los pitcheos incluidos en
+`temporada2.parquet`.
+
+El resultado final será un archivo `validacion.parquet` con el `pitch_id` y una probabilidad
+estimada de _swing_ para cada fila de `temporada2.parquet`.
+
+## Datos
+
+Se entregan los archivos `temporada1.parquet` y `temporada2.parquet` con la siguientes variables:
+
+::::{style="max-width: 90%; margin: auto;"}
+
+| Columna         | Definición                                                                                                                                   |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `pitch_id`      | Identificador único del pitcheo.                                                                                                             |
+| `release_speed` | Velocidad del pitcheo medida al momento en que la pelota sale de la mano del _pitcher_.                                                      |
+| `batter`        | Identificador del bateador asociado al evento de juego.                                                                                      |
+| `pitcher`       | Identificador del _pitcher_ asociado al evento de juego.                                                                                     |
+| `description`   | Descripción del resultado del pitcheo.                                                                                                       |
+| `stand`         | Lado del plato en el que se posiciona el bateador.                                                                                           |
+| `p_throws`      | Mano con la que lanza el _pitcher_.                                                                                                          |
+| `pitch_type`    | Tipo de pitcheo derivado de _Statcast_.                                                                                                      |
+| `balls`         | Cantidad de bolas en la cuenta antes del pitcheo.                                                                                            |
+| `strikes`       | Cantidad de _strikes_ en la cuenta antes del pitcheo.                                                                                        |
+| `pfx_x`         | Movimiento horizontal, en pies, desde la perspectiva del _catcher_.                                                                          |
+| `pfx_z`         | Movimiento vertical, en pies, desde la perspectiva del _catcher_.                                                                            |
+| `plate_x`       | Posición horizontal de la pelota cuando cruza el _home plate_, desde la perspectiva del _catcher_.                                           |
+| `plate_z`       | Posición vertical de la pelota cuando cruza el _home plate_, desde la perspectiva del _catcher_.                                             |
+| `sz_top`        | Límite superior de la zona de _strike_ del bateador, definido por el operador cuando la pelota está a mitad de camino hacia el _home plate_. |
+| `sz_bot`        | Límite inferior de la zona de _strike_ del bateador, definido por el operador cuando la pelota está a mitad de camino hacia el _home plate_. |
+
+:::
+
+Para acceder a los mismos, registrarse en la competencia de Kaggle.
+
+## Actividades
+
+* Lea los datos de `temporada1.parquet` y realice una exploración inicial. Describa las
+variables disponibles, sus distribuciones, la presencia de valores faltantes y cualquier
+patrón que considere relevante para el problema.
+
+* Estudie la variable `description` y determine cómo convertirla en una variable binaria
+que indique si hubo _swing_ o no. Justifique el mapeo utilizado. Se espera que investigue
+el dominio del problema y cite fuentes de _baseball_, como artículos, documentación,
+glosarios o videos especializados. Se valorará más una justificación basada en fuentes
+del dominio que una respuesta obtenida simplemente consultando una IA.
+
+* Si encuentra casos ambiguos al definir la variable objetivo, explique qué decisión tomó y por qué.
+
+* A partir del análisis exploratorio, proponga variables o transformaciones que puedan
+ser útiles para predecir la probabilidad de _swing_. Explique qué información aporta cada
+una y cómo se relaciona con el problema.
+
+* Ajuste uno o más modelos estadísticos y/o de _machine learning_ para predecir la
+probabilidad de _swing_. Puede usar cualquier librería de Python. Se alienta a buscar por
+sus propios medios y probar distintos enfoques.
+
+* Como punto de partida, puede consultar el libro de _scikit-learn_ que usamos en la
+bibliografía de la materia. El libro tiene un repositorio público con _notebooks_ y
+ejemplos: [ageron/handson-mlp](https://github.com/ageron/handson-mlp).
+
+* Realice una evaluación interna usando solamente `temporada1.parquet`. Puede usar un
+_train/validation split_ o validación cruzada. La métrica principal será el _log-loss_:
+
+   $$
+   \text{LogLoss} =
+   -\frac{1}{n}\sum_{i=1}^{n}
+   \left[
+   y_i \log(\hat{p}_i) + (1-y_i)\log(1-\hat{p}_i)
+   \right]
+   $$
+
+   donde $y_i$ indica si hubo _swing_ y $\hat{p}_i$ es la probabilidad predicha de _swing_.
+
+* Presente los resultados de la evaluación interna. Puede incluir otras métricas o
+visualizaciones si ayudan a entender el desempeño del modelo. Se recomienda incluir
+gráficos que permitan evaluar las predicciones o la calibración de las probabilidades
+predichas.
+
+* Explique qué modelo final eligió, qué variables incluyó, qué preprocesamiento aplicó y
+por qué eligió ese enfoque. También se valorará que mencione enfoques que no funcionaron
+y explique por qué fueron descartados.
+
+* Genere predicciones para `temporada2.parquet` y construya un archivo llamado
+`validacion.parquet`. El archivo debe tener únicamente dos columnas: `pitch_id` y
+`swing_probability`.
+
+* Suba el archivo `validacion.parquet` a la competencia de Kaggle.
+
+## Forma de trabajo
+
+El trabajo debe desarrollarse en un repositorio de GitHub.
+Puede ser público o privado, pero los docentes tienen que tener acceso al repositorio.
+
+Se espera que el repositorio permita reproducir el trabajo realizado. Para ello:
+
+* Incluya un `README.md` claro, que explique el objetivo del trabajo, cómo crear el
+ambiente de trabajo, cómo ejecutar el análisis o _pipeline_ principal, cómo reproducir
+`validacion.parquet` y cómo está organizado el repositorio.
+
+* Trabaje con dependencias controladas mediante un ambiente virtual.
+
+* Use Git y GitHub de manera organizada. Abra _issues_ para especificar y distribuir tareas.
+Use ramas y _pull requests_ cuando haya que unir una parte relevante del trabajo, como el
+análisis exploratorio o la implementación de un modelo. Se valorará positivamente que
+una persona abra un _pull request_ y otra lo revise y realice el _merge_.
+
+* Documente las fuentes consultadas. Puede usar _issues_, _discussions_ o un archivo
+`NOTAS.md` donde incluya notas relevantes que no necesariamente formen parte del
+`README.md`. Deben citarse fuentes externas usadas para entender _baseball_, definir la
+variable objetivo o tomar decisiones metodológicas.
+
+## Aspectos que impactan negativamente la evaluación
+
+Se penalizarán los siguientes problemas:
+
+* No tener un `README.md` claro.
+
+* Que no se pueda crear el ambiente de trabajo por dependencias no declaradas, versiones
+incompatibles o instrucciones incompletas.
+
+* Que no se puedan reproducir los resultados. Los docentes clonarán cada repositorio y ejecutarán
+el código implementado siguiendo sus instrucciones. Se penalizará a los grupos donde no
+se pueda reproducir `validacion.parquet`.
+
+* Subir datos al repositorio, de cualquier tipo. Esto incluye datos de entrenamiento,
+datos de evaluación, versiones procesadas, muestras, archivos intermedios o cualquier
+otro archivo derivado de los datos. Si los datos se suben por accidente, tienen que
+saber reescribir la historia del repositorio de manera tal que no puedan recuperarse. Si
+no, tendrán que borrar el repositorio y crear uno nuevo.
+
+* Hacer mal uso del repositorio: trabajar con todos los _commits_ directamente sobre
+`main`, usar mensajes de _commit_ opacos o no representativos, subir archivos manualmente
+al repositorio en lugar de trabajar con Git de forma ordenada, no usar _issues_, ramas o
+_pull requests_ cuando el trabajo en equipo lo amerite, o tener una historia del
+repositorio difícil de auditar.
+
+* Entregar un `validacion.parquet` con formato incorrecto: columnas mal nombradas, columnas
+extra, filas en otro orden, `pitch_id` faltantes o duplicados, o probabilidades faltantes,
+no numéricas o fuera del intervalo `[0, 1]`.
+
+* No justificar el mapeo de `description` a _swing_/no _swing_.
+
+* No comparar modelos contra una evaluación interna razonable.
+
+* No explicar el modelo final ni las decisiones de preprocesamiento.
+
+* No citar fuentes externas cuando se usaron para entender el problema o justificar
+decisiones.

@@ -1,5 +1,5 @@
 ---
-title: "Proyecto grupal: Un clima estresante"
+title: "TP 1: Un clima estresante"
 ---
 
 ## Introducción
