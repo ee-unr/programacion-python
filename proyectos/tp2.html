@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto grupal: Un clima estresante – Programación en Python</title>
+<title>TP 2: Swing o no swing, esa es la cuestión – Programación en Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../proyectos/individual.html" rel="next">
+<link href="../proyectos/tp1.html" rel="prev">
 <link href="../imgs/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -136,7 +136,7 @@ window.Quarto = {
 <span class="menu-text">Práctica</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../proyectos/grupal.html" aria-current="page"> 
+    <a class="nav-link active" href="../proyectos/tp1.html" aria-current="page"> 
 <span class="menu-text">Proyectos</span></a>
   </li>  
   <li class="nav-item">
@@ -159,7 +159,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../proyectos/grupal.html">Proyecto grupal: Un clima estresante</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../proyectos/tp2.html">TP 2: <em>Swing</em> o no <em>swing</em>, esa es la cuestión</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -173,14 +173,14 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../proyectos/grupal.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Proyecto grupal: Un clima estresante</span></a>
+  <a href="../proyectos/tp1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP 1: Un clima estresante</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../proyectos/individual.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proyecto individual</span></a>
+  <a href="../proyectos/tp2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">TP 2: <em>Swing</em> o no <em>swing</em>, esa es la cuestión</span></a>
   </div>
 </li>
     </ul>
@@ -194,7 +194,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proyecto grupal: Un clima estresante</h1>
+<h1 class="title">TP 2: <em>Swing</em> o no <em>swing</em>, esa es la cuestión</h1>
 </div>
 
 
@@ -213,105 +213,149 @@ window.Quarto = {
 
 <section id="introducción" class="level2">
 <h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
-<p>SILO (Scientific Information for Land Owners) es una base de datos en línea australiana que proporciona datos climáticos. Administrada por el Departamento de Agricultura y Pesca de Queensland, SILO ofrece acceso a una amplia gama de datos meteorológicos y climáticos históricos y actuales para diversas aplicaciones en la agricultura, la investigación, la gestión de recursos naturales y la planificación ambiental.</p>
-<p>Los datos proporcionados por SILO incluyen variables como temperatura, precipitación, humedad relativa, evaporación y radiación solar.</p>
-<p>Los datos provistos se encuentran en la carpeta <code>datos/boonah</code> y están organizados por año. Dentro de cada carpeta anual hay tres conjuntos de datos con registros diarios proporcionados por SILO para las coordenadas <code>(-27.9927, 152.6906)</code>, que se encuentran en las afueras de Boonah, una ciudad rural en Queensland, Australia:</p>
-<ul>
-<li><code>lluvias.csv</code>: información sobre precipitaciones diarias.</li>
-<li><code>atmosfera.csv</code>: información sobre temperaturas y humedad relativa.</li>
-<li><code>energia.csv</code>: información sobre evaporación y radiación.</li>
-</ul>
-<p>Las columnas en estos conjuntos de datos son las siguientes:</p>
-<p>En <code>lluvias.csv</code>:</p>
-<ul>
-<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code>.</li>
-<li><strong>lluvia</strong>: Cantidad de lluvia caída en el día (mm).</li>
-</ul>
-<p>En <code>atmosfera.csv</code>:</p>
-<ul>
-<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code> (4 dígitos para el año, 2 para el mes y 2 para el día).</li>
-<li><strong>t_min</strong>: Temperatura mínima registrada en el día (°C).</li>
-<li><strong>t_max</strong>: Temperatura máxima registrada en el día (°C).</li>
-<li><strong>hr_t_min</strong>: Humedad relativa en el momento que se registra la temperatura mínima (%).</li>
-<li><strong>hr_t_max</strong>: Humedad relativa en el momento que se registra la temperatura máxima (%).</li>
-</ul>
-<p>En <code>energia.csv</code>:</p>
-<ul>
-<li><strong>fecha</strong>: Fecha en que se realizó la medición en formato <code>YYYY-MM-DD</code> (4 dígitos para el año, 2 para el mes y 2 para el día).</li>
-<li><strong>evaporación</strong>: Evaporación (mm).</li>
-<li><strong>radiación</strong>: Exposición solar en Megajulios por metro cuadrado (MJ / m²).</li>
-</ul>
+<p>En Hamlet, la tragedia de William Shakespeare, la pregunta “ser o no ser” condensa una duda existencial: seguir soportando los golpes de la fortuna o enfrentarse a ellos, aun sin saber qué puede venir después. En este trabajo, la escena es bastante menos trágica, pero también gira alrededor de una decisión: ante cada lanzamiento, el bateador debe resolver en una fracción de segundo si conviene hacer <em>swing</em> o dejar pasar la pelota.</p>
+<p>En <em>baseball</em>, esa elección depende de múltiples factores: la cuenta, el tipo de pitcheo, la velocidad, el movimiento de la pelota, la ubicación en el plato, las características del bateador y del <em>pitcher</em>, entre otras.</p>
+<p>En este trabajo práctico van a participar de un <em>challenge</em> de <em>machine learning</em>. El objetivo es construir un modelo que permita estimar la probabilidad de que un bateador haga <em>swing</em> ante un determinado pitcheo.</p>
+<p>Para ello, cuentan con datos de una primera temporada, <code>temporada1.parquet</code>, que deberán usar para explorar el problema, definir la variable objetivo, entrenar modelos y evaluar sus predicciones. Luego deberán generar predicciones para los pitcheos incluidos en <code>temporada2.parquet</code>.</p>
+<p>El resultado final será un archivo <code>validacion.parquet</code> con el <code>pitch_id</code> y una probabilidad estimada de <em>swing</em> para cada fila de <code>temporada2.parquet</code>.</p>
+</section>
+<section id="datos" class="level2">
+<h2 class="anchored" data-anchor-id="datos">Datos</h2>
+<p>Se entregan los archivos <code>temporada1.parquet</code> y <code>temporada2.parquet</code> con la siguientes variables:</p>
+<div style="max-width: 90%; margin: auto;">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Columna</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pitch_id</code></td>
+<td>Identificador único del pitcheo.</td>
+</tr>
+<tr class="even">
+<td><code>release_speed</code></td>
+<td>Velocidad del pitcheo medida al momento en que la pelota sale de la mano del <em>pitcher</em>.</td>
+</tr>
+<tr class="odd">
+<td><code>batter</code></td>
+<td>Identificador del bateador asociado al evento de juego.</td>
+</tr>
+<tr class="even">
+<td><code>pitcher</code></td>
+<td>Identificador del <em>pitcher</em> asociado al evento de juego.</td>
+</tr>
+<tr class="odd">
+<td><code>description</code></td>
+<td>Descripción del resultado del pitcheo.</td>
+</tr>
+<tr class="even">
+<td><code>stand</code></td>
+<td>Lado del plato en el que se posiciona el bateador.</td>
+</tr>
+<tr class="odd">
+<td><code>p_throws</code></td>
+<td>Mano con la que lanza el <em>pitcher</em>.</td>
+</tr>
+<tr class="even">
+<td><code>pitch_type</code></td>
+<td>Tipo de pitcheo derivado de <em>Statcast</em>.</td>
+</tr>
+<tr class="odd">
+<td><code>balls</code></td>
+<td>Cantidad de bolas en la cuenta antes del pitcheo.</td>
+</tr>
+<tr class="even">
+<td><code>strikes</code></td>
+<td>Cantidad de <em>strikes</em> en la cuenta antes del pitcheo.</td>
+</tr>
+<tr class="odd">
+<td><code>pfx_x</code></td>
+<td>Movimiento horizontal, en pies, desde la perspectiva del <em>catcher</em>.</td>
+</tr>
+<tr class="even">
+<td><code>pfx_z</code></td>
+<td>Movimiento vertical, en pies, desde la perspectiva del <em>catcher</em>.</td>
+</tr>
+<tr class="odd">
+<td><code>plate_x</code></td>
+<td>Posición horizontal de la pelota cuando cruza el <em>home plate</em>, desde la perspectiva del <em>catcher</em>.</td>
+</tr>
+<tr class="even">
+<td><code>plate_z</code></td>
+<td>Posición vertical de la pelota cuando cruza el <em>home plate</em>, desde la perspectiva del <em>catcher</em>.</td>
+</tr>
+<tr class="odd">
+<td><code>sz_top</code></td>
+<td>Límite superior de la zona de <em>strike</em> del bateador, definido por el operador cuando la pelota está a mitad de camino hacia el <em>home plate</em>.</td>
+</tr>
+<tr class="even">
+<td><code>sz_bot</code></td>
+<td>Límite inferior de la zona de <em>strike</em> del bateador, definido por el operador cuando la pelota está a mitad de camino hacia el <em>home plate</em>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Para acceder a los mismos, registrarse en la competencia de Kaggle.</p>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
-<p>A continuación, se listan preguntas a responder y actividades a realizar:</p>
 <ul>
-<li>¿Cuántas observaciones hay en el conjunto de datos? ¿Cuántas para cada año?</li>
-<li>¿Hay datos faltantes?</li>
-<li>¿Cuál es la cantidad total de lluvia caída en la zona? ¿Y cuánto se corresponde a cada año? Realice un gráfico de barras.</li>
-<li>Visualice la cantidad de lluvia por mes y año en un gráfico de líneas.</li>
-<li>Obtenga uno o varios gráficos que muestre(n) la evolución de la temperatura mínima y máxima a lo largo del tiempo.</li>
-<li>Obtenga un gráfico que permita ver la asociación entre la temperatura mínima y máxima.</li>
-<li>Calcule la amplitud térmica, es decir, la diferencia entre la mayor y menor temperatura diaria.</li>
-<li>Visualice el comportamiento de la amplitud térmica:
-<ul>
-<li>Globalmente y a lo largo del tiempo.</li>
-<li>¿Hay alguna asociación entre la amplitud térmica y la temperatura mínima o máxima del día?</li>
-<li>¿Hay alguna asociación entre la amplitud térmica y la cantidad de precipitaciones que se registran?</li>
-</ul></li>
-<li>¿Cuál es el mes (o los meses) que suelen recibir mayor radiación? Aquí puede utilizar simple medidas resumen o un gráfico, lo que crea conveniente.</li>
-<li>¿En qué mes a lo largo de los 5 años de datos se observó el mayor nivel de evaporación?</li>
+<li><p>Lea los datos de <code>temporada1.parquet</code> y realice una exploración inicial. Describa las variables disponibles, sus distribuciones, la presencia de valores faltantes y cualquier patrón que considere relevante para el problema.</p></li>
+<li><p>Estudie la variable <code>description</code> y determine cómo convertirla en una variable binaria que indique si hubo <em>swing</em> o no. Justifique el mapeo utilizado. Se espera que investigue el dominio del problema y cite fuentes de <em>baseball</em>, como artículos, documentación, glosarios o videos especializados. Se valorará más una justificación basada en fuentes del dominio que una respuesta obtenida simplemente consultando una IA.</p></li>
+<li><p>Si encuentra casos ambiguos al definir la variable objetivo, explique qué decisión tomó y por qué.</p></li>
+<li><p>A partir del análisis exploratorio, proponga variables o transformaciones que puedan ser útiles para predecir la probabilidad de <em>swing</em>. Explique qué información aporta cada una y cómo se relaciona con el problema.</p></li>
+<li><p>Ajuste uno o más modelos estadísticos y/o de <em>machine learning</em> para predecir la probabilidad de <em>swing</em>. Puede usar cualquier librería de Python. Se alienta a buscar por sus propios medios y probar distintos enfoques.</p></li>
+<li><p>Como punto de partida, puede consultar el libro de <em>scikit-learn</em> que usamos en la bibliografía de la materia. El libro tiene un repositorio público con <em>notebooks</em> y ejemplos: <a href="https://github.com/ageron/handson-mlp">ageron/handson-mlp</a>.</p></li>
+<li><p>Realice una evaluación interna usando solamente <code>temporada1.parquet</code>. Puede usar un <em>train/validation split</em> o validación cruzada. La métrica principal será el <em>log-loss</em>:</p>
+<p><span class="math display">\[
+\text{LogLoss} =
+-\frac{1}{n}\sum_{i=1}^{n}
+\left[
+y_i \log(\hat{p}_i) + (1-y_i)\log(1-\hat{p}_i)
+\right]
+\]</span></p>
+<p>donde <span class="math inline">\(y_i\)</span> indica si hubo <em>swing</em> y <span class="math inline">\(\hat{p}_i\)</span> es la probabilidad predicha de <em>swing</em>.</p></li>
+<li><p>Presente los resultados de la evaluación interna. Puede incluir otras métricas o visualizaciones si ayudan a entender el desempeño del modelo. Se recomienda incluir gráficos que permitan evaluar las predicciones o la calibración de las probabilidades predichas.</p></li>
+<li><p>Explique qué modelo final eligió, qué variables incluyó, qué preprocesamiento aplicó y por qué eligió ese enfoque. También se valorará que mencione enfoques que no funcionaron y explique por qué fueron descartados.</p></li>
+<li><p>Genere predicciones para <code>temporada2.parquet</code> y construya un archivo llamado <code>validacion.parquet</code>. El archivo debe tener únicamente dos columnas: <code>pitch_id</code> y <code>swing_probability</code>.</p></li>
+<li><p>Suba el archivo <code>validacion.parquet</code> a la competencia de Kaggle.</p></li>
 </ul>
-<section id="días-de-estrés" class="level3">
-<h3 class="anchored" data-anchor-id="días-de-estrés">Días de estrés</h3>
-<p>Los “días de estrés” se refieren a días en que las condiciones ambientales son desfavorables para el crecimiento óptimo de los cultivos. Un factor que determina el nivel de estrés es la temperatura. Cuando estas son extremas, pueden causar estrés térmico en los cultivos. En este ejercicio nos interesa determinar días de estrés térmico utilizando como indicador a la temperatura máxima. Se establece una temperatura de referencia de 32 grados centígrados.</p>
-<ul>
-<li>Determine los días de estrés en base a la temperatura máxima. Para ello, cree una nueva columna en el data frame que se llame <code>"estrés"</code> y que contenga valores <code>False</code> y <code>True</code> o valores <code>0</code> y <code>1</code>.</li>
-<li>¿Cuántos días de estrés térmico se observan entre el <code>2019-10-14</code> y el <code>2019-12-03</code>? <strong>Ayuda</strong>: Se puede filtrar el conjunto de datos para conservar solo las filas dentro del rango de fechas y luego sumar la cantidad de días con estrés.</li>
-<li>Obtenga la cantidad de días de estrés térmico por mes a lo largo de los 5 años y visualícelo en un gráfico de línea.</li>
-</ul>
-<p>Además, elabore una función que, dado el conjunto de datos, una fecha de inicio y una fecha de fin, devuelva la cantidad de días de estrés térmico dentro del rango de fechas indicado.</p>
 </section>
-<section id="déficit-de-presion-de-vapor" class="level3">
-<h3 class="anchored" data-anchor-id="déficit-de-presion-de-vapor">Déficit de presion de vapor</h3>
-<p>El déficit de presión de vapor (VPD, por sus siglas en inglés) es una medida de la diferencia entre la cantidad de humedad en el aire y la cantidad máxima de humedad que el aire puede contener a una temperatura específica. Se calcula restando la presión de vapor actual del aire (<span class="math inline">\(vp_a\)</span>) de la presión de vapor de saturación (<span class="math inline">\(vp_s\)</span>) a la misma temperatura. Su fórmula es:</p>
-<p><span class="math display">\[
-\text{VPD} = vp_s - vp_a
-\]</span></p>
-<p>A su vez, para calcular la <strong>presión de vapor de saturación</strong> se puede usar la Ecuación de Tetens:</p>
-<p><span class="math display">\[
-vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times T}{T + 237.3}\right)
-\]</span></p>
-<p>donde <span class="math inline">\(T\)</span> es temperatura en grados centígrados. Por ejemplo, para una temperatura de 25 grados centígrados la presión de vapor de saturación <span class="math inline">\(vp_s\)</span> es:</p>
-<p><span class="math display">\[
-0.61078 \times \text{exp}\left(\frac{17.27 \times 25}{25 + 237.3}\right) = 3.16
-\]</span></p>
-<p>El resultado se mide en <strong>kilopascales (kPa)</strong>.</p>
-<p>Por otro lado, para calcular la <strong>presión de vapor actual</strong>, se puede utilizar la siguiente fórmula:</p>
-<p><span class="math display">\[
-vp_a = vp_s \times \frac{\text{Humedad relativa}}{100}
-\]</span></p>
-<p>Por ejemplo, si la temperatura es de 27.5 °C y la humedad relativa es del 78%, el VPD se obtiene de la siguiente manera:</p>
-<p><strong>1. Cálculo de presión de vapor de saturación</strong></p>
-<p><span class="math display">\[
-vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times 27.5}{27.5 + 237.3}\right) \approx 3.67 \ \text{kPa}
-\]</span></p>
-<p><strong>2. Cálculo de presión de vapor actual</strong></p>
-<p><span class="math display">\[vp_a = vp_s \times \frac{\text{Humedad relativa}}{100} =  3.67 \times \frac{78}{100} \approx 2.86 \ \text{kPa}\]</span></p>
-<p><strong>3. Cálculo de presión de VPD</strong></p>
-<p><span class="math display">\[\text{VPD} = vp_s - vp_a = 3.67115 - 2.863497 \approx 0.81 \ \text{kPa}\]</span></p>
-<p>Calcule el déficit de presión de vapor en el momento que se registró la temperatura máxima. Luego, obtenga una nueva variable que clasifique a los días de acuerdo a la siguiente regla:</p>
+<section id="forma-de-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="forma-de-trabajo">Forma de trabajo</h2>
+<p>El trabajo debe desarrollarse en un repositorio de GitHub. Puede ser público o privado, pero los docentes tienen que tener acceso al repositorio.</p>
+<p>Se espera que el repositorio permita reproducir el trabajo realizado. Para ello:</p>
 <ul>
-<li>VPD entre <strong>0 y 0.5 kPa</strong>: Condiciones muy húmedas.</li>
-<li>VPD entre <strong>0.5 y 1.0 kPa</strong>: Condiciones moderadamente húmedas.</li>
-<li>VPD entre <strong>1.0 y 2.0 kPa</strong>: Condiciones semiáridas.</li>
-<li>VPD entre <strong>2.0 y 3.0 kPa</strong>: Condiciones áridas.</li>
-<li>VPD mayor a <strong>3.0 kPa</strong>: Condiciones extremadamente secas.</li>
+<li><p>Incluya un <code>README.md</code> claro, que explique el objetivo del trabajo, cómo crear el ambiente de trabajo, cómo ejecutar el análisis o <em>pipeline</em> principal, cómo reproducir <code>validacion.parquet</code> y cómo está organizado el repositorio.</p></li>
+<li><p>Trabaje con dependencias controladas mediante un ambiente virtual.</p></li>
+<li><p>Use Git y GitHub de manera organizada. Abra <em>issues</em> para especificar y distribuir tareas. Use ramas y <em>pull requests</em> cuando haya que unir una parte relevante del trabajo, como el análisis exploratorio o la implementación de un modelo. Se valorará positivamente que una persona abra un <em>pull request</em> y otra lo revise y realice el <em>merge</em>.</p></li>
+<li><p>Documente las fuentes consultadas. Puede usar <em>issues</em>, <em>discussions</em> o un archivo <code>NOTAS.md</code> donde incluya notas relevantes que no necesariamente formen parte del <code>README.md</code>. Deben citarse fuentes externas usadas para entender <em>baseball</em>, definir la variable objetivo o tomar decisiones metodológicas.</p></li>
 </ul>
-<p>y reporte el porcentaje de días en cada condición. Si lo cree conveniente, vuelque esa información en un gráfico apropiado.</p>
+</section>
+<section id="aspectos-que-impactan-negativamente-la-evaluación" class="level2">
+<h2 class="anchored" data-anchor-id="aspectos-que-impactan-negativamente-la-evaluación">Aspectos que impactan negativamente la evaluación</h2>
+<p>Se penalizarán los siguientes problemas:</p>
+<ul>
+<li><p>No tener un <code>README.md</code> claro.</p></li>
+<li><p>Que no se pueda crear el ambiente de trabajo por dependencias no declaradas, versiones incompatibles o instrucciones incompletas.</p></li>
+<li><p>Que no se puedan reproducir los resultados. Los docentes clonarán cada repositorio y ejecutarán el código implementado siguiendo sus instrucciones. Se penalizará a los grupos donde no se pueda reproducir <code>validacion.parquet</code>.</p></li>
+<li><p>Subir datos al repositorio, de cualquier tipo. Esto incluye datos de entrenamiento, datos de evaluación, versiones procesadas, muestras, archivos intermedios o cualquier otro archivo derivado de los datos. Si los datos se suben por accidente, tienen que saber reescribir la historia del repositorio de manera tal que no puedan recuperarse. Si no, tendrán que borrar el repositorio y crear uno nuevo.</p></li>
+<li><p>Hacer mal uso del repositorio: trabajar con todos los <em>commits</em> directamente sobre <code>main</code>, usar mensajes de <em>commit</em> opacos o no representativos, subir archivos manualmente al repositorio en lugar de trabajar con Git de forma ordenada, no usar <em>issues</em>, ramas o <em>pull requests</em> cuando el trabajo en equipo lo amerite, o tener una historia del repositorio difícil de auditar.</p></li>
+<li><p>Entregar un <code>validacion.parquet</code> con formato incorrecto: columnas mal nombradas, columnas extra, filas en otro orden, <code>pitch_id</code> faltantes o duplicados, o probabilidades faltantes, no numéricas o fuera del intervalo <code>[0, 1]</code>.</p></li>
+<li><p>No justificar el mapeo de <code>description</code> a <em>swing</em>/no <em>swing</em>.</p></li>
+<li><p>No comparar modelos contra una evaluación interna razonable.</p></li>
+<li><p>No explicar el modelo final ni las decisiones de preprocesamiento.</p></li>
+<li><p>No citar fuentes externas cuando se usaron para entender el problema o justificar decisiones.</p></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -717,11 +761,11 @@ vp_s = 0.61078 \times \text{exp}\left(\frac{17.27 \times 27.5}{27.5 + 237.3}\rig
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../proyectos/tp1.html" class="pagination-link" aria-label="TP 1: Un clima estresante">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP 1: Un clima estresante</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../proyectos/individual.html" class="pagination-link" aria-label="Proyecto individual">
-        <span class="nav-page-text">Proyecto individual</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

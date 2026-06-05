@@ -1428,14 +1428,69 @@
     ]
   },
   {
-    "objectID": "proyectos/individual.html",
-    "href": "proyectos/individual.html",
-    "title": "Proyecto individual",
+    "objectID": "proyectos/tp2.html",
+    "href": "proyectos/tp2.html",
+    "title": "TP 2: Swing o no swing, esa es la cuestión",
     "section": "",
-    "text": "Luego del proyecto grupal, podría realizarse un proyecto individual.",
+    "text": "En Hamlet, la tragedia de William Shakespeare, la pregunta “ser o no ser” condensa una duda existencial: seguir soportando los golpes de la fortuna o enfrentarse a ellos, aun sin saber qué puede venir después. En este trabajo, la escena es bastante menos trágica, pero también gira alrededor de una decisión: ante cada lanzamiento, el bateador debe resolver en una fracción de segundo si conviene hacer swing o dejar pasar la pelota.\nEn baseball, esa elección depende de múltiples factores: la cuenta, el tipo de pitcheo, la velocidad, el movimiento de la pelota, la ubicación en el plato, las características del bateador y del pitcher, entre otras.\nEn este trabajo práctico van a participar de un challenge de machine learning. El objetivo es construir un modelo que permita estimar la probabilidad de que un bateador haga swing ante un determinado pitcheo.\nPara ello, cuentan con datos de una primera temporada, temporada1.parquet, que deberán usar para explorar el problema, definir la variable objetivo, entrenar modelos y evaluar sus predicciones. Luego deberán generar predicciones para los pitcheos incluidos en temporada2.parquet.\nEl resultado final será un archivo validacion.parquet con el pitch_id y una probabilidad estimada de swing para cada fila de temporada2.parquet.",
     "crumbs": [
       "Proyectos",
-      "Proyecto individual"
+      "TP 2: _Swing_ o no _swing_, esa es la cuestión"
+    ]
+  },
+  {
+    "objectID": "proyectos/tp2.html#introducción",
+    "href": "proyectos/tp2.html#introducción",
+    "title": "TP 2: Swing o no swing, esa es la cuestión",
+    "section": "",
+    "text": "En Hamlet, la tragedia de William Shakespeare, la pregunta “ser o no ser” condensa una duda existencial: seguir soportando los golpes de la fortuna o enfrentarse a ellos, aun sin saber qué puede venir después. En este trabajo, la escena es bastante menos trágica, pero también gira alrededor de una decisión: ante cada lanzamiento, el bateador debe resolver en una fracción de segundo si conviene hacer swing o dejar pasar la pelota.\nEn baseball, esa elección depende de múltiples factores: la cuenta, el tipo de pitcheo, la velocidad, el movimiento de la pelota, la ubicación en el plato, las características del bateador y del pitcher, entre otras.\nEn este trabajo práctico van a participar de un challenge de machine learning. El objetivo es construir un modelo que permita estimar la probabilidad de que un bateador haga swing ante un determinado pitcheo.\nPara ello, cuentan con datos de una primera temporada, temporada1.parquet, que deberán usar para explorar el problema, definir la variable objetivo, entrenar modelos y evaluar sus predicciones. Luego deberán generar predicciones para los pitcheos incluidos en temporada2.parquet.\nEl resultado final será un archivo validacion.parquet con el pitch_id y una probabilidad estimada de swing para cada fila de temporada2.parquet.",
+    "crumbs": [
+      "Proyectos",
+      "TP 2: _Swing_ o no _swing_, esa es la cuestión"
+    ]
+  },
+  {
+    "objectID": "proyectos/tp2.html#datos",
+    "href": "proyectos/tp2.html#datos",
+    "title": "TP 2: Swing o no swing, esa es la cuestión",
+    "section": "Datos",
+    "text": "Datos\nSe entregan los archivos temporada1.parquet y temporada2.parquet con la siguientes variables:\n\n\n\n\n\n\n\n\nColumna\nDefinición\n\n\n\n\npitch_id\nIdentificador único del pitcheo.\n\n\nrelease_speed\nVelocidad del pitcheo medida al momento en que la pelota sale de la mano del pitcher.\n\n\nbatter\nIdentificador del bateador asociado al evento de juego.\n\n\npitcher\nIdentificador del pitcher asociado al evento de juego.\n\n\ndescription\nDescripción del resultado del pitcheo.\n\n\nstand\nLado del plato en el que se posiciona el bateador.\n\n\np_throws\nMano con la que lanza el pitcher.\n\n\npitch_type\nTipo de pitcheo derivado de Statcast.\n\n\nballs\nCantidad de bolas en la cuenta antes del pitcheo.\n\n\nstrikes\nCantidad de strikes en la cuenta antes del pitcheo.\n\n\npfx_x\nMovimiento horizontal, en pies, desde la perspectiva del catcher.\n\n\npfx_z\nMovimiento vertical, en pies, desde la perspectiva del catcher.\n\n\nplate_x\nPosición horizontal de la pelota cuando cruza el home plate, desde la perspectiva del catcher.\n\n\nplate_z\nPosición vertical de la pelota cuando cruza el home plate, desde la perspectiva del catcher.\n\n\nsz_top\nLímite superior de la zona de strike del bateador, definido por el operador cuando la pelota está a mitad de camino hacia el home plate.\n\n\nsz_bot\nLímite inferior de la zona de strike del bateador, definido por el operador cuando la pelota está a mitad de camino hacia el home plate.\n\n\n\n\nPara acceder a los mismos, registrarse en la competencia de Kaggle.",
+    "crumbs": [
+      "Proyectos",
+      "TP 2: _Swing_ o no _swing_, esa es la cuestión"
+    ]
+  },
+  {
+    "objectID": "proyectos/tp2.html#actividades",
+    "href": "proyectos/tp2.html#actividades",
+    "title": "TP 2: Swing o no swing, esa es la cuestión",
+    "section": "Actividades",
+    "text": "Actividades\n\nLea los datos de temporada1.parquet y realice una exploración inicial. Describa las variables disponibles, sus distribuciones, la presencia de valores faltantes y cualquier patrón que considere relevante para el problema.\nEstudie la variable description y determine cómo convertirla en una variable binaria que indique si hubo swing o no. Justifique el mapeo utilizado. Se espera que investigue el dominio del problema y cite fuentes de baseball, como artículos, documentación, glosarios o videos especializados. Se valorará más una justificación basada en fuentes del dominio que una respuesta obtenida simplemente consultando una IA.\nSi encuentra casos ambiguos al definir la variable objetivo, explique qué decisión tomó y por qué.\nA partir del análisis exploratorio, proponga variables o transformaciones que puedan ser útiles para predecir la probabilidad de swing. Explique qué información aporta cada una y cómo se relaciona con el problema.\nAjuste uno o más modelos estadísticos y/o de machine learning para predecir la probabilidad de swing. Puede usar cualquier librería de Python. Se alienta a buscar por sus propios medios y probar distintos enfoques.\nComo punto de partida, puede consultar el libro de scikit-learn que usamos en la bibliografía de la materia. El libro tiene un repositorio público con notebooks y ejemplos: ageron/handson-mlp.\nRealice una evaluación interna usando solamente temporada1.parquet. Puede usar un train/validation split o validación cruzada. La métrica principal será el log-loss:\n\\[\n\\text{LogLoss} =\n-\\frac{1}{n}\\sum_{i=1}^{n}\n\\left[\ny_i \\log(\\hat{p}_i) + (1-y_i)\\log(1-\\hat{p}_i)\n\\right]\n\\]\ndonde \\(y_i\\) indica si hubo swing y \\(\\hat{p}_i\\) es la probabilidad predicha de swing.\nPresente los resultados de la evaluación interna. Puede incluir otras métricas o visualizaciones si ayudan a entender el desempeño del modelo. Se recomienda incluir gráficos que permitan evaluar las predicciones o la calibración de las probabilidades predichas.\nExplique qué modelo final eligió, qué variables incluyó, qué preprocesamiento aplicó y por qué eligió ese enfoque. También se valorará que mencione enfoques que no funcionaron y explique por qué fueron descartados.\nGenere predicciones para temporada2.parquet y construya un archivo llamado validacion.parquet. El archivo debe tener únicamente dos columnas: pitch_id y swing_probability.\nSuba el archivo validacion.parquet a la competencia de Kaggle.",
+    "crumbs": [
+      "Proyectos",
+      "TP 2: _Swing_ o no _swing_, esa es la cuestión"
+    ]
+  },
+  {
+    "objectID": "proyectos/tp2.html#forma-de-trabajo",
+    "href": "proyectos/tp2.html#forma-de-trabajo",
+    "title": "TP 2: Swing o no swing, esa es la cuestión",
+    "section": "Forma de trabajo",
+    "text": "Forma de trabajo\nEl trabajo debe desarrollarse en un repositorio de GitHub. Puede ser público o privado, pero los docentes tienen que tener acceso al repositorio.\nSe espera que el repositorio permita reproducir el trabajo realizado. Para ello:\n\nIncluya un README.md claro, que explique el objetivo del trabajo, cómo crear el ambiente de trabajo, cómo ejecutar el análisis o pipeline principal, cómo reproducir validacion.parquet y cómo está organizado el repositorio.\nTrabaje con dependencias controladas mediante un ambiente virtual.\nUse Git y GitHub de manera organizada. Abra issues para especificar y distribuir tareas. Use ramas y pull requests cuando haya que unir una parte relevante del trabajo, como el análisis exploratorio o la implementación de un modelo. Se valorará positivamente que una persona abra un pull request y otra lo revise y realice el merge.\nDocumente las fuentes consultadas. Puede usar issues, discussions o un archivo NOTAS.md donde incluya notas relevantes que no necesariamente formen parte del README.md. Deben citarse fuentes externas usadas para entender baseball, definir la variable objetivo o tomar decisiones metodológicas.",
+    "crumbs": [
+      "Proyectos",
+      "TP 2: _Swing_ o no _swing_, esa es la cuestión"
+    ]
+  },
+  {
+    "objectID": "proyectos/tp2.html#aspectos-que-impactan-negativamente-la-evaluación",
+    "href": "proyectos/tp2.html#aspectos-que-impactan-negativamente-la-evaluación",
+    "title": "TP 2: Swing o no swing, esa es la cuestión",
+    "section": "Aspectos que impactan negativamente la evaluación",
+    "text": "Aspectos que impactan negativamente la evaluación\nSe penalizarán los siguientes problemas:\n\nNo tener un README.md claro.\nQue no se pueda crear el ambiente de trabajo por dependencias no declaradas, versiones incompatibles o instrucciones incompletas.\nQue no se puedan reproducir los resultados. Los docentes clonarán cada repositorio y ejecutarán el código implementado siguiendo sus instrucciones. Se penalizará a los grupos donde no se pueda reproducir validacion.parquet.\nSubir datos al repositorio, de cualquier tipo. Esto incluye datos de entrenamiento, datos de evaluación, versiones procesadas, muestras, archivos intermedios o cualquier otro archivo derivado de los datos. Si los datos se suben por accidente, tienen que saber reescribir la historia del repositorio de manera tal que no puedan recuperarse. Si no, tendrán que borrar el repositorio y crear uno nuevo.\nHacer mal uso del repositorio: trabajar con todos los commits directamente sobre main, usar mensajes de commit opacos o no representativos, subir archivos manualmente al repositorio en lugar de trabajar con Git de forma ordenada, no usar issues, ramas o pull requests cuando el trabajo en equipo lo amerite, o tener una historia del repositorio difícil de auditar.\nEntregar un validacion.parquet con formato incorrecto: columnas mal nombradas, columnas extra, filas en otro orden, pitch_id faltantes o duplicados, o probabilidades faltantes, no numéricas o fuera del intervalo [0, 1].\nNo justificar el mapeo de description a swing/no swing.\nNo comparar modelos contra una evaluación interna razonable.\nNo explicar el modelo final ni las decisiones de preprocesamiento.\nNo citar fuentes externas cuando se usaron para entender el problema o justificar decisiones.",
+    "crumbs": [
+      "Proyectos",
+      "TP 2: _Swing_ o no _swing_, esa es la cuestión"
     ]
   },
   {
@@ -2514,36 +2569,36 @@
     ]
   },
   {
-    "objectID": "proyectos/grupal.html",
-    "href": "proyectos/grupal.html",
-    "title": "Proyecto grupal: Un clima estresante",
+    "objectID": "proyectos/tp1.html",
+    "href": "proyectos/tp1.html",
+    "title": "TP 1: Un clima estresante",
     "section": "",
     "text": "SILO (Scientific Information for Land Owners) es una base de datos en línea australiana que proporciona datos climáticos. Administrada por el Departamento de Agricultura y Pesca de Queensland, SILO ofrece acceso a una amplia gama de datos meteorológicos y climáticos históricos y actuales para diversas aplicaciones en la agricultura, la investigación, la gestión de recursos naturales y la planificación ambiental.\nLos datos proporcionados por SILO incluyen variables como temperatura, precipitación, humedad relativa, evaporación y radiación solar.\nLos datos provistos se encuentran en la carpeta datos/boonah y están organizados por año. Dentro de cada carpeta anual hay tres conjuntos de datos con registros diarios proporcionados por SILO para las coordenadas (-27.9927, 152.6906), que se encuentran en las afueras de Boonah, una ciudad rural en Queensland, Australia:\n\nlluvias.csv: información sobre precipitaciones diarias.\natmosfera.csv: información sobre temperaturas y humedad relativa.\nenergia.csv: información sobre evaporación y radiación.\n\nLas columnas en estos conjuntos de datos son las siguientes:\nEn lluvias.csv:\n\nfecha: Fecha en que se realizó la medición en formato YYYY-MM-DD.\nlluvia: Cantidad de lluvia caída en el día (mm).\n\nEn atmosfera.csv:\n\nfecha: Fecha en que se realizó la medición en formato YYYY-MM-DD (4 dígitos para el año, 2 para el mes y 2 para el día).\nt_min: Temperatura mínima registrada en el día (°C).\nt_max: Temperatura máxima registrada en el día (°C).\nhr_t_min: Humedad relativa en el momento que se registra la temperatura mínima (%).\nhr_t_max: Humedad relativa en el momento que se registra la temperatura máxima (%).\n\nEn energia.csv:\n\nfecha: Fecha en que se realizó la medición en formato YYYY-MM-DD (4 dígitos para el año, 2 para el mes y 2 para el día).\nevaporación: Evaporación (mm).\nradiación: Exposición solar en Megajulios por metro cuadrado (MJ / m²).",
     "crumbs": [
       "Proyectos",
-      "Proyecto grupal: Un clima estresante"
+      "TP 1: Un clima estresante"
     ]
   },
   {
-    "objectID": "proyectos/grupal.html#introducción",
-    "href": "proyectos/grupal.html#introducción",
-    "title": "Proyecto grupal: Un clima estresante",
+    "objectID": "proyectos/tp1.html#introducción",
+    "href": "proyectos/tp1.html#introducción",
+    "title": "TP 1: Un clima estresante",
     "section": "",
     "text": "SILO (Scientific Information for Land Owners) es una base de datos en línea australiana que proporciona datos climáticos. Administrada por el Departamento de Agricultura y Pesca de Queensland, SILO ofrece acceso a una amplia gama de datos meteorológicos y climáticos históricos y actuales para diversas aplicaciones en la agricultura, la investigación, la gestión de recursos naturales y la planificación ambiental.\nLos datos proporcionados por SILO incluyen variables como temperatura, precipitación, humedad relativa, evaporación y radiación solar.\nLos datos provistos se encuentran en la carpeta datos/boonah y están organizados por año. Dentro de cada carpeta anual hay tres conjuntos de datos con registros diarios proporcionados por SILO para las coordenadas (-27.9927, 152.6906), que se encuentran en las afueras de Boonah, una ciudad rural en Queensland, Australia:\n\nlluvias.csv: información sobre precipitaciones diarias.\natmosfera.csv: información sobre temperaturas y humedad relativa.\nenergia.csv: información sobre evaporación y radiación.\n\nLas columnas en estos conjuntos de datos son las siguientes:\nEn lluvias.csv:\n\nfecha: Fecha en que se realizó la medición en formato YYYY-MM-DD.\nlluvia: Cantidad de lluvia caída en el día (mm).\n\nEn atmosfera.csv:\n\nfecha: Fecha en que se realizó la medición en formato YYYY-MM-DD (4 dígitos para el año, 2 para el mes y 2 para el día).\nt_min: Temperatura mínima registrada en el día (°C).\nt_max: Temperatura máxima registrada en el día (°C).\nhr_t_min: Humedad relativa en el momento que se registra la temperatura mínima (%).\nhr_t_max: Humedad relativa en el momento que se registra la temperatura máxima (%).\n\nEn energia.csv:\n\nfecha: Fecha en que se realizó la medición en formato YYYY-MM-DD (4 dígitos para el año, 2 para el mes y 2 para el día).\nevaporación: Evaporación (mm).\nradiación: Exposición solar en Megajulios por metro cuadrado (MJ / m²).",
     "crumbs": [
       "Proyectos",
-      "Proyecto grupal: Un clima estresante"
+      "TP 1: Un clima estresante"
     ]
   },
   {
-    "objectID": "proyectos/grupal.html#actividades",
-    "href": "proyectos/grupal.html#actividades",
-    "title": "Proyecto grupal: Un clima estresante",
+    "objectID": "proyectos/tp1.html#actividades",
+    "href": "proyectos/tp1.html#actividades",
+    "title": "TP 1: Un clima estresante",
     "section": "Actividades",
     "text": "Actividades\nA continuación, se listan preguntas a responder y actividades a realizar:\n\n¿Cuántas observaciones hay en el conjunto de datos? ¿Cuántas para cada año?\n¿Hay datos faltantes?\n¿Cuál es la cantidad total de lluvia caída en la zona? ¿Y cuánto se corresponde a cada año? Realice un gráfico de barras.\nVisualice la cantidad de lluvia por mes y año en un gráfico de líneas.\nObtenga uno o varios gráficos que muestre(n) la evolución de la temperatura mínima y máxima a lo largo del tiempo.\nObtenga un gráfico que permita ver la asociación entre la temperatura mínima y máxima.\nCalcule la amplitud térmica, es decir, la diferencia entre la mayor y menor temperatura diaria.\nVisualice el comportamiento de la amplitud térmica:\n\nGlobalmente y a lo largo del tiempo.\n¿Hay alguna asociación entre la amplitud térmica y la temperatura mínima o máxima del día?\n¿Hay alguna asociación entre la amplitud térmica y la cantidad de precipitaciones que se registran?\n\n¿Cuál es el mes (o los meses) que suelen recibir mayor radiación? Aquí puede utilizar simple medidas resumen o un gráfico, lo que crea conveniente.\n¿En qué mes a lo largo de los 5 años de datos se observó el mayor nivel de evaporación?\n\n\nDías de estrés\nLos “días de estrés” se refieren a días en que las condiciones ambientales son desfavorables para el crecimiento óptimo de los cultivos. Un factor que determina el nivel de estrés es la temperatura. Cuando estas son extremas, pueden causar estrés térmico en los cultivos. En este ejercicio nos interesa determinar días de estrés térmico utilizando como indicador a la temperatura máxima. Se establece una temperatura de referencia de 32 grados centígrados.\n\nDetermine los días de estrés en base a la temperatura máxima. Para ello, cree una nueva columna en el data frame que se llame \"estrés\" y que contenga valores False y True o valores 0 y 1.\n¿Cuántos días de estrés térmico se observan entre el 2019-10-14 y el 2019-12-03? Ayuda: Se puede filtrar el conjunto de datos para conservar solo las filas dentro del rango de fechas y luego sumar la cantidad de días con estrés.\nObtenga la cantidad de días de estrés térmico por mes a lo largo de los 5 años y visualícelo en un gráfico de línea.\n\nAdemás, elabore una función que, dado el conjunto de datos, una fecha de inicio y una fecha de fin, devuelva la cantidad de días de estrés térmico dentro del rango de fechas indicado.\n\n\nDéficit de presion de vapor\nEl déficit de presión de vapor (VPD, por sus siglas en inglés) es una medida de la diferencia entre la cantidad de humedad en el aire y la cantidad máxima de humedad que el aire puede contener a una temperatura específica. Se calcula restando la presión de vapor actual del aire (\\(vp_a\\)) de la presión de vapor de saturación (\\(vp_s\\)) a la misma temperatura. Su fórmula es:\n\\[\n\\text{VPD} = vp_s - vp_a\n\\]\nA su vez, para calcular la presión de vapor de saturación se puede usar la Ecuación de Tetens:\n\\[\nvp_s = 0.61078 \\times \\text{exp}\\left(\\frac{17.27 \\times T}{T + 237.3}\\right)\n\\]\ndonde \\(T\\) es temperatura en grados centígrados. Por ejemplo, para una temperatura de 25 grados centígrados la presión de vapor de saturación \\(vp_s\\) es:\n\\[\n0.61078 \\times \\text{exp}\\left(\\frac{17.27 \\times 25}{25 + 237.3}\\right) = 3.16\n\\]\nEl resultado se mide en kilopascales (kPa).\nPor otro lado, para calcular la presión de vapor actual, se puede utilizar la siguiente fórmula:\n\\[\nvp_a = vp_s \\times \\frac{\\text{Humedad relativa}}{100}\n\\]\nPor ejemplo, si la temperatura es de 27.5 °C y la humedad relativa es del 78%, el VPD se obtiene de la siguiente manera:\n1. Cálculo de presión de vapor de saturación\n\\[\nvp_s = 0.61078 \\times \\text{exp}\\left(\\frac{17.27 \\times 27.5}{27.5 + 237.3}\\right) \\approx 3.67 \\ \\text{kPa}\n\\]\n2. Cálculo de presión de vapor actual\n\\[vp_a = vp_s \\times \\frac{\\text{Humedad relativa}}{100} =  3.67 \\times \\frac{78}{100} \\approx 2.86 \\ \\text{kPa}\\]\n3. Cálculo de presión de VPD\n\\[\\text{VPD} = vp_s - vp_a = 3.67115 - 2.863497 \\approx 0.81 \\ \\text{kPa}\\]\nCalcule el déficit de presión de vapor en el momento que se registró la temperatura máxima. Luego, obtenga una nueva variable que clasifique a los días de acuerdo a la siguiente regla:\n\nVPD entre 0 y 0.5 kPa: Condiciones muy húmedas.\nVPD entre 0.5 y 1.0 kPa: Condiciones moderadamente húmedas.\nVPD entre 1.0 y 2.0 kPa: Condiciones semiáridas.\nVPD entre 2.0 y 3.0 kPa: Condiciones áridas.\nVPD mayor a 3.0 kPa: Condiciones extremadamente secas.\n\ny reporte el porcentaje de días en cada condición. Si lo cree conveniente, vuelque esa información en un gráfico apropiado.",
     "crumbs": [
       "Proyectos",
-      "Proyecto grupal: Un clima estresante"
+      "TP 1: Un clima estresante"
     ]
   },
   {
